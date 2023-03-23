@@ -69,7 +69,6 @@
   <block id="a93bc0a57623c2facaa010825c808507" category="paragraph"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
   <block id="44255ed683c528ba0c41166a56d37b96" category="summary">OnCommand Insight vereinfacht das betriebliche Management hybrider IT-Infrastrukturen in On-Premises-Umgebungen sowie in Public und Private Clouds.</block>
   <block id="086156bc9cbd8e4be148e68dde15c618" category="doc">OnCommand Insight-Dokumentation</block>
-  <block id="782e478a3967380e548c616b53e48fa3" category="paragraph">OnCommand Insight ist eine einzige Lösung für domänenübergreifendes, anbieterübergreifendes Ressourcenmanagement und -Analyse in Netzwerken, Storage und Servern in physischen und virtuellen Umgebungen. Insight hilft Ihnen, Ihre aktuelle Infrastruktur zu optimieren und Abläufe an Ihre Geschäftsanforderungen anzupassen. So können sie einfacher feststellen, wann welche Anschaffungen erforderlich sind. Es verringert zudem die Risiken während komplexer Technologiemigrationen, wie z. B. beim Wechsel in eine Hybrid Cloud, da die Lösung erkennt, welche Workloads für eine Migration in die Cloud in Frage kommen. Mit Insight lässt sich die IT-Infrastruktur als umfassender Service managen, indem die Ressourcen in die gesamte IT-Servicekette des Unternehmens integriert werden.</block>
   <block id="8cc762b4a3f6f2951567f77120563288" category="summary">Wo finde ich weitere Informationen?</block>
   <block id="092bf78f9c97ba171b8232ddff585392" category="doc">Weitere Informationen</block>
   <block id="258f2022b13e94f3f3017d53dbaf5b48" category="paragraph">Wo kann ich endgültige Informationen zu OnCommand Insight geben?</block>
@@ -8206,4 +8205,5 @@
   <block id="135cca1b87ae0b4a874f6d6184055603" category="sidebar">Beobachten Sie das Verhalten eines Objekts im Laufe der Zeit</block>
   <block id="a8ccc3b97766b616055316a691052a65" category="sidebar">Vergleichen Sie die Latenzgesamtmenge eines Objekts mit der Latenzgesamtmenge der Top-10-Objekte</block>
   <block id="1e6ff685c4fea5f20ae54d736f584efe" category="sidebar">Anpassen des Ausgabeformats und der Bereitstellung eines Berichts</block>
+  <block id="6e33917dd8d71a6016eadb83a546533f" category="paragraph">OnCommand Insight ist eine einzige Lösung für domänenübergreifendes, anbieterübergreifendes Ressourcenmanagement und -Analyse in Netzwerken, Storage und Servern in physischen und virtuellen Umgebungen.</block>
 </blocks>
