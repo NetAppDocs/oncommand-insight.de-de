@@ -1,0 +1,56 @@
+---
+permalink: howto/observe-an-objects-behavior-over-time.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können das Verhalten eines einzelnen Objekts beobachten, um festzustellen, ob das Objekt innerhalb der erwarteten Betriebsebenen arbeitet. 
+---
+= Beobachten Sie das Verhalten eines Objekts im Laufe der Zeit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Verhalten eines einzelnen Objekts beobachten, um festzustellen, ob das Objekt innerhalb der erwarteten Betriebsebenen arbeitet.
+
+
+
+== Schritte
+
+. Verwenden Sie eine Abfrage, um die zu analysende VM zu identifizieren: *Query* > *+ Neue Abfrage* > *Virtuelle Maschine* > *"Name"*
++
+Wenn Sie das Namensfeld leer lassen, werden alle VMs zurückgegeben. Wählen Sie die VM aus, die Sie in dieser Übung verwenden möchten. Sie können ihn auswählen, indem Sie durch die Liste der VMs blättern.
+
+. Erstellen Sie ein neues Dashboard für die Informationen, die Sie erfassen möchten. Klicken Sie in der Symbolleiste auf *Dashboards* > *+Neues Dashboard*.
+. Wählen Sie im neuen Dashboard *Variable* > *Text* aus.
++
+.. Fügen Sie den VM-Namen aus Ihrer Abfrage als hinzu``$var1`` Wert:
+.. Aktivieren Sie das Kontrollkästchen.
+
+
++
+Die Variable wird verwendet, um einfach zwischen verschiedenen Gruppen von Objekten zu wechseln, die Sie analysieren möchten. In anderen Schritten Ihrer Analyse können Sie diese Variable für zusätzliche Analysen mit der ursprünglich ausgewählten einzelnen VM verwenden. Variablen werden nützlicher, wenn sie mehrere Objekte identifizieren.
+
+. Fügen Sie dem neuen Dashboard ein Liniendiagramm-Widget hinzu: *Widget* > *Liniendiagramm*.
++
+.. Ändern Sie den Standard-Asset-Typ auf virtuelle Maschine: Klicken Sie auf *virtuelle Maschine* > *Latenz-Gesamt*.
+.. Klicken Sie auf *Filtern nach* > *Name* > *€21.1*.
+.. Ändern Sie den Zeitraum auf dem Armaturenbrett: *Dashboard-Zeit überschreiben* > *ein* > *7 Tage*.
+
+
++
+Sie können die Dauer der Anzeige mit einer beliebigen voreingestellten Auswahl oder durch Angabe eines benutzerdefinierten Zeitbereichs ändern.
+
++
++ das Dashboard zeigt den *IOPS-Total* der VM für den von Ihnen angegebenen Zeitraum an.
+
+. Weisen Sie dem Widget einen Namen zu und speichern Sie das Widget.
+
+
+
+
+== Ergebnisse
+
+Ihr Widget sollte Daten wie die folgenden enthalten: image:../media/guid-e7ea8edf-7fcc-4fc8-bd87-d8030e85a988.gif[""]
+
+Die VM zeigt eine Periode ungewöhnlich hoher Latenz für einen kurzen Zeitraum in den angezeigten 7 Tagen an.

@@ -1,0 +1,195 @@
+---
+permalink: reporting/reporting-user-roles.html 
+sidebar: sidebar 
+keywords:  
+summary: Jedem Benutzerkonto wird eine Rolle mit einem Satz von Berechtigungen zugewiesen. Die Anzahl der Benutzer wird durch die Anzahl der Reporting-Lizenzen begrenzt, die jeder Rolle zugeordnet sind. 
+---
+= Reporting-Benutzerrollen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Jedem Benutzerkonto wird eine Rolle mit einem Satz von Berechtigungen zugewiesen. Die Anzahl der Benutzer wird durch die Anzahl der Reporting-Lizenzen begrenzt, die jeder Rolle zugeordnet sind.
+
+Jede Rolle kann die folgenden Aktionen ausführen:
+
+* *Empfänger*
++
+Zeigt Berichte im OnCommand Insight-Reporting-Portal an und legt persönliche Einstellungen wie die für Sprachen und Zeitzonen fest.
+
++
+[NOTE]
+====
+Empfänger können keine Berichte erstellen, Berichte ausführen, Berichte planen, Berichte exportieren oder administrative Aufgaben ausführen.
+
+====
+* *Business Consumer*
++
+Führt Berichte aus und führt alle Empfängeroptionen aus.
+
+* *Business Author*
++
+Zeigt geplante Berichte an, führt Berichte interaktiv aus, erstellt Meldungen und führt alle Business Consumer-Optionen aus.
+
+* *Pro Author*
++
+Erstellt Berichte, erstellt Pakete und Datenmodule sowie alle Optionen für Business Author.
+
+* *Administrator*
++
+Führt Verwaltungsaufgaben für Berichte durch, wie z. B. Import und Export von Berichtsdefinitionen, Konfiguration von Berichten, Konfiguration von Datenquellen und Herunterfahren und Neustart von Berichtsaufgaben.
+
+
+
+Die folgende Tabelle zeigt die Berechtigungen und die maximale Anzahl von Benutzern, die für jede Rolle zulässig sind:
+
+|===
+
+
+| Merkmal | Empfänger | Geschäftsverbraucher | Wirtschaftautor | Pro Author | Admin 
+
+
+ a| 
+Anzeigen von Berichten auf der Registerkarte „Teaminhalt“
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Berichte erstellen
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Planen von Berichten
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Externe Dateien hochladen
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Nein
+
+
+
+ a| 
+Erstellen von Geschichten
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Nein
+
+
+
+ a| 
+Erstellen von Berichten
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+
+
+
+ a| 
+Erstellen von Paketen und Datenmodulen
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Ja.
+ a| 
+Nein
+
+
+
+ a| 
+Ausführung administrativer Aufgaben
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Ja.
+
+
+
+ a| 
+Anzahl der Benutzer
+ a| 
+Anzahl der OnCommand Insight Benutzer
+ a| 
+20
+ a| 
+2
+ a| 
+1
+ a| 
+1
+
+|===
+Wenn Sie einen neuen Benutzer für Data Warehouse und Reporting hinzufügen und das Limit in einer Rolle überschreiten, wird der Benutzer als „`deactivated,`“ hinzugefügt und Sie müssen einen anderen Benutzer mit dieser Rolle deaktivieren oder entfernen, um eine neue Benutzermitgliedschaft zu erhalten.
+
+[NOTE]
+====
+Für die Funktionen zur Berichterstellung ist eine Insight Plan-Lizenz erforderlich. Sie können zusätzliche Benutzer von Business Author und Pro Author hinzufügen, indem Sie DAS ARAP (Additional Report Authoring Package) erwerben. Wenden Sie sich an Ihren OnCommand Insight Ansprechpartner.
+
+====
+Diese berichtstellungsweisen Benutzerrollen haben keinen Einfluss auf den direkten Datenbankzugriff. Diese berichtenden Benutzerrollen haben keinen Einfluss auf Ihre Fähigkeit, SQL-Abfragen mithilfe der Data Marts zu erstellen.

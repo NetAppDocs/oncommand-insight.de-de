@@ -1,0 +1,30 @@
+---
+permalink: dwh/including-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Standardmäßig sendet ASUP nur die Data Warehouse-Protokolldateien an den technischen Support zur Unterstützung bei der Fehlerbehebung. Sie können jedoch auch wählen, ob Sie ein Backup der Data Warehouse-Datenbank einschließen und den Typ der gesendeten Daten auswählen möchten. 
+---
+= Einschließlich einer Sicherung der Data Warehouse-Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Standardmäßig sendet ASUP nur die Data Warehouse-Protokolldateien an den technischen Support zur Unterstützung bei der Fehlerbehebung. Sie können jedoch auch wählen, ob Sie ein Backup der Data Warehouse-Datenbank einschließen und den Typ der gesendeten Daten auswählen möchten.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse-Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster auf der linken Seite auf *Fehlerbehebung*.
+. Um festzulegen, dass ASUP ein Backup der Data Warehouse-Datenbank enthalten soll, klicken Sie auf die Liste *DWH-Datenbanksicherung einbeziehen* und wählen Sie eine der folgenden Optionen für den Datentyp aus, den das Backup enthalten soll:
++
+** Alle (inkl. Performance)
+** Alle Außer Leistung
+** Nur Inventar
+
+
+. Klicken Sie Auf *Aktualisieren*.
+

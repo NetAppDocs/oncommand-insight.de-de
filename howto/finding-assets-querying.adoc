@@ -1,0 +1,14 @@
+---
+permalink: howto/finding-assets-querying.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit leistungsstarken Abfragen können Sie einfach Assets in Ihrer Umgebung finden und anzeigen. 
+---
+= Suchen von Assets: Abfragen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit leistungsstarken Abfragen können Sie einfach Assets in Ihrer Umgebung finden und anzeigen.

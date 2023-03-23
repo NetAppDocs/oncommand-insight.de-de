@@ -1,0 +1,74 @@
+---
+permalink: config-admin/creating-a-query.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können eine Abfrage erstellen, um die Assets in Ihrer Umgebung auf granularer Ebene zu durchsuchen. Mithilfe von Abfragen können Sie Daten aufteilen, indem Sie Filter hinzufügen und die Ergebnisse sortieren, um Bestands- und Leistungsdaten in einer Ansicht anzuzeigen. 
+---
+= Erstellen einer Abfrage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Abfrage erstellen, um die Assets in Ihrer Umgebung auf granularer Ebene zu durchsuchen. Mithilfe von Abfragen können Sie Daten aufteilen, indem Sie Filter hinzufügen und die Ergebnisse sortieren, um Bestands- und Leistungsdaten in einer Ansicht anzuzeigen.
+
+
+
+== Über diese Aufgabe
+
+Sie können beispielsweise eine Abfrage für Volumes erstellen, einen Filter hinzufügen, um bestimmte Speicher zu finden, die dem ausgewählten Volume zugeordnet sind, einen Filter hinzufügen, um eine bestimmte Anmerkung, wie z. B. Schicht 1, für die ausgewählten Speicher zu finden, Und schließlich fügen Sie einen weiteren Filter hinzu, um alle Speicher mit IOPS - Lesen (IO/s) größer als 25 zu finden. Wenn die Ergebnisse angezeigt werden, können Sie die mit der Abfrage verknüpften Datenspalten in aufsteigender oder absteigender Reihenfolge sortieren.
+
+Wenn eine neue Datenquelle hinzugefügt wird, die Assets erfasst oder Anmerkungen oder Anwendungszuweisungen vorgenommen werden, können Sie nach der Indizierung der Abfragen, die in einem regelmäßig geplanten Intervall stattfinden, nach diesen Assets, Anmerkungen oder Anwendungen suchen.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Klicken Sie auf *Abfragen* und wählen Sie *+ Neue Abfrage*.
+. Klicken Sie auf *Select Resource Type* und wählen Sie einen Asset-Typ aus.
++
+Wenn eine Ressource für eine Abfrage ausgewählt wird, werden automatisch eine Reihe von Standardspalten angezeigt. Sie können diese Spalten jederzeit entfernen oder neue hinzufügen.
+
+. Geben Sie in das Textfeld *Name* den Namen des Assets ein oder geben Sie einen Textteil ein, um durch die Anlagennamen zu filtern.
++
+Sie können die folgenden Elemente allein oder kombiniert verwenden, um Ihre Suche in einem beliebigen Textfeld auf der Seite Neue Abfrage zu verfeinern:
+
++
+** Mit einem Sternchen können Sie nach allem suchen. Beispiel: `vol*rhel` Zeigt alle Ressourcen an, die mit „`vol`“ beginnen und mit „`RHEL`“ enden.
+** Mit dem Fragezeichen können Sie nach einer bestimmten Anzahl von Zeichen suchen. Beispiel: `BOS-PRD??-S12` Zeigt BOS-PRD12-S12, BOS-PRD13-S12 usw. an.
+** Mit dem Operator ODER können Sie mehrere Einheiten angeben. Beispiel: `FAS2240 OR CX600 OR FAS3270` Findet mehrere Storage-Modelle
+** Der NICHT-Operator ermöglicht es Ihnen, Text aus den Suchergebnissen auszuschließen. Beispiel: `NOT EMC*` Findet alles, was nicht mit „`EMC`“ beginnt. Verwenden Sie können `NOT *` So zeigen Sie Felder an, die keinen Wert enthalten.
+
+
+. Klicken Sie Auf image:../media/check-box-ok.gif[""] Um die Assets anzuzeigen.
+. Um ein Kriterium hinzuzufügen, klicken Sie auf image:../media/more-button.gif[""]Und führen Sie eine der folgenden Aktionen aus:
++
+** Geben Sie ein, um nach bestimmten Kriterien zu suchen, und wählen Sie es aus.
+** Blättern Sie in der Liste nach unten, und wählen Sie ein Kriterium aus.
+** Geben Sie einen Wertebereich ein, wenn Sie eine Performance-Metrik wie IOPS - Lesen (IO/s) auswählen. Von Insight bereitgestellte Standardanmerkungen werden durch angezeigt image:../media/annotation-icon.gif[""]; Es ist möglich, Anmerkungen mit doppelten Namen zu haben.
+
+
++
+In den Listenaktualisierungen wird der Liste Abfrageergebnisse eine Spalte für die Kriterien und die Ergebnisse der Abfrage hinzugefügt.
+
+. Optional können Sie auf klicken image:../media/remove-criteria-button.gif[""] Um eine Anmerkung oder Performance-Metrik aus den Abfrageergebnissen zu entfernen.
++
+Wenn Ihre Abfrage beispielsweise die maximale Latenz und den maximalen Durchsatz für Datastores anzeigt und Sie nur die maximale Latenz in der Liste der Abfrageergebnisse anzeigen möchten, klicken Sie auf diese Schaltfläche und deaktivieren Sie das Kontrollkästchen *Throughput - max*. Die Spalte Throughput - Max (MB/s) wird aus der Liste der Abfrageergebnisse entfernt.
+
++
+[NOTE]
+====
+Abhängig von der Anzahl der Spalten, die in der Abfrageergebnistabelle angezeigt werden, können Sie möglicherweise keine weiteren hinzugefügten Spalten anzeigen. Sie können eine oder mehrere Spalten entfernen, bis die gewünschten Spalten angezeigt werden.
+
+====
+. Klicken Sie auf *Speichern*, geben Sie einen Namen für die Abfrage ein und klicken Sie erneut auf *Speichern*.
++
+Wenn Sie über ein Konto mit einer Administratorrolle verfügen, können Sie benutzerdefinierte Dashboards erstellen. Ein benutzerdefiniertes Dashboard kann alle Widgets aus der Widget-Bibliothek enthalten, von denen mehrere Sie Abfrageergebnisse in einem benutzerdefinierten Dashboard darstellen können. Weitere Informationen zu benutzerdefinierten Dashboards finden Sie im _OnCommand Insight Handbuch zum Einstieg_.
+
+
+
+*Verwandte Informationen*
+
+link:importing-and-exporting-user-data.md#["Importieren und Exportieren von Benutzerdaten"]

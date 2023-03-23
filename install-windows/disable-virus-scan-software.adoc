@@ -1,0 +1,18 @@
+---
+permalink: install-windows/disable-virus-scan-software.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Antivirensoftware auf Ihrem System aktiv ist, schlägt die OnCommand Insight-Installation fehl. Sie können dieses Problem verhindern, indem Sie die Virenscan-Software vor der Installation deaktivieren. 
+---
+= Deaktivierung der Virenscan-Software
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Antivirensoftware auf Ihrem System aktiv ist, schlägt die OnCommand Insight-Installation fehl. Sie können dieses Problem verhindern, indem Sie die Virenscan-Software vor der Installation deaktivieren.
+
+Um einen Installationsfehler aufgrund einer aktiven Virenscanner-Software zu verhindern, müssen Sie während der Installation jeder OnCommand Insight-Komponente alle Virenscanner vollständig deaktivieren. Nach der Installation müssen die von der Komponente Insight verwendeten Pfade (Installations-, Backup- und Archivierpfade) vom Virenscan ausgeschlossen werden.
+
+Außerdem müssen Sie den IBM/DB2-Ordner (z. B. _C:\Program Files\IBM\DB2_) nach der Installation von der Virenprüfung ausschließen.

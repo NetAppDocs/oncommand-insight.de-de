@@ -1,0 +1,48 @@
+---
+permalink: install-windows/opening-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Nach der Installation von OnCommand Insight müssen Sie Ihre Lizenzen installieren und dann Insight einrichten, um Ihre Umgebung zu überwachen. Dazu rufen Sie die Web-UI von Insight über einen Webbrowser auf. 
+---
+= Zugriff auf die Web-UI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach der Installation von OnCommand Insight müssen Sie Ihre Lizenzen installieren und dann Insight einrichten, um Ihre Umgebung zu überwachen. Dazu rufen Sie die Web-UI von Insight über einen Webbrowser auf.
+
+
+
+== Schritte
+
+. Führen Sie einen der folgenden Schritte aus:
++
+** Open Insight auf dem Insight-Server:
++
+`+https://fqdn+`
+
+** Insight von jedem beliebigen anderen Speicherort aus öffnen:
++
+`+https://fqdn:port+`
+
++
+Die Portnummer ist entweder 443 oder ein anderer Port, der bei der Installation des Insight-Servers konfiguriert wurde. Die Portnummer ist standardmäßig 443, wenn Sie sie nicht in der URL angeben.
+
+
+
++
+Das Dialogfeld OnCommand Insight wird angezeigt:image:../media/oci-login-dialog-box.gif[""]
+
+. Geben Sie Ihren Benutzernamen und Ihr Passwort ein und klicken Sie auf *Login*.
++
+Wenn die Lizenzen installiert wurden, wird die Seite zur Einrichtung der Datenquelle angezeigt.
+
++
+[NOTE]
+====
+Eine Insight Browser-Sitzung, die 30 Minuten lang inaktiv war, wurde überschritten, und Sie werden automatisch vom System abgemeldet. Für zusätzliche Sicherheit empfiehlt es sich, den Browser nach der Abmeldung von Insight zu schließen.
+
+====
+

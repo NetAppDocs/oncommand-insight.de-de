@@ -1,0 +1,106 @@
+---
+permalink: dwh/viewing-oncommand-insight-logs.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können verschiedene Data Warehouse- und Cognos-Protokolle in OnCommand Insight anzeigen. 
+---
+= Anzeigen von OnCommand Insight-Protokollen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können verschiedene Data Warehouse- und Cognos-Protokolle in OnCommand Insight anzeigen.
+
+
+
+== Über diese Aufgabe
+
+Sie können Fehlerbehebungs- und Statusinformationen in Cognos- und Data Warehouse-Protokolldateien untersuchen.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse-Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster auf der linken Seite auf *Fehlerbehebung*.
+. Klicken Sie im Abschnitt *Logs* auf *Log Files*.
++
+Die folgenden Protokolldateien werden angezeigt:
+
++
+|===
+
+
+ a| 
+dwh.log
+
+
+
+ a| 
+Listet den Status von Data Warehouse-Jobs auf
+
+
+
+ a| 
+wildfly.log
+
+
+
+ a| 
+Stellt Informationen über den WildFly-Anwendungsserver bereit
+
+
+
+ a| 
+dwh_Upgrade-Protokoll
+
+
+
+ a| 
+Enthält Informationen zum Upgrade auf Data Warehouse
+
+
+
+ a| 
+ldap.log
+
+
+
+ a| 
+Protokolliert Nachrichten im Zusammenhang mit der LDAP-Authentifizierung
+
+
+
+ a| 
+dwh_troubleshoot.log
+
+
+
+ a| 
+Protokolliert Meldungen, die bei der Fehlerbehebung von DWH-Problemen helfen können
+
+
+
+ a| 
+sanscreenap.log
+
+
+
+ a| 
+Bietet Informationen über die Verbindung zum Server, Authentifizierung und Zugriff auf das Cognos-Repository sowie Informationen über andere Prozesse
+
+
+
+ a| 
+cognosserver.log
+
+
+
+ a| 
+Cognos-Protokoll
+
+|===
+. Klicken Sie auf den Namen der Protokolldatei, die Sie anzeigen möchten.
+

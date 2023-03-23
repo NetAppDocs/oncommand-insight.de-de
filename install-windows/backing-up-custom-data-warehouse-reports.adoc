@@ -1,0 +1,27 @@
+---
+permalink: install-windows/backing-up-custom-data-warehouse-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie benutzerdefinierte Berichte erstellt haben und Sie nicht über die XML-Quelldateien verfügen, sollten Sie diese Berichte vor dem Upgrade sichern. Sie sollten sie dann auf einen anderen Server als den Data Warehouse-Server kopieren. 
+---
+= Erstellen von benutzerdefinierten Data Warehouse-Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie benutzerdefinierte Berichte erstellt haben und nicht über den verfügen `.xml` Quelldateien für sie, dann sollten Sie diese Berichte vor dem Upgrade sichern. Sie sollten sie dann auf einen anderen Server als den Data Warehouse-Server kopieren.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse-Portal unter an `+https://fqdn/dwh+`.
+. Klicken Sie in der Symbolleiste Data Warehouse auf image:../media/oci-reporting-portal-icon.gif[""] Um das Reporting Portal zu öffnen und sich anzumelden.
+. Wählen Sie *Datei* > *Öffnen*.
+. Wählen Sie den Ordner aus, in dem sich der Bericht befindet, wählen Sie den Bericht aus, und klicken Sie dann auf *Öffnen*.
+. Wählen Sie *Extras* > *Bericht in Zwischenablage kopieren*.
+. Öffnen Sie einen Texteditor, fügen Sie den Inhalt des Berichts ein, und speichern Sie die Datei unter `report_name.txt`, Wo `report _name` Ist der Name des Berichts.
+. Speichern Sie die Berichte auf einem anderen Server als dem Data Warehouse-Server.
+

@@ -1,0 +1,44 @@
+---
+permalink: install-windows/troubleshooting-an-upgrade.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn nach einem OnCommand Insight-Upgrade Probleme auftreten, können Sie die Fehlerbehebungsinformationen zu einigen möglichen Problemen prüfen. 
+---
+= Fehlerbehebung bei einem Upgrade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn nach einem OnCommand Insight-Upgrade Probleme auftreten, können Sie die Fehlerbehebungsinformationen zu einigen möglichen Problemen prüfen.
+
+
+
+== Cognos kann nicht über das Windows-Startmenü gestartet werden
+
+Die Existenz eines Raumes vor `\SANscreen\cognos` Im Pfadnamen liegt ein Problem vor. Weitere Informationen finden Sie in der NetApp Customer Success Community unter: https://forums.netapp.com/thread/62721[].
+
+
+
+== Fehlermeldung „`Keine gültige win32-Anwendung`“
+
+Dies ist ein Problem mit Microsoft Windows. Um dieses Problem zu beheben, müssen Sie Anführungszeichen um den Bildpfad in der Registrierung setzen. Weitere Informationen finden Sie in der folgenden Dokumentation: https://support.microsoft.com/en-us/kb/812486/en-us[].
+
+
+
+== Anmerkungen sind nicht vorhanden
+
+Wenn ein Data Warehouse-ETL-Job Anmerkungen von einer Insight-Instanz abfragt, erhält er manchmal eine leere Antwort (ein 0-Ergebnis) als Fehler. Dieser Fehler führt zu Anmerkungen für bestimmte Objekte, die zwischen dem Status „`Present`“ und „`Not Present`“ im Data Warehouse hin und her verschoben werden. Weitere Informationen finden Sie im Folgenden: https://forums.netapp.com/docs/DOC-44167[]
+
+
+
+== Unterschiede bei den in Berichten angezeigten Werten
+
+Vor 7.0 waren Berichte ganzzahlig. Sie sind jetzt dezimal-basiert; daher können Sie nach dem Upgrade feststellen, dass die Anzeige der Werte erhöht oder verringert wird.
+
+
+
+== Daten werden nicht in Berichten angezeigt
+
+In 7.0 wurden mehrere Modellnamen geändert (z. B. wurde Symmetrix in Symmetrix VMAX geändert). Wenn ein Bericht daher einen Filter für „`Symmetrix`“ enthält, werden beim Ausführen des Berichts keine Daten angezeigt. Um den Bericht zu ändern, müssen Sie den Bericht mit dem Abfrage-Explorer in Report Studio öffnen, nach dem Modellnamen suchen, ihn durch den neuen Modellnamen ersetzen und den Bericht speichern.

@@ -1,0 +1,142 @@
+---
+permalink: faq/faq-anomaly-detection.html 
+sidebar: sidebar 
+keywords:  
+summary: In diesen FAQ werden häufig gestellte Fragen zur Erkennung von OnCommand Insight-Anomalien beantwortet. 
+---
+= Anomalieerkennung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In diesen FAQ werden häufig gestellte Fragen zur Erkennung von OnCommand Insight-Anomalien beantwortet.
+
+
+
+== Was ist eine Anomalie?
+
+Anomalien sind Performance-Änderungsereignisse in IOPS, Latenz, Auslastung, Buffer-to-Buffer Credits und CPU, die nicht den zuvor beobachteten und erwarteten Mustern entsprechen. Die Anomalieerkennung von OCI zielt auf eine Applikationsinfrastruktur ab, die die Applikation bedient und auf Änderungen bei Verarbeitungsmustern und -verhalten sucht. Diese zyklischen Verarbeitungsmuster enthalten historische „`ebbs and Flows`“ in der Workload-Performance während der Betriebszeiten und an Wochenenden. Das Erkennungsmodul für Anomalien in OCI verwendet intelligente Machine-Learning-Funktionen, um ein „`normales`“-Baseline-Muster zu erstellen und zu erkennen, wann eine definierte Applikation vom erwarteten Verhalten abweicht.
+
+
+
+== Wie funktioniert die Anomalieerkennung in OCI?
+
+Bei der Anomalieerkennung von OCI `handelt es sich um einen proaktiven Überwachungsansatz, der Machine Learning Intelligence auf der Grundlage historischer Informationen nutzt. Die Möglichkeit, aufkommende Performance-Anomalien weit früher als die herkömmlichen Schwellenwerte zu erkennen, bietet Administratoren zusätzliche Zeit, um Bedenken zu besprechen, zu planen und zu beheben, bevor Applikations-SLOs oder Datacenter-Services beeinträchtigt werden.
+
+Insight erkennt den gesamten Infrastruktur-Stack, der die Applikation unterstützt, und bildet ihn automatisch ab. Dies beginnt bei den Rechenressourcen, über die Switch Fabric und bis hin zu den Storage-Ressourcen. OCI sammelt wichtige Performance-Zähler, einschließlich IOPS, Latenz, Node-Informationen, Storage-Pool-Auslastung, Hypervisor-CPU, BB Credit Zero für jede Ressource wird dann diese Daten an das Erkennungsmodul für Anomalien speist, um sie bei der Analyse von Applikationsanomalien zu verwenden. Die Anomalieergebnisse werden zweimal pro Stunde aktualisiert und stehen auf dem Applikations-Dashboard, den Landing Pages der Anwendung und dem Widget der Abfragetabelle zur Verfügung. Bei der Bewertung von Anomalien werden Ressourcen für Ressourcen, Zähler für Zähler durchgeführt, und für die gesamte Applikationsinfrastruktur wird ein Wert für die allgemeine Signifikanz angegeben.
+
+
+
+== Welche Versionen von OCI unterstützen die Erkennung von Anomalien?
+
+Die Erkennung von Anomalien wird in OCI 7.2 und höher unterstützt.
+
+
+
+== Für wie viele Applikationen kann OCI die Anomalieerkennung ermöglichen?
+
+OCI unterstützt das Monitoring von bis zu 48 geschäftskritischen Applikationen.
+
+
+
+== Wie viele Ades (Anomaly Detection Engines) können eingesetzt werden?
+
+Eine Engine zur Erkennung von Anomalien pro betriebsbereite OCI-Server
+
+
+
+== Kann ich zusätzliche Anomalieerkennung-Engines einsetzen, wenn ich mehr als 48 Applikationen habe?
+
+Ja, derzeit unterstützt OCI das Pairing einer Engine zur Erkennung von Anomalien pro OCI-Server. In Umgebungen mit mehreren OCI-Servern können zusätzliche Engines zur Erkennung von Anomalien und OCI Betriebs-Server`paarweise` implementiert werden. Jeder Server hätte nur Einblick in seine Applikationen, wenn Funktionen zur Anomalieerkennung aktiviert sind.
+
+
+
+== Gibt es Einschränkungen hinsichtlich der Größe eines Applikations-Clusters/einer Gruppe?
+
+Allgemeine Richtlinien von OCI für einen optimalen Betrieb und eine Skalierung mithilfe der Funktionen zur Erkennung von Anomalien im Insight sind wie folgt: Eine Engine zur Erkennung von Anomalien pro Insight Server wird unterstützt. Bis zu 48 Applikationen können in OCI überwacht werden. Anwendungsinfrastrukturen können bis zu 4000 Objekte umfassen. Ungenügende Ressourcen werden die Gesamtausbeskala verringern.
+
+
+
+== Welche OCI-Lizenzen sind für die Erkennung von Anomalien erforderlich?
+
+Für die Analyse der Anomalieerkennung sind sowohl Lizenzen zur Erkennung als auch zur Durchführung von Anomalien erforderlich.
+
+
+
+== Wie lange dauert es, bis Anomalien erkannt und Ergebnisse erkannt werden?
+
+Die Ergebnisse der Bewertung von Anomalien werden innerhalb von nur 2-3 Stunden nach Aktivierung der Anwendungsüberwachung angezeigt.
+
+
+
+== Wie lange sollte ich warten, bevor ich die Ergebnisse operativ verwende?
+
+Die Qualität und Genauigkeit der Ergebnisse des Anomalieerkennungsmotors verbessern sich im Laufe der Zeit (Wochen, Monate, Quartal usw.). Die zyklische Auswertung (Periodizität) beginnt in der Regel um die dritte Woche. Bei Mustern, die sich über einen längeren Zeitraum erstrecken (z. B. monatlich), muss der Motor Wiederholungen beobachten, bevor er die Anomaliewerte anpasst.
+
+
+
+== Wie lange hält die Anomalieerkennung ihr Lernen aufrecht?
+
+Das Erkennungsmodul für Anomalien ist äußerst effizient in der Art und Weise, wie es Lerninformationen speichert. Statistische Erkenntnisse können in Monaten für das anomale Verhalten von Objekten gemessen werden. Es gibt kein "`retention`", wie es bei typischen Datensätzen in Insight üblich ist. Das Erkennungsmodul für Anomalien lernt und speichert Daten, die im Laufe der Zeit „`statistisch signifikant`“ bestimmt werden und altert bei Bedarf unbedeutende Daten. Dieser Mechanismus erhöht die Lerndauer erheblich und reduziert sowohl die für das Speichern von Daten erforderlichen Ressourcen als auch die Zeit für die Durchführung von Analysen
+
+
+
+== Wenn ich heute die Anomalieerkennung aktiviere, kann ich sagen, welche Anomalien letzte Woche passiert sind?
+
+Nein. Wenn die Anomalieerkennung initialisiert wird, lädt der Insight-Server alle vorhandenen Performancedaten vom Insight-Server, um die Anomalieerkennungs-Engines zu beschleunigen, die die überwachten Anwendungen und deren Infrastrukturen verstehen. Bei den aufgenommenen „`pre-existing`“ Performance-Daten werden keine Anomalien angegeben. Anomalien werden nur über die neuen eingehenden Daten gemeldet, da sie mit den bereits vorhandenen Daten verglichen werden. Neu erkannte Anomalien werden in nur wenigen Stunden angezeigt.
+
+
+
+== Wie werden Anomaliewerte berechnet?
+
+Jede Bewertung von Anomalien bei Applikationen wird anhand einer Rollup der verschiedenen Punktzahlen der einzelnen Assets berechnet. Die Anomalieerkennung nutzt über 30 komplexe Algorithmen und Formeln in ihrer Anomaliebestimmung und -Bewertung. Die Anwender könnten diese Art der Analyse-Scoring-Technik mit ähnlichen medizinischen Scoring-Verfahren vergleichen, wie die Body Mass Index (BMI)-Scores, die aus zahlreichen Variablen und Messungen (Gewicht, Alter, Größe, Dichte usw.) bestehen.
+
+
+
+== Was stellen die blauen Balken dar?
+
+Jeder Block mit 3 Balken stellt eine Ressource und ihren Signifikanzbereich für Anomalien dar. Je mehr blaue Balken angezeigt werden, desto größer ist die Änderung des beobachteten Verhaltens. Wenn Sie auf die Blöcke klicken, werden die Bedeutung (der Anomalie), die einzelne Ressource und die Zähler angezeigt.
+
+
+
+== Warum ergibt die Punktzahl der einzelnen Ressourcen nicht die Gesamtpunktzahl der Anwendung?
+
+Jede Ressource wird individuell anhand ihrer Abweichung im beobachteten Verhalten bewertet. Die Bedeutung der einzelnen Ressourcenbewertung spielt eine Rolle bei der Bewertung der Gesamtanwendung, kann aber auch andere analytische und mathematische Faktoren umfassen.
+
+
+
+== Kann ich die Anomalieerkennung konfigurieren, um Geschäftseinheiten oder Objekte mit zugewiesenen Annotationen zu überwachen?
+
+Heute kann die Anomalieerkennung nur auf definierten Applikationen aktiviert werden. Alle Objekte, die einer Applikation zugewiesen werden können (VMs, Hypervisoren, Server, Volumes und interne Volumes), können gruppiert und überwacht werden.
+
+
+
+== Kann OCI über hohe Punktzahlen für Anomalien benachrichtigt werden?
+
+Ja, Sie können Applikations-Performance-Richtlinien erstellen, die auf der Anomaliebewertung für die Applikation basieren. Das Überschreiten der in der Richtlinie definierten Schwellenwerte löst Warnungen aus, die Sie über Probleme im Zusammenhang mit den Ressourcen in Ihrer Anwendung informieren.
+
+
+
+== Was passiert, wenn ich die Anomalieerkennung in meiner Applikation abschalte?
+
+Alle gelernten (historischen Anomalieinformationen) für die Anwendungsinfrastruktur werden vom Anomalieerkennungs-Engine gelöscht. Alle Ergebnisse der Anomalieerkennung werden aus der Betriebsdatenbank von Insight gelöscht.
+
+
+
+== Wann sollte ich statische Schwellenwerte verwenden?
+
+Statische Schwellenwerte eignen sich gut für Best Practices-Warnmeldungen bei Grenzwerten von Infrastrukturressourcen und zur Ermittlung der Ereignisdauer. Sie unterstützen auch die Verwaltung von Service-Levels und warnen bei verschiedenen Fehlerzählermetriken wie Link Resets, Rückwürfe der Klasse 3 und Verlust von Synchronisierung.
+
+
+
+== Welche Pläne gibt es, bei der Erkennung von Anomalien weitere Kennzahlen zu berücksichtigen?
+
+Das Modell und die Algorithmen des maschinellen Lernens von Anomaly werden weiter verbessert oder angepasst, da neue statistische Daten, Nutzerfeedback und Produktverbesserungen verfügbar werden.
+
+
+
+== Sind die Anomaly-Ergebnisse im Data Warehouse (DWH) verfügbar?
+
+Die heutigen Anomaly-Ergebnisse werden nicht (ETL-ed) an das OCI Data Warehouse gesendet. Benutzer können Ergebnisse auf der Landing Page der OCI-Anwendung oder in benutzerdefinierten Widgets der Abfragetabelle finden.

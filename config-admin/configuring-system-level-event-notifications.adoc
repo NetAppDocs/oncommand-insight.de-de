@@ -1,0 +1,37 @@
+---
+permalink: config-admin/configuring-system-level-event-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight unterstützt Benachrichtigungen bei Ereignissen auf Systemebene, z. B. bei Ausfällen von Erfassungseinheiten oder Datenquellfehlern. Um Benachrichtigungen zu erhalten, müssen Sie Insight so konfigurieren, dass E-Mails gesendet werden, wenn eines oder mehrere dieser Ereignisse auftreten. 
+---
+= Konfigurieren von Ereignisbenachrichtigungen auf Systemebene
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight unterstützt Benachrichtigungen bei Ereignissen auf Systemebene, z. B. bei Ausfällen von Erfassungseinheiten oder Datenquellfehlern. Um Benachrichtigungen zu erhalten, müssen Sie Insight so konfigurieren, dass E-Mails gesendet werden, wenn eines oder mehrere dieser Ereignisse auftreten.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen E-Mail-Empfänger für den Empfang von Benachrichtigungen in *Admin* > *Benachrichtigungen* > *Sendemethoden* konfiguriert haben.
+
+
+
+== Schritte
+
+. Klicken Sie Auf *Admin* > *Benachrichtigungen*.
+. Klicken Sie Auf *Events*.
+. Wählen Sie im Abschnitt *System Alert Events* E-Mail den Schweregrad (*Warnung und höher* oder *kritisch*) für die Benachrichtigung aus, oder wählen Sie *nicht senden*, wenn Sie keine Benachrichtigungen über Ereignisse auf Systemebene erhalten möchten.
+. Klicken Sie Auf *Speichern*.
+. Klicken Sie auf *Admin* > *System Alerts*, um die Warnungen selbst zu konfigurieren.
+. Um eine neue Warnung hinzuzufügen, klicken Sie auf *+Hinzufügen* und geben Sie der Warnung einen eindeutigen *Namen*. Sie können auch auf das rechte Symbol klicken, um einen bestehenden Alarm zu bearbeiten.
+. Wählen Sie den *Ereignistyp* aus, auf den Sie eine Warnung ausgeben möchten, z. B. _Acquisition Unit Failure_.
+. Wählen Sie ein *Snooze*-Intervall, um Benachrichtigungen bei doppelten Ereignissen des ausgewählten Typs für das ausgewählte Zeitintervall zu unterdrücken. Wenn Sie „_Never_“ auswählen, erhalten Sie einmal pro Minute wiederholte Benachrichtigungen, bis das Ereignis nicht mehr stattfindet.
+. Wählen Sie einen *Schweregrad* (Warnung oder kritisch) für die Ereignisbenachrichtigung.
+. Standardmäßig werden E-Mail-Benachrichtigungen an die globale E-Mail-Empfängerliste gesendet, oder Sie können auf den bereitgestellten Link klicken, um die globale Liste zu überschreiben und Benachrichtigungen an bestimmte Empfänger zu senden.
+. Klicken Sie auf Speichern, um die Warnmeldung hinzuzufügen.
+

@@ -1,0 +1,44 @@
+---
+permalink: howto/monitoring-the-data-stores.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Datastore-Landing Page identifiziert Überzeichnungs-Verhältnisse, LUN- und Festplattenauslastung, korrelierte Ressourcen und zeigt Richtlinienverstöße und Verstöße gegen den Datastore an. 
+---
+= Überwachen der Datenspeicher
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Datastore-Landing Page identifiziert Überzeichnungs-Verhältnisse, LUN- und Festplattenauslastung, korrelierte Ressourcen und zeigt Richtlinienverstöße und Verstöße gegen den Datastore an.
+
+Auf dieser Landing Page lassen sich Probleme mit Ihrer virtuellen Infrastruktur erkennen. Verfolgen Sie die Trends bei den Kapazitäts- und Kapazitätsverhältnissen, um Änderungen in Ihrer Kapazität vorherzusehen.
+
+* *Zusammenfassung*
++
+In diesem Abschnitt erhalten Sie Informationen zu folgenden Themen:
+
++
+** Datenspeicher-Kapazitätsinformationen einschließlich der physischen Kapazität und der zu viel belegten Kapazität
+** Der Prozentsatz der überbelegten Kapazität.
+** Kennzahlen für Latenz, IOPS und Durchsatz
+
+
+* *VMDKs*
++
+Im Abschnitt VMDKs werden die Kapazität und Performance der virtuellen Festplatte angezeigt.
+
+* *Speicherressourcen*
++
+Dieser Abschnitt zeigt die genutzte Kapazität und die Performance-Kennzahlen für das interne Volume in Bezug auf den Datastore.
+
+* *Ressourcen*
++
+Verwenden Sie diesen Abschnitt, um die Korrelation von VMDKs zu LUNs zu verstehen und den Applikationspfad von Storage zur VM nachzuvollziehen.
+
+* *Abschnitt Verstöße*
++
+Im Abschnitt Verstöße werden Verstöße gegen Performance-Richtlinien identifiziert, die für den Datastore festgelegt wurden.
+
+

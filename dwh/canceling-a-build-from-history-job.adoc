@@ -1,0 +1,23 @@
+---
+permalink: dwh/canceling-a-build-from-history-job.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können alle geplanten Jobs abbrechen. Der Jobstatus lautet „Aborted“. 
+---
+= Abbrechen eines Builds aus einem Verlaufsjob
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können alle geplanten Jobs abbrechen. Der Jobstatus lautet „`Ababgebrochen`“.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster links auf *Build from History*.
+. Klicken Sie Auf *Abbrechen*.
+

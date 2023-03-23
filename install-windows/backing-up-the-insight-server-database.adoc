@@ -1,0 +1,30 @@
+---
+permalink: install-windows/backing-up-the-insight-server-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Sichern Sie die Insight-Datenbank, um sicherzustellen, dass Sie ein Backup vor kurzem haben, falls nach dem Upgrade ein Problem auftritt. Während der Backup- und Wiederherstellungsphase werden keine Performance-Daten erfasst, daher sollte das Backup so nah wie möglich an der Upgrade-Zeit erfolgen. 
+---
+= Sichern der OnCommand Insight-Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sichern Sie die Insight-Datenbank, um sicherzustellen, dass Sie ein Backup vor kurzem haben, falls nach dem Upgrade ein Problem auftritt. Während der Backup- und Wiederherstellungsphase werden keine Performance-Daten erfasst, daher sollte das Backup so nah wie möglich an der Upgrade-Zeit erfolgen.
+
+
+
+== Schritte
+
+. Öffnen Sie Insight in Ihrem Browser.
+. Klicken Sie Auf *Admin* > *Fehlerbehebung*.
+. Klicken Sie auf der Seite *Fehlerbehebung* auf *Backup*.
++
+Die Dauer für die Sicherung der Datenbank kann je nach verfügbaren Ressourcen (Architektur, CPU und Arbeitsspeicher), der Größe der Datenbank und der Anzahl der in Ihrer Umgebung überwachten Objekte variieren.
+
++
+Wenn die Sicherung abgeschlossen ist, werden Sie gefragt, ob Sie die Datei herunterladen möchten.
+
+. Laden Sie die Sicherungsdatei herunter.
+

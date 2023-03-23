@@ -1,0 +1,22 @@
+---
+permalink: install-windows/verifying-the-rau-service.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Nach einer erfolgreichen Remote Acquisition Unit \(rau\)-Installation sollte der OnCommand Insight rau-Service in der Microsoft Windows-Serviceumgebung verfügbar sein.' 
+---
+= Überprüfen des Dienstes der Fernbedienungseinheit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach erfolgreicher Installation einer Remote Acquisition Unit (rau) sollte der OnCommand Insight rau-Service in der Microsoft Windows-Serviceumgebung verfügbar sein.
+
+
+
+== Schritte
+
+. Um zu überprüfen, ob die rau zu den Windows-Diensten hinzugefügt wurde, öffnen Sie das Windows-Startmenü und wählen Sie *Systemsteuerung* > *Verwaltung* > *Dienste*.
+. Suchen Sie in der Liste *OnCommand Insight Acq – OnCommand Insight's Remote Acquisition Unit (rau)*.
+

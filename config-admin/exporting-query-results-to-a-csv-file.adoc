@@ -1,0 +1,65 @@
+---
+permalink: config-admin/exporting-query-results-to-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die Ergebnisse einer Abfrage in eine CSV-Datei exportieren, um die Daten in eine andere Anwendung zu importieren. 
+---
+= Abfrageergebnisse werden in eine CSV-Datei exportiert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Ergebnisse einer Abfrage in eine CSV-Datei exportieren, um die Daten in eine andere Anwendung zu importieren.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Klicken Sie auf *Abfragen* und wählen Sie *Alle Anfragen anzeigen*.
++
+Die Seite Abfragen wird angezeigt.
+
+. Klicken Sie auf eine Abfrage.
+. Klicken Sie Auf image:../media/export-to-csv.gif[""] So exportieren Sie Abfrageergebnisse in ein``.CSV`` Datei:
+. Führen Sie einen der folgenden Schritte aus:
++
+** Klicken Sie auf *Öffnen mit* und dann auf *OK*, um die Datei mit Microsoft Excel zu öffnen und die Datei an einem bestimmten Speicherort zu speichern.
+** Klicken Sie auf *Datei speichern* und dann auf *OK*, um die Datei im Ordner Downloads zu speichern. Nur die Attribute für die angezeigten Spalten werden exportiert. Einige angezeigte Spalten, insbesondere solche, die Teil komplexer verschachtelter Beziehungen sind, werden nicht exportiert.
+
+
++
+[NOTE]
+====
+Wenn ein Komma in einem Anlagennamen angezeigt wird, schließt der Export den Namen in Anführungszeichen ein, wobei der Name des Assets und das entsprechende .csv-Format erhalten bleiben.
+
+====
++
++ beim Exportieren von Abfrageergebnissen ist zu beachten, dass *alle* Zeilen in der Ergebnistabelle exportiert werden, nicht nur die auf dem Bildschirm ausgewählten oder angezeigten Zeilen, maximal 10,000 Zeilen.
+
++
++
+
++
+[NOTE]
+====
+Wenn Sie eine exportierte CSV-Datei mit Excel öffnen, wenn Sie einen Objektnamen oder ein anderes Feld im Format NN:NN haben (zwei Ziffern gefolgt von einem Doppelpunkt gefolgt von zwei weiteren Ziffern), interpretiert Excel diesen Namen manchmal als Zeitformat, statt Textformat. Dies kann dazu führen, dass in Excel falsche Werte in diesen Spalten angezeigt werden. Ein Objekt mit dem Namen „81:45“ wird beispielsweise in Excel als „81:45:00“ angezeigt. Um dies zu umgehen, importieren Sie die .CSV-Datei in Excel anhand der folgenden Schritte:
+
++
+
+....
+-   Open a new sheet in Excel.
+-   On the "Data" tab, choose "From Text".
+-   Locate the desired .CSV file and click "Import".
+-   In the Import wizard, choose "Delimited" and click Next.
+-   Choose "Comma" for the delimiter and click Next.
+-   Select the desired columns and choose "Text" for the column data format.
+-   Click Finish.
+Your objects should show in Excel in the proper format.
+....
++
+
+====
+

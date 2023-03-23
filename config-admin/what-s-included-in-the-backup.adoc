@@ -1,0 +1,52 @@
+---
+permalink: config-admin/what-s-included-in-the-backup.html 
+sidebar: sidebar 
+keywords:  
+summary: Wöchentliche und On-Demand-Backups können zur Fehlerbehebung oder Migration verwendet werden. 
+---
+= Im Backup enthaltene Funktionen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wöchentliche und On-Demand-Backups können zur Fehlerbehebung oder Migration verwendet werden.
+
+Das wöchentliche oder On-Demand Backup beinhaltet Folgendes:
+
+* Bestandsdaten
+* Performance-Daten (wenn für die Aufnahme in das Backup ausgewählt)
+* Datenquellen und Einstellungen der Datenquelle
+* Integrationspakete
+* Fernbedienungseinheiten
+* Ethernet-Überwachungseinheiten
+* ASUP/Proxy-Einstellungen
+* Einstellungen für den Speicherort der Sicherung
+* Einstellungen für den Archivspeicherort
+* Benachrichtigungseinstellungen
+* Punktzahlen und Geräte für die Anomalieerkennung
+* Applikationseinstellungen für die Erkennung von Anomalien
+* Benutzer
+* Performance-Richtlinien
+* Geschäftseinheiten und Applikationen
+* Regeln und Einstellungen für die Geräteauflösung
+* Dashboards und Widgets
+* Dashboards und Widgets für die Asset-Seite
+* Abfragen
+* Anmerkungen und Anmerkungsregeln
+
+
+Die wöchentliche Sicherung beinhaltet nicht:
+
+* Einstellungen des Sicherheitstools/Vault-Informationen (gesichert über separaten CLI-Prozess)
+* Protokolle (können bei Bedarf in einer ZIP-Datei gespeichert werden)
+* Performance-Daten (wenn nicht für die Aufnahme in das Backup ausgewählt)
+* Lizenzen Zu Haben
+
+
+[NOTE]
+====
+Wenn Sie Performance-Daten in das Backup aufnehmen möchten, werden die Daten der letzten sieben Tage gesichert. Die übrigen Daten befinden sich im Archiv, wenn diese Funktion aktiviert ist.
+
+====

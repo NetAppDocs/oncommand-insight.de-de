@@ -1,0 +1,47 @@
+---
+permalink: install-windows/installation-prerequisites.html 
+sidebar: sidebar 
+keywords:  
+summary: Bevor Sie OnCommand Insight installieren, müssen Sie die aktuelle Softwareversion herunterladen, die entsprechende Lizenz erwerben und Ihre Umgebung einrichten. 
+---
+= Installationsvoraussetzungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie OnCommand Insight installieren, müssen Sie die aktuelle Softwareversion herunterladen, die entsprechende Lizenz erwerben und Ihre Umgebung einrichten.
+
+Stellen Sie vor der Installation von OnCommand Insight sicher, dass folgende Informationen zur Verfügung stehen:
+
+* OnCommand Insight-Softwaredateien im heruntergeladenen Installationspaket für die aktuelle Version
+* Eine Lizenz zum Betrieb der heruntergeladenen OnCommand Insight-Version
+* Minimale Hardware- und Softwareumgebung
++
+Das aktuelle Produkt verbraucht möglicherweise zusätzliche Hardwareressourcen (aufgrund der erweiterten OnCommand Insight-Produktfunktionen), die bei früheren Versionen des OnCommand Insight Produkts nicht in Anspruch genommen wurden.
+
+* Ein Bereitstellungsplan, der die Hardware- und Netzwerkkonfigurationen für den OnCommand Insight-Server, das Data Warehouse und die Berichterstellung sowie die Remote-Erfassungseinheiten umfasst.
+* Java 8 für die Java-Benutzeroberfläche von OnCommand Insight.
++
+
+NOTE: OnCommand Insight enthält eine kostenpflichtige Oracle-Lizenz für Java SE 8. Kunden müssen keine zusätzlichen Java SE 8 Lizenzen erwerben. Diese Lizenz deckt die Verwendung von Java SE 8 mit allen OCI-Komponenten ab. Weitere Informationen finden Sie im http://docs.netapp.com/oci-73/topic/com.netapp.ndc.notices/GUID-93BE9A1E-D79E-4A97-87A2-4DBE31372A16.html["Mitteilungen"] Für spezifische Details.
+
+* Virenscan-Software deaktiviert
++
+Während der Installation von OnCommand Insight müssen Sie alle Virenscanner vollständig deaktivieren. Nach der Installation müssen die von der Komponente Insight verwendeten Pfade (Installations-, Backup- und Archivierpfade) vom Virenscan ausgeschlossen werden, zusätzlich zum Ausschluss des gesamten `sanscreen` Verzeichnis aus dem Scan.
+
++
+Außerdem müssen Sie den IBM/DB2-Ordner (z. B. _C:\Program Files\IBM\DB2_) nach der Installation von der Virenprüfung ausschließen.
+
+
+
+[NOTE]
+====
+Wenn Sie eine vollständige Installation als Upgrade oder als Migration auf neue Hardware durchführen und Ihr vorhandenes System eine nicht standardmäßige Sicherheitskonfiguration enthält, müssen Sie die Sicherheitskonfiguration sichern, bevor Sie die Installation durchführen. Nach Abschluss der Installation müssen Sie die Sicherheitskonfiguration wiederherstellen, bevor Sie den Server (der die lokale Erfassungseinheit enthält) oder die Data Warehouse-Datenbank wiederherstellen.Sie müssen die Sicherheitskonfiguration auf allen Insight-Servern wiederherstellen, bevor Sie die DWH-Datenbank wiederherstellen.
+
+Bei einem in-Place-Upgrade (nur für Insight Server verfügbar) wird die Sicherheitskonfiguration ordnungsgemäß ausgeführt und Sie müssen sie nicht wiederherstellen.
+
+Sie verwenden das `securityadmin` Tool zum Erstellen einer Sicherungskopie der Konfiguration und zum Wiederherstellen der gespeicherten Konfiguration. Weitere Informationen erhalten Sie, wenn Sie nach suchen `securityadmin` Im OnCommand Insight Dokumentationszentrum: http://docs.netapp.com/oci-73/index.jsp[]
+
+====

@@ -1,0 +1,231 @@
+---
+permalink: config-admin/metric-definitions.html 
+sidebar: sidebar 
+keywords:  
+summary: Im Abschnitt „Expertenansicht“ einer Asset-Seite werden je nach dem für das Asset ausgewählten Zeitraum mehrere Metriken angezeigt. Jede Metrik wird in einem eigenen Performance-Diagramm angezeigt. Je nachdem, welche Daten angezeigt werden sollen, können Sie Metriken und zugehörige Assets in den Diagrammen hinzufügen oder entfernen. 
+---
+= Metrische Definitionen der Expertenansicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Abschnitt „Expertenansicht“ einer Asset-Seite werden je nach dem für das Asset ausgewählten Zeitraum mehrere Metriken angezeigt. Jede Metrik wird in einem eigenen Performance-Diagramm angezeigt. Je nachdem, welche Daten angezeigt werden sollen, können Sie Metriken und zugehörige Assets in den Diagrammen hinzufügen oder entfernen.
+
+|===
+
+
+| Metrisch | Beschreibung 
+
+
+ a| 
+BB Credit Null Rx, Tx
+ a| 
+Die Anzahl der Empfangs-/Übertragungs-Buffer-zu-Buffer-Gutschriften wurde während des Probenzeitraums auf Null übertragen. Diese Metrik gibt an, wie oft der angeschlossene Port die Übertragung beenden musste, da dieser Port nicht mehr als Credits zur Verfügung stand.
+
+
+
+ a| 
+BB Kredit Null Dauer Tx
+ a| 
+Zeit in Millisekunden, während der der transmit BB-Guthaben während des Abtastintervalls null war.
+
+
+
+ a| 
+Cache-Trefferrverhältnis (gesamt, Lesen, Schreiben) %
+ a| 
+Prozentsatz von Anforderungen, die zu Cache-Treffern führen. Je höher die Anzahl der Treffer im Vergleich zum Volume ist, desto besser ist die Performance. Diese Spalte ist leer für Speicher-Arrays, die keine Cache-Trefferinformationen erfassen.
+
+
+
+ a| 
+Cache-Auslastung (gesamt) %
+ a| 
+Gesamtprozentsatz der Cacheanforderungen, die zu Cache-Treffern führen
+
+
+
+ a| 
+Discards der Klasse 3
+ a| 
+Anzahl der Rückwürfe für die Datenübertragung in der Fibre Channel-Klasse 3
+
+
+
+ a| 
+CPU-Auslastung (gesamt) %
+ a| 
+Menge der aktiv genutzten CPU-Ressourcen als Prozentsatz der insgesamt verfügbaren (über alle virtuellen CPUs)
+
+
+
+ a| 
+CRC-Fehler
+ a| 
+Anzahl der Frames mit ungültigen zyklischen Redundanzprüfungen (CRCs), die vom Port während des Probenahmezeitraums erkannt wurden
+
+
+
+ a| 
+Frame-Rate
+ a| 
+Bildrate in Bildern pro Sekunde übertragen (FPS)
+
+
+
+ a| 
+Bildgröße durchschnittlich (Rx, Tx)
+ a| 
+Verhältnis von Datenverkehr zu Bildgröße. Mit dieser Metrik können Sie feststellen, ob es Overhead Frames in der Fabric gibt.
+
+
+
+ a| 
+Rahmengröße zu lang
+ a| 
+Anzahl der zu langen Fibre Channel-Datenübertragungsrahmen
+
+
+
+ a| 
+Rahmengröße zu kurz
+ a| 
+Anzahl der zu kurzen Fibre Channel-Datenübertragungsrahmen
+
+
+
+ a| 
+I/O-Dichte (gesamt, Lesen, Schreiben)
+ a| 
+Anzahl der IOPS geteilt durch genutzte Kapazität (wie bei der letzten Inventarabfrage der Datenquelle erworben) für das Element Volume, Internal Volume oder Storage. Diese wird anhand der Anzahl der I/O-Vorgänge pro Sekunde pro TB gemessen.
+
+
+
+ a| 
+IOPS (gesamt, Lesen, Schreiben)
+ a| 
+Anzahl der Lese-/Schreib-I/O-Serviceanfragen, die den I/O-Kanal oder einen Teil dieses Kanals pro Zeiteinheit durchlaufen (gemessen in I/O pro Sekunde)
+
+
+
+ a| 
+IP-Durchsatz (gesamt, Lesen, Schreiben)
+ a| 
+Gesamt: Aggregierte Rate, bei der IP-Daten in Megabyte pro Sekunde übertragen und empfangen wurden. Lesen: IP-Durchsatz (Empfangen): Durchschnittliche Rate, mit der IP-Daten in Megabyte pro Sekunde empfangen wurden.
+
+Write: IP Throughput (Transmit): Durchschnittliche Rate, mit der IP-Daten in Megabyte pro Sekunde übertragen wurden.
+
+
+
+ a| 
+Latenz (Gesamt, Lesen, Schreiben)
+ a| 
+Latenz (R&W): Geschwindigkeit, mit der Daten in einem festgelegten Zeitraum gelesen oder auf die Virtual Machines geschrieben werden Der Wert wird in Megabyte pro Sekunde gemessen.
+
+Latenz: Durchschnittliche Antwortzeit der Virtual Machines in einem Datenspeicher.
+
+Höchste Latenz: Die höchste Reaktionszeit der Virtual Machines eines Datenspeichers.
+
+
+
+ a| 
+Verbindungsfehler
+ a| 
+Anzahl der Verbindungsfehler, die der Port während des Probenahmezeitraums entdeckt hat.
+
+
+
+ a| 
+Link Reset Rx, Tx
+ a| 
+Anzahl der Rücksetzungen von Empfangs- oder Übertragungsverbindung während des Probenzeitraums. Diese Metrik gibt die Anzahl der vom angeschlossenen Port an diesen Port ausgegebenen Link-Resets an.
+
+
+
+ a| 
+Speicherauslastung (gesamt) %
+ a| 
+Schwellenwert für den vom Host verwendeten Speicher.
+
+
+
+ a| 
+Teilweise R/W (gesamt) %
+ a| 
+Gesamtzahl der Male, die ein Lese-/Schreibvorgang einen Stripe-Grenzwert auf einem Festplattenmodul in RAID 5, RAID 1/0 oder RAID 0 LUN überschreitet, sind Stripe-Crossings in der Regel nicht von Vorteil, da jeder eine zusätzliche I/O-Operation erfordert Ein geringer Prozentsatz zeigt eine effiziente Stripe-Elementgröße an und gibt Aufschluss über eine nicht ordnungsgemäße Ausrichtung eines Volumes (oder einer NetApp LUN).
+
+Bei CLARiiON ist dieser Wert die Anzahl der Stripe-Crossings, geteilt durch die Gesamtzahl der IOPS.
+
+
+
+ a| 
+Port-Fehler
+ a| 
+Bericht über Port-Fehler über den Probenzeitraum/den angegebenen Zeitraum.
+
+
+
+ a| 
+Signalverlust zählen
+ a| 
+Anzahl der Signalverlustfehler. Wenn ein Signalverlustfehler auftritt, gibt es keine elektrische Verbindung und es besteht ein physikalisches Problem.
+
+
+
+ a| 
+Swap-Rate (Gesamtrate, Rate, out-Rate)
+ a| 
+Rate, mit welcher der Speicher während des Probenzeitraums in den aktiven Speicher des Laufwerks oder aus dem Datenträger in den aktiven Speicher eingetauscht wird. Dieser Zähler bezieht sich auf virtuelle Maschinen.
+
+
+
+ a| 
+Synchrone Verlustzahl
+ a| 
+Anzahl der Fehler bei Synchronisierungsverlust. Wenn ein Fehler bei der Synchronisierung auftritt, kann die Hardware den Datenverkehr nicht erkennen oder darauf sperren. Das gesamte Gerät verwendet möglicherweise nicht die gleiche Datenrate, oder die optischen oder physischen Verbindungen können von schlechter Qualität sein. Der Port muss nach jedem solchen Fehler erneut synchronisiert werden, was sich auf die Systemleistung auswirkt. Gemessen in KB/Sek.
+
+
+
+ a| 
+Durchsatz (Gesamt, Lesen, Schreiben)
+ a| 
+Geschwindigkeit, mit der Daten übertragen, empfangen oder in einem festen Zeitraum als Reaktion auf I/O-Serviceanfragen (gemessen in MB pro s) gesendet werden.
+
+
+
+ a| 
+Timeout - Rahmen verwerfen - Tx
+ a| 
+Anzahl der durch Timeout verursachten verworfenen Übertragungsrahmen.
+
+
+
+ a| 
+Traffic-Rate (gesamt, Lesen, Schreiben)
+ a| 
+Der während des Probenahmezeitraums übertragenen, empfangenen oder beide empfangenen Datenverkehr in Mebibyte pro Sekunde.
+
+
+
+ a| 
+Traffic-Auslastung (gesamt, Lesen, Schreiben)
+ a| 
+Verhältnis der empfangenen/übertragenen/gesamten Kapazität zu Empfangs-/Übertragungs-/Gesamtkapazität während des Probenzeitraums.
+
+
+
+ a| 
+Auslastung (Gesamt, Lesen, Schreiben) %
+ a| 
+Prozentsatz der verfügbaren Bandbreite für die Übertragung (Tx) und den Empfang (Rx).
+
+
+
+ a| 
+Ausstehende Schreibvorgänge (Gesamt)
+ a| 
+Anzahl der ausstehenden Schreib-I/O-Serviceanfragen.
+
+|===

@@ -1,0 +1,66 @@
+---
+permalink: howto/adding-the-snmp-integration-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Integrations-SNMP-Datenquelle bietet allgemeine SNMP-Konfigurationseigenschaften ähnlich wie andere SNMP-basierte Datenquellen, die in den OnCommand Insight-Datenquellen für Brocade und Cisco enthalten sind. 
+---
+= Erstellen einer Datenquelle für die SNMP-Integration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Integrations-SNMP-Datenquelle bietet allgemeine SNMP-Konfigurationseigenschaften ähnlich wie andere SNMP-basierte Datenquellen, die in den OnCommand Insight-Datenquellen für Brocade und Cisco enthalten sind.
+
+
+
+== Bevor Sie beginnen
+
+Damit die Integrations-SNMP-Datenquelle erfolgreich zum Erfassen verwendet werden kann, muss Folgendes zutreffen:
+
+* Sie müssen bereits ein Integrationspaket importiert haben, das Sie für diese SNMP-Datenquelle verwenden.
+* Alle Zielgeräte haben dieselben Anmeldeinformationen.
+* Alle Zielgeräte implementieren die SNMP-Objekte, auf die das konfigurierte Integrationspaket verweist.
+
+
+
+
+== Über diese Aufgabe
+
+Um eine Datenquelle für die SNMP-Integration zu erstellen, wählen Sie im Assistenten für die Erstellung der Datenquelle „Integration“ und „SNMP“ aus.
+
+
+
+== Schritte
+
+. Klicken Sie in der OnCommand Insight Web UI auf *Admin* > *Datenquellen*
+. Klicken Sie Auf *+Hinzufügen*
+. Geben Sie einen Namen für die Datenquelle ein
+. Wählen Sie für Anbieter *Integration* aus
+. Wählen Sie für Modell *SNMP* aus
++
+image::../media/add-integration-ds.gif[Integration ds hinzufügen]
+
+. Für was zu sammeln, überprüfen Sie *Integration*
++
+Dies ist das einzige Paket auf dieser Datenquelle und wird standardmäßig aktiviert:
+
+. Klicken Sie Auf *Konfiguration*
+. Geben Sie die IP-Adressen für die Systeme ein, von denen Sie SNMP-Daten erfassen
+. Wählen Sie ein importiertes SNMP Integration Pack aus
+. Legen Sie das Intervall für die Integrations-Abfrage fest
+. Wählen Sie die SNMP-Version aus
+. Geben Sie die SNMP-Community-Zeichenfolge ein
++
+Für SNMP V1 und V2.
+
+. Fügen Sie den Benutzernamen und das Kennwort für Systeme hinzu, von denen Sie Daten erfassen möchten.
++
+Für SNMP V3.
+
+. Klicken Sie Auf *Erweiterte Konfiguration*
++
+Die Standardeinstellungen der erweiterten Konfiguration werden angezeigt. Nehmen Sie alle erforderlichen Änderungen an diesen Einstellungen vor.
+
+

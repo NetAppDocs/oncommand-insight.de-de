@@ -1,0 +1,24 @@
+---
+permalink: howto/displaying-widget-legends.html 
+sidebar: sidebar 
+keywords:  
+summary: Widgets in Dashboards können mit oder ohne Legenden angezeigt werden. 
+---
+= Widget-Legenden werden angezeigt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Widgets in Dashboards können mit oder ohne Legenden angezeigt werden.
+
+Legenden in Widgets können auf einem Dashboard mit einer der beiden Methoden ein- oder ausgeschaltet werden:
+
+. Aktivieren Sie beim Erstellen oder Bearbeiten des Widgets selbst das Kontrollkästchen „Legenden“, und speichern Sie das Widget.
+. Wenn sich das Dashboard im Bearbeitungsmodus befindet, klicken Sie im Widget auf die Schaltfläche Optionen, und aktivieren Sie das Kontrollkästchen Legenden im Menü.
+
+
+Während Sie die im Widget angezeigten Daten bearbeiten und ändern, wird die Legende für dieses Widget dynamisch aktualisiert.
+
+Wenn Legenden angezeigt werden, wird die Legende als Link zu dieser Asset-Seite angezeigt, wenn die Landing-Page des von der Legende angegebenen Assets navigiert werden kann.

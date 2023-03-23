@@ -1,0 +1,27 @@
+---
+permalink: config-admin/checking-the-status-of-server-resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Diese Option zeigt die Informationen des OnCommand Insight-Servers an, einschließlich Serverspeicher, Festplattenspeicher, Betriebssystem sowie Informationen zur CPU- und OnCommand Insight-Datenbank, einschließlich der InnoDB-Datengröße und des freien Festplattenspeichers, in dem sich die Datenbank befindet. 
+---
+= Überprüfen des Status der Serverressourcen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dieser Option werden die Informationen des OnCommand Insight-Servers angezeigt, einschließlich Serverspeicher, Festplattenspeicher, Betriebssystem sowie Informationen zur CPU- und OnCommand Insight-Datenbank, einschließlich der InnoDB-Datengröße und des freien Festplattenspeichers, in dem sich die Datenbank befindet.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin* und wählen Sie *Fehlerbehebung*.
+. Klicken Sie unten auf der Seite im Bereich Weitere Aufgaben auf den Link *OnCommand Insight-Portal*.
+. Klicken Sie auf der nächsten Seite im Menü Erweitert auf den Link *Fehlerbehebung*.
+. Klicken Sie Auf *Server Resources Status*.
++
+*Für fortgeschrittene OnCommand Insight-Benutzer:* der Administrator kann einige SQL-Tests durchführen, um die Reaktionszeit der Datenbank und des Servers über die Schaltfläche am Ende der Informationsübersicht zu überprüfen. Diese Option zeigt eine Warnung an, wenn die Serverressource zu niedrig ist.
+
+

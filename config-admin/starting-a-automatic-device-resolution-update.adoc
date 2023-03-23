@@ -1,0 +1,24 @@
+---
+permalink: config-admin/starting-a-automatic-device-resolution-update.html 
+sidebar: sidebar 
+keywords:  
+summary: Ein Update zur Geräteauflösung setzt manuelle Änderungen fest, die seit der letzten vollständigen automatischen Gerätelaufauflösung hinzugefügt wurden. Das Ausführen eines Updates kann verwendet werden, um nur die neuen manuellen Einträge für die Konfiguration der Geräteauflösung zu übergeben und auszuführen. Es wird keine vollständige Gerätelaufauflösung durchgeführt. 
+---
+= Starten einer automatischen Aktualisierung der Geräteauflösung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Update zur Geräteauflösung setzt manuelle Änderungen fest, die seit der letzten vollständigen automatischen Gerätelaufauflösung hinzugefügt wurden. Das Ausführen eines Updates kann verwendet werden, um nur die neuen manuellen Einträge für die Konfiguration der Geräteauflösung zu übergeben und auszuführen. Es wird keine vollständige Gerätelaufauflösung durchgeführt.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der Web-UI von Insight an.
+. Klicken Sie Auf *Verwalten* > *Geräteauflösung*
+. Klicken Sie im Bildschirm *Geräteauflösung* auf den Abwärtspfeil in der Schaltfläche *AR ausführen*.
+. Klicken Sie auf *Aktualisieren*, um die Aktualisierung zu starten.
+

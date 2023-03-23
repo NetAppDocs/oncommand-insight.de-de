@@ -1,0 +1,53 @@
+---
+permalink: install-windows/upgrading-remote-acquisition-servers.html 
+sidebar: sidebar 
+keywords:  
+summary: Nachdem Sie alle erforderlichen Aufgaben abgeschlossen haben, können Sie sich beim Server der Remote-Erfassungseinheit anmelden und das Installationspaket ausführen, um das Upgrade abzuschließen. Sie müssen diese Aufgabe auf allen Remote-Akquisitionsservern in Ihrer Umgebung ausführen. 
+---
+= Aktualisierung der Server der Remote-Akquisitionseinheit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie alle erforderlichen Aufgaben abgeschlossen haben, können Sie sich beim Server der Remote-Erfassungseinheit anmelden und das Installationspaket ausführen, um das Upgrade abzuschließen. Sie müssen diese Aufgabe auf allen Remote-Akquisitionsservern in Ihrer Umgebung ausführen.
+
+
+
+== Bevor Sie beginnen
+
+* Sie müssen ein Upgrade von OnCommand Insight durchgeführt haben.
+* Das OnCommand Insight-Installationspaket muss sich auf dem Server befinden.
+
+
+
+
+== Schritte
+
+. Melden Sie sich beim Server der Remote-Erfassungseinheit mit einem Konto an, das über lokale Windows-Administratorberechtigungen verfügt.
+. Suchen Sie das Insight Installationspaket (`RAU-x64-version_number-build_number.msi`) Verwenden Sie Windows Explorer und doppelklicken Sie darauf.
++
+Der OnCommand Insight-Einrichtungsassistent wird angezeigt.
+
+. Verschieben Sie das Fenster mit dem Installationsassistenten vom Zentrum des Bildschirms weg und entfernen Sie es aus dem Fenster mit dem Installationsassistenten, sodass generierte Fehler nicht aus der Ansicht ausgeblendet werden.
+. Befolgen Sie die Anweisungen des Setup-Assistenten.
++
+Es empfiehlt sich, alle Standardeinstellungen ausgewählt zu lassen.
+
+
+
+
+
+== Nachdem Sie fertig sind
+
+* Um zu überprüfen, ob das Upgrade erfolgreich war oder Fehler generiert wurden, überprüfen Sie das Upgrade-Protokoll am folgenden Speicherort: `<install directory>\SANscreen\bin\log`.
+* Verwenden Sie die `securityadmin` Tool zum Wiederherstellen der gespeicherten Sicherheit
++
+Konfiguration. Weitere Informationen finden Sie im OnCommand Insight nach securityadmin
+
++
+Dokumentationscenter: http://docs.netapp.com/oci-73/index.jsp[]
+
+* Löschen Sie den Cache und den Verlauf Ihres Browsers, um sicherzustellen, dass Sie die neuesten Daten vom Server empfangen.
+

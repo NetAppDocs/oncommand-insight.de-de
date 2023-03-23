@@ -1,0 +1,20 @@
+---
+permalink: faq/faq-environment-management.html 
+sidebar: sidebar 
+keywords:  
+summary: Diese FAQ enthält Antworten auf häufig gestellte Fragen zum Management von OnCommand Insight-Umgebungen. 
+---
+= Management Ihrer Umgebung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese FAQ enthält Antworten auf häufig gestellte Fragen zum Management von OnCommand Insight-Umgebungen.
+
+
+
+== Kann ich einem bestimmten Benutzer Zugriff auf OCI geben, während die Ansicht auf bestimmte Ressourcen beschränkt wird (d. h. SVM und zugehörige Volumes, VMs, Server)?
+
+OCI bietet rollenbasierten Zugriff. Der Zugriff auf die Berichterstellung wird beispielsweise über die Data Warehouse-Berichte von OCI gesteuert. Berichte können geplant, per E-Mail als PDF, HTML oder CSV oder an eine Dateifreigabe oder sogar eine URL gesendet werden, bei der der Benutzer sich vor der Anzeige authentifizieren muss. Der benutzerbasierte Zugriff wird in Form von Administratoren, Benutzern und Gästen gewährt. Active Directory/ldap-Unterstützung ist ebenfalls verfügbar.

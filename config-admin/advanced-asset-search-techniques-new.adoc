@@ -1,0 +1,263 @@
+---
+permalink: config-admin/advanced-asset-search-techniques-new.html 
+sidebar: sidebar 
+keywords:  
+summary: Es können mehrere Suchmethoden verwendet werden, um in Ihrer überwachten Umgebung nach Daten oder Objekten zu suchen. 
+---
+= Erweiterte Suchtechniken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es können mehrere Suchmethoden verwendet werden, um in Ihrer überwachten Umgebung nach Daten oder Objekten zu suchen.
+
+
+
+== Wildcard-Suche
+
+Sie können Platzhaltersuche für mehrere Zeichen mit dem * Zeichen durchführen. Zum Beispiel würde _applic*n_ die Anwendung zurückgeben.
+
+
+
+== Bei der Suche verwendete Ausdrücke
+
+Ein Ausdruck ist eine Gruppe von Wörtern, die von doppelten Anführungszeichen umgeben sind, z. B. „PAW VNX LUN 5“. Sie können doppelte Anführungszeichen verwenden, um nach Dokumenten zu suchen, die Leerzeichen in ihren Namen oder Attributen enthalten.
+
+
+
+== Boolesche Operatoren
+
+Mit Booleschen Operatoren können Sie mehrere Begriffe zu einer komplexeren Abfrage kombinieren.
+
+* *ODER*
++
+** Der OR-Operator ist der Standard-Konjunktion-Operator.
++
+Wenn zwischen zwei Begriffen kein Boolescher Operator vorhanden ist, wird der OPERATOR ODER verwendet.
+
+** Der OR-Operator verknüpft zwei Begriffe und findet ein passendes Dokument, wenn einer der Termini in einem Dokument vorhanden ist.
++
+Beispielsweise sucht „`storage ODER netapp`“ nach Dokumenten, die entweder „`storage`“ oder „`netapp`“ enthalten.
+
+** Hohe Bewertungen werden an Dokumente vergeben, die den meisten Bedingungen entsprechen.
+
+
+* *UND*
++
+Sie können den OPERATOR UND verwenden, um Dokumente zu suchen, in denen beide Suchbegriffe in einem einzigen Dokument vorhanden sind. Beispielsweise sucht „`aurora AND netapp`“ nach Dokumenten, die sowohl „`storage`“ als auch „`netapp`“ enthalten.
+
++
+Sie können das Symbol && anstelle des Wortes UND verwenden.
+
+* *NICHT*
++
+Wenn Sie den NICHT-Operator verwenden, werden alle Dokumente, die den Begriff nachher NICHT enthalten, von den Suchergebnissen ausgeschlossen. Beispiel: „`storage NOT netapp`“ sucht nach Dokumenten, die nur „`storage`“ und nicht „`netapp`“ enthalten.
+
++
+Sie können das Symbol verwenden ! Statt des Wortes NICHT.
+
+
+
+
+
+== Suche nach Präfix und Suffix
+
+* Sobald Sie eine Suchzeichenfolge eingeben, führt die Suchmaschine eine Präfix- und Suffixsuche durch, um die beste Übereinstimmung zu finden.
+* Exakte Übereinstimmungen erhalten eine höhere Bewertung als eine Präfix- oder Suffix-Übereinstimmung. Die Bewertung wird anhand der Entfernung des Suchbegriffs vom tatsächlichen Suchergebnis berechnet. Zum Beispiel haben wir drei Speicher: "`aurora`", "`aurora1`" und "`aurora11`". Die Suche nach "`aur`" gibt alle drei Lager zurück. Das Suchergebnis für "`aurora`" hat jedoch die höchste Punktzahl, da es den nächstliegenden Abstand zum Suchstring hat.
+* Die Suchmaschine sucht auch nach Begriffen in umgekehrter Reihenfolge, wodurch Sie eine Suffix-Suche durchführen können. Wenn Sie beispielsweise „`345`“ in das Suchfeld eingeben, sucht die Suchmaschine nach „`345`“.
+* Die Groß-/Kleinschreibung der Suche wird nicht berücksichtigt.
+
+
+
+
+== Suche mit indizierten Begriffen
+
+Suchvorgänge, die mehr der indizierten Begriffe entsprechen, führen zu höheren Punktzahlen.
+
+Der Suchstring wird in separate Suchbegriffe nach Leerzeichen aufgeteilt. Beispielsweise ist der Suchtext „`storage aurora netapp`“ in drei Schlüsselwörter unterteilt: „`storage`“, „`aurora`“ und „`netapp`“. Die Suche wird unter Verwendung aller drei Begriffe durchgeführt. Die Dokumente, die den meisten dieser Begriffe entsprechen, haben die höchste Punktzahl. Je mehr Informationen Sie zur Verfügung stellen, desto besser sind die Suchergebnisse. Sie können beispielsweise anhand des Namens und des Modus nach einem Speicher suchen.
+
+Die Benutzeroberfläche zeigt die Suchergebnisse für verschiedene Kategorien mit den drei besten Ergebnissen pro Kategorie an. Wenn Sie kein Dokument gefunden haben, das Sie erwartet haben, können Sie mehr Begriffe in die Suchzeichenfolge einfügen, um die Suchergebnisse zu verbessern.
+
+Die folgende Tabelle enthält eine Liste indizierter Begriffe, die der Suchzeichenfolge hinzugefügt werden können.
+
+|===
+
+
+| Kategorie | Indizierte Begriffe 
+
+
+ a| 
+Storage
+ a| 
+* „`storage`“
+* Name
+* Anbieter
+* Modell
+
+
+
+
+ a| 
+Storage Pool
+ a| 
+* „`storagepool`“
+* Name
+* Name des Speichers
+* IP-Adressen des Speichers
+* Seriennummer des Speichers
+* Storage-Anbieter
+* Storage-Modell
+* Namen für alle zugeordneten internen Volumes
+* Namen für alle zugeordneten Festplatten
+
+
+
+
+ a| 
+Internes Volumen
+ a| 
+* „`internalvolume`“
+* Name
+* Name des Speichers
+* IP-Adressen des Speichers
+* Seriennummer des Speichers
+* Storage-Anbieter
+* Storage-Modell
+* Name des Speicherpools
+* Namen aller zugeordneten Freigaben
+* Namen aller zugehörigen Applikationen und Geschäftseinheiten
+
+
+
+
+ a| 
+Datenmenge
+ a| 
+* „`Volume`“
+* Name
+* Etikett
+* Namen aller internen Volumes
+* Name des Speicherpools
+* Name des Speichers
+* IP-Adressen des Speichers
+* Seriennummer des Speichers
+* Storage-Anbieter
+* Storage-Modell
+
+
+
+
+ a| 
+Storage-Node
+ a| 
+* „`storagenode`“
+* Name
+* Name des Speichers
+* IP-Adressen des Speichers
+* Seriennummer des Storage
+* Storage-Anbieter
+* Storage-Modell
+
+
+
+
+ a| 
+Host
+ a| 
+* „`Host`“
+* Name
+* IP-Adressen
+* Namen aller zugehörigen Applikationen und Geschäftseinheiten
+
+
+
+
+ a| 
+Datenspeicher
+ a| 
+* „`Datastore`“
+* Name
+* IP des virtuellen Zentrums
+* Namen aller Volumes
+* Namen aller internen Volumes
+
+
+
+
+ a| 
+Virtual Machines
+ a| 
+* „`virtualmachine`“
+* Name
+* DNS-Name
+* IP-Adressen
+* Name des Hosts
+* IP-Adressen des Hosts
+* Namen aller Datastores
+* Namen aller zugehörigen Applikationen und Geschäftseinheiten
+
+
+
+
+ a| 
+Switches (normal und Kapitalwert)
+ a| 
+* „`sHexe`“
+* IP-Adresse
+* wwn
+* Name
+* Seriennummer
+* Modell
+* Domänen-ID
+* Name der Fabric
+* wwn der Fabric
+
+
+
+
+ a| 
+Applikation
+ a| 
+* „`Anwendung`“
+* Name
+* Mandant
+* Geschäftsbereich
+* Geschäftseinheit
+* Projekt
+
+
+
+
+ a| 
+Tape
+ a| 
+* „`Tape`“
+* IP-Adresse
+* Name
+* Seriennummer
+* Anbieter
+
+
+
+
+ a| 
+Port
+ a| 
+* „`Port`“
+* wwn
+* Name
+
+
+
+
+ a| 
+Fabric
+ a| 
+* „`Stoff`“
+* wwn
+* Name
+
+
+|===

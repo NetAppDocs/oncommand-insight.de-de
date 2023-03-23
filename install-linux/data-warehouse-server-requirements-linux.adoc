@@ -1,0 +1,109 @@
+---
+permalink: install-linux/data-warehouse-server-requirements-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: Der Data Warehouse-Server muss auf einem Computer ausgeführt werden, der mit den bestehenden Hardware- und Softwareanforderungen kompatibel ist. Sie müssen sicherstellen, dass der Apache-Webserver oder die Berichterstellungssoftware nicht bereits auf diesem Computer installiert ist. 
+---
+= Serveranforderungen für Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Data Warehouse-Server muss auf einem Computer ausgeführt werden, der mit den bestehenden Hardware- und Softwareanforderungen kompatibel ist. Sie müssen sicherstellen, dass der Apache-Webserver oder die Berichterstellungssoftware nicht bereits auf diesem Computer installiert ist.
+
+[NOTE]
+====
+Die Größenbestimmung für OnCommand Insight umfasst mehrere Abhängigkeiten, wie z. B. Anzahl der Assets in Ihrer Umgebung, Menge der gespeicherten Archivdaten und vieles mehr. Die folgenden Beispiele zur Größenanpassung eines Data Warehouses sind nur Richtlinien und stellen einige der Umgebungen dar, in denen Insight getestet wurde. Wenn sich diese oder andere Faktoren in der Umgebung ändern, können sich die Dimensionierungsanforderungen für Insight ändern.
+
+====
+Vor der Installation oder dem Upgrade der Insight sollten Sie sich an Ihren Sales Engineer wenden, um eine detaillierte Anleitung zur Größenbemessung zu erhalten.
+
+*Beispiele:*
+
+|===
+
+
+| Umgebungsfaktoren: | Getesteter Festplattenspeicher, CPUs und Speicher: 
+
+
+ a| 
+18 Storage-Arrays3.400 VMs
+
+4,500 Switch-Ports
+ a| 
+200-GB-Festplatte, 8 Kerne
+
+32 GB RAM
+
+
+
+ a| 
+110 Storage-Arrays11'500 VMs
+
+14,500 Switch-Ports
+ a| 
+300-GB-Festplatte, 8 Kerne
+
+48 GB RAM
+
+|===
+*Voraussetzungen:*
+
+|===
+
+
+| Komponente | Erforderlich 
+
+
+ a| 
+Betriebssystem
+ a| 
+Ein Computer, auf dem eine lizenzierte Version einer der folgenden Versionen ausgeführt wird, auf dem keine andere Software auf Anwendungsebene ausgeführt wird:
+
+* Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, 7.7 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5
+* CentOS 7.2, 7.5, 7.6, 7.7, 7.8 7.9, CentOS 8 Stream
+* Oracle Enterprise Linux 7.5, 7.6, 7.7, 7.8, 7.9 8.1, 8.2, 8.3, 8.4, 8.5
+
+
+
+
+ a| 
+Virtuelle Maschine (VM)
+ a| 
+Diese Komponente kann in einer virtuellen Umgebung ausgeführt werden, sofern die CPU- und Arbeitsspeicherressourcen für Ihre Instanz reserviert sind.
+
+
+
+ a| 
+CPU
+ a| 
+8 bis 40 CPU-Kerne
+
+
+
+ a| 
+Speicher
+ a| 
+32 GB - 2 TB RAM
+
+
+
+ a| 
+Verfügbarer Festplattenspeicher
+ a| 
+200 GB - 512 GB freier Festplattenspeicher im sollten mindestens 50 GB freier Festplattenspeicher vorhanden sein `/var/lib` Partition und 25 GB freier Festplattenspeicher im `/opt` Und `/var/log` Partitionen:
+
+
+
+ a| 
+Netzwerk
+ a| 
+* Ethernet-Verbindung mit 100 Mbit/s oder 1 Gbit/s.
+* Statische IP-Adresse
+* Für den OnCommand Insight DWH-Serverprozess, Ports 80, 443, 1098, 1099, 3873, 8083 und 4444 bis 4446
+* Für MySQL, Port 3306
+
+
+|===

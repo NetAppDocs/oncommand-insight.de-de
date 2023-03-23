@@ -1,0 +1,46 @@
+---
+permalink: howto/collecting-integration-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Integrationsdaten in Ihr OnCommand Insight-System importieren. Daten können mit collectd, einer Open-Source-Software, importiert werden, die als Daemon zum Sammeln von Leistungsdaten ausgeführt wird, oder mit Hilfe der Integrations-SNMP-Datenquelle, mit der Sie allgemeine SNMP-Daten erfassen können. 
+---
+= Erfassung von Integrationsdaten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Integrationsdaten in Ihr OnCommand Insight-System importieren. Daten können mit collectd, einer Open-Source-Software, importiert werden, die als Daemon zum Sammeln von Leistungsdaten ausgeführt wird, oder mit Hilfe der Integrations-SNMP-Datenquelle, mit der Sie allgemeine SNMP-Daten erfassen können.
+
+
+
+== Datenfluss für Integrationsdaten
+
+Folgendes gilt für die Gesamtmenge der Integrationsdaten, die dem OnCommand Insight-Server zur Verfügung gestellt werden dürfen:
+
+* Eine Warteschlange mit 100 Anrufen wird beibehalten.
++
+Wenn ein Client länger als eine Minute in der Warteschlange wartet, tritt ein Zeitüberschreitungsfehler auf.
+
+* Die empfohlene Aufnahmerate für Integrationsdaten beträgt einmal pro Minute und pro Client.
+* Es sind maximal 300 Integrationsobjekttypen zulässig.
+
+
+
+
+== Zugriff auf Software und Dokumentation für die Sammlung
+
+Die Output Writer Plug-in-Software und die Dokumentation zur Sammlung finden Sie auf der NetApp GitHub Website: https://github.com/NetApp/OCI_collectd[]
+
+
+
+== Backup und Restore von Integrationsdaten
+
+Backup und Restore von Integrationsdaten werden nach den Backup- und Restore-Richtlinien für OnCommand Insight Performance-Daten modelliert. Wenn ein Backup für Leistungsdaten konfiguriert wird, werden auch Integrationsdaten in das Backup einbezogen. Wie beim Performance-Backup sind auch die Integrationsdaten der letzten sieben Tage im Backup enthalten. Alle in einem Backup vorhandenen Integrationsdaten werden bei einem Wiederherstellungsvorgang wiederhergestellt.
+
+
+
+== Lizenzen Zu Haben
+
+Für die Meldung von Integrationsdaten ist eine Perform-Lizenz erforderlich. Wenn keine Lizenz zur Durchführung vorhanden ist, tritt ein Fehler mit der Meldung „Lizenz zum Melden von Integrationsdaten erforderlich ausführen“ auf.

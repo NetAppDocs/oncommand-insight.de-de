@@ -1,0 +1,43 @@
+---
+permalink: config-admin/nas-path-for-vms.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 7.3 unterstützt NAS-Pfade für virtuelle Maschinen zu Storage Shares. Diese Pfade ähneln NAS-Pfaden für Hosts zu Storage-Freigaben. Wenn die IP-Adresse einer VM auf eine Freigabe zugreifen darf, wird ein NAS-Pfad erstellt. 
+---
+= NAS-Pfad für VMs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 7.3 unterstützt NAS-Pfade für virtuelle Maschinen zu Storage Shares. Diese Pfade ähneln NAS-Pfaden für Hosts zu Storage-Freigaben. Wenn die IP-Adresse einer VM auf eine Freigabe zugreifen darf, wird ein NAS-Pfad erstellt.
+
+NAS-Pfade für virtuelle Maschinen werden auf der Landing Page Internal Volumes angezeigt. Diese Seite enthält ein Widget „Storage Resources“, das auf das Gast gemountet ist und die internen Volumes angibt, auf die VMs Zugriff haben.
+
+* NAS-Pfade werden erstellt, wenn virtuelle Maschinen auf die Backend-Freigaben zugreifen. Es gibt keine Bestätigung, ob die virtuellen Maschinen auf die Freigaben zugreifen oder nicht.
+* Die Korrelationsberechnung basiert auf Latenzen und IOPS und schließt nicht Fälle ein, in denen VMs NAS-Pfade zum Back-End Storage aufweisen.
+* Der Benutzer kann die Freigabe nach Initiator-IP-Adresse abfragen, aber Abfragen nach Pfad werden nicht unterstützt.
+
+
+In der Tabelle Compute Resources des internen Volumes werden jetzt auch VMs mit NAS-Pfaden angezeigt. Für jede VM, CPU und jeder Arbeitsspeicher werden Auslastungs- und Performance-Daten bereitgestellt.
+
+
+
+== Auswirkungen auf das Data Warehouse
+
+Folgende Änderungen am Data Warehouse sind nach dem Upgrade auf OnCommand Insight 7.3 enthalten:
+
+* Die Tabelle dwh_Inventory.nas_Logical wird aus dem Inventory Data Mart entfernt und durch eine Ansicht ersetzt.
++
+Alle Insight 7.2.x-Berichte, die die NFS-Pfadtabelle enthalten, werden beibehalten.
+
+* Die Tabelle dwh_Inventory.nas_cr_Logical wird dem Inventory Data Mart hinzugefügt und enthält Folgendes:
++
+** Compute-Ressource
+** Internes Volumen
+** Storage
+** NAS-Freigabe
+
+
+

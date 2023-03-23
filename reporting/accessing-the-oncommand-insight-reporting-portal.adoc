@@ -1,0 +1,68 @@
+---
+permalink: reporting/accessing-the-oncommand-insight-reporting-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können das OnCommand Insight-Berichtsportal direkt über einen Webbrowser, über das Data Warehouse oder über den Insight-Server aufrufen. Über das Reporting Portal können Sie auf vordefinierte Berichte zugreifen oder eigene Berichte mithilfe von Data Warehouse-Daten erstellen. 
+---
+= Zugriff auf das OnCommand Insight-Berichtsportal
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das OnCommand Insight-Berichtsportal direkt über einen Webbrowser, über das Data Warehouse oder über den Insight-Server aufrufen. Über das Reporting Portal können Sie auf vordefinierte Berichte zugreifen oder eigene Berichte mithilfe von Data Warehouse-Daten erstellen.
+
+
+
+== Greifen Sie über einen Webbrowser auf das Reporting-Portal zu
+
+
+
+=== Schritte
+
+. Öffnen Sie einen Webbrowser.
+. Geben Sie die folgende URL ein: `+https://server-name:9300/bi+`
++
+9300 steht für den Standardport, der während der Installation angegeben wurde. Wenn ein anderer Port angegeben wurde, müssen Sie den Port ändern.
+
+. Geben Sie Ihren Benutzernamen und Ihr Passwort ein, und klicken Sie dann auf *OK*.
+
+
+
+
+== Zugriff auf das Berichtsportal vom Insight Server aus
+
+
+
+=== Schritte
+
+. Öffnen Sie einen Webbrowser.
+. Geben Sie die folgende URL ein, um auf den Insight-Server zuzugreifen: `+https://server-name+`
+. Geben Sie Ihren Benutzernamen und Ihr Passwort ein, und klicken Sie dann auf *OK*.
+. Klicken Sie in der Symbolleiste Insight auf image:../media/oci-reporting-portal-icon.gif[""].
+. Geben Sie auf der angezeigten Anmeldeseite Ihren Benutzernamen und Ihr Passwort ein, und klicken Sie dann auf *OK*.
+
+
+
+
+== Zugriff auf das Berichtsportal über das Data Warehouse
+
+
+
+=== Schritte
+
+. Öffnen Sie einen Webbrowser.
+. Geben Sie die folgende URL ein, um auf das Data Warehouse zuzugreifen: `+https://server-name/dwh+`
+. Geben Sie Ihren Benutzernamen und Ihr Passwort ein, und klicken Sie dann auf *OK*.
+. Klicken Sie in der Symbolleiste Data Warehouse auf image:../media/oci-reporting-portal-icon.gif[""].
+. Geben Sie auf der angezeigten Anmeldeseite Ihren Benutzernamen und Ihr Passwort ein, und klicken Sie dann auf *OK*.
+
+
+
+
+=== Ergebnisse
+
+Die Startseite von IBM Cognos Analytics wird angezeigt. Dies ist die Standard-Landing Page des OnCommand Insight-Berichtsportals.
+
+image::../media/cognos-welcome.gif[willkommen bei cognos]

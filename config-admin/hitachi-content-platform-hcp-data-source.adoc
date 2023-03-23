@@ -1,0 +1,134 @@
+---
+permalink: config-admin/hitachi-content-platform-hcp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dieser Datensammler unterstützt die Hitachi Content Platform \(HCP\) unter Verwendung der HCP Management API.' 
+---
+= Hitachi Content Platform (HCP) Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dieser Datensammler unterstützt die Hitachi Content Platform (HCP) mithilfe der HCP Management API.
+
+
+
+== Terminologie
+
+OnCommand Insight bezieht die folgenden Bestandsinformationen aus der HCP-Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+HCP-Cluster
+ a| 
+Storage
+
+
+
+ a| 
+Mandant
+ a| 
+Storage-Pool
+
+
+
+ a| 
+Namespace
+ a| 
+Internes Volumen
+
+
+
+ a| 
+Knoten
+ a| 
+Knoten
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Inventaranforderungen
+
+* IP-Adresse des HCP-Servers
+* Schreibgeschützter Benutzername und Kennwort für die HCP-Software und die Peer-Rechte
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+HCP-Host
+ a| 
+IP-Adresse oder vollqualifizierter Domänenname des HCP-Hosts
+
+
+
+ a| 
+HCP-Anschluss
+ a| 
+Der Standardwert ist 9090
+
+
+
+ a| 
+HCP-Benutzer-ID
+ a| 
+Benutzername für den HCP-Host
+
+
+
+ a| 
+HCP-Kennwort
+ a| 
+Kennwort für den HCP-Host
+
+
+
+ a| 
+HCP-Authentifizierungstyp
+ a| 
+Wählen Sie HCP_LOCAL oder ACTIVE_DIRECTORY
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 60 Minuten)
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abfragen (Standard: 900 Sekunden)
+
+|===

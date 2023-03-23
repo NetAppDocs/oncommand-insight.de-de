@@ -1,0 +1,17 @@
+---
+layout: landing-page 
+sidebar: sidebar 
+permalink: index.html 
+summary: OnCommand Insight vereinfacht das betriebliche Management hybrider IT-Infrastrukturen in On-Premises-Umgebungen sowie in Public und Private Clouds. 
+---
+= OnCommand Insight-Dokumentation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+OnCommand Insight ist eine einzige Lösung für domänenübergreifendes, anbieterübergreifendes Ressourcenmanagement und -Analyse in Netzwerken, Storage und Servern in physischen und virtuellen Umgebungen. Insight hilft Ihnen, Ihre aktuelle Infrastruktur zu optimieren und Abläufe an Ihre Geschäftsanforderungen anzupassen. So können sie einfacher feststellen, wann welche Anschaffungen erforderlich sind. Es verringert zudem die Risiken während komplexer Technologiemigrationen, wie z. B. beim Wechsel in eine Hybrid Cloud, da die Lösung erkennt, welche Workloads für eine Migration in die Cloud in Frage kommen. Mit Insight lässt sich die IT-Infrastruktur als umfassender Service managen, indem die Ressourcen in die gesamte IT-Servicekette des Unternehmens integriert werden.

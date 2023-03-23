@@ -1,0 +1,23 @@
+---
+permalink: reporting/what-you-need-to-do-before-you-design-your-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Bevor Sie Ihren benutzerdefinierten Bericht erstellen, müssen Sie einige erforderliche Aufgaben ausführen. Wenn Sie diese nicht ausfüllen, können die Berichte ungenau oder unvollständig sein. 
+---
+= Was Sie vor dem Entwurf Ihres Berichts tun müssen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie Ihren benutzerdefinierten Bericht erstellen, müssen Sie einige erforderliche Aufgaben ausführen. Wenn Sie diese nicht ausfüllen, können die Berichte ungenau oder unvollständig sein.
+
+Wenn Sie beispielsweise den Gerätekennungsprozess nicht abschließen, sind die Kapazitätsberichte nicht korrekt. Oder wenn Sie die Erstellung von Annotationen (z. B. Tiers, Geschäftseinheiten und Datacenter) nicht abschließen, werden in Ihren benutzerdefinierten Berichten möglicherweise Daten nicht präzise domänenübergreifend erfasst und für einige Datenpunkte „k. A.“ angezeigt.
+
+Bevor Sie Ihre Berichte entwerfen, führen Sie die folgenden Aufgaben aus:
+
+* Konfigurieren Sie alle Datenquellen. Weitere Informationen finden Sie im _OnCommand Insight Konfigurations- und Administrationshandbuch_.
+* Geben Sie Annotationen (z. B. Tiers, Datacenter und Geschäftsbereiche) auf Geräten und Ressourcen in Ihrer Umgebung ein. Vor der Berichterstellung ist es von Vorteil, dass die Annotationen stabil sind, da das OnCommand Insight Data Warehouse historische Informationen sammelt.
+* Konfigurieren Sie das OnCommand Insight Data Warehouse so, dass die Daten vom OnCommand Insight-Server im ETL-Prozess (Extrahieren, Transformieren und Laden) akzeptiert werden.
+

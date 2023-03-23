@@ -1,0 +1,51 @@
+---
+permalink: dwh/restoring-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können eine Data Warehouse-Datenbank mithilfe der ZIP-Datei wiederherstellen, die beim Sichern dieser Data Warehouse-Datenbank erstellt wurde. 
+---
+= Wiederherstellen der Data Warehouse-Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Data Warehouse-Datenbank mithilfe des wiederherstellen `.zip` Datei, die beim Sichern dieser Data Warehouse-Datenbank erstellt wurde.
+
+
+
+== Über diese Aufgabe
+
+Wenn Sie eine Data Warehouse-Datenbank wiederherstellen, haben Sie die Möglichkeit, auch Benutzerkontoinformationen aus dem Backup wiederherzustellen. Benutzerverwaltungstabellen werden von der Data Warehouse-Berichtsengine in einer reinen Data Warehouse-Installation verwendet.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster links auf *Backup/Restore*.
+. Klicken Sie im Abschnitt *Datenbank und Berichte wiederherstellen* auf *Durchsuchen*, und suchen Sie den `.zip` Datei, die das Data Warehouse-Backup enthält.
+. Wenn Sie Berichte oder Benutzerkontodaten wiederherstellen möchten, aktivieren Sie eines oder beide der folgenden Kontrollkästchen:
++
+** *Datenbank wiederherstellen*
++
+Enthält Data Warehouse-Einstellungen, Data Marts, Verbindungen und Benutzerkontoinformationen.
+
+** *Berichte wiederherstellen*
++
+Umfasst benutzerdefinierte Berichte, vordefinierte Berichte, Änderungen an vordefinierten Berichten und Berichtseinstellungen, die Sie im Reporting Portal erstellt haben.
+
++
+[NOTE]
+====
+Wenn Ihr Datenbankbackup einen benutzerdefinierten Bericht enthält, der einen Schrägstrich (/) oder eine offene Klammer ([) im Namen hat (z. B. US IT Center Switch Port Boston/Juli), wird der Bericht durch den Wiederherstellungsvorgang umbenannt und der Schrägstrich oder die offene Klammer durch einen Unterstrich ersetzt (z. B. US IT Center Switch Port Boston_Juli).
+
+====
+
+
+. Klicken Sie Auf *Wiederherstellen*.
++
+Nach Abschluss des Wiederherstellungsvorgangs wird unter der Schaltfläche Wiederherstellen eine Meldung angezeigt. Wenn die Wiederherstellung erfolgreich war, wird die Meldung erfolgreich angezeigt. Wenn die Wiederherstellung fehlschlägt, meldet die Meldung die spezifische Ausnahme, die den Fehler verursacht hat. Wenn eine Ausnahme auftritt und der Wiederherstellungsprozess fehlschlägt, wird die ursprüngliche Datenbank automatisch zurückgesetzt.
+
+

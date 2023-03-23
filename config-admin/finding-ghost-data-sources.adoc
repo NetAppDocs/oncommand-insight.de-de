@@ -1,0 +1,26 @@
+---
+permalink: config-admin/finding-ghost-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie ein Gerät entfernt haben, aber die Gerätedaten erhalten bleiben, können Sie alle Geisterdatenquellen suchen, so dass Sie sie entfernen können. 
+---
+= Suchen von Geisterdatenquellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie ein Gerät entfernt haben, aber die Gerätedaten erhalten bleiben, können Sie alle Geisterdatenquellen suchen, so dass Sie sie entfernen können.
+
+
+
+== Schritte
+
+. Klicken Sie in der Web-Benutzeroberfläche auf *Admin* und wählen Sie *Troubleshooting*.
+. Klicken Sie unten auf der Seite im Bereich Weitere Aufgaben auf den Link *Erweiterte Fehlerbehebung*.
+. Klicken Sie auf der Registerkarte *Reports* auf den Link *Ghost Data Sources*.
++
+OnCommand Insight erstellt eine Liste der Ersteller mit ihren Geräteinformationen.
+
+

@@ -1,0 +1,56 @@
+---
+permalink: config-admin/exporting-fc-identification-to-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können vorhandene Fibre-Channel-Gerätekennungen aus der OnCommand Insight-Geräteauflösungsfunktion in eine CSV-Datei exportieren. Möglicherweise möchten Sie eine Gerätekennung exportieren, damit Sie sie ändern und dann wieder in Insight importieren können, wo sie dann zur Identifizierung von Geräten verwendet wird, die denen ähneln, die ursprünglich mit der exportierten Identifizierung übereinstimmen. 
+---
+= Exportieren von Fibre-Channel-Gerätekennungen in eine CSV-Datei
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können vorhandene Fibre-Channel-Gerätekennungen aus der OnCommand Insight-Geräteauflösungsfunktion in eine CSV-Datei exportieren. Möglicherweise möchten Sie eine Gerätekennung exportieren, damit Sie sie ändern und dann wieder in Insight importieren können, wo sie dann zur Identifizierung von Geräten verwendet wird, die denen ähneln, die ursprünglich mit der exportierten Identifizierung übereinstimmen.
+
+
+
+== Über diese Aufgabe
+
+Dieses Szenario kann verwendet werden, wenn Geräte ähnliche Attribute haben, die einfach in der CSV-Datei bearbeitet und dann wieder in das System importiert werden können.
+
+Wenn Sie eine Fibre-Channel-Gerätekennung in eine CSV-Datei exportieren, enthält die Datei die folgenden Informationen in der angezeigten Reihenfolge:
+
+|===
+
+
+ a| 
+WWN
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Name
+
+
+
+ a| 
+Typ
+
+|===
+
+
+== Schritte
+
+. Melden Sie sich bei der Web-UI von Insight an.
+. Klicken Sie Auf *Verwalten* > *Geräteauflösung*
+. Wählen Sie die Registerkarte *FC identifiere* aus.
+. Wählen Sie das Fibre-Channel-Gerät oder die Geräte aus, deren Kennung Sie exportieren möchten.
+. Klicken Sie auf den Export image:../media/export-to-csv.gif[""] Symbol.
+. Wählen Sie aus, ob Sie die CSV-Datei öffnen oder die Datei speichern möchten.
+

@@ -1,0 +1,36 @@
+---
+permalink: config-admin/analyzing-correlated-resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie Leistungsprobleme untersuchen und die Bestandsseite für ein Gerät öffnen, sollten Sie die Liste „Top Correlated Resources“ verwenden, um die in den Leistungsdiagrammen angezeigten Daten zu verfeinern. Eine Ressource mit einem hohen Prozentsatz zeigt an, dass die Ressource ähnliche Vorgänge wie die Basisressource hat. 
+---
+= Analyse korrelierter Ressourcen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie Leistungsprobleme untersuchen und die _Asset-Seite_ für ein Gerät öffnen, sollten Sie die Liste Top Correlated Resources verwenden, um die in den Leistungsdiagrammen angezeigten Daten zu verfeinern. Eine Ressource mit einem hohen Prozentsatz zeigt an, dass die Ressource ähnliche Vorgänge wie die Basisressource hat.
+
+
+
+== Über diese Aufgabe
+
+Sie untersuchen derzeit ein Leistungsproblem und öffnen die Bestandsseite für ein Gerät.
+
+
+
+== Schritte
+
+. In der Liste *Top Correlated Resources* ist die erste Ressource die Basisressource. Die korrelierten Ressourcen in der Liste werden nach Prozentsatz der korrelierten Aktivität mit dem ersten Gerät sortiert. Klicken Sie auf den verknüpften Prozentsatz der Korrelation, um die Details anzuzeigen. In diesem Beispiel wird der 70-prozentige Korrelation in der Auslastung dargestellt. Sowohl die Basisressource als auch diese korrelierte Ressource haben also eine gleich hohe Auslastung.
++
+image::../media/correlation-new.gif[Korrelation neu]
+
+. Um eine korrelierte Ressource zu den Leistungsdiagrammen hinzuzufügen, aktivieren Sie das Kontrollkästchen in der Liste *Top correlated Resources* für die Ressource, die Sie hinzufügen möchten. Standardmäßig enthält jede Ressource die verfügbaren Gesamtdaten, Sie können jedoch im Menü des Kontrollkästchens nur Daten lesen oder nur Daten schreiben auswählen.
++
+Jede Ressource in den Diagrammen hat eine andere Farbe, sodass Sie die Leistungsmessungen für jede Ressource vergleichen können. Nur der geeignete Datentyp wird für die ausgewählten Messgrößen dargestellt. CPU-Daten enthalten z. B. keine Lese- oder Schreibmetriken, sodass nur die Gesamtdaten verfügbar sind.
+
+. Klicken Sie auf den verknüpften Namen der korrelierten Ressource, um die Bestandsseite anzuzeigen.
+. Wenn in den Top-korrelierten Ressourcen, die Ihrer Meinung nach bei der Analyse berücksichtigt werden sollten, keine Ressource angezeigt wird, können Sie diese Ressource über das Feld *Search Assets* finden.
+

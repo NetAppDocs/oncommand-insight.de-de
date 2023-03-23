@@ -1,0 +1,66 @@
+---
+permalink: dwh/adding-a-reporting-user.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie müssen für jede Person, die Zugriff auf das Reporting-Portal benötigt, ein neues Benutzerkonto hinzufügen. Die Verwendung eines anderen Benutzerkontos für jede Person ermöglicht die Kontrolle von Zugriffsrechten, individuellen Einstellungen und Verantwortlichkeit. 
+---
+= Hinzufügen eines Reporting-Benutzers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen für jede Person, die Zugriff auf das Reporting-Portal benötigt, ein neues Benutzerkonto hinzufügen. Die Verwendung eines anderen Benutzerkontos für jede Person ermöglicht die Kontrolle von Zugriffsrechten, individuellen Einstellungen und Verantwortlichkeit.
+
+
+
+== Bevor Sie beginnen
+
+Bevor Sie einen Reporting-Benutzer hinzufügen, müssen Sie einen eindeutigen Benutzernamen zugewiesen haben, das zu verwendende Kennwort festgelegt und die korrekte Benutzerrolle bzw. -Rolle überprüft haben. Diese Rollen sind auf das Reporting-Portal spezialisiert.
+
+
+
+== Schritte
+
+. Melden Sie sich als Administrator beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster auf der linken Seite auf *Benutzerverwaltung*.
+. Klicken Sie im Fenster *Benutzerverwaltung* auf *Neuen Benutzer hinzufügen*.
+. Geben Sie die folgenden Informationen für den neuen Reporting-Benutzer ein:
++
+** *Benutzername*
++
+Benutzername (alphanumerisch, einschließlich a-z, A-Z und 0-9) für das Konto
+
+** *E-Mail-Adresse*
++
+Mit dem Benutzerkonto verknüpfte E-Mail-Adresse, die erforderlich ist, wenn der Benutzer Berichte abonniert
+
+** *Passwort*
++
+Passwort zur Anmeldung bei OnCommand Insight mit diesem Benutzerkonto, das normalerweise vom Benutzer ausgewählt und in der Benutzeroberfläche bestätigt wird
+
+** *Insight-Rolle*
++
+Rollen, die dem Benutzer mit entsprechenden Berechtigungen zur Verfügung stehen
+
++
+[NOTE]
+====
+Die Optionen für die OnCommand Insight-Rolle werden nur angezeigt, wenn OnCommand Insight auf demselben Rechner wie die Berichtsfunktionen installiert ist, was nicht typisch ist.
+
+====
+** *Berichtsrollen*
++
+Berichtsfunktion für dieses Benutzerkonto (z. B. Pro Author)
+
++
+[NOTE]
+====
+Die Administratorrolle ist eindeutig. Sie können diese Rolle jedem Benutzer hinzufügen.
+
+====
+
+
+. Klicken Sie Auf *Hinzufügen*.
+

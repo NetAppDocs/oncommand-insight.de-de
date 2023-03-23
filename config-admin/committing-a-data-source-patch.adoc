@@ -1,0 +1,45 @@
+---
+permalink: config-admin/committing-a-data-source-patch.html 
+sidebar: sidebar 
+keywords:  
+summary: Anhand der Informationen in der Patch-Zusammenfassung können Sie entscheiden, ob der Patch erwartungsgemäß funktioniert, und dann den Patch an Ihr Netzwerk übertragen. 
+---
+= Festlegen eines Datenquellpatches
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Anhand der Informationen in der Patch-Zusammenfassung können Sie entscheiden, ob der Patch erwartungsgemäß funktioniert, und dann den Patch an Ihr Netzwerk übertragen.
+
+
+
+== Bevor Sie beginnen
+
+Sie haben einen Patch installiert und müssen entscheiden, ob der Patch erfolgreich ist und genehmigt werden sollte.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Patches*.
++
+Wenn keine Patches installiert werden, sind die derzeit zu prüfenden Patches leer.
+
+. Prüfen Sie in *Patches, die aktuell überprüft werden*, den Status der aktuell angewendeten Datenquellpatches.
+. Um die Details zu einem bestimmten Patch zu untersuchen, klicken Sie auf den verknüpften Namen des Patches.
+. Überprüfen Sie in der Zusammenfassung der Patches, die in diesem Beispiel gezeigt wird, die *Empfehlung* und *Kommentare*, um den Fortschritt des Patches zu bewerten.
++
+image::../media/oci-7-patch-approval-gif.gif[Dialogfeld „Patch-Genehmigung“]
+
+. Überprüfen Sie die Tabelle *betroffene Datenquellen*, um den Status jeder betroffenen Datenquelle vor und nach dem Patch anzuzeigen.
++
+Wenn Sie Bedenken haben, dass ein Problem mit einer der Datenquellen besteht, die gepatcht werden, klicken Sie in der Tabelle betroffene Datenquellen auf den verknüpften Namen.
+
+. Wenn Sie schließen, dass der Patch auf diesen Datentyp angewendet werden soll, klicken Sie auf *Approve*.
++
+Die Datenquellen werden geändert, und der Patch wird aus Patches entfernt, die derzeit geprüft werden.
+
+

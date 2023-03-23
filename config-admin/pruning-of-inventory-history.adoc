@@ -1,0 +1,16 @@
+---
+permalink: config-admin/pruning-of-inventory-history.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Ab Version 7.3.2 behält Insight den Änderungsverlauf für Inventory \(Foundation\) für 90 Tage bei. In früheren Versionen von Insight wurden die gesamten Bestandsänderungsverläufe ab dem Zeitpunkt der Installation gespeichert. Nach einem Upgrade von einer älteren Version von Insight wird der ältere Bestandsverlauf auf 90 Tage reduziert und dann aufbewahrt.' 
+---
+= Beschneidung der Bestandshistorie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ab Version 7.3.2 speichert Insight 90 Tage lang den Verlaufs der Bestandsänderungen (Grundlagen). In früheren Versionen von Insight wurden die gesamten Bestandsänderungsverläufe ab dem Zeitpunkt der Installation gespeichert. Nach einem Upgrade von einer älteren Version von Insight wird der ältere Bestandsverlauf auf 90 Tage reduziert und dann aufbewahrt.
+
+Nach dem Upgrade auf die aktuelle Version von OnCommand Insight wird die Historie auf die letzten 90 Tage zurückgeführt. Insight beschneidet die Geschichte in 30-Tage-Brocken, die einmal am Tag auftreten, beginnend mit dem ältesten, bis 90 Tage Wert der Geschichte bleibt. Dann wird Geschichte täglich geschnitten, um nur 90 Tage`' Wert der Bestandsänderung Geschichte zu halten.

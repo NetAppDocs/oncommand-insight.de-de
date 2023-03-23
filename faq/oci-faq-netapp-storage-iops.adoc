@@ -1,0 +1,36 @@
+---
+permalink: faq/oci-faq-netapp-storage-iops.html 
+sidebar: sidebar 
+keywords:  
+summary: In diesen FAQ werden häufig gestellte Fragen beantwortet, die zeigen, wie IOPS-Werte von Data ONTAP Storage-Systemen abgeleitet werden. 
+---
+= Data ONTAP Storage-IOPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In diesen FAQ werden häufig gestellte Fragen beantwortet, die zeigen, wie IOPS-Werte von Data ONTAP Storage-Systemen abgeleitet werden.
+
+
+
+== Die abgeleitet von Storage-IOPS aus Data ONTAP Storage-Systemen
+
+* IOPS auf Storage Array-Ebene werden von den internen IOPS-Volumes aggregiert
+* IOPS auf Storage Node-Ebene umfassen Metadaten-OPS
+* IOPS auf Storage Pool-Ebene schließt Metadaten-OPS aus; misst nur die Festplatten
+* Die internen IOPS auf Volume-Ebene umfassen Lese- und Schreib-OPS (Operationen) + andere OPS
+
+
+
+
+== Frage - wie können die aggregierten IOPS manchmal höher sein als Knoten-IOPS?
+
+Vor Clustered Data ONTAP 8.3.1 setzen sich Node-IOPS aus Protokoll-IOPS zusammen. Mit Clustered Data ONTAP 8.3.1. Und später setzen sie sich aus Kennzahlen der Systemkomponenten zusammen. Sie beinhalten „nur“ Anfragen nach Daten, Anfragen die durch die Eingangstür kommen, aber keine Backend-Aufgaben wie Snapmirrors, Deduplizierung usw. Andererseits produzieren diese Aufgaben Festplatten-IOPS und somit IOPS-Aggregate. Daher könnten Sie aggregierte IOPS sehen, die höher sind als die Knoten-IOPS.
+
+
+
+== Frage: Wie werden Meta-Daten oder andere OPS berechnet
+
+Sonstige Vorgänge = Gesamt - (Lesen + Schreiben)

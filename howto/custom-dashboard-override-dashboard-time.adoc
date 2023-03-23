@@ -1,0 +1,20 @@
+---
+permalink: howto/custom-dashboard-override-dashboard-time.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die Einstellung des Haupt-Dashboard-Zeitrahmens in einzelnen Widgets außer Kraft setzen. Diese Widgets zeigen Daten basierend auf dem eingestellten Zeitrahmen an, nicht auf dem Zeitrahmen des Dashboards. 
+---
+= Überschreiben der Dashboard-Zeit für einzelne Widgets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Einstellung des Haupt-Dashboard-Zeitrahmens in einzelnen Widgets außer Kraft setzen. Diese Widgets zeigen Daten basierend auf dem eingestellten Zeitrahmen an, nicht auf dem Zeitrahmen des Dashboards.
+
+Um die Dashboard-Zeit außer Kraft zu setzen und ein Widget dazu zu zwingen, einen eigenen Zeitrahmen zu verwenden, setzen Sie im Bearbeitungsmodus des Widgets die Option *Dashboard-Zeit überschreiben* auf *ein*, und wählen Sie einen Zeitrahmen für das Widget aus. * Speichern* das Widget auf dem Dashboard.
+
+Das Widget zeigt seine Daten entsprechend dem eingestellten Zeitrahmen an, unabhängig vom Zeitrahmen, den Sie auf dem Dashboard selbst auswählen.
+
+Der Zeitrahmen, den Sie für ein Widget festlegen, hat keine Auswirkungen auf andere Widgets auf dem Dashboard.

@@ -1,0 +1,20 @@
+---
+permalink: config-admin/topology.html 
+sidebar: sidebar 
+keywords:  
+summary: Im Abschnitt Topologie können Sie sehen, wie eine Basisressource mit ihren zugehörigen Assets verbunden ist, wenn eine Anwendung mit einem Asset verknüpft ist. 
+---
+= Topologie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Abschnitt Topologie können Sie sehen, wie eine Basisressource mit ihren zugehörigen Assets verbunden ist, sofern dies für ein Asset relevant ist.
+
+Das folgende Beispiel zeigt, was im Abschnitt Topologie einer Seite mit virtuellen Maschinen angezeigt werden könnte.
+
+image::../media/topology-section.gif[Topologieabschnitt]
+
+Wenn die Topologie für das Asset größer ist, als in den Abschnitt passt, wird stattdessen der Link *Klicken angezeigt, um den Topology*-Hyperlink zu sehen.

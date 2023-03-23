@@ -1,0 +1,120 @@
+---
+permalink: config-admin/netapp-e-series-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Die NetApp E-Series Datenquelle erfasst Informationen zum Bestand und zur Performance. Es gibt zwei mögliche Konfigurationen \(Firmware 6.x und Firmware 7.x+\), und beide haben die gleichen Werte.' 
+---
+= NetApp E-Series Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die NetApp E-Series Datenquelle erfasst Informationen zum Bestand und zur Performance. Es gibt zwei mögliche Konfigurationen (Firmware 6.x und Firmware 7.x+), und beide haben die gleichen Werte.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Inventarinformationen aus der NetApp E-Series Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Laufwerk
+ a| 
+Festplatte
+
+
+
+ a| 
+Volume-Gruppe
+ a| 
+Festplattengruppe
+
+
+
+ a| 
+Storage Array Durchführt
+ a| 
+Storage
+
+
+
+ a| 
+Controller
+ a| 
+Storage-Node
+
+
+
+ a| 
+Volume-Gruppe
+ a| 
+Storage-Pool
+
+
+
+ a| 
+Datenmenge
+ a| 
+Datenmenge
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* Die IP-Adresse jedes Controllers im Array
+* Port-Anforderung 2463
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Kommagetrennte Liste der Array-SANtricity-Controller-IPs
+ a| 
+IP-Adressen und/oder vollqualifizierte Domain-Namen für die Array Controller
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 30 Minuten)
+
+
+
+ a| 
+Leistungsintervall (bis zu 3600 Sekunden)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+|===

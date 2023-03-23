@@ -1,0 +1,33 @@
+---
+permalink: config-admin/e-series-landing-page-terminology-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: Bedingungen für Objekte oder Referenzen, die auf den Landing Pages für Storage-Pools der NetApp E-Series möglicherweise zu finden sind. 
+---
+= E-Series Storage-Pool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bedingungen für Objekte oder Referenzen, die auf den Landing Pages für Storage-Pools der NetApp E-Series möglicherweise zu finden sind.
+
+
+
+== E-Series Storage Pool-Terminologie
+
+Die folgenden Begriffe gelten für Objekte oder Verweise, die auf Landing Pages für Storage-Pools der NetApp E-Series möglicherweise zu finden sind. Viele dieser Bedingungen gelten auch für andere Datensammler.
+
+* Speicher – auf welchem Speicher-Array dieser Pool lebt. Obligatorisch.
+* Typ -- ein beschreibender Wert aus einer Liste einer aufgezählten Liste von Möglichkeiten. Am häufigsten ist „`Thin Provisioning`“ oder „`RAID Group`“.
+* Node – Wenn die Architektur dieses Speicherarrays so ist, dass Pools zu einem bestimmten Speicher-Node gehören, wird dessen Name hier als Hyperlink zur eigenen Landing Page angezeigt.
+* Verwendet Flash Pool -- Ja/Nein-Wert.
+* Redundanz – RAID-Level oder Schutzschema. E-Series Bericht „`RAID 7`“ für DDP-Pools
+* Kapazität – die Werte hier sind die genutzte logische Kapazität, die nutzbare Kapazität und die logische Gesamtkapazität sowie der verwendete Prozentsatz. Zu diesen beiden Werten gehört die Kapazität „`konservierung`“ der E-Series, sodass sowohl die Zahlen als auch der prozentuale Anteil höher sind, als die Benutzeroberfläche der E-Series zeigen mag.
+* Überbelegte Kapazität – Wenn Sie mithilfe von Effizienztechnologien eine Gesamtmenge von Volume-Kapazitäten zugewiesen haben, die größer ist als die logische Kapazität des Speicherpools, dann ist der prozentuale Wert hier größer als 0 %.
+* Snapshot – verwendete Snapshot-Kapazitäten und insgesamt, wenn Ihre Speicherpoolarchitektur einen Teil ihrer Kapazität für Segmente reserviert, Bereiche ausschließlich für Snapshots.
+* Auslastung – ein Prozentwert, der den höchsten Prozentsatz aller Festplatten anzeigt, die zur Kapazität dieses Speicherpools beitragen. Die Festplattenauslastung steht nicht unbedingt in engem Zusammenhang mit der Array-Performance – die Auslastung kann aufgrund von Festplattenwiederherstellungen, Deduplizierungsaktivitäten usw. hoch sein, wenn auf dem Host keine Workloads ausgeführt werden. Außerdem kann die Festplattenauslastung durch viele`-Replikationsimplementierungen nicht als Volume-Workload angezeigt werden.
+* IOPS – die Summe der IOPS aller Festplatten, die Kapazität für diesen Speicherpool beisteuern.
+* Durchsatz – der Gesamtdurchsatz aller Festplatten, die die Kapazität dieses Speicherpools beisteuern.
+

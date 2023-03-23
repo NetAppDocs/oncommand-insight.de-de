@@ -1,0 +1,36 @@
+---
+permalink: config-admin/modifying-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die Kriterien ändern, die einer Abfrage zugeordnet sind, wenn Sie die Suchkriterien für die abfragenden Assets ändern möchten. 
+---
+= Ändern von Abfragen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Kriterien ändern, die einer Abfrage zugeordnet sind, wenn Sie die Suchkriterien für die abfragenden Assets ändern möchten.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der Insight Web-Benutzeroberfläche an.
+. Klicken Sie auf *Abfragen* und wählen Sie *Alle Anfragen anzeigen*.
++
+Die Seite Abfragen wird angezeigt.
+
+. Klicken Sie auf den Abfragenamen.
+. Um ein Kriterium aus der Abfrage zu entfernen, klicken Sie auf image:../media/trash-can-query.gif[""].
+. Um der Abfrage ein Kriterium hinzuzufügen, klicken Sie auf image:../media/more-button.gif[""], Und wählen Sie ein Kriterium aus der Liste aus.
+. Führen Sie einen der folgenden Schritte aus:
++
+** Klicken Sie auf *Speichern*, um die Abfrage mit dem ursprünglich verwendeten Namen zu speichern.
+** Klicken Sie auf *Speichern unter*, um die Abfrage mit einem anderen Namen zu speichern.
+** Klicken Sie auf *Umbenennen*, um den Abfragenamen zu ändern, den Sie ursprünglich verwendet haben.
+** Klicken Sie auf *revert*, um den Namen der Abfrage auf den Namen zurück zu ändern, den Sie ursprünglich verwendet hatten.
+
+
+

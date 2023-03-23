@@ -1,0 +1,107 @@
+---
+permalink: config-admin/ibm-tivoli-monitoring-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Diese Datenquelle wird ausschließlich zur Auslastung des Dateisystems verwendet. Sie kommuniziert direkt mit der Tivoli Monitoring Database, auch bekannt als Tivoli Monitoring Data Warehouse. Oracle- und DB2-Datenbanken werden unterstützt. 
+---
+= Datenquelle von IBM Tivoli Monitoring
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese Datenquelle wird ausschließlich zur Auslastung des Dateisystems verwendet. Sie kommuniziert direkt mit der Tivoli Monitoring Database, auch bekannt als Tivoli Monitoring Data Warehouse. Oracle- und DB2-Datenbanken werden unterstützt.
+
+
+
+== Oracle-Fehlermeldung
+
+[NOTE]
+====
+Dieser Datensammler ist ab OnCommand Insight 7.3.11 nicht mehr verfügbar.
+
+====
+Wenn die angegebene SID zu der Fehlermeldung „ORA-12154“ beim Verbindungsversuch führt, überprüfen Sie die Konfiguration des Oracle DB-Netzwerkdienstes. Wenn die Zugriffskonfiguration einen vollständig qualifizierten Hostnamen angibt (z. B. „NAMES.DEFAULT_DOMAIN“), versuchen Sie, den vollständig qualifizierten Dienstnamen in das Feld SID einzufügen. Ein einfaches Beispiel wäre, dass die Verbindung zu SID `testdb` Ist fehlerhaft, und Ihre Oracle-Konfiguration gibt eine Domäne von an``company.com``. Der folgende String kann anstelle der Basis-SID verwendet werden, um eine Verbindung herzustellen: `testdb.company.com`.
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Tivoli Monitoring Datenbank-IP
+ a| 
+IP-Adresse oder vollständig qualifizierter Domänenname des Tivoli Monitoring-Servers
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für den Tivoli Monitoring-Server
+
+
+
+ a| 
+Passwort
+ a| 
+Kennwort für den Tivoli Monitoring-Server
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Port Der Tivoli-Überwachungsdatenbank
+ a| 
+Port, der für die Tivoli-Überwachungsdatenbank verwendet wird
+
+
+
+ a| 
+Oracle SID oder DB2 Database Name
+ a| 
+Oracle Listener-Dienst-ID oder DB2-Datenbankname
+
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 60 Minuten)
+
+
+
+ a| 
+Zu verwendenden Datenbanktreiber
+ a| 
+Wählen Sie den zu verwendenden Datenbanktreiber aus
+
+
+
+ a| 
+Protokoll für die Verbindung mit der Datenbank
+ a| 
+Protokoll für die Verbindung mit der Datenbank
+
+
+
+ a| 
+Datenbankschema
+ a| 
+Geben Sie Das Datenbankschema Ein
+
+|===

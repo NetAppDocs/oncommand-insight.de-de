@@ -1,0 +1,34 @@
+---
+permalink: config-admin/adding-ip-devices-manually.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können ein IP-Gerät manuell zu OnCommand Insight hinzufügen, indem Sie die manuelle Zusatzfunktion verwenden, die im IP-Identifizieren-Bildschirm verfügbar ist. 
+---
+= Manuelles Hinzufügen von IP-Geräten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein IP-Gerät manuell zu OnCommand Insight hinzufügen, indem Sie die manuelle Zusatzfunktion verwenden, die im IP-Identifizieren-Bildschirm verfügbar ist.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der Web-Benutzeroberfläche von Insight an.
+. Klicken Sie auf *Verwalten* > *Geräteauflösung*
+. Klicken Sie auf die Registerkarte *IP identiffy*.
+. Klicken Sie auf die Schaltfläche Hinzufügen.
++
+Das Dialogfeld Gerät hinzufügen wird angezeigt
+
+. Geben Sie die Adresse, die IP-Adresse und einen eindeutigen Gerätenamen ein.
+
+
+
+
+== Ergebnisse
+
+Das von Ihnen eingegebene Gerät wird der Liste der Geräte auf der Registerkarte IP-Identifizierung hinzugefügt.

@@ -1,0 +1,84 @@
+---
+permalink: config-admin/configuring-the-number-of-hours-to-ignore-dynamic-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die Anzahl der Stunden konfigurieren, in denen OnCommand Insight die Aktualisierung dynamischer Daten ignoriert, z. B. die verwendete Kapazität. Wenn die Standardeinstellung von sechs Stunden verwendet wird und keine Konfigurationsänderungen vorgenommen werden, werden die Berichte erst nach der Standardstundenzahl mit dynamischen Daten aktualisiert. Diese Option verbessert die Leistung, da diese Option Aktualisierungen deaktiviert, wenn sich nur die dynamischen Daten ändern. 
+---
+= Konfigurieren der Anzahl der Stunden, die dynamische Daten ignorieren sollen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Anzahl der Stunden konfigurieren, in denen OnCommand Insight die Aktualisierung dynamischer Daten ignoriert, z. B. die verwendete Kapazität. Wenn die Standardeinstellung von sechs Stunden verwendet wird und keine Konfigurationsänderungen vorgenommen werden, werden die Berichte erst nach der Standardstundenzahl mit dynamischen Daten aktualisiert. Diese Option verbessert die Leistung, da diese Option Aktualisierungen deaktiviert, wenn sich nur die dynamischen Daten ändern.
+
+
+
+== Über diese Aufgabe
+
+Wenn für diese Option ein Wert festgelegt wird, aktualisiert OnCommand Insight dynamische Daten auf der Grundlage der folgenden Regeln:
+
+* Wenn keine Konfigurationsänderungen auftreten, aber Kapazitätsdaten geändert werden, werden die Daten nicht aktualisiert.
+* Dynamische Daten (außer Konfigurationsänderungen) werden erst nach dem in dieser Option angegebenen Timeout aktualisiert.
+* Bei Konfigurationsänderungen werden Konfigurations- und dynamische Daten aktualisiert.
+
+
+Dynamische Daten, die von dieser Option betroffen sind, umfassen Folgendes:
+
+* Daten zu Kapazitätsverletzungen
+* Dateisysteme zugewiesene Kapazität und genutzte Kapazität
+* Hypervisor
++
+** Genutzte Kapazität Des Virtuellen Laufwerks
+** Genutzte Kapazität Der Virtual Machine
+
+
+* Internes Volumen
++
+** Zugewiesener Speicherplatz
+** Genutzte Kapazität Von Daten
+** Einsparungen Durch Deduplizierung
+** Zuletzt Bekannte Zugriffszeit
+** Zeitpunkt Des Letzten Snapshots
+** Andere Genutzte Kapazität
+** Anzahl Snapshots
+** Verwendete Snapshot-Kapazität
+** Insgesamt Genutzte Kapazität
+
+
+* ISCSI-Session-Initiator-IPs, Ziel-Session-ID und Initiator-Session-ID
+* Genutzte Kapazität Von Qtree-Kontingent
+* Verwendete Dateien und genutzte Kapazität quota
+* Storage-Effizienz-Technologie, Gewinn/Verlust und potenzieller Gewinn/Verlust
+* Storage-Pool
++
+** Genutzte Kapazität Von Daten
+** Einsparungen Durch Deduplizierung
+** Andere Genutzte Kapazität
+** Verwendete Snapshot-Kapazität
+** Insgesamt Genutzte Kapazität
+
+
+* Datenmenge
++
+** Einsparungen Durch Deduplizierung
+** Zuletzt Bekannte Zugriffszeit
+** Genutzte Kapazität
+
+
+
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin* und wählen Sie *Fehlerbehebung*.
+. Klicken Sie unten auf der Seite im Bereich Weitere Aufgaben auf den Link *Erweiterte Fehlerbehebung*.
+. Klicken Sie auf die Registerkarte *Erweiterte Einstellungen*, geben Sie im Abschnitt dynamische Attribute der Erfassung die Anzahl der Stunden ein, die OnCommand Insight dynamische Daten für dynamische Attribute der Erfassung ignorieren soll.
+. Klicken Sie Auf *Speichern*.
+. (Optional) um die Erfassungseinheit neu zu starten, klicken Sie auf den Link *Erfassungseinheit neu starten*.
++
+Bei der Wiederherstellung der lokalen Erfassungseinheit werden alle OnCommand Insight-Datenquellansichten neu geladen. Diese Änderung wird während der nächsten Abfrage übernommen, sodass Sie die Erfassungseinheit nicht neu starten müssen.
+
+

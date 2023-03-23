@@ -1,0 +1,40 @@
+---
+permalink: config-admin/managing-patches.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können den aktuellen Status aller Datenquellpatches überprüfen, die auf Ihr Netzwerk angewendet werden. Wenn Sie eine Aktion für einen Patch ausführen möchten, können Sie in der Tabelle Patches, die derzeit unter Review steht, auf den verknüpften Namen klicken. 
+---
+= Verwalten von Patches
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den aktuellen Status aller Datenquellpatches überprüfen, die auf Ihr Netzwerk angewendet werden. Wenn Sie eine Aktion für einen Patch ausführen möchten, können Sie in der Tabelle Patches, die derzeit unter Review steht, auf den verknüpften Namen klicken.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen bereits hochgeladen haben und mindestens einen Patch installieren.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Patches*.
++
+Wenn keine Patches installiert werden, ist die Tabelle der derzeit zu prüfenden Patches leer.
+
+. Prüfen Sie in *Patches, die aktuell überprüft werden*, den Status der aktuell angewendeten Datenquellpatches.
+. Um die Details zu einem bestimmten Patch zu untersuchen, klicken Sie auf den verknüpften Namen des Patches.
+. Für den ausgewählten Patch können Sie auf eine der folgenden Optionen klicken, um die nächste Aktion für den Patch durchzuführen:
++
+** *Approve Patch* überträgt den Patch an die Datenquellen.
+** *Rollback* entfernt den Patch.
+** *Replace Patch* ermöglicht es Ihnen, einen anderen Patch für diese Datenquellen auszuwählen.
+
+
+

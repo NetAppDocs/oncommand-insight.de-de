@@ -1,0 +1,14 @@
+---
+permalink: config-admin/managing-annotation-types.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight bietet einige standardmäßige Anmerkungstypen, z. B. den Lebenszyklus von Assets \(Geburtstag oder Ende der Nutzungsdauer\), den Standort des Gebäudes oder Rechenzentrums und eine Ebene, die Sie für die Anzeige in Ihren Berichten anpassen können. Sie können Werte für Standard-Anmerkungstypen definieren oder eigene benutzerdefinierte Anmerkungstypen erstellen. Sie können diese Werte später bearbeiten.' 
+---
+= Verwalten von Anmerkungstypen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight bietet einige standardmäßige Annotationstypen an, z. B. Lebenszyklus von Assets (Geburtstag oder Ende der Nutzungsdauer), Gebäude- oder Datacenter-Standort und -Ebene, die Sie an die Anzeige in Ihren Berichten anpassen können. Sie können Werte für Standard-Anmerkungstypen definieren oder eigene benutzerdefinierte Anmerkungstypen erstellen. Sie können diese Werte später bearbeiten.

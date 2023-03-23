@@ -1,0 +1,14 @@
+---
+permalink: config-admin/configuring-your-email.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie müssen OnCommand Insight für den Zugriff auf Ihr E-Mail-System konfigurieren, damit dieOnCommand Insight Server Ihre E-Mail-Adresse verwenden kann, um Berichte, die Sie abonnieren, bereitzustellen und Support-Informationen zur Fehlerbehebung an den technischen Support von NetApp zu übermitteln. 
+---
+= Konfigurieren Ihrer E-Mail-Adresse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen OnCommand Insight für den Zugriff auf Ihr E-Mail-System konfigurieren, damit dieOnCommand Insight Server Ihre E-Mail-Adresse verwenden kann, um Berichte, die Sie abonnieren, bereitzustellen und Support-Informationen zur Fehlerbehebung an den technischen Support von NetApp zu übermitteln.

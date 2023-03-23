@@ -1,0 +1,66 @@
+---
+permalink: howto/creating-policies-and-thresholds-for-storage-pools.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Performance-Richtlinien erstellen, die Warnmeldungen auslösen, um Sie zu benachrichtigen, wenn die Schwellenwerte für Storage Pool Assets überschritten wurden. 
+---
+= Erstellen von Performance-Richtlinien für Speicherpools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Performance-Richtlinien erstellen, die Warnmeldungen auslösen, um Sie zu benachrichtigen, wenn die Schwellenwerte für Storage Pool Assets überschritten wurden.
+
+
+
+== Bevor Sie beginnen
+
+Bei diesem Verfahren wird davon ausgegangen, dass Sie den Speicherpool über Thin Provisioning bereitgestellt haben.
+
+
+
+== Über diese Aufgabe
+
+Sie möchten Richtlinien erstellen, um Änderungen in einem Speicherpool zu überwachen und zu melden, die zu Ausfällen führen könnten. Für den physischen Storage-Pool, der über Thin Provisioning bereitgestellt wird, soll die physische Kapazität überwacht und das Verhältnis der Überprovisionierung überwacht werden.
+
+
+
+== Schritte
+
+. Öffnen Sie OnCommand Insight in Ihrem Browser.
+. Wählen Sie *Verwalten* > *Leistungsrichtlinien* Aus
++
+Die Seite Leistungsrichtlinien wird angezeigt. Richtlinien werden nach Objekten organisiert und in der Reihenfolge bewertet, in der sie in der Liste angezeigt werden. Wenn Benachrichtigungen aktiviert sind (*Admin* > *Benachrichtigungen*), können Sie Insight so konfigurieren, dass E-Mails gesendet werden, wenn Performance-Richtlinien verletzt werden.
+
+. Klicken Sie auf **+Add**, um eine neue Richtlinie zu erstellen.
+. Geben Sie unter *Richtlinienname* einen Richtliniennamen für den Speicherpool ein.
+. Wählen Sie unter *auf Objekte des Typs anwenden* den Eintrag Speicherpool aus.
+. Geben Sie in *Apply after window of* das erste Vorkommen ein.
+. Geben Sie in *with severity* kritisch ein
+. Konfigurieren Sie die E-Mail-Empfänger, die benachrichtigt werden sollen, wenn Schwellenwerte überschritten werden.
++
+Standardmäßig werden E-Mail-Benachrichtigungen bei Richtlinienverstößen an die Empfänger in der globalen E-Mail-Liste gesendet. Sie können diese Einstellungen überschreiben, sodass Benachrichtigungen für eine bestimmte Richtlinie an bestimmte Empfänger gesendet werden.
+
++
+Klicken Sie auf den Link, um die Empfängerliste zu öffnen, und klicken Sie dann auf die Schaltfläche +, um Empfänger hinzuzufügen. Verstöße gegen diese Richtlinie werden an alle Empfänger in der Liste gesendet.
+
+. Geben Sie in *Create alert if any of the following are true* das Kapazitätsverhältnis ein - used > 85%
+
+
+
+
+== Ergebnisse
+
+Diese Konfiguration führt dazu, dass das System eine kritische Warnmeldung sendet, wenn mehr als 85 % der physischen Kapazität des Speicherpools verwendet wird. Die Verwendung von 100 % des physischen Speichers führt zu einem Anwendungsausfall.
+
+
+
+== Erstellen Sie zusätzliche Richtlinien für Speicherpools
+
+
+
+=== Über diese Aufgabe
+
+Erstellen Sie eine zusätzliche „`Capacity Ratio - used`“-Richtlinie, die eine Warnmeldung ausgibt, wenn die verwendete Storage-Pool-Kapazität 75 % überschreitet. Wenn Benachrichtigungen aktiviert sind (*Admin* > *Benachrichtigungen*), können Sie Insight so konfigurieren, dass E-Mails gesendet werden, wenn Performance-Richtlinien verletzt werden.

@@ -1,0 +1,243 @@
+---
+section: howto
+title: Anleitungen
+entries:
+- title: Erste Schritte mit Insight
+  url: "/howto/getting-started-with-insight.html"
+  entries:
+  - title: Einrichten von Benachrichtigungen
+    url: "/howto/setting-up-notifications.html"
+    entries:
+    - title: Einrichten von E-Mails für Benachrichtigungen
+      url: "/howto/setting-up-email-for-notifications.html"
+    - title: Einrichten von Syslog für die Protokollierung
+      url: "/howto/setting-up-syslog-for-notifications.html"
+    - title: Einrichten von SNMP für Benachrichtigungen
+      url: "/howto/setting-up-snmp-for-notifications.html"
+  - title: 'Vorbereiten von Assets: Kommentieren'
+    url: "/howto/preparing-assets-annotating.html"
+    entries:
+    - title: Erstellen von Anmerkungen für Ihr Unternehmen
+      url: "/howto/assigning-annotations-to-assets.html"
+    - title: Konfigurieren von Anmerkungen zum Rechenzentrum
+      url: "/howto/configuring-data-center-annotations.html"
+    - title: Konfigurieren Sie die Beschriftungen der Ebenen
+      url: "/howto/configure-tier-annotations.html"
+    - title: Konfigurieren Sie Service-Level-Anmerkungen
+      url: "/howto/configure-service-level-annotations.html"
+    - title: Konfigurieren Sie Anmerkungen zur benutzerdefinierten Umgebung
+      url: "/howto/configure-custom-environment-annotations.html"
+  - title: 'Suchen von Assets: Abfragen'
+    url: "/howto/finding-assets-querying.html"
+    entries:
+    - title: Verwenden von Abfragen zum Kommentieren von Assets
+      url: "/howto/using-queries-to-annotate-your-assets.html"
+    - title: Abfragen und Kommentieren von Rechenzentren
+      url: "/howto/querying-and-annotating-data-centers.html"
+    - title: Ebenen abfragen und beschriften
+      url: "/howto/querying-and-annotating-tiers.html"
+    - title: Anmerkungen zu Service-Level und Umgebung
+      url: "/howto/service-level-and-environment.html"
+  - title: 'Ihre Unternehmensstruktur: Einrichtung von Geschäftseinheiten und Anwendungen'
+    url: "/howto/your-corporate-structure-setting-up-business-entities-and-applications.html"
+    entries:
+    - title: Konfigurieren von Geschäftseinheiten für Ihr Unternehmen
+      url: "/howto/configuring-business-entities-for-your-company.html"
+    - title: Konfigurieren von Anwendungen für Ihr Unternehmen
+      url: "/howto/configuring-applications-for-your-company.html"
+  - title: Erstellung von Performance-Richtlinien für Warnmeldungen
+    url: "/howto/creating-a-performance-policy-for-alerting.html"
+  - title: Datenhervorhebt mithilfe von Dashboards
+    url: "/howto/viewing-data-on-a-dashboard-how-to.html"
+- title: Erstellen benutzerdefinierter Dashboards
+  url: "/howto/custom-dashboards.html"
+  entries:
+  - title: Konzepte des benutzerdefinierten Dashboards
+    url: "/howto/custom-dashboard-concepts.html"
+    entries:
+    - title: Dashboard-Variablen
+      url: "/howto/custom-dashboard-variables.html"
+      entries:
+      - title: Mehr zu Dashboard-Variablen
+        url: "/howto/more-on-dashboard-variables.html"
+    - title: Widget-Legenden werden angezeigt
+      url: "/howto/displaying-widget-legends.html"
+    - title: Anfragen und Filter für das Dashboard-Widget
+      url: "/howto/custom-dashboard-queries-and-filters.html"
+    - title: Roll-up und Aggregation
+      url: "/howto/custom-dashboard-roll-up.html"
+    - title: Anzeigen der Ergebnisse von oben/unten in Dashboard-Widgets
+      url: "/howto/custom-dashboard-top-bottom-results.html"
+    - title: Gruppierung in Tabellen-Widgets
+      url: "/howto/custom-dashboard-group-by.html"
+      entries:
+      - title: Beispiel für Gruppierung (mit Rollup-Erklärung)
+        url: "/howto/grouping-example-with-rollup-explained.html"
+    - title: Überschreiben der Dashboard-Zeit für einzelne Widgets
+      url: "/howto/custom-dashboard-override-dashboard-time.html"
+    - title: Primäre und sekundäre Achse erklärt
+      url: "/howto/primary-and-secondary-axis-explained.html"
+    - title: Ausdrücke in Dashboard-Widgets
+      url: "/howto/expressions-in-dashboard-widgets.html"
+      entries:
+      - title: 'Beispiel für Ausdrücke: Lese-IOPS-Prozentsatz'
+        url: "/howto/expressions-example-read-iops-percentage.html"
+      - title: 'Ausdrücke Beispiel: "System" I/O'
+        url: "/howto/expressions-example-system-i-o.html"
+  - title: 'Benutzerdefiniertes Dashboard: Virtual Machine Performance'
+    url: "/howto/custom-dashboard-vm-performance.html"
+  - title: Beispiel für ein Dashboard zur Auslastung von Storage-Nodes mit Variablen
+    url: "/howto/custom-dashboard-example-with-variables.html"
+    entries:
+    - title: Beispiel-Widget-Einstellungen für das Node-Dashboard
+      url: "/howto/node-dashboard-example-widget-settings.html"
+  - title: Best Practices für Dashboards und Widgets
+    url: "/howto/best-practices-for-dashboards-and-widgets.html"
+    entries:
+    - title: 'Best Practice: Die richtige Metrik finden'
+      url: "/howto/finding-the-right-metric.html"
+    - title: 'Best Practice: Die richtigen Assets finden'
+      url: "/howto/finding-the-right-assets.html"
+    - title: 'Streudiagramm Beispiel: Wissen der Achse'
+      url: "/howto/scatterplot-example-knowing-your-axis.html"
+- title: Erstellung von Performance-Richtlinien
+  url: "/howto/creating-performance-policies.html"
+  entries:
+  - title: Konfiguration der Performance und Sicherstellung von Benachrichtigungen
+      über Verstöße
+    url: "/howto/configuring-performance-and-assurance-violation-notifications.html"
+  - title: Überwachung der Verstöße in Ihrem Netzwerk
+    url: "/howto/opening-the-violations-dashboard.html"
+- title: Fehlerbehebung für Fibre Channel BB Credit 0-Fehler
+  url: "/howto/how-to-troubleshoot-fibre-channel-bb-credit-0-errors.html"
+  entries:
+  - title: Erstellen von Performance-Richtlinien und Schwellenwerten für Ports
+    url: "/howto/creating-performance-policies-and-thresholds-for-ports.html"
+- title: Analyse der Infrastruktur
+  url: "/howto/analyzing-your-infrastructure.html"
+  entries:
+  - title: Beobachten Sie das Verhalten eines Objekts im Laufe der Zeit
+    url: "/howto/observe-an-objects-behavior-over-time.html"
+  - title: Vergleichen Sie Objekte mit der Gesamtlatenz von 10 und der durchschnittlichen
+      Latenz für alle ähnlichen Objekte
+    url: "/howto/compare-objects-with-the-top-10-latency-total-to-the-average-latency-for-all-like-objects.html"
+  - title: Vergleichen Sie die Latenzgesamtmenge eines Objekts mit der Latenzgesamtmenge
+      der Top-10-Objekte
+    url: "/howto/compare-one-object-s-latency-total-to-the-latency-total-of-the-top-10-objects.html"
+  - title: Vergleichen Sie Metriken-A mit Metriken-B, um Kategorien und Anomalien
+      anzuzeigen
+    url: "/howto/compare-metrics-a-against-metrics-b-to-show-categories-and-anomalies.html"
+  - title: Verwenden Sie einen Ausdruck, um alternative Metriken zu identifizieren
+    url: "/howto/use-an-expression-to-identify-alternate-metrics.html"
+- title: Einführung zur Risikominimierung beim Thin Provisioning
+  url: "/howto/introduction-to-minimizing-risk-in-thin-provisioning.html"
+  entries:
+  - title: Überwachen des Speicherpools
+    url: "/howto/monitoring-the-storage-pool.html"
+  - title: Überwachen der Datenspeicher
+    url: "/howto/monitoring-the-data-stores.html"
+  - title: Erstellen Sie Dashboards für das Monitoring von Thin Provisioning-Umgebungen
+    url: "/howto/create-dashboards-to-monitor-thin-provisioned-environments.html"
+  - title: Einsatz von Performance-Richtlinien zur Reduzierung des Risikos bei Thin
+      Provisioning
+    url: "/howto/using-performance-policies-to-reduce-risk-in-thin-provisioning.html"
+  - title: Erstellen von Performance-Richtlinien für Speicherpools
+    url: "/howto/creating-policies-and-thresholds-for-storage-pools.html"
+  - title: Erstellen von Performance-Richtlinien für Datastores
+    url: "/howto/creating-performance-policies-for-datastores.html"
+- title: Erfassen von Host- und VM-Dateisystemauslastungs-Daten
+  url: "/howto/host-and-vm-filesystem-utilization.html"
+  entries:
+  - title: Konfigurieren Sie Insight für die Dateisystemsammlung
+    url: "/howto/configure-insight-for-filesystem-collection.html"
+  - title: Chargeback und Berichterstellung für Filesysteme
+    url: "/howto/file-system-utilization-chargeback.html"
+- title: Konfigurieren des Systems zur Erstellung von Chargeback-Daten
+  url: "/howto/introduction-to-configuring-your-system-for-chargeback.html"
+  entries:
+  - title: Definieren von Annotationen für die Verwendung mit Chargeback
+    url: "/howto/defining-annotations.html"
+  - title: Definition von Applikationen für die Verwendung mit Chargeback
+    url: "/howto/defining-applications-how-to-chargeback.html"
+  - title: Zuweisen von Anwendungen zu Assets
+    url: "/howto/assigning-application-to-assets-how-to-chargeback.html"
+    entries:
+    - title: Zuweisen von Anwendungen zu Assets mithilfe einer Ad-hoc-Methode
+      url: "/howto/assigning-applications-using-an-ad-hoc-method.html"
+    - title: Zuweisen von Anwendungen zu einem Asset mithilfe einer Abfrage
+      url: "/howto/assigning-applications-using-a-query.html"
+  - title: Erstellen eines einfachen Chargeback-Berichts
+    url: "/howto/creating-a-simple-chargeback-report.html"
+- title: Berichte zur I/O-Dichte beschreiben nur interne Daten-Volumes
+  url: "/howto/introduction-to-root-volume-isolation.html"
+  entries:
+  - title: Erstellen einer Abfrage, um NetApp Root-Aggregate in Ihrer Umgebung zu
+      identifizieren
+    url: "/howto/creating-a-query-to-identify-netapp-root-aggregates.html"
+  - title: Erstellen Sie eine Anmerkung für die von Ihren Abfragen zurückgegebenen
+      Root-Volumes
+    url: "/howto/create-an-annotation-for-the-root-volumes-returned-by-your-queries.html"
+  - title: Erstellen einer Annotation-Regel, um bestimmte Aggregate aus Ihrem I/O-Dichtebericht
+      zu automatisieren
+    url: "/howto/create-an-annotation-rule-to-automate-excluding-specific-aggregates-from-your-query.html"
+- title: Erfassung von Integrationsdaten
+  url: "/howto/collecting-integration-data.html"
+  entries:
+  - title: Erfassen von SNMP-Integrationsdaten
+    url: "/howto/collecting-snmp-integration-data.html"
+    entries:
+    - title: Importieren von SNMP-Integrationspaketen
+      url: "/howto/importing-snmp-integration-data.html"
+    - title: Erstellen einer Datenquelle für die SNMP-Integration
+      url: "/howto/adding-the-snmp-integration-data-source.html"
+    - title: Integration.json-Dateiinformationen
+      url: "/howto/integration-code-sample.html"
+- title: Analyse eines Applikations-Performance-Problems
+  url: "/howto/analyzing-an-application-performance-problem.html"
+  entries:
+  - title: Untersuchung des internen Volumens
+    url: "/howto/examining-the-internal-volume.html"
+  - title: Untersuchung der gierigen Ressource
+    url: "/howto/examining-the-greedy-resource.html"
+  - title: Untersuchen Sie den Speicherpool
+    url: "/howto/examining-the-details-of-the-storage-pool.html"
+  - title: Das Volumen wird untersucht
+    url: "/howto/examining-the-server-volume.html"
+  - title: Untersuchen der VM
+    url: "/howto/examining-the-vm.html"
+- title: Erfassen und Reporting von AWS-Abrechnungsdaten
+  url: "/howto/collecting-aws-billing-data.html"
+  entries:
+  - title: Die Datenerfassung von AWS für Insight wird vorbereitet
+    url: "/howto/preparing-aws-for-insight-collection.html"
+  - title: Konfiguration der AWS Cloud Cost-Datenquelle
+    url: "/howto/configuring-the-aws-cloud-cost-data-source.html"
+  - title: AWS Cloud-Kostendaten in Insight verarbeiten
+    url: "/howto/processing-cloud-cost-data-in-insight.html"
+  - title: Berichte zu Cloud-Kostendaten in Insight
+    url: "/howto/reporting-on-cloud-cost-data-task.html"
+- title: Integration in ServiceNow
+  url: "/howto/integrating-with-servicenow.html"
+  entries:
+  - title: Vorbereitung und Voraussetzungen für die Integration von Service Now
+    url: "/howto/preparation-and-prerequisites-for-servicenow-integration.html"
+    entries:
+    - title: Herunterladen des ServiceNow Python Connectors
+      url: "/howto/downloading-the-servicenow-connector.html"
+  - title: Konfigurieren von ServiceNow für die Integration
+    url: "/howto/configuring-servicenow-for-integration.html"
+    entries:
+    - title: Rolle auswerten
+      url: "/howto/servicenow-integration-elevate-role.html"
+    - title: Update-Set installieren
+      url: "/howto/servicenow-integration-install-update-set.html"
+    - title: ServiceNow Integration - Benutzer einrichten
+      url: "/howto/servicenow-integration-set-up-user.html"
+    - title: Installieren Sie Python und Bibliotheken
+      url: "/howto/servicenow-integration-install-python-and-libraries.html"
+    - title: Einrichtung von Python Middleware
+      url: "/howto/servicenow-integration-python-middleware-setup.html"
+    - title: Verbindung wird synchronisiert
+      url: "/howto/servicenow-integration-syncing-the-connector.html"
+    - title: Planen der täglichen Synchronisierung
+      url: "/howto/servicenow-integration-scheduling-daily-sync.html"

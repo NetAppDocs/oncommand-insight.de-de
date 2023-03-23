@@ -1,0 +1,46 @@
+---
+permalink: config-admin/scrubbing-data-for-transfer-to-support-webui.html 
+sidebar: sidebar 
+keywords:  
+summary: Kunden mit sicheren Umgebungen müssen mit dem NetApp Customer Service kommunizieren, um Probleme zu beheben, die entstehen, ohne die Datenbankinformationen zu gefährden. Mit den OnCommand Insight Scrub-Dienstprogrammen können Sie ein umfassendes Wörterbuch von Schlüsselwörtern und Mustern einrichten, sodass Sie sensible Daten „bereinigen“ und gereinigte Dateien an den Kundendienst senden können. 
+---
+= Bereinigung von Daten für die Übertragung an den Support
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Kunden mit sicheren Umgebungen müssen mit dem NetApp Customer Service kommunizieren, um Probleme zu beheben, die entstehen, ohne die Datenbankinformationen zu gefährden. Mit den OnCommand Insight Scrub-Dienstprogrammen können Sie ein umfassendes Wörterbuch von Schlüsselwörtern und Mustern einrichten, sodass Sie sensible Daten „bereinigen“ und gereinigte Dateien an den Kundendienst senden können.
+
+
+
+== Schritte
+
+. Klicken Sie in der Web-Benutzeroberfläche auf *Admin* und wählen Sie *Troubleshooting*.
+. Klicken Sie unten auf der Seite im Bereich andere Aufgaben auf den Link *Scrub Utilities*.
++
+Es gibt mehrere Scrub-Abschnitte: Suche im Wörterbuch, Scrub-Daten, Build-Wörterbuch, Benutzerdefinierte Schlüsselwörter und reguläre Ausdrücke.
+
+. 
++
+.. Geben Sie im Abschnitt**Suche im Wörterbuch** einen Code ein, um den Wert anzuzeigen, den er ersetzt, oder geben Sie einen Wert ein, um den Code zu sehen, der ihn ersetzt. Hinweis: Bevor Sie eine Suche machen können, müssen Sie das Wörterbuch *build* erstellen, um Werte zu identifizieren, die aus den Support-Daten schrubben sollen.
+
+
+. Um Ihre eigenen Schlüsselwörter hinzuzufügen, die aus den Support-Daten gescrub werden sollen, klicken Sie im Abschnitt *Benutzerdefinierte Schlüsselwörter* auf MENU:Actions[Benutzerdefiniertes Schlüsselwort hinzufügen]. Geben Sie ein Schlüsselwort ein und klicken Sie auf *Speichern*. Das Schlüsselwort wird dem Wörterbuch hinzugefügt.
+. Erweitern Sie * Muster (regexp)*. Klicken Sie auf *Hinzufügen*, um das Dialogfeld zur Eingabe eines neuen Musters aufzurufen.
+. Um einen regulären Ausdruck zu verwenden, um Wörter oder Sätze zu identifizieren, die zu schrubben sind, geben Sie ein Muster oder Muster im Abschnitt *reguläre Ausdrücke* ein. Klicken Sie auf menu:Actions[Add Regular Expression], geben Sie einen Namen für das Muster und den regulären Ausdruck in die Felder ein und klicken Sie auf *Save*. Die Informationen wurden dem Wörterbuch hinzugefügt.
++
+[NOTE]
+====
+Muster müssen durch runde Klammern umschlossen werden, um eine Gruppe zu identifizieren, die einen regulären Ausdruck erfasst.
+
+====
+. Klicken Sie im Abschnitt**build dictionary** auf *build*, um die Zusammenstellung des Wörterbuchs aller Wörter, die als sensibel aus der OnCommand Insight-Datenbank identifiziert wurden, zu initiieren.
++
+Wenn Sie fertig sind, wird eine Aufforderung angezeigt, die Sie darüber informiert, dass das überarbeitete Wörterbuch verfügbar ist. Die Datenbankbeschreibung enthält eine Zeile, die angibt, wie viele Schlüsselwörter im Wörterbuch enthalten sind. Überprüfen Sie Ihre Suchbegriffe im Wörterbuch auf Genauigkeit. Wenn Sie Probleme finden und das Wörterbuch neu erstellen möchten, klicken Sie im Datenbankblock auf *Zurücksetzen*, um alle aus der OnCommand Insight-Datenbank gesammelten Schlüsselwörter aus dem Wörterbuch zu entfernen. Wie die Aufforderung mitteilt, werden keine anderen Schlüsselwörter gelöscht. Kehren Sie zu den Scrub-Dienstprogrammen zurück, und geben Sie Ihre benutzerdefinierten Schlüsselwörter erneut ein.
+
+. Nachdem Sie ein Scrub-Wörterbuch erstellt haben, können Sie es verwenden, um eine Protokoll-, XML- oder andere Textdatei zu scrub, um die Daten anonym zu machen.
+. Um eine Log-, XML- oder andere Textdatei zu scrub, navigieren Sie im Abschnitt *Scrub-Daten* nach der Datei und klicken Sie auf *Scrub-Datei*.
+

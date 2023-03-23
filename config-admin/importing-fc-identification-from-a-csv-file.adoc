@@ -1,0 +1,67 @@
+---
+permalink: config-admin/importing-fc-identification-from-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die Fibre-Channel-Geräteidentifikation manuell in die OnCommand Insight-Geräteauflösungsfunktion importieren, indem Sie eine Liste von Geräten in einer CSV-Datei verwenden. 
+---
+= Importieren der Fibre-Channel-Geräteidentifikation aus einer CSV-Datei
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Fibre-Channel-Geräteidentifikation manuell in die OnCommand Insight-Geräteauflösungsfunktion importieren, indem Sie eine Liste von Geräten in einer CSV-Datei verwenden.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen über eine korrekt formatierte CSV-Datei verfügen, um Gerätekennungen direkt in die Funktion Geräteauflösung importieren zu können. Die CSV-Datei für Fibre-Channel-Geräte erfordert die folgenden Informationen:
+
+|===
+
+
+ a| 
+WWN
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Name
+
+
+
+ a| 
+Typ
+
+|===
+[NOTE]
+====
+Als Best Practice wird empfohlen, zunächst die FC-Identifizieren-Informationen in eine CSV-Datei zu exportieren, die gewünschten Änderungen in dieser Datei vorzunehmen und die Datei dann wieder in FC Identify zu importieren. Dadurch wird sichergestellt, dass die erwarteten Spalten in der richtigen Reihenfolge vorhanden sind.
+
+====
+So importieren Sie FC-Identifizieren-Informationen:
+
+
+
+== Schritte
+
+. Melden Sie sich bei der Web-UI von Insight an.
+. Klicken Sie Auf *Verwalten* > *Geräteauflösung*
+. Wählen Sie die Registerkarte *FC identifiere* aus.
+. Klicken Sie auf *identifier* > *identifier from file*
+. 
++
+.. Navigieren Sie zu dem Ordner mit den CSV-Dateien für den Import, und wählen Sie die gewünschte Datei aus.
+
+
++
+Die von Ihnen eingegebenen Geräte werden der Liste der Geräte auf der Registerkarte FC-Identifizierung hinzugefügt. Die „`Regel`“ wird als „`manuell`“ gekennzeichnet.
+
+

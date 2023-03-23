@@ -1,0 +1,80 @@
+---
+permalink: howto/configure-tier-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Tier-Annotation wird verwendet, um Anlagen ihren jeweiligen Tiers zuzuordnen, zum Beispiel für die Kostenabrechnung. Insight verfügt über eine Reihe von standardmäßigen Tiering-Annotationen. Sie können diese je nach Ihren Tiering-Namenskonventionen ändern oder Ihre eigenen Tiers nach Bedarf erstellen. 
+---
+= Konfigurieren Sie die Beschriftungen der Ebenen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Tier-Annotation wird verwendet, um Anlagen ihren jeweiligen Tiers zuzuordnen, zum Beispiel für die Kostenabrechnung. Insight verfügt über eine Reihe von standardmäßigen Tiering-Annotationen. Sie können diese je nach Ihren Tiering-Namenskonventionen ändern oder Ihre eigenen Tiers nach Bedarf erstellen.
+
+Beachten Sie beim Festlegen von Tier-Anmerkungen Folgendes:
+
+* Die Kosten gelten pro Gigabyte.
+* Tier 1, 2, 3 sind Standardebenen, die auf Speicherarrayebene nach Festplattentyp konfiguriert werden. Viele Kunden würden jedoch innerhalb eines Arrays oder über Arrays desselben Typs hinweg mehrere Festplattentypen bereitstellen.
+* Als Best Practice empfiehlt es sich, Tiering-Annotationen basierend auf Festplattentyp und/oder Festplattengeschwindigkeit zu erstellen. Dies ist eine typische Tier-Methodik, von der Ihre eigenen Anforderungen abweichen können.
+
+
+Schritte
+
+* Wählen Sie die Anmerkung *Tier* und klicken Sie auf das Symbol *Bearbeiten*.
+* Klicken Sie bei Bedarf auf *+Add*, und fügen Sie den Namen und die Beschreibung Ihrer ersten Schicht zur Anmerkungsliste hinzu.
+* Tun Sie das gleiche für Ihre anderen Ebenen.
+* Wenn Sie fertig sind, klicken Sie auf *Speichern*.
+
+
+Beispiele für Tier-Anmerkungen:
+
+|===
+
+
+| Name | Beschreibung | Kosten pro GB 
+
+
+ a| 
+Auto-Tiering
+ a| 
+Automatisiertes Storage Tiering
+ a| 
+0.5
+
+
+
+ a| 
+Tier-1-SSD
+ a| 
+Rein Flash-Basiertes Array
+ a| 
+0.5
+
+
+
+ a| 
+Tier 2 SAS
+ a| 
+SAS
+ a| 
+0.25
+
+
+
+ a| 
+Tier 3 SATA
+ a| 
+SATA
+ a| 
+0.1
+
+
+
+ a| 
+...
+ a| 
+ a| 
+
+|===

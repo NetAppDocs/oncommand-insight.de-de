@@ -1,0 +1,28 @@
+---
+permalink: reporting/reporting-data-model.html 
+sidebar: sidebar 
+keywords:  
+summary: Ihr Unternehmen profitiert von den Daten, die im OnCommand Insight Data Warehouse erkannt und gespeichert werden. Das OnCommand Insight Data Warehouse ist ein zentralisiertes Repository, das Daten aus mehreren Informationsquellen speichert und in ein gemeinsames, mehrdimensionales Datenmodell für effizientes Abfragen und Analysieren umwandelt. 
+---
+= Datenmodell für die Berichterstellung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ihr Unternehmen profitiert von den Daten, die im OnCommand Insight Data Warehouse erkannt und gespeichert werden. Das OnCommand Insight Data Warehouse ist ein zentralisiertes Repository, das Daten aus mehreren Informationsquellen speichert und in ein gemeinsames, mehrdimensionales Datenmodell für effizientes Abfragen und Analysieren umwandelt.
+
+Aus diesem Repository können Sie benutzerdefinierte Berichte generieren, die beispielsweise für Kostenverrechnung, Verbrauchsanalyse und Prognosen verwendet werden, um Fragen wie die folgenden zu beantworten:
+
+* Welche Bestände habe ich?
+* Wo ist mein Inventar?
+* Wer nutzt unsere Ressourcen?
+* Wie sieht die Rückberechnung von zugewiesenem Storage für einen Geschäftsbereich aus?
+* Wie viel Spielraum habe ich bei Switch Ports?
+* Wie lange dauert es, bis ich zusätzliche Storage-Kapazität anschaffen muss?
+* Werden die Geschäftseinheiten auf die entsprechenden Storage Tiers abgestimmt?
+* Inwiefern ändert sich die Storage-Zuweisung über einen Monat, ein Quartal oder ein Jahr?
+
+
+Mithilfe des Datenmodells, das mit OnCommand Insight-Berichten bereitgestellt wird, können Sie Berichte mithilfe von Tools zur Berichterstellung entwerfen und planen.

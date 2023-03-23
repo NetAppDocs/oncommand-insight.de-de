@@ -1,0 +1,60 @@
+---
+permalink: config-admin/configuring-snmp-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight unterstützt SNMP-Benachrichtigungen bei Änderungen an der Konfiguration und an globalen Pfadrichtlinien sowie bei Verstößen. SNMP-Benachrichtigungen werden beispielsweise gesendet, wenn die Schwellenwerte für die Datenquelle überschritten werden. 
+---
+= Konfigurieren von SNMP-Benachrichtigungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight unterstützt SNMP-Benachrichtigungen bei Änderungen an der Konfiguration und an globalen Pfadrichtlinien sowie bei Verstößen. SNMP-Benachrichtigungen werden beispielsweise gesendet, wenn die Schwellenwerte für die Datenquelle überschritten werden.
+
+
+
+== Bevor Sie beginnen
+
+Folgendes muss abgeschlossen sein:
+
+* Identifizieren der IP-Adresse des Servers, der Traps für jeden Ereignistyp konsolidiert.
++
+Sie müssen sich eventuell mit Ihrem Systemadministrator in Verbindung setzen, um diese Informationen zu erhalten.
+
+* Identifizieren der Portnummer, über die der designierte Rechner SNMP-Traps für jeden Ereignistyp erhält.
++
+Der Standardport für SNMP-Traps ist 162.
+
+* Kompilieren der MIB an Ihrem Standort.
++
+Die proprietäre MIB kommt mit der Installationssoftware zur Unterstützung von OnCommand Insight-Traps. Die NetApp MIB ist mit allen Standard-SNMP-Management-Software kompatibel und ist auf dem Insight Server in `<install dir>\SANscreen\MIBS\sanscreen.mib`.
+
+
+
+
+
+== Schritte
+
+. Klicken Sie auf *Admin* und wählen Sie *Benachrichtigungen*.
+. Scrollen Sie nach unten zum Abschnitt *SNMP* der Seite.
+. Klicken Sie auf *actions* und wählen Sie *Trap-Quelle hinzufügen*.
+. Geben Sie im Dialogfeld *SNMP-Trap-Empfänger hinzufügen* folgende Werte ein:
++
+** *IP*
++
+Die IP-Adresse, an die OnCommand Insight SNMP-Trap-Meldungen sendet.
+
+** *Port*
++
+Die Portnummer, an die OnCommand Insight SNMP-Trap-Meldungen sendet.
+
+** *Community String*
++
+Verwenden Sie „`public`“ für SNMP-Trap-Nachrichten.
+
+
+
+. Klicken Sie Auf *Speichern*.
+

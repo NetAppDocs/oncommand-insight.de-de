@@ -1,0 +1,28 @@
+---
+permalink: config-admin/balancing-network-resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Um Probleme mit dem Ausgleich zu beheben, suchen Sie auf den Bestandsseiten nach Problemen und identifizieren Sie zu wenig ausgelastete Volumen mit hoher Kapazität. 
+---
+= Ausgleichen von Netzwerkressourcen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um Probleme mit dem Ausgleich zu beheben, suchen Sie auf den Bestandsseiten nach Problemen und identifizieren Sie zu wenig ausgelastete Volumen mit hoher Kapazität.
+
+
+
+== Schritte
+
+. Öffnen Sie das Asset Dashboard in Ihrem Browser.
+. In der IOPS-Heatmap der Virtual Machines stellen Sie den Namen einer VM in sehr großem Druck fest, der häufig über Probleme berichtet.
+. Klicken Sie auf den VM-Namen, um die Seite Asset anzuzeigen.
+. Prüfen Sie, ob in der Zusammenfassung Fehlermeldungen angezeigt werden.
+. Prüfen Sie die Performance-Diagramme und insbesondere die am häufigsten korrelierten Ressourcen, um alle Volumes zu finden, die möglicherweise in Konflikt stehen.
+. Fügen Sie dem Leistungsdiagramm Volumes hinzu, um die Aktivitätsmuster zu vergleichen und weitere Bestandsseiten für andere Ressourcen anzuzeigen, die an dem Problem beteiligt sind.
+. Scrollen Sie zum Ende der Asset-Seite, um Listen aller mit der VM verbundenen Ressourcen anzuzeigen. Notieren Sie alle VMDKs, die mit hoher Kapazität laufen. Die Ursache für den Konflikt ist wahrscheinlich.
+. Um das Problem des Ausgleichs zu lösen, identifizieren Sie eine Ressource, die nicht ausgelastet ist, um die Last von einer überlasteten Ressource zu empfangen, oder entfernen Sie eine weniger anspruchsvolle Anwendung von der stark ausgelasteten Ressource.
+

@@ -1,0 +1,16 @@
+---
+permalink: howto/examining-the-details-of-the-storage-pool.html 
+sidebar: sidebar 
+keywords: vm 
+summary: Bei der Untersuchung der Landing Page des Storage-Pools wird die gleiche IOPS-Spitzenauslastung angezeigt, die in den zugehörigen Assets zu beobachten ist. Im Abschnitt „Ressourcen“ sehen Sie, dass diese Landing Page des Speicherpools mit dem Volumen der Reiseanwendung verknüpft ist. Klicken Sie auf das Volume, um die Volume-Landing Page zu öffnen. 
+---
+= Untersuchen Sie den Speicherpool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Untersuchung der Landing Page des Storage-Pools wird die gleiche IOPS-Spitzenauslastung angezeigt, die in den zugehörigen Assets zu beobachten ist. Im Abschnitt „Ressourcen“ sehen Sie, dass diese Landing Page des Speicherpools mit dem Volumen der Reiseanwendung verknüpft ist. Klicken Sie auf das Volume, um die Volume-Landing Page zu öffnen.
+
+image::../media/storage-pool-landing-page.gif[Landing Page des Speicherpools]

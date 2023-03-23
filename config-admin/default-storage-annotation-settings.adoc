@@ -1,0 +1,28 @@
+---
+permalink: config-admin/default-storage-annotation-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Um die Zuweisung von Storage-Annotationen zu Ihren Ressourcen zu beschleunigen, bietet OnCommand Insight 21 standardmäßige Annotationsregeln, die eine Tier-Stufe mit einem Storage-Tier-Modell verknüpfen. Alle Storage-Ressourcen werden bei Erwerb der Assets in Ihrer Umgebung automatisch einem Tier zugeordnet. 
+---
+= Standardmäßige Regeln für Storage-Annotationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um die Zuweisung von Storage-Annotationen zu Ihren Ressourcen zu beschleunigen, bietet OnCommand Insight 21 standardmäßige Annotationsregeln, die eine Tier-Stufe mit einem Storage-Tier-Modell verknüpfen. Alle Storage-Ressourcen werden bei Erwerb der Assets in Ihrer Umgebung automatisch einem Tier zugeordnet.
+
+Die Standardbeschriftungsregeln wenden eine Ebenenbeschriftung wie folgt an:
+
+* Tier 1, Quality Tier für Storage
++
+Die Beschriftung der Stufe 1 wird auf die folgenden Anbieter und deren angegebene Produktfamilien angewendet: EMC (Symmetrix), HDS (HDS9500V, HDS9900, HDS9900V, R600, R700, USP r, USP V), IBM (DS8000), NetApp (FAS6000 oder FAS6200) und Violin (Speicher).
+
+* Tier 2, Quality Tier für Storage
++
+Die Tier 2-Annotation wird für die folgenden Anbieter und deren Familien angewendet: HP (3PAR StoreServ oder EVA), EMC (CLARiiON), HDS (AMS oder D800), IBM (XIV) und NetApp (FAS3000, FAS3100 und FAS3200).
+
+
+
+Sie können die Standardeinstellungen dieser Regeln entsprechend Ihren Ebenenanforderungen bearbeiten oder entfernen, wenn Sie sie nicht benötigen.

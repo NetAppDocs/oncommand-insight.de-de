@@ -1,0 +1,26 @@
+---
+permalink: config-admin/monitoring-fabric-inventory-and-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: Über die Fibre Channel-Ressourcen-Seiten von OnCommand Insight können Sie die Performance und Bestandsaufnahme der Fabrics in Ihrer Umgebung überwachen und sämtliche Änderungen berücksichtigen, die möglicherweise zu Problemen führen. 
+---
+= Überwachung der Fibre-Channel-Umgebung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über die Fibre Channel-Ressourcen-Seiten von OnCommand Insight können Sie die Performance und Bestandsaufnahme der Fabrics in Ihrer Umgebung überwachen und sämtliche Änderungen berücksichtigen, die möglicherweise zu Problemen führen.
+
+
+
+== Fibre Channel-Asset-Seiten
+
+Auf den Assetseiten von Insight finden Sie zusammenfassende Informationen über die Ressource, ihre Topologie (das Gerät und ihre Verbindungen), Leistungsdiagramme und Tabellen der zugehörigen Ressourcen. Sie können die Fabric-, Switch- und Port-Asset-Seiten zur Überwachung Ihrer Fibre-Channel-Umgebung verwenden. Besonders hilfreich bei der Fehlerbehebung bei einem Fibre-Channel-Problem ist das Performance-Diagramm für jede Port-Ressource, das den Datenverkehr für den ausgewählten Port mit den wichtigsten Beiträgen anzeigt. Darüber hinaus können Sie in diesem Diagramm auch Kredit-Kennzahlen und Port-Fehler zwischen Puffern anzeigen, sodass Insight für jede Metrik ein separates Performance-Diagramm anzeigt.
+
+
+
+== Performance-Richtlinien für Port-Metriken
+
+Insight ermöglicht die Erstellung von Performance-Richtlinien, um Ihr Netzwerk auf verschiedene Schwellenwerte zu überwachen und bei Überschreitung dieser Schwellenwerte Alarme auszugeben. Sie können Performance-Richtlinien für Ports basierend auf verfügbaren Port-Kennzahlen erstellen. Wenn ein Schwellenwert verletzt wird, erkennt Insight diesen und meldet ihn auf der zugehörigen Asset-Seite. Dazu wird ein roter durchlässiger Kreis angezeigt, gegebenenfalls per E-Mail-Benachrichtigung und im Dashboard für Verstöße oder einem benutzerdefinierten Dashboard, das Verstöße meldet.

@@ -1,0 +1,24 @@
+---
+permalink: install-windows/uninstalling-the-remote-acquisition-unit-software.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie müssen die vorhandene Version der Remote-Erfassungseinheit-Software deinstallieren, bevor Sie auf eine neue Version aktualisieren können. Sie sollten diese Aufgabe auf allen Remote-Erfassungseinheiten-Servern in Ihrer Umgebung durchführen. 
+---
+= Deinstallieren der Software der Remote-Erfassungseinheit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die vorhandene Version der Remote-Erfassungseinheit-Software deinstallieren, bevor Sie auf eine neue Version aktualisieren können. Sie sollten diese Aufgabe auf allen Remote-Erfassungseinheiten-Servern in Ihrer Umgebung durchführen.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Server der Remote-Erfassungseinheit an.
+. Stellen Sie sicher, dass alle OnCommand Insight-Fenster auf dem Server geschlossen sind.
+. Öffnen Sie die Funktion *Programm deinstallieren* auf dem Bedienfeld und wählen Sie das Programm der OnCommand Insight-Fernbedienungseinheit aus, um es zu entfernen.
+. Klicken Sie auf *Deinstallieren* und folgen Sie den Anweisungen.
+

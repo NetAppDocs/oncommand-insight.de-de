@@ -1,0 +1,52 @@
+---
+permalink: dwh/restoring-and-upgrading-reports-for-versions-prior-to-6-3.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie ein Upgrade einer Insight-Version vor Version 6.3 durchführen, müssen Sie Artefakte in der Berichterstellung manuell wiederherstellen. 
+---
+= Wiederherstellen und Aktualisieren von Berichten für Versionen vor 6.3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie ein Upgrade einer Insight-Version vor Version 6.3 durchführen, müssen Sie Artefakte in der Berichterstellung manuell wiederherstellen.
+
+
+
+== Bevor Sie beginnen
+
+Befolgen Sie die Anweisungen unter „Aktualisieren des Data Warehouse (DWH)“ und „Sichern von benutzerdefinierten Berichten und Berichten von Artefakten“.
+
+
+
+== Schritte
+
+. Um Reporting-Artefakte aus Versionen vor Version 6.3 wiederherzustellen, kopieren Sie die Datei Export Backup.zip, die Sie im erstellt und gespeichert haben `<install>\cognos\c10_64\deployment` Verzeichnis.
+. Öffnen Sie einen Browser, und gehen Sie zu `http://<server>:<port>/reporting` Für den Server und Port, den Sie bei der Installation verwendet haben.
+. Geben Sie Ihren Benutzernamen und Ihr Passwort ein und klicken Sie auf *Login*.
+. Wählen Sie im Menü *Start* die Option *Insight Reporting Administration*.
+. Klicken Sie auf die Registerkarte *Konfiguration*.
++
+Aufgrund von Änderungen im Datenmodell werden die Berichte in den alten Paketen möglicherweise nicht ausgeführt und müssen aktualisiert werden.
+
+. Klicken Sie Auf *Content Administration*.
+. Klicken Sie auf die Schaltfläche *Neuer Import*.
+. Stellen Sie sicher, dass Sie das Archiv in das Bereitstellungsverzeichnis kopiert haben (z. B. `backup6.0.zip`) Ausgewählt ist, und klicken Sie auf *Weiter*.
+. Wenn Sie ein Passwort zum Schutz des Archivs eingegeben haben, geben Sie das Passwort ein und klicken Sie auf *OK*.
+. Ändern Sie den Namen `+Export...+` Bis `Import Backup` Und klicken Sie auf *Weiter*.
+. Klicken Sie auf das Bleistiftsymbol neben jedem Paketnamen und geben Sie ggf. einen neuen Zielnamen ein. Fügen Sie beispielsweise einen hinzu `_original` Suffix auf den vorhandenen Namen. Klicken Sie dann auf *OK*.
+. Nachdem Sie die Zielpaketnamen für alle Pakete umbenannt haben, wählen Sie alle blauen Ordner aus und klicken Sie auf *Weiter*, um fortzufahren.
+. Alle Standardwerte übernehmen.
+. Klicken Sie auf *Finish* und wählen Sie dann *Run*.
+. Überprüfen Sie die Details dieses Imports und klicken Sie auf *OK*.
+. Klicken Sie auf *Aktualisieren*, um den Status des Imports anzuzeigen.
+. Klicken Sie nach dem Import auf *Schließen*.
+
+
+
+
+== Ergebnisse
+
+Auf der Registerkarte Öffentliche Ordner werden zwei Pakete angezeigt. Beispiel: Einer mit einem `7.0` Suffix (für die neuere Version) und eines mit einem `_original` (Oder was auch immer Sie während des Sicherungs-/Wiederherstellungsvorgangs eingegeben haben) Suffix, das Ihre alten Berichte enthält. Aufgrund von Änderungen im Datenmodell werden die Berichte in den alten Paketen möglicherweise nicht ausgeführt und müssen aktualisiert werden. Ihre Portalregisterkarten zeigen nun auf die aktuelle Version der Portalseiten.

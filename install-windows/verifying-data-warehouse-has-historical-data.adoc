@@ -1,0 +1,25 @@
+---
+permalink: install-windows/verifying-data-warehouse-has-historical-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Nachdem Sie Ihre benutzerdefinierten Berichte wiederhergestellt haben, sollten Sie überprüfen, ob Data Warehouse historische Daten sammelt, indem Sie Ihre benutzerdefinierten Berichte anzeigen. 
+---
+= Überprüfung, ob das Data Warehouse historische Daten enthält
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie Ihre benutzerdefinierten Berichte wiederhergestellt haben, sollten Sie überprüfen, ob Data Warehouse historische Daten sammelt, indem Sie Ihre benutzerdefinierten Berichte anzeigen.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse-Portal unter an `+https://fqdn/dwh+`.
+. Klicken Sie in der Symbolleiste Data Warehouse auf image:../media/oci-reporting-portal-icon.gif[""] Um das Insight Reporting-Portal zu öffnen und sich anzumelden.
+. Öffnen Sie den Ordner, der Ihre benutzerdefinierten Berichte enthält (z. B. Benutzerdefinierte Berichte).
+. Klicken Sie Auf image:../media/run-with-options.gif[""] Um die Ausgabeformatoptionen für diesen Bericht zu öffnen.
+. Wählen Sie die gewünschten Optionen aus und klicken Sie auf *Ausführen*, um sicherzustellen, dass sie mit Speicher-, Rechen- und Switch-historischen Daten gefüllt sind.
+

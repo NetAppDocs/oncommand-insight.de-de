@@ -1,0 +1,107 @@
+---
+permalink: config-admin/auditing-system-and-user-activities.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie unerwartete Änderungen suchen möchten, können Sie einen Audit-Trail des OnCommand Insight-Systems und seiner Benutzeraktivitäten anzeigen. Audit-Protokollmeldungen können optional an syslog gesendet werden, zusätzlich zur Anzeige auf der Seite „Audit“. 
+---
+= Überwachen von System- und Benutzeraktivitäten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie unerwartete Änderungen suchen möchten, können Sie einen Audit-Trail des OnCommand Insight-Systems und seiner Benutzeraktivitäten anzeigen. Audit-Protokollmeldungen können optional an syslog gesendet werden, zusätzlich zur Anzeige auf der Seite „Audit“.
+
+
+
+== Über diese Aufgabe
+
+Insight generiert Audit-Einträge für alle Benutzeraktivitäten, die sich auf das Storage-Netzwerk oder dessen Management auswirken, darunter:
+
+* Anmelden
+* Autorisieren oder Entautorisieren eines Pfads
+* Aktualisieren eines autorisierten Pfads
+* Festlegen globaler Richtlinien oder Schwellenwerte
+* Hinzufügen oder Entfernen einer Datenquelle
+* Starten oder Stoppen einer Datenquelle
+* Eigenschaften der Datenquelle werden aktualisiert
+* Hinzufügen, Bearbeiten oder Löschen einer Aufgabe
+* Entfernen einer Anwendungsgruppe
+* Identifizieren oder Ändern der Identifikation eines Geräts
+* Erstellen Sie einen Benutzer
+* Löschen Sie einen Benutzer
+* Änderung der Benutzerrolle
+* Ändern eines Benutzers (Gast à Admin)
+* Abmelden eines Benutzers (entweder erzwungene Abmeldung oder manuelle Abmeldung)
+* Löschen einer Erfassungseinheit
+* Lizenz Aktualisieren
+* Aktivieren der Sicherung
+* Deaktivieren Der Sicherung
+* Aktivieren von ASUP (die Aktivierung von Proxy auf derselben Seite wird im Revisionsprotokoll gemeldet)
+* Deaktivieren von ASUP (Deaktivieren von Proxy auf derselben Seite wird im Auditprotokoll gemeldet)
+* Sicherheit – Neuschlüssel, Ändern der Systemkennwörter.
+* Entfernen/Hinzufügen von Anmerkungen zu Anlagen
+* CAC-Benutzeranmeldung/Abmeldung
+* CAC-Benutzersitzungszeitlimit
+
+
+
+
+== Schritte
+
+. Öffnen Sie Insight in Ihrem Browser.
+. Klicken Sie auf *Admin* und wählen Sie *Audit*.
++
+Auf der Seite Audit werden die Audit-Einträge in einer Tabelle angezeigt.
+
+. Sie können die folgenden Details in der Tabelle anzeigen:
++
+** *Zeit*
++
+Datum und Uhrzeit der Änderungen
+
+** * Benutzer*
++
+Name des Benutzers, der dem Überwachungseintrag zugeordnet ist
+
+** * Rolle*
++
+Die Rolle des Benutzerkontos, d. h. Gast, Benutzer oder Administrator
+
+** *IP*
++
+Mit dem Überwachungseintrag verknüpfte IP-Adresse
+
+** *Aktion*
++
+Art der Aktivität im Audit-Eintrag
+
+** *Details*
++
+Details zum Audit-Eintrag
+
++
+Wenn eine Benutzeraktivität vorhanden ist, die sich auf eine Ressource auswirkt, z. B. eine Datenquelle oder eine Anwendung, enthalten die Details einen Link zur Landing Page der Ressource.
+
++
+[NOTE]
+====
+Wenn eine Datenquelle gelöscht wird, enthalten die Details der Benutzeraktivität, die sich auf die Datenquelle beziehen, keinen Link mehr zur Landing Page der Datenquelle.
+
+====
+
+
+. Sie können Überwachungseinträge anzeigen, indem Sie einen bestimmten Zeitraum (1 Stunde, 3 Stunden, 24 Stunden, 3 Tage und 7 Tage) auswählen, Mit Insight, die eine maximale Anzahl von 1000 Verstößen für den ausgewählten Zeitraum anzeigt.
++
+Sie können auf eine Seitenzahl unter der Tabelle klicken, um Daten nach Seite zu durchsuchen, wenn mehr Daten als auf eine einzelne Seite passen.
+
+. Sie ändern die Sortierreihenfolge der Spalten in einer Tabelle entweder aufsteigend (Aufwärtspfeil) oder absteigend (Abwärtspfeil), indem Sie auf den Pfeil in der Spaltenüberschrift klicken. Um zur Standardsortierreihenfolge zurückzukehren, klicken Sie auf eine beliebige andere Spaltenüberschrift.
++
+Standardmäßig werden die Einträge in absteigender Reihenfolge in der Tabelle angezeigt.
+
+. Sie können das Feld *Filter* verwenden, um nur die Einträge anzuzeigen, die Sie in der Tabelle haben möchten.
++
+Um nur die Audit-Einträge durch den Benutzer anzuzeigen `izzyk`Geben Sie ein `izzyk` Im Feld *Filter*.
+
+

@@ -1,0 +1,79 @@
+---
+permalink: config-admin/ibm-cleversafe-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Diese Datenquelle sammelt Bestands- und Leistungsdaten für IBM Cleversafe. 
+---
+= IBM Cleversafe Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese Datenquelle sammelt Bestands- und Leistungsdaten für IBM Cleversafe.
+
+
+
+== Anforderungen
+
+Für die Konfiguration dieser Datenquelle gelten folgende Anforderungen:
+
+* Manager-IP-Adresse oder Hostname
+* Ein Benutzername und ein Passwort für dasselbe
+* Port 9440
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Cleversafe Manager Hostname oder IP-Adresse
+ a| 
+Host-IP-Adresse des CleverSafe-Geräts
+
+
+
+ a| 
+Benutzername
+ a| 
+Name für die Anmeldung bei Cleversafe
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort für die Anmeldung bei Cleversafe
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Der Standardwert ist 60 Minuten
+
+
+
+ a| 
+HTTP-Verbindungs-Timeout)
+ a| 
+Der Standardwert ist 60 Sekunden
+
+|===

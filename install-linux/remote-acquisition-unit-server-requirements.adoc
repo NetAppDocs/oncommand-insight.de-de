@@ -1,0 +1,69 @@
+---
+permalink: install-linux/remote-acquisition-unit-server-requirements.html 
+sidebar: sidebar 
+keywords: redhat 
+summary: 'Sie müssen eine Remote Acquisition Unit \(rau\) installieren, um Informationen von SAN-Geräten zu erhalten, die sich hinter einer Firewall, an einem Remote-Standort, in einem privaten Netzwerk oder in verschiedenen Netzwerksegmenten befinden. Bevor Sie die rau installieren, sollten Sie sicherstellen, dass Ihre Umgebung den Anforderungen an das rau-Betriebssystem, die CPU, den Arbeitsspeicher und den Festplattenspeicher entspricht.' 
+---
+= Anforderungen an den Remote Acquisition Unit-Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen eine Remote Acquisition Unit (rau) installieren, um Informationen von SAN-Geräten zu erhalten, die sich hinter einer Firewall, an einem Remote-Standort, in einem privaten Netzwerk oder in verschiedenen Netzwerksegmenten befinden. Bevor Sie die rau installieren, sollten Sie sicherstellen, dass Ihre Umgebung den Anforderungen an das rau-Betriebssystem, die CPU, den Arbeitsspeicher und den Festplattenspeicher entspricht.
+
+|===
+
+
+| Komponente | Anforderungen 
+
+
+ a| 
+Betriebssystem
+ a| 
+Ein Computer, auf dem eine lizenzierte Version einer der folgenden Versionen ausgeführt wird, auf dem keine andere Software auf Anwendungsebene ausgeführt wird:
+
+* Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, 7.7 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5
+* CentOS 7.2, 7.5, 7.6, 7.7, 7.8 7.9, CentOS 8 Stream
+* Oracle Enterprise Linux 7.5, 7.6, 7.7, 7.8, 7.9 8.1, 8.2, 8.3, 8.4, 8.5
+
+
+Es wird ein dedizierter Server empfohlen.
+
+
+
+ a| 
+CPU
+ a| 
+4 CPU-Kerne
+
+
+
+ a| 
+Speicher
+ a| 
+16 GB RAM
+
+
+
+ a| 
+Verfügbarer Festplattenspeicher
+ a| 
+40 GB
+
+
+
+ a| 
+Netzwerk
+ a| 
+100 Mbit/s /1 Gbit/s Ethernet-Verbindung, statische IP-Adresse, IP-Verbindung zu allen FC-Geräten und ein erforderlicher Port zum OnCommand Insight-Server (80 oder 443).
+
+
+
+ a| 
+Berechtigungen
+ a| 
+Sudo-Berechtigungen auf dem rau-Server
+
+|===

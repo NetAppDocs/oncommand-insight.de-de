@@ -1,0 +1,34 @@
+---
+permalink: config-admin/enabling-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: Führen Sie die folgenden Schritte aus, um die Archivierung von Performance-Daten zu aktivieren. 
+---
+= Performance-Archivierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Führen Sie die folgenden Schritte aus, um die Archivierung von Performance-Daten zu aktivieren.
+
+
+
+== Schritte
+
+. Klicken Sie in der Symbolleiste auf *Admin* > *Setup*.
+. Wählen Sie die Registerkarte *Backup & Archive* aus.
+. Im Abschnitt Leistungsarchiv sicherstellen, dass**enable Performance Archive** geprüft wird.
+. Geben Sie einen gültigen Archivspeicherort an.
++
+Sie können keinen Ordner im Insight-Installationsordner angeben.
+
++
+Best Practice: Geben Sie nicht denselben Ordner für das Archiv an wie den Speicherort für das Insight-Backup.
+
+. Klicken Sie Auf *Speichern*.
++
+Der Archivierungsprozess wird im Hintergrund verarbeitet und beeinträchtigt nicht andere Insight-Aktivitäten.
+
+

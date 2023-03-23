@@ -1,0 +1,34 @@
+---
+permalink: config-admin/how-annotations-are-assigned.html 
+sidebar: sidebar 
+keywords:  
+summary: Mithilfe von Anmerkungsregeln können Sie Anmerkungen manuell oder automatisch zuweisen. OnCommand Insight weist auch automatisch einige Anmerkungen zum Erwerb von Vermögenswerten und nach Vererbung zu. Alle Anmerkungen, die Sie einem Asset zuweisen, werden im Abschnitt „Benutzerdaten“ der Seite „Anlage“ angezeigt. 
+---
+= Wie Anmerkungen zugewiesen werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Anmerkungsregeln können Sie Anmerkungen manuell oder automatisch zuweisen. OnCommand Insight weist auch automatisch einige Anmerkungen zum Erwerb von Vermögenswerten und nach Vererbung zu. Alle Anmerkungen, die Sie einem Asset zuweisen, werden im Abschnitt „Benutzerdaten“ der Seite „Anlage“ angezeigt.
+
+Anmerkungen werden auf folgende Weise zugewiesen:
+
+* Sie können einer Anlage eine Anmerkung manuell zuweisen.
++
+Wenn eine Anmerkung direkt einer Anlage zugewiesen wird, wird die Anmerkung als normaler Text auf einer Anlagenseite angezeigt. Anmerkungen, die manuell zugewiesen werden, haben immer Vorrang vor Annotationen, die durch Annotationsregeln geerbt oder zugewiesen werden.
+
+* Sie können eine Anmerkungsregel erstellen, um Anlagen desselben Typs automatisch Anmerkungen zuzuweisen.
++
+Wenn die Anmerkung nach Regel zugewiesen ist, zeigt Insight den Regelnamen neben dem Namen der Anmerkung auf einer Anlagenseite an.
+
+* Insight ordnet Ihrem Storage-Tier automatisch ein Tier-Modell zu und beschleunigt so die Zuweisung von Storage-Annotationen zu Ihren Ressourcen bei der Beschaffung von Assets.
++
+Bestimmte Speicherressourcen werden automatisch einem vordefinierten Tier zugeordnet (Tier 1 und Tier 2). Beispielsweise basiert die Symmetrix-Speicherebene auf der Symmetrix- und VMAX-Produktreihe und ist Tier 1 zugeordnet. Sie können die Standardwerte an Ihre Ebenenanforderungen anpassen. Wenn die Anmerkung von Insight zugewiesen wird (z. B. „Tier“), wird „`systemdefiniert`“ angezeigt, wenn Sie den Cursor über den Namen der Anmerkung auf einer Anlagenseite positionieren.
+
+* Einige Ressourcen (untergeordnete Elemente einer Anlage) können die vordefinierte Tier-Annotation aus ihrer Anlage (übergeordnete Anlage) ableiten.
++
+Wenn Sie beispielsweise einem Storage eine Annotation zuweisen, wird die Tier-Annotation von allen Speicherpools, internen Volumes, Volumes, qtrees und Shares abgeleitet, die zum Storage gehören. Wenn auf ein internes Volume des Storage eine andere Annotation angewendet wird, wird diese Annotation anschließend von allen Volumes, qtrees und Shares abgeleitet. „`abgeleitete`“ wird neben dem Namen der Anmerkung auf einer Anlagenseite angezeigt.
+
+

@@ -1,0 +1,34 @@
+---
+permalink: config-admin/e-series-landing-page-terminology-storage-node.html 
+sidebar: sidebar 
+keywords:  
+summary: Begriffe, die auf Objekte oder Referenzen angewendet werden, die auf Landing-Pages für Storage-Nodes der NetApp E-Series möglicherweise zu finden sind. 
+---
+= E-Series Storage-Node
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Begriffe, die auf Objekte oder Referenzen angewendet werden, die auf Landing-Pages für Storage-Nodes der NetApp E-Series möglicherweise zu finden sind.
+
+
+
+== E-Series Storage-Node-Terminologie
+
+Die folgenden Begriffe gelten für Objekte oder Verweise, die auf Landing Pages für Storage-Pools der NetApp E-Series möglicherweise zu finden sind. Viele dieser Bedingungen gelten auch für andere Datensammler.
+
+* Storage – zu welchem Speicher-Array dieser Node gehört. Obligatorisch.
+* HA Partner -- auf Plattformen, bei denen ein Knoten auf einen und nur einen anderen Knoten umfunktioniert, wird er hier im Allgemeinen angezeigt.
+* Status – Systemzustand des Node. Nur verfügbar, wenn das Array ordnungsgemäß genug ist, um von einer Datenquelle inventarisiert zu werden.
+* Model – Modellname des Knotens.
+* Version -- Versionsname des Geräts.
+* Seriennummer -- die Seriennummer des Node.
+* Speicher -- Basis-2-Speicher, falls verfügbar.
+* Auslastung – die Auslastung ist derzeit für die NetApp E-Series nicht verfügbar.
+* IOPS – berechnet durch Zusammenfassung aller IOPS für Volumes, die ausschließlich zu diesem Knoten gehören.
+* Latenz – eine Zahl, die die typische Host-Latenz oder Reaktionszeit auf diesem Controller darstellt. Insights berechnet einen gewichteten IOPS-Durchschnitt aus Volumes, die ausschließlich zu diesem Node gehören.
+* Throughput: Eine Zahl, die den Host-gesteuerten Durchsatz auf diesem Controller darstellt. Berechnet durch Zusammenfassung des gesamten Durchsatzes für Volumes, die ausschließlich zu diesem Knoten gehören.
+* Prozessoren – CPU-Anzahl.
+

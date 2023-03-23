@@ -1,0 +1,42 @@
+---
+permalink: howto/setting-up-email-for-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight kann bei auslösenden Ereignissen, z. B. bei Verstößen gegen Performance-Richtlinien, E-Mail-Benachrichtigungen senden. 
+---
+= Einrichten von E-Mails für Benachrichtigungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight kann bei auslösenden Ereignissen, z. B. bei Verstößen gegen Performance-Richtlinien, E-Mail-Benachrichtigungen senden.
+
+
+
+== Über diese Aufgabe
+
+Führen Sie die folgenden grundlegenden Schritte aus, um E-Mail-Benachrichtigungen zu konfigurieren:
+
+
+
+== Schritte
+
+. Klicken Sie auf *Admin* > *Benachrichtigungen* und gehen Sie zum Abschnitt *E-Mail*.
+. Geben Sie im Feld *Server* den Namen Ihres SMTP-Servers ein. Sie können entweder einen vollständig qualifizierten Domänennamen oder eine IP-Adresse eingeben.
+. Geben Sie Ihren SMTP-Benutzernamen und (falls von Ihrem SMTP-Server erforderlich) das Kennwort ein.
+. Geben Sie im Feld *Absender-E-Mail* das E-Mail-Konto des Absenders ein, das in den Benachrichtigungen als Absender identifiziert wird.
++
+Dieses Konto muss ein gültiges E-Mail-Konto in Ihrem Unternehmen sein.
+
+. Geben Sie in das Feld *Email Signature* einen beliebigen Text ein, der in jede gesendete E-Mail eingefügt werden soll.
+. Klicken Sie im Feld *Empfänger* auf image:../media/add-email-recipient-icon.gif[""]Um eine E-Mail-Adresse einzugeben, und klicken Sie auf *OK*.
+. Klicken Sie Auf *Speichern*.
++
+Um eine E-Mail-Adresse zu bearbeiten oder zu entfernen oder eine Test-E-Mail zu senden, wählen Sie die Adresse aus, und klicken Sie auf die entsprechende Schaltfläche, die angezeigt wird.
+
++
+Beachten Sie, dass Sie Insight so konfigurieren können, dass E-Mail-Benachrichtigungen für bestimmte Verstöße gegen Performance-Richtlinien an bestimmte Personen oder Gruppen gesendet werden. Beispielsweise können Sie Verstöße gegen Cloud-Ressourcen an eine Gruppe und physische Hostereignisse an eine andere Gruppe senden. Gehen Sie zu *Verwalten* > *Leistungsrichtlinien*, um einzelne Richtlinienbenachrichtigungen zu konfigurieren.
+
+

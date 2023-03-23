@@ -1,0 +1,39 @@
+---
+permalink: config-admin/configuring-your-email-for-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Ihre Benutzer Insight-Berichte in ihren E-Mail-Konten erhalten möchten, müssen Sie Ihren E-Mail-Server konfigurieren, um diese Funktion zu aktivieren. 
+---
+= Konfigurieren Ihrer E-Mail-Adresse für Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Ihre Benutzer Insight-Berichte in ihren E-Mail-Konten erhalten möchten, müssen Sie Ihren E-Mail-Server konfigurieren, um diese Funktion zu aktivieren.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin* und wählen Sie *Notifications*.
+. Scrollen Sie nach unten zum Abschnitt *E-Mail* der Seite.
+. Geben Sie im Feld *Server* den Namen Ihres SMTP-Servers in Ihrer Organisation ein, der entweder über einen Hostnamen oder eine IP-Adresse (_nnn.nnn.nnn.nnn_ Format) identifiziert wird.
++
+Wenn Sie einen Hostnamen angeben, stellen Sie sicher, dass der Name über DNS aufgelöst werden kann.
+
+. Geben Sie im Feld *Benutzername* Ihren Benutzernamen ein.
+. Geben Sie im Feld *Passwort* das Passwort für den Zugriff auf den E-Mail-Server ein, das nur erforderlich ist, wenn Ihr SMTP-Server passwortgeschützt ist. Dies ist dasselbe Passwort, das Sie für die Anmeldung bei der Anwendung verwenden, mit der Sie Ihre E-Mail lesen können. Wenn ein Kennwort erforderlich ist, müssen Sie es zur Überprüfung erneut eingeben.
+. Geben Sie im Feld *Absender-E-Mail* das E-Mail-Konto des Absenders ein, das bei allen OnCommand Insight-Berichten als Absender identifiziert wird.
++
+Dieses Konto muss ein gültiges E-Mail-Konto in Ihrem Unternehmen sein.
+
+. Geben Sie in das Feld *Email Signature* den Text ein, den Sie in jede gesendete E-Mail einfügen möchten.
+. Klicken Sie im Feld Empfänger auf image:../media/add-email-recipient-icon.gif[""]Geben Sie eine E-Mail-Adresse ein, und klicken Sie auf *OK*.
++
+Um eine E-Mail-Adresse zu bearbeiten, wählen Sie die Adresse aus, und klicken Sie auf image:../media/edit-recipient-icon.gif[""]. Um eine E-Mail-Adresse zu löschen, wählen Sie die Adresse aus, und klicken Sie auf image:../media/delete-recipient-icon.gif[""].
+
+. Um eine Test-E-Mail an die angegebenen Empfänger zu senden, klicken Sie auf image:../media/test-email-icon.gif[""].
+. Klicken Sie Auf *Speichern*.
+

@@ -1,0 +1,41 @@
+---
+permalink: config-admin/applying-a-data-source-patch.html 
+sidebar: sidebar 
+keywords:  
+summary: Datenquellen-Patches sind regelmäßig verfügbar und ermöglichen es Ihnen, Probleme mit einer vorhandenen Datenquelle zu beheben, eine Datenquelle für einen neuen Anbieter hinzuzufügen oder ein neues Modell für einen Anbieter hinzuzufügen. 
+---
+= Anwenden eines Datenquellpatches
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Datenquellen-Patches sind regelmäßig verfügbar und ermöglichen es Ihnen, Probleme mit einer vorhandenen Datenquelle zu beheben, eine Datenquelle für einen neuen Anbieter hinzuzufügen oder ein neues Modell für einen Anbieter hinzuzufügen.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen die erworben haben `.zip` Datei, die die neueste Datenquelle enthält `.patch` Dateien vom technischen Support.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Patches*.
+. Wählen Sie über die Schaltfläche Aktionen die Option *Patch anwenden* aus.
+. Klicken Sie im Dialogfeld *Data source Patch anwenden* auf *Browse*, um den zu suchen `.patch` Datei:
+. Überprüfen Sie die Datenquelltypen *Patch-Name*, *Beschreibung* und *betroffene Datenquelltypen*.
+. Wenn der ausgewählte Patch korrekt ist, klicken Sie auf *Patch anwenden*.
++
+Wenn Sie einen Patch anwenden, der Probleme mit einer Datenquelle behebt, werden alle Datenquellen desselben Typs mit dem Patch aktualisiert und Sie müssen den Patch genehmigen. Patches, die keine konfigurierten Datenquellen betreffen, werden automatisch genehmigt.
+
+
+
+
+
+== Nachdem Sie fertig sind
+
+Wenn Sie einen Patch anwenden, der eine Datenquelle für einen neuen Anbieter oder ein neues Modell hinzufügt, müssen Sie die Datenquelle hinzufügen, nachdem Sie den Patch angewendet haben.

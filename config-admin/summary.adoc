@@ -1,0 +1,18 @@
+---
+permalink: config-admin/summary.html 
+sidebar: sidebar 
+keywords:  
+summary: Der Abschnitt Zusammenfassung auf einer Anlagenseite zeigt eine Zusammenfassung der Informationen über das jeweilige Asset an und zeigt Probleme im Zusammenhang mit dem Asset an, die durch einen roten Kreis gekennzeichnet sind, mit Hyperlinks zu zusätzlichen Informationen über verwandte Assets und zu allen Performance Policies, die dem Asset zugewiesen sind. 
+---
+= Zusammenfassung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Abschnitt Zusammenfassung auf einer Anlagenseite zeigt eine Zusammenfassung der Informationen über das jeweilige Asset an und zeigt Probleme im Zusammenhang mit dem Asset an, die durch einen roten Kreis gekennzeichnet sind, mit Hyperlinks zu zusätzlichen Informationen über verwandte Assets und zu allen Performance Policies, die dem Asset zugewiesen sind.
+
+Das folgende Beispiel zeigt einige der Informationstypen, die im Abschnitt Zusammenfassung einer Bestandsseite für eine virtuelle Maschine verfügbar sind. Jedes Element mit einem durchgehenden roten Kreis daneben weist auf potenzielle Probleme mit der überwachten Umgebung hin.
+
+image::../media/summary-section.gif[Zusammenfassung]

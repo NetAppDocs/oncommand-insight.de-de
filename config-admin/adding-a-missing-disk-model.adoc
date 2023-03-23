@@ -1,0 +1,37 @@
+---
+permalink: config-admin/adding-a-missing-disk-model.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn die Erfassung aufgrund eines unbekannten Festplattenmodells fehlschlägt, können Sie der Datei new_disk_models.txt das fehlende Laufwerksmodell hinzufügen und die Akquisition erneut ausführen. 
+---
+= Hinzufügen eines fehlenden Festplattenmodells
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn die Erfassung aufgrund eines unbekannten Festplattenmodells fehlschlägt, können Sie dem das fehlende Laufwerksmodell hinzufügen `new_disk_models.txt` Datei erstellen und die Akquisition erneut ausführen.
+
+
+
+== Über diese Aufgabe
+
+Im Rahmen einer Abfrage eines Speichergeräts durch OnCommand Insight-Erfassung werden die Datenträgermodelle auf dem Speichergerät gelesen. Wenn ein Anbieter seinem Array neue Festplattenmodelle hinzugefügt hat, über die Insight nicht Bescheid weiß, oder wenn die Modellnummer, nach der Insight sucht, nicht mit der vom Storage-Gerät zurückgegebenen übereinstimmt, schlägt die Datenerfassung der Datenquelle mit einem Fehler fehl. Um diese Fehler zu vermeiden, ist es notwendig, die Informationen zum Festplattenmodell, die Insight bekannt ist, zu aktualisieren. Insight verfügt über neue Festplattenmodelle mit Updates, Patches und Wartungs-Releases. Sie können jedoch entscheiden, diese Informationen manuell zu aktualisieren, anstatt auf einen Patch oder eine Aktualisierung zu warten.
+
+Da OnCommand Insight die Festplattenmodelldatei alle fünf Minuten liest, werden alle neu eingegebenen Datenmodellinformationen automatisch aktualisiert. Sie müssen den Server nicht neu starten, damit die Änderungen wirksam werden, aber Sie können den Server und alle Remote-Akquisitionseinheiten (raus) neu starten, damit die Änderungen vor der nächsten Aktualisierung wirksam werden.
+
+Aktualisierungen des Festplattenmodells werden dem hinzugefügt `new_disk_models.txt` Datei befindet sich im``<SANScreenInstallDir>\wildfly\standalone\deployments\datasources.war`` Verzeichnis. Informieren Sie sich vor der Aktualisierung des über die erforderlichen Informationen zur Beschreibung Ihres neuen Festplattenmodells `new_disk_models.txt` Datei: Ungenaue Informationen in der Datei führen zu falschen Systemdaten und können zu einer fehlgeschlagenen Erfassung führen.
+
+Befolgen Sie diese Anweisungen, um Insight-Festplattenmodelle manuell zu aktualisieren:
+
+
+
+== Schritte
+
+. Suchen Sie die richtigen Informationen für Ihr Festplattenmodell.
+. Öffnen Sie mit einem Texteditor die `new_disk_models.txt` Datei:
+. Fügen Sie die erforderlichen Informationen für die neue Datenquelle hinzu.
+. Speichern Sie die Datei im `<SANScreenInstallDir>\wildfly\standalone\deployments\datasources.war` Verzeichnis auf Ihrem Server.
+. Sichern Sie die `new_disk_models.txt` An einem sicheren Speicherort ablegen. Bei jedem nachfolgenden OnCommand Insight-Upgrade wird diese Datei überschrieben. Wenn in der aktualisierten Datei keine Informationen zum Laufwerksmodell vorhanden sind, müssen Sie sie erneut eingeben.
+

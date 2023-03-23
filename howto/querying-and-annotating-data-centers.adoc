@@ -1,0 +1,39 @@
+---
+permalink: howto/querying-and-annotating-data-centers.html 
+sidebar: sidebar 
+keywords:  
+summary: Mithilfe von Abfragen verknüpfen Sie Ihre Annotationen mit den entsprechenden Assets Ihrer Umgebung. In diesem Beispiel verknüpfen wir die Datacenter-Annotationen mit ausgewählten Assets. 
+---
+= Abfragen und Kommentieren von Rechenzentren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Abfragen verknüpfen Sie Ihre Annotationen mit den entsprechenden Assets Ihrer Umgebung. In diesem Beispiel verknüpfen wir die Datacenter-Annotationen mit ausgewählten Assets.
+
+Während der Datenerfassung sammelt Insight (neben anderen Informationen) die Namen der erkannten Ressourcen. In diesem Beispiel werden wir davon ausgehen, dass alle Ihre Storage-Arrays nach dem Datacenter benannt wurden, in dem sie sich befinden, wie z. B. „`SVL_NN_<label>`“ für Arrays in Sunnyvale. Mit Insight-Abfragen lassen sich diese Assets einfach kommentieren.
+
+* Melden Sie sich bei Insight als Benutzer mit administrativen Berechtigungen an
+* Wählen Sie *Abfragen* > *+Neue Abfrage*
+* Drop-down das Feld *Suchen nach...* und wählen Sie *Speicher*. Eine Liste aller Speicher-Arrays wird angezeigt.
+* Geben Sie im Filterfeld *Name* „`SVL`“ ein, und klicken Sie auf image:../media/check-box-ok.gif[""] (Oder drücken Sie die Eingabetaste). Die Liste der Abfrageergebnisse wird jetzt aktualisiert, um nur die Arrays anzuzeigen, die die Zeichenfolge „`SVL`“ enthalten.
+* Beim Filtern können Sie jedes der folgenden Zeichen allein oder kombiniert verwenden, um Ihre Suche in einem beliebigen Textfeld auf der Abfrageseite zu verfeinern:
++
+** Mit einem Sternchen können Sie nach allem suchen. Beispiel: „`vol*RHEL`“ zeigt Assets an, die mit „`vol`“ beginnen und mit „`RHEL`“ enden.
+** Mit dem Fragezeichen können Sie nach einer bestimmten Anzahl von Zeichen suchen. Wenn Sie beispielsweise nach „`SVL-PRD??-S12`“ filtern, werden SVL-PRD12-S12, SVL-PRD13-S12 usw. angezeigt.
+** Mit dem Operator ODER können Sie mehrere Einheiten angeben. Beispielsweise kann „`FAS2240 ODER CX600 ODER FAS3270`“ mehrere Storage-Modelle finden.
+
+
+* Wählen Sie die Speicherarrays aus, die Sie diesem Rechenzentrum zuordnen möchten. Wenn alle gewünschten Arrays ausgewählt sind, klicken Sie auf die Schaltfläche *Aktionen* und wählen *Anmerkung bearbeiten*.
+* Wählen Sie im Dialogfeld *Anmerkung hinzufügen* die Anmerkung *Data Center* aus.
+* Wählen Sie den gewünschten *Wert* aus, z. B. „`DC1_SVL`“.
+* Klicken Sie Auf *Speichern*.
+* Wenn die Spalte Rechenzentrum auf der Seite Abfrageergebnisse nicht sichtbar ist, wählen Sie sie aus, indem Sie die Schaltfläche *Spalten* herunterfahren und *Rechenzentrum* wählen.
+* Falls gewünscht, können Sie die Abfrage für die zukünftige Verwendung speichern, indem Sie oben rechts auf der Seite Abfrage auf die Schaltfläche *Speichern* klicken und ihr einen eindeutigen und expliziten Namen geben. Beispiel: „`Storage Arrays - SVL Data Center`“.
+
+
+Wenn Sie die Anmerkung „`SVL`“ mit anderen Assets verknüpfen möchten, erstellen Sie eine neue Abfrage und befolgen Sie diese Schritte für jeden gewünschten Asset-Typ.
+
+Wiederholen Sie diese Schritte für Ressourcen in jedem Ihrer Datacenter.

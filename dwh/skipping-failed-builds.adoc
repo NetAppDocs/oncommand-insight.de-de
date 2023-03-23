@@ -1,0 +1,43 @@
+---
+permalink: dwh/skipping-failed-builds.html 
+sidebar: sidebar 
+keywords:  
+summary: Nach dem ersten Build kann es manchmal zu einem erfolglosen Build kommen. Um sicherzustellen, dass alle Jobs nach einem erfolglosen Build erfolgreich abgeschlossen wurden, können Sie die Option zum Überspringen von Fehlern bei der Erstellung des Verlaufs aktivieren. 
+---
+= Fehlgeschlagene Builds werden übersprungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach dem ersten Build kann es manchmal zu einem erfolglosen Build kommen. Um sicherzustellen, dass alle Jobs nach einem erfolglosen Build erfolgreich abgeschlossen wurden, können Sie die Option *Historie überspringen Fehler erstellen* aktivieren.
+
+
+
+== Über diese Aufgabe
+
+Wenn ein Build fehlschlägt und die Option *Historie überspringen Buildfehler* aktiviert ist, setzt Data Warehouse die Erstellung fort und ignoriert alle fehlgeschlagenen Builds. In diesem Fall gibt es in den historischen Daten keinen Datenpunkt für übersprungene Builds.
+
+Verwenden Sie diese Option nur, wenn der Build nicht erfolgreich war.
+
+Wenn ein Build in Build from History fehlschlägt und das Kontrollkästchen *Historie überspringen Buildfehler* nicht aktiviert ist, werden alle nachfolgenden Jobs abgebrochen.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster links auf *Build from history*.
++
+image::../media/oci-dwh-admin-buildfromhistory-gif.gif[Aus Verlaufsansicht Erstellen]
+
+. Klicken Sie Auf *Konfigurieren*.
+. Konfigurieren Sie den Build.
+. Klicken Sie Auf *Speichern*.
+. Um fehlgeschlagene Builds zu überspringen, aktivieren Sie *Fehler beim Erstellen des Verlaufs überspringen*.
++
+Sie können dieses Kontrollkästchen nur sehen, wenn die Schaltfläche *Run* aktiviert ist.
+
+. Um einen Build außerhalb des automatischen geplanten Builds auszuführen, klicken Sie auf *Ausführen*.
+

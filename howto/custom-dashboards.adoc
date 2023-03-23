@@ -1,0 +1,55 @@
+---
+permalink: howto/custom-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 7.3 enthält erweiterte benutzerdefinierte Dashboard-Funktionen, um Benutzern eine Betriebsansicht der für sie wichtigen Daten zu ermöglichen und eine Komplettansicht der Daten bereitzustellen. 
+---
+= Erstellen benutzerdefinierter Dashboards
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 7.3 enthält erweiterte benutzerdefinierte Dashboard-Funktionen, um Benutzern eine Betriebsansicht der für sie wichtigen Daten zu ermöglichen und eine Komplettansicht der Daten bereitzustellen.
+
+OnCommand Insight bietet Benutzern die Flexibilität, Infrastrukturdaten von Betriebsansichten über VERSCHIEDENE IT-Plattformen hinweg zu erstellen, da Sie benutzerdefinierte Dashboards mit einer Vielzahl von Widgets erstellen können, die alle eine große Flexibilität bei der Anzeige und Dokumentation Ihrer Daten bieten. In dieser Anleitung erstellen wir ein Beispiel-Dashboard, um die VM-Performance hervorzuheben.
+
+Dieses How-To sollte nur als Beispiel dienen und deckt nicht jedes mögliche Szenario ab. Mit den hier beschriebenen Konzepten und Schritten können Sie eigene Dashboards erstellen, um die Daten hervorzuheben, die Ihren speziellen Anforderungen entsprechen.
+
+*Übersicht*
+
+Sie erstellen ein benutzerdefiniertes Dashboard mit einer der folgenden Methoden:
+
+* *Dashboards* > *+Neues Dashboard*
+* *Dashboards* > *Alle Dashboards anzeigen* und auf *+Hinzufügen* klicken
+
+
+Der Bildschirm Neues Dashboard verfügt über mehrere Steuerelemente:
+
+* *Zeitauswahl*: Ermöglicht die Anzeige von Dashboard-Daten für einen Zeitraum von 3 Stunden bis zu 90 Tagen mithilfe der benutzerdefinierten Datumsbereichauswahl. Sie können diesen globalen Zeitbereich in einzelnen Widgets überschreiben.
+* *Bearbeiten*-Schaltfläche: Durch Auswahl von "`on`" wird der Bearbeitungsmodus aktiviert, mit dem Sie Änderungen am Dashboard vornehmen können. Neue Dashboards werden standardmäßig im Bearbeitungsmodus geöffnet.
+* *Speichern* Button: Ermöglicht das Speichern, Umbenennen oder Löschen des Dashboards.
+* *Variable* Button: Variablen können zu Dashboards hinzugefügt werden. Wenn Sie die Variable ändern, werden alle Widgets auf einmal aktualisiert. Weitere Informationen zu Variablen finden Sie unter link:custom-dashboard-concepts.md#["Konzepte des benutzerdefinierten Dashboards"]
+* *Widget* Button, mit dem Sie beliebig viele Tabellen, Diagramme oder andere Widgets zum Dashboard hinzufügen können.
+
+
+Widgets können geändert und an verschiedene Positionen im Dashboard verschoben werden, um Ihnen die beste Ansicht Ihrer Daten entsprechend Ihren aktuellen Anforderungen zu geben.
+
+*Widget-Typen*
+
+Sie können aus den folgenden Widgets wählen:
+
+*Tabelle* Widget: Eine Tabelle, die Daten nach den von Ihnen gewählten Filtern und Spalten anzeigt. Tabellendaten können in Gruppen zusammengefasst werden, die ausgeblendet und erweitert werden können.
+
+*Linie, Spline, Fläche, gestapelte Fläche* Karten: Dies sind Zeitreihendiagramm-Widgets, auf denen Sie Leistung und andere Daten im Laufe der Zeit anzeigen können.
+
+*Einzelner Wert* Widget: Ein Widget, mit dem Sie einen einzelnen Wert anzeigen können, der entweder direkt von einem Zähler abgeleitet oder mit einer Abfrage oder einem Ausdruck berechnet werden kann. Beispielsweise können Sie im oberen Bereich Ihres Dashboards die Summe der IOPS-Gesamtkapazität für den gesamten Storage in Ihrer Umgebung als einen einzigen Wert anzeigen.
+
+*Balken* Diagramm: Ein Diagramm, um die oberen oder unteren 5, 10, 20 oder 50 Werte anzuzeigen.
+
+*Box Plot*-Diagramm: Ein Plot des min, max, median und des Bereichs zwischen dem unteren und oberen Quartil von Daten in einem einzigen Diagramm.
+
+*Scatter Plot*-Diagramm: Zeichnet verwandte Daten als Punkte, z. B. IOPS und Latenz. In diesem Beispiel würden Sie schnell Assets mit hoher Latenz und niedrigen IOPS sehen.
+
+Darüber hinaus gibt es eine Reihe von Legacy-Widgets, die Sie wählen können. Wählen Sie in der Dropdown-Liste *Widgets* **Mehr anzeigen...**um diese Widgets anzuzeigen.

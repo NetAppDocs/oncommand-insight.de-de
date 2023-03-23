@@ -1,0 +1,52 @@
+---
+permalink: config-admin/manually-assigning-annotations-to-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Durch das Zuweisen von Annotationen zu Assets können Sie Assets auf eine für Ihr Unternehmen relevante Weise sortieren, gruppieren und protokollieren. Obwohl Sie Anlagen eines bestimmten Typs automatisch Anmerkungen zuweisen können, können Sie mithilfe von Anmerkungsregeln Anmerkungen zu einer einzelnen Anlage über die zugehörige Anlagenseite zuweisen. 
+---
+= Manuelles Zuweisen von Anmerkungen zu Assets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch das Zuweisen von Annotationen zu Assets können Sie Assets auf eine für Ihr Unternehmen relevante Weise sortieren, gruppieren und protokollieren. Obwohl Sie Anlagen eines bestimmten Typs automatisch Anmerkungen zuweisen können, können Sie mithilfe von Anmerkungsregeln Anmerkungen zu einer einzelnen Anlage über die zugehörige Anlagenseite zuweisen.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen die Anmerkung erstellt haben, die Sie zuweisen möchten.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Suchen Sie die Anlage, auf die Sie die Anmerkung anwenden möchten, indem Sie einen der folgenden Schritte ausführen:
++
+** Klicken Sie im Asset Dashboard auf das Asset.
+** Klicken Sie Auf image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] Geben Sie in der Symbolleiste, um das Feld *Assets suchen* anzuzeigen, den Typ oder den Namen des Assets ein, und wählen Sie dann das Asset aus der angezeigten Liste aus.
++
+Die Seite Anlage wird angezeigt.
+
+
+
+. Klicken Sie im Abschnitt *Benutzerdaten* der Seite Asset auf image:../media/add-annotation-icon.gif[""].
++
+Das Dialogfeld Anmerkung hinzufügen wird angezeigt.
+
+. Klicken Sie auf *Anmerkung* und wählen Sie eine Anmerkung aus der Liste aus.
+. Klicken Sie auf *Wert*, und führen Sie je nach Art der ausgewählten Anmerkung einen der folgenden Schritte aus:
++
+** Wenn der Anmerkungstyp Liste, Datum oder Boolean ist, wählen Sie einen Wert aus der Liste aus.
+** Wenn es sich bei dem Anmerkungstyp um Text handelt, geben Sie einen Wert ein.
+
+
+. Klicken Sie Auf *Speichern*.
+. Wenn Sie den Wert der Anmerkung ändern möchten, nachdem Sie sie zugewiesen haben, klicken Sie auf image:../media/change-annotation-value.gif[""] Und wählen Sie einen anderen Wert aus.
++
+Wenn die Anmerkung vom Listentyp ist, für den die Option *Werte dynamisch bei Anmerkungszuweisung hinzufügen* ausgewählt ist, können Sie zusätzlich zur Auswahl eines vorhandenen Werts einen neuen Wert eingeben.
+
+

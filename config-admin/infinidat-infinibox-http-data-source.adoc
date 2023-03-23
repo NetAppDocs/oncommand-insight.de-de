@@ -1,0 +1,154 @@
+---
+permalink: config-admin/infinidat-infinibox-http-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Die Infinidat Infinidat Infinibox \(HTTP\)-Datenquelle wird verwendet, um Informationen aus dem Infinidat Infinibox-Speicher zu sammeln. Sie müssen Zugriff auf den Infinibox Management Node haben.' 
+---
+= Infinidat Infinibox Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Infinidat Infinidat Infinibox (HTTP) Datenquelle wird verwendet, um Informationen aus dem Infinidat Infinibox Speicher zu sammeln. Sie müssen Zugriff auf den Infinibox Management Node haben.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Bestandsinformationen aus der Infinibox-Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Laufwerk
+ a| 
+Festplatte
+
+
+
+ a| 
+Infinibox
+ a| 
+Storage
+
+
+
+ a| 
+Knoten
+ a| 
+Storage-Node
+
+
+
+ a| 
+Pool
+ a| 
+Storage-Pool
+
+
+
+ a| 
+Datenmenge
+ a| 
+Datenmenge
+
+
+
+ a| 
+FC-Port
+ a| 
+Port
+
+
+
+ a| 
+Dateisystem
+ a| 
+Internes Volumen
+
+
+
+ a| 
+Dateisystem
+ a| 
+Dateifreigabe
+
+
+
+ a| 
+Dateisystem-Exporte
+ a| 
+Share
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+InfiniBox Host
+ a| 
+IP-Adresse oder vollqualifizierter Domainname des InfiniBox Management Node
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für InfiniBox Management Node
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort für den InfiniBox Management-Knoten
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+TCP-Port
+ a| 
+TCP-Port zur Verbindung mit Infinibox Server (Standard 443 )
+
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 60 Minuten)
+
+
+
+ a| 
+Zeitüberschreitung Der Verbindung
+ a| 
+Verbindungs-Timeout (Standard: 60 Sekunden)
+
+|===

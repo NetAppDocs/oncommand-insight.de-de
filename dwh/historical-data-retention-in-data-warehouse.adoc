@@ -1,0 +1,243 @@
+---
+permalink: dwh/historical-data-retention-in-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Daten werden im Data Warehouse gemäß einem Zeitplan verwaltet. Mit zunehmendem Alter der Daten wird die Aufbewahrung von Datensätzen reduziert. 
+---
+= Wie historische Daten im Data Warehouse aufbewahrt werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Daten werden im Data Warehouse gemäß einem Zeitplan verwaltet. Mit zunehmendem Alter der Daten wird die Aufbewahrung von Datensätzen reduziert.
+
+Data Warehouse speichert historische Daten basierend auf den Daten und Granularität der Daten, wie in der folgenden Tabelle dargestellt.
+
+|===
+
+
+| Datentabellen | Gemessenes Objekt | Granularität | Aufbewahrungszeitraum 
+
+
+ a| 
+Performance Marts
+ a| 
+Volumes und interne Volumes
+ a| 
+Stündlich
+ a| 
+14 Tage
+
+
+
+ a| 
+Performance Marts
+ a| 
+Volumes und interne Volumes
+ a| 
+Täglich
+ a| 
+13 Monaten
+
+
+
+ a| 
+Performance Marts
+ a| 
+Applikation
+ a| 
+Stündlich
+ a| 
+13 Monaten
+
+
+
+ a| 
+Performance Marts
+ a| 
+Host
+ a| 
+Stündlich
+ a| 
+13 Monaten
+
+
+
+ a| 
+Performance Marts
+ a| 
+Switch-Leistung für Port
+ a| 
+Stündlich
+ a| 
+5 Wochen
+
+
+
+ a| 
+Performance Marts
+ a| 
+Performance-Switch für Host, Storage und Tape
+ a| 
+Stündlich
+ a| 
+13 Monaten
+
+
+
+ a| 
+Performance Marts
+ a| 
+Storage-Node
+ a| 
+Stündlich
+ a| 
+14 Tage
+
+
+
+ a| 
+Performance Marts
+ a| 
+Storage-Node
+ a| 
+Täglich
+ a| 
+13 Monaten
+
+
+
+ a| 
+Performance Marts
+ a| 
+VM-Performance
+ a| 
+Stündlich
+ a| 
+14 Tage
+
+
+
+ a| 
+Performance Marts
+ a| 
+VM-Performance
+ a| 
+Täglich
+ a| 
+13 Monaten
+
+
+
+ a| 
+Performance Marts
+ a| 
+Hypervisor-Performance
+ a| 
+Stündlich
+ a| 
+14 Tage
+
+
+
+ a| 
+Performance Marts
+ a| 
+Hypervisor-Performance
+ a| 
+Täglich
+ a| 
+13 Monaten
+
+
+
+ a| 
+Performance Marts
+ a| 
+VMDK-Performance
+ a| 
+Stündlich
+ a| 
+14 Tage
+
+
+
+ a| 
+Performance Marts
+ a| 
+VMDK-Performance
+ a| 
+Täglich
+ a| 
+13 Monaten
+
+
+
+ a| 
+Performance Marts
+ a| 
+Disk Performance
+ a| 
+Stündlich
+ a| 
+14 Tage
+
+
+
+ a| 
+Performance Marts
+ a| 
+Disk Performance
+ a| 
+Täglich
+ a| 
+13 Monaten
+
+
+
+ a| 
+Capacity Marts
+ a| 
+Alle (außer einzelne Volumes)
+ a| 
+Täglich
+ a| 
+13 Monaten
+
+
+
+ a| 
+Capacity Marts
+ a| 
+Alle (außer einzelne Volumes)
+ a| 
+Monatlicher Vertreter
+ a| 
+14 Monaten und darüber hinaus
+
+
+
+ a| 
+Inventarmarke
+ a| 
+Einzelne Volumes
+ a| 
+Aktueller Stand
+ a| 
+1 Tag (oder bis zum nächsten ETL)
+
+|===
+Nach 13 Monaten (konfigurierbar) speichert Data Warehouse in den folgenden Faktentabellen nur einen Datensatz pro Monat anstatt einen Datensatz pro Tag für Kapazitäts-, Leistungs- und Ressourcendaten:
+
+* Tabelle mit Fakten zur Rückberechnung (dwh_capacity.chargeback_fact)
+* Tabelle „Kennzahl der Dateisystemauslastung“ (dwh_fs_util.fs_util_Fact)
+* Host-Faktentabelle (dwh_sa.sa_Host_Fact)
+* Faktentabelle für interne Volumenkapazität (dwh_capacity.internal_volume_capacity_fact)
+* Ports Faktentabelle (dwh_Ports.Ports_Fact)
+* Faktentabelle für qtree-Kapazität (dwh_Capacity.qtree_Capacity_Fact)
+* Faktentabelle für Speicher- und Speicherpool-Kapazität (dwh_Capacity.Storage_and_Storage_Pool_Capacity_Fact)
+* Faktentabelle für Volumenkapazität (dwh_Capacity.vm_Capacity_Fact)
+* Tabellen mit stündlicher Storage-Node-Performance (Storage_Node_hourly_Performance_FACT) und täglicher Storage-Node-Performance (Storage_Node_Daily_Performance_FACT)
+

@@ -1,0 +1,52 @@
+---
+permalink: howto/servicenow-integration-install-python-and-libraries.html 
+sidebar: sidebar 
+keywords:  
+summary: Python kann auf dem Insight Server oder auf einem Standalone Host oder einer VM installiert werden. 
+---
+= Installieren Sie Python und Bibliotheken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Python kann auf dem Insight Server oder auf einem Standalone Host oder einer VM installiert werden.
+
+
+
+== Schritte
+
+. Laden Sie auf Ihrem VM oder Host Python 3.6 oder höher herunter.
+. Wählen Sie eine benutzerdefinierte Installation aus, und wählen Sie die folgenden Optionen aus. Diese sind entweder für den ordnungsgemäßen Betrieb des Konnektors erforderlich oder werden dringend empfohlen.
++
+** Startprogramm für alle Benutzer installieren
+** Fügen Sie Python zum PFAD hinzu
+** Installieren von Pip (wodurch Python andere Pakete installieren kann)
+** Installieren Sie TK/tcl und IM LEERLAUF
+** Installieren Sie die Python Test Suite
+** Installieren Sie py Launcher für alle Benutzer
+** Dateien mit Python verknüpfen
+** Erstellen Sie Verknüpfungen für installierte Anwendungen
+** Fügen Sie Python zu Umgebungsvariablen hinzu
+** Standardbibliothek vorkompilieren
+
+
+. Nachdem Python installiert wurde, installieren Sie die Python-Bibliotheken "`reQuests`" und "`psnow`". Führen Sie den folgenden Befehl aus: `python -m pip install requests pysnow`
++
+*HINWEIS:* dieser Befehl kann fehlschlagen, wenn Sie in einer Proxy-Umgebung arbeiten. Um dieses Problem zu umgehen, müssen Sie jede der Python-Bibliotheken manuell herunterladen und die Installationsanforderungen nacheinander und in der richtigen Reihenfolge ausführen.
+
++
+Der Befehl installiert mehrere Dateien.
+
+. Überprüfen Sie, ob die Python-Bibliotheken richtig installiert sind. Starten Sie Python mit einer der folgenden Methoden:
++
+** Öffnen Sie eine cmd-Eingabeaufforderung, und geben Sie ein `python`
+** Öffnen Sie unter Windows *Start* und wählen Sie *Python* > *Python-<version>.exe*
+
+
+. Geben Sie an der Python-Eingabeaufforderung ein `modules`
++
+Python wird Sie bitten, einen Moment zu warten, während es eine Liste von Modulen sammelt, die dann angezeigt werden.
+
+

@@ -1,0 +1,21 @@
+---
+permalink: reporting/process-of-creating-custom-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Das Erstellen von Ad-hoc-Berichten umfasst mehrere Aufgaben. 
+---
+= Prozess der Erstellung von Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Erstellen von Ad-hoc-Berichten umfasst mehrere Aufgaben.
+
+* Planen Sie die Ergebnisse Ihres Berichts.
+* Daten identifizieren, um Ergebnisse zu unterstützen
+* Wählen Sie das Datenmodell aus (z. B. Chargeback-Datenmodell, Bestandsdatenmodell usw.), das die Daten enthält.
+* Datenelemente für den Bericht auswählen.
+* Optional können Sie Berichtsergebnisse formatieren, sortieren und filtern.
+

@@ -1,0 +1,18 @@
+---
+permalink: config-admin/asset-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Asset-Seiten liefern Daten zur Fehlerbehebung bei der Performance und zeigen zusammenfassende Informationen zu einem Basisressource \ (z. B. einer virtuellen Maschine oder einem Volume\) und den zugehörigen Assets an, die \ (z. B. Speicherpools, Speicherknoten und verbundene Switch-Ports\) verwendet, sowie Links zu zusätzlichen Informationen.' 
+---
+= Daten der Bestandsseite
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Asset-Seiten bieten Daten zur Fehlerbehebung bei der Performance und zeigen zusammenfassende Informationen zu einem Basiselement (z. B. einer virtuellen Maschine oder einem Volume) und den zugehörigen Assets an, die es verwendet (z. B. Speicherpools, Speicherknoten und verbundene Switch-Ports), sowie Links zu zusätzlichen Informationen.
+
+Beginnend mit OnCommand Insight 7.3 haben alle Asset-Seiten eine *Main* Seite und eine *zusätzliche Daten* Seite. Auf der Hauptseite finden Sie eine Zusammenfassung der Anlage und verschiedene Abschnitte für Diagramme, Topologie und andere Informationen. Auf der Seite *zusätzliche Daten* können Sie eine anpassbare Dashboard-Seite für den aktuellen Asset-Typ konfigurieren.
+
+Ein roter Kreis neben einer Zeile oder Nachricht auf der Hauptregisterkarte der Systembestandsseite zeigt mögliche Probleme mit der überwachten Umgebung an.

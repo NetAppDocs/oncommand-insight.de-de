@@ -1,0 +1,28 @@
+---
+permalink: config-admin/determining-data-source-acquisition-status.html 
+sidebar: sidebar 
+keywords:  
+summary: Da Datenquellen die primäre Informationsquelle für Insight sind, müssen Sie unbedingt sicherstellen, dass diese weiterhin ausgeführt werden. 
+---
+= Ermitteln des Erfassungsstatus der Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Da Datenquellen die primäre Informationsquelle für Insight sind, müssen Sie unbedingt sicherstellen, dass diese weiterhin ausgeführt werden.
+
+Die Möglichkeit, den Erfassungsstatus der Datenquelle anzuzeigen, steht auf jeder Seite der Anlage für alle Assets zur Verfügung, die direkt erfasst werden. Es kann zu einem der folgenden Erfassungsszenarien kommen, in denen der Status in der oberen rechten Ecke der Bestandsseite angezeigt wird:
+
+* Erfolgreich von Datenquelle erfasst
++
+Zeigt den Status „`Acquired“ an `xxxx``", where `xxxx` Gibt die letzte Erfassungszeit der Datenquellen des Assets an.
+
+* Es liegt ein Erfassungsfehler vor.
++
+Zeigt den Status „`Acquired“ an `xxxx``", where `xxxx` Gibt die letzte Erfassungszeit der Datenquelle des Assets mit an image:../media/acquisition-icon.gif[""]. Wenn Sie auf klicken image:../media/acquisition-icon.gif[""], In einem Fenster werden jede Datenquelle für das Asset, der Status der Datenquelle und der Zeitpunkt der letzten Datenerfassung angezeigt. Durch Klicken auf eine Datenquelle wird die Detailseite der Datenquelle angezeigt.
+
+
+
+Wenn ein Asset nicht direkt erfasst wird, wird kein Status angezeigt.

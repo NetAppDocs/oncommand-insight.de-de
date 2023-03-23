@@ -1,0 +1,56 @@
+---
+permalink: config-admin/editing-or-removing-applications-in-bulk.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können mehrere Anwendungen zu Assets zuweisen oder sie aus diesen Anwendungen entfernen, indem Sie eine Abfrage verwenden, anstatt sie manuell zuweisen oder entfernen zu müssen. 
+---
+= Zuweisen mehrerer Anwendungen zu oder Entfernen mehrerer Anwendungen aus Assets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können mehrere Anwendungen zu Assets zuweisen oder sie aus diesen Anwendungen entfernen, indem Sie eine Abfrage verwenden, anstatt sie manuell zuweisen oder entfernen zu müssen.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen bereits eine Abfrage erstellt haben, die alle Assets findet, die Sie bearbeiten möchten.
+
+
+
+== Schritte
+
+. Klicken Sie auf *Abfragen* und wählen Sie *Alle Anfragen anzeigen*.
++
+Die Seite Abfragen wird angezeigt.
+
+. Klicken Sie auf den Namen der Abfrage, die die Assets findet.
++
+Die Liste der mit der Abfrage verknüpften Assets wird angezeigt.
+
+. Wählen Sie die gewünschten Assets in der Liste aus, oder klicken Sie auf image:../media/select-assets.gif[""] Um *Alle* auszuwählen.
++
+Die Schaltfläche *actions* wird angezeigt.
+
+. Um den ausgewählten Assets eine Anwendung hinzuzufügen, klicken Sie auf image:../media/actions-button.gif[""], Und wählen Sie *Anwendung bearbeiten*.
++
+.. Klicken Sie auf *Anwendung* und wählen Sie eine oder mehrere Anwendungen aus.
++
+Sie können mehrere Anwendungen für Hosts, interne Volumes und virtuelle Maschinen auswählen. Sie können jedoch nur eine Anwendung für ein Volume auswählen.
+
+.. Klicken Sie Auf *Speichern*.
+
+
+. Klicken Sie auf, um eine der Assets zugewiesene Anwendung zu entfernen image:../media/actions-button.gif[""] Und wählen Sie *Anwendung entfernen*.
++
+.. Wählen Sie die Anwendung oder die Anwendungen aus, die Sie entfernen möchten.
+.. Klicken Sie Auf *Löschen*.
+
+
++
+Neue Anwendungen, die Sie zuweisen, überschreiben alle Anwendungen auf dem Asset, die von einem anderen Asset abgeleitet wurden. Beispielsweise übernehmen Volumes Applikationen von Hosts, und wenn neuen Applikationen einem Volume zugewiesen werden, hat die neue Applikation Vorrang vor der abgeleiteten Applikation.
+
+

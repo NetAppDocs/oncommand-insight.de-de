@@ -1,0 +1,40 @@
+---
+permalink: config-admin/editing-a-user-definition.html 
+sidebar: sidebar 
+keywords:  
+summary: Ein Benutzer mit Administratorrechten kann ein Benutzerkonto bearbeiten, um die E-Mail-Adresse oder Rollen für OnCommand Insight- oder DWH- und Berichtsfunktionen zu ändern. 
+---
+= Bearbeiten einer Benutzerdefinition
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Benutzer mit Administratorrechten kann ein Benutzerkonto bearbeiten, um die E-Mail-Adresse oder Rollen für OnCommand Insight- oder DWH- und Berichtsfunktionen zu ändern.
+
+
+
+== Bevor Sie beginnen
+
+Legen Sie den Typ des Benutzerkontos fest (OnCommand Insight, DWH oder eine Kombination), das geändert werden muss.
+
+
+
+== Über diese Aufgabe
+
+Für LDAP-Benutzer können Sie die E-Mail-Adresse nur mit dieser Methode ändern.
+
+
+
+== Schritte
+
+. Melden Sie sich mit Administratorrechten an.
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Setup*.
+. Klicken Sie auf die Registerkarte *Users*.
+. Suchen Sie die Zeile, in der das Benutzerkonto angezeigt wird, das Sie ändern möchten.
+. Klicken Sie rechts neben den Benutzerinformationen auf das Symbol *Benutzerkonto bearbeiten*.
+. Nehmen Sie die erforderlichen Änderungen vor.
+. Klicken Sie Auf *Speichern*.
+

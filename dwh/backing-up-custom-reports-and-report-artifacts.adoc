@@ -1,0 +1,22 @@
+---
+permalink: dwh/backing-up-custom-reports-and-report-artifacts.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie benutzerdefinierte Berichte in einer Version von Insight vor 7.0 erstellt haben und ein Upgrade auf die neueste Insight Version durchführen möchten, sollten Sie vor der Upgrade-Installation ein Backup Ihrer Berichte erstellen und Artefakte melden und diese nach der Upgrade-Installation wiederherstellen. Achten Sie auch auf die Ordner, die Sie zum Speichern von Berichtsartefakten verwenden. 
+---
+= Backup benutzerdefinierter Berichte und Artefakte in Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie benutzerdefinierte Berichte in einer Version von Insight vor 7.0 erstellt haben und ein Upgrade auf die neueste Insight Version durchführen möchten, sollten Sie vor der Upgrade-Installation ein Backup Ihrer Berichte erstellen und Artefakte melden und diese nach der Upgrade-Installation wiederherstellen. Achten Sie auch auf die Ordner, die Sie zum Speichern von Berichtsartefakten verwenden.
+
+
+
+== Über diese Aufgabe
+
+Wenn Sie Änderungen an den vordefinierten Berichten vorgenommen haben, erstellen Sie Ihre eigenen Kopien dieser Berichte in einem separaten Ordner. Auf diese Weise überschreiben Sie Ihre Änderungen nicht, wenn Sie die vordefinierten Artefakte aktualisieren.
+
+Wenn Sie Berichte im Bereich „Meine Ordner“ haben, sollten Sie sie in die Ordner „Benutzerdefinierte Berichte“ kopieren, damit sie nicht verloren gehen.

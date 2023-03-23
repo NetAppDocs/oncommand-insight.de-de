@@ -1,0 +1,32 @@
+---
+permalink: reporting/copying-a-report-to-the-clipboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Verwenden Sie diesen Vorgang, um einen Bericht in die Zwischenablage zu kopieren. 
+---
+= Kopieren eines Berichts in die Zwischenablage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verwenden Sie diesen Vorgang, um einen Bericht in die Zwischenablage zu kopieren.
+
+
+
+== Schritte
+
+. Öffnen Sie das Cognos 11 Reporting Portal: https://server-name:9300/bi/[]
+. Klicken Sie in der Symbolleiste auf image:../media/new-report.gif[""]
+. Klicken Sie Auf *Bericht*
+. Klicken Sie auf das Symbol *Seiten*image:../media/pages-icon.gif[""]
++
+Das Symbol *Report* image:../media/report-icon.gif[""] Wird angezeigt
+
+. Klicken Sie mit der linken Maustaste auf das Symbol *Report*
++
+Berichtsoptionen werden angezeigt.
+
+. Klicken Sie auf *Bericht in Zwischenablage kopieren*.
+

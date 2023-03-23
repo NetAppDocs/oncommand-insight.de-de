@@ -1,0 +1,16 @@
+---
+permalink: howto/introduction-to-minimizing-risk-in-thin-provisioning.html 
+sidebar: sidebar 
+keywords:  
+summary: In den heutigen hybriden IT-Datacentern sehen sich Administratoren gezwungen, die Ressourcenauslastung über die physischen Grenzen hinaus zu dehnen, indem sie Technologien zur Kapazitätseffizienz wie Thin Provisioning einsetzen, um die Zuweisung zu steuern und die ehemals nicht verfügbaren Kapazitäten voll auszuschöpfen. 
+---
+= Einführung zur Risikominimierung beim Thin Provisioning
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In modernen hybriden IT-Datacentern müssen Administratoren mithilfe von Kapazitätstechnologien wie Thin Provisioning die Ressourcenauslastung überdehnen, um die Zuweisung zu steuern und die ehemals nicht verfügbaren Kapazitäten optimal zu nutzen.
+
+OnCommand Insight sorgt für Kapazitätsnutzung und Auslastungsdetails nahezu in Echtzeit über mehrere Thin Provisioning-Ebenen des IT-Service-Stacks hinweg. Wenn das Risiko einer Überzeichnung nicht ordnungsgemäß gemanagt wird, kann dies zu Ausfallzeiten für das Unternehmen führen.

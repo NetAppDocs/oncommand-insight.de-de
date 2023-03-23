@@ -1,0 +1,36 @@
+---
+permalink: howto/creating-a-query-to-identify-netapp-root-aggregates.html 
+sidebar: sidebar 
+keywords:  
+summary: Abfragen ermöglichen die Suche auf granularer Ebene, basierend auf vom Benutzer ausgewählten Kriterien. Mit einer Abfrage können Sie nach internen Volumes in Ihrer Umgebung suchen, die das NetApp Root-Aggregat enthalten. 
+---
+= Erstellen einer Abfrage, um NetApp Root-Aggregate in Ihrer Umgebung zu identifizieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Abfragen ermöglichen die Suche auf granularer Ebene, basierend auf vom Benutzer ausgewählten Kriterien. Mit einer Abfrage können Sie nach internen Volumes in Ihrer Umgebung suchen, die das NetApp Root-Aggregat enthalten.
+
+
+
+== Schritte
+
+. Erstellen Sie in der Web-Benutzeroberfläche von OnCommand Insight eine Abfrage zur Identifizierung von NetApp-Root-Aggregaten in Ihrer Umgebung: *Abfragen* > *neue Abfrage* > *Ressourcentyp auswählen*
+. Klicken Sie Auf *Speicherpool*
+. Geben Sie den Namen für das Root-Aggregat ein
++
+In diesem Beispiel wird „`aggr0`“ für den Namen verwendet. Beim Erstellen eines Aggregats müssen nur die folgenden Anforderungen für den Namen erfüllt werden:
+
++
+** Er muss entweder mit einem Buchstaben oder einem Unterstrich (_) beginnen.
+** Er darf nur Buchstaben, Ziffern und Unterstriche enthalten.
+** Sie kann maximal 250 Zeichen umfassen. In den meisten Fällen ist das Aggregat der Name aggr0, aggr_0, oder etwas ähnliches. Es könnte einen iterativen Prozess erfordern, um alle NetApp Root-Aggregate in Ihrer Umgebung zu identifizieren.
+
+
+. Klicken Sie auf *Speichern* und geben Sie einen Namen für die neue Abfrage ein.
++
+Wie bereits erwähnt, könnte dies ein iterativer Prozess sein und mehrere Anfragen zur Identifizierung aller NetApp Root-Aggregate erfordern.
+
+

@@ -1,0 +1,21 @@
+---
+permalink: config-admin/insight-user-roles.html 
+sidebar: sidebar 
+keywords:  
+summary: Jedem Benutzerkonto wird eine der drei möglichen Berechtigungsstufen zugewiesen. 
+---
+= Insight-Benutzerrollen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Jedem Benutzerkonto wird eine der drei möglichen Berechtigungsstufen zugewiesen.
+
+* Gäste können sich bei Insight anmelden und die verschiedenen Seiten ansehen. Mit diesem Kontotyp können Sie keine Aktionen wie das Identifizieren generischer Geräte und das Definieren der Richtlinien in der Java-Benutzeroberfläche ausführen.
+* Benutzer erlaubt alle Berechtigungen auf Gastebene sowie den Zugriff auf Insight Vorgänge, z. B. die Definition von Richtlinien und die Identifizierung generischer Geräte. Der Benutzerkontotyp erlaubt es Ihnen nicht, Datenquellenvorgänge durchzuführen oder andere Benutzerkonten als Ihr eigenes hinzuzufügen oder zu bearbeiten.
+* Der Administrator ermöglicht Ihnen, alle Vorgänge auszuführen, einschließlich des Hinzufügens neuer Benutzer und der Verwaltung von Datenquellen.
+
+
+*Best Practice:* Schränken Sie die Anzahl der Benutzer mit Administratorberechtigungen ein, indem Sie die meisten Konten für Benutzer oder Gäste erstellen.

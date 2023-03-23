@@ -1,0 +1,52 @@
+---
+permalink: config-admin/examining-one-data-source-in-detail.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie feststellen, dass eine Datenquelle fehlgeschlagen oder verlangsamt ist, sollten Sie eine detaillierte Zusammenfassung der Informationen für diese Datenquelle prüfen, um die Ursache des Problems zu ermitteln. Datenquellen mit Bedingungen, die Ihre Aufmerksamkeit erfordern, sind mit einem durchgehenden roten Kreis gekennzeichnet. 
+---
+= Eine Datenquelle im Detail untersuchen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie feststellen, dass eine Datenquelle fehlgeschlagen oder verlangsamt ist, sollten Sie eine detaillierte Zusammenfassung der Informationen für diese Datenquelle prüfen, um die Ursache des Problems zu ermitteln. Datenquellen mit Bedingungen, die Ihre Aufmerksamkeit erfordern, sind mit einem durchgehenden roten Kreis gekennzeichnet.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
++
+Die Liste *Datenquellen* wird geöffnet. Alle aufgelisteten Datenquellen mit potenziellen Problemen sind mit einem durchgehenden roten Kreis gekennzeichnet. Die schwerwiegendsten Probleme stehen ganz oben auf der Liste.
+
+. Wählen Sie die Datenquelle aus, die Bedenken auslöst.
+. Klicken Sie auf den Link Name der Datenquelle.
+. Überprüfen Sie auf der Seite Datenquellenzusammenfassung die Informationen in einem der folgenden Abschnitte:
++
+** *Zeitachse des Events*
++
+Listet Ereignisse auf, die mit dem aktuellen Status in der Liste Datenquellen verknüpft sind. Ereignisse in dieser Zusammenfassung werden pro Gerät angezeigt. Fehler werden rot angezeigt. Sie können Ihren Mauszeiger auf Zeitachsenelemente positionieren, um zusätzliche Informationen anzuzeigen.
+
+** *Von dieser Datenquelle gemeldete Geräte*
++
+Listet die Gerätetypen, ihre IP-Adressen und Links zu detaillierteren Informationen für jedes Gerät auf.
+
+** *Änderungen, die von dieser Datenquelle gemeldet werden (letzte 3 Wochen)*
++
+Listet alle Geräte auf, die hinzugefügt oder entfernt wurden oder an der Konfiguration geändert wurden.
+
+
+
+. Nach der Untersuchung der Datenquellinformationen sollten Sie eine dieser Vorgänge mithilfe der Schaltflächen oben auf der Seite ausführen:
++
+** *Bearbeiten* die Beschreibung der Datenquelle, um das Problem zu beheben.
+** *Erneut abfragen* zwingt die Umfrage, um zu erkennen, ob das Problem andauernd oder intermittierend war.
+** *Datenquellenabfrage für 3, 7 oder 30 Tage verschieben, um Ihnen Zeit zu geben, das Problem zu untersuchen und die Warnmeldungen zu stoppen.
+** *Installieren Sie einen Patch* auf der Datenquelle, um das Problem zu beheben.
+** Bereiten Sie einen *Fehlerbericht* für den technischen Support vor.
+** *Löschen* der Datenquelle aus Ihrer Insight Monitoring-Umgebung.
+
+
+

@@ -1,0 +1,14 @@
+---
+permalink: howto/preparing-assets-annotating.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit Anmerkungen können Sie den ausgewählten Assets bestimmte Tags oder Beschriftungen zuordnen, was die Verwaltung und Berichterstellung für diese Assets erleichtert. 
+---
+= Vorbereiten von Assets: Kommentieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Anmerkungen können Sie den ausgewählten Assets bestimmte Tags oder Beschriftungen zuordnen, was die Verwaltung und Berichterstellung für diese Assets erleichtert.

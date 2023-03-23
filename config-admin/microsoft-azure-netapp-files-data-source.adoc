@@ -1,0 +1,87 @@
+---
+permalink: config-admin/microsoft-azure-netapp-files-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Diese Datenquelle erfasst Inventar- und Performance-Daten für Azure NetApp Files \(ANF\).' 
+---
+= Azure NetApp Files Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese Datenquelle erfasst Inventar- und Performance-Daten für Azure NetApp Files (ANF).
+
+
+
+== Anforderungen
+
+Für die Konfiguration dieser Datenquelle gelten folgende Anforderungen:
+
+* Port-Anforderung: 443 HTTPS
+* Azure Management Rest-IP (management.azure.com)
+* Azure Service Principal Application (Client) ID (Benutzerkonto)
+* Azure Service Principal Authentifizierungsschlüssel (Benutzerpasswort)
+* Sie müssen ein Azure Konto für die Cloud Insights-Erkennung einrichten.
++
+Sobald das Konto ordnungsgemäß konfiguriert ist und Sie die Applikation in Azure registrieren, verfügen Sie über die erforderlichen Zugangsdaten, um die Azure Instanz mit Cloud Insights zu ermitteln. Über den folgenden Link wird beschrieben, wie Sie das Konto für die Ermittlung einrichten:
+
++
+https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
+
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Azure Service Principal Application (Client) ID
+ a| 
+Anmelde-ID bei Azure
+
+
+
+ a| 
+Azure Mandanten-ID
+ a| 
+Azure Mandanten-ID
+
+
+
+ a| 
+Authentifizierungsschlüssel Des Azure Service Principal
+ a| 
+Anmeldeauthentifizierungsschlüssel
+
+
+
+ a| 
+Ich verstehe, dass Microsoft mir API-Anforderungen in Rechnung stellt
+ a| 
+Überprüfen Sie dies, um zu überprüfen, ob Microsoft Ihnen die durch eine Insight-Umfrage gestellten API-Anforderungen abrechnungen aufstellt.
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Der Standardwert ist 60 Minuten
+
+|===

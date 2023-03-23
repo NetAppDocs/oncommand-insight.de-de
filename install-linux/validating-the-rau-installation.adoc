@@ -1,0 +1,26 @@
+---
+permalink: install-linux/validating-the-rau-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: Um die ordnungsgemäße Installation der Remote Acquisition Unit zu überprüfen, können Sie den Status der Remote Acquisition Units anzeigen, die mit Ihrem Server verbunden sind. 
+---
+= Überprüfen der Installation der Fernbedienungseinheit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um die ordnungsgemäße Installation der Remote Acquisition Unit zu überprüfen, können Sie den Status der Remote Acquisition Units anzeigen, die mit Ihrem Server verbunden sind.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Acquisition Units*.
+. Überprüfen Sie, ob die neue Fernaufnahmungseinheit korrekt registriert wurde und den Status „Verbunden“ aufweist.
++
+Ist dies nicht der Fall, wenden Sie sich an den technischen Support.
+
+

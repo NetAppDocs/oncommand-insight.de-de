@@ -1,0 +1,35 @@
+---
+permalink: config-admin/associating-costs-with-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Bevor Sie kostenbezogene Berichte erstellen, sollten Sie Anmerkungen auf Systemebene Service Level, Switch-Level und Tiering zuordnen, die Kostenverrechnung für die Storage-Benutzer auf Basis der tatsächlichen Nutzung von Produktions- und replizierter Kapazität ermöglichen. Beispielsweise können Sie für die Stufe „Tier“ möglicherweise Werte für die Stufe „Gold“ und „Silber“ festlegen und der Stufe „Gold“ höhere Kosten zuweisen als der Stufe „Silber“. 
+---
+= Zuordnen von Kosten zu Anmerkungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie kostenbezogene Berichte erstellen, sollten Sie Anmerkungen auf Systemebene Service Level, Switch-Level und Tiering zuordnen, die Kostenverrechnung für die Storage-Benutzer auf Basis der tatsächlichen Nutzung von Produktions- und replizierter Kapazität ermöglichen. Beispielsweise können Sie für die Stufe „Tier“ möglicherweise Werte für die Stufe „Gold“ und „Silber“ festlegen und der Stufe „Gold“ höhere Kosten zuweisen als der Stufe „Silber“.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der Insight Web-Benutzeroberfläche an.
+. Klicken Sie auf Verwalten und wählen Sie *Anmerkungen*.
++
+Die Seite Anmerkung wird angezeigt.
+
+. Bewegen Sie den Mauszeiger über die Beschriftung Service Level, Switch Level oder Tier, und klicken Sie auf image:../media/edit-annotation-icon.gif[""].
++
+Das Dialogfeld Anmerkung bearbeiten wird angezeigt.
+
+. Geben Sie die Werte für alle vorhandenen Ebenen in das Feld *Kosten* ein.
++
+Die Tier- und Service-Level-Anmerkungen weisen die Werte für Auto-Tier bzw. Objekt-Storage auf, die Sie nicht entfernen können.
+
+. Klicken Sie Auf image:../media/edit-annotation-add-icon.gif[""] Um weitere Ebenen hinzuzufügen.
+. Klicken Sie auf *Speichern*, wenn Sie fertig sind.
+

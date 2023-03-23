@@ -1,0 +1,14 @@
+---
+permalink: config-admin/assigning-annotations-to-assets-using-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Um Assets anhand von Kriterien, die Sie definieren, automatisch Anmerkungen zuzuweisen, konfigurieren Sie Anmerkungsregeln. OnCommand Insight weist den Assets anhand dieser Regeln die Annotationen zu. Insight bietet außerdem zwei standardmäßige Anmerkungsregeln, die Sie an Ihre Anforderungen anpassen oder entfernen können, wenn Sie sie nicht verwenden möchten. 
+---
+= Zuordnen von Anmerkungen zu Anlagen mithilfe von Anmerkungsregeln
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um Assets anhand von Kriterien, die Sie definieren, automatisch Anmerkungen zuzuweisen, konfigurieren Sie Anmerkungsregeln. OnCommand Insight weist den Assets anhand dieser Regeln die Annotationen zu. Insight bietet außerdem zwei standardmäßige Anmerkungsregeln, die Sie an Ihre Anforderungen anpassen oder entfernen können, wenn Sie sie nicht verwenden möchten.

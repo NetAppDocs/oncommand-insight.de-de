@@ -1,0 +1,210 @@
+---
+permalink: config-admin/oracle-zfs-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Oracle ZFS-Datenquelle unterstützt die Bestands- und Performanceerfassung. 
+---
+= Oracle ZFS-Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Oracle ZFS-Datenquelle unterstützt die Bestands- und Performanceerfassung.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Bestandsinformationen aus dieser Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Festplatte (SDD)
+ a| 
+Festplatte
+
+
+
+ a| 
+Cluster
+ a| 
+Storage
+
+
+
+ a| 
+Controller
+ a| 
+Storage-Node
+
+
+
+ a| 
+LUN
+ a| 
+Datenmenge
+
+
+
+ a| 
+LUN-Zuordnung
+ a| 
+Volume-Zuordnung
+
+
+
+ a| 
+Initiator, Ziel
+ a| 
+Volumenmaske
+
+
+
+ a| 
+Share
+ a| 
+Internes Volumen
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+Für die Konfiguration dieser Datenquelle gelten folgende Anforderungen:
+
+* Host-Namen für den ZFS-Controller-1 und den ZFS-Controller-2
+* Benutzername und Anmeldeinformationen des Administrators
+* Port-Anforderung: 215 HTTP/HTTPS
+
+
+
+
+== Konfiguration
+
+|===
+
+
+|  |  
+
+
+ a| 
+ZFS Controller-1-Hostname
+ a| 
+Host Name für Storage Controller 1
+
+
+
+ a| 
+ZFS Controller-2-Hostname
+ a| 
+Host-Name für Storage Controller 2
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für das Benutzerkonto des Speichersystemadministrators
+
+
+
+ a| 
+Passwort
+ a| 
+Kennwort für das Administratorbenutzerkonto
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+TCP-Port
+ a| 
+TCP-Port zur Verbindung mit ZFS (Standard 215 )
+
+
+
+ a| 
+Verbindungstyp
+ a| 
+HTTP oder HTTPS
+
+
+
+ a| 
+Abfrageintervall für den Bestand
+ a| 
+Intervall für Bestandsabfrage (Standard: 60 Minuten)
+
+
+
+ a| 
+Zeitüberschreitung Der Verbindung
+ a| 
+Der Standardwert ist 60 Sekunden
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+|===
+
+
+== Fehlerbehebung
+
+Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+
+|===
+
+
+| Problem: | Versuchen Sie Das: 
+
+
+ a| 
+„Ungültige Anmeldeinformationen“
+ a| 
+ZFS-Benutzerkonto und -Passwort validieren
+
+
+
+ a| 
+„Konfigurationsfehler“ mit der Fehlermeldung „`REST-Service ist deaktiviert`“
+ a| 
+Vergewissern Sie sich, dass DER REST-Dienst auf diesem Gerät aktiviert ist.
+
+
+
+ a| 
+„Konfigurationsfehler “ mit der Fehlermeldung „`Benutzer nicht autorisiert für Befehl`“
+ a| 
+Wahrscheinlich aufgrund bestimmter Rollen (z. B. 'Advanced_Analytics') sind für den konfigurierten Benutzer <userName> nicht enthalten.Mögliche Lösung:
+
+* Korrigieren Sie den Bereich Analytics (Statistik) für den Benutzer €{user} mit der nur-Lese-Rolle:- Setzen Sie auf dem Bildschirm Configuration → Users die Maus über die Rolle und doppelklicken Sie, um die Bearbeitung zu ermöglichen
+* Wählen Sie im Dropdown-Menü „Bereich“ die Option „Analyse“ aus. Eine Liste der möglichen Eigenschaften wird angezeigt.
+* Klicken Sie auf das oberste Kontrollkästchen und es werden alle drei Eigenschaften ausgewählt.- Klicken Sie auf die Schaltfläche Hinzufügen auf der rechten Seite.
+* Klicken Sie oben rechts im Popup-Fenster auf die Schaltfläche Übernehmen. Das Popup-Fenster wird geschlossen.
+
+
+|===

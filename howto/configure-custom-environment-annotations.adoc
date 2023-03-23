@@ -1,0 +1,62 @@
+---
+permalink: howto/configure-custom-environment-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Umgebungsanmerkung ist eine benutzerdefinierte Anmerkung zur Zuordnung von Anlagen zu ihrem jeweiligen Umgebungsort oder ihrer Verwendung, z. B. Labor, Forschung und Entwicklung, Produktion, Usw. Durch die Erstellung der Umgebungsanmerkung und die Einstellung auf diese Ressourcen können Sie Ihre Laborressourcen einfach separat von Ihren Produktionsanlagen finden, filtern und Berichte erstellen. 
+---
+= Konfigurieren Sie Anmerkungen zur benutzerdefinierten Umgebung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Umgebungsanmerkung ist eine benutzerdefinierte Anmerkung zur Zuordnung von Anlagen zu ihrem jeweiligen Umgebungsort oder ihrer Verwendung, z. B. Labor, Forschung und Entwicklung, Produktion, Usw. Durch die Erstellung der Umgebungsanmerkung und die Einstellung auf diese Ressourcen können Sie Ihre Laborressourcen einfach separat von Ihren Produktionsanlagen finden, filtern und Berichte erstellen.
+
+Schritte
+
+* Wählen Sie *Verwalten* > *Anmerkungen*.
+* Klicken Sie oben auf der Seite auf die Schaltfläche *+Add*.
+* Geben Sie für *Name* '`*Environment*`' ein.
+* Geben Sie für *Description* '`*Asset environment type*`' ein.
+* Wählen Sie für *Typ* *Liste*. Neue Felder werden angezeigt, damit Sie Ihre Liste erstellen können.
+* Lassen Sie jetzt *Neue Assets spontan hinzufügen* deaktiviert. Aktivieren Sie diese Option, wenn Sie der Auswahlliste neue Umgebungen hinzufügen möchten, während Sie sie gleichzeitig mit Assets verknüpfen.
+* Geben Sie den Namen und die Beschreibung Ihrer ersten Umgebung ein.
+* Klicken Sie auf *+Add* und tun Sie das gleiche für Ihre anderen Umgebungen.
+* Wenn Sie fertig sind, klicken Sie auf *Speichern*.
+
+
+Beispiele für Umgebungskommentare:
+
+|===
+
+
+| Name | Beschreibung 
+
+
+ a| 
+Labor
+ a| 
+Labor
+
+
+
+ a| 
+Abw
+ a| 
+Entwicklung
+
+
+
+ a| 
+Prd
+ a| 
+Produktion
+
+
+
+ a| 
+...
+ a| 
+
+|===

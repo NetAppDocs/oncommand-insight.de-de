@@ -1,0 +1,92 @@
+---
+permalink: howto/creating-performance-policies-and-thresholds-for-ports.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Performance-Richtlinien mit Schwellenwerten für Metriken erstellen, die einem Port zugeordnet sind. Standardmäßig gelten Performance-Richtlinien für alle Geräte des angegebenen Typs, wenn Sie sie erstellen. Sie können eine Annotation erstellen, um nur ein bestimmtes Gerät oder eine Gruppe von Geräten in die Performance-Richtlinie aufzunehmen. Aus einfachen Grund wird bei diesem Verfahren keine Beschriftung verwendet. 
+---
+= Erstellen von Performance-Richtlinien und Schwellenwerten für Ports
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Performance-Richtlinien mit Schwellenwerten für Metriken erstellen, die einem Port zugeordnet sind. Standardmäßig gelten Performance-Richtlinien für alle Geräte des angegebenen Typs, wenn Sie sie erstellen. Sie können eine Annotation erstellen, um nur ein bestimmtes Gerät oder eine Gruppe von Geräten in die Performance-Richtlinie aufzunehmen. Aus einfachen Grund wird bei diesem Verfahren keine Beschriftung verwendet.
+
+
+
+== Bevor Sie beginnen
+
+Wenn Sie eine Annotation mit dieser Performance-Richtlinie verwenden möchten, müssen Sie die Annotation erstellen, bevor Sie die Performance-Richtlinie erstellen.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Verwalten* > *Leistungsrichtlinien*
++
+Die vorhandenen Richtlinien werden angezeigt. Wenn eine Richtlinie für Switch-Ports vorhanden ist, können Sie die vorhandene Richtlinie bearbeiten und die neuen Richtlinien und Schwellenwerte hinzufügen.
+
+. Bearbeiten Sie eine vorhandene Portrichtlinie oder erstellen Sie eine neue Portrichtlinie
++
+** Klicken Sie auf das Bleistiftsymbol ganz rechts neben der vorhandenen Richtlinie. Fügen Sie die in den Schritten „`d`“ und „`e`“ beschriebenen Schwellenwerte hinzu.
+** Klicken Sie auf *+Hinzufügen*, um eine neue Richtlinie hinzuzufügen
++
+... Fügen Sie ein „`Richtlinienname`“ hinzu: Gerät mit langsamer Entleerung
+... Port als Objekttyp auswählen
+... Geben Sie das erste Vorkommen für „`Apply after window`“ von ein
+... Schwellenwert eingeben: BB Credit Null - Rx > 1,000,000
+... Schwellenwert eingeben: BB Credit Null - Tx > 1,000,000
+... Klicken Sie auf „`Verarbeitung weiterer Richtlinien beenden, wenn eine Warnung generiert wird`“.
+... Klicken Sie Auf „`Speichern`“.
+
+
+
+
++
+Die von Ihnen erstellte Richtlinie überwacht die Schwellenwerte, die Sie über einen Zeitraum von 24 Stunden festgelegt haben. Wenn der Schwellenwert überschritten wird, wird eine Verletzung gemeldet.
+
+. Klicken Sie Auf *Dashboards* > *Verstöße Dashboard*
++
+Das System zeigt alle auf dem System aufgetretenen Verstöße an. Suchen oder sortieren Sie die Verstöße, um die „`Slow Drain Device`“-Verstöße anzuzeigen. Das Dashboard „Verstöße“ zeigt alle Ports an, bei denen BB Credit 0-Fehler aufgetreten sind, die die Schwellenwerte überschreiten, die in der Performance Policy festgelegt wurden. Jeder Switch-Port, der im Dashboard für Verstöße identifiziert wurde, ist ein hervorgehobener Link zur Landing Page des Ports.
+
+. Klicken Sie auf einen hervorgehobenen Port-Link, um die Port-Landing-Page anzuzeigen.
++
+Die Zielseite des Ports wird angezeigt und enthält nützliche Informationen für die Fehlerbehebung bei BB Credit 0:
+
++
+** Geräte, mit denen der Port verbunden ist
+** Identifizierung des Ports, der den Verstoß meldet, d. h. eines Fibre-Channel-Switch-Ports.
+** Die Geschwindigkeit des Ports
+** Der zugeordnete Knoten und Portnameimage:../media/port-landing-page.gif[""]
+
+
+. Blättern Sie nach unten, um die Kennzahlen für den Port anzuzeigen. Klicken Sie auf *Metriken auswählen, die angezeigt werden sollen* > *BB Credit Null*, um das BB Credit-Diagramm anzuzeigen.
++
+image::../media/expert-port-metrics.gif[Expertenkennzahlen für den Port]
+
+. Klicken Sie auf *Top Correlated*
++
+Die Top-korrelierte Ressourcenanalyse zeigt den verbundenen Controller-Node, den der Port als die Ressource bereitstellt, die am stärksten mit der Performance korreliert. Dieser Schritt vergleicht die IOPS-Kennzahlen der Portaktivität mit der gesamten Node-Aktivität. Auf den Anzeigen werden die Kennzahlen Tx und Rx BB Credit Zero sowie die IOPS des Controller-Node angezeigt. Das Display zeigt Folgendes an:
+
++
+** Die Controller-I/O-Vorgänge sind stark mit dem Port-Verkehr korreliert
+** Die Performance Policy wird verletzt, wenn der Port E/A an den Server sendet.
+** In Anbetracht der Tatsache, dass unser Port Performance-Verstoß in Verbindung mit einer hohen IOPS-Belastung des Storage Controllers auftritt, ist es wahrscheinlich, dass der Verstoß durch den Workload auf dem Storage Node verursacht wird.image:../media/port-node-compare.gif[""]
+
+
+. Kehren Sie zur Landing Page des Ports zurück und greifen Sie auf die Landing Page des Storage-Controller-Node zu, um die Workload-Metriken zu analysieren.
++
+Der Node zeigt eine Verletzung der Auslastung an und die Kennzahlen zeigen einen hohen Wert für „ersetzte Cache-Lesevorgänge“, der im Zusammenhang mit dem „Buffer-to-Buffer-Zero“-Kreditstatus steht.
+
++
+image::../media/node-landing-page.gif[Landing Page des Node]
+
+. Auf der Landing Page Node können Sie die BB-Kreditzverenzeros vergleichen, indem Sie den Port aus der Liste der korrelierten Ressourcen auswählen und im Menü Metrics Auslastungsdaten, einschließlich Cache-Nutzungsdaten, für unseren Node auswählen.
++
+image::../media/node-port-comparison.gif[Vergleich der Node-Ports]
+
++
+Diese Daten machen deutlich, dass das Cache-Trefferverhältnis umgekehrt mit unseren anderen Kennzahlen korreliert wird. Anstatt auf die Serverlast aus dem Cache zu reagieren, tritt auf dem Storage-Node eine hohe Anzahl von Lesevorgängen im Cache auf. Es ist wahrscheinlich, dass das Abrufen der meisten Daten von der Festplatte statt vom Cache die Verzögerung bei der Übertragung der Daten des Ports an den Server verursacht. Die Ursache des Performance-Problems scheint wahrscheinlich eine durch Workloads generierte Änderung des I/O-Verhaltens zu sein, und dass der Node-Cache und seine Konfiguration die Ursache dafür sind. Das Problem kann gelöst werden, indem entweder die Cache-Größe des Node vergrößert oder das Verhalten des Caching-Algorithmus geändert wird.
+
+

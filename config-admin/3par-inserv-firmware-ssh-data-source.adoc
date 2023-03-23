@@ -1,0 +1,207 @@
+---
+permalink: config-admin/3par-inserv-firmware-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight verwendet die Datenquelle 3PAR InServ \(Firmware 2.2.2+, SSH\), um den Bestand für HP 3PAR StoreServ-Speicher-Arrays zu ermitteln.' 
+---
+= 3PAR InServ Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight verwendet die Datenquelle „3PAR InServ“ (Firmware 2.2.2+, SSH), um den Bestand für HP 3PAR StoreServ-Speicher-Arrays zu ermitteln.
+
+
+
+== Terminologie
+
+OnCommand Insight bezieht die folgenden Bestandsinformationen aus der Datenquelle „3PAR InServ“. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Physisches Laufwerk
+ a| 
+Festplatte
+
+
+
+ a| 
+Storage-System
+ a| 
+Storage
+
+
+
+ a| 
+Controller-Node
+ a| 
+Storage-Node
+
+
+
+ a| 
+Gemeinsame Bereitstellungsgruppe
+ a| 
+Storage-Pool
+
+
+
+ a| 
+Virtual Volume
+ a| 
+Datenmenge
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* IP-Adresse oder FQDN des InServ-Clusters
+* Für die Bestandsaufnahme, schreibgeschützter Benutzername und Kennwort an den InServ-Server.
+* Für die Leistung, Lese-Schreib-Benutzername und Passwort an den InServ-Server.
+* Port-Anforderungen: 22 (Inventory Collection), 5988 oder 5989 (Performance Collection) [Hinweis: 3PAR Performance wird für InServ OS 3.x+ unterstützt]
+* Bestätigen Sie zur Performance-Erfassung, dass SMI-S aktiviert ist, indem Sie sich über SSH beim 3PAR-Array anmelden.
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Cluster-IP
+ a| 
+IP-Adresse oder vollständig qualifizierter Domänenname des InServ-Clusters
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für den InServ-Server
+
+
+
+ a| 
+Passwort
+ a| 
+Kennwort für den InServ-Server
+
+
+
+ a| 
+SMI-S-HOST-IP
+ a| 
+IP-Adresse des SMI-S Provider-Hosts
+
+
+
+ a| 
+SMI-S-Benutzername
+ a| 
+Benutzername für den SMI-S Provider Host
+
+
+
+ a| 
+SMI-S-Passwort
+ a| 
+Passwort, das für den SMI-S Provider-Host verwendet wird
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 40 Minuten)
+
+
+
+ a| 
+Geräte Ausschließen
+ a| 
+Kommagetrennte Liste der auszuschließenden Geräte-IPs
+
+
+
+ a| 
+SSH-Prozess-Wartezeit (Sek.)
+ a| 
+SSH-Prozess-Timeout (Standard: 60 Sekunden)
+
+
+
+ a| 
+Anzahl der SSH-Wiederholungen
+ a| 
+Anzahl der SSH-Wiederholungsversuche
+
+
+
+ a| 
+SSH-Banner-Wartezeit (Sek.)
+ a| 
+SSH Banner Wait Timeout (Standard: 20 Sekunden)
+
+
+
+ a| 
+SMI-S-Port
+ a| 
+Vom SMI-S Provider-Host verwendeter Port
+
+
+
+ a| 
+Protokoll
+ a| 
+Protokoll für die Verbindung mit dem SMI-S-Provider
+
+
+
+ a| 
+SMI-S Namespace
+ a| 
+SMI-S Namespace
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+
+
+ a| 
+Anzahl der erneuten SMI-S-Verbindungsversuche
+ a| 
+Anzahl der Wiederholungsversuche für SMI-S-Verbindungen
+
+|===

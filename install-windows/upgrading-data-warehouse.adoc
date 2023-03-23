@@ -1,0 +1,60 @@
+---
+permalink: install-windows/upgrading-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Nachdem Sie alle erforderlichen Aufgaben abgeschlossen haben, können Sie sich beim Data Warehouse-Server anmelden und das Installationspaket ausführen, um das Upgrade abzuschließen. 
+---
+= Data Warehouse Wird Aktualisiert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie alle erforderlichen Aufgaben abgeschlossen haben, können Sie sich beim Data Warehouse-Server anmelden und das Installationspaket ausführen, um das Upgrade abzuschließen.
+
+
+
+== Über diese Aufgabe
+
+Inline-Upgrade wird vom Data Warehouse (DWH) nicht unterstützt. Führen Sie die folgenden Schritte aus, um auf die neue Version der DWH-Software zu aktualisieren.
+
+[NOTE]
+====
+Beim Aktualisieren von DWH wird der Ordner, der das Tresorbackup des _securityadmin_-Tools enthält, gelöscht. Es wird dringend empfohlen, den Tresor vor der Aktualisierung der DWH zu sichern. Als Referenz gelten die Standardordner für Tresorordner wie folgt:
+
+* Vault-Ordner (verwendete Vaults):``%SANSCREEN_HOME%\wildfly\standalone\configuration\vault``
+* Vault-Backups: `%SANSCREEN_HOME%\backup\vault`
+
+
+Siehe http://ie-docs.rtp.openeng.netapp.com/oci-73_ram/topic/com.netapp.doc.oci-acg/GUID-E3351676-2088-4767-AAB5-CB1D8476291C.html?resultof=%22%76%61%75%6c%74%22%20["Verwaltung der Sicherheit im Data Warehouse"] Finden Sie weitere Informationen.
+
+====
+
+
+== Schritte
+
+. Melden Sie sich beim DWH-Server mit einem Konto an, das über lokale Windows-Administratorberechtigungen verfügt.
+. Sichern Sie die DWH-DB und Berichte über die DWH-Portalschnittstelle.
+. Sichern Sie die Sicherheitskonfiguration, wenn der Server eine nicht standardmäßige Sicherheitskonfiguration verwendet.
+. Deinstallieren Sie die DWH-Software vom Server.
+. Starten Sie den Server neu, um Komponenten aus dem Speicher zu entfernen.
+. Installieren Sie die neue Version von DWH auf dem Server.
++
+Die Installation dauert etwa 2 Stunden. Es empfiehlt sich, alle Standardeinstellungen ausgewählt zu lassen.
+
+. Stellen Sie die nicht standardmäßige Sicherheitskonfiguration auf dem DWH-Server wieder her.
+. Stellen Sie die DWH-Datenbank auf dem Server wieder her.
+
+
+
+
+== Nachdem Sie fertig sind
+
+Nach dem Upgrade müssen Sie die Data Warehouse-Datenbank wiederherstellen, die so lange oder länger dauern kann wie das Upgrade.
+
+[NOTE]
+====
+Während eines OnCommand Insight-Upgrades ist es nicht ungewöhnlich, dass ein Kunde zu einem anderen Insight-Server wechselt. Wenn Sie Ihren Insight-Server geändert haben, zeigen die vorhandenen Konnektoren nach der Wiederherstellung der Data Warehouse-Datenbank auf die vorherige Server-IP-Adresse oder den Hostnamen. Es empfiehlt sich, den Konnektor zu löschen und einen neuen zu erstellen, um mögliche Fehler zu vermeiden.
+
+====

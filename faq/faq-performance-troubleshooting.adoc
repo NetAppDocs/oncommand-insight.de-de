@@ -1,0 +1,62 @@
+---
+permalink: faq/faq-performance-troubleshooting.html 
+sidebar: sidebar 
+keywords:  
+summary: In diesem FAQ werden häufig gestellte Fragen zur Fehlerbehebung bei OnCommand Insight-Performance beantwortet. 
+---
+= Fehlerbehebung bei der Performance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In diesem FAQ werden häufig gestellte Fragen zur Fehlerbehebung bei OnCommand Insight-Performance beantwortet.
+
+
+
+== Wie kann ich eine Liste aller gierigen Ressourcen in meiner Umgebung erstellen?
+
+Die Korrelationsanalyse von OCI hilft bei der Identifizierung übergriffiger und beeinträchtigter Ressourcen für einen bestimmten Service-Pfad. Die von der Korrelationsfunktion generierte Analyse wird in Echtzeit durchgeführt, während jedes Objekt angezeigt wird. Die Analyse ermöglicht es, Performance-Probleme schneller zu beheben und die Ursache zu identifizieren. Die Untersuchung generierter Verstöße gegen definierte Performance-Richtlinien sind ein Ansatzpunkt für die Erkennung übergriffiger und beeinträchtigter Ressourcen. Die Funktionen zur Erkennung von Anomalien im OCI können auch als aktiverer Ansatz genutzt werden, um die übergriffigen und beeinträchtigten Ressourcen einer Applikationsinfrastruktur zu ermitteln, bevor sie zu Serviceunterbrechungen werden. Sowohl Widgets als auch Dashboards, die die neueste Abfragefunktion verwenden, helfen beim Filtern, Sortieren und Visualisieren von Ressourcen mit mehr als erwarteten IOPS (übergriffige), Auslastung oder Latenz.
+
+
+
+== Kann OCI an einen Ort zur Diagnose von Performance-Problemen helfen?
+
+Ja. Die Performance-Fehlerbehebung in OCI kann auf verschiedene Weise erreicht werden. OCI bietet verschiedene Alarmmethoden. Häufig werden SNMP-, Syslog- und E-Mail-Alarme verwendet. Per E-Mail versandte Warnmeldungen ermöglichen Benutzern das schnelle Klicken auf die betroffenen Ressourcen in OCI. In einem globalen Suchfenster können Administratoren einfach einen Ressourcennamen eingeben, um mit der Analyse der Situation zu beginnen.
+
+Das OCI Dashboard für Verstöße ermöglicht Benutzern eine Priorisierung von Vorgängen basierend auf Anzahl der Ereignisse, Dauer und Tageszeit. Ein Beispiel für verschiedene Alarmtypen sind Latenz, IOPS, Auslastung, Schweregrad, Geschäftsbereich oder sogar zugehörige Applikationen.
+
+Die Korrelationsanalyse von OCI hilft Administratoren, Objekte der betroffenen Ressource zu vergleichen und ihre Auswirkungen auf IOPS, Latenz, Auslastung, CPU- und BB-Gutschriften zu bestimmen.
+
+Die neuesten Fortschritte von OCI bei der Anomalieerkennung und ethernet-Überwachung bieten einen aggressiveren und proaktiven Ansatz zur Erkennung abweichender Ressourcenverhalten, bevor es zu Serviceunterbrechungen oder -Ausfällen kommt.
+
+Die Query-Technologie und Widget Dashboards von OCI ermöglichen das genaue Auffinden von Details in organisierten Ansichten, die auf Problembereiche im Datacenter abzielen.
+
+
+
+== Bietet OCI Unterstützung bei Migrationen von 7-Mode zu cDOT?
+
+Ja, OCI bietet ein umfassendes Verständnis für die vorhandenen Workload-Anforderungen und Validierungen nach der Migration. Die Rolle von OCI bei der Modernisierung heutiger Datacenter ermöglicht Simulationen beim Änderungsmanagement, die Planung der Optimierung vor der Migration und die Festlegung der richtigen Serviceklasse. OCI erfasst und korreliert die Auswirkungen auf das Geschäft in Umgebungen mit mehreren Anbietern mühelos mit nur wenigen Klicks über Tausende NFS-Shares und Fibre Channel-Pfade hinweg. Von der Migration bis hin zur Technologieaktualisierung – OCI bietet den Weg zu zuverlässigen, auf das richtige Sizing ausdimensionierten Migrationen und verhindert ungeplante Serviceunterbrechungen.
+
+
+
+== Wie „`real Time`“ überwacht OCI die Performance?
+
+OCI wird sowohl für das Management von On-Premises- als auch von Hybrid-Cloud-Datacentern als *nahezu in Echtzeit* bezeichnet. Während die Abfrage von Datenquellen für eine häufigere Ausführung konfiguriert werden kann, profitieren die meisten Benutzer nicht von einem erheblichen analytischen Nutzen, wenn ein Intervall für die Leistungserfassung für die meisten Geräte von weniger als 5 Minuten besteht. Eine häufigere Sammlung kann die zu managenden Objekte und die durchgeführten Analysen unnötig belasten. Natürlich kann es Situationen geben, in denen eine granularere Erfassung erforderlich ist. Glücklicherweise bietet OCI vollständige Flexibilität, einschließlich konfigurierbarer Gerätebestandsdaten und Performance-Abfrageintervalle, die an die Anforderungen Ihrer Datacenter-Umgebung angepasst sind.
+
+
+
+== Warum unterscheidet sich mein „Total“ von meinem „Read“ plus „Write“?
+
+In einigen Fällen können Sie feststellen, dass _Total_ für einen Zähler nicht gleich der Summe von _reads_ plus _writes_ für diesen Zähler ist. Es gibt einige Fälle, in denen dies geschehen könnte.
+
+*IOPS*: Zusätzlich zu Lese- und Schreibvorgängen verarbeitet ein Speicher-Array oder ein anderes Asset interne Vorgänge ohne Bezug zum Workload-Datenfluss. Diese werden manchmal als „`sSystem`“, „`metadata`“ oder einfach als „`andere`“ Vorgänge bezeichnet und können internen Prozessen wie Snapshots, Deduplizierung oder Neuzuordnung zugeordnet werden. Um die Anzahl der Systemoperationen für eine bestimmte Ressource zu ermitteln, subtrahieren Sie in diesen Fällen die Summe der IOPS _Read_ und _Write_ von den IOPS _Total_. Die Summe aus Lese- und Schreib-IOPS ergibt sich aus den IOPS, die direkt mit Ihrem Datenfluss verbunden sind.
+
+*Latenz*: Die gesamte Reaktionszeit (Latenz) für einen Vorgang kann manchmal als _weniger als_ die Schreibreaktionszeit gemeldet werden, da die gesamte Reaktionszeit ein zeitgewichteter Durchschnitt ist. I/O-Workloads bestehen oft aus mehr Lese- als Schreiboperationen, wobei Schreibvorgänge in der Regel größere Latenzen beobachten. Wenn ein Workload beispielsweise 10 Lesevorgänge mit einer durchschnittlichen Latenz von 5 ms und 5 Schreibvorgänge mit einer durchschnittlichen Latenz von 10 ms durchführte, wird die gewichtete durchschnittliche Gesamtlatenz als Anzahl der Lesezeiten die durchschnittliche Leselatenz berechnet, Plus die Anzahl der Schreibvorgänge mal die durchschnittliche Schreiblatenz, geteilt durch die Gesamtzahl der I/O-Vorgänge, z. B. (10 * 5 + 5 * 10) / (10 + 5) = 6,33 ms.
+
+
+
+== Warum zeigen OCI und OCUM unterschiedliche Werte für überbelegten Speicherplatz?
+
+Der OnCommand Unified Manager (OCUM) Begriff des „bereitgestellten“ Speicherplatzes kann Autogrow-Limits enthalten, auf die FlexVols (interne OnCommand Insight Volumes) wachsen können. Die OCI „Kapazität“ spiegelt diese Autogrow-Grenzen nicht wider. Daher wird in einer Umgebung mit Autogrow FlexVols die mit OCUM bereitgestellte Gesamtkapazität das OCI Storage-Level über dem Gesamtvolumen mit überprovisionierter Kapazität übersteigen. Das Delta ergibt den Unterschied zwischen der FlexVols Kapazität und ihrer Autogrow Kapazität.

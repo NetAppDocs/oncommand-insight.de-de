@@ -1,0 +1,34 @@
+---
+permalink: dwh/how-data-warehouse-extracts-data.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Der Prozess Extrahieren, Transformieren und Laden \(ETL\) ruft Daten aus mehreren OnCommand Insight-Datenbanken ab, wandelt die Daten um und speichert sie in die Data Marts.' 
+---
+= Wie Data Warehouse Daten extrahiert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der ETL-Prozess (Extrahieren, Transformieren und Laden) ruft Daten aus mehreren OnCommand Insight-Datenbanken ab, wandelt die Daten um und speichert sie in Data Marts.
+
+OnCommand Insight Connectors rufen eine Reihe von Batch-Jobs auf, um Daten aus mehreren OnCommand Insight MySQL-Datenbanken zu extrahieren und die Daten in verschiedenen Data Marts zu veröffentlichen, wie im folgenden Diagramm dargestellt.
+
+image::../media/oci-dwh-diagram-data-marts-gif.gif[Data Marts-Diagramm]
+
+Der ETL-Prozess umfasst folgende Einzelprozesse:
+
+* *Auszug*
++
+Dieser Prozess nimmt Daten aus mehreren OnCommand Insight-Datenbanken, wandelt die Daten um und speichert sie in den Data Mart. Dieser Prozess wird für jede OnCommand Insight Instanz gleichzeitig durchgeführt. Um sicherzustellen, dass die Datenbereinigung und -Deduplizierung durchgeführt wird, ist es nicht möglich, den ETL-Prozess in mehrere geplante ETL-Vorgänge zu teilen.
+
+* * Transform*
++
+Dieser Prozess wendet Regeln oder Funktionen der Geschäftslogik an, um die Daten aus der OnCommand Insight-Datenbank zu extrahieren.
+
+* *Laden*
++
+Bei diesem Prozess werden die transformierten Daten in öffentliche Data Marts geladen.
+
+

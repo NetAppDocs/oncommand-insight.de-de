@@ -1,0 +1,14 @@
+---
+permalink: dwh/troubleshooting-setup-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: Es gibt mehrere häufige Probleme mit Anmerkungen, Builds und Berichten, die Sie während der Einrichtung haben können. Sie können diese Probleme beheben, indem Sie die beschriebenen Schritte ausführen. 
+---
+= Fehlerbehebung bei Setup-Problemen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es gibt mehrere häufige Probleme mit Anmerkungen, Builds und Berichten, die Sie während der Einrichtung haben können. Sie können diese Probleme beheben, indem Sie die beschriebenen Schritte ausführen.

@@ -1,0 +1,68 @@
+---
+permalink: config-admin/security-management.html 
+sidebar: sidebar 
+keywords:  
+summary: In Version 7.3.1 von OnCommand Insight wurden Sicherheitsfunktionen eingeführt, mit denen Insight Umgebungen noch sicherer arbeiten können. Zu den Funktionen gehören Verbesserungen der Verschlüsselung, das Hashing von Passwörtern und die Möglichkeit, interne Benutzer-Passwörter und Schlüsselpaare zu ändern, die Passwörter verschlüsseln und entschlüsseln. Sie können diese Funktionen auf allen Servern in der Insight-Umgebung verwalten. 
+---
+= Insight Sicherheit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In Version 7.3.1 von OnCommand Insight wurden Sicherheitsfunktionen eingeführt, mit denen Insight Umgebungen noch sicherer arbeiten können. Zu den Funktionen gehören Verbesserungen der Verschlüsselung, das Hashing von Passwörtern und die Möglichkeit, interne Benutzer-Passwörter und Schlüsselpaare zu ändern, die Passwörter verschlüsseln und entschlüsseln. Sie können diese Funktionen auf allen Servern in der Insight-Umgebung verwalten.
+
+Die Standardinstallation von Insight beinhaltet eine Sicherheitskonfiguration, bei der alle Standorte in Ihrer Umgebung dieselben Schlüssel und dieselben Standardpasswörter verwenden. Zum Schutz sensibler Daten empfiehlt NetApp, die Standardschlüssel und das Erfassungs-Benutzerpasswort nach einer Installation oder einem Upgrade zu ändern.
+
+Verschlüsselte Passwörter der Datenquelle werden in der Insight Server-Datenbank gespeichert. Der Server verfügt über einen öffentlichen Schlüssel und verschlüsselt Passwörter, wenn ein Benutzer sie auf einer WebUI-Datenquellkonfigurationsseite eingibt. Der Server verfügt nicht über die privaten Schlüssel, die zum Entschlüsseln der in der Server-Datenbank gespeicherten Datenquellkennwörter erforderlich sind. Nur Acquisition Units (LAU, rau) verfügen über den privaten Schlüssel der Datenquelle, der zum Entschlüsseln von Passwörtern für Datenquellen erforderlich ist.
+
+
+
+== Server werden neu keying
+
+Die Verwendung von Standardschlüsseln führt zu einer Sicherheitsanfälligkeit in Ihrer Umgebung. Standardmäßig werden Datenquellkennwörter in der Insight-Datenbank verschlüsselt gespeichert. Sie werden verschlüsselt und verwenden einen Schlüssel, der für alle Insight-Installationen verwendet wird. In einer Standardkonfiguration enthält eine an NetApp gesendete Insight Datenbank Passwörter, die theoretisch von NetApp entschlüsselt werden können.
+
+
+
+== Ändern des Benutzerpassworts für die Erfassung
+
+Durch die Verwendung des standardmäßigen Benutzerpassworts für die Akquisition wird die Sicherheitslücke in Ihrer Umgebung behoben. Alle Akquisitionseinheiten verwenden den Benutzer „`Acquisition`“, um mit dem Server zu kommunizieren. Raus mit Standardpasswörtern kann theoretisch eine Verbindung zu jedem Insight-Server herstellen, wobei Standardpasswörter verwendet werden.
+
+
+
+== Überlegungen zu Upgrades und Installationen
+
+Wenn Ihr Insight-System nicht standardmäßige Sicherheitskonfigurationen enthält (Sie haben ein Rekeying durchgeführt oder Passwörter geändert), müssen Sie Ihre Sicherheitskonfigurationen sichern. Durch die Installation neuer Software oder in einigen Fällen eines Software-Upgrades wird das System auf eine Standardsicherheitskonfiguration zurückgesetzt. Wenn Ihr System auf die Standardkonfiguration zurückgesetzt wird, müssen Sie die nicht voreingestellte Konfiguration wiederherstellen, damit das System ordnungsgemäß funktioniert.
+
+
+
+== Schlüsselmanagement in einer komplexen Service-Provider-Umgebung
+
+Ein Service-Provider kann mehrere OnCommand Insight-Kunden hosten, die Daten erfassen. Die Schlüssel schützen Kundendaten vor unberechtigtem Zugriff durch mehrere Kunden auf dem Insight Server. Die Daten jedes Kunden werden durch spezifische Schlüsselpaare geschützt.
+
+Diese Implementierung von Insight kann wie in der folgenden Abbildung dargestellt konfiguriert werden.
+
+image::../media/serv-provider-keys.gif[serv-Provider-Schlüssel]
+
+Sie müssen in dieser Konfiguration für jeden Kunden individuelle Schlüssel erstellen. Kunde A benötigt identische Schlüssel für beide raus. Kunde B benötigt einen einzigen Schlüsselsatz.
+
+Die Schritte, die Sie Unternehmen würden, um die Verschlüsselungsschlüssel für Kunde A zu ändern:
+
+. Führen Sie eine Remote-Anmeldung beim Server durch, auf dem RAU1 gehostet wird.
+. Starten Sie das Sicherheitsadministrator-Tool.
+. Wählen Sie Verschlüsselungsschlüssel ändern, um die Standardschlüssel zu ersetzen.
+. Wählen Sie Backup, um eine ZIP-Sicherungsdatei der Sicherheitskonfiguration zu erstellen.
+. Führen Sie eine Remote-Anmeldung beim Server durch, auf dem RAU2 gehostet wird.
+. Kopieren Sie die Sicherungszip-Datei der Sicherheitskonfiguration auf RAU2.
+. Starten Sie das Sicherheitsadministrator-Tool.
+. Stellen Sie die Sicherheitssicherung von RAU1 auf dem aktuellen Server wieder her.
+
+
+Die Schritte, die Sie Unternehmen würden, um die Verschlüsselungsschlüssel für Kunde B zu ändern:
+
+. Führen Sie eine Remote-Anmeldung beim Server durch, auf dem RAU3 gehostet wird.
+. Starten Sie das Sicherheitsadministrator-Tool.
+. Wählen Sie Verschlüsselungsschlüssel ändern, um die Standardschlüssel zu ersetzen.
+. Wählen Sie Backup, um eine ZIP-Sicherungsdatei der Sicherheitskonfiguration zu erstellen.
+

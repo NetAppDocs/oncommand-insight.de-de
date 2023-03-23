@@ -1,0 +1,42 @@
+---
+permalink: config-admin/managing-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight überwacht Ihre Umgebung und ermöglicht Ihnen die Untersuchung potenzieller Probleme, bevor eine Krise gemeldet wird. Das Asset Dashboard bietet zusammenfassende Kreisdiagramme, Heatmaps für IOPS und ein interaktives Diagramm der 10 am häufigsten verwendeten Speicherpools. 
+---
+= Managen Von Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight überwacht Ihre Umgebung und ermöglicht Ihnen die Untersuchung potenzieller Probleme, bevor eine Krise gemeldet wird. Das Asset Dashboard bietet zusammenfassende Kreisdiagramme, Heatmaps für IOPS und ein interaktives Diagramm der 10 am häufigsten verwendeten Speicherpools.
+
+
+
+== Schritte
+
+. Öffnen Sie das Insight**Assets Dashboard**, und bewegen Sie den Cursor über die Kreisdiagramme, um die Vermögensverteilung in diesen drei Diagrammen zu untersuchen:
++
+** Die Kapazität nach Anbieter gibt die gesamte Storage-Bruttokapazität für die einzelnen Anbieter an.
+** Die Kapazität nach Tier gibt die nutzbare Gesamtkapazität für die einzelnen Storage-Tiers an.
+** Das Kreisdiagramm Switch Ports zeigt die Hersteller der Ports und den Prozentsatz der verwendeten Ports.
+
+
+. Unter *Fakten über Ihre Umgebung* finden Sie Informationen über die genutzte Kapazität Ihrer Umgebung, die Effizienz der Kapazität, die verbrauchten FC-Ressourcen und Statistiken über virtuelle Infrastrukturen.
+. Bewegen Sie den Cursor über eine Speicherpoolleiste im Diagramm *Top 10 Used Pools*, um die genutzte und ungenutzte Kapazität des Speicherpools anzuzeigen.
+. Klicken Sie in der Heatmap *Storage IOP* auf einen beliebigen Anlagennamen, der im Großtext angezeigt wird (was darauf hinweist, dass das Asset Probleme aufweist), um eine Seite anzuzeigen, die den aktuellen Status dieses Assets zusammenfasst.
+. Klicken Sie in der unteren rechten Ecke des *Assets Dashboard* auf einen beliebigen Asset-Namen, der im Großtext angezeigt wird (was darauf hinweist, dass das Asset Probleme hat), um eine Seite anzuzeigen, die den aktuellen Status des Assets zusammenfasst.
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Beachten Sie alle Bereiche mit durchgehenden roten Kreisen.
++
+In der Benutzeroberfläche von OnCommand Insightweb sind potenzielle Probleme mit einem durchgehenden roten Kreis markiert.
+
+. Klicken Sie auf *Datenquellen*, um eine Liste aller überwachten Datenquellen zu prüfen.
++
+Untersuchen Sie eine Datenquelle mit einer Spalte *Status*, die eine Nachricht mit einem durchgehenden roten Kreis und mit einem *Impact* als hoch oder Mittel aufgelistet enthält. Diese befinden sich oben auf dem Tisch. Die Probleme mit diesen Datenquellen wirken sich auf einen Großteil Ihres Netzwerks aus, den Sie beheben müssen.
+
+. Klicken Sie auf *Acquisition Units*, um den Status für jede IP-Adresse zu notieren, die Insight ausführt, und ggf. eine Acquisition Unit neu zu starten
+. Klicken Sie auf *Health*, um die Überwachung der Insight-Server auf hoher Ebene anzuzeigen.
+

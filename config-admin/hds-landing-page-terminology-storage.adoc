@@ -1,0 +1,28 @@
+---
+permalink: config-admin/hds-landing-page-terminology-storage.html 
+sidebar: sidebar 
+keywords:  
+summary: Begriffe, die auf Objekte oder Referenzen angewendet werden, die auf den Landing Pages für HDS-Storage-Assets zu finden sind. 
+---
+= HDS-Speicher
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Begriffe, die auf Objekte oder Referenzen angewendet werden, die auf den Landing Pages für HDS-Storage-Assets zu finden sind.
+
+
+
+== HDS-Speicherterminologie
+
+Die folgenden Begriffe beziehen sich auf Objekte oder Referenzen, die auf HDS Storage Asset Landing Pages zu finden sind. Viele dieser Bedingungen gelten auch für andere Datensammler.
+
+* Name -- kommt direkt vom HDS HiCommand Device Manager-Attribut „`Name`“ über den XML-API-Aufruf von GetStorageArray
+* Modell – wird direkt vom HDS HiCommand Device Manager-Attribut „`arrayType`“ über den XML-API-Aufruf von GetStorageArray geliefert
+* Anbieter -- HDS
+* Familie - kommt direkt vom HDS HiCommand Device Manager '`arrayFamily`' Attribut über den GetStorageArray XML API-Aufruf
+* IP – hierbei handelt es sich um die Management-IP-Adresse des Arrays, keine vollständige Liste aller IP-Adressen auf dem Array
+* RAW Capacity – ein base2-Wert, der die Summe der Gesamtkapazität aller Festplatten in diesem System darstellt, unabhängig von der Festplattenrolle.
+

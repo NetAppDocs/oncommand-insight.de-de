@@ -1,0 +1,25 @@
+---
+permalink: config-admin/manually-backing-up-the-oci-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie wöchentliche Backups für die OnCommand Insight-Datenbank aktiviert haben, erstellen Sie automatisch Kopien, mit denen Sie die Datenbank bei Bedarf wiederherstellen können. Wenn Sie vor der Wiederherstellung ein Backup erstellen oder an den technischen Support von NetApp senden müssen, um Unterstützung zu erhalten, können Sie eine Backup-.zip-Datei manuell erstellen. 
+---
+= Manuelles Backup der OnCommand Insight-Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie wöchentliche Backups für die OnCommand Insight-Datenbank aktiviert haben, erstellen Sie automatisch Kopien, mit denen Sie die Datenbank bei Bedarf wiederherstellen können. Wenn Sie vor der Wiederherstellung ein Backup erstellen oder an den technischen Support von NetApp senden müssen, um Hilfe zu erhalten, können Sie ein Backup erstellen `.zip` Datei manuell erstellen.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Fehlerbehebung*.
+. Klicken Sie im Abschnitt Daten senden/sammeln auf *Backup*.
+. Klicken Sie Auf *Datei Speichern*.
+. Klicken Sie auf *OK*.
+

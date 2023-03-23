@@ -1,0 +1,43 @@
+---
+permalink: dwh/assigning-users-to-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie müssen eine Reihe von Schritten ausführen, um Benutzer Business Entities zuzuweisen. Data Warehouse unterstützt mehrere Mandanten \(oft verkürzt auf „Mandantenfähigkeit“ oder „Mandantenfähigkeit“\) in der Berichterstellung, da Sie Benutzer einer oder mehreren Geschäftseinheiten zuordnen können. So können Administratoren Daten oder Berichte je nach Benutzerattributen oder Benutzerzugehörigkeit trennen.' 
+---
+= Zuweisen von Benutzern zu Geschäftseinheiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen eine Reihe von Schritten ausführen, um Benutzer Business Entities zuzuweisen. Data Warehouse unterstützt in der Berichterstellung mehrere Mandanten (oft verkürzt auf „`mmulti-Tenancy`“ oder „`multimandancy`“), da Sie Benutzer einer oder mehreren Geschäftseinheiten zuordnen können. So können Administratoren Daten oder Berichte je nach Benutzerattributen oder Benutzerzugehörigkeit trennen.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal als Administrator unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie in der Symbolleiste Data Warehouse auf image:../media/oci-reporting-portal-icon.gif[""] Um das Reporting Portal zu öffnen.
+. Geben Sie Ihren Benutzernamen und Ihr Passwort ein und klicken Sie auf *Login*.
+. Wählen Sie im Menü Start die Option *IBM Cognos Administration*.
+. Klicken Sie auf die Registerkarte *Sicherheit*:
+. Wählen Sie im Verzeichnis *Cognos* aus.
+. Erstellen Sie einen neuen Unterordner im Cognos-Ordner mit dem Namen „`BES`“ für Geschäftseinheiten.
+. Öffnen Sie den BES-Ordner.
+. Klicken Sie auf das Symbol *Neue Gruppe*, um Gruppen hinzuzufügen, die unterschiedlichen Berechtigungsstufen entsprechen.
++
+Diese Berechtigungsstufen können entweder den vollständigen Namen der Geschäftseinheit (z. B. NetApp.N/A) oder ein Präfix (z. B. NetApp.N/A. Finance) sein. In beiden Formaten erhalten Sie den Zugriff auf alle Projekte innerhalb der Geschäftseinheit (NetApp.N/A.Finance).
+
++
+Der Assistent Neue Gruppe wird angezeigt.
+
+. Füllen Sie die Seiten des Assistenten aus.
+. Wählen Sie eine Geschäftseinheit aus und klicken Sie auf *Mehr*.
+. Klicken Sie auf *set members*.
+. Klicken Sie Auf *Hinzufügen*.
+. Wählen Sie das SANscreen-Verzeichnis aus.
+. Wählen Sie aus der Liste der Benutzer jeden Benutzer aus, der in die Business-Einheit aufgenommen werden soll, und fügen Sie den Benutzer dem Feld Ausgewählte Einträge hinzu.
+. Klicken Sie auf *OK*.
+. Wiederholen Sie den Vorgang, bei dem jeder der Business-Entity-Gruppen Mitglieder hinzugefügt werden.
+

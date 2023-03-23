@@ -1,0 +1,14 @@
+---
+permalink: config-admin/related-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Falls zutreffend, wird auf einer Seite „Anlagen“ ein Abschnitt „Verwandte Anlagen“ angezeigt. Beispielsweise kann eine Seite mit Volume-Assets Informationen zu Assets wie Speicherpools, verbundenen Switch-Ports und Rechenressourcen anzeigen. Jeder Abschnitt enthält eine Tabelle, in der alle zugehörigen Assets in dieser Kategorie aufgelistet sind, mit Links zu den jeweiligen Bestandsseiten und mehreren Leistungsstatistiken, die sich auf das Asset beziehen. 
+---
+= Verwandte Assets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Falls zutreffend, wird auf einer Seite „Anlagen“ ein Abschnitt „Verwandte Anlagen“ angezeigt. Beispielsweise kann eine Seite mit Volume-Assets Informationen zu Assets wie Speicherpools, verbundenen Switch-Ports und Rechenressourcen anzeigen. Jeder Abschnitt enthält eine Tabelle, in der alle zugehörigen Assets in dieser Kategorie aufgelistet sind, mit Links zu den jeweiligen Bestandsseiten und mehreren Leistungsstatistiken, die sich auf das Asset beziehen.

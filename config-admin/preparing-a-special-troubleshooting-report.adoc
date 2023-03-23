@@ -1,0 +1,16 @@
+---
+permalink: config-admin/preparing-a-special-troubleshooting-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight sendet automatisch über das von Ihnen nach der Installation der Software festgelegte ASUP System Informationen an den NetApp Kunden-Support. Möglicherweise möchten Sie jedoch einen Fehlerbehebungsbericht erstellen und beim Support-Team einen Fall für ein bestimmtes Problem eröffnen. 
+---
+= Vorbereiten eines speziellen Fehlersuchberichts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight sendet automatisch über das von Ihnen nach der Installation der Software festgelegte ASUP System Informationen an den NetApp Kunden-Support. Möglicherweise möchten Sie jedoch einen Fehlerbehebungsbericht erstellen und beim Support-Team einen Fall für ein bestimmtes Problem eröffnen.
+
+In Insight können Sie mit den Tools ein manuelles Insight Backup durchführen, die Protokolle bündeln und diese Informationen an den NetApp Customer Support senden.

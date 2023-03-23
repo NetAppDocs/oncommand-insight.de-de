@@ -1,0 +1,118 @@
+---
+permalink: howto/configuring-applications-for-your-company.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie sich mit den in der Umgebung Ihres Unternehmens verwendeten Applikationen auskennen, behalten Sie die Übersicht über die Asset-Nutzung und erstellen Kostenberichte. Hier konfigurieren wir die Anwendungen Ihres Unternehmens und ordnen sie den entsprechenden Assets zu. 
+---
+= Konfigurieren von Anwendungen für Ihr Unternehmen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie sich mit den in Ihrer Unternehmensumgebung verwendeten Applikationen auskennen, behalten Sie die Übersicht über die Asset-Nutzung und erstellen Kostenberichte. Hier konfigurieren wir die Anwendungen Ihres Unternehmens und ordnen sie den entsprechenden Assets zu.
+
+
+
+== Über diese Aufgabe
+
+Im Abschnitt _Konfigurieren von Geschäftseinheiten für Ihr Unternehmen_ haben wir einige Geschäftseinheiten erstellt und empfohlen, alle Anwendungen aufzulisten, die Sie mit jeder Geschäftseinheit verknüpfen. Mit OnCommand Insight können wir Daten, die mit diesen Applikationen verbunden sind, beispielsweise zur Nutzung oder Kostenberichterstellung nachverfolgen.
+
+Bevor Sie Daten zu den in Ihrer Umgebung ausgeführten Applikationen nachverfolgen können, müssen Sie zunächst diese Applikationen definieren und sie den entsprechenden Assets zuordnen. Applikationen können folgenden Assets zugewiesen werden: Hosts, virtuelle Maschinen, Volumes, interne Volumes, qtrees, Freigaben und Hypervisoren:
+
+In dieser Anleitung möchten wir die Verwendung virtueller Maschinen nachverfolgen, die das Marketingteam für seine Exchange-E-Mail verwendet. Sie werden sich an die folgende Tabelle erinnern, die wir bei der Definition unserer Geschäftseinheiten erstellt haben. Fügen wir diesem Arbeitsblatt eine Spalte mit den Anwendungen hinzu, die von den einzelnen Unternehmenseinheiten verwendet werden. (Diese Tabelle ist nur ein Beispiel für ein Arbeitsblatt. In der Tabelle Business Entities in Insight wird keine Spalte „`Applications`“ angezeigt.)
+
+|===
+
+
+| Mandant | Geschäftsbereich | Geschäftsbereich | Projekt | Applikationen Unterstützt 
+
+
+ a| 
+NetApp
+ a| 
+Datenspeicher
+ a| 
+Legal
+ a| 
+Patente
+ a| 
+Oracle Identity Manager, Oracle On Demand, PatentWiz
+
+
+
+ a| 
+NetApp
+ a| 
+Datenspeicher
+ a| 
+Marketing
+ a| 
+Verkaufsveranstaltungen
+ a| 
+Exchange, gemeinsam genutzte Oracle-Datenbank, BlastOff Event Planner
+
+
+
+ a| 
+K. A.
+ a| 
+K. A.
+ a| 
+Sicherheit
+ a| 
+K. A.
+ a| 
+K. A.
+
+
+
+ a| 
+...
+ a| 
+ a| 
+ a| 
+ a| 
+
+|===
+* Erstellen von Anwendungen in Insight:*
+
+
+
+== Schritte
+
+. Melden Sie sich bei Insight als Benutzer mit Administratorrechten an.
+. Wählen Sie *Verwalten* > *Anwendungen*
+. Klicken Sie auf die Schaltfläche *+Add*
+. Geben Sie den Namen der Anwendung ein (geben Sie für unser Beispiel „`Exchange`“ ein)
+. Wählen Sie eine Priorität für die Anwendung aus
+. Wenn Sie die Anwendung einer Business Entity zuordnen möchten, wählen Sie eine aus der Dropdown-Liste *Business Entity* aus. Andernfalls können Sie diese Option als „`Keine`“ belassen.
+. Wenn Sie sicherstellen möchten, dass jeder Host Zugriff auf dieselben Volumes in einem Cluster hat, stellen Sie sicher, dass das Kontrollkästchen *Validieren der Volume-Freigabe* aktiviert ist. Beispielsweise müssen Hosts in Hochverfügbarkeits-Clustern oft für Failover auf dieselben Volumes maskiert werden, allerdings müssen Hosts in verwandten Applikationen in der Regel nicht auf dieselben physischen Volumes zugreifen. Außerdem müssen Sie gemäß den Richtlinien möglicherweise aus Sicherheitsgründen nicht in Verbindung stehende Anwendungen nicht auf dieselben physischen Volumes zugreifen können. Wenn Sie keine Volume-Freigabe verwenden, deaktivieren Sie das Kontrollkästchen *Volume-Freigabe validieren*. Dies erfordert die Assure-Lizenz.
+. Klicken Sie auf Speichern .
+. Wiederholen Sie diesen Vorgang für alle anderen Anwendungen in Ihrer Umgebung.
+
+
+
+
+== Nachdem Sie fertig sind
+
+Wir sehen, dass das Marketingteam die Exchange-Anwendung verwendet. Wir möchten die Auslastung der Virtual Machines von Exchange überprüfen, um vorhersagen zu können, wann mehr Storage benötigt wird. Verbinden wir die Exchange-Anwendung mit allen VMs von Marketing. Der einfachste Weg, dies zu erreichen, ist durch eine Abfrage.
+
+Wenn Sie diese Schritte befolgen, können Sie jede Ihrer Anwendungen mit den entsprechenden Assets verknüpfen.
+
+*Anwendungen mit Assets verknüpfen:*
+
+Nachdem Sie nun Ihre Applikationen erstellt haben (und diese je nach Bedarf an Geschäftseinheiten gebunden), können wir diese Applikationen nun Assets in Ihrer Umgebung zuordnen. In diesem Beispiel verknüpfen wir die Exchange-Anwendung mit einer Reihe von virtuellen Maschinen in Ihrem Unternehmen. Der einfachste Weg, dies zu tun ist, was eine Abfrage.
+
+. Wählen Sie *Abfragen* > *+Neue Abfrage*.
+. Wählen Sie in der Dropdown-Liste *Select Resource Type* die Option _Virtual Machine_
+. Wir gehen davon aus, dass das Marketingteam ihre Assets mit der Zeichenfolge „`_mktg_`“ benennt. Geben Sie im Feld Namensfilter „`_mktg_ `“ (ohne Anführungszeichen) ein, und klicken Sie auf die Schaltfläche Übernehmen (Häkchen).
+. Es wird eine Liste aller VMs mit der Zeichenfolge „`_mktg_ `“ angezeigt.
+. Wenn gewünscht, klicken Sie auf das Dropdown-Menü *Mehr* und fügen Sie weitere Filter hinzu.
+. Aktivieren Sie die für Exchange verwendeten VMs, indem Sie in das Kontrollkästchen neben jedem gewünschten VM-Namen klicken, oder aktivieren Sie alle VMs, indem Sie oben in der Spalte auf das Kontrollkästchen klicken.
+. Wenn die gewünschten VMs ausgewählt sind, klicken Sie auf die Schaltfläche *actions* und wählen *Add Application*.
+. Klicken Sie im Dialogfeld Anwendung zuweisen auf das Dropdown-Menü *Anwendung* und wählen Sie „`Exchange`“ aus.
+. Klicken Sie Auf *Speichern*.
+. Wiederholen Sie diesen Vorgang, um die Exchange Applikation mit anderen Assets (Hosts, Volumes usw.) zu verknüpfen.
+

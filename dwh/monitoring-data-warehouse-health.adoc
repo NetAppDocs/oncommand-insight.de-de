@@ -1,0 +1,35 @@
+---
+permalink: dwh/monitoring-data-warehouse-health.html 
+sidebar: sidebar 
+keywords: suppress 
+summary: 'Das Data Warehouse \(DWH\) enthält eine Systemzustandsüberwachung, die Informationen über den Status der DWH anzeigt. Alarmmeldungen werden auf den Seiten Connectors und Jobs des DWH angezeigt und an den verbundenen Insight-Server gesendet, wo sie auf der Seite Admin \> Health angezeigt werden.' 
+---
+= Überwachung des Zustands von Data Warehouses
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Data Warehouse (DWH) umfasst eine Systemzustandsüberwachung, die Informationen zum Status der DWH anzeigt. Alarmmeldungen werden auf den Seiten *Connectors* und *Jobs* des DWH angezeigt und an den angeschlossenen Insight-Server gesendet, wo sie auf der Seite *Admin* > *Health* angezeigt werden.
+
+Das DWH sammelt alle zehn Minuten Messwerte und zeigt unter folgenden Bedingungen einen Alarm an:
+
+* Die Verbindung zum Insight Server ist unterbrochen
+* Festplattenauslastung liegt über 90 %
+* Der Dienst Reporting (Cognos) ist ausgefallen
+* Eine Abfrage hält eine Sperre auf einem beliebigen Tisch für eine längere Zeit
+* Ein Wartungsauftrag ist deaktiviert
+* Die automatische Sicherung ist deaktiviert
+* Sicherheitsrisiko: Standardmäßige Verschlüsselungsschlüssel erkannt
+
+
+Warnungen der Systemzustandsüberwachung im Data Warehouse können bis zu 30 Tage lang unterdrückt werden.
+
+Wenn die E-Mail-Benachrichtigung aktiviert ist, werden diese Ereignisse auch per E-Mail gemeldet. Beachten Sie, dass die E-Mail keine Anhänge enthält.
+
+Diese Ereignisse werden im protokolliert `dwh_troubleshoot.log` Datei an folgenden Speicherorten:
+
+* Windows: `<install dir>\SANscreen\Wildfly\Standalone\Logs`
+* Linux `/var/log/netapp/oci/wildfly/`
+

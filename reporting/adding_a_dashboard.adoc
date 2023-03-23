@@ -1,0 +1,24 @@
+---
+permalink: reporting/adding_a_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können eine Dashboard-Gruppe von Berichten in einer Registerkarte anzeigen, um den Zugriff zu erleichtern. Sie können die Registerkarte in den Benutzereinstellungen hinzufügen. 
+---
+= Hinzufügen eines Dashboards in den Benutzereinstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Dashboard-Gruppe von Berichten in einer Registerkarte anzeigen, um den Zugriff zu erleichtern. Sie können die Registerkarte in den Benutzereinstellungen hinzufügen.
+
+.Schritte
+. Öffnen Sie das OnCommand Insight-Berichtsportal.
+. Klicken Sie oben rechts auf das Personensymbol, um ein Dropdown-Menü anzuzeigen.
+. Wählen Sie Meine Einstellungen.
+. Klicken Sie in der Ansicht Einstellungen festlegen auf die Registerkarte Portalregisterkarten.
+. Klicken Sie auf der Registerkarte „Portalregisterkarten“ auf den Link „Hinzufügen“.
+. Suchen Sie im Ordner Öffentliche Ordner und Dashboard das gewünschte Dashboard als Registerkarte, und überprüfen Sie es.
+. Klicken Sie auf den Pfeil, um ihn in das Feld Ausgewählte Einträge zu verschieben, und klicken Sie auf OK.
+

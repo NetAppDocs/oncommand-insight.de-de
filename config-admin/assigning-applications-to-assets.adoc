@@ -1,0 +1,40 @@
+---
+permalink: config-admin/assigning-applications-to-assets.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: Nachdem Sie Applikationen mit oder ohne Geschäftseinheiten definiert haben, können Sie die Applikationen mit Assets verknüpfen. 
+---
+= Zuweisen von Anwendungen zu Assets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie Applikationen mit oder ohne Geschäftseinheiten definiert haben, können Sie die Applikationen mit Assets verknüpfen.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Suchen Sie das Asset (Host, virtuelle Maschine, Volume oder internes Volume), auf das Sie die Anwendung anwenden möchten, indem Sie einen der folgenden Schritte ausführen:
++
+** Klicken Sie auf *Dashboard*, wählen Sie *Assets Dashboard* aus und klicken Sie auf das Asset.
+** Klicken Sie Auf image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] Geben Sie in der Symbolleiste, um das Feld *Assets suchen* anzuzeigen, den Namen des Assets ein, und wählen Sie dann das Asset aus der Liste aus.
+
+
+. Positionieren Sie im Abschnitt *Benutzerdaten* der Asset-Seite den Cursor über den Namen der Applikation, die dem Asset derzeit zugewiesen ist (wenn keine Anwendung zugewiesen ist, wird stattdessen *Keine* angezeigt), und klicken Sie dann auf image:../media/pencil-icon-landing-page-be.gif[""] (Anwendung bearbeiten).
++
+Die Liste der verfügbaren Anwendungen für die ausgewählte Anlage wird angezeigt. Den Anwendungen, die derzeit mit dem Asset verknüpft sind, wird ein Häkchen vorangestellt.
+
+. Sie können in das Suchfeld eingeben, um die Anwendungsnamen zu filtern, oder Sie können in der Liste nach unten blättern.
+. Wählen Sie die Anwendungen aus, die Sie dem Asset zuordnen möchten.
++
+Sie können dem Host, der virtuellen Maschine und dem internen Volume mehrere Anwendungen zuweisen. Sie können dem Volume jedoch nur eine Anwendung zuweisen.
+
+. Klicken Sie Auf image:../media/check-box-ok.gif[""] So weisen Sie der Anlage die ausgewählte Applikation oder die ausgewählten Anwendungen zu.
++
+Die Applikationsnamen werden im Abschnitt Benutzerdaten angezeigt. Wenn die Applikation mit einer Geschäftseinheit verknüpft ist, wird auch der Name der Geschäftseinheit in diesem Abschnitt angezeigt.
+
+

@@ -1,0 +1,51 @@
+---
+permalink: howto/creating-performance-policies-for-datastores.html 
+sidebar: sidebar 
+keywords: performance policy,Datastore 
+summary: Sie können Performance-Richtlinien mit Schwellenwerten für die Metriken der Datenspeicher erstellen, die zu den von Ihnen überwachten Storage-Pools korrelieren. Standardmäßig gelten Performance-Richtlinien für alle Geräte des angegebenen Typs, wenn Sie sie erstellen. Sie können eine Annotation erstellen, um nur ein bestimmtes Gerät oder eine Gruppe von Geräten in die Performance-Richtlinie aufzunehmen. 
+---
+= Erstellen von Performance-Richtlinien für Datastores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Performance-Richtlinien mit Schwellenwerten für die Metriken der Datenspeicher erstellen, die zu den von Ihnen überwachten Storage-Pools korrelieren. Standardmäßig gelten Performance-Richtlinien für alle Geräte des angegebenen Typs, wenn Sie sie erstellen. Sie können eine Annotation erstellen, um nur ein bestimmtes Gerät oder eine Gruppe von Geräten in die Performance-Richtlinie aufzunehmen.
+
+
+
+== Bevor Sie beginnen
+
+Wenn Sie eine Annotation in einer Performance-Richtlinie verwenden, muss die Annotation vorhanden sein, bevor die Richtlinie erstellt wird.
+
+
+
+== Über diese Aufgabe
+
+Sie erstellen eine Performance-Richtlinie, die eine Benachrichtigung bereitstellt, wenn ein oder mehrere von Ihnen überwachten Datenspeicher einen festgelegten Schwellenwert überschreitet. Möglicherweise enthält Ihr System bereits eine globale Richtlinie, die Ihren Anforderungen entspricht. Eine Richtlinie mit Annotationen kann auch funktionieren, wenn Sie Ihre Datastores mit Anmerkungen versehen.
+
+
+
+== Schritte
+
+. Wählen Sie in der Insight-Symbolleiste *Verwalten* > *Performance Policies* aus
++
+Die Seite Performance-Richtlinien wird angezeigt. Prüfen Sie alle vorhandenen Performance-Richtlinien, um vorhandene Richtlinien zu ermitteln, die die Metriken für Schwellenwerte berücksichtigen, die Sie überwachen möchten.
+
+. Klicken Sie auf *+Hinzufügen*, um eine neue Richtlinie hinzuzufügen
+. „`Richtlinienname`“ hinzufügen
++
+Sie müssen einen Namen verwenden, der sich von allen anderen Richtliniennamen für das Objekt unterscheidet. Sie können beispielsweise nicht zwei Richtlinien mit dem Namen „Latenz“ für ein internes Volume festlegen. Sie können jedoch eine „Latenzrichtlinie“ für ein internes Volume und eine weitere „Latenzrichtlinie“ für einen Datenspeicher festlegen. Es empfiehlt sich, immer einen eindeutigen Namen für eine Richtlinie zu verwenden, unabhängig vom Objekttyp.
+
+. Wählen Sie als Objekttyp „Datastore“ aus
+. Klicken Sie Auf „`First Vorkommen`“.
++
+Die Option „Erstes Auftreten“ löst eine Warnung aus, wenn ein Schwellenwert bei der ersten Datenprobe überschritten wird. Alle anderen Optionen lösen eine Warnung aus, wenn der Schwellenwert einmal überschritten wird und mindestens die angegebene Zeit lang kontinuierlich überschritten wird.
+
+. Klicken Sie Auf „`Warnung`“.
+. Wählen Sie unter „`Warnung erstellen`“ *Kapazitätsverhältnis - Übercommit* aus und setzen Sie den Wert auf *> 150*
++
+Möglicherweise möchten Sie zusätzliche Warnmeldungen zur Kapazität erstellen, z. B. **Kapazität gesamt**und *genutzte Kapazität*.
+
+

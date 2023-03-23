@@ -1,0 +1,29 @@
+---
+permalink: config-admin/deleting-a-data-source-from-the-monitoring-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie eine Datenquelle aus Ihrer Umgebung entfernt haben, müssen Sie sie auch aus der OnCommand Insight Monitoring-Umgebung löschen. 
+---
+= Löschen einer Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie eine Datenquelle aus Ihrer Umgebung entfernt haben, müssen Sie sie auch aus der OnCommand Insight Monitoring-Umgebung löschen.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
++
+Die Liste Datenquellen wird geöffnet.
+
+. Wählen Sie die Datenquelle aus, die Sie löschen möchten.
+. Klicken Sie auf den Namen der verknüpften Datenquelle.
+. Überprüfen Sie die Informationen für die ausgewählte Datenquelle auf der Übersichtsseite, um sicherzustellen, dass sie die zu löschende Datenquelle ist.
+. Klicken Sie Auf *Löschen*.
+. Klicken Sie auf *OK*, um den Vorgang zu bestätigen.
+

@@ -1,0 +1,64 @@
+---
+permalink: howto/opening-the-violations-dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Insight aufgrund der in den Performance-Richtlinien festgelegten Schwellenwerte Verstöße generiert, können Sie diese über das Dashboard für Verstöße anzeigen. Das Dashboard listet alle Verstöße auf, die in Ihrem Netzwerk auftreten, und ermöglicht es Ihnen, Probleme zu lokalisieren und zu beheben. 
+---
+= Überwachung der Verstöße in Ihrem Netzwerk
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Insight aufgrund der in den Performance-Richtlinien festgelegten Schwellenwerte Verstöße generiert, können Sie diese über das Dashboard für Verstöße anzeigen. Das Dashboard listet alle Verstöße auf, die in Ihrem Netzwerk auftreten, und ermöglicht es Ihnen, Probleme zu lokalisieren und zu beheben.
+
+
+
+== Schritte
+
+. Öffnen Sie OnCommand Insight in Ihrem Browser.
+. Klicken Sie in der Insight-Symbolleiste auf *Dashboards* und wählen Sie *Dashboard für Verstöße*.
++
+Das Dashboard „Verstöße“ wird angezeigt.
+
+. Sie können das Kreisdiagramm *Verstöße nach Richtlinien* auf folgende Weise verwenden:
++
+** Sie können den Cursor über einen beliebigen Diagrammabschnitt bewegen, um den Prozentsatz der Gesamtverletzungen anzuzeigen, die für eine bestimmte Richtlinie oder Metrik aufgetreten sind.
+** Sie können auf eine Schicht eines Diagramms klicken, um es „`vergrößern`“ zu öffnen. Dadurch können Sie diese Schicht hervorheben und genauer untersuchen, indem Sie sie vom Rest des Diagramms entfernen.
+** Sie können auf klicken image:../media/oci-widget-open-full-screen.gif[""] Symbol in der oberen rechten Ecke, um das Kreisdiagramm im Vollbildmodus anzuzeigen, und klicken Sie auf image:../media/oci-restore-size-icon.gif[""] Erneut, um das Kreisdiagramm zu minimieren. Ein Kreisdiagramm kann maximal fünf Schichten enthalten. Wenn Sie also sechs Richtlinien haben, die Verstöße erzeugen, kombiniert Insight die fünfte und sechste Schicht in einem „`others`“-Slice. Insight weist der ersten Schicht die meisten Verstöße zu, der zweiten die zweithäufigsten Verstöße usw.
+
+
+. Sie können das Diagramm *Historie der Verstöße* auf folgende Weise verwenden:
++
+** Sie können den Cursor über das Diagramm bewegen, um die Gesamtzahl der zu einem bestimmten Zeitpunkt aufgetretenen Verstöße und die Anzahl der aufgetretenen Verstöße für jede angegebene Metrik anzuzeigen.
+** Sie können auf eine Legende klicken, um die mit der Legende verknüpften Daten aus dem Diagramm zu entfernen.
++
+Klicken Sie auf die Legende, um die Daten erneut anzuzeigen.
+
+** Sie können auf klicken image:../media/oci-widget-open-full-screen.gif[""] Symbol in der oberen rechten Ecke, um die Karte im Vollbildmodus anzuzeigen, und klicken Sie auf image:../media/oci-restore-size-icon.gif[""] Erneut, um das Kreisdiagramm zu minimieren.
+
+
+. Sie können die *Tabelle der Verstöße* auf folgende Weise verwenden:
++
+** Sie können auf klicken image:../media/oci-widget-open-full-screen.gif[""] Symbol in der oberen rechten Ecke, um die Tabelle im Vollbildmodus anzuzeigen, und klicken Sie auf image:../media/oci-restore-size-icon.gif[""] Erneut, um das Kreisdiagramm zu minimieren.
++
+Wenn Ihre Fenstergröße zu klein ist, werden in der Tabelle „Verstöße“ nur drei Spalten angezeigt, wenn Sie jedoch auf klicken image:../media/oci-widget-open-full-screen.gif[""], Zusätzliche Spalten (bis zu sieben) werden angezeigt.
+
+** Sie können Verstöße für einen bestimmten Zeitraum anzeigen (*1h*, *3h*, *24h*, *3d*, *7d*, Und *30d*), wobei Insight eine maximale Anzahl von 1000 Verstößen für den ausgewählten Zeitraum anzeigt.
+** Sie können das Feld *Filter* verwenden, um nur die gewünschten Verstöße anzuzeigen.
+** Sie können die Sortierreihenfolge der Spalten in einer Tabelle entweder aufsteigend (Aufwärtspfeil) oder absteigend (Abwärtspfeil) ändern, indem Sie auf den Pfeil in der Spaltenüberschrift klicken. Um zur Standardsortierreihenfolge zurückzukehren, klicken Sie auf eine beliebige andere Spaltenüberschrift.
++
+Standardmäßig werden die Verstöße in absteigender Reihenfolge in der Tabelle angezeigt.
+
+** Sie können in der Spalte „ID“ auf eine Verletzung klicken, um die Seite „Anlage“ für die Dauer der Verletzung anzuzeigen.
+** Sie können in der Spalte Beschreibung auf die Ressourcenverknüpfungen (z. B. Speicherpool und Speichervolume) klicken, um die mit diesen Ressourcen verknüpften Asset-Seiten anzuzeigen.
+** Sie können auf den Link Leistungsrichtlinie in der Spalte Richtlinie klicken, um das Dialogfeld Richtlinie bearbeiten anzuzeigen.
++
+Sie können die Schwellenwerte für eine Richtlinie anpassen, wenn Sie der Ansicht sind, dass sie zu wenige oder zu viele Verstöße verursacht.
+
+** Sie können auf eine Seitenzahl klicken, um Daten nach Seite zu durchsuchen, wenn mehr Daten als auf eine einzelne Seite passen.
+** Klicken Sie auf image:../media/oci-delete-policy-threshold-icon.gif[""] Um den Verstoß zu verwerfen.
+
+
+

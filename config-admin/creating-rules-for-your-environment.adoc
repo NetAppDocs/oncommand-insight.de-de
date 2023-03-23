@@ -1,0 +1,59 @@
+---
+permalink: config-admin/creating-rules-for-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Die Verwendung von Regeln zur Identifizierung von Geräten in Ihrer Umgebung ist in der Regel ein iterativer Prozess, der eine gründliche Analyse Ihrer Umgebung und die Erstellung mehrerer Regeln erfordert, um so viele Geräte wie möglich zu identifizieren. Im besten Fall sollten Sie sich das Ziel setzen, 100 % der Geräte in Ihrer Umgebung zu ermitteln.' 
+---
+= Planen von Regeln für die Geräteauflösung für Ihre Umgebung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Verwendung von Regeln zur Identifizierung von Geräten in Ihrer Umgebung ist in der Regel ein iterativer Prozess, der eine gründliche Analyse Ihrer Umgebung und die Erstellung mehrerer Regeln erfordert, um so viele Geräte wie möglich zu identifizieren. Im besten Fall sollten Sie sich das Ziel setzen, 100 % der Geräte in Ihrer Umgebung zu ermitteln.
+
+Die effizienteste Reihenfolge für Regeln besteht darin, die restriktivsten Regeln an die erste Stelle zu setzen, was dazu führt, dass die meisten Einträge nicht mit Mustern übereinstimmen, wobei der Prozess zu weniger restriktiven Regeln führt. Dadurch kann Insight mehr Muster auf jeden Eintrag anwenden, wodurch die Möglichkeit des Musterabgleichs und der positiven Hostidentifikation erhöht wird.
+
+Wenn Sie Regeln erstellen, sollten Sie Regeln erstellen, die die größte Anzahl nicht identifizierter Geräte adressieren, die möglich sind. Beispielsweise ist das Erstellen von Regeln, die einem Muster der Deckung ähnlich wie die folgenden folgen, viel effizienter als das Erstellen von 30 Regeln mit niedrigeren Prozentsätzen der Deckung:
+
+|===
+
+
+| Regel | Prozentsatz der Abdeckung 
+
+
+ a| 
+Regel 1
+ a| 
+60 % erreicht
+
+
+
+ a| 
+Regel 2
+ a| 
+25 % erzielt
+
+
+
+ a| 
+Regel 3
+ a| 
+8 % erreicht
+
+
+
+ a| 
+Regel 4
+ a| 
+4 % erreicht
+
+
+
+ a| 
+Regel 5
+ a| 
+1 %
+
+|===

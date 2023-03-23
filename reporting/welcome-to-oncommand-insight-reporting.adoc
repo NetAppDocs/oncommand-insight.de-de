@@ -1,0 +1,26 @@
+---
+permalink: reporting/welcome-to-oncommand-insight-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight Reporting ist ein Business Intelligence-Tool, mit dem Sie vordefinierte Berichte anzeigen oder benutzerdefinierte Berichte erstellen können. OnCommand Insight Reporting generiert Berichte aus den Data Warehouse \(DWH\)-Daten.' 
+---
+= Willkommen beim OnCommand Insight Reporting
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight Reporting ist ein Business Intelligence-Tool, mit dem Sie vordefinierte Berichte anzeigen oder benutzerdefinierte Berichte erstellen können. OnCommand Insight Reporting generiert Berichte aus den DWH-Daten (Data Warehouse).
+
+Mit OnCommand Insight Reporting können Sie folgende Aufgaben ausführen:
+
+* Führen Sie einen vordefinierten Bericht aus
+* Erstellen Sie einen benutzerdefinierten Bericht
+* Passen Sie das Berichtsformat und die Bereitstellungsmethode an
+* Planen Sie die automatische Ausführung von Berichten
+* E-Mail-Berichte
+* Verwenden Sie Farben, um Schwellenwerte für Daten darzustellen
+
+
+Vordefinierte Berichte sind die OnCommand Insight-Standardberichte. In diesem Handbuch werden die vordefinierten Berichte beschrieben, die mit allen Produktlizenzen verfügbar sind.

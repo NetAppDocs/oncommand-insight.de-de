@@ -1,0 +1,35 @@
+---
+permalink: config-admin/modifying-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können vorhandene und standardmäßige Performance-Richtlinien bearbeiten, um zu ändern, wie Insight die für Sie in Ihrem Netzwerk geltenden Bedingungen überwacht. Beispielsweise können Sie den Schwellenwert einer Richtlinie ändern. 
+---
+= Bearbeiten von Leistungsrichtlinien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können vorhandene und standardmäßige Performance-Richtlinien bearbeiten, um zu ändern, wie Insight die für Sie in Ihrem Netzwerk geltenden Bedingungen überwacht. Sie können beispielsweise den Schwellenwert einer Richtlinie ändern.
+
+
+
+== Schritte
+
+. Öffnen Sie Insight in Ihrem Browser.
+. Wählen Sie im Menü *Verwalten* die Option *Leistungsrichtlinien* aus.
++
+Die Seite Leistungsrichtlinien wird angezeigt.
+
+. Bewegen Sie den Mauszeiger über einen Richtliniennamen in der Liste der Leistungsrichtlinien eines Objekts.
+. Klicken Sie Auf image:../media/oci-edit-threshold-policy-icon.gif[""].
++
+Das Dialogfeld Richtlinie bearbeiten wird angezeigt.
+
+. Nehmen Sie die erforderlichen Änderungen vor.
++
+Wenn Sie eine andere Option als den Richtliniennamen ändern, löscht Insight alle vorhandenen Verstöße für diese Richtlinie.
+
+. Klicken Sie Auf *Speichern.*
+

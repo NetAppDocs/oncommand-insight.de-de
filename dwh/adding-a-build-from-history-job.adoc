@@ -1,0 +1,62 @@
+---
+permalink: dwh/adding-a-build-from-history-job.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die Data Warehouse-Datenbank mithilfe von historischen Daten erstellen, die auf dem OnCommand Insight-Server gespeichert sind, sodass Sie Projektionsberichte ausführen können. 
+---
+= Hinzufügen eines Jobs, der aus dem Verlauf eine Data Warehouse-Datenbank erstellt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Data Warehouse-Datenbank mithilfe von historischen Daten erstellen, die auf dem OnCommand Insight-Server gespeichert sind, sodass Sie Projektionsberichte ausführen können.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen Anmerkungen auf dem OnCommand Insight-Server aktualisiert und eine Aktualisierung der Anmerkungsinformationen für das Data Warehouse erzwungen haben.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster links auf *Build from History*.
++
+image::../media/oci-dwh-admin-buildfromhistory-gif.gif[Aus Historie erstellen]
+
+. Klicken Sie Auf *Konfigurieren*.
++
+image::../media/oci-dwh-admin-buildfromhistory-configure-gif.gif[Konfigurieren von Build anhand des Verlaufs]
+
+. Geben Sie die Start- und Endzeit ein.
++
+Um einen Kalender anzuzeigen, aus dem Sie diese Daten auswählen können, klicken Sie auf den Abwärtspfeil neben dem Namen des Monats.
+
++
+Das Zeitformat hängt vom Gebietsschema des Data Warehouse-Servers ab.
+
++
+Die Start- und Endzeiten müssen innerhalb des Verlaufsbereichs liegen, der in allen OnCommand Insight-Servern enthalten ist, mit denen das Data Warehouse verbunden ist, wie in der Option Connectors des Data Warehouse-Portals festgelegt. Die Standard-Start- und Endzeiten geben den maximal gültigen Zeitraum an. Der Data Warehouse-Build-Job wird automatisch zu dem von Ihnen angegebenen Zeitpunkt ausgeführt.
+
++
+[NOTE]
+====
+Die Konfiguration eines nicht realistischen Zeitplans wie „`Täglich für 4 Jahre`“ führt zu 1460 Build-Zyklen, was 10 Tage dauern kann.
+
+====
+. Wählen Sie das Intervall aus.
++
+Wenn Sie ein Monats- oder Wochenintervall auswählen, wird das Feld Tag angezeigt. Wenn Sie monatlich ausgewählt haben, ist Tag ein Datum. Wenn Sie wöchentlich ausgewählt haben, ist Tag Sonntag bis Samstag.
+
+. Wählen Sie die Stunde, zu der der Build stattfinden soll.
+. Um die Optionen auf die Standardeinstellungen zurückzusetzen, klicken Sie optional auf *Reset*.
+. Klicken Sie Auf *Speichern*.
+. Klicken Sie auf der Seite *Build from History* auf *Run*, um einen Build außerhalb des automatischen Schedule Builds durchzuführen.
++
+In der Spalte Zielzeit wird die Zeit angezeigt, zu der dieser Eintrag erstellt wurde. In der Spalte Status wird angezeigt, ob der Build abgeschlossen oder fehlgeschlagen ist.
+
+

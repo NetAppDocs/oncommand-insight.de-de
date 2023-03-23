@@ -1,0 +1,25 @@
+---
+indexpage:
+  lead: OnCommand Insight vereinfacht das betriebliche Management hybrider IT-Infrastrukturen
+    in On-Premises-Umgebungen sowie in Public und Private Clouds.
+  tiles:
+  - title: Los geht's
+    links:
+    - title: Installation (Windows)
+      url: install-windows/installation-prerequisites.html
+    - title: Installation (Linux)
+      url: install-linux/installation-prerequisites.html
+    - title: Konfiguration und Administration
+      url: config-admin/setting-up-insight.html
+  - title: Berichterstellung
+    links:
+    - title: Data Warehouse-Administration
+      url: dwh/welcome-to-data-warehouse.html
+    - title: Berichterstellung
+      url: reporting/welcome-to-oncommand-insight-reporting.html
+  - title: Anleitungen und FAQ
+    links:
+    - title: Anleitungen
+      url: howto/getting-started-with-insight.html
+    - title: Häufig Gestellte Fragen
+      url: faq/faq-general-insight-questions.html

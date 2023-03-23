@@ -1,0 +1,31 @@
+---
+permalink: install-windows/updating-disk-models.html 
+sidebar: sidebar 
+keywords:  
+summary: Nach der Aktualisierung sollten Sie über aktualisierte Festplattenmodelle verfügen. Wenn Insight jedoch aus irgendeinem Grund neue Laufwerksmodelle nicht erkennen konnte, können Sie sie manuell aktualisieren. 
+---
+= Festplattenmodelle werden aktualisiert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach der Aktualisierung sollten Sie über aktualisierte Festplattenmodelle verfügen. Wenn Insight jedoch aus irgendeinem Grund neue Laufwerksmodelle nicht erkennen konnte, können Sie sie manuell aktualisieren.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen den technischen Support von erhalten haben `.zip` Datei, die die neuesten Patches für die Datenquelle enthält.
+
+
+
+== Schritte
+
+. Stoppen Sie den SANscreen Acq-Dienst.
+. Navigieren Sie zum folgenden Verzeichnis: `<install directory>\SANscreen\wildfly\standalone\deployments\datasources.war`.
+. Verschieben Sie den aktuellen `diskmodels.jar` An einem anderen Speicherort ablegen.
+. Kopieren Sie das neue `diskmodels.jar` In die Datei `datasources.war` Verzeichnis.
+. Starten Sie den SANscreen Acq-Dienst.
+

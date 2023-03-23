@@ -1,0 +1,36 @@
+---
+permalink: config-admin/certificate-login-support.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight unterstützt die Verwendung von Smart Cards \(CAC\) und Zertifikaten zur Authentifizierung von Benutzern, die sich bei den Insight-Servern anmelden. Sie müssen das System konfigurieren, um diese Funktionen zu aktivieren.' 
+---
+= Unterstützung für Smart Card- und Zertifikatanmeldung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight unterstützt die Verwendung von Smart Cards (CAC) und Zertifikaten zur Authentifizierung von Benutzern, die sich bei den Insight-Servern anmelden. Sie müssen das System konfigurieren, um diese Funktionen zu aktivieren.
+
+Nach der Konfiguration des Systems zur Unterstützung von CAC und Zertifikaten führt das Navigieren zu einer neuen Sitzung von OnCommand Insight im Browser zu einem systemeigenen Dialogfeld, in dem dem der Benutzer eine Liste mit persönlichen Zertifikaten zur Auswahl hat. Diese Zertifikate werden basierend auf den persönlichen Zertifikaten gefiltert, die von CAS ausgestellt wurden, denen der OnCommand Insight-Server vertraut ist. Meistens gibt es eine einzige Wahl. Standardmäßig überspringt Internet Explorer dieses Dialogfeld, wenn nur eine Option vorhanden ist.
+
+Für den Java-Client wird unabhängig vom Aussteller ein benutzerdefiniertes Dialogfeld mit allen persönlichen Zertifikaten angezeigt.
+
+[NOTE]
+====
+Für CAC-Benutzer enthalten Smartcards mehrere Zertifikate, von denen nur eines mit der vertrauenswürdigen Zertifizierungsstelle übereinstimmen kann. Das CAC-Zertifikat für `identification` Sollte verwendet werden.
+
+====
+[NOTE]
+====
+Die aktuellsten CAC- und Zertifikatanweisungen finden Sie in den folgenden Knowledgebase-Artikeln (Support-Anmeldung erforderlich):
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["So konfigurieren Sie die Common Access Card (CAC)-Authentifizierung für OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["Konfigurieren der Authentifizierung für allgemeine Zugriffskarten (Common Access Card, CAC) für OnCommand Insight Data Warehouse"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["Erstellen und Importieren eines signierten Zertifikats einer Zertifizierungsstelle (CA) in OnComand Insight und OnCommand Insight Data Warehouse 7.3.x"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["So erstellen Sie ein selbstsigniertes Zertifikat in OnCommand Insight 7.3.X, das auf einem Windows-Host installiert ist"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Importieren eines von Cognos signierten Zertifikats einer Zertifizierungsstelle (CA) in OnCommand DataWarehouse 7.3.3 und höher"]
+
+
+====

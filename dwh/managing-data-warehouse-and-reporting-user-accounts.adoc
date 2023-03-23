@@ -1,0 +1,22 @@
+---
+permalink: dwh/managing-data-warehouse-and-reporting-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Benutzerkonten, Benutzerauthentifizierung und Benutzerautorisierung für die OnCommand Insight-Berichtstools werden über das Data Warehouse \(DWH\) definiert und verwaltet. Basierend auf diesen Konfigurationen erhalten Benutzer und Administratoren Zugriff auf einige oder alle verfügbaren OnCommand Insight-Berichte.' 
+---
+= Verwalten von Benutzerkonten für Data Warehouse und Reporting
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Benutzerkonten, Benutzerauthentifizierung und Benutzerautorisierung für die OnCommand Insight-Berichtstools werden über das Data Warehouse (DWH) definiert und verwaltet. Basierend auf diesen Konfigurationen erhalten Benutzer und Administratoren Zugriff auf einige oder alle verfügbaren OnCommand Insight-Berichte.
+
+Für den Zugriff auf die Benutzerverwaltung im Data Warehouse ist ein Konto mit Systemadministratorrechten erforderlich. Hierzu zählen folgende Optionen:
+
+* Vollständige Administrationsfunktionen für das Data Warehouse
+* Konfiguration und Pflege aller Benutzerkonten
+* Lesezugriff auf die Datenbank
+* Möglichkeit zum Einrichten von Connectors in der ETL, Planen von Data Warehouse-Jobs, Zurücksetzen der Datenbank, Zuweisen oder Ändern von Rollen sowie Hinzufügen und Entfernen von Benutzerkonten
+

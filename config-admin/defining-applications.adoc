@@ -1,0 +1,64 @@
+---
+permalink: config-admin/defining-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie Daten zu bestimmten Applikationen verfolgen möchten, die in Ihrer Umgebung ausgeführt werden, müssen Sie diese Applikationen definieren. 
+---
+= Definieren von Anwendungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie Daten zu bestimmten Applikationen verfolgen möchten, die in Ihrer Umgebung ausgeführt werden, müssen Sie diese Applikationen definieren.
+
+
+
+== Bevor Sie beginnen
+
+Wenn Sie die Applikation einer Geschäftseinheit zuordnen möchten, müssen Sie die Geschäftseinheit bereits erstellt haben.
+
+
+
+== Über diese Aufgabe
+
+Applikationen können folgenden Assets zugewiesen werden: Hosts, virtuelle Maschinen, Volumes, interne Volumes, qtrees, Freigaben und Hypervisoren:
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Klicken Sie auf *Verwalten* und wählen Sie *Anwendungen*.
++
+Nachdem Sie eine Applikation definiert haben, werden auf der Seite Anwendungen der Name der Applikation, ihre Priorität und gegebenenfalls die mit der Applikation verknüpfte Geschäftseinheit angezeigt.
+
++
+[NOTE]
+====
+Wenn das Engine zur Erkennung von Anomalien installiert ist, wird auf der Seite Anwendungspaly Dashboard auch ein Anomaly Score für die Anwendung angezeigt. Weitere Informationen zum Installieren und Konfigurieren der Anomalieerkennung finden Sie im _OnCommand Insight Konfigurations- und Administrationshandbuch_.
+
+====
+. Klicken Sie Auf *Hinzufügen*.
++
+Das Dialogfeld Anwendung hinzufügen wird angezeigt.
+
+. Geben Sie einen eindeutigen Namen für die Anwendung in das Feld *Name* ein.
+. Klicken Sie auf *Priorität* und wählen Sie die Priorität (kritisch, hoch, mittel oder niedrig) für die Anwendung in Ihrer Umgebung aus.
+. Wenn Sie diese Anwendung mit einer Business Entity verwenden möchten, klicken Sie auf *Business Entity* und wählen Sie die Entity aus der Liste aus.
+. *Optional*: Wenn Sie keine Volume-Freigabe verwenden, klicken Sie auf das Kontrollkästchen *Volume-Freigabe validieren* deaktivieren.
++
+Dies erfordert die Assure-Lizenz. Legen Sie diese Einstellung fest, wenn Sie sicherstellen möchten, dass jeder Host Zugriff auf dieselben Volumes in einem Cluster hat. Beispielsweise müssen Hosts in Hochverfügbarkeits-Clustern oft für Failover auf dieselben Volumes maskiert werden, allerdings müssen Hosts in verwandten Applikationen in der Regel nicht auf dieselben physischen Volumes zugreifen. Außerdem müssen Sie gemäß den Richtlinien möglicherweise aus Sicherheitsgründen nicht in Verbindung stehende Anwendungen nicht auf dieselben physischen Volumes zugreifen können.
+
+. Klicken Sie Auf *Speichern*.
++
+Die Anwendung wird auf der Seite Anwendungen angezeigt. Wenn Sie auf den Namen der Anwendung klicken, zeigt Insight die Seite der Anlage für die Anwendung an.
+
+
+
+
+
+== Nachdem Sie fertig sind
+
+Nachdem Sie eine Anwendung definiert haben, können Sie eine Anlagenseite für Host, virtuelle Maschine, Volume, internes Volume oder Hypervisor aufrufen, um eine Anwendung einem Asset zuzuweisen.

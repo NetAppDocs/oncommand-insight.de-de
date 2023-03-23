@@ -1,0 +1,35 @@
+---
+permalink: howto/examining-the-greedy-resource.html 
+sidebar: sidebar 
+keywords: greedy,degraded 
+summary: 'Wenn Sie auf das interne Volume klicken, das als gierige Ressource identifiziert wurde, wird die Landing Page für das Volume CDOT_Boston:SP1:Vol_01 geöffnet.' 
+---
+= Untersuchung der gierigen Ressource
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie auf das interne Volume klicken, das als gierige Ressource identifiziert wurde, wird die Landing Page für das Volume CDOT_Boston:SP1:Vol_01 geöffnet.
+
+Hinweis: In der Zusammenfassung ist dieses interne Volume eine Ressource für eine andere Anwendung (Travel Booking) und obwohl es in einem anderen Speicherpool enthalten ist, befindet es sich auf demselben Knoten wie das interne Volume für Exchange 2016 (CDOT_Boston_N1).
+
+image::../media/cdot-boston-sp1-part1.gif[cdot boston sp1 Teil 1]
+
+image::../media/cdot-boston-sp1-part2.gif[cdot boston sp1, Teil 2]
+
+Auf der Landing Page wird angezeigt:
+
+* Das interne Volumen, das einer Reisebuchungsanwendung zugeordnet ist.
+* In den korrelierten Ressourcen wird ein neuer Speicherpool erkannt.
+* Das ursprüngliche interne Volume, das Sie untersucht haben (CDOT_Boston:SP2:Vol_01), wird als „`degradiert`“ gekennzeichnet.
+* Im Performance-Diagramm weist die Applikation ein stabiles Latenzprofil auf, das in etwa gleichzeitig einen IOPS-Spitzenwert hat, während der Latenzanstieg in der Exchange Applikation festzustellen ist.
++
+Dies kann darauf hinweisen, dass die Latenzspitze der Exchange-Applikation wahrscheinlich durch den IOPS-Spitzenwert auf diesem Volume verursacht wird.
+
+
+
+Rechts neben den Diagrammen im Abschnitt „Ressource“ wird die korrelierte herabgesetzte Ressource angezeigt, die das interne Exchange 2016-Volume ist (CDOT_Boston:SP2:Vol_01). Klicken Sie auf das Kontrollkästchen, um das beeinträchtigte interne Volume in die Performance-Diagramme aufzunehmen. Wenn Sie die beiden Performance-Diagramme ausrichten, zeigen Sie, dass die Latenz- und IOPS-Spitzen fast zeitgleich auftreten. Dies sagt uns, dass wir ein besseres Verständnis der Travel Booking-Anwendung bekommen wollen. Wir müssen verstehen, warum die Applikation einen so anhaltenden IOPS-Spitzenwert verzeichnet.
+
+Die Untersuchung des mit der Travel Booking-Anwendung verknüpften Speicherpools kann ermitteln, warum die IOPS-Spitzenwerte in der Anwendung auftreten. Klicken Sie auf CDOT_Boston:SP1, um die Landing Page für Storage Pool anzuzeigen.

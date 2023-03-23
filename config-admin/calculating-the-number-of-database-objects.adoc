@@ -1,0 +1,24 @@
+---
+permalink: config-admin/calculating-the-number-of-database-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: Verwenden Sie die Funktion Skalierung berechnen, um die Anzahl der Objekte in der OnCommand Insight-Datenbank zu ermitteln. 
+---
+= Berechnung der Anzahl der Datenbankobjekte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verwenden Sie die Funktion Skalierung berechnen, um die Anzahl der Objekte in der OnCommand Insight-Datenbank zu ermitteln.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin* und wählen Sie *Fehlerbehebung*.
+. Klicken Sie unten auf der Seite im Bereich Weitere Aufgaben auf den Link *Erweiterte Fehlerbehebung*.
+. Klicken Sie auf der Seite Erweiterte Fehlerbehebung auf die Registerkarte *Reports*.
+. Klicken Sie Auf *Berechnete Skala*.
+

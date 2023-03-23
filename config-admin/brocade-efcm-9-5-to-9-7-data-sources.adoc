@@ -1,0 +1,140 @@
+---
+permalink: config-admin/brocade-efcm-9-5-to-9-7-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight verwendet die Datenquelle Brocade Enterprise Fabric Connectivity Manager \(EFCM\) zur Bestandsaufnahme von Brocade EFCM-Switches. Insight unterstützt EFCM Versionen 9.5, 9.6 und 9.7.' 
+---
+= Datenquelle von Brocade Enterprise Fabric Connectivity Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight verwendet die Datenquelle „Brocade Enterprise Fabric Connectivity Manager“ (EFCM) zur Bestandsaufnahme von Brocade EFCM-Switches. Insight unterstützt EFCM Versionen 9.5, 9.6 und 9.7.
+
+
+
+== Anforderungen
+
+[NOTE]
+====
+Dieser Datensammler ist ab OnCommand Insight 7.3.11 nicht verfügbar.
+
+====
+* Netzwerkadresse oder vollqualifizierter Domänenname für den EFCM-Server
+* EFCM-Version muss 9.5, 9.6 oder 9.7 sein
+* IP-Adresse des EFCM-Servers
+* Schreibgeschützter Benutzername und Kennwort für den EFCM-Server
+* Validierter Zugriff auf den Connectrix-Switch über Telnet vom Insight-Server unter Verwendung des schreibgeschützten Benutzernamens und des Kennworts über Port 51512
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+EFC-Server
+ a| 
+IP-Adresse oder vollqualifizierter Domänenname des EFC-Servers
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für den Switch
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort für den Switch
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 15 Minuten)
+
+
+
+ a| 
+Fabric-Name
+ a| 
+Fabric-Name, der von der EFCM-Datenquelle gemeldet werden soll. Lassen Sie das Feld leer, um den Fabric-Namen als WWN zu melden.
+
+
+
+ a| 
+Kommunikations-Port
+ a| 
+Port, der für die Kommunikation mit dem Switch verwendet wird
+
+
+
+ a| 
+Trapping Aktivieren
+ a| 
+Wählen Sie diese Option aus, um die Erfassung beim Empfang eines SNMP-Trap vom Gerät zu aktivieren. Wenn Sie Trapping aktivieren auswählen, müssen Sie auch SNMP aktivieren.
+
+
+
+ a| 
+Mindestzeit zwischen Traps (s)
+ a| 
+Mindestzeit zwischen den von Traps ausgelösten Erfassungsversuchen (Standard: 15 Sekunden)
+
+
+
+ a| 
+Inaktive Zoneets
+ a| 
+Kommagetrennte Liste inaktiver Zonesets, auf denen die Erfassung durchgeführt werden soll, sowie die Erfassung für die aktiven Zonensätze
+
+
+
+ a| 
+Zu verwendende NIC
+ a| 
+Geben Sie an, welche Netzwerkschnittstelle auf der RAU verwendet werden soll, wenn Sie über SAN-Geräte berichten
+
+
+
+ a| 
+Geräte Ausschließen
+ a| 
+Kommagetrennte Liste von Einheitennamen, die ein- oder ausgeschlossen werden sollen
+
+
+
+ a| 
+Verwenden Sie den Spitznamen des EFCM-Switches als Namen des Insight-Switches
+ a| 
+Wählen Sie diese Option, um den Spitznamen des EFCM-Switches als Namen des Insight-Switches zu verwenden
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+|===

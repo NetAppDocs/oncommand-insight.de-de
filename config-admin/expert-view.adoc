@@ -1,0 +1,42 @@
+---
+permalink: config-admin/expert-view.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Im Abschnitt „Expertenansicht“ einer Bestandsseite können Sie ein Leistungsbeispiel für die Basisressource anzeigen, das auf einer beliebigen Anzahl anwendbarer Kennzahlen im Kontext eines ausgewählten Zeitraums basiert \(3 Stunden, 24 Stunden, 3 Tage, 7 Tage, Oder einen benutzerdefinierten Zeitraum\) im Leistungsdiagramm und alle damit verbundenen Anlagen.' 
+---
+= Expertenansicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Abschnitt „Expertenansicht“ einer Bestandsseite können Sie ein Leistungsbeispiel für die Basisressource anzeigen, das auf einer beliebigen Anzahl anwendbarer Kennzahlen im Kontext eines ausgewählten Zeitraums (3 Stunden, 24 Stunden, 3 Tage, 7 Tage, Oder einen benutzerdefinierten Zeitraum) in der Leistungsübersicht und den damit verbundenen Anlagen enthalten.
+
+Im Folgenden finden Sie ein Beispiel für den Abschnitt „Expertenansicht“ auf einer Seite mit Volume-Assets:
+
+image::../media/expert-view-section.gif[Expertenansicht]
+
+Sie können die Metriken auswählen, die im Performance-Diagramm für den ausgewählten Zeitraum angezeigt werden sollen.
+
+Im Abschnitt „Ressourcen“ werden der Name des Basiswerts und die Farbe für das Basiselement im Leistungsdiagramm angezeigt. Wenn der Abschnitt „Top Correlated“ kein Asset enthält, das Sie im Leistungsdiagramm anzeigen möchten, können Sie das Feld „Assets suchen“ im Abschnitt „zusätzliche Ressourcen“ verwenden, um das Asset zu suchen und es dem Leistungsdiagramm hinzuzufügen. Beim Hinzufügen von Ressourcen werden diese im Abschnitt zusätzliche Ressourcen angezeigt.
+
+Sind auch im Abschnitt Ressourcen aufgeführt, sofern zutreffend, alle Assets, die sich auf das Basivermögen in den folgenden Kategorien beziehen:
+
+* Oben korreliert
++
+Zeigt die Assets, die eine hohe Korrelation (in Prozent) mit einem oder mehreren Performance-Kennzahlen zur Basisinressource haben.
+
+* Top-Mitwirkende
++
+Zeigt die Assets an, die (in Prozent) zur Basisinressource beitragen.
+
+* Gierig
++
+Zeigt die Ressourcen, die Systemressourcen durch gemeinsame Nutzung derselben Ressourcen wie Hosts, Netzwerke und Storage-Ressourcen von der Ressource wegnehmen.
+
+* Beeinträchtigt
++
+Zeigt die Ressourcen an, die aufgrund dieser Ressource zur Neige gehen, wenn sie sich auf die Systemressourcen aufgestockt haben.
+
+

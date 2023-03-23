@@ -1,0 +1,124 @@
+---
+permalink: config-admin/qlogic-fc-switch-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Für die Konfiguration erfordert die QLogic FC Switch \(SNMP\)-Datenquelle die Netzwerkadresse für das FC Switch-Gerät, die als IP-Adresse angegeben ist, und eine schreibgeschützte SNMP-Community-Zeichenfolge, die für den Zugriff auf das Gerät verwendet wird.' 
+---
+= Datenquelle von QLogic FC Switch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für die Konfiguration erfordert die QLogic FC Switch (SNMP) Datenquelle die Netzwerkadresse für das FC Switch-Gerät, die als IP-Adresse angegeben ist, und eine SNMP _Read-Only_ Community-Zeichenfolge, die für den Zugriff auf das Gerät verwendet wird.
+
+
+
+== Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+SANsurfer-Switch
+ a| 
+IP-Adresse oder vollständig qualifizierter Domänenname für den SANsurfer-Switch
+
+
+
+ a| 
+SNMP-Version
+ a| 
+SNMP-Version
+
+
+
+ a| 
+SNMP-Community
+ a| 
+SNMP-Community-Zeichenfolge
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für den SANsurfer Switch
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort für den SANsurfer-Switch
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 15 Minuten)
+
+
+
+ a| 
+SNMP-Auth-Protokoll
+ a| 
+SNMP-Authentifizierungsprotokoll (nur SNMPv3)
+
+
+
+ a| 
+SNMP wird erneut verwendet
+ a| 
+Anzahl der SNMP-Wiederholungsversuche
+
+
+
+ a| 
+SNMP-Timeout (ms)
+ a| 
+SNMP-Timeout (Standard 5000 ms)
+
+
+
+ a| 
+Trapping Aktivieren
+ a| 
+Wählen Sie diese Option, um das Überfüllen zu aktivieren
+
+
+
+ a| 
+Mindestzeit zwischen Traps (s)
+ a| 
+Mindestzeit zwischen durch Traps ausgelösten Erfassungsversuchen (Standard: 10 Sekunden)
+
+
+
+ a| 
+Fabric-Name
+ a| 
+Fabric-Name, der von der Datenquelle gemeldet werden soll. Lassen Sie das Feld leer, um den Fabric-Namen als WWN zu melden.
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+|===

@@ -1,0 +1,100 @@
+---
+permalink: config-admin/managing-security-on-the-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit dem Tool securityadmin können Sie Sicherheitsoptionen auf dem Data Warehouse-Server verwalten. Die Sicherheitsverwaltung umfasst die Aktualisierung interner Passwörter für interne Benutzer auf dem DWH-Server, das Erstellen von Backups der Sicherheitskonfiguration oder das Wiederherstellen von Konfigurationen auf die Standardeinstellungen. 
+---
+= Verwaltung der Sicherheit im Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der `securityadmin` Mit dem Tool können Sie Sicherheitsoptionen auf dem Data Warehouse-Server verwalten. Die Sicherheitsverwaltung umfasst die Aktualisierung interner Passwörter für interne Benutzer auf dem DWH-Server, das Erstellen von Backups der Sicherheitskonfiguration oder das Wiederherstellen von Konfigurationen auf die Standardeinstellungen.
+
+
+
+== Über diese Aufgabe
+
+Sie verwenden das `securityadmin` Tool zur Verwaltung der Sicherheit:
+
+* Fenster – `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat`
+* Linux `/bin/oci-securityadmin.sh`
+
+
+
+
+== Schritte
+
+. Führen Sie eine Remote-Anmeldung beim Data Warehouse-Server durch.
+. Starten Sie das Sicherheitsadministrator-Tool im interaktiven Modus: `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
++
+Das System fordert Anmeldeinformationen an.
+
+. Geben Sie den Benutzernamen und das Kennwort für ein Konto mit „`Admin`“-Anmeldeinformationen ein.
++
+Das System zeigt das Menü Sicherheitsverwaltung für das Data Warehouse an:
+
++
+** *Backup*
++
+Erstellt eine ZIP-Sicherungsdatei des Tresors, die alle Kennwörter und Schlüssel enthält, und legt die Datei an einem vom Benutzer angegebenen Speicherort oder an dem Standardspeicherort ab:
+
++
+*** Fenster – `C:\Program Files\SANscreen\backup\vault`
+*** Linux `/var/log/netapp/oci/backup/vault`
+
+
+** *Wiederherstellen*
++
+Stellt die Zip-Sicherung des erstellten Tresors wieder her. Nach der Wiederherstellung werden alle Passwörter und Schlüssel zum Zeitpunkt der Backup-Erstellung auf die vorhandenen Werte zurückgesetzt.
+
++
+[NOTE]
+====
+Restore kann verwendet werden, um Passwörter und Schlüssel auf mehreren Servern zu synchronisieren, zum Beispiel: - Verschlüsselungsschlüssel auf einem Server ändern - Erstellen einer Sicherung des Tresors - Wiederherstellen der Vault-Sicherung auf dem zweiten Server
+
++
+
+====
+** *Chiffrierschlüssel ändern*
++
+Ändern Sie den DWH-Verschlüsselungsschlüssel, der zum Verschlüsseln oder Entschlüsseln von Kennwörtern wie Verbindungskennwörtern und SMPT-Kennwörtern verwendet wird.
+
+** *Passwort Aktualisieren*
++
+Kennwort für ein bestimmtes Benutzerkonto ändern.
+
++
+*** _Intern
+*** Akquisition
+*** cognos_admin
+*** dwh
+*** dwh_intern
+*** Whuser
+*** Hosts
+*** Inventar
+*** Stamm
+
+
+
+
++
+[NOTE]
+====
+Wenn Sie die Kennwörter für dwhuser, Hosts, Inventar oder Root ändern, haben Sie die Möglichkeit, SHA-256-Passwort-Hashing zu verwenden. Für diese Optionen müssen alle Clients, die auf die Konten zugreifen, SSL-Verbindungen verwenden.
+
+====
++
+** *Auf die Standardeinstellungen zurücksetzen*
++
+Setzt die Verschlüsselungsschlüssel und Passwörter auf die Standardwerte zurück. Standardwerte sind die Werte, die während der Installation angegeben werden.
+
+** *Ausgang*
++
+Beenden Sie das `securityadmin` Werkzeug.
+
+
+
+

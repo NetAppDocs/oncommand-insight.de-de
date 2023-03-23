@@ -1,0 +1,27 @@
+---
+permalink: config-admin/deleting-a-user-account.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Jeder Benutzer mit Administratorrechten kann ein Benutzerkonto löschen, entweder wenn es nicht mehr verwendet wird \(für eine lokale Benutzerdefinition\) oder um OnCommand Insight zu zwingen, die Benutzerinformationen neu zu ermitteln, wenn sich der Benutzer das nächste Mal in \(für einen LDAP-Benutzer\) anmeldet.' 
+---
+= Löschen eines Benutzerkontos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Jeder Benutzer mit Administratorrechten kann ein Benutzerkonto löschen, wenn es nicht mehr verwendet wird (für eine lokale Benutzerdefinition), oder um OnCommand Insight zu zwingen, die Benutzerinformationen bei der nächsten Anmeldung des Benutzers (für einen LDAP-Benutzer) neu zu ermitteln.
+
+
+
+== Schritte
+
+. Melden Sie sich mit Administratorrechten bei OnCommand Insight an.
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Setup*.
+. Klicken Sie auf die Registerkarte *Users*.
+. Suchen Sie die Zeile, in der das Benutzerkonto angezeigt wird, das Sie löschen möchten.
+. Rechts neben den Benutzerinformationen klicken Sie auf das Symbol *Benutzerkonto löschen* „*x*“.
+. Klicken Sie Auf *Speichern*.
+

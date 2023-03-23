@@ -1,0 +1,43 @@
+---
+permalink: config-admin/setting-up-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: Nachdem Sie die Hierarchie der Geschäftseinheiten für Ihr Unternehmen entworfen haben, können Sie Anwendungen einrichten und die Geschäftseinheiten den Anwendungen zuordnen. Dieser Prozess erstellt die Struktur der Geschäftseinheiten in Ihrer OnCommand Insight-Datenbank. 
+---
+= Erstellen von Geschäftseinheiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie die Hierarchie der Geschäftseinheiten für Ihr Unternehmen entworfen haben, können Sie Anwendungen einrichten und die Geschäftseinheiten den Anwendungen zuordnen. Dieser Prozess erstellt die Struktur der Geschäftseinheiten in Ihrer OnCommand Insight-Datenbank.
+
+
+
+== Über diese Aufgabe
+
+Das Zuordnen von Anwendungen zu Geschäftseinheiten ist optional; es handelt sich jedoch um eine Best Practice.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der Web-Benutzeroberfläche von Insight an.
+. Klicken Sie auf *Verwalten* und wählen Sie *Business Entities*.
++
+Die Seite Business Entities wird angezeigt.
+
+. Klicken Sie Auf image:../media/add-annotation-icon.gif[""] Um mit dem Erstellen einer neuen Einheit zu beginnen.
++
+Das Dialogfeld *Business Entity hinzufügen* wird angezeigt.
+
+. Für jede Entitätsebene (Mandant, Geschäftsbereich, Geschäftsbereich und Projekt) können Sie eine der folgenden Aktionen ausführen:
++
+** Klicken Sie auf die Liste der Entitätsebene, und wählen Sie einen Wert aus.
+** Geben Sie einen neuen Wert ein, und drücken Sie die Eingabetaste.
+** Lassen Sie den Wert auf Entitätsebene als N/A stehen, wenn Sie die Entitätsebene für die Geschäftseinheit nicht verwenden möchten.
+
+
+. Klicken Sie Auf *Speichern*.
+

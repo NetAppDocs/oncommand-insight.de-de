@@ -1,0 +1,31 @@
+---
+permalink: dwh/editing-the-site-name-and-viewing-system-information.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können System-, Modul-, Lizenz- und Data Warehouse-Upgrade-Informationen anzeigen. 
+---
+= Anzeigen von Systeminformationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können System-, Modul-, Lizenz- und Data Warehouse-Upgrade-Informationen anzeigen.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster auf der linken Seite auf *Systeminformationen*.
+. Überprüfen Sie auf der Registerkarte *System* die Systeminformationen, und bearbeiten Sie ggf. den Standortnamen, indem Sie die folgenden Schritte ausführen:
++
+.. Klicken Sie Auf *Standortnamen Bearbeiten*
+.. Geben Sie den neuen Standortnamen ein und klicken Sie auf *Speichern*.
+
+
+. Um Informationen zur Anwendung (Anwendungsname, Modul, Version und Installationsdatum) anzuzeigen, klicken Sie auf die Registerkarte *Anwendungsinfo*.
+. Um Lizenzinformationen (Protokoll, Code, Ablaufdatum und Menge) anzuzeigen, klicken Sie auf die Registerkarte *Lizenzen*.
+. So zeigen Sie Informationen zum Anwendungsupgrade an (Anwendungsname, von Datum, bis Datum, Uhrzeit, Benutzer, Und Dateigröße), klicken Sie auf *Aktualisierungsverlauf*.
+

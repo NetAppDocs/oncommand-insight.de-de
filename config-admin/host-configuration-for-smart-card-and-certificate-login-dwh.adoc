@@ -1,0 +1,89 @@
+---
+permalink: config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie müssen die OnCommand Insight-Data-Warehouse-Konfiguration ändern, um Smart Card \ (CAC\)- und Zertifikatanmeldungen zu unterstützen.' 
+---
+= Konfigurieren des Data Warehouse für die Smart Card- und Zertifikatanmeldung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die OnCommand Insight-Data-Warehouse-Konfiguration ändern, um Smart Card- (CAC) und Zertifikatanmeldungen zu unterstützen.
+
+
+
+== Bevor Sie beginnen
+
+* LDAP muss auf dem System aktiviert sein.
+* Das LDAP `User principal account name` Das Attribut muss mit dem LDAP-Feld übereinstimmen, das die Regierungs-ID-Nummer eines Benutzers enthält.
++
+Der auf staatlich ausgestellten CACs gespeicherte allgemeine Name (CN) wird normalerweise im folgenden Format gespeichert: `first.last.ID`. Für einige LDAP-Felder, z. B. `sAMAccountName`Dieses Format ist zu lang. Für diese Felder extrahiert OnCommand Insight nur die ID-Nummer aus dem CNS.
+
+
+
+[NOTE]
+====
+Die aktuellsten CAC- und Zertifikatanweisungen finden Sie in den folgenden Knowledgebase-Artikeln (Support-Anmeldung erforderlich):
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["So konfigurieren Sie die Common Access Card (CAC)-Authentifizierung für OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["Konfigurieren der Authentifizierung für allgemeine Zugriffskarten (Common Access Card, CAC) für OnCommand Insight Data Warehouse"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["Erstellen und Importieren eines signierten Zertifikats einer Zertifizierungsstelle (CA) in OnComand Insight und OnCommand Insight Data Warehouse 7.3.x"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["So erstellen Sie ein selbstsigniertes Zertifikat in OnCommand Insight 7.3.X, das auf einem Windows-Host installiert ist"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Importieren eines von Cognos signierten Zertifikats einer Zertifizierungsstelle (CA) in OnCommand DataWarehouse 7.3.3 und höher"]
+
+
+====
+
+
+== Schritte
+
+. Verwenden Sie regedit, um Registrierungswerte in zu ändern `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Apache Software Foundation\Procrun2.0\SANscreen Server\Parameters\Java`
++
+.. Ändern Sie die Option JVM_ `-DclientAuth=false` Bis `-DclientAuth=true`.
+
+
++
+Ändern Sie für Linux die `clientAuth` Parameter in `/opt/netapp/oci/scripts/wildfly.server`
+
+. Zertifizierungsstellen (CAS) zum Data Warehouse trustore hinzufügen:
++
+.. Wechseln Sie in einem Befehlsfenster zu `..\SANscreen\wildfly\standalone\configuration`.
+.. Verwenden Sie die `keytool` Dienstprogramm zum Auflisten der vertrauenswürdigen CAS: `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass changeit`
++
+Das erste Wort in jeder Zeile gibt den CA-Alias an.
+
+.. Geben Sie bei Bedarf eine Zertifizierungsstellenzertifikatsdatei an, in der Regel eine `.pem` Datei: Um die CAS des Kunden mit vertrauenswürdigen Data Warehouse-CAS aufzunehmen, gehen Sie zu `..\SANscreen\wildfly\standalone\configuration` Und verwenden Sie die `keytool` Importbefehl: `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -keystore server.trustore -alias my_alias -file 'path/to/my.pem' -v -trustcacerts`
++
+My_alias ist normalerweise ein Alias, der die CA in der leicht identifizieren würde``keytool -list`` Betrieb.
+
+
+
+. Auf dem OnCommand Insight-Server wird die angezeigt `wildfly/standalone/configuration/standalone-full.xml` Die Datei muss durch Aktualisierung von verify-Client auf „ANGEFORDERT“ in geändert werden ``/subsystem=undertow/server=default-server/https-listener=default-https``Um CAC zu aktivieren. Melden Sie sich beim Insight-Server an, und führen Sie den entsprechenden Befehl aus:
++
+|===
+
+
+| BETRIEBSSYSTEM | Skript 
+
+
+ a| 
+Windows
+ a| 
+<install dir>\SANscreen\wildfly\bin\enableCACforRemoteEJB.bat
+
+
+
+ a| 
+Linux
+ a| 
+/Opt/netapp/oci/wildfly/bin/enableCACforRemoteEJB.sh
+
+|===
++
+Warten Sie nach der Ausführung des Skripts, bis der Neustart des wildfly-Servers abgeschlossen ist, bevor Sie mit dem nächsten Schritt fortfahren.
+
+. Starten Sie den OnCommand Insight-Server neu.
+

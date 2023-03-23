@@ -1,0 +1,159 @@
+---
+permalink: config-admin/ibm-ds-cli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Die IBM DS \(CLI\)-Datenquelle unterstützt nur DS6xxx- und DS8xxx-Geräte. DS3xxx, DS4xxx und DS5xxx Geräte werden von der NetApp E-Series Datenquelle unterstützt. Unterstützte Modelle und Firmware-Versionen finden Sie in der Insight Datenquellen-Support-Matrix.' 
+---
+= IBM DS-Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die IBM DS (CLI)-Datenquelle unterstützt nur DS6xxx- und DS8xxx-Geräte. DS3xxx, DS4xxx und DS5xxx Geräte werden von der NetApp E-Series Datenquelle unterstützt. Unterstützte Modelle und Firmware-Versionen finden Sie in der Insight Datenquellen-Support-Matrix.
+
+
+
+== Terminologie
+
+OnCommand Insight bezieht die folgenden Bestandsinformationen aus der IBM DS-Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Festplattenmodul
+ a| 
+Festplatte
+
+
+
+ a| 
+Storage-Bild
+ a| 
+Storage
+
+
+
+ a| 
+Extent-Pool
+ a| 
+Storage-Pool
+
+
+
+ a| 
+Festes Block-Volume
+ a| 
+Datenmenge
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* IP-Adresse jedes DS-Arrays
+* Der Name der Speicheranzeige ist optional und nur kosmetisch
+* Schreibgeschützter Benutzername und Kennwort auf jedem DS-Array
+* Software von Drittanbietern, die auf dem Insight Server installiert ist: IBM dscli
+* Zugriffsvalidierung: Ausführen `dscli` Befehle, die den Benutzernamen und das Passwort verwenden
+* Port-Anforderungen: 80, 443 und 1750
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+DS-Speicher
+ a| 
+IP-Adresse oder vollständig qualifizierter Domänenname des DS-Speicherhosts
+
+
+
+ a| 
+Benutzername
+ a| 
+Der für die DS-CLI verwendete Name
+
+
+
+ a| 
+Passwort
+ a| 
+Für die DS-CLI verwendetes Passwort
+
+
+
+ a| 
+Ausführbarer Pfad dscli.exe
+ a| 
+Vollständiger Pfad zum ``dscli.exe``Utility:
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 40 Minuten)
+
+
+
+ a| 
+Anzeigename Für Speicher
+ a| 
+Name des IBM DS-Speicherarrays
+
+
+
+ a| 
+Inventory Exclude Devices
+ a| 
+Kommagetrennte Liste von Geräteseriennummer, die von der Bestandserfassung ausgeschlossen werden sollen
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+
+
+ a| 
+Typ Des Leistungsfilters
+ a| 
+Enthalten: Daten, die nur von Geräten in der Liste erfasst werden. Ausschließen: Es werden keine Daten von diesen Geräten erfasst
+
+
+
+ a| 
+Geräteliste Für Leistungsfilter
+ a| 
+Kommagetrennte Liste der Geräte-IDs, die die Leistungssammlung einschließen oder ausschließen sollen
+
+|===

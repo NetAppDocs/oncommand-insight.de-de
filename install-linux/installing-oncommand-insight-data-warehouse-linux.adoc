@@ -1,0 +1,55 @@
+---
+permalink: install-linux/installing-oncommand-insight-data-warehouse-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Die Installation ist in sich geschlossen und beinhaltet die Elemente, die für den Betrieb und Betrieb von OnCommand Insight Data Warehouse \(DWH\) erforderlich sind.' 
+---
+= OnCommand Insight Data Warehouse wird installiert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Installation ist in sich geschlossen und beinhaltet die Elemente, die für den Betrieb und Betrieb des OnCommand Insight Data Warehouse (DWH) erforderlich sind.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen alle Installationsvoraussetzungen erfüllt haben.
+
+
+
+== Über diese Aufgabe
+
+Data Warehouse verfügt über Cognos-Berichtsfunktionen. Wenn Sie Insight auf einem Linux-Server installieren, können Sie diese Funktionen jedoch nur verwenden, wenn Sie das Data Warehouse auf einem Windows-Server installieren. Informationen zur Installation des Data Warehouse unter Windows und Cognos-Berichtsfunktionen finden Sie im _OnCommand Insight-Installationshandbuch für Microsoft Windows_.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse-Server mit einem Konto mit sudo-Berechtigungen an.
+. Navigieren Sie zu dem Verzeichnis auf dem Server, in dem sich die Installationsdateien befinden, und geben Sie den folgenden Befehl ein:
++
+`unzip oci-dwh-<version>-linux-x86_64.zip`
+
++
+Überprüfen Sie die Versionsnummer der Installationsdatei. Die Versionsnummer kann sich von der im Befehl angezeigten Versionsnummer unterscheiden.
+
+. Sie können Syntax, Befehlsargumente und Parameterverwendung für anzeigen `oci-install.sh` Bevor Sie mit der Installation beginnen:
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh --help`
+
+. Führen Sie das Installationsskript aus:
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh`
+
+. Lesen Sie die Lizenzvereinbarung, akzeptieren Sie sie und befolgen Sie die Anweisungen.
+
+
+
+
+== Ergebnisse
+
+Nachdem Sie alle Eingabeaufforderungen beantwortet haben, beginnt die Installation und sollte je nach installierter Anwendung ca. 10 Minuten dauern.

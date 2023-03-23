@@ -1,0 +1,171 @@
+---
+permalink: config-admin/importing-annotation-values.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Wenn Sie Anmerkungen zu SAN-Objekten \ (wie Speicher, Hosts und virtuelle Maschinen\) in einer CSV-Datei beibehalten, können Sie diese Informationen in OnCommand Insight importieren. Sie können Applikationen, Geschäftseinheiten oder Annotationen wie Tiering und Building importieren.' 
+---
+= Importieren von Anmerkungswerten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie Anmerkungen zu SAN-Objekten (wie Storage, Hosts und Virtual Machines) in einer CSV-Datei beibehalten, können Sie diese Informationen in OnCommand Insight importieren. Sie können Applikationen, Geschäftseinheiten oder Annotationen wie Tiering und Building importieren.
+
+
+
+== Über diese Aufgabe
+
+Es gelten die folgenden Regeln:
+
+* Wenn ein Anmerkungswert leer ist, wird diese Anmerkung vom Objekt entfernt.
+* Wenn Sie Volumes oder interne Volumes mit Anmerkungen versehen, ist der Objektname eine Kombination aus Storage-Namen und Volume-Namen. Verwenden Sie dabei den Bindestrich und das Pfeiltrennzeichen (\->):
++
+[listing]
+----
+<storage_name>-><volume_name>
+----
+* Wenn Speicher, Switches oder Ports mit Anmerkungen versehen werden, wird die Spalte Anwendung ignoriert.
+* Die Spalten Tenant, Line_of_Business, Business_Unit und Project bilden eine Geschäftseinheit.
++
+Alle Werte können leer bleiben. Wenn eine Applikation bereits mit einer anderen Business Entity als den Eingabewerten verknüpft ist, wird die Applikation der neuen Business Entity zugewiesen.
+
+
+
+Die folgenden Objekttypen und Schlüssel werden im Importdienstprogramm unterstützt:
+
+|===
+
+
+| Typ | Taste 
+
+
+ a| 
+Host
+ a| 
+`+id-><id>+` Oder `<Name>` Oder `<IP>`
+
+
+
+ a| 
+VM
+ a| 
+`+id-><id>+` Oder `<Name>`
+
+
+
+ a| 
+Storage-Pool
+ a| 
+`+id-><id>+` Oder `<Storage_name>`\->``<Storage_Pool_name>``
+
+
+
+ a| 
+Internes Volumen
+ a| 
+`+id-><id>+` Oder `<Storage_name>`\->``<Internal_volume_name>``
+
+
+
+ a| 
+Datenmenge
+ a| 
+`+id-><id>+` Oder `<Storage_name>`\->``<Volume_name>``
+
+
+
+ a| 
+Storage
+ a| 
+`+id-><id>+` Oder `<Name>` Oder `<IP>`
+
+
+
+ a| 
+Switch
+ a| 
+`+id-><id>+` Oder `<Name>` Oder `<IP>`
+
+
+
+ a| 
+Port
+ a| 
+`+id-><id>+` Oder `<WWN>`
+
+
+
+ a| 
+Share
+ a| 
+`+id-><id>+` Oder `+<Storage Name>-><Internal Volume Name>-><Share Name>-><Protocol>+` [`+-><Qtree Name >+`]`<Qtree>` Ist optional, wenn es einen Standard-qtree gibt.
+
+
+
+ a| 
+Qtree
+ a| 
+`+id-><id>+` Oder `+<Storage Name>-><Internal Volume Name>-><Qtree Name>+`
+
+|===
+Die CSV-Datei sollte das folgende Format verwenden:
+
+[listing]
+----
+, , <Annotation Type> [, <Annotation Type> ...]
+[, Application] [, Tenant] [, Line_Of_Business] [,
+Business_Unit] [, Project]
+
+<Object Type Value 1>, <Object Key 1>, <Annotation Value> [,
+<Annotation Value> ...] [, <Application>] [, <Tenant>] [,
+<Line_Of_Business>] [, <Business_Unit>] [, <Project>]
+
+...
+
+<Object Type Value N>, <Object Key N>, <Annotation Value> [,
+<Annotation Value> ...] [, <Application>] [, <Tenant>] [,
+<Line_Of_Business>] [, <Business_Unit>] [, <Project>]
+----
+
+
+== Schritte
+
+. Melden Sie sich bei der Web-Benutzeroberfläche von Insight an.
+. Klicken Sie auf *Admin* und wählen Sie *Troubleshooting*.
++
+Die Seite Fehlerbehebung wird angezeigt.
+
+. Klicken Sie im Abschnitt *andere Aufgaben* der Seite auf den Link *OnCommand Insight-Portal*.
+. Klicken Sie auf *Insight Connect API*.
+. Melden Sie sich beim Portal an.
+. Klicken Sie Auf *Annotation Import Utility*.
+. Speichern Sie die `.zip` Datei, entpacken und lesen `readme.txt` Datei für weitere Informationen und Beispiele.
+. Platzieren Sie die CSV-Datei in demselben Ordner wie die `.zip` Datei:
+. Geben Sie im Befehlszeilenfenster Folgendes ein:
++
+[listing]
+----
+java -jar rest-import-utility.jar [-uusername] [-ppassword]
+[-aserver name or IP address] [-bbatch size] [-ccase sensitive:true/false]
+[-lextra logging:true/false] csv filename
+----
++
+Die Option -l, die die zusätzliche Protokollierung ermöglicht, und die Option -c, die die Groß-/Kleinschreibung aktiviert, sind standardmäßig auf false gesetzt. Daher müssen Sie diese nur angeben, wenn Sie die Funktionen verwenden möchten.
+
++
+[NOTE]
+====
+Zwischen den Optionen und ihren Werten gibt es keine Leerzeichen.
+
+====
++
+[NOTE]
+====
+Die folgenden Schlüsselwörter sind reserviert und verhindern, dass Benutzer sie als Anmerkungsnamen angeben: - Application - Application_Priority - Tenant - Line_of_Business - Business_Unit - Projektfehler werden generiert, wenn Sie versuchen, einen Anmerkungstyp mit einem der reservierten Schlüsselwörter zu importieren. Wenn Sie mit diesen Stichwörtern Beschriftungsnamen erstellt haben, müssen Sie diese ändern, damit das Importdienstprogramm ordnungsgemäß funktioniert.
+
++
+
+====
+

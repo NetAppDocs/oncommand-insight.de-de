@@ -1,0 +1,40 @@
+---
+permalink: howto/create-an-annotation-rule-to-automate-excluding-specific-aggregates-from-your-query.html 
+sidebar: sidebar 
+keywords:  
+summary: Alternativ zum manuellen Anwenden von Anmerkungen auf einzelne Assets können Sie mithilfe von Anmerkungsregeln automatisch Anmerkungen auf mehrere Assets anwenden. Anmerkungsregeln basieren auf Abfragen, die Sie erstellen, und wenn sie auf dem System ausgeführt werden, fügen sie vorhandenen Assets neue Assets hinzu. Wenn diese Vermögenswerte von einem Bericht ausgeschlossen werden, werden auch die neuen Vermögenswerte automatisch ausgeschlossen. 
+---
+= Erstellen einer Annotation-Regel, um bestimmte Aggregate aus Ihrem I/O-Dichtebericht zu automatisieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Alternativ zum manuellen Anwenden von Anmerkungen auf einzelne Assets können Sie mithilfe von Anmerkungsregeln automatisch Anmerkungen auf mehrere Assets anwenden. Anmerkungsregeln basieren auf Abfragen, die Sie erstellen, und wenn sie auf dem System ausgeführt werden, fügen sie vorhandenen Assets neue Assets hinzu. Wenn diese Vermögenswerte von einem Bericht ausgeschlossen werden, werden auch die neuen Vermögenswerte automatisch ausgeschlossen.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen eine Abfrage erstellt und gespeichert haben, die die NetApp Root-Aggregate identifiziert, die Sie in Ihrer Umgebung identifiziert haben.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Klicken Sie auf *Verwalten* > *Anmerkungsregeln*
+. Klicken Sie Auf *Hinzufügen*
++
+Das Dialogfeld Regel hinzufügen wird angezeigt.
+
+. Gehen Sie wie folgt vor:
++
+.. Geben Sie im Feld Name einen eindeutigen Namen ein, der die Regel „`RootAggrExclude`“ beschreibt.
+.. Klicken Sie auf „Query“ und wählen Sie die Abfrage aus, die von Insight verwendet werden soll, um die Anmerkungsregel auf:“` Aggregate0`“ anzuwenden.
+.. Klicken Sie auf Anmerkung und wählen Sie „`Root agg exclude`“ aus.
+.. Klicken Sie auf Wert, und geben Sie true ein
+
+
+

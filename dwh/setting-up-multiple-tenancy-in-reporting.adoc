@@ -1,0 +1,77 @@
+---
+permalink: dwh/setting-up-multiple-tenancy-in-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight Data Warehouse unterstützt mehrere Mandanten \ (oft verkürzt auf „Mandantenfähigkeit“ oder „Mandantenfähigkeit“\) bei der Berichterstellung, da Sie Benutzer einer oder mehreren Geschäftseinheiten zuordnen können. Mit dieser Funktion können Administratoren Daten oder Berichte nach Benutzerattributen oder Benutzerzugehörigkeit trennen.' 
+---
+= Einrichtung mehrerer Mandanten in Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight Data Warehouse unterstützt in der Berichterstellung mehrere Mandanten (oft verkürzt auf „`mmulti-Tenancy`“ oder „`multimandancy`“), da Sie Benutzer einer oder mehreren Geschäftseinheiten zuordnen können. Mit dieser Funktion können Administratoren Daten oder Berichte nach Benutzerattributen oder Benutzerzugehörigkeit trennen.
+
+Geschäftseinheiten nutzen eine Hierarchie für die Kapazitätszuordnung und verwenden dabei die folgenden Werte:
+
+* Mandant: Wird in erster Linie von Service-Providern verwendet, um Ressourcen einem Kunden zuzuordnen, z. B. NetApp.
+* Geschäftsbereich (Line of Business, Lob): Ein Geschäftsbereich innerhalb eines Unternehmens, z. B. „Hardware“ oder „Software“.
+* Business Unit: Eine traditionelle Geschäftseinheit wie „Sales“ oder „Marketing“.
+* Projekt: Ein Projekt, dem Sie möglicherweise Kapazitätszuordnung zuweisen möchten.
+
+
+Der Prozess der Konfiguration mehrerer Mandanten umfasst die folgenden wichtigen Schritte:
+
+* Konfigurieren Sie ein Data Warehouse-Benutzerkonto.
+* Erstellen Sie eine Gruppe im Reporting Portal.
+* Weisen Sie Benutzern eine oder mehrere Gruppen zu, die für Geschäftseinheiten stehen.
+* Weisen Sie einem oder mehreren Geschäftseinheiten Benutzer zu. Beispiel: Benutzer, die mit „NetApp“ verknüpft sind, erhalten Zugriff auf alle Geschäftseinheiten, die über „`NetApp`“ als Mandant verfügen.
+* Testen Sie, ob Benutzer nur die Berichte sehen können, die sie sehen sollten.
+
+
+Die folgenden Punkte fassen zusammen, wie Benutzer auf Berichtsdaten zugreifen:
+
+* Ein Benutzer, der keiner Gruppe zugewiesen ist, erhält Zugriff auf alle Daten.
+* Ein Benutzer, der einer Gruppe zugewiesen ist, kann ohne eine Geschäftseinheit keinen Zugriff auf Datensätze erhalten.
+
+
+Beispielsweise könnten Sie über die folgenden Abteilungen verfügen und müssen Berichte für Benutzer in diesen Abteilungen trennen.
+
+|===
+
+
+| Benutzer | Engineering | Unterstützung | Finanzen | Legal 
+
+
+ a| 
+Benutzer1
+ a| 
+X
+ a| 
+X
+ a| 
+ a| 
+
+
+
+ a| 
+Benutzer2
+ a| 
+ a| 
+ a| 
+X
+ a| 
+X
+
+
+
+ a| 
+Benutzer3
+ a| 
+ a| 
+X
+ a| 
+ a| 
+
+|===

@@ -1,0 +1,262 @@
+---
+permalink: dwh/backing-up-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die Data Warehouse-Datenbank, die auch ein Cognos-Backup enthält, in einer Datei sichern und später mithilfe des Data Warehouse-Portals wiederherstellen. Mit einem solchen Backup können Sie auf einen anderen Data Warehouse-Server migrieren oder auf eine neue Data Warehouse-Version aktualisieren. 
+---
+= Sichern der Data Warehouse-Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Data Warehouse-Datenbank, die auch ein Cognos-Backup enthält, in einer Datei sichern und später mithilfe des Data Warehouse-Portals wiederherstellen. Mit einem solchen Backup können Sie auf einen anderen Data Warehouse-Server migrieren oder auf eine neue Data Warehouse-Version aktualisieren.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://fqdn/dwh+`.
+. Wählen Sie im Navigationsfenster links *Backup/Restore* aus.
+. Klicken Sie auf *Backup* und wählen Sie Ihre Backup-Konfiguration aus:
++
+.. Alle Datamarts außer Performance Datamart
+.. Alle Datamarts
+
+
++
+Dieser Vorgang kann 30 Minuten oder länger dauern.
+
++
++ Data Warehouse erstellt eine Sicherungsdatei und zeigt ihren Namen an.
+
+. Klicken Sie mit der rechten Maustaste auf die Sicherungsdatei, und speichern Sie sie an einem gewünschten Speicherort.
++
+Sie möchten den Dateinamen möglicherweise nicht ändern. Sie sollten die Datei jedoch außerhalb des Installationspfads des Data Warehouse speichern.
+
++
+Die Data Warehouse Backup-Datei enthält MySQL der DWH-Instanz; benutzerdefinierte Schemas (MySQL DBs) und Tabellen; LDAP-Konfiguration; die Datenquellen, die Cognos mit der MySQL-Datenbank verbinden (nicht die Datenquellen, die den Insight-Server mit Geräten verbinden, um Daten zu erfassen); Importieren und Exportieren von Aufgaben, die Berichte importiert oder exportiert haben; Reporting von Sicherheitsrollen, Gruppen und Namespaces; Benutzerkonten; Alle geänderten Reporting Portal-Berichte sowie alle benutzerdefinierten Berichte, unabhängig davon, wo sie gespeichert sind, selbst im Verzeichnis „Meine Ordner“. Cognos-Systemkonfigurationsparameter wie SMTP-Servereinstellungen und Cognos-Einstellungen für benutzerdefinierten Speicher werden nicht gesichert.
+
++
+Die Standardschemas, in denen benutzerdefinierte Tabellen gesichert werden, umfassen Folgendes:
+
++
+|===
+
+
+ a| 
+dwh_Capacity
+
+
+
+ a| 
+dwh_Capacity_Staging
+
+
+
+ a| 
+dwh_Bemaßungen
+
+
+
+ a| 
+dwh_fs_util
+
+
+
+ a| 
+dwh_Inventory
+
+
+
+ a| 
+dwh_Inventory_Staging
+
+
+
+ a| 
+dwh_Inventory_transient
+
+
+
+ a| 
+dwh_Management
+
+
+
+ a| 
+dwh_Performance
+
+
+
+ a| 
+dwh_Performance_Staging
+
+
+
+ a| 
+dwh_Ports
+
+
+
+ a| 
+dwh_Reports
+
+
+
+ a| 
+dwh_sa_Staging
+
+
+
+ a| 
+
+
+
+ a| 
+
+
+
+ a| 
+
+|===
++
+Schemas, bei denen benutzerdefinierte Tabellen vom Backup ausgeschlossen werden, umfassen Folgendes:
+
++
+|===
+
+
+ a| 
+Information_Schema
+
+
+
+ a| 
+Akquisition
+
+
+
+ a| 
+Cloud_Modell
+
+
+
+ a| 
+Host_Data
+
+
+
+ a| 
+innodb
+
+
+
+ a| 
+Inventar
+
+
+
+ a| 
+Inventory_private
+
+
+
+ a| 
+Inventory_Time
+
+
+
+ a| 
+Protokolle
+
+
+
+ a| 
+Vereinfachtes
+
+
+
+ a| 
+mysql
+
+
+
+ a| 
+nas
+
+
+
+ a| 
+Performance
+
+
+
+ a| 
+Performance_Schema
+
+
+
+ a| 
+Performance_Views
+
+
+
+ a| 
+SANscreen
+
+
+
+ a| 
+Schrubben
+
+
+
+ a| 
+Servicesicherheit
+
+
+
+ a| 
+Test
+
+
+
+ a| 
+Tmp
+
+
+
+ a| 
+workbench
+
+
+
+ a| 
+
+
+
+ a| 
+
+
+
+ a| 
+
+|===
++
+Bei manuell initiierten Backups wird ein angezeigt `.zip` Datei wird erstellt, die folgende Dateien enthält:
+
++
+** Ein tägliches Backup `.zip` Datei, die Cognos-Berichtsdefinitionen enthält
+** Ein meldet Backup `.zip` Datei, die alle Berichte in Cognos enthält, einschließlich der Berichte im Verzeichnis eigene Ordner
+** Eine Data Warehouse-Datenbank-Sicherungsdatei Zusätzlich zu manuellen Backups, die Sie jederzeit durchführen können, erstellt Cognos täglich ein Backup (automatisch jeden Tag in einer Datei mit dem Namen generiert) `DailyBackup.zip`), das die Berichtsdefinitionen enthält. Die tägliche Sicherung umfasst die wichtigsten Ordner und Pakete, die mit dem Produkt geliefert werden. Das Verzeichnis „Meine Ordner“ und alle Verzeichnisse, die Sie außerhalb der obersten Produktordner erstellen, sind nicht im Cognos-Backup enthalten.
+
+
++
+[NOTE]
+====
+Aufgrund der Art und Weise, wie Insight die Dateien in benennt `.zip` Datei, zeigen einige Entpackprogramme, dass die Datei leer ist, wenn sie geöffnet wird. So lange wie die `.zip` Die Datei hat eine Größe größer als 0 und endet nicht mit einem `.bad` Erweiterung, die `.zip` Datei ist gültig. Sie können die Datei mit einem anderen Entpackprogramm wie 7-Zip oder WinZip® öffnen.
+
+====
+

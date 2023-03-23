@@ -1,0 +1,20 @@
+---
+permalink: config-admin/data-source-support-information.html 
+sidebar: sidebar 
+keywords:  
+summary: Im Rahmen Ihrer Konfigurationsplanung sollten Sie sicherstellen, dass die Geräte in Ihrer Umgebung von Insight überwacht werden können. Dazu können Sie die Data Source Support Matrix für Details zu Betriebssystemen, spezifischen Geräten und Protokollen überprüfen. Einige Datenquellen sind möglicherweise nicht auf allen Betriebssystemen verfügbar. 
+---
+= Informationen zur Unterstützung der Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Rahmen Ihrer Konfigurationsplanung sollten Sie sicherstellen, dass die Geräte in Ihrer Umgebung von Insight überwacht werden können. Dazu können Sie die Data Source Support Matrix für Details zu Betriebssystemen, spezifischen Geräten und Protokollen überprüfen. Einige Datenquellen sind möglicherweise nicht auf allen Betriebssystemen verfügbar.
+
+
+
+== Speicherort der aktuellsten Version der Data Source Support Matrix
+
+Die Support-Matrix für die Datenquelle von OnCommand Insight wird mit jeder Service Pack-Version aktualisiert. Die aktuellste Version des Dokuments finden Sie unter https://mysupport.netapp.com/api/content-service/staticcontents/content/products/oncommandinsight/DatasourceSupportMatrix_7.3.x.pdf["NetApp Support Website"]. .

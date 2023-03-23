@@ -1,0 +1,24 @@
+---
+permalink: howto/custom-dashboard-group-by.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Daten in einem TabellenWidget können nach allen verfügbaren Attributen gruppiert werden. So können Sie einen Überblick über Ihre Daten anzeigen und sie für mehr Details anzeigen. Metriken in der Tabelle werden für eine einfache Anzeige in jeder zusammenklappbaren Zeile aufgerollt. 
+---
+= Gruppierung in Tabellen-Widgets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Daten in einem TabellenWidget können nach allen verfügbaren Attributen gruppiert werden. So können Sie einen Überblick über Ihre Daten anzeigen und sie für mehr Details anzeigen. Metriken in der Tabelle werden für eine einfache Anzeige in jeder zusammenklappbaren Zeile aufgerollt.
+
+Mit den Tabelle-Widgets können Sie Ihre Daten anhand der von Ihnen festgelegten Attribute gruppieren. Beispielsweise könnte Ihre Tabelle die Storage-IOPS insgesamt anzeigen, die nach den Datacentern gruppiert sind, in denen diese Storage gespeichert sind. Sie können auch eine Tabelle mit virtuellen Maschinen anzeigen, die nach dem Hypervisor gruppiert sind, der sie hostet. In der Liste können Sie jede Gruppe erweitern, um die Assets in dieser Gruppe anzuzeigen.
+
+Die Gruppierung ist nur im Widget-Typ *Tabelle* verfügbar.
+
+
+
+== Aufkommen von Performance-Daten
+
+Wenn Sie eine Spalte für Leistungsdaten (z. B. _IOPS - Total_) in ein TabellenWidget einfügen, können Sie bei Auswahl der Gruppierung der Daten eine Aufrollmethode für diese Spalte auswählen. Die Standard-Roll-up-Methode ist es, den _Durchschnitt_ der zugrunde liegenden Daten in der Gruppenzeile anzuzeigen. Sie können auch wählen, ob die Daten _sum_, _minimum_ oder _maximum_ angezeigt werden sollen.

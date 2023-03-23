@@ -1,0 +1,35 @@
+---
+permalink: howto/create-an-annotation-for-the-root-volumes-returned-by-your-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: Anmerkungen sind spezielle Notizen, die Sie Ihren Assets zuweisen, damit Sie Assets nach ihren Anmerkungen filtern können. Die von Ihnen erstellten Annotationen werden verwendet, um die NetApp Root-Aggregate in Ihrer Umgebung zu identifizieren und sicherzustellen, dass diese nicht in einem bestimmten Bericht enthalten sind. 
+---
+= Erstellen Sie eine Anmerkung für die von Ihren Abfragen zurückgegebenen Root-Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Anmerkungen sind spezielle Notizen, die Sie Ihren Assets zuweisen, damit Sie Assets nach ihren Anmerkungen filtern können. Die von Ihnen erstellten Annotationen werden verwendet, um die NetApp Root-Aggregate in Ihrer Umgebung zu identifizieren und sicherzustellen, dass diese nicht in einem bestimmten Bericht enthalten sind.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen alle Root-Aggregate identifiziert haben, die Sie aus dem Bericht „`High I/O Density`“ ausschließen möchten.
+
+
+
+== Schritte
+
+. Erstellen Sie eine Annotation, um alle NetApp-Root-Aggregate, die Sie identifiziert haben, mit Abfragen zu verknüpfen: *Verwalten* > *Annotationen*
+. Klicken Sie Auf *Hinzufügen*
++
+.. Geben Sie den Namen für die Anmerkung ein: *RootAggr*
+.. Geben Sie eine Beschreibung der Anmerkung ein: *Root-Aggregat aus dem Bericht "hohe I/O-Dichte" entfernen*
+.. Geben Sie den Typ der Anmerkung ein: *Boolean*
+
+
+. Klicken Sie Auf *Speichern*
+

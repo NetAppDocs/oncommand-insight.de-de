@@ -1,0 +1,152 @@
+---
+permalink: config-admin/microsoft-hyper-v-wmi-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Für die Konfiguration erfordert die Microsoft Hyper-V-Datenquelle die IP-Adresse oder den auflösbaren DNS-Namen für den physischen Host \(Hypervisor\). Diese Datenquelle verwendet PowerShell \(zuvor verwendete WMI\).' 
+---
+= Microsoft Hyper-V Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für die Konfiguration erfordert die Microsoft Hyper-V-Datenquelle die IP-Adresse oder den auflösbaren DNS-Namen für den physischen Host (Hypervisor). Diese Datenquelle verwendet PowerShell (zuvor WMI verwendet).
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Bestandsinformationen aus der Hyper-V-Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Virtuelle Festplatte
+ a| 
+Virtuelles Laufwerk
+
+
+
+ a| 
+Host
+ a| 
+Host
+
+
+
+ a| 
+Virtual Machine
+ a| 
+Virtual Machine
+
+
+
+ a| 
+Cluster Shared Volumes (CSV), Partition Volume
+ a| 
+Datastore
+
+
+
+ a| 
+Internet SCSI-Gerät, Multi Path SCSI LUN
+ a| 
+LUN
+
+
+
+ a| 
+Fibre Channel-Port
+ a| 
+Port
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* Für die Hyper-V muss Port 5985 geöffnet sein, damit Daten erfasst und Remote-Zugriff/-Management erfolgen können.
+* IP-Adresse des Knoten der Clustering-Gruppe
+* Lokaler Administrator-Benutzer und Passwort auf dem Hypervisor
+* Benutzerkonto auf Administratorebene
+* Port-Anforderungen: Port 135 und dynamische TCP-Ports zugewiesen 1024-65535 für Windows 2003 und älter und 49152-65535 für Windows 2008.
+* Die DNS-Auflösung muss erfolgreich sein, auch wenn der Datensammler nur auf eine IP-Adresse verweist.
+* Für jeden Hyper-V Hypervisor muss „`Resource Metering`“ für jede VM auf jedem Host aktiviert sein. Dadurch kann jeder Hypervisor auf jedem Gast mehr Daten für Cloud Insights zur Verfügung stellen. Wenn diese Einstellung nicht festgelegt ist, werden für jeden Gast weniger Performance-Metriken erfasst. Weitere Informationen zur Ressourcenmessung finden Sie in der microsoft-Dokumentation:
++
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831661(v=ws.11)["Hyper-V Übersicht zur Ressourcenmessung"]
+
++
+https://docs.microsoft.com/en-us/powershell/module/hyper-v/enable-vmresourcemetering?view=win10-ps["Aktivieren-VMressourcenMetering"]
+
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+IP-Adresse des physischen Hosts
+ a| 
+Die IP-Adresse oder der vollqualifizierte Domänenname für den physischen Host (Hypervisor).
+
+
+
+ a| 
+Benutzername
+ a| 
+Der Administrator-Benutzername wird vom Hypervisor verwendet
+
+
+
+ a| 
+Passwort
+ a| 
+Kennwort für den Hypervisor
+
+
+
+ a| 
+NT-Domäne
+ a| 
+Der von den Nodes im Cluster verwendete DNS-Name
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 20 Minuten)
+
+
+
+ a| 
+Verbindungs-Timeout (ms)
+ a| 
+Verbindungs-Timeout (Standard: 60000 ms)
+
+|===

@@ -1,0 +1,52 @@
+---
+permalink: dwh/importing-user-defined-annotations-into-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Nachdem Sie eine Aktualisierung der Anmerkungen in OnCommand Insight erzwungen haben, müssen Sie die gewünschten Anmerkungen in Data Warehouse auswählen und einen Data Warehouse Build starten. Sie können bis zum nächsten geplanten Build warten oder jetzt einen Build starten. 
+---
+= Benutzerdefinierte Anmerkungen werden in Data Warehouse importiert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie eine Aktualisierung der Anmerkungen in OnCommand Insight erzwungen haben, müssen Sie die gewünschten Anmerkungen in Data Warehouse auswählen und einen Data Warehouse Build starten. Sie können bis zum nächsten geplanten Build warten oder jetzt einen Build starten.
+
+
+
+== Schritte
+
+. Melden Sie sich als Administrator beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster links auf *Anmerkungen*.
++
+image::../media/oci-dwh-admin-annotations-gif.gif[DWH-Anmerkungen]
+
++
+Die Liste zeigt eine Zeile für jeden Anmerkungstyp und ein Zielobjekt an, dem die Anmerkung zugeordnet werden kann. Ein Häkchen in der Spalte Veröffentlicht zeigt an, dass die Anmerkung bereits für das bestimmte Zielobjekt ausgewählt wurde und bereits über die Data Warehouse Data Marts verfügbar ist.
+
+. Klicken Sie auf *Bearbeiten*, um zu bearbeiten, wie Anmerkungen aus OnCommand Insight importiert werden.
++
+image::../media/oci-dwh-admin-annotations-edit-gif.gif[DWH-Anmerkungen bearbeiten]
+
+. Gehen Sie wie folgt vor, um den Anmerkungsprozess zu bearbeiten:
++
+** Wählen Sie *Veröffentlicht*, um aus OnCommand Insight abgerufene Anmerkungen in die Data Warehouse-Datenbank hinzuzufügen. Klicken Sie auf *Alle*, um alle Anmerkungen auf allen Objekten auszuwählen. Klicken Sie auf *Keine*, um sicherzustellen, dass keine Optionen ausgewählt sind.
++
+[NOTE]
+====
+Deaktivieren Sie diese Option, um die Anmerkungsspalte aus der Bestandstabelle des jeweiligen Objekts und den zugehörigen Datentabellen zu entfernen. Wenn benutzerdefinierte Berichte Anmerkungsdaten verwenden, werden die Berichte nicht erfolgreich ausgeführt.
+
+====
+** Aktivieren Sie *Init with Current*, um historische Daten in Data Warehouse-Dimensionstabellen mit dem aktuellen Anmerkungswert zu initialisieren. Klicken Sie auf *Alle*, um alle Anmerkungen auf allen Objekten auszuwählen. Klicken Sie auf *Keine*, um sicherzustellen, dass keine Optionen ausgewählt sind. Dieses Kontrollkästchen ist deaktiviert, nachdem eine Anmerkung veröffentlicht wurde. Das Kontrollkästchen ist für nicht veröffentlichte Anmerkungen aktiviert. Wenn beispielsweise ein Host mit dem Anmerkungstyp „`floor`“ beschriftet wird und den Wert „`1`“ erhält und in der Tabelle Host_Dimension 3 Zeilen für diesen Host vorhanden sind, wird bei Auswahl von *Init with Current* der Wert „`1`“ in der Spalte „`floor`“ für alle 3 Zeilen in der Tabelle Host_Dimension zugeordnet. Wenn *Init with Current* nicht ausgewählt ist, wird nur die letzte Zeile für diesen Host den Wert „`1`“ in der Spalte „Floor“ haben.
+
+
+. Klicken Sie Auf *Speichern*.
++
+Eine Warnmeldung wird angezeigt, die darauf hinweist, dass dadurch Änderungen an der Struktur der Daten oder Datenverlust verursacht werden, wenn Sie Anmerkungen entfernen.
+
+. Klicken Sie auf *Ja*, um fortzufahren.
++
+Data Warehouse initiiert einen Job mit asynchronen Anmerkungen, der die angeforderten Änderungen anwendet. Sie können den Job auf der Seite Jobs anzeigen. Sie können auch die Änderungen im Data Warehouse-Datenbankschema sehen.
+
+

@@ -1,0 +1,23 @@
+---
+permalink: dwh/generating-a-manual-data-warehouse-build.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Nach dem Erzwingen einer Aktualisierung der Anmerkungen \(Ausführen transienter Daten\) in OnCommand Insight müssen Sie ein Data Warehouse Build initiieren. Sie können bis zum nächsten geplanten Build warten oder jetzt einen Build starten.' 
+---
+= Generieren eines manuellen Data Warehouse-Builds
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach dem Erzwingen einer Aktualisierung von Anmerkungen (Ausführen transienter Daten) in OnCommand Insight müssen Sie ein Data Warehouse Build initiieren. Sie können bis zum nächsten geplanten Build warten oder jetzt einen Build starten.
+
+
+
+== Schritte
+
+. Melden Sie sich als Administrator beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster auf der linken Seite auf *Zeitplan*.
+. Klicken Sie auf *Build now*.
+

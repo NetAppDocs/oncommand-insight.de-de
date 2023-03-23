@@ -1,0 +1,42 @@
+---
+permalink: config-admin/anomaly-detection-monitoring-status.html 
+sidebar: sidebar 
+keywords:  
+summary: Der Überwachungsstatus der Anomalieerkennung ist in Anwendungsabfragen, Widgets und Bestandsseiten verfügbar. 
+---
+= Überwachungsstatus der Anomalieerkennung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Überwachungsstatus der Anomalieerkennung ist in Anwendungsabfragen, Widgets und Bestandsseiten verfügbar.
+
+
+
+== Überwachungsstatus der Anomalieerkennung
+
+Für jede Anwendung wird eine der folgenden Optionen angezeigt:
+
+* *OK*
++
+Es werden keine Probleme erkannt.
+
+* *Lernen*
++
+Der Anomalieerkennungsserver ruft bis zu 14 Tage Performance-Daten ab und lädt sie in das Anomalieerkennungs-Engine.
+
+* *Übersteigt die maximale Anzahl von Aktiva*
++
+Die maximale Anzahl der überwachten Assets für eine Anwendung wurde überschritten. Für eine Anwendung können nicht mehr als 4000 Assets überwacht werden. Die Überwachung wird angehalten, bis die Anzahl der Assets kleiner oder gleich 4000 ist. Reduzieren Sie die Anzahl der überwachten Assets, um die Überwachung fortzusetzen.
+
+* *Fehlgeschlagen*
++
+Die Verbindung zum Anomalieerkennungsserver ist fehlgeschlagen.
+
+* *Nicht überwacht*
++
+Die Überwachung ist für die Anwendung deaktiviert. Bei Abfragen und Widgets bleibt dieses Feld leer.
+
+

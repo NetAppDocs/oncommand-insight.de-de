@@ -1,0 +1,53 @@
+---
+permalink: howto/compare-objects-with-the-top-10-latency-total-to-the-average-latency-for-all-like-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: Vielleicht möchten Sie einmal die VMs mit der Gesamtlatenz von 10 und der durchschnittlichen Latenz vergleichen, um alle zu identifizieren, die außerhalb des durchschnittlichen Bereichs liegen. Diese Informationen könnten bei Entscheidungen zum Lastausgleich von Workloads auf VMs helfen. 
+---
+= Vergleichen Sie Objekte mit der Gesamtlatenz von 10 und der durchschnittlichen Latenz für alle ähnlichen Objekte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vielleicht möchten Sie einmal die VMs mit der Gesamtlatenz von 10 und der durchschnittlichen Latenz vergleichen, um alle zu identifizieren, die außerhalb des durchschnittlichen Bereichs liegen. Diese Informationen könnten bei Entscheidungen zum Lastausgleich von Workloads auf VMs helfen.
+
+
+
+== Schritte
+
+. Fügen Sie dem neuen Dashboard ein Widget mit einem gestapelten Flächendiagramm hinzu: *Widget* > *gestapeltes Flächendiagramm*
++
+.. Ändern Sie das Standardgerät in Virtual Machine: Klicken Sie auf *Storage* > *Virtual Machine* > *Latency total*
++
+Das Widget zeigt die Latenzsumme für alle VMs für 24 Stunden in einem gestapelten Flächendiagramm an.
+
+.. Erstellen Sie eine zweite Anzeige in diesem Widget, die Latenz insgesamt gemittelt für alle VMs zeigt: *Widget* > *Liniendiagramm*
+.. Ändern Sie das Standardgerät in Virtual Machine: Klicken Sie auf *Virtual Machine* > *Latency-total*
++
+Das Widget zeigt die Latenzsumme für den standardmäßigen 24-Stunden-Zeitraum unter Verwendung eines Liniendiagramms an.
+
+.. Klicken Sie auf *X* in der *Roll Up*-Leiste und wählen Sie *Show* > *Top* > *10*
+
+
++
+Das System zeigt die 10 wichtigsten VMs basierend auf der Gesamtlatenz an.
+
+. Um die durchschnittliche Latenzgesamtmenge für alle VMs mit den Top 10 IOPS insgesamt zu vergleichen, verwenden Sie die folgenden Schritte:
++
+.. Klicken Sie Auf *+Hinzufügen*
+.. Ändern Sie das Standardgerät in Virtual Machine: Klicken Sie auf *Storage* > *Virtual Machine* > *IOPS total*
+.. Klicken Sie auf *X* in der *Roll Up*-Leiste und wählen Sie *Show* > *Top* > *10*
+
+
++
+Das System zeigt die 10 Objekte mit hoher Latenz und die durchschnittliche Latenz in einem Liniendiagramm an.
+
++
++ Bild::../media/Analytics-top10-avg.gif[]
+
++
++ die durchschnittliche Latenz beträgt 1.6 ms, während in den Top Ten, die VMs mit einer Latenz von über 200 ms.
+
+

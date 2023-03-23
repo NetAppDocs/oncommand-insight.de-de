@@ -1,0 +1,69 @@
+---
+permalink: config-admin/changing-the-time-segment-of-the-data-displayed.html 
+sidebar: sidebar 
+keywords:  
+summary: Standardmäßig werden auf einer Bestandsseite die letzten 24 Stunden der Daten angezeigt. Sie können jedoch das angezeigte Datensegment ändern, indem Sie eine andere feste Zeit oder einen benutzerdefinierten Zeitraum auswählen, um weniger oder mehr Daten anzuzeigen. 
+---
+= Ändern des Zeitbereichs der angezeigten Daten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Standardmäßig werden auf einer Bestandsseite die letzten 24 Stunden der Daten angezeigt. Sie können jedoch das angezeigte Datensegment ändern, indem Sie eine andere feste Zeit oder einen benutzerdefinierten Zeitraum auswählen, um weniger oder mehr Daten anzuzeigen.
+
+
+
+== Über diese Aufgabe
+
+Sie können das Zeitsegment der angezeigten Daten ändern, indem Sie eine Option verwenden, die sich auf jeder Asset-Seite befindet, unabhängig vom Asset-Typ.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web-Benutzeroberfläche an.
+. Suchen Sie eine Asset-Seite, indem Sie eine der folgenden Aktionen ausführen:
++
+** Klicken Sie in der Insight-Symbolleiste auf image:../media/search-assets-icon.gif[""]Geben Sie den Namen des Assets ein, und wählen Sie das Asset aus der Liste aus.
+** Klicken Sie auf *Dashboards*, wählen Sie *Assets Dashboard*, suchen Sie einen Asset-Namen und klicken Sie darauf. Die Seite Anlage wird angezeigt.
+
+
+. Klicken Sie oben links auf der Seite auf eines der folgenden Zeitsymbole, um das angezeigte Datensegment zu ändern:
++
+** *3h*
++
+Zeigt die Daten der letzten drei Stunden an.
+
+** *24h*
++
+Zeigt die Daten der letzten 24 Stunden an.
+
+** * 3d*
++
+Zeigt die Daten der letzten drei Tage an.
+
+** *7d*
++
+Zeigt die Daten der letzten sieben Tage an.
+
+** *30d*
++
+Zeigt die Daten der letzten dreißig Tage an.
+
+** *Benutzerdefiniert*
++
+Zeigt ein Dialogfeld an, in dem Sie einen benutzerdefinierten Zeitraum auswählen können. Sie können bis zu 31 Tage Daten gleichzeitig anzeigen.
+
+
+
+. Wenn Sie *Custom* gewählt haben, gehen Sie wie folgt vor:
++
+.. Klicken Sie auf das Datumsfeld, und wählen Sie einen Monat, einen Tag und ein Jahr für das Anfangsdatum aus.
+.. Klicken Sie auf die Liste Zeit, und wählen Sie eine Startzeit aus.
+.. Wiederholen Sie beide Schritte a und b für die Enddaten und die Endzeit.
+.. Klicken Sie Auf image:../media/check-box-ok.gif[""].
+
+
+

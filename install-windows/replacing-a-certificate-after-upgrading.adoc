@@ -1,0 +1,80 @@
+---
+permalink: install-windows/replacing-a-certificate-after-upgrading.html 
+sidebar: sidebar 
+keywords:  
+summary: Das Öffnen der OnCommand Insight-Web-Benutzeroberfläche nach einem Upgrade führt zu einer Zertifizierungswarnung. Die Warnmeldung wird angezeigt, weil nach dem Upgrade kein gültiges selbstsigniertes Zertifikat verfügbar ist. Um zu verhindern, dass die Warnmeldung in Zukunft angezeigt wird, können Sie ein gültiges selbstsigniertes Zertifikat installieren, um das ursprüngliche Zertifikat zu ersetzen. 
+---
+= Ersetzen eines Zertifikats nach dem Upgrade von OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Öffnen der OnCommand Insight-Web-Benutzeroberfläche nach einem Upgrade führt zu einer Zertifizierungswarnung. Die Warnmeldung wird angezeigt, weil nach dem Upgrade kein gültiges selbstsigniertes Zertifikat verfügbar ist. Um zu verhindern, dass die Warnmeldung in Zukunft angezeigt wird, können Sie ein gültiges selbstsigniertes Zertifikat installieren, um das ursprüngliche Zertifikat zu ersetzen.
+
+
+
+== Bevor Sie beginnen
+
+Ihr System muss die minimale Verschlüsselungsbit-Ebene (1024 Bit) erfüllen.
+
+
+
+== Über diese Aufgabe
+
+Die Zertifizierungswarnung hat keinen Einfluss auf die Benutzerfreundlichkeit des Systems. An der Eingabeaufforderung können Sie angeben, dass Sie das Risiko verstanden haben, und dann mit Insight fortfahren.
+
+
+
+== Schritte
+
+. Listen Sie den Inhalt des Keystore auf: `C:\Program Files\SANscreen\java64\bin>keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+Wenn Sie zur Eingabe eines Passworts aufgefordert werden, geben Sie ein `changeit`.
+
++
+Es sollte mindestens ein Zertifikat im Schlüsselspeicher vorhanden sein, `ssl certificate`.
+
+. Löschen Sie die `ssl certificate`: `keytool -delete -alias ssl certificate -keystore c:\ProgramFiles\SANscreen\wildfly\standalone\configuration\server.keystore`
+. Einen neuen Schlüssel generieren: `keytool -genkey -alias OCI.hostname.com -keyalg RSA -keysize 2048 -keystore "c:\ProgramFiles\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. Wenn Sie nach vor- und Nachnamen gefragt werden, geben Sie den vollständig qualifizierten Domänennamen (FQDN) ein, den Sie verwenden möchten.
+.. Geben Sie die folgenden Informationen zu Ihrer Organisation und Organisationsstruktur an:
++
+*** Land: Zweistellige ISO-Abkürzung für Ihr Land (z. B. USA)
+*** Bundesland oder Provinz: Name des Bundesstaates oder der Provinz, in dem sich der Hauptsitz Ihres Unternehmens befindet (z. B. Massachusetts)
+*** Ort: Name der Stadt, in der sich der Hauptsitz Ihrer Organisation befindet (z. B. Waltham)
+*** Name des Unternehmens: Name des Unternehmens, dem der Domain-Name gehört (z. B. NetApp)
+*** Name der Organisationseinheit: Name der Abteilung oder Gruppe, die das Zertifikat verwenden soll (z. B. Support)
+*** Domänenname/ Allgemeiner Name: Der FQDN, der für DNS-Suchen Ihres Servers verwendet wird (z. B. www.example.com). Das System antwortet mit Informationen wie den folgenden: `Is CN=www.example.com, OU=support, O=NetApp, L=Waltham, ST=MA, C=US correct?`
+
+
+.. Eingabe `Yes` Wenn der allgemeine Name (CN) gleich dem FQDN ist.
+.. Wenn Sie zur Eingabe des Schlüsselpassworts aufgefordert werden, geben Sie das Kennwort ein, oder drücken Sie die Eingabetaste, um das vorhandene Schlüsselspeicher-Passwort zu verwenden.
+
+
+. Erstellen Sie eine Zertifikatanforderungsdatei: `keytool -certreq -alias localhost -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -file c:\localhost.csr`
++
+Der `c:\localhost.csr` Die Datei ist die neu generierte Zertifikatanforderungsdatei.
+
+. Senden Sie die `c:\localhost.csr` Bei der Zertifizierungsstelle zur Genehmigung einreichen.
++
+Nachdem die Zertifikatanforderungsdatei genehmigt wurde, möchten Sie das Zertifikat in zurücksenden `.der` Formatieren. Die Datei wird möglicherweise als zurückgegeben `.der` Datei: Das Standarddateiformat ist `.cer` Für Microsoft CA-Services.
+
+. Importieren Sie das genehmigte Zertifikat: `keytool -importcert -alias localhost -file c:\localhost2.DER -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. Wenn Sie zur Eingabe eines Kennworts aufgefordert werden, geben Sie das Passwort für den Keystore ein.
++
+Vom System wird die folgende Meldung angezeigt: `Certificate reply was installed in keystore`
+
+
+
+. Starten Sie den SANscreen-Serverdienst neu.
+
+
+
+
+== Ergebnisse
+
+Der Webbrowser meldet keine Zertifikatwarnungen mehr.

@@ -1,0 +1,12 @@
+---
+permalink: install-linux/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Installationsanleitung für Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

@@ -1,0 +1,24 @@
+---
+permalink: dwh/troubleshooting-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können verschiedene Aufgaben im Zusammenhang mit der Fehlerbehebung bei Data Warehouse ausführen. 
+---
+= Fehlerbehebung Bei Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können verschiedene Aufgaben im Zusammenhang mit der Fehlerbehebung bei Data Warehouse ausführen.
+
+* Verwenden Sie OnCommand Insight ASUP.
+* Anzeigen von OnCommand Insight-Protokollen
+* Beheben von Problemen im Zusammenhang mit Upgrades und Geschäftseinheiten.
+* Beheben von Problemen im Zusammenhang mit der Konsolidierung mehrerer OnCommand Insight-Server
+
+
+Sie können mehrere OnCommand Insight Server in derselben Data Warehouse-Datenbank konsolidieren. In vielen Konfigurationen wird dasselbe Objekt von mehreren Konnektoren gemeldet (d. h., derselbe Switch existiert in zwei OnCommand Insight-Instanzen). In solchen Fällen konsolidiert Data Warehouse die mehrere Objekte in einem (ein primärer Konnektor wird ausgewählt und die Daten des Objekts werden nur von diesem Konnektor übernommen).
+
+Der Speicheradministrator kann auf der Seite Fehlerbehebung Probleme im Zusammenhang mit Konsolidierungsproblemen beheben.

@@ -1,0 +1,30 @@
+---
+permalink: dwh/sending-oncommand-insight-logs-to-asup.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können ASUP-Protokolle an den technischen Support senden, um Hilfe bei der Fehlerbehebung zu erhalten. ASUP für Data Warehouse wird für die automatische Ausführung konfiguriert. Im Data Warehouse-Portal können Sie den automatischen Sendevorgang deaktivieren, ein Backup der Data Warehouse-Datenbank aufnehmen oder eine Übertragung an ASUP initiieren. Wenn Sie einen ASUP-Bericht anfordern, wird die Berichtsanfrage auf der Seite Jobs im Data Warehouse-Portal als Job angezeigt. 
+---
+= Senden von Insight Protokollen an ASUP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ASUP-Protokolle an den technischen Support senden, um Hilfe bei der Fehlerbehebung zu erhalten. ASUP für Data Warehouse wird für die automatische Ausführung konfiguriert. Im Data Warehouse-Portal können Sie den automatischen Sendevorgang deaktivieren, ein Backup der Data Warehouse-Datenbank aufnehmen oder eine Übertragung an ASUP initiieren. Wenn Sie einen ASUP-Bericht anfordern, wird die Berichtsanfrage auf der Seite Jobs im Data Warehouse-Portal als Job angezeigt.
+
+
+
+== Über diese Aufgabe
+
+Der Job wird von der Jobwarteschlange verwaltet, ähnlich wie die Verarbeitung anderer Jobs. Wenn ein ASUP Job bereits den Status Ausstehend oder ausgeführt hat, wird eine Fehlermeldung angezeigt, die angibt, dass die ASUP Berichtsanforderung der Jobanforderung nicht hinzugefügt werden kann, da die Jobwarteschlange ausstehende oder laufende Anforderungen enthält.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse-Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster auf der linken Seite auf *Fehlerbehebung*.
+. Klicken Sie im Abschnitt *OnCommand Insight ASUP* auf der Seite *Fehlerbehebung* auf *DWH-Problembehandlungs-Bericht herunterladen*, um den Problembehebungsbericht abzurufen.
+. Um den Bericht an den OnCommand Insight-Server zu senden, der als erster Konnektor auf der Seite Data Warehouse Portal *Connectors* aufgeführt ist, klicken Sie auf *Jetzt senden*.
+

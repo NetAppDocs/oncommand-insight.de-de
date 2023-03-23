@@ -1,0 +1,242 @@
+---
+permalink: config-admin/predefined-annotation-types.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight bietet einige standardmäßige Anmerkungstypen. Mit diesen Annotationen können Daten gefiltert oder gruppiert und die Datenberichterstattung gefiltert werden. 
+---
+= Standard-Anmerkungstypen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight bietet einige standardmäßige Anmerkungstypen. Mit diesen Annotationen können Daten gefiltert oder gruppiert und die Datenberichterstattung gefiltert werden.
+
+Sie können Assets mit Standardanmerkungstypen verknüpfen, z. B.:
+
+* Lebenszyklus von Anlagen, z. B. Geburtstag, Sonnenuntergang oder Ende des Lebenszyklus
+* Positionsinformationen zu einem Gerät wie z. B. Rechenzentren, Gebäude oder Etage
+* Klassifizierung von Assets, z. B. nach Qualität (Tiers), nach angeschlossenen Geräten (Switch-Ebene) oder nach Service-Level
+* Status, z. B. „heiß“ (hohe Auslastung)
+
+
+In der folgenden Tabelle sind die Standardbeschriftungstypen aufgeführt. Sie können diese Beschriftungsnamen ganz nach Ihren Bedürfnissen bearbeiten.
+
+|===
+
+
+| Anmerkungstypen | Beschreibung | Typ 
+
+
+ a| 
+Alias
+ a| 
+Benutzerfreundlicher Name für eine Ressource.
+ a| 
+Text
+
+
+
+ a| 
+Geburtstag
+ a| 
+Datum, an dem das Gerät online gestellt wurde oder wird.
+ a| 
+Datum
+
+
+
+ a| 
+Gebäude
+ a| 
+Physischer Standort von Host-, Storage-, Switch- und Bandressourcen.
+ a| 
+Liste
+
+
+
+ a| 
+Stadt
+ a| 
+Standort der Gemeinde von Host-, Storage-, Switch- und Tape-Ressourcen
+ a| 
+Liste
+
+
+
+ a| 
+Rechnerressourcengruppe
+ a| 
+Gruppenzuweisung, die von der Datenquelle „Host“ und „VM-Dateisysteme“ verwendet wird.
+ a| 
+Liste
+
+
+
+ a| 
+Kontinent
+ a| 
+Geografischer Standort von Host-, Storage-, Switch- und Tape-Ressourcen
+ a| 
+Liste
+
+
+
+ a| 
+Land
+ a| 
+Nationaler Standort von Host-, Storage-, Switch- und Bandressourcen.
+ a| 
+Liste
+
+
+
+ a| 
+Rechenzentrum
+ a| 
+Physischer Standort der Ressource und steht für Hosts, Speicher-Arrays, Switches und Bänder zur Verfügung.
+ a| 
+Liste
+
+
+
+ a| 
+Direkt Verbunden
+ a| 
+Gibt an (Ja oder Nein), ob eine Speicherressource direkt mit Hosts verbunden ist.
+ a| 
+Boolesch
+
+
+
+ a| 
+Ende des Supports
+ a| 
+Datum, an dem ein Gerät offline genommen wird, z. B. wenn der Lease abgelaufen ist oder die Hardware außer Betrieb genommen wird.
+ a| 
+Datum
+
+
+
+ a| 
+Fabric-Alias
+ a| 
+Benutzerfreundlicher Name für eine Fabric.
+ a| 
+Text
+
+
+
+ a| 
+Boden
+ a| 
+Standort eines Geräts auf einem Stockwerk eines Gebäudes. Kann für Hosts, Speicher-Arrays, Switches und Bänder eingerichtet werden.
+ a| 
+Liste
+
+
+
+ a| 
+Heiß
+ a| 
+Geräte, die bereits regelmäßig oder an der Kapazitätsgrenze stark genutzt werden.
+ a| 
+Boolesch
+
+
+
+ a| 
+Hinweis
+ a| 
+Kommentare, die einer Ressource zugeordnet werden sollen.
+ a| 
+Text
+
+
+
+ a| 
+Rack
+ a| 
+Rack, in dem sich die Ressource befindet.
+ a| 
+Text
+
+
+
+ a| 
+Zimmer
+ a| 
+Raum in einem Gebäude oder einem anderen Standort mit Host-, Speicher-, Switch- und Bandressourcen.
+ a| 
+Liste
+
+
+
+ a| 
+San
+ a| 
+Logische Partition des Netzwerks. Verfügbar auf Hosts, Speicher-Arrays, Bändern, Switches und Anwendungen.
+ a| 
+Liste
+
+
+
+ a| 
+Service-Level
+ a| 
+Eine Reihe unterstützter Service-Level, die Sie Ressourcen zuweisen können. Zeigt eine Liste mit bestellten Optionen für interne Volumes, qtree und Volumes an. Bearbeiten Sie Service Levels, um Performance-Richtlinien für unterschiedliche Level festzulegen.
+ a| 
+Liste
+
+
+
+ a| 
+Bundesland/Kanton
+ a| 
+Bundesland oder Provinz, in der sich die Ressource befindet.
+ a| 
+Liste
+
+
+
+ a| 
+Sonnenuntergang
+ a| 
+Schwellenwert, nach dem keine neuen Zuordnungen an das Gerät vorgenommen werden können. Nützlich für geplante Migrationen und andere ausstehende Netzwerkänderungen.
+ a| 
+Datum
+
+
+
+ a| 
+Switch-Ebene
+ a| 
+Enthält vordefinierte Optionen zum Einrichten von Kategorien für Switches. Normalerweise bleiben diese Bezeichnungen für die gesamte Lebensdauer des Geräts erhalten, obwohl Sie sie bei Bedarf bearbeiten können. Nur für Switches verfügbar.
+ a| 
+Liste
+
+
+
+ a| 
+Ebene
+ a| 
+Sie können darüber hinaus verwendet werden, um in Ihrer Umgebung verschiedene Service Levels zu definieren. Tiers können den Typ des Levels definieren, z. B. die erforderliche Geschwindigkeit (z. B. Gold oder Silber). Diese Funktion ist nur für interne Volumes, qtrees, Storage Arrays, Storage-Pools und Volumes verfügbar.
+ a| 
+Liste
+
+
+
+ a| 
+Schweregrad Der Verletzung
+ a| 
+Rangfolge (z. B. Major) eines Verstoßes (z. B. fehlende Host-Ports oder fehlende Redundanz) in einer Hierarchie von höchster bis niedrigster Bedeutung.
+ a| 
+Liste
+
+|===
+[NOTE]
+====
+Alias, Rechenzentrum, Hot, Service-Level, Sonnenuntergang, Switch Level, Service Level, Tier und Verletzung Severity sind Anmerkungen auf Systemebene, die Sie nicht löschen oder umbenennen können. Sie können nur die ihnen zugewiesenen Werte ändern.
+
+====

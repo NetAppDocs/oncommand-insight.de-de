@@ -1,0 +1,38 @@
+---
+permalink: config-admin/insight-syslog-contents.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können ein Syslog auf einem Server aktivieren, um Insight-Verstöße und Performance-Warnmeldungen zu sammeln, die Nutzungs- und Verkehrsdaten enthalten. 
+---
+= Insight Syslog-Inhalte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Syslog auf einem Server aktivieren, um Insight-Verstöße und Performance-Warnmeldungen zu sammeln, die Nutzungs- und Verkehrsdaten enthalten.
+
+
+
+== Nachrichtentypen
+
+Im Insight syslog werden drei Meldungsarten aufgelistet:
+
+* VERSTÖSSE GEGEN SAN-Pfade
+* Allgemeine Verstöße
+* Performance-Warnmeldungen
+
+
+
+
+== Daten bereitgestellt
+
+Zu den Beschreibungen der Verstöße zählen die beteiligten Elemente, die Uhrzeit des Ereignisses sowie der relative Schweregrad oder die Priorität des Verstoßes.
+
+Zu den Performance-Warnmeldungen gehören folgende Daten:
+
+* Auslastungswerte
+* Verkehrstypen
+* Verkehrsrate in MB gemessen
+

@@ -1,0 +1,45 @@
+---
+permalink: howto/assigning-applications-using-a-query.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie weisen einem Asset eine Anwendung zu, sodass Sie die Ressourcen des Assets identifizieren können, das von der Anwendung verwendet wird. Wenn einem Asset Kosten zugewiesen sind, können Sie die Kosten identifizieren, die der Applikation entstehen. Wenn die Ressource nach Größe gemessen wird, können Sie bestimmen, ob die Ressource wieder aufgefüllt werden muss. 
+---
+= Zuweisen von Anwendungen zu einem Asset mithilfe einer Abfrage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie weisen einem Asset eine Anwendung zu, sodass Sie die Ressourcen des Assets identifizieren können, das von der Anwendung verwendet wird. Wenn einem Asset Kosten zugewiesen sind, können Sie die Kosten identifizieren, die der Applikation entstehen. Wenn die Ressource nach Größe gemessen wird, können Sie bestimmen, ob die Ressource wieder aufgefüllt werden muss.
+
+
+
+== Über diese Aufgabe
+
+Sie können die Zuweisung mehrerer Assets zu einer Anwendung vereinfachen, indem Sie eine Abfrage verwenden.
+
+
+
+== Schritte
+
+. Erstellen Sie eine neue Abfrage, um die Assets zu identifizieren, denen Sie eine Anwendung zuweisen möchten. Wenn Sie ihn beispielsweise einem Host mit einem bestimmten Namen zuweisen möchten, der sich auf einen geografischen Standort bezieht, klicken Sie auf *Abfragen* > *+Neue Abfrage*
+. Klicken Sie Auf *Host*
+. Geben Sie im Feld *Name* ein `Chicago`
++
+Das System zeigt alle Hosts mit an `Chicago` Als Teil, wenn ihr Name. image:../media/new-query.gif[""]
+
+. Wählen Sie einen oder mehrere Hosts aus, die von Ihrer Abfrage identifiziert wurden.
+. Klicken Sie Auf *Actions* > *Add Application*
++
+image::../media/application-assign.gif[Anwendung zuweisen]
+
++
+Das Dialogfeld Anwendung zuweisen wird angezeigt.
+
+. Wählen Sie die Anwendung aus, die Sie dem Host zuweisen möchten, und klicken Sie auf image:../media/check-box-ok.gif[""]
+. Klicken Sie Auf *Speichern*
++
+Der Anwendungsname wird im Abschnitt Benutzerdaten angezeigt.
+
+

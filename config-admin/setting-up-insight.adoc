@@ -1,0 +1,25 @@
+---
+permalink: config-admin/setting-up-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Für die Einrichtung von Insight müssen Sie Insight Lizenzen aktivieren, Datenquellen einrichten, Benutzer und Benachrichtigungen definieren, Backups aktivieren und alle erforderlichen erweiterten Konfigurationsschritte durchführen. 
+---
+= Insight einrichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für die Einrichtung von Insight müssen Sie Insight Lizenzen aktivieren, Datenquellen einrichten, Benutzer und Benachrichtigungen definieren, Backups aktivieren und alle erforderlichen erweiterten Konfigurationsschritte durchführen.
+
+Nach der Installation des OnCommand Insight-Systems müssen Sie die folgenden Setup-Aufgaben durchführen:
+
+* Installieren Sie Ihre Insight Lizenzen.
+* Richten Sie Ihre Datenquellen in Insight ein.
+* Richten Sie Benutzerkonten ein.
+* Konfigurieren Sie Ihre E-Mail-Adresse.
+* Definieren Sie bei Bedarf Ihre SNMP-, E-Mail- oder Syslog-Benachrichtigungen.
+* Aktivieren Sie automatische wöchentliche Backups Ihrer Insight-Datenbank.
+* Führen Sie alle erforderlichen erweiterten Konfigurationsschritte durch, einschließlich der Definition von Annotationen und Schwellenwerten.
+

@@ -1,0 +1,33 @@
+---
+permalink: config-admin/cdot-landing-page-terminology-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: Bedingungen für Objekte oder Referenzen, die auf den Landing Pages für NetApp Clustered Data ONTAP Storage-Pool-Ressourcen möglicherweise zu finden sind. 
+---
+= Storage-Pool von Clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bedingungen für Objekte oder Referenzen, die auf den Landing Pages für NetApp Clustered Data ONTAP Storage-Pool-Ressourcen möglicherweise zu finden sind.
+
+
+
+== Clustered Data ONTAP – Terminologie für Storage-Pools
+
+Die folgenden Begriffe gelten für Objekte oder Verweise, die auf den Landing Pages für NetApp Clustered Data ONTAP Storage-Pools möglicherweise zu finden sind. Viele dieser Bedingungen gelten auch für andere Datensammler.
+
+* Speicher – auf welchem Speicher-Array dieser Pool lebt. Obligatorisch.
+* Typ -- ein beschreibender Wert aus einer Liste einer aufgezählten Liste von Möglichkeiten. Am häufigsten ist „`Aggregate`“ oder „`RAID-Gruppe`“`“.
+* Node – Wenn die Architektur dieses Speicherarrays so ist, dass Pools zu einem bestimmten Speicher-Node gehören, wird dessen Name hier als Hyperlink zur eigenen Landing Page angezeigt.
+* Verwendet Flash Pool -- Ja/Nein-Wert -- werden in diesem SATA/SAS-basierten Pool SSDs zur Cache-Beschleunigung verwendet?
+* Redundanz – RAID-Level oder Schutzschema. RAID_DP ist Dual-Parity, RAID_TP ist die dreifache Parität.
+* Kapazität – die Werte hier sind die genutzte logische Kapazität, die nutzbare Kapazität und die logische Gesamtkapazität sowie der verwendete Prozentsatz.
+* Überbelegte Kapazität – Wenn Sie mithilfe von Effizienztechnologien eine Gesamtmenge an Volume- oder internen Volume-Kapazitäten zugewiesen haben, die größer als die logische Kapazität des Speicherpools ist, dann ist der prozentuale Wert hier größer als 0 %.
+* Snapshot – verwendete Snapshot-Kapazitäten und insgesamt, wenn Ihre Speicherpoolarchitektur einen Teil ihrer Kapazität für Segmente reserviert, Bereiche ausschließlich für Snapshots. ONTAP in MetroCluster-Konfigurationen werden dies wahrscheinlich zeigen, während andere ONTAP-Konfigurationen weniger sind.
+* Auslastung -- ein Prozentwert, der den höchsten Prozentsatz der Festplattenauslastung anzeigt, der zur Kapazität dieses Speicherpools beiträgt. Die Festplattenauslastung steht nicht unbedingt in engem Zusammenhang mit der Array-Performance – die Auslastung kann aufgrund von Festplattenwiederherstellungen, Deduplizierungsaktivitäten usw. hoch sein, wenn auf dem Host keine Workloads ausgeführt werden. Außerdem kann die Festplattenauslastung bei vielen`-Replikationsimplementierungen nicht als internes Volume oder Volume-Workload angezeigt werden.
+* IOPS – die Summe der IOPS aller Festplatten, die Kapazität für diesen Speicherpool beisteuern.
+* Durchsatz – der Gesamtdurchsatz aller Festplatten, die die Kapazität dieses Speicherpools beisteuern.
+

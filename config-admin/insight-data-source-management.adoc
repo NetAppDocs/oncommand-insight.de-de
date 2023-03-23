@@ -1,0 +1,28 @@
+---
+permalink: config-admin/insight-data-source-management.html 
+sidebar: sidebar 
+keywords:  
+summary: Datenquellen sind die kritischsten Komponenten zur Aufrechterhaltung einer OnCommand Insight Umgebung. Da sie die primäre Informationsquelle für Insight sind, müssen die Datenquellen unbedingt im laufenden Zustand gehalten werden. 
+---
+= Insight – Datenquellmanagement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Datenquellen sind die kritischsten Komponenten zur Aufrechterhaltung einer OnCommand Insight Umgebung. Da sie die primäre Informationsquelle für Insight sind, müssen die Datenquellen unbedingt im laufenden Zustand gehalten werden.
+
+Sie können die Datenquellen in Ihrem Netzwerk überwachen, indem Sie eine Datenquelle auswählen, um die Ereignisse im Zusammenhang mit ihrem Status zu überprüfen, und alle Änderungen, die möglicherweise Probleme verursacht haben, notieren.
+
+Zusätzlich zur Untersuchung einer individuellen Datenquelle können Sie folgende Operationen durchführen:
+
+* Klonen einer Datenquelle, um viele ähnliche Datenquellen in Insight zu erstellen
+* Informationen zur Datenquelle bearbeiten
+* Anmeldedaten ändern
+* Kontrolle der Abfrage
+* Löschen Sie die Datenquelle
+* Installieren von Patches für Datenquellen
+* Installieren Sie eine neue Datenquelle aus einem Patch
+* Erstellen eines Fehlerberichts für den NetApp Customer Support
+

@@ -1,0 +1,33 @@
+---
+permalink: config-admin/additional-data.html 
+sidebar: sidebar 
+keywords: landing 
+summary: Zusätzliche Daten können in anpassbaren Widgets auf jeder Bestandsseite angezeigt werden. Wenn Sie die Seite für ein Asset anpassen, wird die Anpassung für alle Assets dieses Typs auf die Seiten angewendet. 
+---
+= Anpassbare Bestandsseite
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zusätzliche Daten können in anpassbaren Widgets auf jeder Bestandsseite angezeigt werden. Wenn Sie die Seite für ein Asset anpassen, wird die Anpassung für alle Assets dieses Typs auf die Seiten angewendet.
+
+Sie können Widgets für die Bestandsseite anpassen, indem Sie die folgenden Aktionen ausführen:
+
+. Fügen Sie der Seite ein Widget hinzu
+. Erstellen Sie eine Abfrage oder einen Ausdruck für das Widget, um die gewünschten Daten zu zeigen
+. Wählen Sie bei Bedarf einen Filter aus
+. Wählen Sie eine Rollup- oder Gruppierungsmethode aus
+. Speichern Sie das Widget
+. Wiederholen Sie dies für alle gewünschten Widgets
+. Speichern Sie die Bestandsseite
+
+
+Sie können auch Variablen zur Seite für benutzerdefinierte Elemente hinzufügen, die verwendet werden können, um Ihre angezeigten Daten in Widgets weiter zu verfeinern. Zusätzlich zu regulären Variablen kann jeder Asset-Typ einen Satz von „€Diese“-Variablen verwenden, um schnell Ressourcen zu identifizieren, die direkt mit dem aktuellen Asset in Verbindung stehen, z. B. alle virtuellen Maschinen, die vom selben Hypervisor gehostet werden, der die aktuelle virtuelle Maschine hostet.
+
+Diese benutzerdefinierte Bestandsseite ist sowohl für jeden Benutzer als auch für jeden Asset-Typ eindeutig. Wenn z. B. Benutzer A eine benutzerdefinierte Bestandsseite für eine virtuelle Maschine erstellt, wird diese benutzerdefinierte Seite für jede Seite der virtuellen Maschine für diesen Benutzer angezeigt.
+
+Benutzer können nur benutzerdefinierte Asset-Seiten anzeigen, bearbeiten oder löschen, die sie erstellen.
+
+Benutzerdefinierte Bestandsseiten sind nicht in der Export-/Importfunktion von Insight enthalten.

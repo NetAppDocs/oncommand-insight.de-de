@@ -1,0 +1,31 @@
+---
+permalink: install-windows/restoring-the-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: Bei Systemen, die eine Performance-Archivierung durchführen, werden im Upgrade-Prozess nur Archivdaten von sieben Tagen wiederhergestellt. Sie können die verbleibenden Archivdaten wiederherstellen, nachdem das Upgrade konkurriert wurde. 
+---
+= Wiederherstellung des Performance-Archivs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei Systemen, die eine Performance-Archivierung durchführen, werden im Upgrade-Prozess nur Archivdaten von sieben Tagen wiederhergestellt. Sie können die verbleibenden Archivdaten wiederherstellen, nachdem das Upgrade konkurriert wurde.
+
+
+
+== Über diese Aufgabe
+
+Führen Sie die folgenden Schritte aus, um das Performance-Archiv wiederherzustellen.
+
+
+
+== Schritte
+
+. Klicken Sie in der Symbolleiste auf *Admin* > *Fehlerbehebung*
+. Klicken Sie im Abschnitt Wiederherstellen unter *Load Performance Archive* auf *Load*.
++
+Das Laden des Archivs erfolgt im Hintergrund. Das vollständige Archiv kann sehr lange geladen werden, da die archivierten Performance-Daten der einzelnen Tage in Insight eingetragen sind. Der Status des Archivladens wird im Archiv-Bereich dieser Seite angezeigt.
+
+

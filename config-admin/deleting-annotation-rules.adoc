@@ -1,0 +1,36 @@
+---
+permalink: config-admin/deleting-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können eine Anmerkungsregel löschen, wenn die Regel nicht mehr erforderlich ist, um die Objekte im Netzwerk zu überwachen. 
+---
+= Anmerkungsregeln werden gelöscht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Anmerkungsregel löschen, wenn die Regel nicht mehr erforderlich ist, um die Objekte im Netzwerk zu überwachen.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web-Benutzeroberfläche an.
+. Klicken Sie auf *Verwalten*, und wählen Sie *Anmerkungsregeln*.
++
+Auf der Seite Anmerkungsregeln wird die Liste der vorhandenen Anmerkungsregeln angezeigt.
+
+. Suchen Sie die zu löschende Regel:
++
+** Auf der Seite Anmerkungsregeln können Sie die Anmerkungsregeln filtern, indem Sie einen Wert in das Filterfeld eingeben.
+** Klicken Sie auf eine Seitenzahl, um die Anmerkungsregeln nach Seite zu durchsuchen, wenn mehr Regeln als auf eine einzelne Seite passen.
+
+
+. Zeigen Sie mit dem Cursor auf die Regel, die Sie löschen möchten, und klicken Sie dann auf image:../media/trash-can-query.gif[""].
++
+Es wird eine Bestätigungsmeldung angezeigt, in der Sie gefragt werden, ob Sie die Regel löschen möchten.
+
+. Klicken Sie auf *OK*.
+

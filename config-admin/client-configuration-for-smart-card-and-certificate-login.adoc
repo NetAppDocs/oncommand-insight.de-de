@@ -1,0 +1,70 @@
+---
+permalink: config-admin/client-configuration-for-smart-card-and-certificate-login.html 
+sidebar: sidebar 
+keywords:  
+summary: Client-Rechner erfordern Middleware und Änderungen an Browsern, um die Verwendung von Smart Cards und die Zertifikatanmeldung zu ermöglichen. Kunden, die bereits Smart Cards verwenden, sollten keine zusätzlichen Änderungen an ihren Client-Computern benötigen. 
+---
+= Konfigurieren eines Clients zur Unterstützung der Smart Card- und Zertifikatanmeldung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Client-Rechner erfordern Middleware und Änderungen an Browsern, um die Verwendung von Smart Cards und die Zertifikatanmeldung zu ermöglichen. Kunden, die bereits Smart Cards verwenden, sollten keine zusätzlichen Änderungen an ihren Client-Computern benötigen.
+
+
+
+== Bevor Sie beginnen
+
+[NOTE]
+====
+Die aktuellsten CAC- und Zertifikatanweisungen finden Sie in den folgenden Knowledgebase-Artikeln (Support-Anmeldung erforderlich):
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["So konfigurieren Sie die Common Access Card (CAC)-Authentifizierung für OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["Konfigurieren der Authentifizierung für allgemeine Zugriffskarten (Common Access Card, CAC) für OnCommand Insight Data Warehouse"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["Erstellen und Importieren eines signierten Zertifikats einer Zertifizierungsstelle (CA) in OnComand Insight und OnCommand Insight Data Warehouse 7.3.x"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["So erstellen Sie ein selbstsigniertes Zertifikat in OnCommand Insight 7.3.X, das auf einem Windows-Host installiert ist"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Importieren eines von Cognos signierten Zertifikats einer Zertifizierungsstelle (CA) in OnCommand DataWarehouse 7.3.3 und höher"]
+
+
+====
+
+
+== Über diese Aufgabe
+
+Die folgenden allgemeinen Anforderungen an die Client-Konfiguration:
+
+* Installieren von Smart Card Middleware, z. B. ActivClient (siehe http://militarycac.com/activclient.htm)[]
+* Ändern des IE-Browsers (siehe http://militarycac.com/files/Making_AKO_work_with_Internet_Explorer_color.pdf)[]
+* Ändern des Firefox-Browsers (siehe https://militarycac.com/firefox2.htm)[]
+
+
+Weitere Konfigurationsschritte sind:
+
+
+
+== Schritte
+
+. Deaktivieren Sie unnötige Dialogfenster-Popups beim Starten des Java-Clients:
++
+.. Öffnen Sie das Bedienfeld „`Java`“.
+.. Wählen Sie die Registerkarte „`Erweitert`“ aus.
+.. Wählen Sie „`Erweiterte Sicherheitseinstellungen`“.
+.. Deaktivieren Sie die Option „`Zertifikate und Schlüssel im Browser-Keystore verwenden`“.
+
+
+. Importieren Sie Soft-Zertifikate in persönliche Zertifikate eines Benutzers über den Chrome-Browser:
++
+.. Navigieren Sie zu „`Erweiterte Einstellungen`“.
+.. Wählen Sie „`Zertifikate Verwalten`“.
+.. Wählen Sie die Registerkarte „`Persönliche“-Zertifikate`“ aus.
+.. Wählen Sie „`Import...`“.
+.. Wählen Sie die .p12-Datei aus.
+.. Füllen Sie den Assistenten aus, und füllen Sie das Passwort aus, das zum Erstellen des Zertifikats verwendet wurde.
+
+
++
+Zum Konfigurieren der Browser Internet Explorer und Firefox sind ähnliche Schritte erforderlich.
+
+

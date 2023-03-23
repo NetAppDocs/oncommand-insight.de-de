@@ -1,0 +1,93 @@
+---
+permalink: dwh/viewing-hosts-and-adapters-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: Die gemeldeten Daten für Hosts und ihre zugehörigen Adapter werden aus dem Inventory Data Mart abgeleitet. 
+---
+= Anzeigen von Problemen mit der Konsolidierung von Hosts und Adaptern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die gemeldeten Daten für Hosts und ihre zugehörigen Adapter werden aus dem Inventory Data Mart abgeleitet.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster links auf *Fehlerbehebung*.
+. Klicken Sie im Abschnitt *Gehäusekonsolidierung* auf *Hosts und Adapter*.
++
+[NOTE]
+====
+Die in diesem Beispiel dargestellte Konfiguration ist keine gültige Konfiguration. Principal und Available Connectors auf localhost legen nahe, dass Insight Server und DWH auf demselben Server installiert sind. In diesem Beispiel möchten wir Sie mit der Konsolidierungspabelle vertraut machen.
+
+====
++
+image::../media/oci-dwh-admin-troubleshooting-hostsandadapters-gif.gif[Gehäuse Konsolidierung Hosts und Adapter]
+
++
+Für alle Hosts und Adapter gibt es eine Zeile für jeden Connector, der über sie berichtet, sowie den primären Connector, von dem der Host und der Adapter genommen werden. Nur für Hosts und Adapter können für einen Host, der von einem Anschluss gemeldet wird, seine Adapter von einem anderen Anschluss gemeldet werden.
+
++
+Sie sehen auch die OnCommand Insight-Änderungszeit eines Hosts/Adapters für jeden Anschluss. Mit diesem Parameter können Sie ermitteln, wann ein Update in OnCommand Insight für den Host/Adapter erfolgt ist und wann derselbe Host/Adapter auf anderen OnCommand Insight-Servern aktualisiert wurde.
+
+. Optional können Sie Daten in dieser Ansicht filtern, indem Sie einen Teil des Textes eingeben und auf *Filter* klicken. Um den Filter zu löschen, löschen Sie den Text im Feld *Filter* und klicken Sie auf *Filter*. Sie können nach Host-Name, Host-IP, Adapter-WWN oder OnCommand Insight-Objekt-ID filtern.
++
+Der Filter ist Groß-/Kleinschreibung beachten.
+
+. Überprüfen Sie die folgenden Daten:
++
+** *Host-GUID*
++
+Global Unique Identifier für diesen konsolidierten Gerätetyp (Hosts)
+
+** *Hostname*
++
+Name des konsolidierten Hosts, wie er im Data Warehouse angezeigt wird
+
+** *Host-IP*
++
+IP-Adresse des konsolidierten Hosts
+
+** *Adapter-GUID*
++
+Globale eindeutige Kennung für den Host-Adapter
+
+** *Adapter WWN*
++
+WWN des Host-Adapters
+
+** *Principal Connector*
++
+Der Name des OnCommand Insight-Connectors, der die eigentliche Datenquelle war
+
+** *Verfügbare Anschlüsse*
++
+Alle OnCommand Insight-Anschlüsse, auf denen sich der konsolidierte Host/Adapter befindet
+
+** *Insight-ID*
++
+OnCommand Insight-ID des konsolidierten Hosts/Adapters für den entsprechenden Reporting Connector
+
+** * Insight Change Time*
++
+Wenn in OnCommand Insight ein Update für den Host/Adapter erfolgt ist und derselbe Host/Adapter auf anderen OnCommand Insight-Servern aktualisiert wurde
+
+
+
+. Klicken Sie auf den Anschluss, um Details zum Anschluss zu erhalten.
++
+Die folgenden Informationen für den Anschluss werden angezeigt:
+
++
+** Host-Name
+** Das letzte Mal, wenn ein Data Warehouse-Job auf diesem Connector ausgeführt wurde
+** Das letzte Mal, wenn eine Änderung von diesem Konnektor empfangen wurde
+** Die Version des OnCommand Insight-Servers, auf die dieser Connector verweist
+
+
+

@@ -1,0 +1,130 @@
+---
+permalink: install-windows/data-warehouse-and-reporting-server-requirements.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie müssen das Data Warehouse und den Reporting-Server auf einem Computer ausführen, der mit den bestehenden Hardware- und Softwareanforderungen kompatibel ist, und sicherstellen, dass der Apache-Webserver oder die Berichterstellungssoftware nicht bereits auf diesem Computer installiert ist. 
+---
+= Serveranforderungen für Data Warehouse und Reporting
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen das Data Warehouse und den Reporting-Server auf einem Computer ausführen, der mit den bestehenden Hardware- und Softwareanforderungen kompatibel ist, und sicherstellen, dass der Apache-Webserver oder die Berichterstellungssoftware nicht bereits auf diesem Computer installiert ist.
+
+[NOTE]
+====
+Die Größenbestimmung für OnCommand Insight umfasst mehrere Abhängigkeiten, wie z. B. Anzahl der Assets in Ihrer Umgebung, Menge der gespeicherten Archivdaten und vieles mehr. Die folgenden Beispiele zur Größenanpassung eines Data Warehouses sind nur Richtlinien und stellen einige der Umgebungen dar, in denen Insight getestet wurde. Wenn sich diese oder andere Faktoren in der Umgebung ändern, können sich die Dimensionierungsanforderungen für Insight ändern.
+
+====
+Vor der Installation oder dem Upgrade der Insight sollten Sie sich an Ihren Sales Engineer wenden, um eine detaillierte Anleitung zur Größenbemessung zu erhalten.
+
+*Beispiele:*
+
+|===
+
+
+| Umgebungsfaktoren: | Getesteter Festplattenspeicher, CPUs und Speicher: 
+
+
+ a| 
+18 Storage-Arrays3.400 VMs
+
+4,500 Switch-Ports
+ a| 
+200-GB-Festplatte, 8 Kerne
+
+32 GB RAM
+
+
+
+ a| 
+110 Storage-Arrays11'500 VMs
+
+14,500 Switch-Ports
+ a| 
+300-GB-Festplatte, 8 Kerne
+
+48 GB RAM
+
+|===
+*Voraussetzungen:*
+
+|===
+
+
+| Komponente | Erforderlich 
+
+
+ a| 
+Betriebssystem
+ a| 
+Computer mit 64-Bit Microsoft Windows Server 2012, 2012 R2, 2016 oder 2019 mit dem neuesten Service Pack.
+
+
+
+ a| 
+Virtuelle Maschine (VM)
+ a| 
+Diese Komponente kann in einer virtuellen Umgebung ausgeführt werden, sofern die CPU- und Arbeitsspeicherressourcen für Ihre Instanz reserviert sind.
+
+
+
+ a| 
+CPU
+ a| 
+8 bis 40 CPU-Kerne
+
+
+
+ a| 
+Speicher
+ a| 
+32 GB - 2 TB RAM Best Practice: Es wird dringend empfohlen, die Auslagerungsdateigröße auf „`Windows Managed`“ zu setzen. Kleine Paging-Dateien fester Größe können die erfolgreiche Speicherung von Insight-Leistungsdaten beeinträchtigen.
+
+
+
+ a| 
+Verfügbarer Festplattenspeicher
+ a| 
+200 GB - 2 TB FestplattenspeicherDie Installation erfordert mindestens 20 GB frei auf dem Laufwerk C:.
+
+
+NOTE: Unter Windows erfordert Insight Data Warehouse mit Reporting, dass die Unterstützung für die Erstellung von 8dot3-Namen auf dem Installationslaufwerk vor der Installation aktiviert ist. Für das Laufwerk C: Ist dies normalerweise standardmäßig aktiviert. Sie können überprüfen, ob die Erstellung von 8dot3-Namen auf dem Zielinstallationslaufwerk aktiviert ist, indem Sie den folgenden Befehl ausführen (Ersetzen Sie D: Mit dem Zielinstallationslaufwerk):
+
+Fsutil 8dot3Namensabfrage D:
+
+Um die Erstellung von 8dot3-Namen zu aktivieren, führen Sie den folgenden Befehl aus (ersetzen Sie D: Mit Zielinstallationslaufwerk):
+
+Fsutil 8dot3namensset D: 0
+
+
+
+ a| 
+Netzwerk
+ a| 
+* Ethernet-Verbindung mit 100 Mbit/s oder 1 Gbit/s.
+* Statische IP-Adresse
+* Port 50000 muss verfügbar sein, bevor Data Warehouse mit Reporting unter Windows installiert werden kann
+* Für den OnCommand Insight DWH-Serverprozess, Ports 80, 443, 1098, 1099, 3873, 8083 und 4444 bis 4446
+* Für die Reporting Engine, Ports 1527, 9362, 9300 und 9399
+* Für MySQL, Port 3306
+* Stellen Sie sicher, dass DNS ordnungsgemäß funktioniert, indem Sie einen durchführen `nslookup` Gegen den Host
+
+
+
+
+ a| 
+Virenscan
+ a| 
+Während der Installation dieser OnCommand Insight-Komponente müssen Sie alle Virenscanner vollständig deaktivieren. Nach der Installation müssen die von der Komponente Insight verwendeten Pfade (Installations-, Backup- und Archivierpfade) und alle Installationspfade der DWH-Komponenten (SANscreen-, DB2- und Backup-Pfade) vom Virenscan ausgeschlossen werden.
+
+
+
+ a| 
+Visual Studio
+ a| 
+Visual Studio 2019 https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist["Weiterverteilbare Dateien"] Muss vor der Installation von Data Warehouse mit Reporting unter Windows installiert werden.
+
+|===

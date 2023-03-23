@@ -1,0 +1,22 @@
+---
+permalink: reporting/data-model-fact-and-dimension-tables.html 
+sidebar: sidebar 
+keywords:  
+summary: Jedes Datenmodell enthält Fakt- und Bemaßungstabellen. 
+---
+= Daten-Modell-Fakt- und Bemaßungstabellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Jedes Datenmodell enthält Fakt- und Bemaßungstabellen.
+
+* Fact-Tabellen: Enthalten Daten, die gemessen werden, z. B. Menge, Rohkapazität und nutzbare Kapazität. Fremdschlüssel in Bemaßungstabellen enthalten.
+* Bemaßungstabellen: Enthalten beschreibende Informationen zu Fakten, beispielsweise Datacenter und Geschäftseinheiten. Eine Dimension ist eine Struktur, die häufig aus Hierarchien besteht, die Daten kategorisiert. Maßattribute helfen, die Maßwerte zu beschreiben.
+
+
+Mithilfe verschiedener oder mehrerer Bemaßungsattribute (siehe Spalten in den Berichten) erstellen Sie Berichte, die für jede im Datenmodell beschriebene Dimension auf Daten zugreifen.
+
+Erläuterungen zu allen Datenelementen, die beim Erstellen von Berichten verwendet werden, finden Sie im Datenglossar.

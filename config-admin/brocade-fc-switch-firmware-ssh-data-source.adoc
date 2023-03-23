@@ -1,0 +1,270 @@
+---
+permalink: config-admin/brocade-fc-switch-firmware-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight verwendet die Datenquelle Brocade FC Switch \(SSH\) zur Bestandsaufnahme von Brocade- oder umbenannte Switch-Geräten, auf denen die Factsored Operating System \(FOS\)-Firmware 4.2 und höher ausgeführt wird. Geräte werden sowohl im FC-Switch- als auch im Access Gateway-Modus unterstützt.' 
+---
+= Datenquelle des Brocade FC Switch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight verwendet die Brocade FC Switch (SSH)-Datenquelle zur Erkennung des Inventars für Brocade- oder umbenannte Switch-Geräte, auf denen FOS-Firmware (Factsored Operating System) 4.2 und höher ausgeführt wird. Geräte werden sowohl im FC-Switch- als auch im Access Gateway-Modus unterstützt.
+
+
+
+== Terminologie
+
+OnCommand Insight bezieht die folgenden Bestandsinformationen aus der Datenquelle „Brocade FC Switch“. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Switch
+ a| 
+Switch
+
+
+
+ a| 
+Port
+ a| 
+Port
+
+
+
+ a| 
+Virtual Fabric, Physische Fabric
+ a| 
+Fabric
+
+
+
+ a| 
+Zone
+ a| 
+Zone
+
+
+
+ a| 
+Logischer Switch
+ a| 
+Logischer Switch
+
+
+
+ a| 
+LSAN-Zone zu erreichen
+ a| 
+IVR-Zone
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* Die Acquisition Unit (lokal oder Remote) initiiert Verbindungen zu TCP-Port 22 auf Brocade-Switches, um Bestandsdaten zu sammeln. Die AU wird auch Verbindungen zu UDP Port 161 für die Sammlung von Leistungsdaten initiieren.
+* Für alle Switches in der Fabric muss eine IP-Konnektivität vorhanden sein. Wenn Sie das Kontrollkästchen Alle Switches in der Fabric ermitteln aktivieren, identifiziert OCI alle Switches in der Fabric. Zur Erkennung ist jedoch eine IP-Verbindung zu diesen zusätzlichen Switches erforderlich.
+* Weltweit ist dasselbe Konto über alle Switches in der Fabric erforderlich. Sie können PuTTY (Open Source Terminal Emulator) verwenden, um den Zugriff zu bestätigen.
+* Wenn die Lizenz „Ausführen“ installiert ist, müssen die Ports 161 und 162 für alle Switches in der Fabric offen sein, um die SNMP-Performance-Abfrage durchführen zu können.
+* SNMP Read-Only Community String
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Switch-IP
+ a| 
+IP-Adresse oder vollqualifizierter Domain-Name des Switches
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für den Switch
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort für den Switch
+
+
+
+ a| 
+SNMP-Version
+ a| 
+SNMP-Version
+
+
+
+ a| 
+SNMP-Community-Zeichenfolge
+ a| 
+SNMP read-only Community String verwendet, um auf den Switch zugreifen
+
+
+
+ a| 
+SNMP-Benutzername
+ a| 
+Benutzername des SNMP-Versionsprotokolls (gilt nur für SNMP v3)
+
+
+
+ a| 
+SNMP-Kennwort
+ a| 
+SNMP-Versionsprotokoll-Kennwort (gilt nur für SNMP v3)
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Fabric-Name
+ a| 
+Fabric-Name, der von der Datenquelle gemeldet werden soll. Lassen Sie das Feld leer, um den Fabric-Namen als WWN zu melden.
+
+
+
+ a| 
+Geräte Ausschließen
+ a| 
+Kommagetrennte Liste der Geräte-IDs, die von der Abfrage ausgeschlossen werden sollen
+
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 15 Minuten)
+
+
+
+ a| 
+Zeitüberschreitung (Sek.)
+ a| 
+Verbindungs-Timeout (Standard: 30 Sekunden)
+
+
+
+ a| 
+Zeitüberschreitung bei der Bannerwartezeit (Sek.)
+ a| 
+SSH Banner Wait Timeout (Standard: 5 Sekunden)
+
+
+
+ a| 
+Admin-Domänen Aktiv
+ a| 
+Wählen Sie, wenn Sie Admin-Domains verwenden
+
+
+
+ a| 
+MPR-Daten abrufen
+ a| 
+Auswählen, um Routingdaten von Ihrem Multiprotocol-Router (MPR) zu erfassen
+
+
+
+ a| 
+Trapping Aktivieren
+ a| 
+Wählen Sie diese Option aus, um die Erfassung beim Empfang eines SNMP-Trap vom Gerät zu aktivieren. Wenn Sie Trapping aktivieren auswählen, müssen Sie auch SNMP aktivieren.
+
+
+
+ a| 
+Mindestzeit zwischen Traps (s)
+ a| 
+Mindestzeit zwischen durch Traps ausgelösten Erfassungsversuchen (Standard: 10 Sekunden)
+
+
+
+ a| 
+Erkennung aller Switches in der Fabric
+ a| 
+Wählen Sie diese Option, um alle Switches in der Fabric zu erkennen
+
+
+
+ a| 
+Entscheiden Sie sich für HBA vs Zonenaliase
+ a| 
+Wählen Sie, ob HBA- oder Zonenaliasen bevorzugt werden sollen
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+
+
+ a| 
+SNMP-Auth-Protokoll
+ a| 
+SNMP-Authentifizierungsprotokoll (nur SNMP v3)
+
+
+
+ a| 
+SNMP-Datenschutzprotokoll
+ a| 
+SNMP-Datenschutzprotokoll (nur SNMP v3)
+
+
+
+ a| 
+SNMP-Datenschutzkennwort
+ a| 
+SNMP-Datenschutzkennwort (nur SNMP v3)
+
+
+
+ a| 
+SNMP wird erneut verwendet
+ a| 
+Anzahl der SNMP-Wiederholungsversuche
+
+
+
+ a| 
+SNMP-Timeout (ms)
+ a| 
+SNMP-Timeout (Standard 5000 ms)
+
+|===

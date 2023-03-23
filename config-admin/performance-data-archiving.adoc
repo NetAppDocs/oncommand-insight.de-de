@@ -1,0 +1,20 @@
+---
+permalink: config-admin/performance-data-archiving.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit OnCommand Insight 7.3 können Performance-Daten täglich archiviert werden. Dies ergänzt Konfigurations- und Performance-Daten-Backups. 
+---
+= Archivierung von Performance-Daten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit OnCommand Insight 7.3 können Performance-Daten täglich archiviert werden. Dies ergänzt Konfigurations- und Performance-Daten-Backups.
+
+OnCommand Insight speichert bis zu 90 Tage Daten zu Performance- und Verstößen. Beim Erstellen einer Sicherung dieser Daten werden jedoch nur die neuesten Informationen in das Backup aufgenommen. Durch die Archivierung können Sie die übrigen Performance-Daten speichern und nach Bedarf laden.
+
+Sobald der Archivspeicherort konfiguriert und die Archivierung aktiviert ist, archiviert Insight einmal am Tag die Leistungsdaten des Vortages für alle Objekte im Archivspeicherort. Das Archiv eines jeden Tages wird im Archivordner in einer separaten Datei aufbewahrt. Die Archivierung findet im Hintergrund statt und wird fortgesetzt, solange Insight ausgeführt wird.
+
+Die Archive der letzten 90 Tage werden aufbewahrt. Archivdateien, die älter als 90 Tage sind, werden gelöscht, wenn neuere Archive erstellt werden.

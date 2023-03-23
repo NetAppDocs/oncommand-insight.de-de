@@ -1,0 +1,38 @@
+---
+permalink: reporting/importing-existing-reports-to-cognos-11.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können eine Berichtsspezifikation öffnen, die zuvor in die Zwischenablage kopiert wurde. 
+---
+= Öffnen von Berichten (XML) aus der Zwischenablage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Berichtsspezifikation öffnen, die zuvor in die Zwischenablage kopiert wurde.
+
+
+
+== Über diese Aufgabe
+
+Sie rufen die Benutzeroberfläche „Reporting“ auf, indem Sie einen neuen Bericht erstellen oder einen vorhandenen Bericht öffnen
+
+
+
+== Schritte
+
+. Öffnen Sie das Cognos 11 Reporting Portal: https://server-name:9300/bi/[]
+. Klicken Sie in der Symbolleiste auf image:../media/new-report.gif[""]
+. Klicken Sie Auf *Bericht*
+. Klicken Sie auf das Symbol *Seiten*image:../media/pages-icon.gif[""]
++
+Das Symbol *Report* image:../media/report-icon.gif[""] Wird angezeigt
+
+. Klicken Sie mit der linken Maustaste auf das Symbol *Report*
++
+Berichtsoptionen werden angezeigt.
+
+. Klicken Sie auf *Bericht aus Zwischenablage öffnen*.
+

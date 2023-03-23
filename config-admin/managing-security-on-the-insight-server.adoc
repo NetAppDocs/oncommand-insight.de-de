@@ -1,0 +1,106 @@
+---
+permalink: config-admin/managing-security-on-the-insight-server.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit dem Tool securityadmin können Sie Sicherheitsoptionen auf dem Insight-Server verwalten. Die Sicherheitsverwaltung umfasst das Ändern von Kennwörtern, das Generieren neuer Schlüssel, das Speichern und Wiederherstellen von von von von Ihnen erstellten Sicherheitskonfigurationen oder das Wiederherstellen von Konfigurationen auf die Standardeinstellungen. 
+---
+= Sicherheitsmanagement auf dem Insight-Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der `securityadmin` Mit dem Tool können Sie Sicherheitsoptionen auf dem Insight-Server verwalten. Die Sicherheitsverwaltung umfasst das Ändern von Kennwörtern, das Generieren neuer Schlüssel, das Speichern und Wiederherstellen von von von von Ihnen erstellten Sicherheitskonfigurationen oder das Wiederherstellen von Konfigurationen auf die Standardeinstellungen.
+
+
+
+== Über diese Aufgabe
+
+Sie verwenden das `securityadmin` Tool zur Verwaltung der Sicherheit:
+
+* Fenster – `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat`
+* Linux `/bin/oci-securityadmin.sh`
+
+
+
+
+== Schritte
+
+. Führen Sie eine Remote-Anmeldung beim Insight-Server durch.
+. Starten Sie das Sicherheitsadministrator-Tool im interaktiven Modus: `securityadmin -i`
++
+Das System fordert Anmeldeinformationen an.
+
+. Geben Sie den Benutzernamen und das Kennwort für ein Konto mit „`Admin`“-Anmeldeinformationen ein.
+. Wählen Sie *Server*.
++
+Die folgenden Serverkonfigurationsoptionen stehen zur Verfügung:
+
++
+** *Backup*
++
+Erstellt eine Sicherungszip-Datei des Tresors, die alle Passwörter und Schlüssel enthält und legt die Datei an einem vom Benutzer angegebenen Speicherort oder an den folgenden Standardstandorten ab:
+
++
+*** Fenster – `C:\Program Files\SANscreen\backup\vault`
+*** Linux `/var/log/netapp/oci/backup/vault`
+
+
+** *Wiederherstellen*
++
+Stellt die Zip-Sicherung des erstellten Tresors wieder her. Nach der Wiederherstellung werden alle Passwörter und Schlüssel zum Zeitpunkt der Backup-Erstellung auf die vorhandenen Werte zurückgesetzt.
+
++
+[NOTE]
+====
+Restore kann verwendet werden, um Passwörter und Schlüssel auf mehreren Servern zu synchronisieren, zum Beispiel: - Ändern des Server-Verschlüsselungsschlüssels auf einem Server - Erstellen einer Sicherung des Tresors - Wiederherstellen der Vault-Sicherung auf dem zweiten Server
+
++
+
+====
+** *Verschlüsselungsschlüssel Ändern*
++
+Ändern Sie den Server-Verschlüsselungsschlüssel, der zum Verschlüsseln oder Entschlüsseln von Proxy-Benutzerpasswörtern, SMTP-Benutzerpasswörtern, LDAP-Benutzerpasswörtern usw. verwendet wird.
+
++
+[NOTE]
+====
+Wenn Sie die Verschlüsselungsschlüssel ändern, sollten Sie Ihre neue Sicherheitskonfiguration sichern, damit Sie sie nach einem Upgrade oder einer Installation wiederherstellen können.
+
+====
+** *Passwort Aktualisieren*
++
+Ändern Sie das Passwort für die internen Konten, die von Insight verwendet werden. Folgende Optionen werden angezeigt:
+
++
+*** _Intern
+*** Akquisition
+*** cognos_admin
+*** dwh_intern
+*** Hosts
+*** Inventar
+*** Stamm
+
+
+
+
++
+[NOTE]
+====
+Einige Konten müssen synchronisiert werden, wenn Passwörter geändert werden. Wenn Sie beispielsweise das Passwort für den Benutzer „Acquisition“ auf dem Server ändern, müssen Sie das Kennwort für den Benutzer „Acquisition“ auf DER LAU, rau und DWH ändern, damit es übereinstimmt. Wenn Sie Kennwörter ändern, sollten Sie außerdem Ihre neue Sicherheitskonfiguration sichern, damit Sie sie nach einem Upgrade oder einer Installation wiederherstellen können.
+
+====
++
+** *Auf die Standardeinstellungen zurücksetzen*
++
+Setzt Schlüssel und Passwörter auf die Standardwerte zurück. Standardwerte sind die Werte, die während der Installation angegeben werden.
+
+** *Ausgang*
++
+Beenden Sie das `securityadmin` Werkzeug.
+
+
+
+. Wählen Sie die Option aus, die Sie ändern möchten, und folgen Sie den Anweisungen.
+

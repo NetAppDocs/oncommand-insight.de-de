@@ -1,0 +1,53 @@
+---
+permalink: config-admin/importing-data-sources-from-a-spreadsheet.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können mehrere Datenquellen aus einer Tabelle in OnCommand Insight importieren. Dies könnte hilfreich sein, wenn Sie Ihre Ermittlungsgeräte bereits in einer Tabelle verwalten. Dieser Prozess fügt neue Datenquellen hinzu, kann jedoch nicht zur Aktualisierung vorhandener Datenquellen verwendet werden. 
+---
+= Importieren von Datenquellen aus einer Tabelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können mehrere Datenquellen aus einer Tabelle in OnCommand Insight importieren. Dies könnte hilfreich sein, wenn Sie Ihre Ermittlungsgeräte bereits in einer Tabelle verwalten. Dieser Prozess fügt neue Datenquellen hinzu, kann jedoch nicht zur Aktualisierung vorhandener Datenquellen verwendet werden.
+
+
+
+== Über diese Aufgabe
+
+OnCommand Insight enthält eine Tabelle zur Erstellung von Datenquellen. Diese Tabelle hat die folgenden Attribute:
+
+* Die Tabelle kann mit Microsoft Excel 2003 oder höher verwendet werden.
+* Jede Registerkarte enthält einen Datenquelltyp, z. B. Brocade SSH/CLI.
+* Jede Zeile stellt eine Instanz einer neuen Datenquelle dar, die erstellt werden soll.
+
+
+Die Tabelle enthält ein Makro, das eine neue Datenquelle in OnCommand Insight erstellt.
+
+
+
+== Schritte
+
+. Suchen Sie die Tabelle im `<install_directory>/SANscreen/acq/bin/acqcli/SiteSurvey_DataSourceImporter_w_Macro.zip`.
+. Geben Sie in der Tabelle die Informationen zur Datenquelle in die Zellen mit Farbe ein.
+. Leere Zeilen löschen.
+. Führen Sie in der Tabelle die aus `CreateDataSources` Makro, um die Datenquellen zu erstellen.
+. Wenn Sie zur Eingabe der Anmeldeinformationen aufgefordert werden, geben Sie den Benutzernamen und das Kennwort für die OnCommand Insight-Serveradministration ein.
++
+Die Ergebnisse werden im Erfassungsprotokoll protokolliert.
+
+. Eine Eingabeaufforderung fragt, ob auf dem Computer, auf dem das Makro ausgeführt wird, OnCommand Insight installiert ist.
++
+Wählen Sie eine der folgenden Optionen:
+
++
+** Nein: Wählen Sie „Nein“, wenn eine Batch-Datei erstellt wird, die auf dem OnCommand Insight-Rechner ausgeführt werden muss. Führen Sie diese Batch-Datei aus dem Installationsverzeichnis aus.
+** Ja: Wählen Sie „Ja“, wenn OnCommand Insight bereits installiert ist und keine weiteren Schritte erforderlich sind, um die Datenquellinformationen zu generieren.
+
+
+. Um das Hinzufügen der Datenquellen zu überprüfen, öffnen Sie Insight in Ihrem Browser.
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Überprüfen Sie die Liste Datenquellen, die Sie importiert haben.
+

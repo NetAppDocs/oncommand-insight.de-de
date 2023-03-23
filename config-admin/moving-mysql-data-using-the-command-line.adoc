@@ -1,0 +1,60 @@
+---
+permalink: config-admin/moving-mysql-data-using-the-command-line.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können das MySQL-Datenverzeichnis in ein anderes Verzeichnis migrieren. Sie können das aktuelle Datenverzeichnis beibehalten. Sie können die Option „Migrieren“ im Menü „Fehlerbehebung“ verwenden oder alternativ die Befehlszeile verwenden. In diesem Verfahren wird die Verwendung der Befehlszeile beschrieben. 
+---
+= MySQL-Daten werden über die Befehlszeile verschoben
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das MySQL-Datenverzeichnis in ein anderes Verzeichnis migrieren. Sie können das aktuelle Datenverzeichnis beibehalten. Sie können die Option „Migrieren“ im Menü „Fehlerbehebung“ verwenden oder alternativ die Befehlszeile verwenden. In diesem Verfahren wird die Verwendung der Befehlszeile beschrieben.
+
+
+
+== Über diese Aufgabe
+
+Wenn Sie das aktuelle Datenverzeichnis beibehalten, wird es als Backup beibehalten und umbenannt.
+
+Sie können das Dienstprogramm MySQL Data migrieren verwenden oder ein verwenden `java -jar mysqldatamigrator.jar` Option im OnCommand Insight-Pfad von `\bin\mysqldatamigrator` Dabei sollten die folgenden Parameter verwendet werden:
+
+* Obligatorische Parameter
++
+** *-Pfad*
++
+Der neue Datenpfad, in den der Datenordner kopiert wird.
+
+
+
+* Optionale Parameter
++
+** *-myCnf <my .cnf file>*
++
+Der Pfad für die .cnf-Datei. Die Standardeinstellung lautet `<install path>\mysql\my.cnf`. Verwenden Sie dieses Flag nur, wenn ein nicht standardmäßiges MySQL verwendet wird.
+
+** *-doBackup*
++
+Wenn dieses Flag gesetzt ist, wird der aktuelle Datenordner umbenannt, aber nicht gelöscht.
+
+
+
+
+
+
+
+== Schritte
+
+. Greifen Sie hier auf das Befehlszeilen-Tool zu: `<installation path>` \Bin\mysqldatamigrator\mysqldatamigrator.jar``
+
+
+
+
+== Beispielverwendung
+
+[listing]
+----
+java -jar mysqldatamigrator.jar -path "C:\<new path>" -doBackup
+----

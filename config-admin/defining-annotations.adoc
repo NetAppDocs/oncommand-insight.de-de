@@ -1,0 +1,24 @@
+---
+permalink: config-admin/defining-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie OnCommand Insight zur Nachverfolgung von Daten gemäß Ihren Unternehmensanforderungen anpassen, können Sie beliebige spezialisierte Annotationen definieren, die erforderlich sind, um einen vollständigen Überblick über Ihre Daten zu erhalten, wie z. B. Ende der Nutzungsdauer von Assets, Datacenter, Gebäudestandort, Storage-Ebene oder Volume. Und internem Service-Level für Volumes. 
+---
+= Anmerkungen definieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie OnCommand Insight zur Nachverfolgung von Daten gemäß Ihren Unternehmensanforderungen anpassen, können Sie beliebige spezialisierte Annotationen definieren, die erforderlich sind, um einen vollständigen Überblick über Ihre Daten zu erhalten, wie z. B. Ende der Nutzungsdauer von Assets, Datacenter, Gebäudestandort, Storage-Ebene oder Volume. Und internem Service-Level für Volumes.
+
+
+
+== Schritte
+
+. Geben Sie die Terminologie an, der die Umgebungsdaten zugeordnet werden müssen.
+. Geben Sie die Unternehmensterminologie an, mit der Umgebungsdaten verknüpft werden müssen, die nicht bereits mit den Geschäftseinheiten verfolgt wird.
+. Geben Sie alle standardmäßigen Anmerkungstypen an, die Sie verwenden können.
+. Ermitteln Sie, welche benutzerdefinierten Anmerkungen Sie erstellen müssen.
+

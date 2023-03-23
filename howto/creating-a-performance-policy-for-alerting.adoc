@@ -1,0 +1,57 @@
+---
+permalink: howto/creating-a-performance-policy-for-alerting.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit Performance Policies können Sie überwachen und Warnmeldungen senden, wenn bestimmte Bedingungen erfüllt sind. 
+---
+= Erstellung von Performance-Richtlinien für Warnmeldungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Performance Policies können Sie überwachen und Warnmeldungen senden, wenn bestimmte Bedingungen erfüllt sind.
+
+
+
+== Über diese Aufgabe
+
+Nachdem wir unsere Ressourcen mit Anmerkungen versehen haben, erstellen wir nun eine Performance-Richtlinie, mit der wir bei einer Latenz von über 2 ms in jedem Storage Array in unserem Sunnyvale (DC1_SVL) Datacenter benachrichtigt werden können. Wenn diese Bedingungen eintreten, senden wir eine E-Mail an ausgewählte Empfänger.
+
+
+
+== Schritte
+
+. Wählen Sie *Verwalten* > *Leistungsrichtlinien* aus.
++
+Die Seite Leistungsrichtlinien wird geöffnet. Es sind bereits mehrere Standardrichtlinien festgelegt, die Sie an Ihre Anforderungen anpassen können. Wir werden jedoch eine neue Politik schaffen.
+
+. Klicken Sie auf die Schaltfläche *+Add*.
++
+Das Dialogfeld *Richtlinie hinzufügen* wird geöffnet.
+
+. Geben Sie im Feld *Richtlinienname* „`SVL Data Center Latency Policy`“ ein.
++
+Sie müssen einen Namen verwenden, der sich von allen anderen Richtliniennamen für das Objekt unterscheidet. Sie können beispielsweise nicht zwei Richtlinien mit dem Namen „Latenz“ für ein internes Volume festlegen. Sie können jedoch eine „Latenzrichtlinie“ für ein internes Volume und eine weitere „Latenzrichtlinie“ für ein anderes Volume festlegen. Es empfiehlt sich, immer einen eindeutigen Namen für eine Richtlinie zu verwenden, unabhängig vom Objekttyp.
+
+. Wählen Sie für *auf Objekte des Typs anwenden* *Speicher* aus.
+. Wählen Sie im Feld *with annotation* *Data Center* is „`DC1_SVL`“ aus (oder wählen Sie hier den Namen Ihres gewünschten Rechenzentrums).
+. Anwenden nach einem Fenster von *erster Vorkommen* .
++
+Die Option „Erstes Auftreten“ löst eine Warnung aus, wenn ein Schwellenwert bei der ersten Datenprobe überschritten wird. Alle anderen Optionen lösen eine Warnung aus, wenn der Schwellenwert einmal überschritten wird und mindestens die angegebene Zeit lang kontinuierlich überschritten wird.
+
+. Wählen Sie aus der Liste *mit Schweregrad* die Option *Warnung* aus.
+. Klicken Sie unter *E-Mail-Empfänger* auf, um die globale Empfängerliste zu überschreiben. Klicken Sie auf**+**, um die E-Mail-Adresse Ihres ersten gewünschten Benachrichtigungsempfängers hinzuzufügen, und klicken Sie auf *OK*. Wiederholen Sie dies für alle weiteren gewünschten E-Mail-Empfänger.
+. Behalten Sie die Standardauswahl für Warnung erstellen bei, wenn *alle* der folgenden Werte zutreffen. Dadurch wird eine Benachrichtigung gesendet, wenn einer der festgelegten Schwellenwerte erreicht ist. Sie können auch nur dann eine Warnung ausgeben, wenn *alle* der eingestellten Schwellenwerte erfüllt sind.
+. Um Ihren ersten Schwellenwert festzulegen, wählen Sie *Latency - Total* in der Dropdown-Liste aus und setzen Sie ihn auf mehr als 2 ms.
+. Wenn gewünscht, fügen Sie zusätzliche Schwellenwerte hinzu, die Sie durch Klicken auf die Schaltfläche *Schwellenwert hinzufügen* benachrichtigen können. Wenn die Richtlinie so angepasst wird, wie Sie es wünschen, klicken Sie auf *Speichern*.
+. Sie können auch wählen, *Verarbeitung weiterer Richtlinien stoppen, wenn Alarm erzeugt wird*. Dadurch werden zusätzliche Richtlinienwarnungen gestoppt, wenn die Bedingungen dieser Richtlinie erfüllt sind.
+. Sie können beliebig viele neue Richtlinien hinzufügen und je nach Geschäftsbedarf Warnmeldungen für andere Empfänger festlegen. Alle Richtlinien, die ohne bestimmte Empfänger konfiguriert sind, senden Benachrichtigungen an die globale Empfängerliste, die auf der Seite *Admin* > *Benachrichtigungen* festgelegt ist
+
+
+
+
+== Nachdem Sie fertig sind
+
+Jede neue Richtlinie wird automatisch aktiviert, wenn sie gespeichert wird, und Empfänger erhalten Warnungen, wenn die Bedingungen der Richtlinie erfüllt sind (bekannt als _Verstoß_). Sie können diese Verstöße auch im Dashboard *Dashboards* > *Verstöße* überwachen.

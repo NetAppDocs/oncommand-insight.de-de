@@ -1,0 +1,554 @@
+---
+permalink: config-admin/oncommand-insight-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight arbeitet mit Lizenzen, die bestimmte Funktionen auf dem Insight Server ermöglichen. 
+---
+= OnCommand Insight-Lizenzen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight arbeitet mit Lizenzen, die bestimmte Funktionen auf dem Insight Server ermöglichen.
+
+* *Entdecken*
++
+Discover ist die grundlegende Insight-Lizenz, die die Inventarisierung unterstützt. Sie müssen über eine Discover-Lizenz verfügen, um OnCommand Insight verwenden zu können, und die Discover-Lizenz muss mit mindestens einer der Lizenzen Assure, Perform oder Plan gekoppelt werden.
+
+* * Versichern*
++
+Eine Assure Lizenz bietet Support für Assurance-Funktionalität, einschließlich globaler und SAN-Pfadrichtlinien und Management von Verstößen. Mit einer Assure-Lizenz können Sie auch Schwachstellen anzeigen und managen.
+
+* *Ausführen*
++
+Eine Lizenz ausführen unterstützt die Leistungsüberwachung auf Bestandsseiten, Dashboard-Widgets, Abfragen usw. sowie die Verwaltung von Performance-Richtlinien und -Verstößen.
+
+* *Plan*
++
+Eine Planlizenz unterstützt Planungsfunktionen, einschließlich Ressourcenverwendung und -Zuweisung.
+
+* *Host Utilization Pack*
++
+Eine Host-Nutzungslizenz unterstützt die Auslastung des Dateisystems auf Hosts und virtuellen Maschinen.
+
+* *Authoring Melden*
++
+Eine Lizenz zur Erstellung von Berichten unterstützt zusätzliche Autoren für die Berichterstellung. Diese Lizenz erfordert die Planlizenz.
+
+
+
+OnCommand Insight Module sind für einen Jahreszeitraum oder unbefristet lizenziert:
+
+* Nach Terabyte überwachter Kapazität für Discover, Assure, Plan, Perform Module
+* Nach Anzahl der Hosts für das Host Utilization Pack
+* Nach Anzahl der zusätzlichen für die Berichterstellung erforderlichen Cognos Pro-Autoren
+
+
+Lizenzschlüssel sind ein Satz eindeutiger Zeichenfolgen, die für jeden Kunden generiert werden. Sie können die Lizenzschlüssel von Ihrem OnCommand Insight-Vertreter beziehen.
+
+Ihre installierten Lizenzen steuern die folgenden Optionen, die in der Software verfügbar sind:
+
+* *Entdecken*
++
+Inventarisierung und Bestandsverwaltung (Foundation)
+
++
+Überwachen von Änderungen und Verwalten von Bestandsrichtlinien
+
+* * Versichern*
++
+Anzeige und Management von Richtlinien und Verstößen für SAN-Pfade
+
++
+Anzeigen und Verwalten von Schwachstellen
+
++
+Anzeigen und Managen von Aufgaben und Migrationen
+
+* *Plan*
++
+Anfragen anzeigen und verwalten
+
++
+Anzeigen und Verwalten ausstehender Aufgaben
+
++
+Anzeige und Verwaltung von Reservierungsverletzungen
+
++
+Anzeige und Verwaltung von Verstößen gegen die Portbilanz
+
+* *Ausführen*
++
+Überwachen Sie Leistungsdaten, einschließlich Daten in Dashboard-Widgets, Bestandsseiten und Abfragen
+
++
+Anzeige und Management von Performance-Richtlinien und -Verstößen
+
+
+
+Die folgenden Tabellen enthalten Details zu den Funktionen, die mit und ohne die Lizenz „Perform“ für Administratorbenutzer und Benutzer ohne Administratorrechte verfügbar sind.
+
+|===
+
+
+| Funktion (Admin) | Mit Perform Lizenz | Ohne Lizenz ausführen 
+
+
+ a| 
+Applikation
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme; keine Widgets zur Erkennung von Anomalien
+
+
+
+ a| 
+Virtual Machine
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Hypervisor
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Host
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Datenspeicher
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+VMDK
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Internes Volumen
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Datenmenge
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Storage-Pool
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Festplatte
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Storage
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Storage-Node
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Fabric
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Switch-Port
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme; „`Port Errors`“ zeigt „`N/A`“ an
+
+
+
+ a| 
+Speicherport
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+NPV-Port
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Switch
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+NPV-Switch
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Qtrees
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Kontingente
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Pfad
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Zone
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Zonenmitglied
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Generisches Gerät
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Tape
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Maskierung
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+ISCSI-Sitzungen
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+ICSI-Netzwerkportale
+ a| 
+Ja.
+ a| 
+Keine Leistungsdaten oder Diagramme
+
+
+
+ a| 
+Suche
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Admin
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Dashboard
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Widgets
+ a| 
+Ja.
+ a| 
+Teilweise verfügbar (nur Asset-, Abfrage- und Admin-Widgets sind verfügbar)
+
+
+
+ a| 
+Dashboard zu Verstößen
+ a| 
+Ja.
+ a| 
+Verborgen
+
+
+
+ a| 
+Ressourcen-Dashboard
+ a| 
+Ja.
+ a| 
+Teilweise verfügbar (Storage-IOPS und VM-IOPS-Widgets sind ausgeblendet)
+
+
+
+ a| 
+Management von Performance-Richtlinien
+ a| 
+Ja.
+ a| 
+Verborgen
+
+
+
+ a| 
+Verwalten von Anmerkungen
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Verwalten von Anmerkungsregeln
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Management von Applikationen
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Abfragen
+ a| 
+Ja.
+ a| 
+Ja.
+
+
+
+ a| 
+Verwalten von Geschäftseinheiten
+ a| 
+Ja.
+ a| 
+Ja.
+
+|===
+|===
+
+
+| Merkmal | User - mit Perform-Lizenz | Guest - mit Perform-Lizenz | User - ohne Lizenz ausführen | Guest - ohne Lizenz durchführen 
+
+
+ a| 
+Ressourcen-Dashboard
+ a| 
+Ja.
+ a| 
+Ja.
+ a| 
+Teilweise verfügbar (Storage-IOPS und VM-IOPS-Widgets sind ausgeblendet)
+ a| 
+Teilweise verfügbar (Storage-IOPS und VM-IOPS-Widgets sind ausgeblendet)
+
+
+
+ a| 
+Benutzerdefiniertes Dashboard
+ a| 
+Nur Ansicht (keine Optionen zum Erstellen, Bearbeiten oder Speichern)
+ a| 
+Nur Ansicht (keine Optionen zum Erstellen, Bearbeiten oder Speichern)
+ a| 
+Nur Ansicht (keine Optionen zum Erstellen, Bearbeiten oder Speichern)
+ a| 
+Nur Ansicht (keine Optionen zum Erstellen, Bearbeiten oder Speichern)
+
+
+
+ a| 
+Management von Performance-Richtlinien
+ a| 
+Ja.
+ a| 
+Verborgen
+ a| 
+Verborgen
+ a| 
+Verborgen
+
+
+
+ a| 
+Verwalten von Anmerkungen
+ a| 
+Ja.
+ a| 
+Verborgen
+ a| 
+Ja.
+ a| 
+Verborgen
+
+
+
+ a| 
+Management von Applikationen
+ a| 
+Ja.
+ a| 
+Verborgen
+ a| 
+Ja.
+ a| 
+Verborgen
+
+
+
+ a| 
+Verwalten von Geschäftseinheiten
+ a| 
+Ja.
+ a| 
+Verborgen
+ a| 
+Ja.
+ a| 
+Verborgen
+
+
+
+ a| 
+Abfragen
+ a| 
+Ja.
+ a| 
+Nur anzeigen und bearbeiten (keine Speicheroption)
+ a| 
+Ja.
+ a| 
+Nur anzeigen und bearbeiten (keine Speicheroption)
+
+|===

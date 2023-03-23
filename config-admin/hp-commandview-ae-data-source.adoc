@@ -1,0 +1,277 @@
+---
+permalink: config-admin/hp-commandview-ae-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Die Datenquellen HP CommandView Advanced Edition \(AE\) und CommandView AE CLI/SMI \(AE Lite\) unterstützen die Bestandsaufnahme und Leistung über einen CommandView \ (auch HiCommand\) Device Manager-Server.' 
+---
+= HP CommandView AE-Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Datenquellen HP CommandView Advanced Edition (AE) und CommandView AE CLI/SMI (AE Lite) unterstützen die Bestandsaufnahme und Leistung über einen CommandView (auch HiCommand genannt) Device Manager-Server.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Bestandsdaten aus den Datenquellen HP CommandView AE und AE Lite. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+PDEV
+ a| 
+Festplatte
+
+
+
+ a| 
+Journalpool
+ a| 
+Festplattengruppe
+
+
+
+ a| 
+Storage Array Durchführt
+ a| 
+Storage
+
+
+
+ a| 
+Port Controller
+ a| 
+Storage-Node
+
+
+
+ a| 
+Array-Gruppe, DP-Pool
+ a| 
+Storage-Pool
+
+
+
+ a| 
+Logische Einheit, LDEV
+ a| 
+Datenmenge
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Inventaranforderungen
+
+* IP-Adresse des HiCommand Device Manager-Servers
+* Schreibgeschützter Benutzername und Kennwort für die CommandView AE-Software und Peer-Berechtigungen
+* Für die CommandView AE Lite-Version des Gerätemanagers ist nur die CLI lizenziert
+* Port-Anforderung: 2001
+
+
+
+
+== Performance-Anforderungen Erfüllt
+
+* HDS USP, USP V und VSP Performance
++
+** Performance Monitor muss lizenziert sein.
+** Überwachungsschalter muss aktiviert sein.
+** Das Export-Tool (`Export.exe`) Muss auf den OnCommand Insight-Server kopiert werden.
+** Die Version des Exportwerkzeugs muss mit der Microcode-Version des Ziel-Arrays übereinstimmen.
+
+
+* HDS AMS-Leistung
++
+** Performance Monitor muss lizenziert sein.
+** Das CLI-Dienstprogramm des Speichernavigators Modular 2 (SNM2) muss auf dem OnCommand Insight-Server installiert sein.
+** Sie müssen alle AMS-, WMS- und SMS-Speicher-Arrays registrieren, deren Leistung von OnCommand Insight erworben werden muss, indem Sie den folgenden Befehl verwenden:
++
+
+
+** Sie müssen sicherstellen, dass alle Arrays, die Sie registriert haben, in der Ausgabe dieses Befehls aufgeführt sind: `auunitref.exe`.
+
+
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+HiCommand Server
+ a| 
+IP-Adresse oder vollqualifizierter Domänenname des HiCommand Device Manager-Servers
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für den HiCommand Device Manager-Server.
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort, das für den HiCommand Device Manager-Server verwendet wird.
+
+
+
+ a| 
+Geräte – USP, USP V, VSP/R600-Speicher
+ a| 
+Geräteliste für VSP G1000 (R800), VSP (R700), HUS VM (HM700) und USP-Speicher. Jeder Storage benötigt:
+
+* IP-Adresse des Arrays: IP-Adresse des Speichers
+* Benutzername: Benutzername für den Speicher
+* Passwort: Passwort für den Speicher
+* Ordner mit Export Utility JAR-Dateien: Der Ordner, der das Export-Dienstprogramm enthält `.jar` Dateien
+
+
+
+
+ a| 
+SNM2Geräte - WMS/SMS/AMS-Speicher
+ a| 
+Geräteliste für WMS/SMS/AMS-Speicher. Jeder Storage benötigt:
+
+* IP-Adresse des Arrays: IP-Adresse des Speichers
+* Speicher Navigator CLI-Pfad: SNM2 CLI-Pfad
+* Kontoauthentifizierung gültig: Wählen Sie die Option zur Auswahl einer gültigen Kontokertifizierung aus
+* Benutzername: Benutzername für den Speicher
+* Passwort: Passwort für den Speicher
+
+
+
+
+ a| 
+Wählen Sie Tuning Manager für Leistung
+ a| 
+Wählen Sie Tuning Manager, um die Leistung anzuzeigen und andere Leistungsoptionen außer Kraft zu setzen
+
+
+
+ a| 
+Tuning Manager Host
+ a| 
+IP-Adresse oder vollqualifizierter Domain-Name des Tuning Managers
+
+
+
+ a| 
+Tuning-Manager-Port
+ a| 
+Port, der für Tuning Manager verwendet wird
+
+
+
+ a| 
+Benutzername Für Tuning Manager
+ a| 
+Benutzername für Tuning Manager
+
+
+
+ a| 
+Kennwort Für Tuning-Manager
+ a| 
+Passwort für Tuning Manager
+
+|===
+[NOTE]
+====
+Bei HDS USP, USP V und VSP kann jede Festplatte zu mehr als einer Array-Gruppe gehören.
+
+====
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+HiCommand Server-Port
+ a| 
+Port, der für den HiCommand Device Manager verwendet wird
+
+
+
+ a| 
+HTTPS aktiviert
+ a| 
+Wählen Sie diese Option aus, um HTTPS zu aktivieren
+
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 40 Minuten)
+
+
+
+ a| 
+Wählen Sie „Ausschließen“ oder „Einschließen“, um eine Liste anzugeben
+ a| 
+Geben Sie an, ob die Array-Liste unten bei der Datenerfassung ein- oder ausgeschlossen werden soll
+
+
+
+ a| 
+Schließen Sie Geräte aus oder schließen Sie sie ein
+ a| 
+Kommagetrennte Liste der Geräte-IDs oder Array-Namen, die einbezogen oder ausgeschlossen werden sollen
+
+
+
+ a| 
+Abfrage-Host-Manager
+ a| 
+Wählen Sie diese Option aus, um den Hostmanager abzufragen
+
+
+
+ a| 
+HTTP-Timeout (Sek.)
+ a| 
+HTTP-Verbindungs-Timeout (Standard: 60 Sekunden)
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+
+
+ a| 
+Ausfuhrzeitlimit in Sekunden
+ a| 
+Timeout des Exportdienstprogramms (Standard: 300 Sekunden)
+
+|===

@@ -1,0 +1,31 @@
+---
+permalink: config-admin/cdot-landing-page-terminology-storage.html 
+sidebar: sidebar 
+keywords:  
+summary: Bedingungen für Objekte oder Referenzen, die auf den Landing-Pages für NetApp Clustered Data ONTAP Storage-Assets möglicherweise zu finden sind. 
+---
+= Clustered Data ONTAP Storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bedingungen für Objekte oder Referenzen, die auf den Landing-Pages für NetApp Clustered Data ONTAP Storage-Assets möglicherweise zu finden sind.
+
+
+
+== Clustered Data ONTAP – Storage-Terminologie
+
+Die folgenden Begriffe gelten für Objekte oder Verweise, die auf den Landing Pages für NetApp Clustered Data ONTAP Storage-Ressourcen möglicherweise zu finden sind. Viele dieser Bedingungen gelten auch für andere Datensammler.
+
+* Model – Eine durch Kommas getrennte Liste der eindeutigen, diskreten Node-Modellnamen in diesem Cluster. Wenn alle Nodes in den Clustern denselben Modelltyp aufweisen, wird nur ein Modellname angezeigt.
+* Vendor – derselbe Anbietername, den Sie sehen würden, wenn Sie eine neue Datenquelle konfigurieren würden.
+* Seriennummer -- die Seriennummer des Arrays. Bei Storage-Systemen mit Cluster-Architektur wie NetApp Clustered Data ONTAP ist diese Seriennummer möglicherweise weniger nützlich als die einzelnen Seriennummern „`Storage-Nodes`“.
+* IP – im Allgemeinen sind die IP(s) oder Hostnamen (s) wie in der Datenquelle konfiguriert.
+* Microcode-Version -- Firmware.
+* RAW Capacity -- Basis 2 Summe aller physischen Festplatten im System, unabhängig von ihrer Rolle.
+* Latenz – eine Darstellung der mit dem Host konfrontiert Workloads, sowohl bei Lese- als auch bei Schreibvorgängen. Idealerweise bezieht OCI diesen Wert direkt, ist aber oft nicht der Fall. Statt dieses Arrays anzubieten, führt OCI im Allgemeinen eine IOPS-gewichtete Berechnung aus den Statistiken der einzelnen internen Volumes` durch.
+* Durchsatz – aggregiert von internen Volumes.
+* Verwaltung – dieser kann einen Hyperlink für die Managementoberfläche des Geräts enthalten. Programmgesteuert von der Insight-Datenquelle als Teil der Bestandsberichterstattung erstellt.
+

@@ -1,0 +1,30 @@
+---
+permalink: config-admin/searching-your-environment-for-specific-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Informationen zu bestimmten Assets über die Suchfunktion finden. Wenn beispielsweise ein Systembenutzer den Speicheradministrator mit einer Beschwerde über einen bestimmten Server kontaktiert, kann der Administrator den Servernamen durchsuchen und eine Bestandsseite anzeigen, die den Status zusammenfasst und zusätzliche verknüpfte Informationen liefert. 
+---
+= In Ihrer Umgebung nach bestimmten Assets suchen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Informationen zu bestimmten Assets über die Suchfunktion finden. Wenn beispielsweise ein Systembenutzer den Speicheradministrator mit einer Beschwerde über einen bestimmten Server kontaktiert, kann der Administrator den Servernamen durchsuchen und eine Bestandsseite anzeigen, die den Status zusammenfasst und zusätzliche verknüpfte Informationen liefert.
+
+
+
+== Schritte
+
+. Öffnen Sie die Benutzeroberfläche von OnCommand Insight.
+. Klicken Sie in der Symbolleiste auf image:../media/search-assets-icon.gif[""].
++
+Das Feld *Assets suchen* wird angezeigt.
+
+. Geben Sie den Namen eines Assets oder eines Teils des Namens ein.
+. Wählen Sie die gewünschte Ressource aus den Suchergebnissen aus.
++
+Die Bestandsseite für diese Ressource wird angezeigt.
+
+

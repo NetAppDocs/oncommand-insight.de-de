@@ -1,0 +1,285 @@
+---
+permalink: config-admin/cisco-fc-switch-firmware-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight verwendet die Datenquelle Cisco FC Switch Firmware 2.0+ \(SNMP\) zur Bestandsaufnahme von Cisco MDS Fibre Channel Switches sowie einer Vielzahl von Cisco Nexus FCoE Switches, auf denen der FC-Service aktiviert ist. Darüber hinaus können Sie mit dieser Datenquelle viele Modelle von Cisco-Geräten im NPV-Modus entdecken.' 
+---
+= Cisco FC Switch Firmware (SNMP) Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight verwendet die Datenquelle „Cisco FC Switch Firmware 2.0+“ (SNMP) zur Bestandsaufnahme von Cisco MDS Fibre Channel Switches sowie einer Vielzahl von Cisco Nexus FCoE Switches, auf denen der FC-Service aktiviert ist. Darüber hinaus können Sie mit dieser Datenquelle viele Modelle von Cisco-Geräten im NPV-Modus entdecken.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Bestandsinformationen aus der Datenquelle „Cisco FC Switch“. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Switch
+ a| 
+Switch
+
+
+
+ a| 
+Port
+ a| 
+Port
+
+
+
+ a| 
+VSAN
+ a| 
+Fabric
+
+
+
+ a| 
+Zone
+ a| 
+Zone
+
+
+
+ a| 
+Logischer Switch
+ a| 
+Logischer Switch
+
+
+
+ a| 
+Name Server-Eintrag
+ a| 
+Name Server-Eintrag
+
+
+
+ a| 
+Inter-VSAN Routing-Zone (IVR
+ a| 
+IVR-Zone
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* Eine IP-Adresse eines Switches in der Fabric oder den einzelnen Switches
+* Chassis-Erkennung für die Fabric-Erkennung
+* Bei Verwendung von SNMP V2, nur lesbare Community-String
+* Port 161 wird für den Zugriff auf das Gerät verwendet
+* Zugriffsvalidierung mit `snmpwalk` Dienstprogramm zum Schalter (siehe `<install_path\>\bin\`)
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Cisco Switch IP
+ a| 
+IP-Adresse oder vollqualifizierter Domain-Name des Switches
+
+
+
+ a| 
+SNMP-Version
+ a| 
+Für die Leistungserfassung ist SNMP Version v2 oder höher erforderlich
+
+
+
+ a| 
+SNMP-Community-Zeichenfolge
+ a| 
+SNMP Read-Only-Community-String zum Zugriff auf den Switch (gilt nicht für SNMP v3)
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für den Switch (nur SNMP v3)
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort für den Switch (nur SNMPv3)
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 40 Minuten)
+
+
+
+ a| 
+SNMP-Auth-Protokoll
+ a| 
+SNMP-Authentifizierungsprotokoll (nur SNMPv3)
+
+
+
+ a| 
+SNMP-Datenschutzprotokoll
+ a| 
+SNMP-Datenschutzprotokoll (nur SNMPv3)
+
+
+
+ a| 
+SNMP-Datenschutzkennwort
+ a| 
+SNMP-Datenschutzkennwort
+
+
+
+ a| 
+SNMP wird erneut verwendet
+ a| 
+Anzahl der SNMP-Wiederholungsversuche
+
+
+
+ a| 
+SNMP-Timeout (ms)
+ a| 
+SNMP-Timeout (Standard 5000 ms)
+
+
+
+ a| 
+Trapping Aktivieren
+ a| 
+Wählen Sie, um das Überfüllen zu aktivieren. Wenn Sie Trapping aktivieren, müssen Sie auch SNMP-Benachrichtigungen aktivieren.
+
+
+
+ a| 
+Mindestzeit zwischen Traps (s)
+ a| 
+Mindestzeit zwischen durch Traps ausgelösten Erfassungsversuchen (Standard: 10 Sekunden)
+
+
+
+ a| 
+Alle Fabric Switches Erkennen
+ a| 
+Wählen Sie diese Option, um alle Switches in der Fabric zu erkennen
+
+
+
+ a| 
+Geräte Ausschließen
+ a| 
+Kommagetrennte Liste der Geräte-IP-Adressen, die von der Abfrage ausgeschlossen werden sollen
+
+
+
+ a| 
+Geräte Einschließen
+ a| 
+Kommagetrennte Liste der Geräte-IPs, die in Abfrage aufgenommen werden sollen
+
+
+
+ a| 
+Überprüfen Sie Den Gerätetyp
+ a| 
+Wählen Sie diese Option aus, um nur die Geräte zu akzeptieren, die sich explizit als Cisco-Geräte bewerben
+
+
+
+ a| 
+Primärer Alias-Typ
+ a| 
+Geben Sie eine erste Präferenz für die Auflösung des Alias an. Wählen Sie eine der folgenden Optionen:
+
+* *Geräte-Alias*
++
+Dies ist ein benutzerfreundlicher Name für einen Port-WWN (PWWN), der bei Bedarf in allen Konfigurationsbefehlen verwendet werden kann. Alle Switches der Produktfamilie Cisco MDS 9000 unterstützen Distributed Device Alias Services (Geräte-Aliase).
+
+* *Keine*
++
+Melden Sie keinen Alias
+
+* *Port-Beschreibung*
++
+Eine Beschreibung zur Identifizierung des Ports in einer Liste von Ports
+
+* *Zone Alias (alle)*
++
+Ein benutzerfreundlicher Name für einen Port, der nur für die Zonenkonfiguration verwendet werden kann
+
+* *Zone Alias (nur aktiv)*
++
+Ein benutzerfreundlicher Name für einen Port, der nur für die aktive Konfiguration verwendet werden kann. Dies ist die Standardeinstellung.
+
+
+
+
+
+ a| 
+Sekundärer Alias-Typ
+ a| 
+Geben Sie eine zweite Vorliebe für die Auflösung des Alias an
+
+
+
+ a| 
+Tertiärer Alias-Typ
+ a| 
+Geben Sie eine dritte Präferenz für die Auflösung des Alias an
+
+
+
+ a| 
+Aktivieren Sie die Unterstützung für den SANTAP-Proxy-Modus
+ a| 
+Wählen Sie aus, ob Ihr Cisco Switch SANTAP im Proxy-Modus verwendet. Wenn Sie EMC RecoverPoint verwenden, verwenden Sie wahrscheinlich SANTAP.
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+|===

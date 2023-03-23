@@ -1,0 +1,37 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie können Applikationen, die in Ihrer Umgebung ausgeführt werden, bestimmten Ressourcen zuweisen \(Host, virtuelle Maschinen, Volumes, interne Volumes und Hypervisoren\). Im Abschnitt Benutzerdaten können Sie die einem Asset zugewiesene Anwendung ändern oder einem Asset eine Anwendung oder zusätzliche Anwendungen zuweisen.' 
+---
+= Verwenden des Abschnitts „Benutzerdaten“ zum Zuweisen oder Ändern von Anwendungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Applikationen, die in Ihrer Umgebung ausgeführt werden, bestimmten Ressourcen zuweisen (Host, Virtual Machines, Volumes, interne Volumes und Hypervisoren). Im Abschnitt Benutzerdaten können Sie die einem Asset zugewiesene Anwendung ändern oder einem Asset eine Anwendung oder zusätzliche Anwendungen zuweisen.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Suchen Sie eine Asset-Seite, indem Sie eine der folgenden Aktionen ausführen:
++
+** Klicken Sie in der Insight-Symbolleiste auf image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]Geben Sie den Namen des Assets ein, und wählen Sie das Asset aus der Liste aus.
+** Klicken Sie auf *Dashboards*, wählen Sie *Assets Dashboard*, suchen Sie einen Asset-Namen und klicken Sie darauf. Die Seite Anlage wird angezeigt.
+
+
+. Sie haben folgende Möglichkeiten:
++
+** Klicken Sie auf den Namen der Anwendung, um die Bestandsseite für die Anwendung anzuzeigen.
+** Um die zugewiesene Anwendung zu ändern oder eine Anwendung oder weitere Anwendungen zuzuweisen, setzen Sie Ihren Cursor über den Anwendungsnamen, wenn eine Anwendung zugewiesen ist, oder über *Keine*, wenn keine Anwendung zugewiesen ist, klicken Sie auf image:../media/pencil-icon-landing-page-be.gif[""]Geben Sie ein, um nach einer Anwendung zu suchen, oder wählen Sie eine aus der Liste aus, und klicken Sie dann auf image:../media/check-box-ok.gif[""].
++
+Wenn Sie eine Anwendung auswählen, die einer Geschäftseinheit zugeordnet ist, wird die Geschäftseinheit automatisch der Anlage zugewiesen. Wenn Sie in diesem Fall den Cursor über den Namen der Geschäftseinheit setzen, wird das Wort _abgeleitet_ angezeigt. Wenn Sie die Einheit nur für das Asset und nicht für die zugehörige Anwendung verwalten möchten, können Sie die Zuweisung der Anwendung manuell überschreiben.
+
+** Um eine Anwendung zu entfernen, klicken Sie auf image:../media/trash-can-query.gif[""].
+
+
+

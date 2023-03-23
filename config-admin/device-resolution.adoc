@@ -1,0 +1,50 @@
+---
+permalink: config-admin/device-resolution.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie müssen alle Geräte ermitteln, die Sie mit OnCommand Insight überwachen möchten. Eine Bestandsaufnahme ist erforderlich, um die Performance und Bestandsaufnahme in Ihrer Umgebung exakt zu verfolgen. In der Regel werden die meisten Geräte in Ihrer Umgebung durch automatische Geräteauflösung erkannt. 
+---
+= Geräteauflösung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen alle Geräte ermitteln, die Sie mit OnCommand Insight überwachen möchten. Eine Bestandsaufnahme ist erforderlich, um die Performance und Bestandsaufnahme in Ihrer Umgebung exakt zu verfolgen. In der Regel werden die meisten Geräte in Ihrer Umgebung durch automatische Geräteauflösung erkannt.
+
+[NOTE]
+====
+Wenn Sie ein Upgrade durchführen und inaktive Regeln für die automatische Auflösung im System haben, von dem Sie aktualisieren, werden diese Regeln während des Upgrades gelöscht. Um inaktive Regeln für die automatische Auflösung beizubehalten, aktivieren Sie die Regeln (aktivieren Sie das Kontrollkästchen), bevor das Upgrade durchgeführt wird.
+
+====
+Nach der Installation und Konfiguration von Datenquellen werden Geräte in Ihrer Umgebung, einschließlich Switches, Storage-Arrays und Hypervisoren und VMs, identifiziert. Dies erkennt jedoch normalerweise nicht 100 % der Geräte in Ihrer Umgebung.
+
+Nachdem Geräte vom Typ der Datenquelle konfiguriert wurden, empfiehlt es sich, Regeln zur Geräteauflösung zu nutzen, um die verbleibenden unbekannten Geräte in Ihrer Umgebung zu identifizieren. Die Geräteauflösung kann Ihnen dabei helfen, unbekannte Geräte als die folgenden Gerätetypen zu lösen:
+
+* Physische Hosts
+* Storage Arrays
+* Bänder
+* Switches
+
+
+Geräte, die nach der Geräteauflösung als „`unbekannt`“ verbleiben, gelten als generische Geräte, die Sie auch in Abfragen und Dashboards anzeigen können.
+
+Die wiederum erstellten Regeln identifizieren automatisch neue Geräte mit ähnlichen Attributen, wie sie Ihrer Umgebung hinzugefügt werden. In einigen Fällen ermöglicht die Geräteauflösung auch die manuelle Identifizierung unter Umgehung der Regeln für die Geräteauflösung für nicht erkannte Geräte in Insight.
+
+Eine unvollständige Identifizierung von Geräten kann zu folgenden Problemen führen:
+
+* Unvollständige Pfade
+* Nicht identifizierte Multipath-Verbindungen
+* Applikationen können nicht gruppieren
+* Ungenaue Topologieansichten
+* Ungenaue Daten im Data Warehouse und Berichterstellung
+
+
+Die Funktion Geräteauflösung (*Verwalten* > *Geräteauflösung*) umfasst die folgenden Registerkarten, die jeweils eine Rolle bei der Planung und Anzeige der Ergebnisse der Geräteauflösung spielen:
+
+* „`FC identify`“ enthält eine Liste von WWNs und Portinformationen von Fibre-Channel-Geräten, die nicht durch automatische Geräteauflösung aufgelöst wurden. Auf der Registerkarte wird außerdem der Prozentsatz der erkannten Geräte angegeben.
+* „`IP identify`“ enthält eine Liste von Geräten, die auf CIFS-Freigaben und NFS-Freigaben zugreifen, die nicht durch die automatische Geräteauflösung identifiziert wurden. Auf der Registerkarte wird außerdem der Prozentsatz der erkannten Geräte angegeben.
+* „`Regeln für die automatische Auflösung`“ enthält die Liste der Regeln, die bei der Ausführung der Fibre-Channel-Geräteauflösung ausgeführt werden. Dies sind Regeln, die Sie erstellen, um nicht identifizierte Fibre Channel-Geräte zu lösen.
+* „`Einstellungen`“ bietet Konfigurationsoptionen, mit denen Sie die Geräteauflösung an Ihre Umgebung anpassen.
+

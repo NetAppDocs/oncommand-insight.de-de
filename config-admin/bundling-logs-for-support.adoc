@@ -1,0 +1,25 @@
+---
+permalink: config-admin/bundling-logs-for-support.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Wenn Sie ein Problem mit der Insight Software beheben, können Sie schnell eine ZIP-Datei \ (mithilfe des „gz“-Formats\) der Protokolle und Aufnahmeaufzeichnungen erstellen, die an den NetApp Customer Support gesendet werden.' 
+---
+= Bündelung der Protokolle für den Support
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie ein Problem mit der Insight Software beheben, können Sie schnell eine ZIP-Datei (im „gz“-Format) der Protokolle und Aufnahmeaufzeichnungen erstellen, die an den NetApp Customer Support gesendet werden sollen.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Fehlerbehebung*.
+. Klicken Sie im Abschnitt Daten senden/erfassen auf *Paketprotokolle*.
+. Klicken Sie Auf *Datei Speichern*.
+. Klicken Sie auf *OK*.
+

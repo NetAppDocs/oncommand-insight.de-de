@@ -1,0 +1,92 @@
+---
+permalink: install-windows/verifying-the-data-warehouse-and-reporting-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: Nach einer erfolgreichen OnCommand Insight-Data-Warehouse-Installation sollten Sie sicherstellen, dass alle DWH- und Berichtsdienste in Ihren Microsoft Windows-Diensten verfügbar sind. 
+---
+= Überprüfen der Installation von Data Warehouse und Reporting
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach einer erfolgreichen OnCommand Insight-Data-Warehouse-Installation sollten Sie sicherstellen, dass alle DWH- und Berichtsdienste in Ihren Microsoft Windows-Diensten verfügbar sind.
+
+
+
+== Schritte
+
+. Wählen Sie im Windows-Startmenü die Option MENU:Systemsteuerung [System und Sicherheit > Verwaltung > Dienste].
+. Stellen Sie sicher, dass die folgenden Einträge in der Liste der Dienste angezeigt werden:
++
+|===
+
+
+| Name / Bundesland | Beschreibung 
+
+
+ a| 
+*SANscreen-Server / läuft*
+ a| 
+Der OnCommand Insight DWH-Server
+
+
+
+ a| 
+*MySQL / Running*
+ a| 
+Die OnCommand Insight SQL-Datenbank
+
+
+
+ a| 
+*IBM Cognos/Running*
+ a| 
+IBM Cognos Content Database
+
+
+
+ a| 
+*DB2- DB2COPY1 - DB2-0 / LÄUFT*
+ a| 
+Management von DB2-Datenbanken
+
+
+
+ a| 
+*DB2 Governor (DB2COPY1) / wird nicht ausgeführt*
+ a| 
+Sammelt Statistiken für Anwendungen, die mit DB2-Datenbanken verbunden sind.
+
+
+
+ a| 
+*DB2-Lizenzserver (DB2COPY1)/nicht ausgeführt*
+ a| 
+Überwacht die Einhaltung von DB2-Lizenzen.
+
+
+
+ a| 
+*DB2 Management Service (DB2COPY1) / läuft*
+ a| 
+Verwaltet DB2-Registrierungseinträge auf Kompatibilität mit früheren DB2-Kopierversionen.
+
+
+
+ a| 
+*DB2 Remote Command Server (DB2COPY1) / läuft*
+ a| 
+Unterstützt Remote-Ausführung von DB2-Befehlen.
+
+
+
+ a| 
+*IBM Secure Shell Server für Windows / nicht aktiv*
+ a| 
+IBM Secure Shell Server für Windows
+
+|===
+

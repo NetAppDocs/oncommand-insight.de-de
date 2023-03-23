@@ -1,0 +1,57 @@
+---
+permalink: install-windows/installing-a-remote-acquisition-unit-rau.html 
+sidebar: sidebar 
+keywords:  
+summary: Installieren Sie einen oder mehrere RAUS in Ihrer OnCommand Insight-Umgebung. 
+---
+= Installieren einer Remote Acquisition Unit (rau)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Installieren Sie einen oder mehrere RAUS in Ihrer OnCommand Insight-Umgebung.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen alle Installationsvoraussetzungen erfüllt haben.
+
+Mindestens ein Port muss geöffnet und zwischen dem rau-Server und dem OnCommand Insight-Server verfügbar sein, um Änderungsinformationen an den Server weiterzuleiten. Wenn Sie sich darüber nicht sicher sind, validieren Sie ihn, indem Sie einen Webbrowser auf dem rau-Computer öffnen und ihn zum OnCommand Insight-Server leiten:
+
+[listing]
+----
+ https://< OnCommand Insight Server hostname >:< acquisition_port >
+----
+Der Erfassungsport ist standardmäßig auf 443 eingestellt, wurde jedoch möglicherweise während der Serverinstallation geändert. Wenn die Verbindung erfolgreich war, wird eine OnCommand Insight-Antwortseite angezeigt, die einen offenen und verfügbaren Port zwischen der rau und dem OnCommand Insight-Server anzeigt.
+
+
+
+== Schritte
+
+. Melden Sie sich beim rau-Server mit einem Konto mit Administratorrechten an.
+. Öffnen Sie Windows Explorer, und navigieren Sie zu dem Verzeichnis, in dem sich die rau-Installationsdatei befindet.
+. Doppelklicken `.MSI` Datei, um die Installation zu starten.
+. Klicken Sie auf *Weiter*, um mit dem Fenster fortzufahren, in dem die Lizenzvereinbarung angezeigt wird. Lesen Sie diese und akzeptieren Sie die Bedingungen der Lizenzvereinbarung und klicken Sie auf *Weiter*.
+. Wählen Sie diese Option, um die rau auf einer lokalen Festplatte oder die gesamte Funktion auf einer lokalen Festplatte zu installieren. (Sie können den Link Festplattennutzung überprüfen, um sicherzustellen, dass Sie über genügend Speicherplatz verfügen – 116 MB sind erforderlich.) Klicken Sie Auf *Weiter*.
+. Legen Sie im Fenster Konfigurieren die für Ihren Standort spezifischen Parameter fest:
++
+** *OnCommand Insight* *Servername oder -Adresse* - Hostname oder IP-Adresse, um den OnCommand Insight-Server zu identifizieren. Die rau verwendet diesen Namen/diese IP, um eine Kommunikationsverbindung mit dem Server zu öffnen. Wenn Sie einen Hostnamen angeben, stellen Sie sicher, dass dieser über DNS aufgelöst werden kann.
+** *Name der Akquisitionseinheit* - eindeutiger Name, der die rau identifiziert.
+** *OnCommand Insight Secured Remote Acquisition Port (HTTPS)* - Port, der von Remote Acquisition Units verwendet wird, um Umgebungsänderungsinformationen an den OnCommand Insight-Server zu senden. Diese Einstellung sollte mit dem bei der Installation des OnCommand Insight-Servers eingegebenen Wert übereinstimmen und auf allen raus gleich sein.
+
+
+. Überprüfen Sie Ihre Auswahl. Klicken Sie auf *Zurück*, um zurückzugehen und Änderungen vorzunehmen. Klicken Sie Auf *Weiter*.
+. Klicken Sie auf *Installieren*, um die Installation zu starten.
++
+Warten Sie, bis die Installation abgeschlossen ist. Dies dauert etwa 5 bis 10 Minuten.
+
+
+
+
+
+== Nachdem Sie fertig sind
+
+Nach Abschluss der Installation wird ein letztes Fenster angezeigt. Klicken Sie auf das Feld *Remote Acquisition Service starten*, um die rau zu starten, und klicken Sie auf *Finish*, um diesen Vorgang zu beenden.

@@ -1,0 +1,68 @@
+---
+permalink: howto/how-to-troubleshoot-fibre-channel-bb-credit-0-errors.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Fibre Channel verwendet Buffer-to-Buffer Credits \(BB Credits\) zur Steuerung des Übertragungsflusses. Der Gutschriftwert wird verringert, wenn ein Frame von einem Port gesendet wird und der Gutschriftwert aufgefüllt wird, wenn der Port eine Antwort erhält. Wenn die BB-Credits im Port nicht aufgefüllt werden, kann der Übertragungsfluss beeinträchtigt werden. Ports benötigen Speicher oder Puffer, um Frames vorübergehend zu speichern, bis sie nacheinander zusammengebaut und ausgeliefert werden. Die Anzahl der Puffer ist die Anzahl der Frames, die ein Port speichern kann und wird als Puffergutschrift bezeichnet.' 
+---
+= Fehlerbehebung für Fibre Channel BB Credit 0-Fehler
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Fibre Channel verwendet Buffer-to-Buffer Credits (BB Credits) zur Steuerung des Übertragungsflusses. Der Gutschriftwert wird verringert, wenn ein Frame von einem Port gesendet wird und der Gutschriftwert aufgefüllt wird, wenn der Port eine Antwort erhält. Wenn die BB-Credits im Port nicht aufgefüllt werden, kann der Übertragungsfluss beeinträchtigt werden. Ports benötigen Speicher oder Puffer, um Frames vorübergehend zu speichern, bis sie nacheinander zusammengebaut und ausgeliefert werden. Die Anzahl der Puffer ist die Anzahl der Frames, die ein Port speichern kann und wird als Puffergutschrift bezeichnet.
+
+Da die verfügbaren Credits für einen bestimmten Port bei null liegen, wird durch einen Fehler darauf hingewiesen, dass der Port keine Übertragungen mehr empfängt, wenn Null erreicht wird. Er wird erst wieder aufgenommen, wenn die BB-Credits wieder aufgefüllt werden.
+
+Insight Performance-Richtlinien ermöglichen die Festlegung von Schwellenwerten für die folgenden Port-Kennzahlen.
+
+|===
+
+
+ a| 
+BB Credit Null - Rx
+
+
+
+ a| 
+Die Anzahl der empfansenden Buffer-to-Buffer-Credits, die während des Abtastzeitraums auf Null umgestiegen ist
+
+
+
+ a| 
+BB Credit Null - Tx
+
+
+
+ a| 
+Die Anzahl der Übermittler-Puffer-Credits, die während des Abtastzeitraums auf Null umgestiegen sind
+
+
+
+ a| 
+BB Credit Null - Gesamt
+
+
+
+ a| 
+Die Anzahl der Male, die dieser Port die Übertragung stoppen musste, weil der angeschlossene Port nicht mehr über Credits verfügte
+
+
+
+ a| 
+BB-Gutschrift Null-Dauer - Tx
+
+
+
+ a| 
+Zeit in Millisekunden, während der die Tx BB-Gutschrift während des Abtastintervalls Null war
+
+|===
+BB-Gutschriftfehler können durch einige der folgenden Szenarien verursacht werden:
+
+* Wenn eine bestimmte Implementierung einen hohen Prozentsatz an FC-Frames mit Größen hat, die deutlich kleiner als die maximale Größe sind, sind möglicherweise mehr BB_Credits erforderlich.
+* Workload-Änderungen an der Umgebung, die sich auf Ports oder Geräte auswirken könnten, die mit ihnen verbunden sind, z. B. Storage-Nodes.
+
+
+Sie können die Fabric-, Switch- und Port-Asset-Seiten zur Überwachung Ihrer Fibre-Channel-Umgebung verwenden. Port-Asset-Seiten enthalten zusammenfassende Informationen über die Ressource, ihre Topologie (das Gerät und seine Verbindungen), Leistungsdiagramme und Tabellen der zugehörigen Ressourcen. Bei der Fehlerbehebung von Fibre-Channel-Problemen ist das Performance-Diagramm für die einzelnen Port-Assets hilfreich, da es den Datenverkehr für den ausgewählten Port mit den wichtigsten Beiträgen anzeigt. Auf den Port-Asset-Seiten werden in diesem Diagramm auch Kennzahlen für die zwischenpufferten Gutschriften und Portfehler angezeigt. Insight zeigt für jede Metrik ein separates Performance-Diagramm an.

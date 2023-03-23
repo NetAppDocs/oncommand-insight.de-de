@@ -1,0 +1,41 @@
+---
+permalink: install-windows/uninstalling-the-data-warehouse-software.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie müssen die Data Warehouse-Software deinstallieren, bevor Sie ein Upgrade durchführen können. 
+---
+= Deinstallieren der Data Warehouse-Software
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die Data Warehouse-Software deinstallieren, bevor Sie ein Upgrade durchführen können.
+
+
+
+== Bevor Sie beginnen
+
+Wenn Sie Änderungen an Berichten vorgenommen haben, die Sie behalten möchten, ist es wichtig, dass Sie vor der Deinstallation von Data Warehouse ein Backup erstellen. Durch die Deinstallation von Data Warehouse werden alle zuvor erfassten Daten endgültig gelöscht und alle Berichte, einschließlich neu erstellter oder bearbeiteter Berichte, entfernt.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse-Server an.
+. Stellen Sie sicher, dass alle Insight-Fenster auf dem Server geschlossen sind.
+. So deinstallieren Sie die Software über die Systemsteuerung:
++
+.. Öffnen Sie *Programm deinstallieren* aus dem Bedienfeld und wählen Sie die OnCommand Insight-Anwendung zum Entfernen. Klicken Sie auf *Deinstallieren* und folgen Sie den Anweisungen.
+.. Wählen Sie die IBM DB2-Anwendung zum Entfernen aus. Klicken Sie auf *Deinstallieren* und folgen Sie den Anweisungen.
+.. Löschen Sie den DB2-Installationsordner (z. B. _C:\Program Files\IBM\DB2_), um die DB2-Datenbank vollständig zu entfernen.
+
+
+. So deinstallieren Sie das Programm mithilfe des angegebenen Skripts:
++
+.. Navigieren Sie zum Ordner _<download location>\oci_dwh_uninstall\_ und führen Sie das Skript _uninstall_oci_dwh.bat_ aus.
+
+
+. Starten Sie den Server neu.
+

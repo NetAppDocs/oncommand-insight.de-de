@@ -1,0 +1,274 @@
+---
+permalink: config-admin/monitoring-oncommand-insight-system-health.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie sollten regelmäßig den aktuellen Status Ihrer Insight Systemkomponenten überprüfen, indem Sie auf der Systemzustandsseite nachsehen, auf der der Status jeder Komponente angezeigt wird und Sie beim Auftreten eines Problems benachrichtigt werden. 
+---
+= Monitoring des OnCommand Insight Systemzustands
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten regelmäßig den aktuellen Status Ihrer Insight Systemkomponenten überprüfen, indem Sie auf der Systemzustandsseite nachsehen, auf der der Status jeder Komponente angezeigt wird und Sie beim Auftreten eines Problems benachrichtigt werden.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der Insight Web-Benutzeroberfläche an.
+. Klicken Sie auf *Admin* und wählen Sie *Health*.
++
+Die Seite Systemzustand wird angezeigt.
+
+. Sehen Sie sich die Zusammenfassung des aktuellen Status der Komponenten an und achten Sie besonders auf jeden Aufmerksamkeitsstatus in der Spalte *Details*, der durch einen roten Kreis vorangestellt ist, der auf ein Problem hinweist, das Sie sofort beachten müssen.
++
+Auf der Seite Systemzustand werden basierend auf der Systemkonfiguration Informationen zu den folgenden Insight Komponenten angezeigt:
+
++
+|===
+
+
+| Komponente | Test | Details | Anzeigen 
+
+
+ a| 
+Akquisition
+ a| 
+Verarbeitung von Bestandsdaten
+ a| 
+Status der lokalen Erfassungseinheit
+ a| 
+„`OK`“, wenn die Anzahl der gleichzeitig abfragenden Datenquellen weniger als 75 % des maximalen Ausführungspools beträgt (Standardwert ist 30). „`Akquisition ist besetzt`“, wenn die Auslastung mehr als 75 % beträgt, empfiehlt, das Abfrageintervall zu erhöhen oder weitere Remote-Akquisitionseinheiten hinzuzufügen.
+
+
+
+ a| 
+Engine Zur Erkennung Von Anomalien
+ a| 
+Motorleistung
+ a| 
+Anzahl der Applikationen, die auf Erkennung von Anomalien überwacht werden
+ a| 
+Anzahl und Prozentsatz der Anwendungen, die von 48 möglichen Anwendungen überwacht werden.
+
+
+
+ a| 
+Engine Zur Erkennung Von Anomalien
+ a| 
+Motorstatus
+ a| 
+Status des Engine zur Erkennung von Anomalien
+ a| 
+Wenn keine Fehler erkannt werden, zeigt „`OK`“ Informationen zu gefundenen Fehlern an. Siehe `prelert.log` Datei für weitere Informationen.
+
+
+
+ a| 
+DWH
+ a| 
+Backup
+ a| 
+Status der geplanten Datensicherung im Data Warehouse
+ a| 
+„`OK`“ und die letzte erfolgreiche DWH-Sicherungszeit, wenn die DWH-geplante Sicherung aktiviert ist. Andernfalls werden Informationen über gefundene Fehler angezeigt.
+
+
+
+ a| 
+DWH
+ a| 
+ETL
+ a| 
+Status der Data Warehouse ETL
+ a| 
+„`OK`“ und die letzte erfolgreiche DWH-Build-Zeit, wenn keine Fehler aufgetreten sind. Andernfalls werden Informationen über gefundene Fehler angezeigt.
+
+
+
+ a| 
+Server
+ a| 
+ASUP
+ a| 
+Status von ASUP
+ a| 
+„`ASUP enabled`“ und, falls verfügbar, die letzte erfolgreiche PhoneHome-Zeit. „`ASUP failed`“, wenn phonehome aktiviert ist, aber ein Problem aufgetreten ist.
+
++ „Ungültiger Sicherungsort“, wenn das Sicherungsverzeichnis ungültig ist.
+
++ zeigt die letzte erfolgreiche Telefonhomezeit sowie die Zeit des letzten fehlgeschlagenen Versuchs an, falls verfügbar.
+
++ „`ASUP disabled`“, wenn Phoneho deaktiviert ist.
+
+
+
+ a| 
+Server
+ a| 
+Automatische Auflösung
+ a| 
+Status der automatischen Geräteauflösung
+ a| 
+„`OK`“, wenn keine Fehler vorliegen. „`Automatische Auflösung ist blockiert`“, wenn Identifikationsfehler den Fortschritt der Auflösung verhindern.
+
++ „`niedrige Erfolgsrate`“, wenn weniger als 75 % der generischen Geräte identifiziert werden konnten.
+
+
+
+ a| 
+Server
+ a| 
+Elasticsearch
+ a| 
+Status des Datenspeichers bei elastischen Suchvorgängen
+ a| 
+„`OK`“, wenn keine Fehler vorliegen. „`Service nicht verfügbar`“, wenn keine Verbindung zum elastischen Suchdienst hergestellt werden kann.
+
++ „Cluster Mode detected“, wenn mehr als ein Knoten erkannt wird.
+
++ „hohe Speicherauslastung“, wenn der genutzte Heap-Speicherplatz mehr als 85 % beträgt.
+
++ "Status: ROT" zeigt einen Fehler an, der von der elastischen Suche gemeldet wird. Zeigt Informationen über den Fehler an und empfiehlt, sich an den Kundendienst zu wenden.
+
+
+
+ a| 
+Server
+ a| 
+CPU
+ a| 
+Insight CPU-Auslastung
+ a| 
+„`OK`“, wenn die CPU-Last weniger als 65 % beträgt. „`die CPU-Auslastung des Systems ist hoch. Reduzieren Sie Ihre CPU-Auslastung.`“ Wenn die CPU-Last größer als 65 % ist.
+
+
+
+ a| 
+Server
+ a| 
+Festplattenspeicher benötigen
+ a| 
+Status des Festplattenspeichers
+ a| 
+Freier Festplattenspeicher, von Insight belegter Speicherplatz und für Insight reservierter Speicherplatz. „`geringer Festplattenspeicher`“, wenn die Festplattenauslastung mehr als 80 % beträgt.
+
+
+
+ a| 
+Server
+ a| 
+EventBus
+ a| 
+Status des EventBus
+ a| 
+„`EventBus ist leer`“, wenn die EventBus-Warteschlange leer ist, wird andernfalls der Status der EventBus-Warteschlange angezeigt.
+
+
+
+ a| 
+Server
+ a| 
+Verarbeitung von Bestandsdaten
+ a| 
+Status der Verarbeitungsfähigkeit von Bestandsdaten des Insight Servers
+ a| 
+„`OK`“, wenn der Insight-Server nicht ausgelastet ist. „`Server ist ausgelastet`“, wenn der Server mindestens 75 % der Zeit der letzten Stunde belegt ist. Empfiehlt, keine weiteren Datenquellen hinzuzufügen, und empfiehlt, die Umgebung auf mehrere Server zu verteilen.
+
+
+
+ a| 
+Server
+ a| 
+MySQL
+ a| 
+Status der MySQL-Datenbank
+ a| 
+„`OK`“, wenn keine Probleme erkannt werden. „`die Datenbank hat Performance-Probleme. Einige Abfragen dauern zu lange, um`" auszuführen, wenn die Anzahl der langsamen Abfragen mehr als 5% beträgt.
+
++ "`die Datenbankprotokolldatei wuchs in der letzten Stunde um mehr als <size>. Überprüfen Sie die MySQL-Protokolldatei`“, wenn das Fehlerprotokoll auf mehr als 20 KB anwächst.
+
+
+
+ a| 
+Server
+ a| 
+Performance-Archivierung
+ a| 
+Status des Performance-Archivs
+ a| 
+„`Performance Archive is enabled`“ oder „`Performance Archive is not enabled`“.
+
+
+
+ a| 
+Server
+ a| 
+Physischer Speicher
+ a| 
+Status des physischen Speichers
+ a| 
+„`OK`“, wenn die Speicherauslastung unter 85 % liegt. „`die Speichernutzung ist hoch. Reduzieren Sie den gesamten Speicherbedarf für Systemstabilität`“, wenn der Speicherverbrauch über 85 % liegt.
+
+
+
+ a| 
+Server
+ a| 
+Service Pack
+ a| 
+Verfügbarkeit des Service Packs
+ a| 
+Zeigt an, ob ein Service Pack für Insight verfügbar ist. Wenn ein Service Pack verfügbar ist, werden Anweisungen angezeigt.
+
+
+
+ a| 
+Server
+ a| 
+Verwendungsinformationen
+ a| 
+Status des Versands von Nutzungsinformationen
+ a| 
+Zeigt an, ob das Senden von Nutzungsinformationen an NetApp aktiviert oder deaktiviert ist. Empfiehlt die Aktivierung, falls deaktiviert. Zeigt die letzte oder letzte erfolgreiche Sendezeit an.
+
++ zeigt Informationen zu aufgetretenen Problemen an.
+
+
+
+ a| 
+Server
+ a| 
+Verletzung
+ a| 
+Status offener Verstöße
+ a| 
+„`OK`“, wenn die Anzahl der offenen Verstöße weniger als 75 % des Grenzwerts für Verstöße ist. „`maximal zulässige Anzahl offener Verstöße ist <number>`“, wenn die Anzahl der offenen Verstöße größer als 75 % des Grenzwerts für Verstöße ist. Empfiehlt, die Konfiguration der Performance-Richtlinien zu überprüfen.
+
++ „`Verletzungsmanager ist blockiert`“, wenn die Anzahl der offenen Verstöße am Grenzwert für Verstöße liegt.
+
++ Beachten Sie, dass der Verletzer-Manager keine neuen Verstöße erstellen kann und empfiehlt, die Konfiguration der Leistungsrichtlinien zu überprüfen.
+
+
+
+ a| 
+Server
+ a| 
+Wöchentliches Backup
+ a| 
+Status der wöchentlichen Sicherung
+ a| 
+„`OK`“, wenn die wöchentliche Sicherung aktiviert ist, wird andernfalls „`die wöchentliche Sicherung ist nicht aktiviert`“ angezeigt.
+
+|===
++
+[NOTE]
+====
+Wenn das Engine zur Erkennung von Anomalien einen Fehler anzeigt, finden Sie weitere Informationen unter `prelert.log` Datei für weitere Informationen: - Windows: `disk drive:\install directory\SANscreen\Wildfly\Standalone\Logs`- Linux: `/var/log/netapp/oci/wildfly/`
+
++
+
+====
+

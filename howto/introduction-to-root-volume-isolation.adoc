@@ -1,0 +1,23 @@
+---
+permalink: howto/introduction-to-root-volume-isolation.html 
+sidebar: sidebar 
+keywords:  
+summary: Bei NetApp Storage-Systemen enthält das Root-Aggregat das Root-Volume. Das Root-Volume enthält spezielle Verzeichnisse und Konfigurationsdateien für die Verwaltung und Steuerung des Speichersystems. Die Management- und Kontrollvorgänge können zu umfangreichen Aktivitäten im Root-Aggregat führen. Wenn Sie das Insight System für die 10 besten internen Volumes mit der höchsten I/O-Dichte abfragen, können die Ergebnisse unter Umständen auch NetApp Root-Aggregate zu Mitgliedern der Top 10 gehören. 
+---
+= Berichte zur I/O-Dichte beschreiben nur interne Daten-Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei NetApp Storage-Systemen enthält das Root-Aggregat das Root-Volume. Das Root-Volume enthält spezielle Verzeichnisse und Konfigurationsdateien für die Verwaltung und Steuerung des Speichersystems. Die Management- und Kontrollvorgänge können zu umfangreichen Aktivitäten im Root-Aggregat führen. Wenn Sie das Insight System für die 10 besten internen Volumes mit der höchsten I/O-Dichte abfragen, können die Ergebnisse unter Umständen auch NetApp Root-Aggregate zu Mitgliedern der Top 10 gehören.
+
+Bei der Überwachung Ihrer Umgebung ist es wichtiger, zu ermitteln, welche internen Datenvolumen eine hohe I/O-Dichte erzeugen. Damit nur die Daten-Volumes präzise ermittelt werden können, müssen die internen NetApp Volumes von Anfragen isoliert werden, die zur Überwachung der I/O-Dichte erforderlich sind.
+
+Dieser Leitfaden beschreibt, wie NetApp Root-Aggregate leicht identifiziert, von den Ergebnissen interner Volume-Abfragen isoliert und Regeln erstellt werden können, die beim Hinzufügen zum System neue NetApp Root-Aggregate ausschließen. Die folgenden Funktionen von Insight sorgen dafür, dass die Berichte zur I/O-Dichte von internen Daten-Volumes abgeleitet werden.
+
+* Es wird eine Abfrage erstellt, um alle NetApp Root-Aggregate zu identifizieren, die von Insight überwacht werden.
+* Jedem NetApp Root-Aggregat wird eine Annotation zugewiesen.
+* Eine Anmerkungsregel wird erstellt, um die NetApp Aggregate auszuschließen
+

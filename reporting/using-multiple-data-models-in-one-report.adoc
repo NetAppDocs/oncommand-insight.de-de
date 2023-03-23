@@ -1,0 +1,18 @@
+---
+permalink: reporting/using-multiple-data-models-in-one-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Normalerweise verwenden Sie ein Datenmodell pro Bericht. Sie können jedoch einen Bericht schreiben, in dem Daten aus mehreren Datenmodellen kombiniert werden. 
+---
+= Verwenden mehrerer Datenmodelle in einem Bericht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Normalerweise verwenden Sie ein Datenmodell pro Bericht. Sie können jedoch einen Bericht schreiben, in dem Daten aus mehreren Datenmodellen kombiniert werden.
+
+Um einen Bericht zu schreiben, der Daten aus mehreren Datenmodellen zusammenfasst, wählen Sie eines der Datenmodelle aus, die als Basis verwendet werden sollen, und schreiben Sie dann SQL-Abfragen, um auf die Daten der zusätzlichen Datentabellen zuzugreifen. Sie können die SQL-Join-Funktion verwenden, um die Daten aus den verschiedenen Abfragen in einer einzigen Abfrage zu kombinieren, mit der Sie den Bericht schreiben können.
+
+Beispielsweise möchten Sie die aktuelle Kapazität für jedes Storage Array bereitstellen und benutzerdefinierte Anmerkungen zu den Arrays erfassen. Sie können den Bericht mithilfe des Datenmodells für die Storage-Kapazität erstellen. Sie können die Elemente aus den Tabellen „Aktuelle Kapazität und Dimension“ verwenden und eine separate SQL-Abfrage hinzufügen, um auf die Annotationsinformationen im Bestandsdatenmodell zuzugreifen. Abschließend können Sie die Daten kombinieren, indem Sie die Bestandsspeicherdaten mit der Tabelle Speicherdimension verknüpfen, indem Sie den Speichernamen und die Kriterien für den Beitritt verwenden.

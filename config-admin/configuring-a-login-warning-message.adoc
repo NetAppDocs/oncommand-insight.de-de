@@ -1,0 +1,42 @@
+---
+permalink: config-admin/configuring-a-login-warning-message.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit OnCommand Insight können Administratoren eine benutzerdefinierte Textmeldung festlegen, die bei der Anmeldung des Benutzers angezeigt wird. 
+---
+= Festlegen einer Warnmeldung für die Anmeldung
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit OnCommand Insight können Administratoren eine benutzerdefinierte Textmeldung festlegen, die bei der Anmeldung des Benutzers angezeigt wird.
+
+
+
+== Schritte
+
+. So legen Sie die Meldung auf dem OnCommand Insight-Server fest:
++
+.. Navigieren Sie zu dem Menü:Admin[Fehlerbehebung > Erweiterte Fehlerbehebung > Erweiterte Einstellungen].
+.. Geben Sie Ihre Login-Nachricht in den Textbereich ein.
+.. Klicken Sie auf das Kontrollkästchen *Client zeigt Anmelde-Warnmeldung an*.
+.. Klicken Sie Auf *Speichern*.
++
+Die Meldung wird bei der Anmeldung für alle Benutzer angezeigt.
+
+
+
+. So legen Sie die Meldung im Data Warehouse (DWH) und Reporting (Cognos) fest:
++
+.. Navigieren Sie zu *System Information* und klicken Sie auf die Registerkarte *Login Warning*.
+.. Geben Sie Ihre Login-Nachricht in den Textbereich ein.
+.. Klicken Sie Auf *Speichern*.
++
+Die Meldung wird bei der DWH- und Cognos Reporting-Anmeldung für alle Benutzer angezeigt.
+
+
+
+

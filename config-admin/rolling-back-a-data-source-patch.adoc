@@ -1,0 +1,40 @@
+---
+permalink: config-admin/rolling-back-a-data-source-patch.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn ein Datenquellpatch nicht so funktioniert, wie Sie es erwartet haben, können Sie es erneut ausführen. Durch ein Rollback eines Patches wird dieser gelöscht und die vorherige Version wird wie vor der Anwendung dieses Patches wiederhergestellt. 
+---
+= Rollback eines Datenquellpatches
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein Datenquellpatch nicht so funktioniert, wie Sie es erwartet haben, können Sie es erneut ausführen. Durch ein Rollback eines Patches wird dieser gelöscht und die vorherige Version wird wie vor der Anwendung dieses Patches wiederhergestellt.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Patches*.
+. Klicken Sie unter *Patches, die aktuell überprüft werden* auf den verknüpften Namen des Patches, der anscheinend nicht erfolgreich ist.
+. Prüfen Sie auf der Seite Patches für die Datenquelle diese Informationen:
++
+** *Zusammenfassung* beschreibt, wann der Patch angewendet wurde, die betroffenen Datenquellen und Kommentare über den Patch von Ihnen oder anderen Mitgliedern Ihres Teams.
+** *Betroffene Datenquellen* listet alle zu patchenden Datenquellen auf und enthält einen Vergleich des vor- und Nachpatchstatus.
+
+
+. Um die Details für eine Datenquelle anzuzeigen, die den Patch nicht erfolgreich verarbeitet, klicken Sie auf den verknüpften *Name*.
++
+.. Überprüfen Sie die Zusammenfassung.
+.. Überprüfen Sie die *Event Timeline*, um alle Konfigurations- oder Leistungsdaten zu sehen, die diese Datenquelle beeinflussen könnten.
+
+
+. Wenn Sie feststellen, dass der Patch nicht erfolgreich sein wird, klicken Sie auf den Zurück-Pfeil des Browsers, um zur Übersichtsseite der Patches zurückzukehren.
+. Klicken Sie auf *Rollback*, um diesen Patch zu entfernen.
++
+Wenn Sie von einem anderen Patch wissen, der mit größerer Wahrscheinlichkeit erfolgreich sein wird, klicken Sie auf *Replace Patch* und laden Sie den neuen Patch hoch.
+
+

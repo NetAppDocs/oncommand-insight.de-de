@@ -1,0 +1,38 @@
+---
+permalink: config-admin/researching-a-failed-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn eine Datenquelle die „Inventory failed !“ hat Oder „Leistung fehlgeschlagen!“ Meldung und eine hohe oder mittlere Auswirkung müssen Sie dieses Problem mithilfe der Datenquellübersicht mit den verknüpften Informationen untersuchen. 
+---
+= Suche nach einer fehlerhaften Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn eine Datenquelle die Meldung "*Inventory failed !*" oder "*Performance failed !*" und eine hohe oder mittlere Auswirkung hat, müssen Sie dieses Problem mithilfe der Datenquellenzusammenfassung mit ihren verknüpften Informationen untersuchen.
+
+
+
+== Schritte
+
+. Klicken Sie auf den verknüpften *Name* der Datenquelle, um die Übersichtsseite zu öffnen.
+. Lesen Sie auf der Übersichtsseite im Bereich *Kommentare* alle Notizen, die von einem anderen Techniker hinterlassen wurden, der möglicherweise auch diesen Fehler untersucht.
+. Notieren Sie alle Leistungsmeldungen.
+. Wenn ein Patch auf diese Datenquelle angewendet wird, klicken Sie auf den Link, um die Seite *Patch* zu überprüfen, um zu sehen, ob dies das Problem verursacht hat.
+. Bewegen Sie den Mauszeiger über die Segmente des Diagramms *Event Timeline*, um zusätzliche Informationen anzuzeigen.
+. Wählen Sie eine Fehlermeldung für ein Gerät aus, die unter der Ereigniszeitleiste angezeigt wird, und klicken Sie auf das Symbol *Fehlerdetails*, das rechts neben der Meldung angezeigt wird.
++
+Die Fehlerdetails enthalten den Text der Fehlermeldung, die wahrscheinlichsten Ursachen, die verwendeten Informationen und Vorschläge, was versucht werden kann, das Problem zu beheben.
+
+. Im Bereich Geräte, die von dieser Datenquelle gemeldet werden, können Sie die Liste so filtern, dass nur Geräte von Interesse angezeigt werden, und Sie können auf den verknüpften *Name* eines Geräts klicken, um die _Asset-Seite_ für dieses Gerät anzuzeigen.
+. Um zu den zuvor angezeigten Seiten zurückzukehren, verwenden Sie eine der folgenden Methoden:
++
+** Klicken Sie auf den Zurück-Pfeil des Browsers.
+** Klicken Sie mit der rechten Maustaste auf den Zurück-Pfeil, um eine Liste der Seiten anzuzeigen und die gewünschte Seite auszuwählen.
+
+
+. Um detaillierte Informationen zu anderen Ressourcen anzuzeigen, klicken Sie auf andere verknüpfte Namen.
+. Wenn Sie zur Datenquellübersicht zurückkehren, überprüfen Sie im Bereich *changes* unten auf der Seite, ob die letzten Änderungen das Problem verursacht haben.
+

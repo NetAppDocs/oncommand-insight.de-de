@@ -1,0 +1,55 @@
+---
+permalink: install-windows/restoring-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie die Data Warehouse-Datenbank sichern, erstellt Data Warehouse eine ZIP-Datei, die Sie später zur Wiederherstellung derselben Datenbank verwenden können. 
+---
+= Wiederherstellen der Data Warehouse-Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die Data Warehouse-Datenbank sichern, erstellt Data Warehouse einen `.zip` Datei, die Sie später zur Wiederherstellung derselben Datenbank verwenden können.
+
+
+
+== Über diese Aufgabe
+
+Wenn Sie die Data Warehouse-Datenbank wiederherstellen, können Sie auch Benutzerkontoinformationen aus dem Backup wiederherstellen. Benutzerverwaltungstabellen werden von der Data Warehouse-Berichtsengine in einer reinen Data Warehouse-Installation verwendet.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://fqdn/dwh+`.
+. Klicken Sie im Navigationsfenster links auf *Backup/Restore*.
+. Klicken Sie im Abschnitt *Datenbank und Berichte wiederherstellen* auf *Durchsuchen*, und suchen Sie den `.zip` Datei, die das Data Warehouse-Backup enthält.
+. Es ist eine Best Practice, beide der folgenden Optionen ausgewählt zu lassen:
++
+** *Datenbank wiederherstellen*
++
+Enthält Data Warehouse-Einstellungen, Data Marts, Verbindungen und Benutzerkontoinformationen.
+
+** *Berichte wiederherstellen*
++
+Umfasst benutzerdefinierte Berichte, vordefinierte Berichte, Änderungen an vordefinierten Berichten, die Sie vorgenommen haben, und Berichtseinstellungen, die Sie in der Berichtsverbindung vorgenommen haben.
+
+
+
+. Klicken Sie Auf *Wiederherstellen*.
++
+Navigieren Sie nicht vom Wiederherstellungsstatus weg. Wenn Sie dies tun, wird der Wiederherstellungsstatus nicht mehr angezeigt und Sie erhalten keine Anzeige mehr, wenn der Wiederherstellungsvorgang abgeschlossen ist.
+
+. Um den Upgrade-Prozess zu überprüfen, lesen Sie die `dwh_upgrade.log` Datei, die sich am folgenden Speicherort befindet: `<install directory>\SANscreen\wildfly\standalone\log`.
++
+Nachdem der Wiederherstellungsvorgang abgeschlossen ist, erscheint eine Meldung direkt unter der Schaltfläche *Wiederherstellen*. Wenn die Wiederherstellung erfolgreich war, wird die Meldung erfolgreich angezeigt. Wenn der Wiederherstellungsvorgang fehlschlägt, zeigt die Meldung die spezifische Ausnahme an, die aufgetreten ist, um den Fehler zu verursachen. Wenden Sie sich in diesem Fall an den technischen Support und stellen Sie diese bereit `dwh_upgrade.log` Datei: Wenn eine Ausnahme auftritt und der Wiederherstellungsvorgang fehlschlägt, wird die ursprüngliche Datenbank automatisch zurückgesetzt.
+
++
+[NOTE]
+====
+Wenn der Wiederherstellungsvorgang mit der Meldung „`Failed upgrading cognos content Store`“ fehlschlägt, stellen Sie die Data Warehouse-Datenbank ohne ihre Berichte wieder her (nur Datenbank) und verwenden Sie Ihre XML-Berichtsbackups zum Importieren Ihrer Berichte.
+
+====
+

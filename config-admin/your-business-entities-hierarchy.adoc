@@ -1,0 +1,24 @@
+---
+permalink: config-admin/your-business-entities-hierarchy.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Geschäftseinheiten definieren, um Ihre Umgebungsdaten granular zu verfolgen und darüber Berichte zu erstellen. 
+---
+= Die Hierarchie Ihrer Geschäftseinheiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Geschäftseinheiten definieren, um Ihre Umgebungsdaten granular zu verfolgen und darüber Berichte zu erstellen.
+
+In OnCommand Insight enthält die Hierarchie der Geschäftseinheiten die folgenden Ebenen:
+
+* *Mandant* wird primär von Service-Providern genutzt, um Ressourcen einem Kunden zuzuordnen, zum Beispiel NetApp.
+* *Line of Business (Lob)* ist ein Geschäftsbereich oder eine Produktlinie innerhalb eines Unternehmens, z. B. Data Storage.
+* *Business Unit* repräsentiert eine traditionelle Business Unit wie Legal oder Marketing.
+* *Projekt* wird häufig verwendet, um ein bestimmtes Projekt innerhalb einer Geschäftseinheit zu identifizieren, für die Sie Kapazitätszuweisungen wünschen. Beispielsweise kann „Patente“ ein Projektname für die Rechtsabteilung und „Verkaufsveranstaltungen“ ein Projektname für die Geschäftseinheit Marketing sein. Beachten Sie, dass die Namen der Ebenen Leerzeichen enthalten können.
+
+
+Sie müssen nicht alle Ebenen für das Design Ihrer Unternehmenshierarchie verwenden.

@@ -1,0 +1,44 @@
+---
+permalink: howto/defining-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Wenn Sie OnCommand Insight zur Nachverfolgung von Daten gemäß Ihren Unternehmensanforderungen anpassen, können Sie spezielle Annotationen definieren, die erforderlich sind, um ein vollständiges Bild Ihrer Daten zu erstellen: Beispielsweise kann durch eine Annotation das Ende des Lebenszyklus einer Ressource, das Datacenter, in dem sich die Ressource befindet, oder eine Storage-Ebene definiert werden, die die Kosten pro GB des Storage definiert.' 
+---
+= Definieren von Annotationen für die Verwendung mit Chargeback
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie OnCommand Insight zur Nachverfolgung von Daten gemäß Ihren Unternehmensanforderungen anpassen, können Sie spezielle Annotationen definieren, die erforderlich sind, um ein vollständiges Bild Ihrer Daten zu erstellen: Beispielsweise kann durch eine Annotation das Ende des Lebenszyklus einer Ressource, das Datacenter, in dem sich die Ressource befindet, oder eine Storage Tier definiert werden, die die Kosten pro GB des Storage definiert.
+
+
+
+== Über diese Aufgabe
+
+Das Beispiel für einen Chargeback-Bericht in diesem Leitfaden enthält Daten für den Service-Level und die Tier-Ebene. Sie müssen Anmerkungen für jedes Service-Level und jede Tier-Ebene erstellen und anschließend die Kosten für die Service-Level und Tier-Level definieren.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der Web-Benutzeroberfläche von Insight an
+. Klicken Sie Auf *Verwalten* > *Anmerkungen*
++
+Die Seite Anmerkungen wird angezeigt.
+
+. Bewegen Sie den Mauszeiger über den Service-Level oder die Beschriftung der Ebene, und klicken Sie auf image:../media/edit-annotation-icon.gif[""].
++
+Das Dialogfeld Anmerkung bearbeiten wird angezeigt.
+
+. Klicken Sie auf *ADD*, um neue Tiers und Kosten hinzuzufügen.
++
+Im Berichtsbeispiel verwenden die Namen der Ebenen „Stufe“ und „Service“ die Analogie aus Edelmetall: Gold, „Sliver“ und „Bronze“. Sie können beliebige Namenskonventionen verwenden, die von Ihrer Organisation gewählt wurden, z. B. Stufe 1, Stufe 2, Oberster Rang.
+
+. Geben Sie die Werte für die Tiers Gold-Fast, Gold, Silber und Bronze sowie die zugehörigen Kosten ein.
++
+Die von Ihnen eingegebenen Werte definieren die Kosten pro GB für den Speicher, der von Anwendungen verwendet wird. Die Service-Level-Kosten können die Kosten für die Bereitstellung der Dienstleistung oder der tatsächliche Preis für die Dienstleistung des Verbrauchers sein. Diese Kosten werden im Chargeback-Bericht ausgewiesen.
+
+. Klicken Sie auf *Speichern*, wenn Sie fertig sind.
+

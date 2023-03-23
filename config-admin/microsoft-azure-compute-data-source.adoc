@@ -1,0 +1,107 @@
+---
+permalink: config-admin/microsoft-azure-compute-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insights verwendet den Azure Computing-Datensammler, um Inventar- und Performance-Daten aus Azure Computing-Instanzen zu erfassen. 
+---
+= Microsoft Azure Compute-Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insights verwendet den Azure Computing-Datensammler, um Inventar- und Performance-Daten aus Azure Computing-Instanzen zu erfassen.
+
+
+
+== Anforderungen
+
+Sie benötigen die folgenden Informationen, um diesen Datensammler zu konfigurieren:
+
+* Port-Anforderung: 443 HTTPS
+* Azure Management Rest-IP (management.azure.com)
+* Azure Service Principal Application (Client) ID (Benutzerkonto)
+* Azure Service Principal Authentication Key (Benutzerkennwort)
+
+
+Sie müssen ein Azure-Konto für die Insight Discovery einrichten. Sobald das Konto ordnungsgemäß konfiguriert ist und Sie die Applikation in Azure registrieren, verfügen Sie über die erforderlichen Zugangsdaten, um die Azure-Instanz bei Insight zu ermitteln. Über den folgenden Link wird beschrieben, wie Sie das Konto für die Ermittlung einrichten:https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal
+
+
+
+== Konfiguration
+
+Geben Sie Daten in die Datenquellenfelder gemäß der folgenden Tabelle ein:
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Azure Service Principal Application (Client)-ID (Reader-Rolle erforderlich)
+ a| 
+Anmelde-ID bei Azure. Erfordert Zugriff auf die Leserrolle.
+
+
+
+ a| 
+Azure-Mandanten-ID
+ a| 
+Microsoft Mandanten-ID
+
+
+
+ a| 
+Authentifizierungsschlüssel Des Azure Service Principal
+ a| 
+Anmeldeauthentifizierungsschlüssel
+
+
+
+ a| 
+Ich verstehe, dass Microsoft mir API-Anforderungen in Rechnung stellt
+ a| 
+Überprüfen Sie dies, um zu überprüfen, ob Microsoft Ihnen die durch eine Insight-Umfrage gestellten API-Anforderungen abrechnungen aufstellt.
+
+|===
+
+
+== Erweiterte Konfiguration
+
+Geben Sie Daten in die Datenquellenfelder gemäß der folgenden Tabelle ein:
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Der Standardwert ist 60
+
+
+
+ a| 
+Wählen Sie „exclude“ oder „include“, um VMs nach Tags zu filtern
+ a| 
+Geben Sie an, ob VM's by Tags beim Sammeln von Daten einbezogen oder ausgeschlossen werden sollen. Wenn '`include`' ausgewählt ist, darf das Feld Tag Key nicht leer sein.
+
+
+
+ a| 
+Markieren Sie Schlüssel und Werte, nach denen VMs gefiltert werden sollen
+ a| 
+Klicken Sie auf *+ Filter Tag*, um die VMs (und die zugehörigen Festplatten) auszuwählen, die durch Filtern nach Schlüsseln und Werten, die Schlüssel und Werte von Tags auf der VM entsprechen, einzuschließen bzw. auszuschließen. Tag-Schlüssel erforderlich, Tag-Wert ist optional. Wenn der Tag-Wert leer ist, wird die VM solange gefiltert, wie sie dem Tag-Schlüssel entspricht.
+
+
+
+ a| 
+Leistungsintervall (Sek.
+ a| 
+Der Standardwert ist 300
+
+|===

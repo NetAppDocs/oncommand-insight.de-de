@@ -1,0 +1,18 @@
+---
+permalink: reporting/variations-due-to-installed-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Die Daten in den OnCommand Insight-Berichten basieren auf den von Ihnen erworbenen OnCommand Insight Lizenzen. Ohne die Planlizenz erhalten Sie beispielsweise Point-in-Time-Daten \(today\) im Bestandsdatamart für Kapazität und Leistung, aber Sie haben nicht die Möglichkeit, die Kapazitäts- oder Leistungsdaten für jedes Gerät zu tendenzitieren \(über einen Zeitraum berichten\).' 
+---
+= Abweichungen aufgrund von installierten Lizenzen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Daten in den OnCommand Insight-Berichten basieren auf den von Ihnen erworbenen OnCommand Insight Lizenzen. Ohne die Planlizenz erhalten Sie beispielsweise Point-in-Time-Daten (heute) im Bestandsdatamart für Kapazität und Leistung, aber Sie haben nicht die Möglichkeit, die Kapazitäts- oder Leistungsdaten für jedes Gerät zu tendenziieren (über einen Zeitraum berichten).
+
+Wenn keine Planlizenz vorhanden ist, können keine neuen Berichte erstellt oder vorhandene Berichte bearbeitet werden. Möglicherweise werden Unterschiede zwischen den verfügbaren Berichten in Ihrem OnCommand Insight-System und den Abbildungen in der Dokumentation angezeigt. Diese Abweichungen sind auf Unterschiede zwischen den installierten Lizenzen auf Ihrem System und den Lizenzen auf dem System zurückzuführen, mit denen die Illustrationen erstellt wurden.
+
+Weitere Informationen zu Lizenzen finden Sie im OnCommand Insight Installationshandbuch.

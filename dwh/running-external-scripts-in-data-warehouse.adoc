@@ -1,0 +1,42 @@
+---
+permalink: dwh/running-external-scripts-in-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit Data Warehouse können Kunden Jobs erstellen, mit denen benutzerdefinierte Skripte ausgeführt werden können, die benutzerdefinierte Daten in Data Warehouse vorbereiten. 
+---
+= Ausführen von benutzerdefinierten Skripts in Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Data Warehouse können Kunden Jobs erstellen, mit denen benutzerdefinierte Skripte ausgeführt werden können, die benutzerdefinierte Daten in Data Warehouse vorbereiten.
+
+
+
+== Bevor Sie beginnen
+
+Um zu verhindern, dass das benutzerdefinierte Skript während einer Data Warehouse-Aktualisierung gelöscht wird, dürfen Sie das Skript nicht im SANscreen-Verzeichnis speichern.
+
+
+
+== Über diese Aufgabe
+
+Der Job kann nur ein Skript angeben. Sie können mehrere Skripts und Befehle von einem Skript ausführen.
+
+
+
+== Schritte
+
+. Wählen Sie in Data Warehouse *DWH Admin* > *Schedule* aus.
+. Aktivieren Sie das Kontrollkästchen *Script enabled*.
+. Geben Sie den absoluten Pfad des Skriptnamens in das Textfeld *Script Location* ein.
+. Klicken Sie Auf *Speichern*.
+
+
+
+
+== Ergebnisse
+
+Die Job Engine des Data Warehouse plant die Ausführung eines Jobs „`Custom Scripting`“. Der Job wird nach einer ETL ausgeführt und andere widersprüchliche Hintergrundprozesse werden vermieden. Der Job wird nicht von einer Operation „`aus Historie erstellen`“ ausgeführt.

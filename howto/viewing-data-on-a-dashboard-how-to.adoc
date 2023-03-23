@@ -1,0 +1,58 @@
+---
+permalink: howto/viewing-data-on-a-dashboard-how-to.html 
+sidebar: sidebar 
+keywords:  
+summary: Da Ihre Ressourcen nun mit Anmerkungen versehen sind und Performance-Richtlinien für Verstöße konfiguriert sind, können Sie Dashboards erstellen, die bestimmte Daten hervorheben, die Sie als Ziel verfolgen möchten. 
+---
+= Datenhervorhebt mithilfe von Dashboards
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Da Ihre Ressourcen nun mit Anmerkungen versehen sind und Performance-Richtlinien für Verstöße konfiguriert sind, können Sie Dashboards erstellen, die bestimmte Daten hervorheben, die Sie als Ziel verfolgen möchten.
+
+
+
+== Über diese Aufgabe
+
+In diesem Beispiel geben wir eine allgemeine Ansicht der Dashboard-Erstellung an, indem wir ein Dashboard mit nur einem Widget mit den VM-Performance-Daten erstellen. Sie können auf einem einzelnen Dashboard beliebig viele Widgets hinzufügen und so viele Dashboards erstellen, wie Sie benötigen. Widgets können nach Bedarf geändert und verschoben werden.
+
+Weitere Informationen zu Dashboards und Widgets finden Sie in der OnCommand Insight-Dokumentation.
+
+
+
+== Schritte
+
+. Melden Sie sich bei Insight als Benutzer mit Administratorrechten an.
+. Wählen Sie im Menü *Dashboards* die Option *+Neues Dashboard*.
++
+Die Seite Neues Dashboard wird geöffnet.
+
+. Best Practice: Benennen und speichern Sie Ihr Dashboard, sobald Sie es erstellen. Klicken Sie auf die Schaltfläche *Speichern* und geben Sie einen eindeutigen Namen für das Dashboard in das Feld *Name* ein. Beispiel: „`VM Performance Dashboard`“. Klicken Sie Auf *Speichern*.
+. Schieben Sie bei Bedarf den Schalter *Bearbeiten* auf „`on`“, um den Bearbeitungsmodus zu aktivieren. Auf diese Weise können Sie beginnen, Widgets zu Ihrem Dashboard hinzuzufügen.
+. Klicken Sie auf die Schaltfläche *+Widgets* und wählen Sie *Tabelle*, um ein neues Tabellen-Widget zum Dashboard hinzuzufügen.
++
+Das Dialogfeld Widget bearbeiten wird geöffnet.
+
+. Löschen Sie im Feld Name „`Widget 1`“, und geben Sie „`Virtual Machine Performance table`“ ein.
+. Klicken Sie auf das Dropdown-Menü Asset-Typ und ändern Sie *Storage* in *Virtual Machine*.
++
+Die Änderungen an den Tabellendaten werden angezeigt, wenn alle Virtual Machines in Ihrer Umgebung angezeigt werden.
+
+. Um der Tabelle zusätzliche Spalten hinzuzufügen, klicken Sie auf *Spalten*image:../media/column-picker-button.gif[""] Und wählen Sie die gewünschten Spalten aus, z. B.__Data Center_, _Storage Name_ und _Tier_.Sie können die Tabelle nach einer dieser Spalten sortieren.
+. Sie können Filter nach Bedarf einstellen, um die für Sie wichtigen Daten für dieses Dashboard hervorzuheben. Sie können z. B. festlegen, dass nur virtuelle Maschinen mit „`Tier 1 - SSD`“-Annotation angezeigt werden sollen. Klicken Sie neben *Filtern nach* auf die Schaltfläche „` + `“ und wählen Sie__Tier__. Klicken Sie auf *any* und geben Sie „`Tier 1 - SSD`“ ein. Klicken Sie auf das image:../media/check-box-ok.gif[""] Um den Filter zu speichern.
++
+In der Tabelle werden jetzt nur noch virtuelle Maschinen im Tier „`SSD`“ angezeigt.
+
+. Sie können Ergebnisse gruppieren, indem Sie auf die Schaltfläche „` + `“ neben *Gruppieren nach* klicken und ein Feld auswählen, nach dem Sie gruppieren möchten, z. B. Data Center. Die Gruppierung wird automatisch auf die Tabelle angewendet.
+. Wenn Sie das Widget an Ihre Zufriedenheit angepasst haben, klicken Sie auf die Schaltfläche *Speichern*.
++
+Das TabellenWidget wird im Dashboard gespeichert.
+
+. Sie können die Größe des Widgets auf dem Dashboard ändern, indem Sie die untere rechte Ecke ziehen.
+. Um weitere Widgets hinzuzufügen, klicken Sie auf die Schaltfläche *+Widget*. Jedes Widget wird dem Dashboard hinzugefügt, wenn es gespeichert wird.
+. Wenn Sie alle gewünschten Änderungen vorgenommen haben, klicken Sie auf *Speichern*, um das Dashboard zu speichern.
+. Sie können zusätzliche Dashboards erstellen, um unterschiedliche Daten hervorzuheben.
+

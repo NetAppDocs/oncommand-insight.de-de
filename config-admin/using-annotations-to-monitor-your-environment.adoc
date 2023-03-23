@@ -1,0 +1,30 @@
+---
+permalink: config-admin/using-annotations-to-monitor-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie OnCommand Insight zur Nachverfolgung von Daten gemäß Ihren Unternehmensanforderungen anpassen, können Sie spezielle Notizen, sogenannte Annotationen, definieren und diese Ihren Ressourcen zuweisen. Beispielsweise können Assets mit Informationen wie Asset-Lebensende, Datacenter, Gebäudestandort, Storage-Klassen oder Service-Leveln für Volumes versehen werden. 
+---
+= Verwendung von Annotationen zum Monitoring Ihrer Umgebung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie OnCommand Insight so anpassen, dass Daten für Ihre Unternehmensanforderungen nachverfolgt werden, können Sie spezielle Hinweise, die so genannten _Annotationen_, definieren und diese Ihren Ressourcen zuweisen. Beispielsweise können Assets mit Informationen wie Asset-Lebensende, Datacenter, Gebäudestandort, Storage-Klassen oder Service-Leveln für Volumes versehen werden.
+
+Durch die Verwendung von Annotationen zum Monitoring Ihrer Umgebung werden die folgenden grundlegenden Aufgaben aufgeführt:
+
+* Erstellen oder Bearbeiten von Definitionen für alle Anmerkungstypen.
+* Anzeigen von Asset-Seiten und Verknüpfen jeder Anlage mit einer oder mehreren Anmerkungen.
++
+Wenn z. B. ein Asset geleast wird und der Mietvertrag innerhalb von zwei Monaten abläuft, können Sie eine End-of-Life-Anmerkung auf das Asset anwenden. Dadurch wird verhindert, dass andere diese Ressource über einen längeren Zeitraum nutzen können.
+
+* Erstellen von Regeln, um Anmerkungen automatisch auf mehrere Assets desselben Typs anzuwenden.
+* Verwenden des Importdienstprogramms für Anmerkungen zum Importieren von Anmerkungen.
+* Filtern Sie Assets nach ihren Anmerkungen.
+* Gruppieren von Daten in Berichten auf der Grundlage von Anmerkungen und Erstellen dieser Berichte.
++
+Weitere Informationen zu Berichten finden Sie im _OnCommand Insight Reporting Guide_.
+
+

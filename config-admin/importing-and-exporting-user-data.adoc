@@ -1,0 +1,89 @@
+---
+permalink: config-admin/importing-and-exporting-user-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit den Import- und Exportfunktionen können Sie Anmerkungen, Anmerkungsregeln, Abfragen, Performance-Richtlinien und benutzerdefinierte Dashboards in eine Datei exportieren. Diese Datei kann dann in verschiedene OnCommand Insight-Server importiert werden. 
+---
+= Importieren und Exportieren von Benutzerdaten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit den Import- und Exportfunktionen können Sie Anmerkungen, Anmerkungsregeln, Abfragen, Performance-Richtlinien und benutzerdefinierte Dashboards in eine Datei exportieren. Diese Datei kann dann in verschiedene OnCommand Insight-Server importiert werden.
+
+Die Export- und Importfunktionen werden nur zwischen Servern unterstützt, auf denen dieselbe Version von OnCommand Insight ausgeführt wird.
+
+Um Benutzerdaten zu exportieren oder zu importieren, klicken Sie auf *Admin* und wählen *Setup*, und wählen Sie dann die Registerkarte *Benutzerdaten importieren/exportieren*.
+
+Während des Importvorgangs werden je nach importierten Objekten und Objekttypen Daten hinzugefügt, zusammengeführt oder ersetzt.
+
+* Anmerkungstypen
++
+** Fügt eine Anmerkung hinzu, wenn im Zielsystem keine Anmerkung mit demselben Namen vorhanden ist.
+** Fügt eine Anmerkung zusammen, wenn der Anmerkungstyp eine Liste ist, und eine Anmerkung mit dem gleichen Namen existiert im Zielsystem.
+** Ersetzt eine Anmerkung, wenn der Anmerkungstyp eine andere als eine Liste ist und eine Anmerkung mit dem gleichen Namen im Zielsystem vorhanden ist.
+
+
++
+[NOTE]
+====
+Wenn im Zielsystem eine Anmerkung mit demselben Namen, jedoch mit einem anderen Typ vorhanden ist, schlägt der Import fehl. Wenn Objekte von der fehlgeschlagenen Annotation abhängen, können diese Objekte falsche oder unerwünschte Informationen anzeigen. Nach Abschluss des Importvorgangs müssen alle Anmerkungsabhängigkeiten geprüft werden.
+
+====
+* Anmerkungsregeln
++
+** Fügt eine Anmerkungsregel hinzu, wenn im Zielsystem keine Anmerkungsregel mit demselben Namen vorhanden ist.
+** Ersetzt eine Anmerkungsregel, wenn im Zielsystem eine Anmerkungsregel mit demselben Namen vorhanden ist.
+
+
++
+[NOTE]
+====
+Anmerkungsregeln hängen von Abfragen und Anmerkungen ab. Nach Abschluss des Importvorgangs müssen alle Anmerkungsregeln auf ihre Genauigkeit überprüft werden.
+
+====
+* Richtlinien
++
+** Fügt eine Richtlinie hinzu, wenn im Zielsystem keine Richtlinie mit demselben Namen vorhanden ist.
+** Ersetzt eine Richtlinie, wenn im Zielsystem eine Richtlinie mit demselben Namen vorhanden ist.
+
+
++
+[NOTE]
+====
+Richtlinien können nach Abschluss des Importvorgangs außer Betrieb sein. Sie müssen die Richtlinienreihenfolge nach dem Import überprüfen. Richtlinien, die von Anmerkungen abhängen, können fehlschlagen, wenn die Anmerkungen falsch sind. Nach dem Import müssen alle Anmerkungsabhängigkeiten überprüft werden.
+
++
+
+====
+* Abfragen
++
+** Fügt eine Abfrage hinzu, wenn im Zielsystem keine Abfrage mit demselben Namen vorhanden ist.
+** Ersetzt eine Abfrage, wenn im Zielsystem eine Abfrage mit demselben Namen vorhanden ist, auch wenn der Ressourcentyp der Abfrage unterschiedlich ist.
+
+
++
+[NOTE]
+====
+Wenn der Ressourcentyp einer Abfrage anders ist, können nach dem Import alle Dashboard-Widgets, die diese Abfrage verwenden, unerwünschte oder falsche Ergebnisse anzeigen. Sie müssen nach dem Import alle abfragebasierten Widgets auf ihre Genauigkeit überprüfen. Abfragen, die von Anmerkungen abhängig sind, können fehlschlagen, wenn die Anmerkungen falsch sind. Nach dem Import müssen alle Anmerkungsabhängigkeiten überprüft werden.
+
++
+
+====
+* Dashboards
++
+** Fügt ein Dashboard hinzu, wenn im Zielsystem kein Dashboard mit demselben Namen vorhanden ist.
+** Ersetzt ein Dashboard, wenn im Zielsystem ein Dashboard mit demselben Namen vorhanden ist, auch wenn der Ressourcentyp der Abfrage unterschiedlich ist.
+
+
++
+[NOTE]
+====
+Sie müssen nach dem Import alle abfragebasierten Widgets in Dashboards auf ihre Genauigkeit überprüfen. Wenn der Quellserver über mehrere Dashboards mit demselben Namen verfügt, werden alle exportiert. Allerdings wird nur der erste auf den Zielserver importiert. Um Fehler beim Import zu vermeiden, sollten Sie sicherstellen, dass Ihre Dashboards vor dem Exportieren eindeutige Namen haben.
+
++
+
+====
+

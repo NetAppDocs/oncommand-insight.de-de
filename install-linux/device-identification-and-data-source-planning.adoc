@@ -1,0 +1,31 @@
+---
+permalink: install-linux/device-identification-and-data-source-planning.html 
+sidebar: sidebar 
+keywords:  
+summary: Im Rahmen Ihrer Bereitstellungsplanung sollten Sie Informationen zu den Geräten in Ihrer Umgebung sammeln. 
+---
+= Geräteerkennung und Planung der Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Rahmen Ihrer Bereitstellungsplanung sollten Sie Informationen zu den Geräten in Ihrer Umgebung sammeln.
+
+Sie benötigen die folgende Software, Konnektivität und Informationen zu jedem Gerät in Ihrer Umgebung:
+
+* IP-Adresse oder Hostname, der vom OCI-Server aufgelöst werden kann
+* Anmeldename und Passwort
+* Art des Zugriffs auf das Gerät, z. B. Controller und Management Station
++
+[NOTE]
+====
+Der schreibgeschützte Zugriff ist für die meisten Geräte ausreichend, für einige Geräte sind jedoch Administratorberechtigungen erforderlich.
+
+====
+* Port-Konnektivität mit dem Gerät, je nach den Anforderungen an den Port der Datenquelle
+* Für Switches, SNMP-schreibgeschützte Community-Zeichenfolge (Benutzer-ID oder Passwort für den Zugriff auf die Switches)
+* Software von Drittanbietern, die auf dem Gerät benötigt wird, z. B. Solutions Enabler.
+* Weitere Informationen zu den Berechtigungen und Anforderungen der Datenquelle finden Sie in der Hilfe zur Webbenutzeroberfläche oder im _OnCommand Insight Konfigurations- und Administrationshandbuch_.
+

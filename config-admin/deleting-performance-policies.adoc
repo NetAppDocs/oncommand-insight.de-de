@@ -1,0 +1,31 @@
+---
+permalink: config-admin/deleting-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können eine Performance-Richtlinie löschen, wenn Sie der Ansicht sind, dass sie nicht mehr für die Überwachung der Objekte in Ihrem Netzwerk gilt. 
+---
+= Löschen von Performance-Richtlinien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Performance-Richtlinie löschen, wenn Sie der Ansicht sind, dass sie nicht mehr für die Überwachung der Objekte in Ihrem Netzwerk gilt.
+
+
+
+== Schritte
+
+. Öffnen Sie Insight in Ihrem Browser.
+. Wählen Sie im Menü *Verwalten* die Option *Leistungsrichtlinien* aus.
++
+Die Seite Leistungsrichtlinien wird angezeigt.
+
+. Bewegen Sie den Mauszeiger über den Namen einer Richtlinie in der Liste der Leistungsrichtlinien eines Objekts.
+. Klicken Sie Auf image:../media/oci-delete-policy-threshold-icon.gif[""].
++
+Es wird eine Meldung angezeigt, in der Sie gefragt werden, ob Sie die Richtlinie löschen möchten.
+
+. Klicken Sie auf *OK*.
+

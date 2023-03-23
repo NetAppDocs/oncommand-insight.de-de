@@ -1,0 +1,128 @@
+---
+permalink: config-admin/fujitsu-eternus-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Fujitsu ETERNUS Datenquelle benötigt die IP-Adresse des Speichers. Sie darf nicht durch Komma getrennt werden. 
+---
+= Fujitsu ETERNUS Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Fujitsu ETERNUS Datenquelle benötigt die IP-Adresse des Speichers. Sie darf nicht durch Komma getrennt werden.
+
+
+
+== Terminologie
+
+OnCommand Insight erwirbt die folgenden Bestandsinformationen aus der Fujitsu ETERNUS Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Festplatte
+ a| 
+Festplatte
+
+
+
+ a| 
+Storage
+ a| 
+Storage
+
+
+
+ a| 
+Thin Pool, Flexibler Tier-Pool
+
+Raid-Gruppe
+ a| 
+Storage-Pool
+
+
+
+ a| 
+Standard-Volume, Snap Data Volume (SDV),
+
+Snap Data Pool Volume (SDPV),
+
+Thin Provisioning-Volume (TPV)
+ a| 
+Datenmenge
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* Eine IP-Adresse des ETERNUS-Speichers, die nicht durch Komma getrennt werden kann
+* Benutzername und Passwort der SSH-Administration
+* Port 22
+* Stellen Sie sicher, dass der Seitenlauf deaktiviert ist. (Clienv-show-more-scroll deaktivieren)
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+IP-Adresse des ETERNUS-Speichers
+ a| 
+IP-Adresse des ETERNUS-Speichers
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für ETERNUS-Speicher
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort für den Sternus
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 20 Minuten)
+
+
+
+ a| 
+SSH-Prozess-Wartezeit (Sek.)
+ a| 
+SSH-Prozess-Timeout (Standard: 600 Sekunden)
+
+|===

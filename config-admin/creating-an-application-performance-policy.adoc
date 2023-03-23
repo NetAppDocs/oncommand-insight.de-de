@@ -1,0 +1,140 @@
+---
+permalink: config-admin/creating-an-application-performance-policy.html 
+sidebar: sidebar 
+keywords: anomaly score 
+summary: Sie können auf der Grundlage der Anomaliebewertung für die Applikation eine Richtlinie zur Applikations-Performance erstellen. Durch das Überschreiten von Schwellenwerten werden Warnungen ausgelöst, die Sie über Probleme im Zusammenhang mit den Ressourcen in Ihrer Anwendung informieren. 
+---
+= Erstellen einer Richtlinie zur Anwendungsleistung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können auf der Grundlage der Anomaliebewertung für die Applikation eine Richtlinie zur Applikations-Performance erstellen. Durch das Überschreiten von Schwellenwerten werden Warnungen ausgelöst, die Sie über Probleme im Zusammenhang mit den Ressourcen in Ihrer Anwendung informieren.
+
+
+
+== Bevor Sie beginnen
+
+Das Erkennungsmodul für Anomalien muss auf Ihrem Insight Server ausgeführt werden, um die in einer Richtlinie zur Applikations-Performance festgelegten Schwellenwerte zu überwachen.
+
+
+
+== Über diese Aufgabe
+
+Sie können Richtlinien erstellen, die Warnmeldungen zu verschiedenen Arten von Anomaliebewertungen bereitstellen, die Sie überwachen möchten:
+
+* Erstellen Sie zur Identifizierung von Anomaliespitzen eine Richtlinie, die beim ersten Auftreten eine Benachrichtigung mit einem Schwellenwert auf eine hohe Anomaliebewertung (>90) ausgibt.
+* Erstellen Sie eine Richtlinie, die nach einer Stunde bei einer mittelhohen Anomaliebewertung eine Warnmeldung ausgibt, um eine Verhaltensänderung im Zeitverlauf zu erkennen. Diese Richtlinie gibt eine Warnmeldung aus, die auf 3 aufeinander folgenden Punktzahlen für die Anomalieerkennung basiert.
+
+
+
+
+== Schritte
+
+. Öffnen Sie OnCommand Insight in Ihrem Browser.
+. Klicken Sie Auf *Verwalten* > *Leistungsrichtlinien*
++
+Die Seite Leistungsrichtlinien wird angezeigt.
+
+. Klicken Sie Auf *+Hinzufügen*.
++
+Das Dialogfeld Richtlinie hinzufügen wird angezeigt.
+
+. Geben Sie einen eindeutigen Richtliniennamen in das Feld *Richtlinienname* ein.
++
+Sie müssen einen Namen verwenden, der sich von allen anderen Richtliniennamen für das Objekt unterscheidet.
+
+. Wählen Sie in der Liste *auf Objekte des Typs* anwenden die Option Anwendung aus.
+. Wählen Sie die Anwendungspriorität aus der Liste *Anwendungspriorität* aus.
+. Wählen Sie in der Liste *Übernehmen nach einem Fenster von* aus, wann eine Warnung ausgelöst wird, um eine Schwellenverletzung anzuzeigen.
++
+Die Option „Erstes Auftreten“ löst eine Warnung aus, wenn ein Schwellenwert für die erste Punktzahl überschritten wird. Alle anderen Optionen lösen eine Warnung aus, wenn der Schwellenwert einmal überschritten wird und mindestens die angegebene Zeit lang kontinuierlich überschritten wird.
+
++
+Die Anomaliebewertung wird in 30-Minuten-Intervallen angegeben (5 Minuten nach der Stunde und 35 Minuten nach der Stunde), daher sollten nur Zeiträume ausgewählt werden, die durch 30 teilbar sind.
+
++
+|===
+
+
+| Übernehmen nach Fenster von | Anzahl der für die Überschreitung erforderlichen Buckets 
+
+
+ a| 
+Erstes Auftreten
+ a| 
+1
+
+
+
+ a| 
+5 Minuten
+ a| 
+2
+
+
+
+ a| 
+10 Minuten
+ a| 
+2
+
+
+
+ a| 
+15 Minuten
+ a| 
+2
+
+
+
+ a| 
+30 Minuten
+ a| 
+2
+
+
+
+ a| 
+45 Minuten
+ a| 
+3
+
+
+
+ a| 
+1 Stunde
+ a| 
+3
+
+
+
+ a| 
+2 Stunden
+ a| 
+4
+
+|===
+. Wählen Sie aus der Liste *Warnung* die Option kritisch oder Warnung
+. Konfigurieren Sie E-Mail, wenn Sie die standardmäßige E-Mail-Benachrichtigungsmethode ändern möchten.
+. Wählen Sie im Abschnitt *Warnung erstellen, wenn* einen Operator aus, und geben Sie dann einen Wert ein, um einen Schwellenwert zu erstellen. Die Punktzahl für Anomalien ist der einzige Performance-Zähler, der für Applikations-Performance-Richtlinien verwendet wird.
++
+Sie können eine Reihe von Warnmeldungen mithilfe von Bereichen erstellen, die den folgenden ähneln:
+
++
+** 0-20 Warnhinweis
+** 21-50 Warnhinweis
+** 51-80 Warnhinweis
+** >80 kritischer Alarm
+
+
+. Aktivieren Sie das Kontrollkästchen *Verarbeitung weiterer Richtlinien beenden, wenn Warnung generiert wird*, wenn die Policy die Verarbeitung beenden soll, wenn eine Warnung auftritt.
+
+
+
+
+== Ergebnisse
+
+Benachrichtigungen sind nicht das einzige Mittel, um Verstöße anzuzeigen. Verstöße werden auf der Zielseite der Anwendung und im Dashboard für Verstöße angezeigt, wo Sie sie filtern können. Außerdem können Sie ein Dashboard erstellen, ein Widget für die Tabelle mit Verstößen hinzufügen und nach dem Namen Ihrer Performance-Richtlinie filtern, um Verstöße gegen Anwendungen zu erkennen.

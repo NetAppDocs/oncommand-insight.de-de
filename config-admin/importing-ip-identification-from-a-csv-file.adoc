@@ -1,0 +1,62 @@
+---
+permalink: config-admin/importing-ip-identification-from-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können IP-Gerätekennungen manuell in die Funktion Geräteauflösung importieren, indem Sie eine Liste der Gerätekennungen in einer CSV-Datei verwenden. 
+---
+= Importieren der IP-Geräteidentifikation aus einer CSV-Datei
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können IP-Gerätekennungen manuell in die Funktion Geräteauflösung importieren, indem Sie eine Liste der Gerätekennungen in einer CSV-Datei verwenden.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen eine korrekt formatierte CSV-Datei haben, um Gerätekennungen importieren zu können. Für die CSV-Datei für IP-Geräte sind folgende Informationen erforderlich:
+
+|===
+
+
+ a| 
+Adresse
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Name
+
+|===
+[NOTE]
+====
+Als Best Practice empfiehlt es sich, zunächst die IP-Ident-Informationen in eine CSV-Datei zu exportieren, die gewünschten Änderungen in dieser Datei vorzunehmen und die Datei dann wieder in die IP-Identifizierung zu importieren. Dadurch wird sichergestellt, dass die erwarteten Spalten in der richtigen Reihenfolge vorhanden sind.
+
+====
+So importieren Sie IP-Identifizieren-Informationen:
+
+
+
+== Schritte
+
+. Melden Sie sich bei der Web-UI von Insight an.
+. Klicken Sie Auf *Verwalten* > *Geräteauflösung*
+. Wählen Sie die Registerkarte *IP identiffy*.
+. Klicken Sie auf *identifier* > *identifier from file*
+. 
++
+.. Navigieren Sie zu dem Ordner mit den CSV-Dateien für den Import, und wählen Sie die gewünschte Datei aus.
+
+
++
+Die von Ihnen eingegebenen Geräte werden der Liste der Geräte auf der Registerkarte IP-Identifizierung hinzugefügt.
+
+

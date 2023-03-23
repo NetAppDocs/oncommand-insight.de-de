@@ -1,0 +1,136 @@
+---
+permalink: config-admin/configuring-user-definitions-using-ldap.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Um OnCommand Insight \(OCI\) für die Benutzerauthentifizierung und -Autorisierung von einem LDAP-Server zu konfigurieren, müssen Sie auf dem LDAP-Server als OnCommand Insight-Serveradministrator definiert sein.' 
+---
+= Konfigurieren von Benutzerdefinitionen mithilfe von LDAP
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um OnCommand Insight (OCI) für die Benutzerauthentifizierung und -Autorisierung von einem LDAP-Server zu konfigurieren, müssen Sie auf dem LDAP-Server als OnCommand Insight-Serveradministrator definiert sein.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen die Benutzer- und Gruppenattribute kennen, die für Insight in Ihrer LDAP-Domäne konfiguriert wurden.
+
+Für alle Secure Active Directory (d. h. LDAPS)-Benutzer müssen Sie den AD-Servernamen genau so verwenden, wie er im Zertifikat definiert ist. Sie können die IP-Adresse nicht für die sichere AD-Anmeldung verwenden.
+
+
+
+== Über diese Aufgabe
+
+OnCommand Insight unterstützt LDAP und LDAPS über Microsoft Active Directory Server. Zusätzliche LDAP-Implementierungen funktionieren möglicherweise, wurden aber nicht für Insight qualifiziert. Bei diesem Verfahren wird davon ausgegangen, dass Sie Microsoft Active Directory Version 2 oder 3 LDAP (Lightweight Directory Access Protocol) verwenden.
+
+LDAP-Benutzer werden zusammen mit den lokal definierten Benutzern in der Liste *Admin* > menu:Setup[Users] angezeigt.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Setup*.
+. Klicken Sie auf die Registerkarte *Users*.
+. Scrollen Sie zum LDAP-Abschnitt, wie hier gezeigt.
++
+image::../media/ldap-setup.gif[ldap-Einrichtung]
+
+. Klicken Sie auf *LDAP aktivieren*, um die LDAP-Benutzerauthentifizierung und -Autorisierung zu ermöglichen.
+. Füllen Sie die Felder aus:
++
+** `LDAP servers`: Insight akzeptiert eine kommagetrennte Liste von LDAP-URLs. Insight versucht, eine Verbindung zu den bereitgestellten URLs herzustellen, ohne das LDAP-Protokoll zu überprüfen.
++
+[NOTE]
+====
+Um die LDAP-Zertifikate zu importieren, klicken Sie auf *Zertifikate* und importieren oder suchen Sie die Zertifikatdateien automatisch.
+
+====
++
+Die IP-Adresse oder der DNS-Name, der zur Identifizierung des LDAP-Servers verwendet wird, wird in der Regel in diesem Format eingegeben:
+
++
+[listing]
+----
+ldap://<ldap-server-address>:port
+----
++
+Oder, wenn Sie den Standardport verwenden:
+
++
+[listing]
+----
+ ldap://<ldap-server-address>
+----
++
+Stellen Sie bei der Eingabe mehrerer LDAP-Server in dieses Feld sicher, dass bei jedem Eintrag die richtige Portnummer verwendet wird.
+
+** `User name`: Geben Sie die Anmeldeinformationen für einen Benutzer ein, der für Anfragen zur Verzeichnissuche auf den LDAP-Servern autorisiert ist.
+** `Password`: Geben Sie das Passwort für den oben genannten Benutzer ein. Um dieses Passwort auf dem LDAP-Server zu bestätigen, klicken Sie auf *Validieren*.
+
+
+. Wenn Sie diesen LDAP-Benutzer genauer definieren möchten, klicken Sie auf *Mehr anzeigen* und füllen Sie die Felder für die aufgelisteten Attribute aus.
++
+Diese Einstellungen müssen mit den in Ihrer LDAP-Domäne konfigurierten Attributen übereinstimmen. Wenden Sie sich an Ihren Active Directory-Administrator, wenn Sie sich nicht sicher sind, welche Werte für diese Felder eingegeben werden müssen.
+
++
+** *Admins-Gruppe*
++
+LDAP-Gruppe für Benutzer mit Insight Administrator-Berechtigungen. Standard ist `insight.admins`.
+
+** *Benutzergruppe*
++
+LDAP-Gruppe für Benutzer mit Insight-Benutzerberechtigungen. Standard ist `insight.users`.
+
+** *Gästegruppe*
++
+LDAP-Gruppe für Benutzer mit Insight Gastberechtigungen. Standard ist `insight.guests`.
+
+** *Server Admins-Gruppe*
++
+LDAP-Gruppe für Benutzer mit Insight Server Administrator-Berechtigungen. Standard ist `insight.server.admins`.
+
+** *Timeout*
++
+Dauer der Wartezeit auf eine Antwort vom LDAP-Server vor der Zeitüberschreitung in Millisekunden. Der Standardwert ist 2,000, was in allen Fällen angemessen ist und nicht geändert werden sollte.
+
+** *Domäne*
++
+LDAP-Knoten, auf dem OnCommand Insight nach dem LDAP-Benutzer suchen soll. Dies ist in der Regel die Domäne der obersten Ebene für das Unternehmen. Beispiel:
+
++
+[listing]
+----
+DC=<enterprise>,DC=com
+----
+** *Attribut des Hauptnamens des Benutzers*
++
+Attribut, das jeden Benutzer im LDAP-Server identifiziert. Standard ist `userPrincipalName`, Die weltweit einzigartig ist. OnCommand Insight versucht, den Inhalt dieses Attributs mit dem oben angegebenen Benutzernamen abzugleichen.
+
+** *Rollenattribut*
++
+LDAP-Attribut, das die Passung des Benutzers innerhalb der angegebenen Gruppe identifiziert. Standard ist `memberOf`.
+
+** *Mail-Attribut*
++
+LDAP-Attribut, das die E-Mail-Adresse des Benutzers identifiziert. Standard ist `mail`. Dies ist nützlich, wenn Sie Berichte von OnCommand Insight abonnieren möchten. Insight erfasst die E-Mail-Adresse des Benutzers bei der ersten Anmeldung und sucht danach nicht mehr.
+
++
+[NOTE]
+====
+Wenn sich die E-Mail-Adresse des Benutzers auf dem LDAP-Server ändert, müssen Sie sie in Insight aktualisieren.
+
+====
+** *Distinguished Name Attribut*
++
+LDAP-Attribut, das den Distinguished Name des Benutzers identifiziert. Der Standardwert ist `distinguishedName`.
+
+
+
+. Klicken Sie Auf *Speichern*.
+

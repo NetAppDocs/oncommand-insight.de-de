@@ -1,0 +1,247 @@
+---
+permalink: config-admin/ibm-svc-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Die IBM SVC-Datenquelle erfasst Bestands- und Leistungsdaten mithilfe von SSH und unterstützt eine Vielzahl von Geräten, auf denen das SVC-Betriebssystem ausgeführt wird. Die Liste der unterstützten Geräte umfasst Modelle wie SVC, v7000, v5000 und v3700. Unterstützte Modelle und Firmware-Versionen finden Sie in der Insight Datenquellen-Supportmatrix. 
+---
+= IBM SVC-Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die IBM SVC-Datenquelle erfasst Bestands- und Leistungsdaten mithilfe von SSH und unterstützt eine Vielzahl von Geräten, auf denen das SVC-Betriebssystem ausgeführt wird. Die Liste der unterstützten Geräte umfasst Modelle wie SVC, v7000, v5000 und v3700. Unterstützte Modelle und Firmware-Versionen finden Sie in der Insight Datenquellen-Supportmatrix.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Bestandsinformationen aus der IBM SVC-Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Laufwerk
+ a| 
+Festplatte
+
+
+
+ a| 
+Cluster
+ a| 
+Storage
+
+
+
+ a| 
+Knoten
+ a| 
+Storage-Node
+
+
+
+ a| 
+Mdisk-Gruppe
+ a| 
+Storage-Pool
+
+
+
+ a| 
+Vdisk
+ a| 
+Datenmenge
+
+
+
+ a| 
+Mdisk
+ a| 
+Back-End LUN
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Inventaranforderungen
+
+* IP-Adresse jedes SVC-Clusters
+* Port 22 verfügbar
+* Öffentliches und privates Schlüsselpaar, das Sie entweder mitInsight generieren oder ein bereits auf Ihrem SVC verwendeter Schlüsselcode wiederverwenden
++
+Wenn Sie eine vorhandene Tasteneingabe erneut verwenden, müssen Sie sie vom Putty-Format in das OpenSSH-Format konvertieren.
+
+* Auf dem SVC-Cluster installierter öffentlicher Schlüssel
+* Der private Schlüssel muss in der Datenquelle identifiziert werden
+* Zugriffsvalidierung: Offen `ssh` Sitzung mit dem privaten Schlüssel zum SVC-Cluster
+
+
+[NOTE]
+====
+Es muss keine Software von Drittanbietern installiert werden.
+
+====
+
+
+== Performance-Anforderungen Erfüllt
+
+* SVC-Konsole, die für jeden SVC-Cluster obligatorisch und für das Foundation-Paket für die SVC-Erkennung erforderlich ist
+* Administratorzugriffsebene ist nur für das Kopieren von Performance-Datendateien von Cluster Nodes auf den Konfigurations-Node erforderlich.
++
+[NOTE]
+====
+Da diese Zugriffsebene für das SVC Foundation Discovery-Paket nicht erforderlich ist, kann der SVC Foundation-Benutzer möglicherweise nicht erfolgreich arbeiten.
+
+====
+* Port 22 erforderlich
+* Für diesen Benutzer muss ein privater und öffentlicher SSH-Schlüssel generiert und der private Schlüssel gespeichert werden, damit er über die Erfassungseinheit zugänglich ist. Wenn der SVC Foundation-Benutzer über die entsprechenden Berechtigungen verfügt, funktionieren derselbe Benutzer und derselbe Schlüssel. Derselbe SSH-Schlüssel kann für Bestands- und Leistungsdaten verwendet werden.
+* Aktivieren Sie die Datenerfassung, indem Sie über SSH eine Verbindung zum SVC-Cluster herstellen und Folgendes ausführen: `svctask startstats -interval 1`
++
+[NOTE]
+====
+Alternativ können Sie die Datenerfassung über die Benutzeroberfläche des SVC-Managements aktivieren.
+
+====
+
+
+
+
+== Erläuterung der übergeordneten Seriennummer
+
+Traditionell ist Insight in der Lage, die Seriennummer des Storage-Arrays oder die Seriennummern der einzelnen Storage-Nodes zu melden. Einige Storage-Array-Architekturen lassen sich diesem jedoch nicht ordnungsgemäß anpassen. Ein SVC-Cluster kann aus 1-4 Appliances bestehen, und jede Appliance verfügt über 2 Nodes. Wenn die Appliance selbst über eine Seriennummer verfügt, ist diese Seriennummer weder die Seriennummer für das Cluster noch für die Nodes.
+
+Das Attribut „Parent Serial Number“ auf dem Speicher-Node-Objekt wird für IBM SVC-Arrays entsprechend aufgefüllt, wenn die einzelnen Knoten in einer Zwischenanwendung/einem Gehäuse sitzen, die nur Teil eines größeren Clusters ist.
+
+
+
+== Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Cluster-s-IP
+ a| 
+IP-Adresse des vollständig qualifizierten Domänennamens für den SVC-Speicher
+
+
+
+ a| 
+Wählen Sie „Kennwort“ oder „OpenSSH-Schlüsseldatei“, um den Anmeldeinformationstyp anzugeben
+ a| 
+Der Anmeldetyp, der für die Verbindung mit dem Gerät über SSH verwendet wird
+
+
+
+ a| 
+Benutzername Des Inventurbenutzers
+ a| 
+Benutzername für die SVC-CLI
+
+
+
+ a| 
+Inventurpasswort
+ a| 
+Passwort für die SVC-CLI
+
+
+
+ a| 
+Vollständiger Pfad zum privaten Bestandsschlüssel
+ a| 
+Vollständiger Pfad zur Datei mit dem privaten Inventory-Schlüssel
+
+
+
+ a| 
+Name Des Performance-Benutzers
+ a| 
+Benutzername für die SVC-CLI für die Performance-Erfassung
+
+
+
+ a| 
+Leistungspasswort
+ a| 
+Kennwort für die SVC-CLI für die Performance-Erfassung
+
+
+
+ a| 
+Vollständiger Pfad zum privaten Leistungsschlüssel
+ a| 
+Vollständiger Pfad zur Datei mit dem privaten Leistungsschlüssel
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 40 Minuten)
+
+
+
+ a| 
+Geräte Ausschließen
+ a| 
+Kommagetrennte Liste der Geräte-IDs, die von der Bestandserfassung ausgeschlossen werden sollen
+
+
+
+ a| 
+SSH-Prozess-Wartezeit (Sek.)
+ a| 
+SSH-Prozess-Timeout (Standard: 200 Sekunden)
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+
+
+ a| 
+Die Leistung Schließt Geräte Aus
+ a| 
+Kommagetrennte Liste der Geräte-IDs, die von der Performance-Erfassung ausgeschlossen werden sollen
+
+
+
+ a| 
+Performance SSH-Prozess Wartezeit (Sek.)
+ a| 
+SSH-Prozess-Timeout (Standard: 200 Sekunden)
+
+
+
+ a| 
+Um dumpte Statistikdateien zu bereinigen
+ a| 
+Wählen Sie diese Option, um die gespeicherten Statistikdateien zu bereinigen
+
+|===

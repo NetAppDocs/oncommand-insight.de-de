@@ -1,0 +1,18 @@
+---
+permalink: install-windows/checking-the-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Insight in einem unterstützten Browser öffnen, um die Installation zu überprüfen. Möglicherweise sollten Sie auch die Insight-Protokolldateien überprüfen. 
+---
+= Überprüfen der Installation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Insight in einem unterstützten Browser öffnen, um die Installation zu überprüfen. Möglicherweise sollten Sie auch die Insight-Protokolldateien überprüfen.
+
+Wenn Sie Insight zum ersten Mal öffnen, wird die Seite zur Lizenzeinrichtung geöffnet. Nachdem Sie die Lizenzinformationen eingegeben haben, müssen Sie die Datenquellen einrichten. Informationen zum Eingeben von Datenquellen-Definitionen und zum Einrichten von Insight-Benutzern und -Benachrichtigungen finden Sie im _OnCommand Insight-Konfigurations- und Administrationshandbuch_.
+
+Bei Problemen mit der Installation wenden Sie sich an den technischen Support, und geben Sie die gewünschten Informationen an.

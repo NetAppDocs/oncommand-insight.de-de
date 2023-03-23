@@ -1,0 +1,80 @@
+---
+permalink: config-admin/netapp-clustered-data-ontap-for-unified-manager-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Diese Datenquelle erfasst ONTAP 8.1.x-Daten von der Unified Manager \(um\) 6.0+-Datenbank. Mithilfe dieser Datenquelle erkennt Insight alle in um konfigurierten und mit Daten befüllten Cluster. Zur Steigerung der Effizienz ruft Insight im Cluster selbst keine Zapis auf. Die Leistung wird in dieser Datenquelle nicht unterstützt.' 
+---
+= NetApp Clustered Data ONTAP für Unified Manager Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese Datenquelle erfasst ONTAP 8.1.x-Daten von der Unified Manager (um) 6.0+-Datenbank. Mithilfe dieser Datenquelle erkennt Insight alle in um konfigurierten und mit Daten befüllten Cluster. Zur Steigerung der Effizienz ruft Insight im Cluster selbst keine Zapis auf. Die Leistung wird in dieser Datenquelle nicht unterstützt.
+
+
+
+== Konfiguration
+
+[NOTE]
+====
+Dieser Datensammler ist ab OnCommand Insight 7.3.11 nicht mehr verfügbar.
+
+====
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Unified Manager-IP
+ a| 
+IP-Adresse oder vollständig qualifizierter Domain-Name von Unified Manager
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für Unified Manager
+
+
+
+ a| 
+Passwort
+ a| 
+Kennwort für den Unified Manager
+
+
+
+ a| 
+Port
+ a| 
+Port für die Kommunikation mit Unified Manager (Standard 3306)
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Intervall für Bestandsabfrage (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 15 Minuten)
+
+
+
+ a| 
+Cluster Ausschließen
+ a| 
+Kommagetrennte Liste der auszuschließenden Cluster-IPs
+
+|===

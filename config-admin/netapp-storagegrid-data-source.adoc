@@ -1,0 +1,79 @@
+---
+permalink: config-admin/netapp-storagegrid-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Diese Datenquelle erfasst Inventar- und Performance-Daten für StorageGRID. 
+---
+= NetApp StorageGRID Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese Datenquelle erfasst Inventar- und Performance-Daten für StorageGRID.
+
+
+
+== Anforderungen
+
+Für die Konfiguration dieser Datenquelle gelten folgende Anforderungen:
+
+* StorageGRID-Host-IP-Adresse
+* Ein Benutzername und ein Passwort für einen Benutzer, dem die Rollen Metric Query und Tenant Access zugewiesen sind
+* Port 443
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+StorageGRID-Host-IP-Adresse (MVIP)
+ a| 
+Host-IP-Adresse des StorageGRID
+
+
+
+ a| 
+Benutzername
+ a| 
+Name, der für die Anmeldung bei der StorageGRID verwendet wird
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort für die Anmeldung beim StorageGRID
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 60 Minuten)
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abfragen (Standard: 900 Sekunden)
+
+|===

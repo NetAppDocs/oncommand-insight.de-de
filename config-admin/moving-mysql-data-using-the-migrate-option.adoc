@@ -1,0 +1,33 @@
+---
+permalink: config-admin/moving-mysql-data-using-the-migrate-option.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können das MySQL-Datenverzeichnis in ein anderes Verzeichnis migrieren. Sie können das aktuelle Datenverzeichnis beibehalten. Sie können die Option „Migrieren“ im Menü „Fehlerbehebung“ verwenden oder die Befehlszeile verwenden. In diesem Verfahren wird beschrieben, wie Sie die Option Fehlerbehebung \> MySQL-Daten migrieren verwenden. 
+---
+= Verschieben von MySQL Daten mit der Option „Migrate“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das MySQL-Datenverzeichnis in ein anderes Verzeichnis migrieren. Sie können das aktuelle Datenverzeichnis beibehalten. Sie können die Option „Migrieren“ im Menü „Fehlerbehebung“ verwenden oder die Befehlszeile verwenden. Dieses Verfahren beschreibt die Verwendung der Option *Fehlerbehebung* > *MySQL-Daten migrieren*.
+
+
+
+== Über diese Aufgabe
+
+Wenn Sie das aktuelle Datenverzeichnis beibehalten, wird es als Backup beibehalten und umbenannt.
+
+
+
+== Schritte
+
+. Klicken Sie in der Web-Benutzeroberfläche auf *Admin* und wählen Sie *Troubleshooting*.
+. Klicken Sie Auf *Erweiterte Fehlerbehebung*.
+. Wählen Sie die Registerkarte *actions*
+. Wählen Sie *MySQL-Daten migrieren*.
+. Geben Sie den Pfad ein, auf den Sie die Daten migrieren möchten.
+. Um das vorhandene Datenverzeichnis beizubehalten, aktivieren Sie *bestehendes Datenverzeichnis beibehalten.*
+. Klicken Sie Auf * Migrieren*.
+

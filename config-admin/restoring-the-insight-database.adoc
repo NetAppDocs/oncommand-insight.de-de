@@ -1,0 +1,37 @@
+---
+permalink: config-admin/restoring-the-insight-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Um Ihre Insight-Datenbank aus einer verifizierten Sicherungsdatei wiederherzustellen, verwenden Sie die Fehlerbehebungsoptionen. Dieser Vorgang ersetzt Ihre aktuellen OnCommand Insight-Daten vollständig. 
+---
+= Wiederherstellen der Insight-Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um Ihre Insight-Datenbank aus einer verifizierten Sicherungsdatei wiederherzustellen, verwenden Sie die Fehlerbehebungsoptionen. Dieser Vorgang ersetzt Ihre aktuellen OnCommand Insight-Daten vollständig.
+
+
+
+== Bevor Sie beginnen
+
+**Best Practice:**bevor Sie Ihre OnCommand Insight-Datenbank wiederherstellen, verwenden Sie den manuellen Sicherungsprozess, um eine Kopie der aktuellen Datenbank zu erstellen. Überprüfen Sie die Sicherungsdatei, die Sie wiederherstellen möchten, um sicherzustellen, dass es sich um ein erfolgreiches Backup mit den Dateien handelt, die Sie wiederherstellen möchten.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Fehlerbehebung*.
++
+image::../media/oci-7-backup-restore-gif.gif[Seite „Sichern und Wiederherstellen“]
+
+. Wählen Sie im Abschnitt Datenbank wiederherstellen aus dem Menü *Backup auswählen* die Sicherungsdatei aus, die Sie wiederherstellen möchten.
+. Klicken Sie Auf *Wiederherstellen*.
+. Klicken Sie in der Warnung, dass alle Daten ersetzt werden, auf *OK*
++
+Der Status der Wiederherstellungsaktivität wird auf der Wiederherstellungsseite angezeigt.
+
+

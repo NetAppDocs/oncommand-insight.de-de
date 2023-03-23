@@ -1,0 +1,57 @@
+---
+permalink: install-windows/downloading-the-installation-packages.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie sollten die Installationspakete für Insight, Data Warehouse und die Remote-Erfassungseinheit \ (falls zutreffend\) vor dem Tag herunterladen, an dem Sie ein Upgrade durchführen möchten. Die Download-Zeiten für die Pakete \(.msi-Dateien\) variieren je nach verfügbarer Bandbreite.' 
+---
+= Herunterladen der OnCommand Insight-Installationspakete
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten die Installationspakete für Insight, Data Warehouse und die Remote Acquisition Unit (falls zutreffend) vor dem Tag herunterladen, an dem Sie das Upgrade durchführen möchten. Download-Zeiten für die Pakete (`.msi` Dateien) variieren je nach verfügbarer Bandbreite.
+
+
+
+== Über diese Aufgabe
+
+Sie können die Installationspakete über die WebUI von Insight oder über den entsprechenden Link zu OnCommand Insight von herunterladen http://support.netapp.com/NOW/cgi-bin/software[].
+
+Gehen Sie wie folgt vor, um das Installationspaket vom Insight-Server herunterzuladen:
+
+
+
+== Schritte
+
+. Öffnen Sie die Web-UI von Insight, indem Sie einen Webbrowser öffnen und einen der folgenden eingeben:
++
+** Auf dem Insight-Server: `+https://localhost+`
+** Von jedem Ort: `+https://IP Address:port or fqdn:port+`
++
+Die Portnummer lautet entweder 443 oder der Port, der bei der Installation des Insight-Servers konfiguriert wurde. Die Portnummer ist standardmäßig 443, wenn Sie die Portnummer nicht in der URL angeben.
+
+
+
+. Melden Sie sich bei Insight an.
+. Klicken Sie auf das Hilfesymbol und wählen Sie *nach Updates suchen*.
+. Wenn eine neuere Version erkannt wird, befolgen Sie die Anweisungen im Meldungsfeld.
++
+Sie werden zur Seite InsightDescription für die neuere Version weitergeleitet.
+
+. Klicken Sie auf der Seite *Beschreibung* auf *Weiter*.
+. Wenn die Endbenutzer-Lizenzvereinbarung (EULA) angezeigt wird, klicken Sie auf *Accept*.
+. Klicken Sie für jede Komponente (Insight Server, Data Warehouse, Remote Acquisition Unit) auf den Link für das Installationspaket und klicken Sie auf *Speichern unter*, um das Installationspaket zu speichern.
++
+Bevor Sie ein Upgrade durchführen, sollten Sie sicherstellen, dass Sie die Installationspakete für Data Warehouse und Remote Acquisition Unit auf Festplatten kopieren, die auf ihren jeweiligen Servern lokal sind.
+
+. Klicken Sie auf *CHECKSUM*, und notieren Sie sich die numerischen Werte, die mit jedem Installationspaket verknüpft sind.
+. Überprüfen Sie, ob die Installationspakete vollständig und fehlerfrei sind, nachdem Sie sie heruntergeladen haben.
++
+Unvollständige Dateiübertragungen können Probleme mit dem Upgrade-Prozess verursachen.
+
++
+Um MD5-Hash-Werte für die Installationspakete zu generieren, können Sie ein Drittanbieter-Dienstprogramm wie Microsoft verwendenlink:HTTP://SUPPORT.MICROSOFT.COM/KB/841290["Dateiüberprüfung der Integrität"] Utility:
+
+

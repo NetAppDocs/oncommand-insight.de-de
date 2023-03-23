@@ -1,0 +1,25 @@
+---
+permalink: reporting/tips-for-designing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Bei der Erstellung von Berichten sind einige Tipps hilfreich. 
+---
+= Tipps für das Design von Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Erstellung von Berichten sind einige Tipps hilfreich.
+
+* Legen Sie fest, ob Sie aktuelle oder historische Daten verwenden müssen.
++
+Die meisten Berichte müssen nur über die neuesten im Data Warehouse verfügbaren Daten berichten.
+
+* Data Warehouse bietet historische Informationen zu Kapazität und Leistung, jedoch nicht zu Bestandsdaten.
+* Jeder sieht alle Daten, aber möglicherweise müssen Sie die Daten auf bestimmte Zielgruppen beschränken.
++
+Um die Informationen für verschiedene Benutzer zu segmentieren, können Sie Berichte erstellen und Zugriffsberechtigungen für sie festlegen.
+
+

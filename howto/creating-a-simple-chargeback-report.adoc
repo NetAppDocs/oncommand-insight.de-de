@@ -1,0 +1,86 @@
+---
+permalink: howto/creating-a-simple-chargeback-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Chargeback-Berichte ermöglichen Administratoren und Managern die Bewertung der Kapazitätsauslastung nach Applikation, Geschäftseinheit, Service Level und Tier. Die Chargeback-Berichte umfassen Angaben zu Kapazitätstransparenz, historischer Kapazitätstransparenz und Trenddaten. Die Daten für diese Berichte werden aus dem OnCommand Insight Data Warehouse erstellt und geplant. 
+---
+= Erstellen eines einfachen Chargeback-Berichts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Chargeback-Berichte ermöglichen Administratoren und Managern die Bewertung der Kapazitätsauslastung nach Applikation, Geschäftseinheit, Service Level und Tier. Die Chargeback-Berichte umfassen Angaben zu Kapazitätstransparenz, historischer Kapazitätstransparenz und Trenddaten. Die Daten für diese Berichte werden aus dem OnCommand Insight Data Warehouse erstellt und geplant.
+
+
+
+== Bevor Sie beginnen
+
+Ihr System muss für die Erstellung des Beispielberichts konfiguriert werden, um die Kosten für Storage-Tiers zu melden. Die folgenden Aufgaben müssen durchgeführt werden:
+
+* Definieren Sie Anmerkungen für Ebenen.
+* Kostenzuordnung zu Anmerkungen.
+* Definieren Sie die Anwendungen, für die Sie Daten nachverfolgen möchten.
+* Anwendungen zu Assets zuweisen.
+
+
+
+
+== Über diese Aufgabe
+
+In diesem Beispiel wird das erweiterte Reporting-Tool Cognos Workspace verwendet, um den Chargeback-Bericht zu erstellen. Mit Workspace Advanced erstellen Sie Berichte, indem Sie Datenelemente in eine Berichtpalette ziehen und ablegen.
+
+
+
+== Schritte
+
+. Klicken Sie in der OnCommand Insight-Webbenutzeroberfläche auf das Berichtssymbol.
+. Melden Sie sich beim Reporting Portal an.
+. Klicken Sie in der IBM Cognos-Verbindungssymbolleiste auf *Start* > *Cognos Worksapce Advanced*
++
+Der Bildschirm Workspace Advanced Package wird geöffnet.
+
+. Klicken Sie Auf *Packages* > *Chargeback*
++
+Der Bildschirm IBM Workspace Advanace wird angezeigt.
+
+. Klicken Sie Auf *Neu*
+. Klicken Sie im Dialogfeld *New* Report auf *List*, um einen Listenbericht anzugeben.
++
+Die Berichtpalette wird angezeigt, und unter der Überschrift Quelle werden die Rückbelastung „`Simple Data Mart`“ und „`Advanced Data Mart`“ angezeigt.
+
+. Klicken Sie auf die Pfeile neben den einzelnen Data Marts, um sie zu erweitern.
++
+Der volle Inhalt der Data Marts wird angezeigt.
+
+. Ziehen Sie „`Application`“ aus dem „`Simple Data Mart `“ in die linke Spalte der Berichtpalette.
++
+Wenn Sie ein Element in die Palette ziehen, wird die Spalte verkleinert und hervorgehoben. Wenn Sie die Anwendungsdaten in die hervorgehobenen Spalten ablegen, werden alle Anwendungen in der Spalte korrekt aufgelistet.
+
+. Ziehen Sie „`Tier`“ aus dem „`Simple Data Mart `“ in die nächste Spalte der Berichtpalette.
++
+Die zu jeder Applikation gehörende Speicherebene wird der Palette hinzugefügt.
+
+. Ziehen Sie „`Tier Cost`“ aus dem „`Simple Data Mart `“ in die nächste Spalte der Berichtpalette.
+. Ziehen Sie „`Provisioned Capacity`“ aus dem „`Simple Data Mart `“ in die nächste Spalte der Berichtpalette.
+. Halten Sie die Taste *Strg* gedrückt und wählen Sie die Spalten „`Tier Cost`“ und „`Provisioned Capacity`“ in der Palette aus.
+. Klicken Sie mit der rechten Maustaste in eine der ausgewählten Spalten.
+. Klicken Sie auf *Berechnen* > *Tier-Kosten * bereitgestellte Kapazitäts-DB*
++
+Der Palette wird eine neue Spalte mit dem Titel „Tier Cost * Provisioning Capacity GB“ hinzugefügt.
+
+. Klicken Sie mit der rechten Maustaste auf die Spalte *Tier Cost * Provisioning Capacity GB*.
+. Klicken Sie Auf *Stil* > *Datentyp*
+. Klicken Sie auf *Formattyp* > *Währung*
+. Klicken Sie auf *OK*
++
+Die Spaltendaten werden nun als US-Währung formatiert.
+
+. Klicken Sie mit der rechten Maustaste auf „`Tier Cost * Provision Capacity GB`“ und wählen Sie *Edit Data Item Label* aus
+. Ersetzen Sie das Namensfeld durch „`provisionierte Kapazitätskosten`“.
+. Klicken Sie zum Ausführen des Berichts auf *Ausführen* > *Bericht ausführen - HTML*
++
+Es wird ein Bericht wie der folgende angezeigt. image:../media/insight-chargeback-report.gif[""]
+
+

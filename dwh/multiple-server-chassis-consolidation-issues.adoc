@@ -1,0 +1,14 @@
+---
+permalink: dwh/multiple-server-chassis-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die Konnektoren anzeigen, die Hosts und Adapter sowie SAN-Switches und Speicher-Arrays berichten. Sie können auch die verschiedenen Konnektoren sehen, die über ein Objekt berichten, und den primären Konnektor identifizieren, den Konnektor, der für das Objekt ausgewählt wurde. 
+---
+= Probleme bei der Konsolidierung mehrerer Server-Chassis
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Konnektoren anzeigen, die Hosts und Adapter sowie SAN-Switches und Speicher-Arrays berichten. Sie können auch die verschiedenen Konnektoren sehen, die über ein Objekt berichten, und den primären Konnektor identifizieren, den Konnektor, der für das Objekt ausgewählt wurde.

@@ -1,0 +1,44 @@
+---
+permalink: install-windows/overview-of-insight-upgrade-process.html 
+sidebar: sidebar 
+keywords:  
+summary: Bevor Sie mit dem Upgrade von Insight beginnen, sollten Sie sich unbedingt über den Upgrade-Prozess informieren. Der Upgrade-Prozess ist für die meisten Versionen von Insight gleich. 
+---
+= Überblick über den OnCommand Insight Upgrade-Prozess
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie mit dem Upgrade von Insight beginnen, sollten Sie sich unbedingt über den Upgrade-Prozess informieren. Der Upgrade-Prozess ist für die meisten Versionen von Insight gleich.
+
+Der Upgrade-Prozess für Insight umfasst die folgenden grundlegenden Aufgaben:
+
+* Herunterladen der Installationspakete
+* Sichern der Data Warehouse-Datenbank
++
+Um die Möglichkeit falscher Berichte zu vermeiden, müssen Sie die Data Warehouse-Datenbank sichern, bevor Sie die Insight-Datenbank sichern.
+
+* Sichern der Insight-Datenbank
++
+Die Insight Datenbank wird automatisch gesichert, wenn Sie das Upgrade durchführen. Es empfiehlt sich, vor dem Upgrade ein Backup der Datenbank zu erstellen und das Backup an einem anderen Ort als auf dem Insight Server abzulegen. Während des Upgrade-Prozesses erfasst Insight keine neuen Daten. Um die Menge der nicht erfassten Daten zu minimieren, müssen Sie das Datenbank-Backup innerhalb von ein oder zwei Stunden Ihrer geplanten Upgrade-Zeit starten.
+
+* Sichern Sie die Sicherheitskonfiguration für Data Warehouse und Remote Acquisition Unit, wenn die Konfiguration von der Standardkonfiguration geändert wurde.
++
+Die nicht standardmäßige Sicherheitskonfiguration muss nach Abschluss des Upgrades auf dem Data Warehouse und dem rau-Server wiederhergestellt werden, bevor die Data Warehouse-Datenbank auf dem System wiederhergestellt wird.
+
+* Erstellen von Backups benutzerdefinierter Data Warehouse-Berichte
++
+Wenn Sie die Data Warehouse-Datenbank sichern, werden benutzerdefinierte Berichte eingeschlossen. Die Sicherungsdatei wird auf dem Data Warehouse-Server erstellt. Es wird empfohlen, die benutzerdefinierten Berichte an einem anderen Speicherort als dem Data Warehouse-Server zu sichern.
+
+* Deinstallieren des Data Warehouse und der Remote Acquisition Unit-Software, falls zutreffend
++
+Der Insight-Server verfügt über ein in-Place-Upgrade. Sie müssen die Software nicht deinstallieren. Mit dem in-Place-Upgrade wird die Datenbank gesichert, die Software deinstalliert, die neue Version installiert und die Datenbank dann wiederhergestellt.
+
+* Aktualisieren der Software auf dem Insight-Server, dem Data Warehouse und den Remote Acquisition Units
++
+Alle zuvor angewendeten Lizenzen verbleiben in der Registrierung; Sie müssen diese Lizenzen nicht erneut anwenden.
+
+* Ausführen der Aufgaben nach dem Upgrade
+

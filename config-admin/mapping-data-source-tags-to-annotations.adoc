@@ -1,0 +1,18 @@
+---
+permalink: config-admin/mapping-data-source-tags-to-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn eine Datenquelle für die Abfrage von Tag-Daten konfiguriert ist, setzt Insight automatisch Anmerkungswerte für eine vorhandene Insight-Anmerkung mit demselben Namen wie ein Tag. 
+---
+= Zuordnen von Datenquelltags zu Beschriftungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn eine Datenquelle für die Abfrage von Tag-Daten konfiguriert ist, setzt Insight automatisch Anmerkungswerte für eine vorhandene Insight-Anmerkung mit demselben Namen wie ein Tag.
+
+Wenn die Insight-Anmerkung vorhanden ist, bevor die Tags in der Datenquelle aktiviert werden, werden die Datenquellkennungsdaten automatisch der Insight-Anmerkung hinzugefügt.
+
+Wenn Sie eine Anmerkung erstellen, nachdem das Tag aktiviert wurde, wird die Anmerkung beim ersten Abruf der Datenquelle nicht automatisch aktualisiert. Es gibt eine Verzögerung in der Zeit, die benötigt wird, um die Insight-Anmerkung zu ersetzen oder zu füllen. Um die Verzögerung zu vermeiden, können Sie die Aktualisierung der Beschriftung erzwingen, indem Sie die Datenquelle verschieben und dann wieder aufnehmen.

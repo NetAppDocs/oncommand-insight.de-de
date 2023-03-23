@@ -1,0 +1,22 @@
+---
+permalink: howto/processing-cloud-cost-data-in-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight erfasst einmal pro Monat Daten aus dem AWS Abrechnungsbericht für den Vormonat und gibt die endgültigen Cloud-Kosten für diesen Monat wieder. 
+---
+= AWS Cloud-Kostendaten in Insight verarbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight erfasst einmal pro Monat Daten aus dem AWS Abrechnungsbericht für den Vormonat und gibt die endgültigen Cloud-Kosten für diesen Monat wieder.
+
+Wenn Sie nach der Einrichtung Ihrer AWS Cloud-Kostendatenquelle(n) bereits Abrechnungsberichte für S3 generiert haben, erhalten Sie unmittelbar nach der ersten Datenquellabfrage bis zu drei Monate vergangene Daten.
+
+Insight erfasst einmal pro Monat AWS- „`final`“-Daten. Diese Erfassung erfolgt einige Tage nach Abschluss des Vormonats, sodass AWS Zeit hat, die tatsächlichen Daten abzuschließen.
+
+Rechnungsdaten für AWS werden zur Berichterstellung an das Data Warehouse von Insight gesendet.
+
+Beachten Sie, dass jede Datenquelle für ein einzelnes abrechenbares Konto/Benutzer konfiguriert werden muss.

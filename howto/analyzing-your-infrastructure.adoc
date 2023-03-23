@@ -1,0 +1,31 @@
+---
+permalink: howto/analyzing-your-infrastructure.html 
+sidebar: sidebar 
+keywords:  
+summary: Die in diesem Thema beschriebenen Verfahren dienen möglicherweise zur Analyse von Teilen der Infrastruktur in Ihrer Umgebung. Die Schritte, Ansichten und Daten, die Sie in dieser Übung sammeln, verwenden virtuelle Computing-Objekte als Beispiel. Die Analyse anderer Ressourcen in Ihrer Umgebung führt ähnliche Schritte anhand relevanter Zähler für jede spezifische Ressource aus. Ziel dieser Übung ist es, Sie mit den verschiedenen Optionen vertraut zu machen, die Insight bietet zum Monitoring und Verständnis der Eigenschaften der Assets in Ihrem Datacenter. 
+---
+= Analyse der Infrastruktur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die in diesem Thema beschriebenen Verfahren dienen möglicherweise zur Analyse von Teilen der Infrastruktur in Ihrer Umgebung. Die Schritte, Ansichten und Daten, die Sie in dieser Übung sammeln, verwenden virtuelle Computing-Objekte als Beispiel. Die Analyse anderer Ressourcen in Ihrer Umgebung führt ähnliche Schritte anhand relevanter Zähler für jede spezifische Ressource aus. Ziel dieser Übung ist es, Sie mit den verschiedenen Optionen vertraut zu machen, die Insight bietet zum Monitoring und Verständnis der Eigenschaften der Assets in Ihrem Datacenter.
+
+
+
+== Über diese Aufgabe
+
+So können Sie den Zustand Ihrer Infrastruktur analysieren:
+
+* Beobachten Sie das Verhalten eines Objekts im Zeitverlauf
+* Vergleichen Sie die Metriken eines Objekts mit den Metriken der Top 10 ähnlichen Objekte
+* Zahlen für Objekte vergleichen
+* Vergleichen Sie die 10 besten Objekte mit dem Durchschnitt
+* Vergleichen Sie Metriken A und B für viele Objekte, um Kategorien und Anomalien anzuzeigen
+* Vergleichen Sie einen Bereich von Objekten mit anderen Objekten
+* Verwenden Sie einen Ausdruck, um Metriken anzuzeigen, die in der Web-Benutzeroberfläche nicht verfügbar sind
+
+
+Sie können alle diese Ansichten von Objekten in Ihrer Infrastruktur in einem Dashboard erstellen, indem Sie Widgets für jede durchgeführte Analyse verwenden. Die Dashboards können gespeichert werden, um einen schnellen Zugriff auf aktuelle Daten in der Infrastruktur zu ermöglichen.

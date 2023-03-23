@@ -1,0 +1,87 @@
+---
+permalink: config-admin/emc-recoverpoint-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Die EMC RecoverPoint-Datenquelle erfasst Bestandsdaten aus EMC RecoverPoint-Speicher. Für die Konfiguration erfordert die Datenquelle die IP-Adresse der Speicherprozessoren sowie einen schreibgeschützten Benutzernamen und ein Kennwort. 
+---
+= EMC RecoverPoint-Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die EMC RecoverPoint-Datenquelle erfasst Bestandsdaten aus EMC RecoverPoint-Speicher. Für die Konfiguration benötigt die Datenquelle die IP-Adresse der Speicherprozessoren und einen _Read-Only_ Benutzernamen und ein Passwort.
+
+Die EMC RecoverPoint-Datenquelle erfasst die Replikationsbeziehungen zwischen Volumes, die RecoverPoint über andere Speicher-Arrays hinweg koordiniert. OnCommand Insight zeigt ein Speicher-Array für jeden RecoverPoint-Cluster an und sammelt Bestandsdaten für Knoten und Speicherports auf diesem Cluster. Es werden keine Storage-Pool- oder Volume-Daten erfasst.
+
+
+
+== Anforderungen
+
+* IP-Adresse oder vollqualifizierter Domain-Name des Speicherprozessors
+* Schreibgeschützter Benutzername und Kennwort
+* REST-API-Zugriff über Port 443
+* SSH-Zugriff über PuTTY
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Adresse von RecoverPoint
+ a| 
+IP-Adresse oder vollqualifizierter Domain-Name des RecoverPoint-Clusters
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für das RecoverPoint-Cluster
+
+
+
+ a| 
+Passwort
+ a| 
+Kennwort für den RecoverPoint-Cluster
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+TCP-Port
+ a| 
+TCP-Port für die Verbindung mit dem RecoverPoint-Cluster
+
+
+
+ a| 
+Abfrageintervall für Bestand (Minuten)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 20 Minuten)
+
+
+
+ a| 
+Ausgeschlossene Cluster
+ a| 
+Kommagetrennte Liste von Cluster-IDs oder Namen, die beim Abfragen ausgeschlossen werden sollen
+
+|===

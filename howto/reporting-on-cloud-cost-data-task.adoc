@@ -1,0 +1,46 @@
+---
+permalink: howto/reporting-on-cloud-cost-data-task.html 
+sidebar: sidebar 
+keywords:  
+summary: Die in Insight erfassten monatlichen Cloud-Kosten werden an das Data Warehouse gesendet, das über das Cloud-Kostendatamart zur Verwendung in Berichten zur Verfügung steht. 
+---
+= Berichte zu Cloud-Kostendaten in Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die in Insight erfassten monatlichen Cloud-Kosten werden an das Data Warehouse gesendet, das über das Cloud-Kostendatamart zur Verwendung in Berichten zur Verfügung steht.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen Datenquellen konfiguriert haben, um Cloud-Kostendaten aus AWS zu erfassen. Jeder abrechenbare Benutzer/jedes abrechenbare Konto muss über eine separate Datenquelle verfügen.
+
+Warten Sie mindestens 36 Stunden, bis Insight mit dem Erfassen von Daten beginnt.
+
+Lassen Sie ETL nach dieser Zeit mindestens einmal ausführen, um die Daten an das Data Warehouse zu senden.
+
+
+
+== Über diese Aufgabe
+
+Nachdem Ihre Daten erfasst und an das Data Warehouse gesendet wurden, können Sie sie in einem der verschiedenen vorkonfigurierten Berichte anzeigen oder benutzerdefinierte Berichte erstellen. Insight speichert die Daten im eigenen Cloud-Kostendatamart.
+
+So zeigen Sie Ihre Cloud-Kostendaten in einem der vorkonfigurierten Berichte an:
+
+
+
+== Schritte
+
+. Öffnen Sie Insight Reporting mit einer der folgenden Methoden:
++
+** Klicken Sie auf das Symbol Reporting Portal image:../media/oci-reporting-portal-icon.gif[""] In der Web-UI des Insight-Servers oder in der Data Warehouse-Benutzeroberfläche.
+** Starten Sie die Berichterstellung direkt, indem Sie die folgende URL eingeben: `https://<dwh_server_name\>:9300/p2pd/servlet/dispatch` Oder `https://<dwh_server_name\>:9300/bi (7.3.3 and later)`
+
+
+. Sobald Sie bei Reporting angemeldet sind, klicken Sie auf *Öffentliche Ordner* und wählen *Cloud-Kosten*.
+. Sie können Ihre AWS-Abrechnungsdaten in den verfügbaren Berichten im Ordner *Cloud Cost* einsehen oder Ihren eigenen benutzerdefinierten Bericht mit dem *Cloud Cost Datamart* erstellen, das im Ordner *Packages* verfügbar ist.
+

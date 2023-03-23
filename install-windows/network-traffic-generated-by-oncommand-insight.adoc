@@ -1,0 +1,32 @@
+---
+permalink: install-windows/network-traffic-generated-by-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Der von OnCommand Insight erzeugte Netzwerkdatenverkehr, die Menge der verarbeiteten Daten, die das Netzwerk durchlaufen, und die von OnCommand Insight auf Geräten aufbereitete Last unterscheiden sich durch viele Faktoren. 
+---
+= Von OnCommand Insight generierter Netzwerkverkehr
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der von OnCommand Insight erzeugte Netzwerkdatenverkehr, die Menge der verarbeiteten Daten, die das Netzwerk durchlaufen, und die von OnCommand Insight auf Geräten aufbereitete Last unterscheiden sich durch viele Faktoren.
+
+Der Datenverkehr, die Daten und die Last unterscheiden sich je nach Umgebung anhand der folgenden Faktoren:
+
+* Rohdaten
+* Konfiguration von Geräten
+* Implementierungstopologie von OnCommand Insight
+* Verschiedene Abfrageintervalle für die Bestandsaufnahme und Performance-Datenquellen, die reduziert werden können, um langsame Geräte zu erkennen oder die Bandbreite zu erhalten
+
+
+Es können große Unterschiede bei den Rohdaten, die OnCommand Insight sammelt, gegeben sein.
+
+Das folgende Beispiel zeigt, wie die Konfigurationsdaten variieren können und wie Datenverkehr, Daten und Last von vielen Konfigurationsfaktoren beeinflusst werden. Beispielsweise könnten Sie zwei Arrays mit jeweils 1,000 Festplatten verwenden:
+
+* Array 1: Hat 1,000 SATA-Festplatten alle 1 TB Größe. Alle 1,000 Festplatten befinden sich in einem Speicherpool, und es gibt 1,000 LUNs, die alle denselben 32 Nodes in einem ESX Cluster bereitgestellt (zugeordnet und maskiert) werden.
+* Array 2: Verfügt über 400 2-TB-Datenfestplatten, 560 600-GB-FC-Festplatten und 40 SSDs. Es gibt 3 Speicherpools, aber 320 der FC-Festplatten werden in herkömmlichen RAID-Gruppen verwendet. Die auf die RAID-Gruppen geschnitzten LUNs verwenden einen traditionellen Maskierungstyp (symmaskdb), während die Thin Provisioning, Pool-basierten LUNs einen neueren Maskierungstyp (symmaskdb) verwenden. Es sind 600 LUNs auf 150 verschiedenen Hosts präsentiert. Es gibt 200 BCVs (Full Block Replikatvolumes von 200 der 600 LUNs). Es gibt auch 200 R2-Volumes, Remote-Replikatvolumes von Volumes, die auf einem Array an einem anderen Standort vorhanden sind.
+
+
+Diese Arrays haben jeweils 1,000 Festplatten und 1,000 logische Volumes. Möglicherweise sind sie physisch mit der Menge an Rack-Platz identisch, die sie im Datacenter verbrauchen. Vielleicht wird sogar dieselbe Firmware ausgeführt, aber das zweite Array ist in seiner Konfiguration viel komplexer als das erste Array.

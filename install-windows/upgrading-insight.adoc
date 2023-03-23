@@ -1,0 +1,42 @@
+---
+permalink: install-windows/upgrading-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Nachdem Sie alle erforderlichen Aufgaben abgeschlossen haben, melden Sie sich beim Insight Server an und führen das Installationspaket aus, um das Upgrade abzuschließen. Beim Upgrade wird die vorhandene Software deinstalliert, die neue Software installiert und der Server anschließend neu gestartet. 
+---
+= Aktualisieren Von Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie alle erforderlichen Aufgaben abgeschlossen haben, melden Sie sich beim Insight Server an und führen das Installationspaket aus, um das Upgrade abzuschließen. Beim Upgrade wird die vorhandene Software deinstalliert, die neue Software installiert und der Server anschließend neu gestartet.
+
+
+
+== Bevor Sie beginnen
+
+Das Insight-Installationspaket muss sich auf dem Server befinden.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Insight-Server mit einem Konto an, das über lokale Windows-Administratorberechtigungen verfügt.
+. Suchen Sie das Insight Installationspaket (`SANscreenServer-x64-version_number-build_number.msi`) Verwenden Sie Windows Explorer und doppelklicken Sie darauf.
++
+Der OnCommand InsightSetup-Assistent wird angezeigt.
+
+. Bewegen Sie das Fortschrittsfenster von der Mitte des Bildschirms weg und weg vom *Setup*-Wizard-Fenster, so dass alle generierten Fehler nicht aus der Ansicht ausgeblendet werden.
+. Befolgen Sie die Anweisungen des Setup-Assistenten.
++
+Es empfiehlt sich, alle Standardeinstellungen ausgewählt zu lassen.
+
+
+
+
+
+== Nachdem Sie fertig sind
+
+Um zu überprüfen, ob das Upgrade erfolgreich war oder Fehler generiert wurden, überprüfen Sie das Upgrade-Protokoll am folgenden Speicherort: `<install directory>\SANscreen\wildfly\standalone\log`.

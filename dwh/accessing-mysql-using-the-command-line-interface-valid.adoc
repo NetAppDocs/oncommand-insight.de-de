@@ -1,0 +1,71 @@
+---
+permalink: dwh/accessing-mysql-using-the-command-line-interface-valid.html 
+sidebar: sidebar 
+keywords:  
+summary: Zusätzlich zum Zugriff auf Data Warehouse-Datenelemente über die Tools zur Berichterstellung können Sie direkt über eine Verbindung als MySQL-Benutzer auf Data Warehouse-Datenelemente zugreifen. Sie können sich als MySQL-Benutzer verbinden, um die Datenelemente in Ihren eigenen Anwendungen zu verwenden. 
+---
+= Zugriff auf MySQL über die Befehlszeilenschnittstelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zusätzlich zum Zugriff auf Data Warehouse-Datenelemente über die Tools zur Berichterstellung können Sie direkt über eine Verbindung als MySQL-Benutzer auf Data Warehouse-Datenelemente zugreifen. Sie können sich als MySQL-Benutzer verbinden, um die Datenelemente in Ihren eigenen Anwendungen zu verwenden.
+
+
+
+== Über diese Aufgabe
+
+Es gibt viele Möglichkeiten, sich zu verbinden. Die folgenden Schritte zeigen einen Weg.
+
+Stellen Sie beim Zugriff auf MySQL eine Verbindung zur MySQL-Datenbank auf dem Rechner her, auf dem Data Warehouse installiert ist. Der MySQL-Port ist standardmäßig 3306; Sie können ihn jedoch während der Installation ändern. Der Benutzername und das Passwort sind dwhuser/netapp123.
+
+
+
+== Schritte
+
+. Öffnen Sie auf dem Rechner, auf dem Data Warehouse installiert ist, ein Befehlszeilenfenster.
+. Greifen Sie im OnCommand Insight-Verzeichnis auf das MySQL-Verzeichnis zu.
+. Geben Sie den folgenden Benutzernamen und das folgende Kennwort ein: `mysql -udwhuser -pnetapp123`
++
+Je nachdem, wo Data Warehouse installiert ist, wird Folgendes angezeigt:
+
++
+[listing]
+----
+c:\Program Files\SANscreen\mysql\bin> mysql -udwhuser -pnetapp123
+----
++
+[listing]
+----
+Welcome to the MySQL monitor. Commands end with ; or \g.
+Your MySQL connection id is 882
+Server version: 5.1.28-rc-community MySQL Community Server (GPL)
+----
++
+[listing]
+----
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+----
+. Anzeigen der Data Warehouse-Datenbanken: `show databases;`
++
+Folgendes wird angezeigt:
+
++
+[listing]
+----
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| information_schema      |
+| dwh_capacity            |
+| dwh_capacity_efficiency |
+| dwh_fs_util             |
+| dwh_inventory           |
+| dwh_performance         |
+| dwh_ports               |
++-------------------------+
+----
+

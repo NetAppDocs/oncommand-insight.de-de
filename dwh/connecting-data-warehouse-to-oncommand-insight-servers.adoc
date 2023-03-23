@@ -1,0 +1,103 @@
+---
+permalink: dwh/connecting-data-warehouse-to-oncommand-insight-servers.html 
+sidebar: sidebar 
+keywords:  
+summary: Konnektoren stellen Verbindungen vom OnCommand Insight Data Warehouse zu den OnCommand Insight-Servern her. Sie können Data Warehouse mit einem oder mehreren OnCommand Insight-Servern verbinden. Sie können Verbindungen zu oder aus OnCommand Insight-Datenbanken hinzufügen oder entfernen. 
+---
+= Verbinden von Data Warehouse mit OnCommand Insight-Servern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Konnektoren stellen Verbindungen vom OnCommand Insight Data Warehouse zu den OnCommand Insight-Servern her. Sie können Data Warehouse mit einem oder mehreren OnCommand Insight-Servern verbinden. Sie können Verbindungen zu oder aus OnCommand Insight-Datenbanken hinzufügen oder entfernen.
+
+
+
+== Über diese Aufgabe
+
+Data Warehouse weist dem Konnektor, der zusammen mit dem Anschlussnamen verwendet wird, eine globale eindeutige ID zu. Nach dem Hinzufügen eines Konnektors fragt Data Warehouse die OnCommand Insight-Datenbank nach dem Namen und der Version des OnCommand Insight-Standorts ab.
+
+Sie können eine Verbindung zu einer Datenquelle mit oder ohne SSL herstellen. Durch die Auswahl der sicheren Datenquelle wird bei der Kommunikation mit der OnCommand Insight Remote-Datenbank SSL verwendet.
+
+Data Warehouse kann eine konsolidierte Ansicht der Daten mehrerer OnCommand Insight Installationen bereitstellen. Diese konsolidierte Datenbank bietet folgende Informationen:
+
+* Global Eindeutige Identifizierungsmerkmale
++
+Jedem Objekt wird eine global eindeutige ID zugewiesen, die unabhängig von den von den einzelnen Standorten verwendeten IDs ist, um widersprüchliche IDs zu vermeiden und die doppelte Erkennung zu ermöglichen. Diese IDs werden von allen Data Marts gemeinsam genutzt. Diese ID ist die global eindeutige ID (GUID) in der Spalte Kommentar der Inventory Data Mart-Tabellen.
+
+* Keine Duplizierung
++
+Entitäten, die in mehreren OnCommand Insight-Datenbanken vorhanden sind, werden nur einmal in der konsolidierten Datenbank registriert.
+
+* Aktueller Datensatz
++
+Die Daten in der konsolidierten Datenbank (Inventory Data Mart) sind immer am aktuellsten Stand.
+
+
+
+Wenn Sie eine Verbindung hinzufügen oder bearbeiten, können Sie die Verbindung auch testen. Der Test führt Folgendes aus:
+
+* Überprüft die Host-IP-Adresse, den Benutzernamen und das Passwort und stellt sicher, dass eine Verbindung hergestellt werden kann.
++
+Ungültige Verbindungen werden rot angezeigt.
+
+* Vergleicht die OnCommand Insight-Version mit der Data Warehouse-Version.
++
+Wenn die Versionen nicht kompatibel sind, wird eine Fehlermeldung angezeigt.
+
+* Stellt sicher, dass die OnCommand Insight-Datenbank nicht geändert oder in einer anderen Datenbank wiederhergestellt wurde, wie dies bei der letzten Data Warehouse-Verarbeitung der Fall ist. Wenn eine Änderung vorgenommen wurde, wird eine Fehlermeldung angezeigt.
+
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster auf der linken Seite auf *Connectors*.
++
+Die Tabelle Connectors wird zunächst leer angezeigt und zeigt nach dem Hinzufügen eines Connectors die Verbindungsinformationen an.
+
+. Klicken Sie auf *Neu*, um einen neuen Konnektor hinzuzufügen.
+. Geben Sie Folgendes ein:
++
+** *Verschlüsselung*
++
+Wählen Sie aus, um Data Warehouse-Anfragen mit SSL-Verschlüsselung zu aktivieren `Enabled`.
+
+** *Name*
++
+Ein Anschlussname, der den Anschluss in der Ansicht Connectors identifiziert.
+
+** *Gastgeber*
++
+Host-IP-Adresse
+
+** *Benutzername*
++
+„`Inventory`“
+
++
+[NOTE]
+====
+Mit diesem Benutzernamen und Passwort können Sie sich bei der Remote-OnCommand Insight-Datenbank anmelden und Abfragen zu den Daten durchführen.
+
+====
+** *Passwort*
++
+SANscreen
+
+
+
+. Um den Port anzugeben, der für TCP-Verbindungen zum Host verwendet werden soll, klicken Sie auf *Erweitert* und geben Sie die TCP-Portnummer ein.
+. Um den Port (außer dem Standardport) anzugeben, der für HTTPS-Verbindungen zum Host verwendet werden soll, klicken Sie auf *Erweitert* und geben Sie die Portnummer ein.
+. Klicken Sie Auf *Test*.
++
+Data Warehouse testet die Verbindung.
+
+. Klicken Sie Auf *Speichern*.
++
+Wenn Sie mehrere Verbindungen für mehrere Installationen eingeben, ruft Data Warehouse unabhängige Build-Prozesse auf, einen für jede Datenbank, aus der Daten extrahiert werden sollen. Jeder dieser Build-Prozesse extrahiert Daten aus einer OnCommand Insight-Datenbank und lädt sie in die konsolidierte Datenbank.
+
+

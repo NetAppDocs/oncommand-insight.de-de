@@ -1,0 +1,23 @@
+---
+permalink: install-linux/insight-browser-support.html 
+sidebar: sidebar 
+keywords:  
+summary: Die browserbasierte OnCommand Insightweb-Benutzeroberfläche kann auf mehreren verschiedenen Browsern betrieben werden. 
+---
+= Von OnCommand Insight unterstützte Browser
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die browserbasierte OnCommand Insightweb-Benutzeroberfläche kann auf mehreren verschiedenen Browsern betrieben werden.
+
+Insight unterstützt neuere Versionen von nicht-Beta-Versionen der folgenden Browser:
+
+* Mozilla Firefox
+* Google Chrome
+* Microsoft Edge
+
+
+Eine vollständige Liste aller für OnCommand Insight qualifizierten Browser-Versionen finden Sie im https://imt.netapp.com/matrix/#welcome["NetApp Interoperabilitäts-Matrix-Tool"].

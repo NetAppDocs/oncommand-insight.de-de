@@ -1,0 +1,57 @@
+---
+permalink: howto/expressions-example-read-iops-percentage.html 
+sidebar: sidebar 
+keywords:  
+summary: Mithilfe von Ausdrücken können Sie Metriken auf alternative Weise anzeigen, wie z. B. Prozentsatz der Gesamtmenge. 
+---
+= Beispiel für Ausdrücke: Lese-IOPS-Prozentsatz
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Ausdrücken können Sie Metriken auf alternative Weise anzeigen, wie z. B. Prozentsatz der Gesamtmenge.
+
+
+
+== Über diese Aufgabe
+
+In diesem Beispiel möchten wir Lese-IOPS als Prozentsatz der gesamten IOPS anzeigen. Sie können sich dies als folgende Formel vorstellen:
+
+* Leseprozentsatz = (Lese-IOPS/Gesamt-IOPS) x 100
+
+
+Diese Daten können in einem Liniendiagramm auf Ihrem Dashboard angezeigt werden. Um dies zu tun, führen Sie folgende Schritte aus:
+
+
+
+== Schritte
+
+. Erstellen Sie ein neues Dashboard oder öffnen Sie ein vorhandenes Dashboard im *Edit-Modus*.
+. Fügen Sie ein Widget zum Dashboard hinzu. Wählen Sie *Flächendiagramm*.
++
+Das Widget wird im Bearbeitungsmodus geöffnet. Standardmäßig wird eine Abfrage mit *IOPS - Total* für *Storage*-Assets angezeigt. Wählen Sie bei Bedarf einen anderen Asset-Typ aus.
+
+. Klicken Sie auf die Schaltfläche *in Ausdruck konvertieren*.
++
+Die aktuelle Abfrage wird in den Ausdrucksmodus konvertiert. Beachten Sie, dass Sie den Asset-Typ im Expression-Modus nicht ändern können. Beachten Sie, dass während Sie sich im Ausdruckmodus befinden, die Schaltfläche in *revert to Query* geändert wird. Klicken Sie auf diese Option, wenn Sie jederzeit wieder in den Abfragemodus wechseln möchten. Beachten Sie, dass durch Umschalten zwischen den Modi die Felder auf ihre Standardeinstellungen zurückgesetzt werden.
+
++
+Bleiben Sie jetzt im *Expression*-Modus.
+
+. Die Metrik *IOPS - Total* befindet sich jetzt im Feld „`a`“ der alphabetischen Variablen. Klicken Sie im Feld Variable „`b`“ auf *Auswählen* und wählen Sie *IOPS - Lesen*.
++
+Sie können insgesamt fünf alphabetische Variablen für Ihren Ausdruck hinzufügen, indem Sie auf die Schaltfläche**+**klicken, die den Variablenfeldern folgt. Für unser Beispiel mit dem Prozentsatz „Lesen“ benötigen wir nur die IOPS insgesamt („`a`“) und die IOPS für Lesevorgänge („`b`“).
+
+. Im Feld *Ausdruck* verwenden Sie die Buchstaben, die jeder Variablen entsprechen, um Ihren Ausdruck zu erstellen. Wir wissen, dass _Read Percentage = (Read IOPS / Total IOPS) x 100_, daher würden wir diesen Ausdruck wie folgt schreiben: `(b / a) * 100`
+. Das Feld *Beschriftung* kennzeichnet den Ausdruck. Ändern Sie die Bezeichnung in „`Prozentsatz lesen`“, oder etwas, das für Sie gleichermaßen bedeutsam ist.
+. Ändern Sie das Feld *Einheiten* in „`%`“ oder „`percent`“.
++
+Das Diagramm zeigt den prozentualen IOPS-Leseanteil im Zeitverlauf für die ausgewählten Speichergeräte an. Auf Wunsch können Sie einen Filter einstellen oder eine andere Rollup-Methode auswählen. Beachten Sie, dass, wenn Sie *sum* als Rollup-Methode auswählen, alle Prozentwerte addiert werden, die potenziell über 100% liegen können.
+
+. Klicken Sie auf *Speichern*, um das Diagramm auf Ihrem Dashboard zu speichern.
++
+Sie können auch Ausdrücke in den Widgets *Liniendiagramm*, *Spline Chart* oder *Stacked Area Chart* verwenden.
+
+

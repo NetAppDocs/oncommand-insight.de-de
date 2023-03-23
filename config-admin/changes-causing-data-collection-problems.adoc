@@ -1,0 +1,29 @@
+---
+permalink: config-admin/changes-causing-data-collection-problems.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn bei OnCommand Insight Probleme mit der Datenerfassung auftreten, sind Änderungen in Ihrer Umgebung wahrscheinlich die Ursache. Als allgemeine Wartungsregel sollten Sie alle Änderungen in Ihrer Umgebung auch in Insight berücksichtigen. 
+---
+= Änderungen, die zu Datenerfassungsproblemen führen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn bei OnCommand Insight Probleme mit der Datenerfassung auftreten, sind Änderungen in Ihrer Umgebung wahrscheinlich die Ursache. Als allgemeine Wartungsregel sollten Sie alle Änderungen in Ihrer Umgebung auch in Insight berücksichtigen.
+
+Mithilfe dieser Checkliste können Sie Änderungen an Ihrem Netzwerk identifizieren, die möglicherweise Probleme verursachen:
+
+* Haben Sie Passwörter geändert? Wurden diese Passwörter in Insight geändert?
+* Haben Sie ein Gerät aus Ihrem Netzwerk entfernt? Sie müssen das Gerät auch aus OnCommand Insight entfernen, um zu verhindern, dass es erneut erkannt und wieder eingeführt wird.
+* Haben Sie die Infrastruktursoftware (wie HP CommandView EVA oder EMC Solutions Enabler) aktualisiert?
++
+Stellen Sie sicher, dass die entsprechenden Versionen der Client-Tools auf der Erfassungseinheit installiert sind. Wenn die Datenquelle weiterhin Fehler macht, müssen Sie sich an den technischen Support wenden, um Unterstützung und möglicherweise einen Patch für die Datenquelle anzufordern.
+
+* Verwenden alle Ihre OnCommand Insight-Akquisitionseinheiten die gleiche OnCommand Insight-Version? Wenn die Remote-Erfassungseinheiten und die lokale Erfassungseinheit verschiedene OnCommand Insight-Versionen ausführen, installieren Sie dieselbe Version auf allen Geräten, um das Problem mit der Datenerfassung zu beheben.
++
+Wenn Sie eine neue Version von OnCommand Insight auf allen Akquisitionseinheiten installieren müssen, gehen Sie zur Support-Website und laden Sie die korrekte Version herunter.
+
+* Haben Sie Domain-Namen geändert oder eine neue Domain hinzugefügt? Sie müssen die Methoden für die Geräteauflösung (früher automatische Auflösung) aktualisieren.
+

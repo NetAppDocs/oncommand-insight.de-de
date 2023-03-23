@@ -1,0 +1,33 @@
+---
+permalink: config-admin/editing-multiple-data-sources.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: Sie können die meisten Informationen für mehrere Datenquellen desselben Anbieters und Modells gleichzeitig bearbeiten. Wenn diese Datenquellen beispielsweise einen Benutzernamen und ein Passwort gemeinsam nutzen, können Sie das Passwort an einem Ort ändern und damit das Passwort für alle ausgewählten Datenquellen aktualisieren. 
+---
+= Bearbeiten von Informationen für mehrere Datenquellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die meisten Informationen für mehrere Datenquellen desselben Anbieters und Modells gleichzeitig bearbeiten. Wenn diese Datenquellen beispielsweise einen Benutzernamen und ein Passwort gemeinsam nutzen, können Sie das Passwort an einem Ort ändern und damit das Passwort für alle ausgewählten Datenquellen aktualisieren.
+
+
+
+== Über diese Aufgabe
+
+Optionen, die Sie für die ausgewählten Datenquellen nicht bearbeiten können, werden abgeblendet angezeigt oder im Dialogfeld Datenquelle bearbeiten nicht angezeigt. Wenn eine Option einen Wert von *gemischt* anzeigt, zeigt sie außerdem an, dass der Wert für die Option zwischen den ausgewählten Datenquellen variiert. Beispiel: Wenn die Option *Timeout (sec)* für zwei ausgewählte Datenquellen *Mixed* ist, könnte eine Datenquelle einen Timeout-Wert von 60 haben und die andere einen Wert von 90 haben; Wenn Sie diesen Wert auf 120 ändern und die Änderungen an den Datenquellen speichern, wird die Timeout-Einstellung für beide Datenquellen zu 120.
+
+
+
+== Schritte
+
+. Klicken Sie auf *Admin* und navigieren Sie zur Ansicht der Datenquellliste
+. Wählen Sie die Datenquellen aus, die Sie ändern möchten. Die ausgewählten Datenquellen müssen demselben Anbieter, Modell und derselben Erfassungseinheit angehören.
+. Klicken Sie auf die Schaltfläche *actions* und wählen Sie die Option *Edit*.
+. Ändern Sie im Editierdialog die *Einstellungen* nach Bedarf.
+. Klicken Sie auf den Link *Konfiguration*, um eine der grundlegenden Optionen für die Datenquellen zu ändern.
+. Klicken Sie auf den Link *Erweiterte Konfiguration*, um eine der erweiterten Optionen für die Datenquellen zu ändern.
+. Klicken Sie Auf *Speichern*.
+

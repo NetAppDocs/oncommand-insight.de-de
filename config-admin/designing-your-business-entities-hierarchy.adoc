@@ -1,0 +1,31 @@
+---
+permalink: config-admin/designing-your-business-entities-hierarchy.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie müssen die Elemente Ihrer Unternehmensstruktur verstehen und wissen, was in den Geschäftseinheiten vertreten werden muss, da diese eine feste Struktur in Ihrer OnCommand Insight-Datenbank werden. Sie können die folgenden Informationen verwenden, um Ihre Geschäftseinheiten einzurichten. Denken Sie daran, dass Sie nicht alle Hierarchieebenen verwenden müssen, um Daten in diesen Kategorien zu erfassen. 
+---
+= Entwerfen der Hierarchie Ihrer Geschäftseinheiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die Elemente Ihrer Unternehmensstruktur verstehen und wissen, was in den Geschäftseinheiten vertreten werden muss, da diese eine feste Struktur in Ihrer OnCommand Insight-Datenbank werden. Sie können die folgenden Informationen verwenden, um Ihre Geschäftseinheiten einzurichten. Denken Sie daran, dass Sie nicht alle Hierarchieebenen verwenden müssen, um Daten in diesen Kategorien zu erfassen.
+
+
+
+== Schritte
+
+. Prüfen Sie jede Ebene der Hierarchie der Geschäftseinheiten, um festzustellen, ob diese Ebene in die Hierarchie Ihrer Unternehmenseinheit für Ihr Unternehmen aufgenommen werden soll:
++
+** *Tenant* Level ist erforderlich, wenn Ihr Unternehmen ein ISP ist und Sie die Nutzung von Ressourcen durch Kunden verfolgen möchten.
+** *Line of Business (Lob)* wird in der Hierarchie benötigt, wenn die Daten für verschiedene Produktlinien nachverfolgt werden müssen.
+** *Business Unit* ist erforderlich, wenn Sie Daten für verschiedene Abteilungen verfolgen müssen. Diese Hierarchieebene ist oft wertvoll, wenn es darum geht, eine Ressource zu trennen, die von einer Abteilung genutzt wird, die von anderen Abteilungen nicht genutzt wird.
+** *Projekt*-Ebene kann für spezialisierte Arbeiten innerhalb einer Abteilung verwendet werden. Diese Daten können nützlich sein, um die Technologieanforderungen eines separaten Projekts im Vergleich zu anderen Projekten in einem Unternehmen oder einer Abteilung zu lokalisieren, zu definieren und zu überwachen.
+
+
+. Erstellen Sie ein Diagramm, in dem jede Geschäftseinheit mit den Namen aller Ebenen innerhalb der Einheit angezeigt wird.
+. Überprüfen Sie die Namen in der Hierarchie, um sicherzustellen, dass sie in OnCommand Insight-Ansichten und -Berichten selbsterklärend sind.
+. Identifizieren Sie alle Applikationen, die den einzelnen Unternehmenseinheiten zugeordnet sind.
+

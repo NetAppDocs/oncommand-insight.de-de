@@ -1,0 +1,41 @@
+---
+permalink: howto/create-dashboards-to-monitor-thin-provisioned-environments.html 
+sidebar: sidebar 
+keywords:  
+summary: Das flexible Dashboard-Widget-Design und die Anzeigeoptionen von OnCommand Insight ermöglichen eine umfassende Analyse der Kapazitätsauslastung und -Auslastung sowie strategische Informationen zur Minimierung von Risiken in Thin Provisioning Datacenter-Infrastrukturen. 
+---
+= Erstellen Sie Dashboards für das Monitoring von Thin Provisioning-Umgebungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die flexiblen Dashboard-Design- und Anzeigeoptionen von OnCommand Insight ermöglichen eine umfassende Analyse der Kapazitätsauslastung und -Auslastung sowie strategische Informationen zur Risikominimierung in Thin Provisioning Datacenter-Infrastrukturen.
+
+Sie können Dashboards erstellen, die Zugriff auf Datenspeicher- und Storage-Pool-Informationen bieten, die Sie überwachen möchten.
+
+
+
+== Verwenden von Dashboards für den Zugriff auf Datenspeicherinformationen
+
+Möglicherweise möchten Sie Dashboards erstellen, die schnellen Zugriff auf die Daten bieten, die Sie in Ihrer virtuellen Infrastruktur überwachen möchten. Ein Dashboard könnte Widgets wie die folgenden enthalten, um die 10 wichtigsten Datastores anhand ihrer überlastenen % und ein Widget mit den Kapazitätsdaten für Datastores zu identifizieren. Die Dashboards verwenden Variablen, um Datastores hervorzuheben, die von mehr als 150 % überlastet sind, und Datastores, die mehr als 80 % ihrer genutzten Kapazität überschritten haben.
+
+image::../media/new-dashboard-thin.gif[Neues Dashboard dünn]
+
+image::../media/new-dashboard-thin-2.gif[Neues Dashboard dünn 2]
+
+Weitere Widgets, die zur Überwachung Ihrer Thin-Provisioning-Umgebung verwendet werden können, können einige der folgenden Informationen enthalten:
+
+* VMDK-Kapazitäten in Beziehung zu Datenspeichern
+* VM-Kapazitäten
+* Trends bei der genutzten Datenspeicherkapazität
+
+
+
+
+== Verwenden von Dashboards für den Zugriff auf Storage-Pool-Informationen
+
+Ein Dashboard kann Widgets wie die folgenden enthalten, die die verwendete physische Speicherkapazität identifizieren oder die überbelegte Kapazität für einen Speicherpool identifizieren.
+
+image::../media/aggr3c64.gif[Aggr3c64]

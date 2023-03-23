@@ -1,0 +1,149 @@
+---
+permalink: config-admin/emc-xtremeio-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Um die Datenquelle von EMC XtremIO \(HTTP\) zu konfigurieren, müssen Sie über die Hostadresse des XtremIO Management Server \(XMS\) und ein Konto mit Administratorrechten verfügen.' 
+---
+= EMC XtremIO Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um die Datenquelle EMC XtremIO (HTTP) zu konfigurieren, müssen Sie über die Hostadresse des XtremIO Management Server (XMS) und ein Konto mit Administratorrechten verfügen.
+
+
+
+== Terminologie
+
+OnCommand Insight bezieht die folgenden Inventarinformationen aus der Datenquelle „EMC XtremIO“. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Festplatte (SSD)
+ a| 
+Festplatte
+
+
+
+ a| 
+Cluster
+ a| 
+Storage
+
+
+
+ a| 
+Controller
+ a| 
+Storage-Node
+
+
+
+ a| 
+Datenmenge
+ a| 
+Datenmenge
+
+
+
+ a| 
+LUN-Zuordnung
+ a| 
+Volume-Zuordnung
+
+
+
+ a| 
+Initiator, Ziel
+ a| 
+Volume-Maske
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* Eine IP-Adresse jedes XtremIO Management Servers
+* Ein Konto mit Administratorrechten
+* Zugriff auf Port 443 (HTTPS)
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+XMS-Host
+ a| 
+IP-Adresse oder vollqualifizierter Domain-Name des XtremIO Management Servers
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für den XtremIO Management Server
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort für den XtremIO Management Server
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+TCP-Port
+ a| 
+TCP-Port zur Verbindung mit dem XtremIO Management Server (Standard 443 )
+
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 60 Minuten)
+
+
+
+ a| 
+Verbindungs-Timeout (Sek.)
+ a| 
+Verbindungs-Timeout (Standard: 60 Sekunden)
+
+
+
+ a| 
+Abfrageintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+|===

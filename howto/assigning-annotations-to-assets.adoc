@@ -1,0 +1,29 @@
+---
+permalink: howto/assigning-annotations-to-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: In diesem Leitfaden wird beschrieben, wie Sie Anmerkungen für Ihre Umgebung erstellen und anpassen, die für Abfragen, Filtern, Benachrichtigungen und Berichte verwendet werden können. 
+---
+= Erstellen von Anmerkungen für Ihr Unternehmen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In diesem Leitfaden wird beschrieben, wie Sie Anmerkungen für Ihre Umgebung erstellen und anpassen, die für Abfragen, Filtern, Benachrichtigungen und Berichte verwendet werden können.
+
+Eine Annotation ist eine Notiz oder ein Tag, die Sie bestimmten Assets in Ihrer Umgebung zuordnen. OnCommand Insight enthält mehrere Annotationen, die Sie je nach Bedarf für Ihre Assets konfigurieren können oder Ihre eigenen benutzerdefinierten Annotationen basierend auf Ihren geschäftlichen Anforderungen erstellen können.
+
+Die folgenden Beispiele sind diejenigen, die in der Regel zuerst in neuen Kundenumgebungen konfiguriert wurden, um als Grundlage für zusätzliche Aktionen zu dienen. Ihre eigenen Anforderungen an Anmerkungen können variieren, aber die hier beschriebenen Schritte können als Anleitung zur Konfiguration aller Anmerkungen verwendet werden, die Sie für die gewünschten Anlagen benötigen.
+
+Dieser Leitfaden basiert auf folgenden Annahmen:
+
+* Sie haben OnCommand Insight Server installiert und ordnungsgemäß lizenziert.
+* Sie möchten Best Practices erkunden, nicht jede verfügbare Option.
+* Sie verstehen, dass dies nur Beispiele sind und dass Ihre spezifischen Anforderungen variieren können.
+
+
+In diesem Handbuch erfahren Sie, wie Sie vorhandene Anmerkungen ändern und benutzerdefinierte Anmerkungen erstellen
+
+In unserer Beispielumgebung möchten wir Assets nach Datacenter, Tier, Service Level und Umgebung auflisten können.

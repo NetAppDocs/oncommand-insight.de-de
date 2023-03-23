@@ -1,0 +1,33 @@
+---
+permalink: dwh/forcing-an-update-of-annotations-for-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können eine Aktualisierung der Anmerkungen von OnCommand Insight in Data Warehouse initiieren. 
+---
+= Erzwingen einer Aktualisierung von Anmerkungen für Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Aktualisierung der Anmerkungen von OnCommand Insight in Data Warehouse initiieren.
+
+
+
+== Über diese Aufgabe
+
+Sie können Anmerkungen mit einer der beiden Optionen aktualisieren:
+
+* Einschließlich gelöschter Objekte: Dies umfasst Daten über Geräte, die nicht mehr vorhanden sind, wie Hosts, Speicher-Arrays oder Switches, die entfernt wurden. Dies ist erforderlich, wenn Sie Data Warehouse-Daten mit historischen Datenpunkten erstellen möchten.
+* Gelöschte Objekte nicht eingeschlossen: Wählen Sie diese Option, wenn Sie gelöschte Objekte ausschließen möchten.
+
+
+
+
+== Schritte
+
+. Melden Sie sich beim OnCommand Insight-Portal als Administrator an `+https://hostname+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight installiert ist.
+. Klicken Sie auf *Admin* > *Troubleshooting*. Klicken Sie unten auf der Seite auf *Erweiterte Fehlerbehebung*.
+. Klicken Sie auf der Registerkarte *Aktionen* auf *DWH-Anmerkungen aktualisieren (gelöscht einbeziehen)*.
+

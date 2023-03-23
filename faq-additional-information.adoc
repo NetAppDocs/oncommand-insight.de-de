@@ -1,0 +1,50 @@
+---
+permalink: faq/faq-additional-information.html 
+sidebar: sidebar 
+keywords: redhat,Linux 
+summary: Wo finde ich weitere Informationen? 
+---
+= Weitere Informationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wo kann ich endgültige Informationen zu OnCommand Insight geben?
+
+
+
+== Unterstützung von Datenquellen
+
+Informationen zu von Insight unterstützten Datenquellen finden Sie in der OnCommand Insight Datenquellen-Support-Matrix. Sie werden aufgefordert, sich mit Ihren Anmeldedaten für die NetApp Support Site anzumelden.
+
+link:https://mysupport.netapp.com/api/content-service/staticcontents/content/products/oncommandinsight/DatasourceSupportMatrix_7.3.x.pdf["OnCommand Insight-Datenquellenunterstützungsmatrix"]Supportmatrix für die aktuell unterstützten Versionen von OnCommand Insight.
+
+
+
+== Unterstützung
+
+link:https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool (IMT)"]Beschreibt von OnCommand Insight unterstützte Geräte und Plattformen.
+
+link:https://mysupport.netapp.com/site/products/all/details/oncommand-insight/guideme-tab["Geführte Problemlösung durch NetApp"]Guided Problem Solving bietet kuratierte technische Inhalte, Anleitungen und Fehlerbehebungsschritte, die nach Produkten, Funktionen und Aufgaben geordnet sind. Mithilfe des Chats können Sie Probleme schnell lösen, ohne einen Case eröffnen oder den technischen Support anrufen zu müssen.
+
+Die NetApp Knowledgebase bietet Ihnen Zugriff auf technische Artikel zum Managen und Verwalten von Produkten. Eine kleine Teilmenge der Knowledgebase steht der Öffentlichkeit zur Verfügung. Ein registrierter Benutzer hat Zugriff auf eine größere Auswahl an technischen Knowledgebase-Artikeln.
+
+Ansprechpartner für NetApp Global Services Wenden Sie sich an Ihr regionales Support Center.
+
+
+
+== Community
+
+NetApp Storefront Herunterladen aus einer umfassenden Sammlung von NetApp vorgestellten Berichtsvorlagen, Lösungspaketen, Datensammlern und Scripting-Beispielen für OnCommand Insight.
+
+OnCommand Insight Videos Sehen Sie sich Videos zu verschiedenen Themen aus unserer OnCommand Insight Produktvideo-Playlist an.
+
+Diskussionen der Insight Community Nehmen Sie an der Diskussion von OnCommand Insight Teil.
+
+
+
+== Andere
+
+IBM Cognos Documentation Documentation for IBM Cognos im Internet.

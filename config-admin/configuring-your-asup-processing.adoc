@@ -1,0 +1,48 @@
+---
+permalink: config-admin/configuring-your-asup-processing.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Alle NetApp Produkte sind mit automatisierten Funktionen ausgestattet, die den bestmöglichen Support für Kunden bieten. Der automatisierte Support \(ASUP\) sendet in regelmäßigen Abständen vordefinierte und spezifische Informationen an den Kunden-Support. Sie haben die Kontrolle über die Informationen, die an NetApp weitergeleitet werden und wie oft sie gesendet werden.' 
+---
+= Konfigurieren der ASUP Verarbeitung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Alle NetApp Produkte sind mit automatisierten Funktionen ausgestattet, die den bestmöglichen Support für Kunden bieten. Der automatische Support (ASUP) sendet periodisch vordefinierte und spezifische Informationen an den Kunden-Support. Sie haben die Kontrolle über die Informationen, die an NetApp weitergeleitet werden und wie oft sie gesendet werden.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen OnCommand Insight so konfigurieren, dass Daten weitergeleitet werden, bevor Daten gesendet werden.
+
+
+
+== Über diese Aufgabe
+
+ASUP Daten werden über das HTTPS-Protokoll weitergeleitet.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Setup*.
+. Klicken Sie auf die Registerkarte *ASUP & Proxy*.
+. Wählen Sie im Abschnitt *ASUP* *ASUP aktivieren* aus, um die ASUP-Funktion zu aktivieren.
+. Wenn Sie Ihre Unternehmensinformationen ändern möchten, aktualisieren Sie die folgenden Felder:
++
+** *Firmenname*
+** *Standortname*
+** *Was zu senden ist*: Protokolle, Konfigurationsdaten, Leistungsdaten
+
+
+. Klicken Sie auf *Verbindung testen*, um sicherzustellen, dass die angegebene Verbindung funktioniert.
+. Klicken Sie Auf *Speichern*.
+. Wählen Sie im Abschnitt *Proxy* aus, ob Sie *Proxy* aktivieren möchten, und geben Sie Ihre Proxy *Host*-, *Port*- und *user*-Informationen an.
+. Klicken Sie auf *Verbindung testen*, um sicherzustellen, dass der von Ihnen angegebene Proxy funktioniert.
+. Klicken Sie Auf *Speichern*.
+

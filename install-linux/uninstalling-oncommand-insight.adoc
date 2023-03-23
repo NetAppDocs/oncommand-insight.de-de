@@ -1,0 +1,16 @@
+---
+permalink: install-linux/uninstalling-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die OnCommand Insight-Komponenten bei Bedarf deinstallieren. Sie müssen die OnCommand Insight-Komponenten separat deinstallieren. 
+---
+= OnCommand Insight wird deinstalliert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die OnCommand Insight-Komponenten bei Bedarf deinstallieren. Sie müssen die OnCommand Insight-Komponenten separat deinstallieren.
+
+Jede Komponente wird separat deinstalliert.

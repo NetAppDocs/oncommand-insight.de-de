@@ -1,0 +1,43 @@
+---
+permalink: howto/monitoring-the-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: Jede Landing Page des Storage-Pools bietet Überzeichnungs-Verhältnisse, identifiziert korrelierte Ressourcen, LUN- und Festplattenauslastung, Richtlinienverstöße und Verstöße gegen den Storage-Pool. 
+---
+= Überwachen des Speicherpools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Jede Landing Page des Storage-Pools bietet Überzeichnungs-Verhältnisse, identifiziert korrelierte Ressourcen, LUN- und Festplattenauslastung, Richtlinienverstöße und Verstöße gegen den Storage-Pool.
+
+Verwenden Sie die Landing Page für Storage-Pools, um potenzielle Probleme mit den physischen Ressourcen zu identifizieren, die Ihre virtuelle Infrastruktur unterstützen. Sie können die Kapazitäts- und Kapazitätsverhältnisse von Trends über 30 Tage verfolgen oder einen individuellen Zeitrahmen verwenden. Achten Sie in den folgenden Abschnitten auf die Daten, um den Status des Speicherpools zu überwachen.
+
+* *Zusammenfassung*
++
+In diesem Abschnitt erhalten Sie Informationen zu folgenden Themen:
+
++
+** Informationen zur Kapazität des Speicherpools, einschließlich der physischen Kapazität und der überbelegten Kapazität
+** Ob das Aggregat überzeichnet ist und nach wie viel.
+** Alle aufgetretenen Richtlinienverstöße.
+
+
+* *Speicherressourcen und Festplatten-Abschnitte*
++
+Im Abschnitt Storage-Ressourcen wird die LUN-Auslastung angezeigt.
+
++
+Der Abschnitt „Festplatten“ zeigt die einzelnen Festplatten, aus denen der Speicherpool besteht.
+
+* *Ressourcen*
++
+Verwenden Sie diesen Abschnitt, um die Korrelation von VMDKs zu LUNs zu verstehen und den Applikationspfad von Storage zur VM zu verstehen.
+
+* *Abschnitt Verstöße*
++
+Im Abschnitt „Verstöße“ werden Verstöße gegen Performance-Richtlinien identifiziert, die für den Speicherpool festgelegt wurden.
+
+

@@ -1,0 +1,16 @@
+---
+permalink: dwh/welcome-to-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Das OnCommand Insight Data Warehouse ist ein zentralisiertes Repository, das Daten von mehreren OnCommand Insight Servern speichert und Daten zu einem gemeinsamen, mehrdimensionalen Datenmodell für Abfrage und Analyse umwandelt. 
+---
+= Willkommen im OnCommand Insight Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das OnCommand Insight Data Warehouse ist ein zentralisiertes Repository, das Daten von mehreren OnCommand Insight Servern speichert und Daten zu einem gemeinsamen, mehrdimensionalen Datenmodell für Abfrage und Analyse umwandelt.
+
+Das OnCommand Insight Data Warehouse ermöglicht den Zugriff auf eine offene Datenbank mit mehreren Datentabellen, mit denen Sie benutzerdefinierte Kapazitäts- und Performance-Berichte generieren können, beispielsweise Chargeback-Berichte, Trendberichte mit Archivdaten, Verbrauchsanalysen und Prognoseberichte.

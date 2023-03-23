@@ -1,0 +1,63 @@
+---
+permalink: dwh/viewing-storage-arrays-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: Die gemeldeten Daten für Speicher-Arrays werden aus dem Inventory Data Mart abgeleitet. Für alle Speicher-Arrays gibt es eine Zeile für jeden Connector, der über sie berichtet, sowie den primären Connector, von dem jedes Array genommen wird. 
+---
+= Anzeigen von Problemen bei der Konsolidierung von Speicher-Arrays
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die gemeldeten Daten für Speicher-Arrays werden aus dem Inventory Data Mart abgeleitet. Für alle Speicher-Arrays gibt es eine Zeile für jeden Connector, der über sie berichtet, sowie den primären Connector, von dem jedes Array genommen wird.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster auf der linken Seite auf *Fehlerbehebung*.
+. Klicken Sie im Abschnitt *Gehäusekonsolidierung* auf *SAN-Speicher-Arrays*.
+. Um Daten in dieser Ansicht zu filtern, geben Sie optional einen Teil des Textes in das Filterfeld ein und klicken auf *Filter*. Um den Filter zu löschen, löschen Sie den Text im Feld Filter und klicken Sie auf *Filter*. Sie können nach Speichername, Speicher-IP, Anbietermodell oder OnCommand Insight-Objekt-ID filtern.
++
+Der Filter ist Groß-/Kleinschreibung beachten.
+
+. Überprüfen Sie die folgenden Daten:
++
+** *GUID*
++
+Global Unique Identifier für diesen konsolidierten Gerätetyp (Speicher-Array)
+
+** *Name*
++
+Name des konsolidierten Speicherarrays, wie er im Data Warehouse angezeigt wird
+
+** *IP*
++
+IP-Adresse des konsolidierten Speicher-Arrays
+
+** *Hersteller und Modell*
++
+Name des Anbieters, der das konsolidierte Speicher-Array verkauft, und Modellnummer des Herstellers
+
+** *Principal Connector*
++
+Der Name des OnCommand Insight-Connectors, der die eigentliche Datenquelle war
+
+** *Verfügbare Anschlüsse*
++
+Alle OnCommand Insight-Connectors, in denen sich das konsolidierte Storage-Array befindet
+
+** *Insight-ID*
++
+ID des konsolidierten Speicher-Arrays auf dem OnCommand Insight-Gehäuse, in dem sich der Hauptanschluss befindet
+
+** * Insight Change Time*
++
+Wenn in OnCommand Insight ein Update für das Speicher-Array durchgeführt wurde und dasselbe Speicher-Array auf anderen OnCommand Insight-Servern aktualisiert wurde
+
+
+
+

@@ -1,0 +1,23 @@
+---
+permalink: howto/service-level-and-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Fügen Sie anhand der bereits erworbenen Schritte und Konzepte Anmerkungen zu Service-Level und Umgebung zu den entsprechenden Assets hinzu. 
+---
+= Anmerkungen zu Service-Level und Umgebung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Fügen Sie mithilfe der von Ihnen gelernten Schritte und Konzepte Anmerkungen zu Service-Level und Umgebung zu den entsprechenden Ressourcen hinzu.
+
+Um den entsprechenden Assets in Ihrer Umgebung Anmerkungen zu Service-Level und Umgebung hinzuzufügen, befolgen Sie die oben aufgeführten Schritte, um die gewünschten Assets und die entsprechenden Anmerkungen zum Service-Level oder zur Umgebung auszuwählen. Sie können mit denselben Assets mehrere Annotationen verknüpft sein. In der Tat ermöglicht Ihnen dieses Verfahren mehr Flexibilität beim Management Ihrer Umgebung durch Insight.
+
+Nachdem Sie nun Abfragen erstellt haben, um Ihre Assets mit Anmerkungen zu versehen, können Sie diese Anmerkungen auf verschiedene Weise verwenden, z. B.:
+
+* Performance-Richtlinien zur Benachrichtigung bei Ereignissen auf gewünschten Assets
+* Benutzerdefinierte Dashboards und Widgets zur Überwachung der Aktivität
+* Berichterstellung
+

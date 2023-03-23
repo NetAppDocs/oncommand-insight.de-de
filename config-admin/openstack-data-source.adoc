@@ -1,0 +1,195 @@
+---
+permalink: config-admin/openstack-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Die Datenquelle von OpenStack \(REST API / KVM\) erfasst Informationen über OpenStack Hardware-Instanzen. Diese Datenquelle erfasst Inventardaten für alle OpenStack Instanzen sowie optional VM Performance-Daten.' 
+---
+= OpenStack Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die OpenStack Datenquelle (REST API / KVM) erfasst Informationen zu OpenStack Hardware-Instanzen. Diese Datenquelle erfasst Inventardaten für alle OpenStack Instanzen sowie optional VM Performance-Daten.
+
+
+
+== Anforderungen
+
+Folgende Anforderungen gelten für die Konfiguration der OpenStack Datenquelle.
+
+* IP-Adresse des OpenStack Controllers
+* Es werden Anmeldeinformationen für die OpenStack Admin-Rolle und sudo-Zugriff auf den Linux KVM-Hypervisor empfohlen.
++
+[NOTE]
+====
+Wenn Sie kein Administratorkonto oder Administratorrechte verwenden, können Sie dennoch Daten aus der Datenquelle abrufen. Sie müssen die Richtlinienkonfigurationsdatei ändern (z. B. etc/Nova/Policy.json), damit Benutzer mit nicht-Admin-Rolle die API aufrufen können:
+
+====
++
+** „os_Compute_API:os-Availability-Zone:Detail“: „“
+** „os_Compute_API:os-Hypervisoren“: „“
+** os_Compute_API:Server:Detail:get_all_Tenants“: „“
+
+
+* Für die Performance-Erfassung muss das OpenStack Ceilometer Modul installiert und konfiguriert sein. Die Konfiguration des Ceilometers erfolgt durch Bearbeiten des `nova.conf` Datei für jeden Hypervisor und starten Sie dann den Nova Compute Service auf jedem Hypervisor neu. Die Optionsnamen ändern sich für verschiedene OpenStack Versionen:
++
+** Icehouse
+** Juno
+** Kilo
+** Freiheit
+** Mitaka
+** Newton
+** Kata
+
+
+* Für CPU-Statistiken muss "Compute_Monitors=ComputeDriverCPUMonitor" in /etc/Nova/Nova.conf auf Compute-Knoten aktiviert sein.
+* Port-Anforderungen:
++
+** 5000 für http und 13000 für https, für den Keystone Service
+** 22 für KVM SSH
+** 8774 für Nova Compute Service
+** 8776 für Cinder Block Service
+** 8777 für den Ceilometer Performance Service
+** 9292 für Glance Image Service
++
+[NOTE]
+====
+Der Port bindet an den spezifischen Dienst, und der Dienst kann auf dem Controller oder einem anderen Host in größeren Umgebungen ausgeführt werden.
+
+====
+
+
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+OpenStack-Controller-IP-Adresse
+ a| 
+IP-Adresse oder vollqualifizierter Domain-Name des OpenStack Controllers
+
+
+
+ a| 
+OpenStack Administrator
+ a| 
+Benutzername für einen OpenStack Admin
+
+
+
+ a| 
+OpenStack Passwort
+ a| 
+Passwort, das für den OpenStack Admin verwendet wird
+
+
+
+ a| 
+OpenStack Administrator-Mandant
+ a| 
+OpenStack Administrator-Mandant
+
+
+
+ a| 
+KVM-Sudo-Benutzer
+ a| 
+KVM sudo Benutzername
+
+
+
+ a| 
+Wählen Sie „Kennwort“ oder „OpenSSH-Schlüsseldatei“, um den Anmeldeinformationstyp anzugeben
+ a| 
+Der Anmeldetyp, der für die Verbindung mit dem Gerät über SSH verwendet wird
+
+
+
+ a| 
+Vollständiger Pfad zum privaten Bestandsschlüssel
+ a| 
+Vollständiger Pfad zum privaten Bestandsschlüssel
+
+
+
+ a| 
+KVM-Sudo-Kennwort
+ a| 
+KVM-Sudo-Kennwort
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Aktivieren der Erkennung des Hypervisor-Inventars über SSH
+ a| 
+Aktivieren Sie diese Option, um die Erkennung des Hypervisor-Inventars über SSH zu aktivieren
+
+
+
+ a| 
+OpenStack Admin-URL-Port
+ a| 
+OpenStack Admin-URL-Port
+
+
+
+ a| 
+Verwenden Sie HTTPS
+ a| 
+Überprüfen Sie, ob sicheres HTTP verwendet wird
+
+
+
+ a| 
+HTTP-Verbindungszeitlimit (Sek.)
+ a| 
+Timeout für HTTP-Verbindung (Standard: 300 Sekunden)
+
+
+
+ a| 
+SSH-Port
+ a| 
+Port, der für SSH verwendet wird
+
+
+
+ a| 
+SSH-Prozess-Wartezeit (Sek.)
+ a| 
+SSH-Prozess-Timeout (Standard: 30 Sekunden)
+
+
+
+ a| 
+SSH-Prozess wird erneut ausgeführt
+ a| 
+Anzahl der Versuche für einen erneuten Versuch in der Bestandsaufnahme
+
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 20 Minuten)
+
+|===

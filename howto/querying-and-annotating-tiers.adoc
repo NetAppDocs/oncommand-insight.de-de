@@ -1,0 +1,67 @@
+---
+permalink: howto/querying-and-annotating-tiers.html 
+sidebar: sidebar 
+keywords:  
+summary: Mithilfe von Abfragen verknüpfen Sie Ihre Annotationen mit den entsprechenden Assets Ihrer Umgebung. In diesem Fall ordnen wir diese Tiers den entsprechenden Assets zu. 
+---
+= Ebenen abfragen und beschriften
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Abfragen verknüpfen Sie Ihre Annotationen mit den entsprechenden Assets Ihrer Umgebung. In diesem Fall ordnen wir diese Tiers den entsprechenden Assets zu.
+
+Lassen Sie uns Anmerkungen für Ihre Tiers erstellen. In diesem Beispiel verknüpfen wir Tiers mit Storage-Pools und nehmen an, dass Ihre Tier-Annotationen wie folgt konfiguriert sind:
+
+|===
+
+
+| Wert | Beschreibung | Kosten pro GB 
+
+
+ a| 
+Tier-1-SSD
+ a| 
+Rein Flash-Basiertes Array
+ a| 
+0.5
+
+
+
+ a| 
+Tier 2 SAS
+ a| 
+SAS
+ a| 
+0.25
+
+
+
+ a| 
+Tier 3 SATA
+ a| 
+SATA
+ a| 
+0.1
+
+|===
+Suchen wir nach allen SSD-Festplatten in Ihrer Umgebung und ordnen Sie ihnen die Beschriftung „`Tier 1 SSD`“ zu.
+
+* Melden Sie sich bei Insight als Benutzer mit administrativen Berechtigungen an
+* Wählen Sie *Abfragen* > *+Neue Abfrage*
+* Drop-down das Feld *Suchen nach...* und wählen Sie *Speicherpool*. Eine Liste aller Speicherpools wird angezeigt.
+* Das Feld *Name* ist dieses Mal möglicherweise nicht hilfreich, also verwenden wir ein anderes Feld. Klicken Sie auf das Dropdown-Menü *Mehr* und wählen Sie „`am wenigsten performant Disk type`“ aus. In diesem Feld werden die für uns interessanten Festplattentypen aufgeführt. Geben Sie „`SSD`“ in das Feld ein, und klicken Sie aufimage:../media/check-box-ok.gif[""] Schaltfläche. In der Abfrageergebnisliste werden nur Ihre SSD-Speicherpools angezeigt.
+* Sie können weiter filtern, indem Sie auf das Dropdown-Menü *Mehr* klicken und zusätzliche Felder auswählen.
+* Wählen Sie die Speicherpools aus, die Sie diesem Tier zuordnen möchten. Wenn alle gewünschten Speicherpools ausgewählt sind, klicken Sie auf die Schaltfläche *Aktionen* und wählen *Anmerkung bearbeiten*.
+* Wählen Sie im Dialogfeld *Anmerkung hinzufügen* die Anmerkung *Tier* aus.
+* Wählen Sie den gewünschten *Wert* aus der Liste aus. Wählen Sie für dieses Beispiel „`Tier 1 SSD`“.
+* Klicken Sie Auf *Speichern*.
+* Wenn die Spalte „Ebene“ auf der Seite „Abfrageergebnisse“ nicht angezeigt wird, wählen Sie sie aus, indem Sie die Schaltfläche *Spalten* herunterfahren und *Ebene* wählen. Sie sollten die entsprechende Anmerkung sehen, die jetzt Ihren Assets zugeordnet ist.
+* Speichern Sie die Abfrage, indem Sie oben rechts auf der Seite Abfrage auf die Schaltfläche *Speichern* klicken und ihr einen eindeutigen und expliziten Namen geben. Beispiel: „`Storage Pools - Tier 1 SSD`“.
+
+
+Wenn Sie die Annotation „`Tier 1 SSD`“ anderen Assets zuordnen möchten, erstellen Sie eine neue Abfrage und führen Sie die folgenden Schritte für jeden gewünschten Asset-Typ aus.
+
+Wiederholen Sie diese Schritte für die Assets in jeder Ihrer verbleibenden Tiers.

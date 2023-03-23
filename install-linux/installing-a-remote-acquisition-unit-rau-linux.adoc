@@ -1,0 +1,57 @@
+---
+permalink: install-linux/installing-a-remote-acquisition-unit-rau-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie können eine oder mehrere Remote-Erfassungseinheiten \(raus\) in Ihrer OnCommand Insight-Umgebung installieren. Die Erfassungseinheiten laufen im Netzwerk, das auf \ (über Module namens Datenquellen\) zugreift und Daten von verschiedenen Geräten im Rechenzentrum sammelt.' 
+---
+= Installieren einer Remote-Erfassungseinheit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine oder mehrere Remote-Erfassungseinheiten (Raus) in Ihrer OnCommand Insight-Umgebung installieren. Erfassungseinheiten laufen im Netzwerk, das (über Module namens Data _sources_) zugreift und Daten von verschiedenen Geräten im Rechenzentrum sammelt.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen alle Installationsvoraussetzungen erfüllt haben.
+
+Mindestens ein Port muss offen und zwischen dem rau-Server und dem OnCommand Insight-Server verfügbar sein, um Änderungsinformationen an den Server weiterzuleiten. Wenn Sie sich darüber nicht sicher sind, validieren Sie ihn, indem Sie einen Webbrowser auf dem rau-Computer öffnen und ihn zum OnCommand Insight-Server leiten:
+
+[listing]
+----
+ https://< OnCommand Insight Server hostname >:< acquisition_port >
+----
+Der Erfassungsport ist standardmäßig auf 443 eingestellt, aber er hat sich möglicherweise während der Serverinstallation geändert. Wenn die Verbindung erfolgreich war, wird eine OnCommand Insight-Antwortseite angezeigt, die einen offenen und verfügbaren Port zwischen der rau und dem OnCommand Insight-Server anzeigt.
+
+In Umgebungen, in denen Network Address Translation oder Port Address Translation (NAT/PAT: I.e, beliebige Übersetzung von IP-Adressen) verwendet wird, unterstützt Insight nur das Einfügen einer RAU zwischen NAT und dem Gerät.
+
+* Unterstützt: OnCommand Insight \-> NAT \-> rau \-> Gerät
+* Nicht unterstützt: OnCommand Insight \-> rau \-> NAT \-> Gerät
+
+
+
+
+== Schritte
+
+. Melden Sie sich beim rau-Server mit einem Konto mit sudo-Berechtigungen an.
+. Navigieren Sie zu dem Verzeichnis auf dem Server, in dem sich die Installationsdateien befinden, und geben Sie den folgenden Befehl ein:
++
+`unzip oci-rau-<version>-linux-x86_64.zip`
+
+. Sie können Syntax, Befehlsargumente und Parameterverwendung für anzeigen `oci-install.sh`:
++
+`sudo ./oci-rau-<version>-linux-x86_64/oci-install.sh --help`
+
+. Führen Sie das Installationsskript aus:
++
+`sudo ./oci-rau-<version>-linux-x86_64/oci-install.sh`
+
+. Lesen Sie die Lizenzvereinbarung, akzeptieren Sie sie, und befolgen Sie dann die Anweisungen.
++
+Nachdem Sie alle Eingabeaufforderungen beantwortet haben, beginnt die Installation und sollte je nach installierter Anwendung ca. 10 Minuten dauern.
+
+

@@ -1,0 +1,31 @@
+---
+permalink: howto/servicenow-integration-install-update-set.html 
+sidebar: sidebar 
+keywords:  
+summary: Im Rahmen der Integration von ServiceNow und OnCommand Insight müssen Sie einen Updatesatz installieren, der vorkonfigurierte Daten in ServiceNow lädt, um dem Konnektor spezifische Felder und Tabellen zum Extrahieren und Laden von Daten bereitzustellen. 
+---
+= Update-Set installieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Rahmen der Integration von ServiceNow und OnCommand Insight müssen Sie einen Updatesatz installieren, der vorkonfigurierte Daten in ServiceNow lädt, um dem Konnektor spezifische Felder und Tabellen zum Extrahieren und Laden von Daten bereitzustellen.
+
+
+
+== Schritte
+
+. Navigieren Sie in ServiceNow zur Tabelle für Remote-Update-Sets, indem Sie nach „`abgerufene Update-Sets`“ suchen.
+. Klicken Sie auf *Update Set aus XML importieren*.
+. Der Updatensatz befindet sich in der zuvor auf Ihr lokales Laufwerk heruntergeladenen Python-Connector-ZIP-Datei (in unserem Beispiel die `C:\OCI2SNOW` Ordner) im `\update_sets` Unterordner. Klicken Sie auf *Datei auswählen* und wählen Sie die .XML-Datei in diesem Ordner aus. Klicken Sie Auf *Upload*.
+. Sobald der Update-Satz geladen ist, öffnen Sie ihn und klicken Sie auf *Preview Update Set*.
++
+Wenn Fehler erkannt werden, müssen Sie sie korrigieren, bevor Sie den Aktualisierungssatz übertragen können.
+
+. Wenn keine Fehler vorliegen, klicken Sie auf *Update Set übertragen*.
++
+Sobald der Update-Satz übergeben wurde, wird er auf der Seite *System-Update-Sets* > *Update-Quellen* angezeigt.
+
+

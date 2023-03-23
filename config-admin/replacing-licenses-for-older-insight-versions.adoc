@@ -1,0 +1,16 @@
+---
+permalink: config-admin/replacing-licenses-for-older-insight-versions.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie eine neue Insight-Version erworben haben, die nicht abwärtskompatibel mit Ihrer älteren Version des Produkts ist, müssen Sie die älteren Lizenzen durch die neuen Lizenzen ersetzen. 
+---
+= Ersetzen von Lizenzen für ältere Insight-Versionen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie eine neue Insight-Version erworben haben, die nicht abwärtskompatibel mit Ihrer älteren Version des Produkts ist, müssen Sie die älteren Lizenzen durch die neuen Lizenzen ersetzen.
+
+Wenn Sie die neuen Lizenzen installieren, müssen Sie den Vorgang *Replace* auswählen, bevor Sie den Text des Lizenzschlüssels speichern.

@@ -1,0 +1,33 @@
+---
+permalink: config-admin/setting-annotation-rule-precedence.html 
+sidebar: sidebar 
+keywords:  
+summary: Standardmäßig bewertet OnCommand Insight Annotationsregeln sequenziell. Sie können jedoch die Reihenfolge konfigurieren, in der OnCommand Insight Annotationsregeln auswertet, wenn Sie möchten, dass Insight Regeln in einer bestimmten Reihenfolge auswertet. 
+---
+= Festlegen der Priorität der Anmerkungsregel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Standardmäßig bewertet OnCommand Insight Annotationsregeln sequenziell. Sie können jedoch die Reihenfolge konfigurieren, in der OnCommand Insight Annotationsregeln auswertet, wenn Sie möchten, dass Insight Regeln in einer bestimmten Reihenfolge auswertet.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der Insight Web-Benutzeroberfläche an.
+. Klicken Sie auf *Verwalten* und wählen Sie *Anmerkungsregeln*.
++
+Auf der Seite Anmerkungsregeln wird die Liste der vorhandenen Anmerkungsregeln angezeigt.
+
+. Bewegen Sie den Cursor über eine Anmerkungsregel.
++
+Die Rangfolge-Pfeile erscheinen rechts von der Regel.
+
+. Um eine Regel in der Liste nach oben oder unten zu verschieben, klicken Sie auf den Aufwärtspfeil oder den Abwärtspfeil.
++
+Standardmäßig werden neue Regeln nacheinander zur Liste der Regeln hinzugefügt. Wenn Insight die Anmerkungsregeln auswertet, haben Annotationen, die manuell auf den Seiten einzelner Assets festgelegt wurden, Vorrang vor regelbasierten Annotationen.
+
+

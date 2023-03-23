@@ -1,0 +1,144 @@
+---
+permalink: config-admin/hpe-nimble-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Der HPE Nimble-Datensammler unterstützt Bestands- und Performance-Daten für HPE Nimble-Storage-Arrays. 
+---
+= HPE Nimble Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der HPE Nimble-Datensammler unterstützt Bestands- und Performance-Daten für HPE Nimble-Storage-Arrays.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Inventarinformationen aus der HPE Nimble Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Array Erledigen
+ a| 
+Storage
+
+
+
+ a| 
+Festplatte
+ a| 
+Festplatte
+
+
+
+ a| 
+Pool
+ a| 
+Storage-Pool
+
+
+
+ a| 
+Datenmenge
+ a| 
+Datenmenge
+
+
+
+ a| 
+Initiator
+ a| 
+Storage-Host-Alias
+
+
+
+ a| 
+Controller
+ a| 
+Storage-Node
+
+
+
+ a| 
+Fibre Channel-Schnittstelle
+ a| 
+Controller
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* Das Array muss installiert und konfiguriert sein und über den Client über seinen vollständig qualifizierten Domänennamen (FQDN) oder die Array-Management-IP-Adresse erreichbar sein.
+* Auf dem Array muss NimbleOS 2.3.x oder höher ausgeführt werden.
+* Sie müssen einen gültigen Benutzernamen und ein gültiges Kennwort für das Array haben.
+* Port 5392 muss auf dem Array geöffnet sein.
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Array-Management-IP-Adresse
+ a| 
+Vollständig qualifizierter Domain-Name (FQDN) oder Array-Management-IP-Adresse.
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für das Nimble-Array
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort für das Nimble-Array
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Port
+ a| 
+Der von Nimble REST API verwendete Port. Der Standardwert ist 5392.
+
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 60 Minuten)
+
+|===
+Hinweis: Das Standard-Performance-Abfrageintervall beträgt 300 Sekunden und kann nicht geändert werden. Dies ist das einzige von Nimble unterstützte Intervall.

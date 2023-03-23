@@ -1,0 +1,29 @@
+---
+permalink: config-admin/device-resolution-fc-identify.html 
+sidebar: sidebar 
+keywords:  
+summary: Auf dem Bildschirm FC-Identifizierung werden WWN und WWPN von Fibre-Channel-Geräten angezeigt, deren Hosts nicht durch die automatische Geräteauflösung identifiziert wurden. Auf dem Bildschirm werden auch alle Geräte angezeigt, die durch manuelle Geräteauflösung gelöst wurden. 
+---
+= Fibre Channel-Geräteauflösung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf dem Bildschirm FC-Identifizierung werden WWN und WWPN von Fibre-Channel-Geräten angezeigt, deren Hosts nicht durch die automatische Geräteauflösung identifiziert wurden. Auf dem Bildschirm werden auch alle Geräte angezeigt, die durch manuelle Geräteauflösung gelöst wurden.
+
+Geräte, die durch manuelle Auflösung aufgelöst wurden, enthalten den Status „`OK`“ und identifizieren die Regel, mit der das Gerät identifiziert wird. Fehlende Geräte haben den Status „`nicht identifiziert`“. Die Gesamtabdeckung für die Identifizierung von Geräten ist auf dieser Seite aufgeführt.
+
+image::../media/fcidentify.gif[Fcidentifziere]
+
+Sie führen Massenaktionen durch, indem Sie auf der linken Seite des FC-Identifizieren-Bildschirms mehrere Geräte auswählen. Aktionen können auf einem einzelnen Gerät durchgeführt werden, indem Sie den Mauszeiger über ein Gerät bewegen und die Schaltflächen Identifizieren oder Identifizieren ganz rechts in der Liste auswählen.
+
+Der Link Gesamtabdeckung zeigt eine Liste der „Anzahl der identifizierten Geräte/Anzahl der verfügbaren Geräte“ für Ihre Konfiguration an:
+
+* SRM-Alias
+* Storage-Alias
+* Alias wechseln
+* Zonen
+* Benutzerdefiniert
+

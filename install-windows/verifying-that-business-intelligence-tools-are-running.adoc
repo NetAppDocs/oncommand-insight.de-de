@@ -1,0 +1,16 @@
+---
+permalink: install-windows/verifying-that-business-intelligence-tools-are-running.html 
+sidebar: sidebar 
+keywords:  
+summary: Falls zutreffend, sollten Sie überprüfen, ob Ihre Business Intelligence-Tools ausgeführt werden und Daten nach dem Upgrade abrufen. 
+---
+= Überprüfung der Ausführung von Business Intelligence-Tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Falls zutreffend, sollten Sie überprüfen, ob Ihre Business Intelligence-Tools ausgeführt werden und Daten nach dem Upgrade abrufen.
+
+Stellen Sie sicher, dass Business Intelligence-Tools wie BMC Atrium und ServiceNow ausgeführt werden und Daten abrufen können. Dazu gehören der BMC-Anschluss und Lösungen, die REST nutzen.

@@ -1,0 +1,24 @@
+---
+permalink: config-admin/performance-policy-precedence.html 
+sidebar: sidebar 
+keywords:  
+summary: Auf der Seite Performance-Richtlinien werden Richtlinien nach Objekttyp gruppiert. Insight bewertet die Richtlinien in der Reihenfolge, in der sie in der Liste der Performance-Richtlinien des Objekts aufgeführt werden. Sie können die Reihenfolge ändern, in der Insight Richtlinien auswertet, um die für Sie wichtigsten Informationen in Ihrem Netzwerk anzuzeigen. 
+---
+= Bewertung der Performance-Richtlinien Vorrang
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite Performance Policies werden Richtlinien nach Objekttyp gruppiert. Insight bewertet die Richtlinien in der Reihenfolge, in der sie in der Liste der Performance-Richtlinien des Objekts aufgeführt werden. Sie können die Reihenfolge ändern, in der Insight Richtlinien auswertet, um die für Sie wichtigsten Informationen in Ihrem Netzwerk anzuzeigen.
+
+Insight bewertet alle Richtlinien, die sequenziell für ein Objekt gelten, wenn Muster der Performance-Daten für das entsprechende Objekt in das System aufgenommen werden. Abhängig von Annotationen gelten jedoch nicht alle Richtlinien für eine Objektgruppe. Angenommen, das interne Volume verfügt über die folgenden Richtlinien:
+
+* Richtlinie 1 (Standardrichtlinie von Insight)
+* Richtlinie 2 (mit einer Annotation von „`Service Level = Silver`“ mit der Option *Verarbeitung weiterer Richtlinien beenden, wenn Warnung generiert wird*
+* Richtlinie 3 (mit einer Annotation von „`Service Level = Gold`“)
+* Richtlinie 4
+
+
+Für eine interne Volume-Ebene mit einer Gold-Annotation bewertet Insight Richtlinie 1, ignoriert Richtlinie 2 und evaluiert anschließend Richtlinie 3 und Richtlinie 4. Für eine Stufe ohne Anmerkungen bewertet Insight nach der Reihenfolge der Richtlinien. Daher bewertet Insight nur Richtlinie 1 und Richtlinie 4. Für eine interne Volume-Ebene mit einer Silver-Annotation bewertet Insight die Richtlinien 1 und 2. Wird jedoch eine Meldung bei der Überschreitung des Richtlinienschwellenwerts ausgelöst und für das in der Richtlinie festgelegte Zeitfenster kontinuierlich überschritten, wird Insight die anderen Richtlinien in der Liste nicht mehr bewerten, während die aktuellen Zähler für das Objekt ausgewertet werden. Wenn Insight die nächsten Performance-Samples für das Objekt erfasst, beginnt es erneut, die Performance-Richtlinien für das Objekt nach Filter und anschließend nach Reihenfolge zu bewerten.

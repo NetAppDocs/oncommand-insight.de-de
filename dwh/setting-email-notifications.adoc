@@ -1,0 +1,54 @@
+---
+permalink: dwh/setting-email-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Data Warehouse E-Mails an eine bestimmte E-Mail-Adresse senden lassen, wenn Data Warehouse-Jobs nicht erfolgreich abgeschlossen werden. 
+---
+= Einstellen von E-Mail-Benachrichtigungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Data Warehouse E-Mails an eine bestimmte E-Mail-Adresse senden lassen, wenn Data Warehouse-Jobs nicht erfolgreich abgeschlossen werden.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster auf der linken Seite auf *E-Mail-Benachrichtigung*.
+. Geben Sie Folgendes ein:
++
+** SMTP-Serveradresse
++
+Gibt den Server an, der als SMTP-Server in Ihrer Organisation fungiert. Er wird entweder mit einem Hostnamen oder mit einer IP-Adresse im Format nnn.nnn.nnn.nnn identifiziert. Wenn Sie einen Hostnamen angeben, stellen Sie sicher, dass DNS ihn auflösen kann.
+
+** Benutzername und Kennwort des SMTP-Servers
++
+Gibt den Benutzernamen für den Zugriff auf den E-Mail-Server an und ist nur erforderlich, wenn der SMTP-Server einen Benutzer zum Anmelden am Server benötigt. Dies ist derselbe Benutzername, mit dem Sie sich bei der Anwendung anmelden und auf Ihre E-Mail zugreifen.
+
+** Benachrichtigungen aktiviert
++
+*Ja* aktiviert die Benachrichtigungen; *Nein* deaktiviert die Benachrichtigungen.
+
+** E-Mail des Absenders
++
+Gibt die E-Mail-Adresse an, die zum Senden der Benachrichtigungen verwendet wird. Dies muss eine gültige E-Mail-Adresse in Ihrem Unternehmen sein.
+
+** E-Mail-Adresse des Empfängers
++
+Gibt die E-Mail-Adresse oder die Adressen der Person oder der Personen an, die die E-Mail immer erhalten. Trennen Sie mehrere Adressen durch Kommas.
+
+** E-Mail-Betreff
++
+Gibt den Betreff für die Benachrichtigung an.
+
+** E-Mail-Signatur
++
+Gibt die Informationen an, die unten in der E-Mail angezeigt werden, z. B. den Abteilungsnamen.
+
+
+
+

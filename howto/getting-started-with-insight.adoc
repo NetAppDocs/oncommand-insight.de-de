@@ -1,0 +1,23 @@
+---
+permalink: howto/getting-started-with-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Nachdem OnCommand Insight installiert und ordnungsgemäß lizenziert wurde, sollten Sie einige Aufgaben durchführen, um die Umgebung auf die Darstellung der für Sie wichtigen Daten vorzubereiten. 
+---
+= Erste Schritte mit Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem OnCommand Insight installiert und ordnungsgemäß lizenziert wurde, sollten Sie einige Aufgaben durchführen, um die Umgebung auf die Darstellung der für Sie wichtigen Daten vorzubereiten.
+
+In einer typischen Umgebung werden u. a. folgende Aufgaben ausgeführt:
+
+. *Anmerkungen zu Ihren Assets*, um sie für Abfragen und Berichte vorzubereiten. Nützliche erste Annotationen umfassen in der Regel Datacenter, Tiering und Service Level.
+. **Abfragen erstellen**, um wichtige Daten anzuzeigen und bei der Fehlersuche zu helfen
+. *Zuweisen von Anwendungen* und *Geschäftseinheiten* zu Assets
+. *Erstellen von Leistungsrichtlinien* und *Alerts* für Verstöße gegen diese Richtlinien
+. *Erstellen von benutzerdefinierten Dashboards*, um Daten je nach Bedarf oder Benutzerrolle hervorzuheben
+

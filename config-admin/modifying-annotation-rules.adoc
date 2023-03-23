@@ -1,0 +1,38 @@
+---
+permalink: config-admin/modifying-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können eine Anmerkungsregel ändern, um den Namen der Regel, ihre Anmerkung, den Wert der Anmerkung oder die der Regel zugeordnete Abfrage zu ändern. 
+---
+= Anmerkungsregeln ändern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Anmerkungsregel ändern, um den Namen der Regel, ihre Anmerkung, den Wert der Anmerkung oder die mit der Regel verknüpfte Abfrage zu ändern.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web-Benutzeroberfläche an.
+. Klicken Sie auf *Verwalten* und wählen Sie *Anmerkungsregeln*.
++
+Auf der Seite Anmerkungsregeln wird die Liste der vorhandenen Anmerkungsregeln angezeigt.
+
+. Suchen Sie die Regel, die Sie ändern möchten:
++
+** Auf der Seite Anmerkungsregeln können Sie die Anmerkungsregeln filtern, indem Sie einen Wert in das Filterfeld eingeben.
+** Klicken Sie auf eine Seitenzahl, um die Anmerkungsregeln nach Seite zu durchsuchen, wenn mehr Regeln als auf eine Seite passen.
+
+
+. Führen Sie einen der folgenden Schritte aus, um das Dialogfeld *Regel bearbeiten* anzuzeigen:
++
+** Wenn Sie sich auf der Seite Anmerkungsregeln befinden, setzen Sie den Cursor auf die Anmerkungsregel, und klicken Sie auf image:../media/edit-annotation-icon.gif[""].
+** Wenn Sie sich auf einer Bestandsseite befinden, setzen Sie den Cursor auf die Anmerkung, die der Regel zugeordnet ist, setzen Sie den Cursor auf den Namen der Regel, wenn sie angezeigt wird, und klicken Sie dann auf den Namen der Regel.
+
+
+. Nehmen Sie die erforderlichen Änderungen vor und klicken Sie auf *Speichern*.
+

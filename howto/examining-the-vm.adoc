@@ -1,0 +1,20 @@
+---
+permalink: howto/examining-the-vm.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Wählen Sie auf der Landing Page der VM zusätzliche Metriken aus, die die CPU-Auslastung und Speicherauslastung anzeigen und einschließen. Die Diagramme für die CPU- und Speicherauslastung zeigen, dass beide mit fast 100 % ihrer Kapazität arbeiten. So wird uns mitgeteilt, dass das Problem mit dem Exchange Server kein Storage-Problem ist, sondern das Ergebnis der hohen CPU- und Arbeitsspeicherauslastung für VMs und des damit verbunden Arbeitsspeicheraustauschs von I/O auf die Festplatte.' 
+---
+= Untersuchen der VM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wählen Sie auf der Landing Page der VM zusätzliche Metriken aus, die die CPU-Auslastung und Speicherauslastung anzeigen und einschließen. Die Diagramme für die CPU- und Speicherauslastung zeigen, dass beide mit fast 100 % ihrer Kapazität arbeiten. So wird uns mitgeteilt, dass das Problem mit dem Exchange Server kein Storage-Problem ist, sondern das Ergebnis der hohen CPU- und Arbeitsspeicherauslastung für VMs und des damit verbunden Arbeitsspeicheraustauschs von I/O auf die Festplatte.
+
+image::../media/travbook-vm.gif[Travbook vm]
+
+Um dieses Problem zu lösen, können Sie nach weiteren ähnlichen Ressourcen suchen. Geben Sie im Eingabedialogfeld zusätzliche Ressourcen „`Node`“ ein, um Metriken für Assets anzuzeigen, die der Exchange VM ähnlich sind. Der Vergleich hilft bei der Identifizierung eines Node, der sich besser für das Hosting des Workloads eignet, falls eine Änderung erforderlich ist.
+
+image::../media/resources-vm.gif[Ressourcen-vm]

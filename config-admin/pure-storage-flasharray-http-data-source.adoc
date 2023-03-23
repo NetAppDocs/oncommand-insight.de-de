@@ -1,0 +1,156 @@
+---
+permalink: config-admin/pure-storage-flasharray-http-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Die Datenquelle von Pure Storage FlashArray \(HTTP\) wird verwendet, um Informationen vom Pure Storage Flash Array zu erfassen. Insight unterstützt sowohl die Bestandsaufnahme als auch die Performance-Sammlung.' 
+---
+= Pure Storage FlashArray Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Datenquelle „Pure Storage FlashArray (HTTP)“ wird verwendet, um Informationen vom Pure Storage Flash Array zu erfassen. Insight unterstützt sowohl die Bestandsaufnahme als auch die Performance-Sammlung.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Inventarinformationen aus der Datenquelle „Pure Storage FlashArray“. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Laufwerk (SSD)
+ a| 
+Festplatte
+
+
+
+ a| 
+Array Erledigen
+ a| 
+Storage
+
+
+
+ a| 
+Controller
+ a| 
+Storage-Node
+
+
+
+ a| 
+Datenmenge
+ a| 
+Datenmenge
+
+
+
+ a| 
+Port
+ a| 
+Port
+
+
+
+ a| 
+LUN-Zuordnung (Host, Host-Gruppe, Ziel-Port)
+ a| 
+Volume Map, Volume Mask
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* IP-Adresse des Storage-Systems
+* Benutzername und Kennwort für das Administratorkonto des Pure Storage-Systems.
+* Port-Anforderung: HTTP/HTTPS 80/443
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+FlashArray Host
+ a| 
+IIP-Adresse oder vollständig qualifizierter Domänenname des FlashArray Management Server
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für den FlashArray Management Server
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort für den FlashArray Management Server
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Verbindungstyp
+ a| 
+Management Server
+
+
+
+ a| 
+TCP-Port
+ a| 
+TCP-Port zur Verbindung mit FlashArray Server (Standard 443 )
+
+
+
+ a| 
+Verbindungs-Timeout (s)
+ a| 
+Verbindungs-Timeout (Standard: 60 Sekunden)
+
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 60 Minuten)
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (Standard: 300 Sekunden)
+
+|===

@@ -1,0 +1,46 @@
+---
+permalink: howto/servicenow-integration-set-up-user.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie müssen einen ServiceNow-Benutzer einrichten, damit Insight eine Verbindung zu den Daten herstellen und diese synchronisieren kann. 
+---
+= ServiceNow Integration - Benutzer einrichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen einen ServiceNow-Benutzer einrichten, damit Insight eine Verbindung zu den Daten herstellen und diese synchronisieren kann.
+
+
+
+== Über diese Aufgabe
+
+
+
+== Schritte
+
+. Erstellen Sie ein Servicekonto in ServiceNow. Melden Sie sich bei ServiceNow an und navigieren Sie zu *Systemsicherheit* > *Benutzer und Gruppen* > *Benutzer*. Klicken Sie auf *Neu*.
+. Geben Sie einen Benutzernamen ein. In diesem Beispiel verwenden wir „`OCI2SNOW`“ als Integrationsbenutzer. Geben Sie ein Kennwort für diesen Benutzer ein.
++
+[NOTE]
+====
+In dieser Anleitung verwenden wir in der gesamten Dokumentation einen Servicekontobenutzer namens „`OCI2SNOW`“`. Sie können ein anderes Servicekonto verwenden, aber stellen Sie sicher, dass es in Ihrer gesamten Umgebung konsistent ist.
+
+====
+. Klicken Sie mit der rechten Maustaste auf die Menüleiste und klicken Sie auf *Speichern*. Dadurch können Sie auf diesem Benutzer bleiben, um Rollen hinzuzufügen.
+. Klicken Sie auf *Bearbeiten* und fügen Sie diesem Benutzer folgende Rollen hinzu:
++
+** Asset
+** Import_Transformator
+** Rest_Service
+
+
+. Klicken Sie Auf *Speichern*.
+. Dieser Benutzer muss zu OnCommand Insight hinzugefügt werden. Melden Sie sich bei Insight als Benutzer mit Administratorberechtigungen an.
+. Navigieren Sie zu *Admin* > *Setup* und klicken Sie auf den Reiter *Users*.
+. Klicken Sie auf die Schaltfläche *Aktionen* und wählen Sie *Benutzer hinzufügen*.
+. Geben Sie als Name „`OCI2SNOW`“ ein. Wenn Sie oben einen anderen Benutzernamen verwendet haben, geben Sie diesen Namen hier ein. Geben Sie dasselbe Kennwort ein, das Sie für den Benutzer ServiceNow oben verwendet haben. Sie können das E-Mail-Feld leer lassen.
+. Weisen Sie diesem Benutzer die Rolle *User* zu. Klicken Sie Auf *Speichern*.
+

@@ -1,0 +1,32 @@
+---
+permalink: dwh/data-warehouse-software-components.html 
+sidebar: sidebar 
+keywords:  
+summary: Das OnCommand Insight Data Warehouse umfasst mehrere Softwarekomponenten. 
+---
+= Softwarekomponenten von Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das OnCommand Insight Data Warehouse umfasst mehrere Softwarekomponenten.
+
+* MySQL Datenbank
++
+Das Back-End-Repository für Datentabellen
+
+* IBM Cognos
++
+Die Reporting Engine für OnCommand Insight
+
+* Apache Derby Database
++
+Wird zum Speichern von Cognos-Konfiguration und -Inhalt verwendet
+
+* WildFly
++
+Der Java Enterprise-Anwendungsserver, der OnCommand Insight-Komponenten hostet
+
+

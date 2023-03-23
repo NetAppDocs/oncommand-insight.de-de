@@ -1,0 +1,20 @@
+---
+permalink: reporting/managing-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight bietet Berichtsgruppierungen in Form von dynamischen Dashboards, um unterschiedliche Ansichten von Daten zu einem bestimmten Managementanliegen anzuzeigen. Durch Klicken auf Elemente in den Dashboards werden detailliertere Informationen angezeigt. 
+---
+= Managen Von Dashboards
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight bietet Berichtsgruppierungen in Form von dynamischen Dashboards, um unterschiedliche Ansichten von Daten zu einem bestimmten Managementanliegen anzuzeigen. Durch Klicken auf Elemente in den Dashboards werden detailliertere Informationen angezeigt.
+
+Über diese Aufgabe die Dashboards gruppieren Informationen zu einem Interessensgebiet und bieten folgende dynamische Funktionen:
+
+Klicken Sie auf Diagrammelemente, um Diagramme mit weiteren Details für die ausgewählten Elemente neu zu erstellen. Links zu anderen Berichten und ausführlichere Informationen. Wenn Sie über ein bevorzugtes Dashboard verfügen, können Sie eine Registerkarte dafür hinzufügen, indem Sie eine der folgenden Methoden verwenden:
+
+Fügen Sie die Registerkarte Dashboard aus den öffentlichen Ordnern hinzu. Fügen Sie die Registerkarte Dashboard in den Benutzereinstellungen hinzu.

@@ -1,0 +1,63 @@
+---
+permalink: howto/custom-dashboard-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit Dashboard-Variablen können Sie Daten schnell und einfach über mehrere Widgets auf einem Dashboard filtern. 
+---
+= Dashboard-Variablen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Dashboard-Variablen können Sie Daten schnell und einfach über mehrere Widgets auf einem Dashboard filtern.
+
+
+
+== Bevor Sie beginnen
+
+Dieses Beispiel erfordert, dass die Annotation *City* (auch City-Attribut genannt) auf mehreren Speicheranlagen festgelegt wird.
+
+Für beste Ergebnisse, stellen Sie verschiedene Städte auf verschiedenen Lagern.
+
+
+
+== Über diese Aufgabe
+
+Variablen bieten eine schnelle und einfache Möglichkeit, die in einigen oder allen Widgets auf einem benutzerdefinierten Dashboard angezeigten Daten zu filtern. Die folgenden Schritte führen Sie zum Erstellen von Widgets, die Variablen verwenden, und zeigen Ihnen, wie Sie sie auf Ihrem Dashboard verwenden.
+
+
+
+== Schritte
+
+. Melden Sie sich bei Insight als Benutzer mit administrativen Berechtigungen an
+. Klicken Sie auf *Dashboards* > *+Neues Dashboard*.
+. Bevor wir Widgets hinzufügen, möchten wir die Variablen definieren, die wir zum Filtern der Dashboard-Daten verwenden. Klicken Sie auf die Schaltfläche *Variable*.
++
+Die Liste der Attribute wird angezeigt.
+
+. Nehmen wir an, wir möchten das Dashboard so einstellen, dass es nach Stadt gefiltert wird. Wählen Sie das Attribut *City* aus der Liste aus.
++
+Das Feld City Variable für den Wert von USD wird erstellt und dem Dashboard hinzugefügt.
+
+. Als Nächstes müssen wir unseren Widgets sagen, dass sie diese Variable verwenden sollen. Die einfachste Möglichkeit, dies zu veranschaulichen ist, eine Tabelle Widget mit der Stadt Spalte hinzufügen. Klicken Sie auf die Schaltfläche *Widget* und wählen Sie das Widget *Tabelle* aus.
+. Fügen Sie zuerst das Feld Stadt zur Tabelle hinzu, indem Sie es aus der Spaltenauswahl auswählen image:../media/column-picker-button.gif[""] Schaltfläche.
++
+Stadt ist ein Attribut vom Typ Liste, daher enthält es eine Liste mit zuvor definierten Auswahlmöglichkeiten. Sie können auch Text-, Boolesche oder Datumstyp-Attribute auswählen.
+
+. Klicken Sie dann auf die Schaltfläche *Filtern nach +* und wählen Sie *Stadt*.
+. Klicken Sie auf *any*, um die möglichen Filteroptionen für Stadt anzuzeigen. Beachten Sie, dass die Liste jetzt neben allen zuvor verfügbaren Optionen „`` City“ an der Spitze enthält. Wählen Sie „`` City“, um diese Dashboard-Variable zu verwenden.
++
+Die Option „``“ wird nur hier angezeigt, wenn sie zuvor auf der Dashboard-Hauptseite definiert wurde. Wenn die Variable nicht zuvor definiert wurde, werden nur die vorhandenen Auswahlmöglichkeiten für den Filter angezeigt. Nur Variablen, die für den ausgewählten Attributtyp gelten, werden in der Dropdown-Liste für diesen Filter angezeigt.
+
++
+image::../media/customdash-variablecitydialog2.gif[Customdash variablecitydialog2]
+
+. *Speichern* das Widget.
+. Klicken Sie auf der Dashboard-Seite auf *any* neben der Variablen für die Stadt, und wählen Sie die Stadt oder die Städte aus, die Sie sehen möchten.
++
+Ihr Tabellen-Widget wird aktualisiert, um nur die ausgewählten Städte anzuzeigen. Sie können die Werte in der Variablen „Stadt USD“ beliebig ändern. Alle Widgets auf Ihrem Dashboard, die auf die Variable „Stadt USD“ eingestellt sind, werden automatisch aktualisiert, sodass nur die Daten für die ausgewählten Werte angezeigt werden.
+
+. Achten Sie darauf, Ihr Dashboard zu speichern, wenn Sie es so konfiguriert haben, wie Sie es möchten.
+

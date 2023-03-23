@@ -1,0 +1,35 @@
+---
+permalink: config-admin/controlling-data-source-polling.html 
+sidebar: sidebar 
+keywords:  
+summary: Nachdem Sie eine Änderung an einer Datenquelle vorgenommen haben, möchten Sie möglicherweise, dass diese sofort abgefragt wird, um Ihre Änderungen zu überprüfen, oder Sie möchten die Datenerfassung in einer Datenquelle für einen, drei oder fünf Tage verschieben, während Sie an einem Problem arbeiten. 
+---
+= Steuerung der Datenquellabfrage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie eine Änderung an einer Datenquelle vorgenommen haben, möchten Sie möglicherweise, dass diese sofort abgefragt wird, um Ihre Änderungen zu überprüfen, oder Sie möchten die Datenerfassung in einer Datenquelle für einen, drei oder fünf Tage verschieben, während Sie an einem Problem arbeiten.
+
+
+
+== Schritte
+
+. Klicken Sie auf *Admin* und navigieren Sie zur Ansicht der Datenquellliste
+. Wählen Sie die Datenquelle aus, für die Sie die Abfrage steuern möchten.
+. Klicken Sie auf den Link Name der Datenquelle.
+. Überprüfen Sie auf der Seite Datenquellenzusammenfassung die Informationen, und klicken Sie auf eine der folgenden beiden Abfrageoptionen:
++
+** *Noch einmal* um die Datenquelle zu zwingen, Daten sofort zu sammeln.
+** *Verschieben* und wählen Sie die Länge der Wahlverzögerung von 3, 7 oder 30 Tagen.
+
+
+
+
+
+
+== Nachdem Sie fertig sind
+
+Wenn Sie die Datenerfassung auf eine Datenquelle verschoben haben und die Sammlung neu starten möchten, klicken Sie auf der Übersichtsseite auf *Fortsetzen*.

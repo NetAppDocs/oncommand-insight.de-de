@@ -1,0 +1,44 @@
+---
+permalink: howto/primary-and-secondary-axis-explained.html 
+sidebar: sidebar 
+keywords:  
+summary: Die sekundäre Achse erleichtert die Anzeige von Daten aus zwei verschiedenen Wertegruppen, die verschiedene Maßeinheiten verwenden. 
+---
+= Primäre und sekundäre Achse erklärt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die sekundäre Achse erleichtert die Anzeige von Daten aus zwei verschiedenen Wertegruppen, die verschiedene Maßeinheiten verwenden.
+
+
+
+== Über diese Aufgabe
+
+Verschiedene Metriken verwenden unterschiedliche Maßeinheiten für die Daten, die sie in einem Diagramm erfassen. Wenn wir beispielsweise IOPS betrachten, entspricht die Maßeinheit der Anzahl der I/O-Operationen pro Sekunde (I/O/s), während die Latenz lediglich ein Maß an Zeit ist (Millisekunden, Mikrosekunden, Sekunden usw.). Wenn Sie beide Metriken auf einem einzigen Liniendiagramm mit einem einzelnen Satz A-Werte für die Y-Achse angeben, werden die Latenzzahlen (normalerweise wenige Millisekunden) im selben Maßstab mit den IOPS (normalerweise sind Tausende) dargestellt und die Latenzzeile geht bei diesem Maßstab verloren.
+
+Es ist jedoch möglich, beide Datensätze auf einem einzigen aussagekräftigen Diagramm zu grafisch zu gestalten, indem eine Maßeinheit auf der primären (linken) Y-Achse und die andere Maßeinheit auf der sekundären (rechten) Y-Achse eingestellt wird. Jede Metrik wird im eigenen Maßstab dokumentiert.
+
+
+
+== Schritte
+
+. Erstellen oder Öffnen eines Dashboards. Fügen Sie dem Dashboard ein Widget *Liniendiagramm*, *Spline Chart*, *Flächendiagramm* oder *gestapeltes Flächendiagramm* hinzu.
+. Wählen Sie einen Asset-Typ (z. B. *Storage*) aus und wählen Sie für Ihre erste Metrik *IOPS - Total*. Stellen Sie Ihre gewünschten Filter ein, und wählen Sie ggf. eine Roll-up-Methode aus.
++
+Die IOPS-Linie wird auf dem Diagramm angezeigt, wobei ihre Skalierung auf der linken Seite dargestellt ist.
+
+. Klicken Sie auf *+Add*, um eine zweite Zeile zum Diagramm hinzuzufügen. Wählen Sie für diese Zeile *Latency - Total* für die Metrik.
++
+Beachten Sie, dass die Linie flach am unteren Rand des Diagramms angezeigt wird. Der Grund dafür ist, dass die Daten im gleichen Maßstab wie die IOPS-Linie gezeichnet werden.
+
+. Wählen Sie in der Latenzabfrage *Y-Achse: Sekundär* aus.
++
+Die Latenzlinie wird jetzt auf eigene Skala gezeichnet, die rechts im Diagramm angezeigt wird.
+
++
+image::../media/secondary-axis-example.gif[Beispiel für eine sekundäre Achse]
+
+

@@ -1,0 +1,26 @@
+---
+permalink: reporting/navigating-to-the-pre-defined-oncommand-insight-reports-and-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie das Reporting-Portal öffnen, können Sie im Ordner Team Content den Informationstyp auswählen, den Sie in den OnCommand Insight-Berichten benötigen. 
+---
+= Navigieren zu vordefinierten OnCommand Insight-Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie das Reporting-Portal öffnen, können Sie im Ordner Team Content den Informationstyp auswählen, den Sie in den OnCommand Insight-Berichten benötigen.
+
+
+
+== Schritte
+
+. Klicken Sie im linken Navigationsbereich auf *Team content* und wählen Sie die Informationskategorie aus, die Sie verwenden möchten.
++
+image::../media/cognos-menu.gif[cognos-Menü]
+
+. Klicken Sie auf *Berichte*, um auf die vordefinierten Berichte zuzugreifen.
+. Klicken Sie auf *erste Schritte*, *Beispiele* oder *Tutorials*, um zu erfahren, wie Sie Berichte erstellen.
+

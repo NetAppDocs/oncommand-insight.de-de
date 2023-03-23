@@ -1,0 +1,56 @@
+---
+permalink: config-admin/what-the-related-assets-sections-enable-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: Im Abschnitt „Verwandte Assets“ können Sie alle Assets anzeigen, die mit der Basisressource in Verbindung stehen. Jede zugehörige Anlage wird zusammen mit den zugehörigen Statistiken für die Anlage in einer Tabelle angezeigt. Sie können die Asset-Informationen exportieren, die Asset-Statistiken in den Leistungsdiagrammen der Expertenansicht anzeigen oder ein Diagramm anzeigen, in dem nur Statistiken für verwandte Assets angezeigt werden. 
+---
+= Verwenden des Abschnitts „Zugehörige Assets“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Abschnitt „Verwandte Assets“ können Sie alle Assets anzeigen, die mit der Basisressource in Verbindung stehen. Jede zugehörige Anlage wird zusammen mit den zugehörigen Statistiken für die Anlage in einer Tabelle angezeigt. Sie können die Asset-Informationen exportieren, die Asset-Statistiken in den Leistungsdiagrammen der Expertenansicht anzeigen oder ein Diagramm anzeigen, in dem nur Statistiken für verwandte Assets angezeigt werden.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Suchen Sie eine Asset-Seite, indem Sie eine der folgenden Aktionen ausführen:
++
+** Klicken Sie in der Insight-Symbolleiste auf image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]Geben Sie den Namen des Assets ein, und wählen Sie das Asset aus der Liste aus.
+** Klicken Sie auf *Dashboards*, wählen Sie *Assets Dashboard*, suchen Sie einen Asset-Namen und klicken Sie darauf. Die Seite Anlage wird angezeigt.
+
+
+. So steuern Sie, wie Assets in der Tabelle angezeigt werden:
++
+** Klicken Sie auf den Namen einer Anlage, um die zugehörige Anlagenseite anzuzeigen.
+** Verwenden Sie das Feld *Filter*, um nur bestimmte Assets anzuzeigen.
+** Klicken Sie auf eine Seitenzahl, um die Assets nach Seite zu durchsuchen, wenn die Tabelle mehr als fünf Elemente enthält.
+** Ändern Sie die Sortierreihenfolge der Spalten in einer Tabelle entweder aufsteigend (Aufwärtspfeil) oder absteigend (Abwärtspfeil), indem Sie auf den Pfeil in der Spaltenüberschrift klicken.
+** Fügen Sie einem Leistungsdiagramm im Abschnitt „Expertenansicht“ eine zugehörige Ressource hinzu, indem Sie den Mauszeiger über die zugehörige Ressource bewegen und auf klicken image:../media/add-to-expert-view-graph.gif[""].
+
+
+. So exportieren Sie die in der Tabelle angezeigten Informationen in ein `.CSV` Datei:
++
+.. Klicken Sie Auf image:../media/export-to-csv.gif[""].
+.. Klicken Sie auf *Öffnen mit* und dann auf *OK*, um die Datei mit Microsoft Excel zu öffnen und an einem bestimmten Speicherort zu speichern, oder klicken Sie auf *Datei speichern* und dann auf *OK*, um die Datei in Ihrem Download-Ordner zu speichern.
++
+Alle Objektattribute für die aktuell zur Anzeige ausgewählten Spalten werden in die Datei exportiert. Nur die Attribute für die angezeigten Spalten werden exportiert. Beachten Sie, dass nur die ersten 10,000 Zeilen der Tabelle exportiert werden.
+
+
+
+. Klicken Sie auf, um die zugehörigen Anlageninformationen in einem Diagramm unter der Tabelle anzuzeigen image:../media/show-as-chart.gif[""] Und führen Sie einen der folgenden Schritte aus:
++
+** Klicken Sie auf *Lesen*,*Schreiben* oder *Gesamt*, um die angezeigten metrischen Daten zu ändern. *Total* ist die Standardeinstellung.
+** Klicken Sie Auf image:../media/pencil-icon-landing-page-be.gif[""] Um eine andere Metrik auszuwählen.
+** Klicken Sie Auf image:../media/change-chart-type-icon.gif[""] Um den Diagrammtyp zu ändern. *Liniendiagramm* ist die Standardeinstellung.
+** Bewegen Sie den Mauszeiger über die Datenpunkte im Diagramm, um zu sehen, wie sich der Wert der Metrik im ausgewählten Zeitraum für jedes zugehörige Asset ändert.
+** Klicken Sie in der Diagrammlegende auf ein zubezogenes Asset, um es dem Diagramm hinzuzufügen oder aus diesem zu entfernen.
+** Klicken Sie in der zugehörigen Anlagentabelle auf eine Seitenzahl, um weitere verwandte Assets im Diagramm anzuzeigen.
+** Klicken Sie Auf image:../media/close-chart-icon.gif[""] Um das Diagramm zu schließen.
+
+
+

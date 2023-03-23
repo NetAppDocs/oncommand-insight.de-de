@@ -1,0 +1,48 @@
+---
+permalink: howto/collecting-snmp-integration-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit der integrierten SNMP-Datenquelle können Sie allgemeine SNMP-Daten in OnCommand Insight erfassen. 
+---
+= Erfassen von SNMP-Integrationsdaten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der integrierten SNMP-Datenquelle können Sie allgemeine SNMP-Daten in OnCommand Insight erfassen.
+
+
+
+== Integrationspakete
+
+Die Datenquelle „SNMP Integration“ verwendet ein „`Integration Pack`“, um zu definieren, welche Integrationswerte erfasst werden und welche SNMP-Objekte diese Werte bereitstellen.
+
+Ein Integration Pack besteht aus:
+
+* Eine JSON-Konfigurationsdatei (Integration.json), die die Integration von Nutzlastinhalten in Bezug auf SNMP-Objekte eines bestimmten Gerätetyps (Switch, Router usw.) definiert.
+* Eine Liste der MIB-Dateien, die das Integrationspaket abhängig ist.
+
+
+Ein Integrationspaket kann mehrere Datentypen definieren. Wenn Sie beispielsweise einen RHEL-Host integrieren, kann ein Datentyp für allgemeine Systeminformationen wie Uptime, Anzahl der Benutzer und Anzahl der laufenden Prozesse definiert werden. Dadurch kann ein zweiter Datentyp für die Speichernutzung und die Auslastung des Dateisystems definiert werden. Im Allgemeinen muss jeder Datentyp „`flat`“ sein und darf keine verschachtelten Daten enthalten.
+
+Ein einzelnes Integrationspaket sollte nicht mehr als 24 Datentypen definieren. Insight begrenzt die Menge der gesammelten Integrationsdaten. Der Versuch, mehr als 24 Berichte über einen Zeitraum von einer Minute aufzunehmen, führt zu einem Ratenfehler.
+
+Die Namen für Integrationstypen müssen die folgenden Regeln einhalten:
+
+* Der Name darf nicht mit den folgenden Zeichen beginnen: _, - oder,+
+* Der Name darf die folgenden Zeichen nicht enthalten: #, \, /, *, ?, „, <, >, ' , `,
+* Darf nicht länger als 100 UTF-8-kodierte Bytes sein
+* Kann nicht benannt werden. Oder ..
+
+
+
+
+== Integrationsdateiformat
+
+Ein Integrationspaket ist eine ZIP-Datei, die eine JSON-Konfigurationsdatei (Integration.json) enthält, die den Inhalt der Integrations-Nutzdaten in Bezug auf SNMP-Objekte definiert. Es enthält auch einen MIBS-Ordner, der alle MIB-Dateien und ihre MIB-Abhängigkeiten enthält.
+
+Der `integration.json` Die Datei muss auf der obersten Ebene der ZIP-Datei vorhanden sein und die MIB-Dateien müssen im Unterverzeichnis „Resources/mibs“ innerhalb der ZIP-Datei vorhanden sein. Die ZIP-Datei kann auch Dateien enthalten, wie z.B. eine "readme.txt", wenn gewünscht. Ein Beispiel für die Integration ZIP-Struktur ist:
+
+image::../media/integration-zip.gif[Integration zip]

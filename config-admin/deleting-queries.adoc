@@ -1,0 +1,30 @@
+---
+permalink: config-admin/deleting-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Abfragen löschen, wenn sie keine nützlichen Informationen über Ihre Assets mehr sammeln. Eine Abfrage kann nicht gelöscht werden, wenn sie in einer Anmerkungsregel verwendet wird. 
+---
+= Abfragen werden gelöscht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Abfragen löschen, wenn sie keine nützlichen Informationen über Ihre Assets mehr sammeln. Eine Abfrage kann nicht gelöscht werden, wenn sie in einer Anmerkungsregel verwendet wird.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der Insight Web-Benutzeroberfläche an.
+. Klicken Sie auf *Abfragen* und wählen Sie *Alle Anfragen anzeigen*.
++
+Die Seite Abfragen wird angezeigt.
+
+. Setzen Sie den Cursor auf die Abfrage, die Sie löschen möchten, und klicken Sie auf image:../media/trash-can-query.gif[""].
++
+Es wird eine Bestätigungsmeldung angezeigt, in der Sie gefragt werden, ob Sie die Abfrage löschen möchten.
+
+. Klicken Sie auf *OK*.
+

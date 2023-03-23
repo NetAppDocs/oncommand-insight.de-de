@@ -1,0 +1,101 @@
+---
+permalink: config-admin/managing-security-on-an-rau.html 
+sidebar: sidebar 
+keywords: rekey 
+summary: Mit dem Tool securityadmin können Sie die Sicherheitsoptionen auf raus verwalten. Möglicherweise müssen Sie eine Vault-Konfiguration sichern oder wiederherstellen, Verschlüsselungsschlüssel ändern oder Kennwörter für die Erfassungseinheiten aktualisieren. 
+---
+= Verwaltung der Sicherheit auf einer rau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der `securityadmin` Mit dem Tool können Sie Sicherheitsoptionen auf raus verwalten. Möglicherweise müssen Sie eine Vault-Konfiguration sichern oder wiederherstellen, Verschlüsselungsschlüssel ändern oder Kennwörter für die Erfassungseinheiten aktualisieren.
+
+
+
+== Über diese Aufgabe
+
+Sie verwenden das `securityadmin` Tool zur Verwaltung der Sicherheit:
+
+* Fenster – `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat`
+* Linux `/bin/oci-securityadmin.sh`
+
+
+Ein Szenario für die Aktualisierung der Sicherheitskonfiguration für DIE LAU, rau, ist die Aktualisierung des Benutzerpassworts für die 'Erfassung', wenn das Passwort für diesen Benutzer auf dem Server geändert wurde. Für die Kommunikation mit dem Server verwenden alle RAUS und DIE LAU dasselbe Passwort wie das des Benutzers „Acquisition“ des Servers.
+
+[NOTE]
+====
+
+====
+Der Benutzer „Acquisition“ ist nur auf dem Insight-Server vorhanden. Die rau oder LAU melden sich als dieser Benutzer an, wenn sie eine Verbindung zum Server herstellen.
+
+Gehen Sie wie folgt vor, um Sicherheitsoptionen auf einer rau zu verwalten:
+
+
+
+== Schritte
+
+. Führen Sie eine Remote-Anmeldung beim Server durch, auf dem die rau ausgeführt wird
+. Starten Sie das Sicherheitsadministrator-Tool im interaktiven Modus: `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
++
+Das System fordert Anmeldeinformationen an.
+
+. Geben Sie den Benutzernamen und das Kennwort für ein Konto mit „`Admin`“-Anmeldeinformationen ein.
++
+Das System zeigt das Menü für die rau an.
+
++
+** *Backup*
++
+Erstellt eine Sicherungszip-Datei des Tresors, die alle Passwörter und Schlüssel enthält und legt die Datei an einem vom Benutzer angegebenen Speicherort oder an den folgenden Standardstandorten ab:
+
++
+*** Fenster – `C:\Program Files\SANscreen\backup\vault`
+*** Linux `/var/log/netapp/oci/backup/vault`
+
+
+** *Wiederherstellen*
++
+Stellt die Zip-Sicherung des erstellten Tresors wieder her. Nach der Wiederherstellung werden alle Passwörter und Schlüssel zum Zeitpunkt der Backup-Erstellung auf die vorhandenen Werte zurückgesetzt.
+
++
+[NOTE]
+====
+Restore kann verwendet werden, um Passwörter und Schlüssel auf mehreren Servern zu synchronisieren, zum Beispiel: - Verschlüsselungsschlüssel auf einem Server ändern - Erstellen einer Sicherung des Tresors - Wiederherstellen der Vault-Sicherung auf dem zweiten Server
+
++
+
+====
+** *Verschlüsselungsschlüssel Ändern*
++
+Ändern Sie die rau-Verschlüsselungsschlüssel, die zum Verschlüsseln oder Entschlüsseln von Gerätekennwörtern verwendet werden.
+
++
+[NOTE]
+====
+Wenn Sie die Verschlüsselungsschlüssel ändern, sollten Sie Ihre neue Sicherheitskonfiguration sichern, damit Sie sie nach einem Upgrade oder einer Installation wiederherstellen können.
+
+====
+** *Passwort Aktualisieren*
++
+Passwort für 'Acquisition'-Benutzerkonto ändern.
+
++
+[NOTE]
+====
+Einige Konten müssen synchronisiert werden, wenn Passwörter geändert werden. Wenn Sie beispielsweise das Passwort für den Benutzer „Acquisition“ auf dem Server ändern, müssen Sie das Kennwort für den Benutzer „Acquisition“ auf DER LAU, rau und DWH ändern, damit es übereinstimmt. Wenn Sie Kennwörter ändern, sollten Sie außerdem Ihre neue Sicherheitskonfiguration sichern, damit Sie sie nach einem Upgrade oder einer Installation wiederherstellen können.
+
+====
+** *Auf die Standardeinstellungen zurücksetzen*
++
+Setzt die Verschlüsselungsschlüssel und Passwörter auf die Standardwerte zurück. Standardwerte sind die Werte, die während der Installation angegeben werden.
+
+** *Ausgang*
++
+Beenden Sie das `securityadmin` Werkzeug.
+
+
+
+

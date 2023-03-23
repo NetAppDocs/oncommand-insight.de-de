@@ -1,0 +1,27 @@
+---
+permalink: config-admin/deleting-an-application.html 
+sidebar: sidebar 
+keywords:  
+summary: Eine Applikation kann gelöscht werden, wenn sie in Ihrer Umgebung keinen Bedarf mehr erfüllt. 
+---
+= Löschen von Anwendungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Applikation kann gelöscht werden, wenn sie in Ihrer Umgebung keinen Bedarf mehr erfüllt.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der Web-Benutzeroberfläche von Insight an.
+. Klicken Sie auf *Verwalten* und wählen Sie *Anwendungen*.
+. Setzen Sie den Cursor auf die Anwendung, die Sie löschen möchten, und klicken Sie auf image:../media/trash-can-query.gif[""].
++
+Es wird ein Bestätigungsdialogfeld angezeigt, in dem Sie gefragt werden, ob Sie die Anwendung löschen möchten.
+
+. Klicken Sie auf *OK*.
+

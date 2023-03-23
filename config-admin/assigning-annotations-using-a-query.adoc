@@ -1,0 +1,55 @@
+---
+permalink: config-admin/assigning-annotations-using-a-query.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: Durch das Zuweisen einer Anmerkung zu einer Gruppe von Assets können Sie diese zugehörigen Assets leichter identifizieren oder in Abfragen oder Dashboards verwenden. 
+---
+= Zuweisen von Anmerkungen zu mehreren Anlagen mithilfe einer Abfrage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch das Zuweisen einer Anmerkung zu einer Gruppe von Assets können Sie diese zugehörigen Assets leichter identifizieren oder in Abfragen oder Dashboards verwenden.
+
+
+
+== Bevor Sie beginnen
+
+Anmerkungen, die Sie Anlagen zuweisen möchten, müssen zuvor erstellt worden sein.
+
+
+
+== Über diese Aufgabe
+
+Sie können das Zuweisen einer Anmerkung zu mehreren Anlagen vereinfachen, indem Sie eine Abfrage verwenden. Wenn Sie beispielsweise allen Arrays an einem bestimmten Standort im Datacenter eine benutzerdefinierte Adressenanmerkung zuweisen möchten,
+
+
+
+== Schritte
+
+. Erstellen Sie eine neue Abfrage, um die Assets zu identifizieren, denen Sie eine Anmerkung zuweisen möchten. Klicken Sie Auf *Abfragen* > *+Neue Abfrage*.
+. Wählen Sie in der Dropdown-Liste *Suchen nach...* *Speicher*. Sie können Filter festlegen, um die Liste der angezeigten Speicher weiter einzugrenzen.
+. Wählen Sie in der angezeigten Liste der Speicher einen oder mehrere Speicher aus, indem Sie auf das Kontrollkästchen neben dem Speichernamen klicken. Sie können auch alle angezeigten Speicher auswählen, indem Sie oben in der Liste auf das Hauptfeld klicken.
+. Wenn Sie alle gewünschten Speicher ausgewählt haben, klicken Sie auf *actions* > *Anmerkung bearbeiten*.
++
+Das Dialogfeld Anmerkung hinzufügen wird angezeigt.
+
+. Wählen Sie die *Anmerkung* und *Wert* aus, die Sie den Speichern zuweisen möchten, und klicken Sie auf *Speichern*.
++
+Wenn Sie die Spalte für diese Anmerkung anzeigen, wird sie auf allen ausgewählten Speichern angezeigt.
+
+. Sie können die Anmerkung jetzt verwenden, um nach Speichern in einem Widget oder einer Abfrage zu filtern. In einem Widget können Sie Folgendes tun:
++
+.. Erstellen Sie ein Dashboard oder öffnen Sie ein vorhandenes. Fügen Sie eine *Variable* hinzu und wählen Sie die Anmerkung aus, die Sie auf den obigen Speichern festgelegt haben. Die Variable wird dem Dashboard hinzugefügt.
+.. Klicken Sie in dem neu hinzugefügten Variablenfeld auf *any* und geben Sie den entsprechenden Wert ein, nach dem gefiltert werden soll. Klicken Sie auf das Häkchen, um den Variablenwert zu speichern.
+.. Widget hinzufügen. Klicken Sie in der Abfrage des Widgets auf die Schaltfläche**Filter by****+**und wählen Sie die entsprechende Anmerkung aus der Liste aus.
+.. Klicken Sie auf *any* und wählen Sie die oben hinzugefügte Anmerkungsvariable aus. Die von Ihnen erstellten Variablen beginnen mit „``“ und werden in der Dropdown-Liste angezeigt.
+.. Stellen Sie alle anderen Filter oder Felder, die Sie wünschen, dann klicken Sie *Speichern*, wenn das Widget nach Ihren Wünschen angepasst ist.
+
+
++
+Im Widget auf dem Dashboard werden nur die Daten für die Speicher angezeigt, denen Sie die Anmerkung zugewiesen haben.
+
+

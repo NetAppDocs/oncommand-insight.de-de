@@ -1,0 +1,37 @@
+---
+permalink: config-admin/deleting-inactive-devices.html 
+sidebar: sidebar 
+keywords:  
+summary: Das Löschen inaktiver Geräte hilft dabei, Ihre Daten sauberer und übersichtlicher zu machen. 
+---
+= Inaktive Geräte werden gelöscht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Löschen inaktiver Geräte hilft dabei, Ihre Daten sauberer und übersichtlicher zu machen.
+
+
+
+== Über diese Aufgabe
+
+Gehen Sie wie folgt vor, um inaktive Geräte aus Insight zu löschen:
+
+
+
+== Schritte
+
+. Erstellen Sie eine neue Abfrage oder öffnen Sie eine vorhandene Abfrage.
+. Wählen Sie entweder den Asset-Typ _generic device_, _Host_, _Storage_,_Switch_ oder _Tape_.
+. Fügen Sie einen Filter für *is Active* hinzu und setzen Sie den Filter auf *No*.
++
+In der Ergebnistabelle werden nur nicht aktive Assets angezeigt.
+
+. Wählen Sie die Geräte aus, die Sie löschen möchten.
+. Klicken Sie auf die Schaltfläche *actions* und wählen Sie *inaktive Geräte löschen*.
++
+Ihre inaktiven Geräte werden gelöscht und nicht mehr in Insight angezeigt.
+
+

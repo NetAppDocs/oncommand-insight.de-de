@@ -1,0 +1,32 @@
+---
+permalink: install-windows/verifying-the-extract-transform-and-load-process.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Nach dem Upgrade sollten Sie sicherstellen, dass der Extrahierungs-, Transform- und Load \(ETL\)-Prozess Daten aus den OnCommand Insight-Datenbanken abruft, die Daten transformiert und in die Data Marts speichert.' 
+---
+= Überprüfen der Planung für Extrahieren, Transformieren und Laden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach dem Upgrade sollten Sie sicherstellen, dass der ETL-Prozess (Extrahieren, Transformieren und Laden) Daten aus den OnCommand Insight-Datenbanken abruft, die Daten transformiert und in den Data Marts speichert.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse-Portal unter an `+https://fqdn/dwh+`.
+. Klicken Sie im Navigationsfenster auf der linken Seite auf *Zeitplan*.
+. Klicken Sie auf *Zeitplan bearbeiten*.
+. Wählen Sie *Täglich* oder *wöchentlich* aus der Liste *Typ* aus.
++
+Es wird empfohlen, die Ausführung von ETL einmal pro Tag zu planen.
+
+. Vergewissern Sie sich, dass die ausgewählte Zeit die Zeit ist, zu der der Job ausgeführt werden soll.
++
+Dadurch wird sichergestellt, dass der Build-Job automatisch ausgeführt wird.
+
+. Klicken Sie Auf *Speichern*.
+

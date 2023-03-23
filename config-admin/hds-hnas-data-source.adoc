@@ -1,0 +1,145 @@
+---
+permalink: config-admin/hds-hnas-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Die HDS NAS \(HNAS\)-Datenquelle ist eine Bestands- und Konfigurationsdatenquelle zur Unterstützung der Erkennung von HDS-NAS-Clustern. Insight unterstützt die Erkennung von NFS- und CIFS-Freigaben, von Filesystemen \(Insight Internal Volumes\) und von \(Insight Storage Pools\).' 
+---
+= HDS NAS (HNAS)-Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die HDS NAS (HNAS)-Datenquelle ist eine Bestands- und Konfigurationsdatenquelle, die die Erkennung von HDS-NAS-Clustern unterstützt. Insight unterstützt die Erkennung von NFS- und CIFS-Freigaben, Filesystemen (interne Insight Volumes) und Zeitspannen (Insight Storage Pools).
+
+Diese Datenquelle basiert auf SSH. Daher muss die Erfassungseinheit, die sie hostet, SSH-Sitzungen zu TCP 22 auf dem HNAS selbst oder der Systems Management Unit (SMU) initiieren können, mit der das Cluster verbunden ist.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Bestandsinformationen aus der HNAS-Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Ebene
+ a| 
+Festplattengruppe
+
+
+
+ a| 
+Cluster
+ a| 
+Storage
+
+
+
+ a| 
+Knoten
+ a| 
+Storage-Node
+
+
+
+ a| 
+Span
+ a| 
+Storage-Pool
+
+
+
+ a| 
+File-System
+ a| 
+Internes Volumen
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+Die folgenden Anforderungen gelten für die Konfiguration und Verwendung dieser Datenquelle:
+
+* IP-Adresse des Geräts
+* Port 22, SSH-Protokoll
+* Benutzername und Passwort - Berechtigungsebene: Supervisor
+* HINWEIS: Dieser Datensammler basiert auf SSH. Daher muss die AU, die sie hostet, SSH-Sitzungen zu TCP 22 auf dem HNAS selbst oder der Systems Management Unit (SMU) initiieren können, mit der das Cluster verbunden ist.
+
+
+[NOTE]
+====
+Dieser Datensammler basiert auf SSH, sodass die AU, die sie hostet, SSH-Sitzungen zu TCP 22 auf dem HNAS selbst oder der Systems Management Unit (SMU) initiieren kann, mit der das Cluster verbunden ist.
+
+====
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+HNAS-Host
+ a| 
+IP-Adresse oder vollqualifizierter Domain-Name des HNAS Management Host
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für HNAS CLI
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort, das für HNAS-CLI verwendet wird
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 30 Minuten)
+
+
+
+ a| 
+SSH-Banner-Wartezeit (Sek.)
+ a| 
+SSH Banner Wait Timeout (Standard: 15 Sekunden)
+
+
+
+ a| 
+SSH-Befehlstaste Timeout (Sek.)
+ a| 
+SSH-Befehlszeitlimit (Standard: 30 Sekunden)
+
+|===

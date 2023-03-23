@@ -1,0 +1,16 @@
+---
+permalink: install-windows/missing-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: Für verschiedene OnCommand Insight-Funktionen sind unterschiedliche Lizenzen erforderlich. Die in OnCommand Insight angezeigten Informationen werden von Ihren installierten Lizenzen gesteuert. Informationen über die Funktionen, die von den einzelnen Lizenzen gesteuert werden, finden Sie im Abschnitt OnCommand Insight-Lizenzen. 
+---
+= Fehlende Lizenzen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für verschiedene OnCommand Insight-Funktionen sind unterschiedliche Lizenzen erforderlich. Die in OnCommand Insight angezeigten Informationen werden von Ihren installierten Lizenzen gesteuert. Informationen über die Funktionen, die von den einzelnen Lizenzen gesteuert werden, finden Sie im Abschnitt OnCommand Insight-Lizenzen.
+
+Informationen über die Funktionen, die von den einzelnen Lizenzen gesteuert werden, finden Sie im Abschnitt OnCommand Insight-Lizenzen.

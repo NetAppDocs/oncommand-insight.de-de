@@ -1,0 +1,33 @@
+---
+permalink: config-admin/restarting-the-oncommand-insight-server-or-acquisition-unit.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie den OnCommand Insight-Server neu starten, aktualisieren Sie die Seite, und melden Sie sich erneut beim OnCommand Insight-Portal an. 
+---
+= OnCommand Insight-Server wird neu gestartet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie den OnCommand Insight-Server neu starten, aktualisieren Sie die Seite, und melden Sie sich erneut beim OnCommand Insight-Portal an.
+
+
+
+== Über diese Aufgabe
+
+[NOTE]
+====
+Beide Optionen sollten nur auf Anfrage durch den NetApp Kunden-Support genutzt werden. Vor dem Neustart erfolgt keine Bestätigung.
+
+====
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin* und wählen Sie *Fehlerbehebung*.
+. Klicken Sie unten auf der Seite im Bereich Weitere Aufgaben auf den Link *Erweiterte Fehlerbehebung*.
+. Klicken Sie auf der nächsten Seite im Menü Erweitert auf die Registerkarte *Aktionen*.
+. Klicken Sie Auf *Server Neu Starten*.
+

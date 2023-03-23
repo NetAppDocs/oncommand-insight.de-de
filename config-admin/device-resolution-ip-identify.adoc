@@ -1,0 +1,16 @@
+---
+permalink: config-admin/device-resolution-ip-identify.html 
+sidebar: sidebar 
+keywords:  
+summary: Auf dem Bildschirm IP-Identifizierung werden alle iSCSI- und CIFS- oder NFS-Freigaben angezeigt, die durch die automatische Geräteauflösung oder durch manuelle Geräteauflösung identifiziert wurden. Auch nicht identifizierte Geräte werden angezeigt. Der Bildschirm enthält die IP-Adresse, den Namen, den Status, den iSCSI-Knoten und den Freigabenamen für Geräte. Der Prozentsatz der erfolgreich identifizierten Geräte wird ebenfalls angezeigt. 
+---
+= IP-Geräteauflösung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf dem Bildschirm IP-Identifizierung werden alle iSCSI- und CIFS- oder NFS-Freigaben angezeigt, die durch die automatische Geräteauflösung oder durch manuelle Geräteauflösung identifiziert wurden. Auch nicht identifizierte Geräte werden angezeigt. Der Bildschirm enthält die IP-Adresse, den Namen, den Status, den iSCSI-Knoten und den Freigabenamen für Geräte. Der Prozentsatz der erfolgreich identifizierten Geräte wird ebenfalls angezeigt.
+
+image::../media/ipidentify.gif[Ipidentiffy]

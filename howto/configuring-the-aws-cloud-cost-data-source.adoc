@@ -1,0 +1,50 @@
+---
+permalink: howto/configuring-the-aws-cloud-cost-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie konfigurieren die AWS Cloud-Kostendatenquelle wie für jede Insight Datenquelle. 
+---
+= Konfiguration der AWS Cloud Cost-Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie konfigurieren die AWS Cloud-Kostendatenquelle wie für jede Insight Datenquelle.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen Ihr Amazon AWS Konto bereits eingerichtet und auf die Datenerfassung bei Insight vorbereitet haben und über die folgenden Informationen verfügen.
+
+* Berichtsname
+* S3-Bucket-Name
+* AWS Region, in der sich der S3-Bucket befindet.
+* Präfix für Berichtspfad
+
+
+
+
+== Über diese Aufgabe
+
+Sobald Ihr AWS Konto bereit ist und über die entsprechenden Berechtigungen verfügt, können Sie OnCommand Insight so konfigurieren, dass Daten für den Rechnungsbericht erfasst werden.
+
+[NOTE]
+====
+Sie müssen für jeden abrechnungsfähigen Benutzer/Konto, von dem Sie Rechnungsdaten abrufen möchten, eine separate AWS Cloud-Kostendatenquelle hinzufügen.
+
+====
+
+
+== Schritte
+
+. Melden Sie sich als Administrator bei OnCommand Insight an.
+. Klicken Sie auf *Admin* > *Data Sources*, um die Seite Insight Data Source zu öffnen.
+. Klicken Sie auf *+Add*, um eine neue Datenquelle hinzuzufügen. Wählen Sie *Amazon* und dann *AWS Cloud Cost* aus.
+. Geben Sie im Abschnitt *Konfiguration* den Namen des Berichts_, _S3 Bucket_ Name, _S3 Region_ (muss die Region sein, in der sich der S3-Bucket befindet), _Report path PREFIX_, _AWS IAM Access Key ID_ und _AWS IAM Secret Access Key_ ein. Wenn Sie sich über diese Fragen nicht sicher sind, wenden Sie sich an Ihren Cloud-Provider oder AWS-Kontoinhaber.
+. Aktivieren Sie das Kontrollkästchen, um zu überprüfen, ob AWS Sie für API-Anfragen und Datentransfers, die von der Insight Datenquelle vorgenommen werden, in Rechnung stellt.
+. Geben Sie unter *Advanced Configuration* das HTTP-Verbindungs- und Socket-Timeout ein. Der Standardwert beträgt 300 Sekunden.
+. Klicken Sie Auf *Speichern*.
+

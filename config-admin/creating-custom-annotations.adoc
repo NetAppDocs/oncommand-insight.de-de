@@ -1,0 +1,105 @@
+---
+permalink: config-admin/creating-custom-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Mithilfe von Annotationen können Sie benutzerdefinierte geschäftsspezifische Daten hinzufügen, die auf die Anforderungen Ihres Unternehmens an Assets abgestimmt sind. OnCommand Insight bietet zwar eine Reihe von Standardanmerkungen, aber Sie können feststellen, dass Sie Daten auf andere Weise anzeigen möchten. Die Daten in benutzerdefinierten Annotationen ergänzen die bereits erfassten Gerätedaten wie Switch-Hersteller, Anzahl Ports und Leistungsstatistiken. Die mit Annotationen hinzugefügten Daten werden von Insight nicht erkannt. 
+---
+= Erstellen benutzerdefinierter Anmerkungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Annotationen können Sie benutzerdefinierte geschäftsspezifische Daten hinzufügen, die auf die Anforderungen Ihres Unternehmens an Assets abgestimmt sind. OnCommand Insight bietet zwar eine Reihe von Standardanmerkungen, aber Sie können feststellen, dass Sie Daten auf andere Weise anzeigen möchten. Die Daten in benutzerdefinierten Annotationen ergänzen die bereits erfassten Gerätedaten wie Switch-Hersteller, Anzahl Ports und Leistungsstatistiken. Die mit Annotationen hinzugefügten Daten werden von Insight nicht erkannt.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der Web-Benutzeroberfläche von Insight an.
+. Klicken Sie auf *Verwalten* und wählen Sie *Anmerkungen*.
++
+Auf der Seite Anmerkungen wird die Liste der Anmerkungen angezeigt.
+
+. Klicken Sie Auf image:../media/add-annotation-icon.gif[""].
++
+Das Dialogfeld *Anmerkung hinzufügen* wird angezeigt.
+
+. Geben Sie einen Namen und eine Beschreibung in die Felder *Name* und *Beschreibung* ein.
++
+Sie können in diese Felder bis zu 255 Zeichen eingeben.
+
++
+[NOTE]
+====
+Beschriftungsnamen, die mit einem Punkt beginnen oder enden. Werden nicht unterstützt.
+
+====
+. Klicken Sie auf *Typ* und wählen Sie dann eine der folgenden Optionen aus, die den in dieser Anmerkung zulässigen Datentyp darstellt:
++
+** Boolesch
++
+Dadurch wird eine Dropdown-Liste mit den Optionen „Ja“ und „Nein“ erstellt Die Anmerkung „`Direct Attached`“ ist z. B. Boolesch.
+
+** Datum
++
+Dadurch wird ein Feld erstellt, das ein Datum enthält. Wenn es sich bei der Anmerkung um ein Datum handelt, wählen Sie diese Option aus.
+
+** Liste
++
+Dadurch können folgende Elemente erstellt werden:
+
++
+*** Eine feste Dropdown-Liste
++
+Wenn andere diesem Anmerkungstyp auf einem Gerät zuweisen, können sie der Liste keine weiteren Werte hinzufügen.
+
+*** Eine Liste mit flexiblen Dropdown-Menüs
++
+Wenn Sie beim Erstellen dieser Liste die Option *Neue Werte hinzufügen* auswählen, wenn andere diesen Anmerkungstyp auf einem Gerät zuweisen, können sie der Liste weitere Werte hinzufügen.
+
+
+
+** Nummer
++
+Dadurch wird ein Feld erstellt, in dem der Benutzer, der die Anmerkung zuweist, eine Zahl eingeben kann. Wenn der Anmerkungstyp beispielsweise „`Boden`“ lautet, kann der Benutzer den Wertetyp „`Zahl`“ auswählen und die Etagennummer eingeben.
+
+** Text
++
+Dadurch wird ein Feld erstellt, das Freiformtext ermöglicht. Sie können beispielsweise „`Sprache`“ als Anmerkungstyp eingeben, „`Text`“ als Wertetyp auswählen und eine Sprache als Wert eingeben.
+
+
+
++
+[NOTE]
+====
+Nachdem Sie den Typ festgelegt und Ihre Änderungen gespeichert haben, können Sie den Typ der Anmerkung nicht ändern. Wenn Sie den Typ ändern müssen, müssen Sie die Anmerkung löschen und eine neue erstellen.
+
+====
+. Wenn Sie **Liste**als Anmerkungstyp auswählen, gehen Sie wie folgt vor:
++
+.. Wählen Sie *Neue Werte hinzufügen auf der Fly* aus, wenn Sie der Anmerkung weitere Werte hinzufügen möchten, wenn Sie auf einer Asset-Seite, die eine flexible Liste erstellt.
++
+Angenommen, Sie befinden sich auf einer Asset-Seite und das Asset hat die City-Anmerkung mit den Werten Detroit, Tampa und Boston. Wenn Sie die Option *Neue Werte hinzufügen auf der Fly* ausgewählt haben, können Sie City wie San Francisco und Chicago direkt auf der Asset-Seite zusätzliche Werte hinzufügen, anstatt zur Seite Anmerkungen zu gehen, um sie hinzuzufügen. Wenn Sie diese Option nicht wählen, können Sie beim Anwenden der Anmerkung keine neuen Anmerkungswerte hinzufügen; dadurch wird eine feste Liste erstellt.
+
+.. Geben Sie einen Wert und einen Namen in die Felder *Wert* und *Beschreibung* ein.
+.. Klicken Sie Aufimage:../media/edit-annotation-dialog-box-add-icon.gif[""] Um weitere Werte hinzuzufügen.
+.. Klicken Sie Auf image:../media/trash-can-query.gif[""] Um einen Wert zu entfernen.
+
+
+. Klicken Sie Auf *Speichern*.
++
+Ihre Anmerkungen werden in der Liste auf der Seite Anmerkungen angezeigt.
+
+
+
+
+
+== Nachdem Sie fertig sind
+
+In der Web-Benutzeroberfläche steht die Beschriftung sofort zur Verfügung. Um die Anmerkung im Java-Client zu verwenden, müssen Sie jeden laufenden Java-Client neu starten, bevor Sie die Anmerkung anwenden können. Wenn Sie Anmerkungswerte hinzufügen oder ändern oder einen Anmerkungstyp löschen, müssen Sie den Java-Client nicht neu starten.
+
+*Verwandte Informationen*
+
+link:importing-and-exporting-user-data.md#["Importieren und Exportieren von Benutzerdaten"]

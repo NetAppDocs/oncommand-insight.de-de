@@ -1,0 +1,16 @@
+---
+permalink: dwh/what-to-do-with-failing-historical-build-points.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können aus dem Verlauf erstellen, indem Sie die Option zum Überspringen von Fehlern bei der Erstellung von Verlaufsdaten aktivieren. 
+---
+= Was tun mit fehlgeschlagenen historischen Build-Punkten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können aus dem Verlauf erstellen, indem Sie die Option *Historie überspringen Build-Fehler* aktivieren, um fehlgeschlagene Builds zu vermeiden.
+
+Wenn Sie dies tun, wird der Build aus der Geschichte fortgesetzt. Wenn ein Build fehlschlägt und diese Option aktiviert ist, setzt Data Warehouse die Erstellung fort und ignoriert alle fehlgeschlagenen Builds. In solchen Fällen gibt es keinen Datenpunkt in den historischen Daten für übersprungene Builds. Wenn Sie diese Option nicht aktivieren und das Build fehlschlägt, werden alle nachfolgenden Jobs abgebrochen.

@@ -1,0 +1,109 @@
+---
+permalink: config-admin/locating-required-information-for-new-disk-model.html 
+sidebar: sidebar 
+keywords:  
+summary: Um die Informationen zum Festplattenmodell zu finden, geben Sie den Hersteller und die Modellnummer an, und führen Sie eine Internetsuche durch. 
+---
+= Suchen der erforderlichen Informationen für das neue Festplattenmodell
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um die Informationen zum Festplattenmodell zu finden, geben Sie den Hersteller und die Modellnummer an, und führen Sie eine Internetsuche durch.
+
+
+
+== Über diese Aufgabe
+
+Das Auffinden von Datenträgermodellinformationen ist so einfach wie das Ausführen einer Internetsuche. Notieren Sie sich vor der Suche den Herstellernamen und die Laufwerksmodellnummer.
+
+
+
+== Schritte
+
+. Es wird empfohlen, eine erweiterte Internetsuche für den Hersteller, das Modell und den Dokumenttyp „`PDF`“ zu verwenden, um das Datenblatt und/oder das Installationshandbuch des Anbieters für das Laufwerk zu finden. Diese Datenblätter sind in der Regel die beste Quelle für Informationen über die Hersteller von Festplatten.
+. In den Herstellerspezifikationen werden nicht immer alle erforderlichen Informationen auf der Grundlage der vollständigen Modellnummer bereitgestellt. Es ist oft sinnvoll, nach verschiedenen Teilen der Modellnummer-Zeichenfolge auf der Website des Anbieters zu suchen, um alle Informationen zu finden.
+. Suchen Sie den Namen des Festplattenanbieters, die vollständige Modellnummer, die Festplattengröße und -Geschwindigkeit und den Schnittstellentyp. Um das neue Festplattenmodell in OnCommand Insight zu definieren, können Sie die folgende Tabelle als Leitfaden verwenden, um diese Informationen bei der Suche zu notieren:
++
+|===
+
+
+| Für dieses Feld: | Diese ist: | Geben Sie Folgendes ein: 
+
+
+ a| 
+Modellnummer (auch als Schlüssel bezeichnet)
+ a| 
+Erforderlich
+ a| 
+
+
+
+ a| 
+Anbieter
+ a| 
+Erforderlich
+ a| 
+
+
+
+ a| 
+Festplattengeschwindigkeit (U/min)
+ a| 
+Erforderlich
+ a| 
+
+
+
+ a| 
+Größe (in GB)
+ a| 
+Erforderlich
+ a| 
+
+
+
+ a| 
+Schnittstellentyp (eine auswählen)
+ a| 
+Erforderlich
+ a| 
+ATA, SATA, SATA2, SATA3, FC, SAS, FATA, SSD, ANDERE
+
+
+
+ a| 
+Suchzeit in ms
+ a| 
+Optional
+ a| 
+
+
+
+ a| 
+Maximale Übertragungsrate in MB/s
+ a| 
+Optional
+ a| 
+
+
+
+ a| 
+Übertragungsrate der Schnittstelle in MB/s
+ a| 
+Optional
+ a| 
+
+
+
+ a| 
+Link zu Hersteller-/Modellinformationen
+ a| 
+Optional, aber empfohlen
+ a| 
+
+|===
+. Geben Sie diese Informationen in das ein `new_disk_models.txt` Datei: Siehe link:content-of-the-new-disk-models-txt-file.md#["Inhalt der Datei new_disk_models.txt"] Für Format, Reihenfolge und Beispiele.
+

@@ -1,0 +1,39 @@
+---
+permalink: install-windows/upgrading-the-anomaly-detection-engine.html 
+sidebar: sidebar 
+keywords:  
+summary: Ab OnCommand Insight Version 7.3.9 können Sie ein Inline-Upgrade der Software zur Erkennung von Anomalien durchführen. Das Inline-Upgrade bewahrt Ihre Daten zur Erkennung von Anomalien und die Bewertung von Anomalien. 
+---
+= Upgrade des Engine zur Erkennung von Anomalien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ab OnCommand Insight Version 7.3.9 können Sie ein Inline-Upgrade der Software zur Erkennung von Anomalien durchführen. Das Inline-Upgrade bewahrt Ihre Daten zur Erkennung von Anomalien und die Bewertung von Anomalien.
+
+
+
+== Bevor Sie beginnen
+
+* Auf dem System muss OnCommand Insight 7.3.7 oder höher ausgeführt werden.
+* Es wird empfohlen, den OnCommand Insight-Server vor dem Upgrade der Anomaly Detection Engine zu aktualisieren.
+
+
+
+
+== Über diese Aufgabe
+
+Führen Sie die folgenden Schritte aus, um ein Upgrade durchzuführen:
+
+
+
+== Schritte
+
+. Navigieren Sie zu dem Verzeichnis, in dem sich das Installationsprogramm befindet: `cd oci-prelert-<version>-linux-x86_64`
+. Installieren Sie die Upgrade-Software zur Erkennung von Anomalien: `sudo ./oci-prelert-install.sh`
++
+Die Software zur Erkennung von Anomalien wurde erfolgreich beim OnCommand Insight-Server registriert.
+
+

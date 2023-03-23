@@ -1,0 +1,24 @@
+---
+permalink: config-admin/data-source-patches.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Patches für die Datenquelle beheben Probleme mit vorhandenen Patches und ermöglichen es Ihnen auch, problemlos neue Datenquellentypen hinzuzufügen \(Anbieter und Modelle\). Sie können für jeden Datenquelltyp im Netzwerk Patches für Datenquellen hochladen. Sie können den Patching-Prozess auch installieren, testen und verwalten. Allerdings kann jeweils nur ein Patch für einen Datenquellentyp aktiv sein.' 
+---
+= Was sind Datenquellpatches
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch Patches für Datenquellen werden Probleme mit vorhandenen Patches behoben und neue Datenquelltypen (Anbieter und Modelle) können problemlos hinzugefügt werden. Sie können für jeden Datenquelltyp im Netzwerk Patches für Datenquellen hochladen. Sie können den Patching-Prozess auch installieren, testen und verwalten. Allerdings kann jeweils nur ein Patch für einen Datenquellentyp aktiv sein.
+
+Für jeden Patch können Sie folgende Aufgaben ausführen:
+
+* Überprüfen Sie den vorher- und Nachher-Vergleich jeder Datenquelle, die den Patch empfängt.
+* Schreiben Sie Kommentare, um Entscheidungen zu erklären oder die Forschung zusammenzufassen.
+* Nehmen Sie Änderungen an einer Datenquelle vor, die nicht gut auf den Patch reagiert.
+* Genehmigen Sie den Patch, der an Ihren Insight-Server übertragen werden soll.
+* Führen Sie ein Rollback für einen Patch durch, der nicht wie vorgesehen funktioniert.
+* Ersetzen Sie einen fehlerhaften Patch durch einen anderen.
+

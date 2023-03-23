@@ -1,0 +1,16 @@
+---
+permalink: install-windows/preserving-custom-settings-when-upgrading-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Benutzerdefinierte Cognos-Einstellungen, z. B. nicht standardmäßige SMTP-E-Mail-Einstellungen, werden nicht automatisch als Teil eines Data Warehouse-Upgrades gesichert. Sie müssen die benutzerdefinierten Einstellungen nach einem Upgrade manuell dokumentieren und wiederherstellen. 
+---
+= Beibehalten von benutzerdefinierten Cognos-Einstellungen während einer Data Warehouse-Aktualisierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Benutzerdefinierte Cognos-Einstellungen, z. B. nicht standardmäßige SMTP-E-Mail-Einstellungen, werden nicht automatisch als Teil eines Data Warehouse-Upgrades gesichert. Sie müssen die benutzerdefinierten Einstellungen nach einem Upgrade manuell dokumentieren und wiederherstellen.
+
+Bevor Sie das Data Warehouse aktualisieren, erstellen Sie eine Checkliste mit allen benutzerdefinierten Cognos-Einstellungen, die Sie beibehalten möchten, und überprüfen Sie die Liste vor dem Upgrade des Systems. Nach Abschluss der Aktualisierung können Sie die Werte manuell wiederherstellen, um sie auf die Einstellungen in der ursprünglichen Konfiguration zurückzusetzen.

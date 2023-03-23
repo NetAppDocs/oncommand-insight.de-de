@@ -1,0 +1,16 @@
+---
+permalink: reporting/managing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können für jeden Bericht den Link Mehr in der Spalte Aktionen auswählen und auf alle Berichtsvorgänge zugreifen, z. B. zum Festlegen von Berichtseigenschaften, zum Planen von Berichten oder zum Versenden von Berichten per E-Mail. Administratoren haben mehr Managementoptionen als andere Benutzer. 
+---
+= Verwalten von Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für jeden Bericht können Sie den Link *Mehr* in der Spalte Aktionen auswählen und auf alle Berichtsvorgänge zugreifen, wie beispielsweise das Festlegen von Berichtseigenschaften, das Planen von Berichten oder das Versenden von Berichten per E-Mail. Administratoren haben mehr Managementoptionen als andere Benutzer.
+
+Administratoren können Berechtigungen für andere Berichtsbenutzer entsprechend ihrer OnCommand Insight-Rollen festlegen.

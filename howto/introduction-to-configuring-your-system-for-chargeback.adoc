@@ -1,0 +1,27 @@
+---
+permalink: howto/introduction-to-configuring-your-system-for-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: Chargeback-Berichte stellen Informationen zu Storage Capacity Chargeback und Accountability nach Hosts, Applikationen und Geschäftseinheiten bereit. Sie umfassen sowohl aktuelle als auch historische Daten. 
+---
+= Konfigurieren des Systems zur Erstellung von Chargeback-Daten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Chargeback-Berichte stellen Informationen zu Storage Capacity Chargeback und Accountability nach Hosts, Applikationen und Geschäftseinheiten bereit. Sie umfassen sowohl aktuelle als auch historische Daten.
+
+In diesem Leitfaden wird beschrieben, wie Insight so konfiguriert wird, dass ein Chargeback-Bericht erstellt wird, der die Kosten für Service Level und Storage-Nutzung transparent macht. Ziel des Leitfadens ist es, die Schritte zur Erstellung eines einfachen Chargeback-Berichts durchzuführen und die Insight Benutzer mit den Optionen vertraut zu machen, die bei der Konfiguration von Chargeback in ihrer speziellen Umgebung zur Verfügung stehen.
+
+Für jede Applikation werden im Beispielbericht die bereitgestellten Ressourcen und die Kosten der Ressourcen angegeben. Die Ausgabe für den Bericht wird durch Definition der folgenden Daten in Insight erstellt
+
+* Storage-Tiers
+* Kosten im Zusammenhang mit den einzelnen Storage-Tiers
+* Bereitgestellte Storage-Kapazität
+* Service-Leveln
+* Kosten pro Service-Level
+
+
+In den folgenden Abschnitten werden die Schritte beschrieben, die erforderlich sind, um diese Daten so zu konfigurieren, dass sie von Insight Reporting aufgerufen werden können.

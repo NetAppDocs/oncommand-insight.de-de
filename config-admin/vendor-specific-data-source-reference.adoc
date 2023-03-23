@@ -1,0 +1,16 @@
+---
+permalink: config-admin/vendor-specific-data-source-reference.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Konfigurationsdetails variieren je nach Hersteller und Modell der hinzuzufügenden Datenquelle. 
+---
+= Herstellerspezifische Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Konfigurationsdetails variieren je nach Hersteller und Modell der hinzuzufügenden Datenquelle.
+
+Wenn die Datenquelle eines Anbieters erweiterte Insight-Konfigurationsanweisungen, z. B. spezielle Anforderungen und bestimmte Befehle, erfordert, finden Sie diese Informationen in diesem Abschnitt.

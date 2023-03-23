@@ -1,0 +1,148 @@
+---
+permalink: install-windows/insight-upgrade-checklist.html 
+sidebar: sidebar 
+keywords: 6.4 
+summary: Sie können die bereitgestellten Checklisten verwenden, um Ihren Fortschritt bei der Vorbereitung des Upgrades zu erfassen. Diese Aufgaben sollen dazu beitragen, das Risiko von Upgrade-Fehlern zu mindern und den Recovery- und Wiederherstellungsaufwand zu beschleunigen. 
+---
+= OnCommand Insight Upgrade-Checkliste
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die bereitgestellten Checklisten verwenden, um Ihren Fortschritt bei der Vorbereitung des Upgrades zu erfassen. Diese Aufgaben sollen dazu beitragen, das Risiko von Upgrade-Fehlern zu mindern und den Recovery- und Wiederherstellungsaufwand zu beschleunigen.
+
+
+
+== Checkliste zur Vorbereitung des Upgrades (erforderlich)
+
+|===
+
+
+| Zustand | Abgeschlossen? 
+
+
+ a| 
+Stellen Sie sicher, dass Sie auf allen Insight-Servern über lokale Windows-Administratorberechtigungen verfügen, die für die Durchführung des Upgrade-Prozesses erforderlich sind.
+ a| 
+
+
+
+ a| 
+Wenn sich Ihre Insight-, Data Warehouse- oder Remote Acquisition Unit-Server auf 32-Bit-Plattformen befinden, müssen Sie Ihre Server auf 64-Bit-Plattformen aktualisieren. Ab Insight 7.x sind Upgrades nur für 64-Bit-Plattformen verfügbar.
+ a| 
+
+
+
+ a| 
+Stellen Sie sicher, dass Sie über die erforderlichen Berechtigungen verfügen, um die Antivirensoftware auf allen Servern in Ihrer Umgebung zu ändern oder zu deaktivieren. Um einen Aktualisierungsfehler aufgrund einer aktiven Virenscan-Software zu verhindern, müssen Sie das Insight-Installationsverzeichnis ausschließen (`disk drive:\install directory\sanscreen` Vom Zugriff auf Virenschutzprüfungen während des Upgrades. Nachdem Sie alle Komponenten aktualisiert haben, können Sie die Antivirensoftware sicher wieder aktivieren. Stellen Sie jedoch sicher, dass Sie den Scan so konfigurieren, dass er im Insight-Installationsverzeichnis weiterhin alle Komponenten ausschließt.
+
+Außerdem müssen Sie den IBM/DB2-Ordner (z. B. _C:\Program Files\IBM\DB2_) nach der Installation von der Virenprüfung ausschließen.
+ a| 
+
+|===
+
+
+== Checkliste zur Vorbereitung des Upgrades (Best Practice)
+
+|===
+
+
+| Zustand | Abgeschlossen? 
+
+
+ a| 
+Planen Sie ein Upgrade ein, und berücksichtigen Sie dabei, dass die meisten Upgrades mindestens 4 bis 8 Stunden dauern. Größere Unternehmen benötigen länger. Die Upgrade-Zeiten hängen von den verfügbaren Ressourcen (Architektur, CPU und Arbeitsspeicher), der Größe der Datenbanken und der Anzahl der in Ihrer Umgebung überwachten Objekte ab.
+ a| 
+
+
+
+ a| 
+Wenden Sie sich bezüglich Ihrer Upgrade-Pläne an Ihren Ansprechpartner, informieren Sie sich über die installierte Insight Version und welche Version Sie aktualisieren möchten.
+ a| 
+
+
+
+ a| 
+Stellen Sie sicher, dass Ihre aktuellen Ressourcen, die den Insight, Data Warehouse und Remote Acquisition Units zugewiesen sind, weiterhin die empfohlenen Spezifikationen erfüllen. Weitere Informationen finden Sie in den Richtlinien zur Dimensionierung für alle Server.Alternativ können Sie sich an Ihren Ansprechpartner wenden, um die Richtlinien zur Dimensionierung zu besprechen.
+ a| 
+
+
+
+ a| 
+Stellen Sie sicher, dass genügend Speicherplatz für die Sicherung und Wiederherstellung der Datenbank vorhanden ist. Die Backup- und Restore-Prozesse benötigen etwa das Fünffache des Speicherplatzes, der von der Backup-Datei auf den Insight- und Data Warehouse-Servern belegt wird. Ein 50-GB-Backup benötigt beispielsweise 250 bis 300 GB freien Festplattenspeicher.
+ a| 
+
+
+
+ a| 
+Stellen Sie sicher, dass Sie Zugriff auf Firefox® oder den Chrome™ Browser haben, wenn Sie die Insight- und Data Warehouse-Datenbanken sichern. Internet Explorer wird nicht empfohlen, da beim Hochladen und Herunterladen von Dateien größer als 4 GB Probleme auftreten.
+ a| 
+
+
+
+ a| 
+Löschen Sie die `.tmp` Dateien auf dem Insight-Server, die Sie an folgendem Speicherort finden: `<install directory>\SANscreen\wildfly\standalone\tmp`.
+ a| 
+
+
+
+ a| 
+Doppelte Datenquellen und stillgelegte Datenquellen werden vom Insight Client entfernt. Das Entfernen stillgelegten oder doppelter Datenquellen verringert die für die Durchführung des Upgrades benötigte Zeit und verringert die Möglichkeit einer Datenbeschädigung.
+ a| 
+
+
+
+ a| 
+Wenn Sie einen der mit Insight ausgelieferten Standardberichte geändert haben, sollten Sie die Berichte unter einem anderen Namen speichern und anschließend im Ordner „Kundenberichte“ speichern, damit Sie Ihren geänderten Bericht nicht verlieren, wenn Sie das System aktualisieren oder wiederherstellen.
+ a| 
+
+
+
+ a| 
+Wenn Sie benutzerdefinierte oder geänderte Data Warehouse-Berichte von Ihnen oder Professional Services erstellt haben, erstellen Sie ein Backup dieser Berichte, indem Sie sie in XML exportieren und dann in den Ordner Kundenberichte verschieben. Stellen Sie sicher, dass sich das Backup nicht auf dem Data Warehouse-Server befindet. Wenn Sie Ihre Berichte nicht in die empfohlenen Ordner verschieben, werden diese Berichte möglicherweise nicht durch den Upgrade-Prozess gesichert. Bei früheren Versionen von Insight kann das Suchen von Berichten in den entsprechenden Ordnern zum Verlust benutzerdefinierter und geänderter Berichte führen.
+ a| 
+
+
+
+ a| 
+Notieren Sie alle Einstellungen im IBM Cognos-Konfigurationsdienstprogramm, da diese nicht im Data Warehouse-Backup enthalten sind. Sie müssen diese Einstellungen nach dem Upgrade neu konfigurieren. Das Dienstprogramm befindet sich im `disk drive:\install directory\SANscreen\cognos\c10_64\bin64` Verzeichnis auf dem Data Warehouse-Server, und Sie führen es mit aus `cogconfigw` Command.Alternativ können Sie eine vollständige Sicherung von Cognos durchführen und anschließend alle Einstellungen importieren. Weitere Informationen finden Sie in der Dokumentation zu IBM Cognos.
+ a| 
+
+|===
+
+
+== Checkliste zur Vorbereitung des Upgrades (falls zutreffend)
+
+|===
+
+
+| Zustand | Abgeschlossen? 
+
+
+ a| 
+Wenn Sie die selbstsignierten Zertifikate, die die Insight-Installation aufgrund von Sicherheitswarnungen im Browser erstellt hat, durch von Ihrer internen Zertifizierungsstelle signierte Zertifikate ersetzt haben, sichern Sie die Keystore-Datei an folgendem Speicherort: `disk drive:\install directory\SANscreen\wildfly\standalone\configuration` Und stellen Sie sie nach dem Upgrade wieder her. Dadurch werden die selbstsignierten Zertifikate ersetzt, die Insight mit Ihren signierten Zertifikaten erstellt.
+ a| 
+
+
+
+ a| 
+Wenn eine Ihrer Datenquellen für Ihre Umgebung geändert wurde und Sie sich nicht sicher sind, ob diese Änderungen in der Insight-Version verfügbar sind, auf die Sie aktualisieren, erstellen Sie eine Kopie des folgenden Verzeichnisses, das Ihnen bei Problemen mit der Wiederherstellung hilft: `disk drive:\install directory\SANscreen\wildfly\standalone\deployments\datasources.war`.
+ a| 
+
+
+
+ a| 
+Sichern Sie alle benutzerdefinierten Datenbanktabellen und -Ansichten mithilfe des `mysqldump` Befehlszeilen-Tool.das Wiederherstellen benutzerdefinierter Datenbanktabellen erfordert privilegierten Zugriff auf die Datenbank. Wenden Sie sich an den technischen Support, um Hilfe beim Wiederherstellen dieser Tabellen zu erhalten.
+ a| 
+
+
+
+ a| 
+In ist sichergestellt, dass keine benutzerdefinierten Integrationsskripte, Komponenten von Drittanbietern, die für Insight-Datenquellen, Backups oder andere erforderliche Daten erforderlich sind `disk drive:\install directory\sanscreen` Verzeichnis, da der Inhalt dieses Verzeichnisses durch den Upgrade-Prozess gelöscht wird.Stellen Sie sicher, dass Sie diese Dinge aus dem verschieben `\sanscreen` An einen anderen Speicherort. Wenn Ihre Umgebung beispielsweise benutzerdefinierte Integrationsskripte enthält, stellen Sie sicher, dass Sie die folgende Datei in ein anderes Verzeichnis als das kopieren `\sanscreen` Verzeichnis:
+
+`\install_dir\SANscreen\wildfly\standalone\deployments\datasources.war\new_disk_models.txt`.
+ a| 
+
+|===

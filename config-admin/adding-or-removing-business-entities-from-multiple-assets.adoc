@@ -1,0 +1,39 @@
+---
+permalink: config-admin/adding-or-removing-business-entities-from-multiple-assets.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: Sie können Business Entities mehreren Assets zuweisen oder diese entfernen, indem Sie eine Abfrage verwenden, anstatt sie manuell zuweisen oder entfernen zu müssen. 
+---
+= Zuordnen von Geschäftseinheiten zu oder Entfernen von Geschäftseinheiten aus mehreren Assets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Business Entities mehreren Assets zuweisen oder diese entfernen, indem Sie eine Abfrage verwenden, anstatt sie manuell zuweisen oder entfernen zu müssen.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen bereits die Geschäftseinheiten erstellt haben, die Sie zu den gewünschten Assets hinzufügen möchten.
+
+
+
+== Schritte
+
+. Erstellen Sie eine neue Abfrage, oder öffnen Sie eine vorhandene Abfrage.
+. Filtern Sie bei Bedarf nach den Assets, denen Sie Business Entities hinzufügen möchten.
+. Wählen Sie die gewünschten Assets in der Liste aus, oder klicken Sie auf image:../media/select-assets.gif[""] Um *Alle* auszuwählen.
++
+Die Schaltfläche *actions* wird angezeigt.
+
+. Um den ausgewählten Assets eine Geschäftseinheit hinzuzufügen, klicken Sie auf image:../media/actions-button.gif[""]. Wenn dem ausgewählten Asset-Typ Business Entities zugewiesen werden können, wird die Menüauswahl *Add Business Entity* angezeigt. Wählen Sie diese Option aus.
+. Wählen Sie die gewünschte Geschäftseinheit aus der Liste aus und klicken Sie auf *Speichern*.
++
+Jede neue Business Entity, die Sie zuweisen, überschreibt alle Business Entities, die bereits dem Asset zugewiesen wurden. Durch das Zuweisen von Anwendungen zu Assets werden auch die Business Entities überschrieben, die auf die gleiche Weise zugewiesen wurden. Das Zuweisen von Geschäftseinheiten als Anlage kann auch alle Anwendungen überschreiben, die dieser Anlage zugewiesen sind.
+
+. Um eine Geschäftseinheit zu entfernen, die den Assets zugewiesen ist, klicken Sie auf image:../media/actions-button.gif[""] Und wählen Sie *Business Entity entfernen*.
+. Wählen Sie die gewünschte Geschäftseinheit aus der Liste aus und klicken Sie auf *Löschen*.
+

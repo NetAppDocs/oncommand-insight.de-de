@@ -1,0 +1,192 @@
+---
+permalink: config-admin/dell-emc-powerstore-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Der Dell EMC PowerStore-Datensammler sammelt Bestandsinformationen aus dem Dell EMC PowerStore-Speicher. Zur Konfiguration benötigt der Datensammler die IP-Adresse der Speicherprozessoren sowie einen schreibgeschützten Benutzernamen und ein Kennwort. 
+---
+= Dell EMC PowerStore Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Dell EMC PowerStore-Datensammler sammelt Bestandsinformationen aus dem Dell EMC PowerStore-Speicher. Zur Konfiguration benötigt der Datensammler die IP-Adresse der Speicherprozessoren sowie einen schreibgeschützten Benutzernamen und ein Kennwort.
+
+
+
+== Terminologie
+
+OnCommand Insight bezieht die folgenden Bestandsinformationen aus der EMC Data Domain-Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Host
+ a| 
+Host
+
+
+
+ a| 
+Host_Volume_Zuordnung
+ a| 
+Host_Volume_Zuordnung
+
+
+
+ a| 
+Hardware (es hat Laufwerke unter „extra_Details“-Objekt): Laufwerke
+ a| 
+Festplatte
+
+
+
+ a| 
+Appliance
+ a| 
+Storage Pool
+
+
+
+ a| 
+Cluster
+ a| 
+Storage Array Durchführt
+
+
+
+ a| 
+Knoten
+ a| 
+StorageNode
+
+
+
+ a| 
+fc_Port
+ a| 
+Port
+
+
+
+ a| 
+Datenmenge
+ a| 
+Datenmenge
+
+
+
+ a| 
+InternalVolume
+ a| 
+File_System
+
+
+
+ a| 
+Dateiys
+ a| 
+Internes Volumen
+
+
+
+ a| 
+Mtree
+ a| 
+Qtree
+
+
+
+ a| 
+Kontingente
+ a| 
+Kontingente
+
+
+
+ a| 
+NFS- und CIFS-Freigabe
+ a| 
+Dateifreigabe
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* IP-Adresse oder vollqualifizierter Domain-Name des Speicherprozessors
+* Schreibgeschützter Benutzername und Kennwort
+
+
+
+
+== Erläuterung der übergeordneten Seriennummer
+
+Traditionell ist Insight in der Lage, die Seriennummer des Storage-Arrays oder die Seriennummern der einzelnen Storage-Nodes zu melden. Einige Storage-Array-Architekturen lassen sich diesem jedoch nicht ordnungsgemäß anpassen. Ein PowerStore Cluster kann aus 1-4 Appliances bestehen, und jede Appliance verfügt über 2 Nodes. Wenn die Appliance selbst über eine Seriennummer verfügt, ist diese Seriennummer weder die Seriennummer für das Cluster noch für die Nodes.
+
+Das Attribut „Parent Serial Number“ auf dem Speicher-Node-Objekt wird für Dell/EMC PowerStore-Arrays entsprechend aufgefüllt, wenn sich die einzelnen Nodes in einer Zwischenanwendung/einem Gehäuse befinden, die nur Teil eines größeren Clusters ist.
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+PowerStore Gateway(s)
+ a| 
+IP-Adressen oder vollqualifizierte Domain-Namen des PowerStore-Speichers
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für PowerStore
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort, das für PowerStore verwendet wird
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+HTTPS-Port
+ a| 
+Der Standardwert ist 443
+
+
+
+ a| 
+Abfrageintervall für Bestand (Minuten)
+ a| 
+Intervall zwischen Bestandsabstimmungen Der Standardwert ist 60 Minuten.
+
+|===
+Die PowerStore Performance-Sammlung von OnCommand Insight nutzt die 5-Minuten-Detailgenauigkeit der Quelldaten von PowerStore. Daher fragt Insight diese Daten alle fünf Minuten ab, und dies ist nicht konfigurierbar.

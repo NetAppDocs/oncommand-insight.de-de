@@ -1,0 +1,16 @@
+---
+permalink: install-linux/troubleshooting-installations.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight-Installationen werden in der Regel über die Installationsassistenten verwaltet. Es kann jedoch zu Problemen bei Upgrades oder Konflikten aufgrund von Computerumgebungen kommen. 
+---
+= Fehlerbehebung bei Installationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight-Installationen werden in der Regel über die Installationsassistenten verwaltet. Es kann jedoch zu Problemen bei Upgrades oder Konflikten aufgrund von Computerumgebungen kommen.
+
+Sie sollten außerdem sicher sein, dass Sie alle erforderlichen OnCommand Insight-Lizenzen für die Installation der Software installieren.

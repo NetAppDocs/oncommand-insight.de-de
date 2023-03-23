@@ -1,0 +1,28 @@
+---
+permalink: dwh/etl-frequency.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie sollten den Extrahierung-, Transform- und Load \(ETL\)-Prozess mindestens einmal pro Tag ausführen. Sie können ETL jedoch bei Bedarf mehrmals ausführen.' 
+---
+= ETL-Frequenz- und Datumsdaten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten den ETL-Prozess (Extrahieren, Transformieren und Laden) mindestens einmal pro Tag ausführen. Sie können ETL jedoch bei Bedarf mehrmals ausführen.
+
+Standardmäßig behandelt die Cognos Reporting Engine alle Kapazitäts- und Leistungsdaten als additiv. Dadurch besteht die Gefahr, dass Kapazitätsdaten doppelt gezählt werden, wenn der ETL-Prozess mehrmals täglich ohne die richtigen Zeitfilter ausgeführt wird.
+
+Zwei Datumsdatenelemente in der Datumsdimension stehen im Zusammenhang mit dem täglichen ETL-Prozess. Die Datumsdimension, die in mehreren Datenmodellen verwendet wird, umfasst die folgenden Datenelemente, die von der ETL betroffen sind:
+
+* *Ist Tagesvertreter*
++
+Das Datenelement „is Day Representative“ wird während der ersten Ausführung des ETL-Prozesses an einem beliebigen Tag auf den Wert 1 (TRUE) gesetzt. Wenn der erste ETL-Prozess um 1:00 Uhr ausgeführt wird, ist der Tagesvertreter für alle während der 1:00 Uhr geladenen Daten auf 1 eingestellt ETL-Prozess. Wenn eine zweite ETL später geplant wird (z. B. um 1:00 Uhr), wird für die während dieses ETL-Prozesses geladenen Daten der Wert 0 (FALSE) als Tagesvertreter festgelegt.
+
+* *Ist Neuestes*
++
+Das „is Latest“-Mitglied wird nach Abschluss jedes ETL-Prozesses auf den Wert 1 (TRUE) gesetzt. Wenn der erste ETL-Prozess um 1:00 Uhr morgens ausgeführt wird, ist „Letzte“ für alle Daten, die während der 1:00 Uhr morgens geladen wurden, auf „1“ gesetzt ETL-Prozess. Wenn ein anderer ETL-Prozess später geplant wird (z. B. 1:00 Uhr), wird für Daten, die während der 13 Uhr geladen werden, die Einstellung „Letzte“ auf „1“ gesetzt ETL-Prozess. Der ETL-Prozess setzt auch die 1:00 Uhr morgens ETL-Lasten sind der letzte Eintrag auf 0 (FALSE).
+
+

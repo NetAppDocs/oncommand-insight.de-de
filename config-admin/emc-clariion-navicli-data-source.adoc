@@ -1,0 +1,183 @@
+---
+permalink: config-admin/emc-clariion-navicli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Stellen Sie vor der Konfiguration dieser Datenquelle sicher, dass die EMC Navisphere CLI auf dem Zielgerät und auf dem Insight-Server installiert ist. Die Navisphere CLI-Version muss mit der Firmware-Version auf dem Controller übereinstimmen. Für die Erfassung von Performancedaten muss die Statistikprotokollierung aktiviert sein. 
+---
+= EMC CLARiiON (NaviCLI)-Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Stellen Sie vor der Konfiguration dieser Datenquelle sicher, dass die EMC Navisphere CLI auf dem Zielgerät und auf dem Insight-Server installiert ist. Die Navisphere CLI-Version muss mit der Firmware-Version auf dem Controller übereinstimmen. Für die Erfassung von Performancedaten muss die Statistikprotokollierung aktiviert sein.
+
+
+
+== Navisphere Command Line Interface-Syntax
+
+[listing]
+----
+naviseccli.exe -h <IP address> -user <user> -password <password> -scope
+<scope,use 0 for global scope> -port <use 443 by default> command
+----
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Bestandsinformationen aus der EMC CLARiiON-Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Festplatte
+ a| 
+Festplatte
+
+
+
+ a| 
+Storage
+ a| 
+Storage
+
+
+
+ a| 
+Storage Processor
+ a| 
+Storage-Node
+
+
+
+ a| 
+Thin Pool, RAID-Gruppe
+ a| 
+Storage-Pool
+
+
+
+ a| 
+LUN
+ a| 
+Datenmenge
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* Eine IP-Adresse für jeden CLARiiON-Speicherprozessor
+* Navisphere-Benutzername und -Kennwort für die CLARiiON-Arrays, schreibgeschützt
+* Navicli muss auf dem Insight Server/rau installiert sein
+* Zugriffsvalidierung: Führen Sie NaviCLI vom Insight-Server zu jedem Array mit dem oben genannten Benutzernamen und Passwort aus.
+* Die navicli-Version sollte mit dem neuesten FLARE-Code auf Ihrem Array übereinstimmen
+* Für die Performance muss die Statistikprotokollierung aktiviert sein.
+* Port-Anforderungen: 80, 443
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+CLARiiON-Speicher
+ a| 
+IP-Adresse oder vollständig qualifizierter Domänenname des CLARiiON-Speichers
+
+
+
+ a| 
+Benutzername
+ a| 
+Name, der für die Anmeldung beim CLARiiON-Speichergerät verwendet wird.
+
+
+
+ a| 
+Passwort
+ a| 
+Kennwort für die Anmeldung beim CLARiiON-Speichergerät.
+
+
+
+ a| 
+CLI Pfad zu Pfad navicli.exe oder Pfad NaviSECCLI.exe
+ a| 
+Vollständiger Pfad zum `navicli.exe` ODER `naviseccli.exe` Ausführbar
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 40 Minuten)
+
+
+
+ a| 
+Secure Client verwenden (naviseccli)
+ a| 
+Auswählen, um sicheren Client zu verwenden (navseccli)
+
+
+
+ a| 
+Umfang
+ a| 
+Der Umfang des sicheren Clients. Die Standardeinstellung ist Global.
+
+
+
+ a| 
+CLARiiON-CLI-Port
+ a| 
+Für CLARiiON CLI verwendeter Port
+
+
+
+ a| 
+Zeitlimit für externen Prozess für Bestandsaufnahme (Sek.)
+ a| 
+Externes Prozess-Timeout (Standard: 1800 Sekunden)
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+
+
+ a| 
+Performance Externes Prozesszeitlimit (s)
+ a| 
+Externes Prozess-Timeout (Standard: 1800 Sekunden)
+
+|===

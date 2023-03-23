@@ -1,0 +1,61 @@
+---
+section: reporting
+title: Berichterstellung
+entries:
+- title: Willkommen beim OnCommand Insight Reporting
+  url: "/reporting/welcome-to-oncommand-insight-reporting.html"
+  entries:
+  - title: Zugriff auf das OnCommand Insight-Berichtsportal
+    url: "/reporting/accessing-the-oncommand-insight-reporting-portal.html"
+  - title: Abweichungen aufgrund von installierten Lizenzen
+    url: "/reporting/variations-due-to-installed-licenses.html"
+  - title: Reporting-Benutzerrollen
+    url: "/reporting/reporting-user-roles.html"
+  - title: Aktivieren Von Sicherheitsüberschriften
+    url: "/reporting/enabling-security-headers.html"
+- title: Berichterstellung leicht gemacht
+  url: "/reporting/reporting-made-easy.html"
+  entries:
+  - title: Navigieren zu vordefinierten OnCommand Insight-Berichten
+    url: "/reporting/navigating-to-the-pre-defined-oncommand-insight-reports-and-dashboards.html"
+  - title: Funktionen des Storage Manager Dashboards
+    url: "/reporting/storage-manager-dashboard.html"
+  - title: Verwenden von vordefinierten Berichten zur Beantwortung häufiger Fragen
+    url: "/reporting/which-report-answers-your-question.html"
+  - title: Erstellen eines Berichts mit Cognos 11
+    url: "/reporting/creating-a-report-cognos-11.html"
+- title: Verwalten von Berichten
+  url: "/reporting/managing-reports.html"
+  entries:
+  - title: Anpassen des Ausgabeformats und der Bereitstellung eines Berichts
+    url: "/reporting/customizing-a-report-s-output-format-and-delivery.html"
+  - title: Kopieren eines Berichts in die Zwischenablage
+    url: "/reporting/copying-a-report-to-the-clipboard.html"
+  - title: Öffnen von Berichten (XML) aus der Zwischenablage
+    url: "/reporting/importing-existing-reports-to-cognos-11.html"
+- title: Erstellen benutzerdefinierter Ad-hoc-Berichte
+  url: "/reporting/creating-custom-ad-hoc-reports.html"
+  entries:
+  - title: Was Sie vor dem Entwurf Ihres Berichts tun müssen
+    url: "/reporting/what-you-need-to-do-before-you-design-your-report.html"
+  - title: Prozess der Erstellung von Berichten
+    url: "/reporting/process-of-creating-custom-reports.html"
+    entries:
+    - title: So planen Sie die Ergebnisse Ihres benutzerdefinierten Berichts
+      url: "/reporting/how-to-plan-the-results-of-your-custom-report.html"
+    - title: Tipps für das Design von Berichten
+      url: "/reporting/tips-for-designing-reports.html"
+- title: Datenmodell für die Berichterstellung
+  url: "/reporting/reporting-data-model.html"
+  entries:
+  - title: Datenmodell im Überblick
+    url: "/reporting/data-model-overview.html"
+    entries:
+    - title: OnCommand Insight Datenmodelle
+      url: "/reporting/oncommand-insight-data-model-descriptions.html"
+    - title: Daten-Modell-Fakt- und Bemaßungstabellen
+      url: "/reporting/data-model-fact-and-dimension-tables.html"
+    - title: Farben, die in Datenmodellelementen verwendet werden
+      url: "/reporting/colors-used-in-data-model-elements.html"
+    - title: Verwenden mehrerer Datenmodelle in einem Bericht
+      url: "/reporting/using-multiple-data-models-in-one-report.html"

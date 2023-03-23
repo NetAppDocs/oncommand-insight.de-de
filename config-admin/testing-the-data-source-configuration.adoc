@@ -1,0 +1,21 @@
+---
+permalink: config-admin/testing-the-data-source-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie eine Datenquelle hinzufügen, können Sie die Richtigkeit der Konfiguration für die Kommunikation mit dem Gerät überprüfen, bevor Sie diese Datenquelle speichern oder aktualisieren. 
+---
+= Testen der Datenquellkonfiguration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie eine Datenquelle hinzufügen, können Sie die Richtigkeit der Konfiguration für die Kommunikation mit dem Gerät überprüfen, bevor Sie diese Datenquelle speichern oder aktualisieren.
+
+Wenn Sie im Datenquellassistenten auf die Schaltfläche *Test* klicken, wird die Kommunikation mit dem angegebenen Gerät überprüft. Der Test liefert eines der folgenden Ergebnisse:
+
+* BESTANDEN: Die Datenquelle ist korrekt konfiguriert.
+* WARNUNG: Die Tests waren unvollständig, wahrscheinlich aufgrund einer Zeitüberschreitung bei der Verarbeitung oder nicht laufender Akquisition.
+* FEHLGESCHLAGEN: Die Datenquelle kann nicht wie konfiguriert mit dem angegebenen Gerät kommunizieren. Überprüfen Sie die Konfigurationseinstellungen und führen Sie einen erneuten Test durch.
+

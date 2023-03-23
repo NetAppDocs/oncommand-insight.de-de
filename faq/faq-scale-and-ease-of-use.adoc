@@ -1,0 +1,46 @@
+---
+permalink: faq/faq-scale-and-ease-of-use.html 
+sidebar: sidebar 
+keywords:  
+summary: Dieses FAQ beantwortet häufig gestellte Fragen zur Skalierbarkeit und Benutzerfreundlichkeit von OnCommand Insight. 
+---
+= Skalierbarkeit und Benutzerfreundlichkeit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dieses FAQ beantwortet häufig gestellte Fragen zur Skalierbarkeit und Benutzerfreundlichkeit von OnCommand Insight.
+
+
+
+== Wie skaliert OCI?
+
+OCI ist hinsichtlich Interoperabilität und der Anzahl der Assets, die es bei minimalem Platzbedarf erwerben kann, führend. Im Kern benötigt OCI 2 virtuelle oder physische Server: Einen für den Operationsserver, auf dem alle Datacenter-Ressourcen erfasst werden, und einen für das konsolidierte Data Warehouse für die langfristige Verlaufsberichte. Die Unternehmensabdeckung von OCI unterstützt Hunderte von Arrays, Zehntausende Virtual Machines, 100,000 Fibre-Channel-Pfade und mehr als 10,000 Fibre-Channel-Ports – und all das in einer einzigen Server-Instanz.
+
+
+
+== Wie viele Mitarbeiter sind für das Management der OCI-Applikation erforderlich?
+
+OCI kann von einer einzelnen Person gemanagt werden. OCI bietet jedoch Funktionen, die von mehreren Personas innerhalb der Geschäftsumgebung verwendet werden können, von denen jede unterschiedliche Rollen hat, die jeweils unterschiedliche Anforderungen an Berichterstellung, Fehlerbehebung und Analyse haben. Mit allen Maßnahmen wird die Tool-Wartung auf ein Minimum reduziert – von Menüs für den Systemzustand und die Benachrichtigung, in denen Konfigurationsprobleme angezeigt werden, bis hin zur automatischen Erkennung physischer, mit einer Fabric verbundener Hosts. Flexible Annotationen ermöglichen für alle Benutzertypen den geschäftlichen Kontext der Ökosystemdaten. Von Storage-, Fabric- und Virtualisierungsadministratoren bis hin zu Kapazitätsplanern, Geschäftsanalysten und Führungskräften – OCI vereint die gemeinsame Nutzung von Informationen über Unternehmenssilos und Technologien hinweg in einer zentralen Konsole.
+
+
+
+== Unterstützt OCI individuelle Berichte?
+
+Ja. OCI bietet Reporting über das Business Intelligence-Tool IBM Cognos, mit dem Kunden eigene, vollständig angepasste Berichte zu Daten erstellen können, die im Data Warehouse von OCI erfasst werden.
+
+
+
+== Wie einfach ist die Erstellung benutzerdefinierter Berichte?
+
+OCI Berichterstellung bietet Funktionen sowohl für neue als auch für fortgeschrittene Benutzer. OCI bietet eine Reihe von Funktionen zur Berichterstellung, darunter die Berichterstellung „`dRAG and Drop`“ und abfragebasierte SQL-Berichte für komplexere Benutzerprojekte oder professionelle Serviceaktivitäten. Die integrierte Business Intelligence-Lösung (IBM Cognos) von OCI vermeidet häufige Fehler wie das Doppelten der Kapazität. Mit einer Kombination aus sofort einsatzbereiten Berichten, Widgets, Abfragen und Dashboards gibt es Angebote, die den Berichtsanforderungen von jedermann entsprechen.
+
+Außerdem stehen Berichtsvorlagen zum Herunterladen im OCI Community Store zur Verfügung.
+
+
+
+== Kann OCI dank der Einfachheit des Traffics Performance und Verfügbarkeit anzeigen?
+
+Ja. OCI Data Warehouse und Reporting ermöglichen Berichte mit Farbverbesserungen, z. B. rot/gelb/grün „`bedingtes Styling`“ von Werten. Das Generieren einer farbigen Schriftart oder eines Hintergrunds in einem Bericht kann sowohl von Endbenutzern als auch von Professional Services implementiert werden. OCIs-Widget-Bibliotheken ermöglichen die Anzeige von geschäftsspezifischen Leistungsmetriken in Dashboards.

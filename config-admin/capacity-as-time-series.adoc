@@ -1,0 +1,23 @@
+---
+permalink: config-admin/capacity-as-time-series.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit OnCommand Insight 7.3 werden Kapazitätsinformationen als Zeitreihendaten gemeldet und eingetragen. 
+---
+= Kapazität als Zeitreihe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit OnCommand Insight 7.3 werden Kapazitätsinformationen als Zeitreihendaten gemeldet und eingetragen.
+
+Bisher wurden aus Datenquellen erfasste Kapazitätsinformationen ausschließlich „Point-in-Time“ (PIT)-Daten verwendet, was bedeutet, dass sie in Diagrammen nicht als Zeitreihendaten verwendet werden konnten. Jetzt können Kapazitätswerte für Assets wie folgt als Zeitreihendaten verwendet werden:
+
+* Grafische Darstellung in Tabellen, Widgets, Expertenansichten und an jedem Ort, an dem Zeitreihendaten angezeigt werden
+* Angewendet auf Leistungsschwellenwerte mit Verstößen unter Verwendung vorhandener Semantik
+* Wird gegebenenfalls in Ausdrücken mit anderen Leistungsindikatoren verwendet
+
+
+Beachten Sie, dass bei einem Upgrade von einer früheren Version von Insight frühere PIT-Kapazitätswerte, die in Abfragen oder in Filtern für benutzerdefinierte Dashboards verwendet werden, durch Kapazitätsdaten für Zeitreihen ersetzt werden. Dies kann zu kleinen Änderungen in der Art und Weise führen, wie Kapazitätsdaten gemeldet oder gefiltert werden, wenn sie mit den äquivalenten Daten in früheren Insight-Versionen verglichen werden.

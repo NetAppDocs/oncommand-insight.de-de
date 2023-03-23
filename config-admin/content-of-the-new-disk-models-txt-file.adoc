@@ -1,0 +1,40 @@
+---
+permalink: config-admin/content-of-the-new-disk-models-txt-file.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Datei new_disk_models.txt enthält Pflichtfelder und optionale Felder. Die Felder sind durch Kommas getrennt. Verwenden Sie daher keine Kommas in den Feldern. 
+---
+= Inhalt der Datei new_disk_models.txt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der `new_disk_models.txt` Die Datei enthält Pflichtfelder und optionale Felder. Die Felder sind durch Kommas getrennt. Verwenden Sie daher keine Kommas _innerhalb_ der Felder.
+
+Alle Felder sind mit Ausnahme von Suchzeit, Transferraten und additional_info erforderlich. Falls verfügbar, fügen Sie den Link der Hersteller-/Modell-Website in das Feld additional_info ein.
+
+Geben Sie in einem Texteditor für jedes neue Laufwerksmodell, das Sie hinzufügen möchten, die folgenden durch Kommas getrennten Informationen in dieser Reihenfolge ein:
+
+. *Schlüssel*: Verwenden Sie die Modellnummer (erforderlich)
+. *Anbieter*: Name (erforderlich)
+. *Modellnummer*: Volle Zahl (normalerweise der gleiche Wert wie in "Schlüssel") (erforderlich)
+. *U/min der Scheibe*: Zum Beispiel 10000 oder 15000 (erforderlich)
+. *Größe*: Kapazität in GB (erforderlich)
+. *Schnittstellentyp*: ATA, SATA, FC, SAS, FATA, SSD, ANDERE (erforderlich)
+. *Suchzeit*: In ms (optional)
+. *Potenzielle Übertragungsrate*: Die mögliche Übertragungsrate in MB/s. Maximale Übertragungsrate der Festplatte selbst. (Optional)
+. *Übertragungsrate der Schnittstelle*: Die Rate zum und vom Host in MB/s (optional).
+. *Zusätzliche Info*: Alle zusätzlichen Informationen, die Sie erfassen möchten. Als Best Practice empfiehlt es sich, den Link zur Anbieterseite einzugeben, auf der die Spezifikationen gefunden werden, um darauf Bezug zu nehmen (optional).
+
+
+Wenn Sie optionale Felder leer lassen möchten, müssen Sie das Komma eingeben.
+
+Beispiele (jeweils in einer Zeile ohne Leerzeichen):
+
+`+ST373405,Seagate,ST373405,10000,73,FC,5.3,64,160,http://www.seagate.com/staticfiles/support/disc/manuals/enterprise/cheetah/73(LP)/100109943e.pdf+`
+
+`SLR5B-M400SS,HITACHI,SLR5B-M400SS,1000000,400,SSD,,,,`
+
+`+X477_THARX04TA07,TOSHIBA,X477_THARX04TA07,7200,4000,SATA,9.5,,,https://storage.toshiba.eu/export/sites/toshiba-sdd/media/products/datasheets/MG03ACAxxxY.pdf+`

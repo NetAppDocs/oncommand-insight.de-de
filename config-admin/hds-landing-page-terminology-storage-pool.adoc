@@ -1,0 +1,40 @@
+---
+permalink: config-admin/hds-landing-page-terminology-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: Begriffe, die auf Objekte oder Referenzen angewendet werden, die Sie auf den Landing Pages für HDS-Speicherpools finden können. 
+---
+= HDS-Speicherpool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Begriffe, die auf Objekte oder Referenzen angewendet werden, die Sie auf den Landing Pages für HDS-Speicherpools finden können.
+
+
+
+== HDS-Speicherpool-Terminologie
+
+Die folgenden Begriffe beziehen sich auf Objekte oder Referenzen, die auf HDS Storage Pool Asset Landing Pages zu finden sind. Viele dieser Bedingungen gelten auch für andere Datensammler.
+
+* Typ: Der Wert hier ist einer von:
++
+** RESERVIERT -- wenn dieser Pool für andere Zwecke als Datenvolumes, d. h. Journaling, Snapshots, reserviert ist
+** Thin Provisioning -- wenn dies ein HDP-Pool ist
+** RAID-Gruppe -- Sie werden diese wahrscheinlich aus einigen Gründen nicht sehen:
++
+OCI verfolgt eine starke Haltung, um zu vermeiden, dass bei allen Kosten eine doppelte Kapazität gezählt wird. Auf HDS muss man normalerweise RAID-Gruppen von Festplatten erstellen, Pool-Volumes auf diesen RAID-Gruppen erstellen und Pools (oft HDP, könnte aber besonderer Zweck sein) aus diesen Pool Volumes erstellen. Wenn OCI sowohl die zugrunde liegenden RAID-Gruppen wie auch die Pools meldet, würde die Summe ihrer Rohkapazität die Summe der Festplatten deutlich übersteigen.
+
++
+Stattdessen verringert der HDS HiCommand-Datensammler von OCI die Größe von RAID-Gruppen willkürlich anhand der Kapazität von Pool Volumes. Dies kann dazu führen, dass OCI keine Berichte über die RAID-Gruppe erstellt. Darüber hinaus werden alle resultierenden RAID-Gruppen so gekennzeichnet, dass sie in der OCI WebUI nicht sichtbar sind, aber in das OCI Data Warehouse (DWH) fließen. Der Zweck dieser Entscheidungen ist es, UI-Unordnung für Dinge zu vermeiden, die den meisten Benutzern egal sind -- Wenn Ihr HDS-Array RAID-Gruppen mit 50 MB frei hat, können Sie diesen freien Speicherplatz wahrscheinlich nicht für ein sinnvolles Ergebnis verwenden.
+
+
+
+* Node – k. A., da HDS Pools nicht an einen bestimmten Node gebunden sind
+* Redundanz: Der RAID-Level des Pools. Möglicherweise mehrere Werte für einen HDP-Pool, die aus mehreren RAID-Typen bestehen
+* Kapazität % - der Prozentsatz, der für die Datenverwendung des Pools verwendet wird, wobei die verwendete GB und die gesamte logische GB-Größe des Pools verwendet werden
+* Überbelegte Kapazität – ein abgeleiteter Wert, der „`die logische Kapazität dieses Pools wird durch diesen Prozentsatz überzeichnet, da die Summe der logischen Volumes die logische Kapazität des Pools um diesen Prozentsatz übersteigt`“
+* Snapshot - zeigt die Kapazität an, die für die Snapshot-Nutzung in diesem Pool reserviert ist
+

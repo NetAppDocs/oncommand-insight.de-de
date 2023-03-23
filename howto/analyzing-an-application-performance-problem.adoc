@@ -1,0 +1,50 @@
+---
+permalink: howto/analyzing-an-application-performance-problem.html 
+sidebar: sidebar 
+keywords: greedy 
+summary: In diesem Dokument werden die Schritte beschrieben, die Sie zur Behebung von Leistungsberichten für eine Anwendung, die sich auf Benutzer oder Administratoren auswirkt, durchführen können. Benutzer beschweren sich beispielsweise darüber, dass ihre Exchange-Anwendung den ganzen Tag über langsam ist. 
+---
+= Analyse eines Applikations-Performance-Problems
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In diesem Dokument werden die Schritte beschrieben, die Sie zur Behebung von Leistungsberichten für eine Anwendung, die sich auf Benutzer oder Administratoren auswirkt, durchführen können. Benutzer beschweren sich beispielsweise darüber, dass ihre Exchange-Anwendung den ganzen Tag über langsam ist.
+
+
+
+== Über diese Aufgabe
+
+In OnCommand Insight ist eine Anwendung eine konfigurierte Einheit. Sie weisen der Applikation einen Namen und eine Geschäftseinheit zu und weisen der Applikation Computing- und Storage-Ressourcen zu. Dies ermöglicht einen besseren End-to-End-Überblick über den Zustand der Infrastruktur und ein proaktives Management des Infrastruktur-Asset-Managements.
+
+
+
+== Schritte
+
+. Um mit der Untersuchung des Problems zu beginnen, verwenden Sie die Insight-Symbolleiste, um eine globale Suche nach der Exchange-Anwendung durchzuführen.
++
+image::../media/search-exchange.gif[suchaustausch]
+
++
+[TIP]
+====
+Beim Durchführen einer Suche können Sie vor dem Objektnamen einen Objektdeskriptor hinzufügen, um die Suchergebnisse zu verfeinern.
+
+====
+. Wenn Sie in den Suchergebnissen „Exchange 2016“ auswählen, wird die Zielseite der Anwendung angezeigt.
++
+image::../media/exch2016-land-page.gif[Exch2016 Landseite]
+
++
+Auf der Landing Page der Anwendung sind folgende Informationen von Interesse:
+
++
+** Im ausgewählten Zeitraum von 24 Stunden wird rechts im Latenzdiagramm eine Erhöhung der Latenz angezeigt.
+** Während des Zeitraums der Latenzerhöhungen gibt es keine wesentlichen Änderungen im Niveau der IOPS. Es scheint, dass die Latenzerhöhung nicht durch eine schwerere Anwendungsnutzung verursacht wird. Der Storage-Bedarf, auf den auch die Latenzspitze zählen könnte, ist nicht besonders hoch. Der Anstieg der Latenz kann auf einen externen Faktor zurückzuführen sein.
+** Klicken Sie rechts neben den Diagrammen im Abschnitt Top Contributors auf 100% für das ausgewählte interne Volume (CDOT_Boston:SP2:Vol_01). Das System zeigt, dass diese Ressource 100 % zur Exchange 2016 Applikation beiträgt. image:../media/top-contributor.gif[""]
+** Klicken Sie auf den Navigationslink für dieses interne Volume (CDOT_Boston:SP2:Vol_01), um auf die Zielseite für das interne Volume zuzugreifen. Die Analyse des internen Volumes kann Informationen zur Latenzspitze liefern.
+
+
+

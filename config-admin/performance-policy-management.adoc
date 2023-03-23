@@ -1,0 +1,44 @@
+---
+permalink: config-admin/performance-policy-management.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit OnCommand Insight lassen sich Performance-Richtlinien erstellen, um im Netzwerk verschiedene Schwellenwerte zu überwachen und bei Überschreitung dieser Schwellenwerte Alarme auszugeben. Mithilfe von Performance-Richtlinien können Sie einen Schwellenverletzungen sofort erkennen, die Auswirkungen identifizieren und die Auswirkungen und die Ursache des Problems auf eine Weise analysieren, die eine schnelle und effektive Korrektur ermöglicht. 
+---
+= Management von Performance-Richtlinien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit OnCommand Insight lassen sich Performance-Richtlinien erstellen, um im Netzwerk verschiedene Schwellenwerte zu überwachen und bei Überschreitung dieser Schwellenwerte Alarme auszugeben. Mithilfe von Performance-Richtlinien können Sie einen Schwellenverletzungen sofort erkennen, die Auswirkungen identifizieren und die Auswirkungen und die Ursache des Problems auf eine Weise analysieren, die eine schnelle und effektive Korrektur ermöglicht.
+
+Mithilfe einer Performance-Richtlinie können Sie für alle Objekte (Datenspeicher, Festplatte, Hypervisor, internes Volume, Port, Storage, Storage-Node, Storage-Pool, VMDK, Virtual Machine, Und Volume) mit gemeldeten Performance-Zählern (z. B. gesamte IOPS). Wenn ein Schwellenwert verletzt wird, erkennt Insight ihn auf der zugehörigen Asset-Seite und meldet ihn. Dazu wird ein roter durchgehender Kreis angezeigt, gegebenenfalls per E-Mail-Benachrichtigung und im Dashboard für Verstöße oder einem benutzerdefinierten Dashboard, das Verstöße meldet.
+
+Insight bietet einige Standard-Performance-Richtlinien, die Sie für die folgenden Objekte ändern oder löschen können, falls sie sich nicht auf Ihre Umgebung anwenden lassen:
+
+* Hypervisor
++
+Es gibt Richtlinien für ESX-Swapping und ESX-Auslastung.
+
+* Internes Volume und Volume
++
+Für jede Ressource gibt es zwei Latenzrichtlinien, eine mit Anmerkungen für Tier 1 und die andere mit Anmerkungen für Tier 2.
+
+* Port
++
+Es gibt eine Richtlinie für BB-Kredit Null.
+
+* Storage-Node
++
+Es gibt eine Richtlinie für die Node-Auslastung.
+
+* Virtual Machine
++
+Es gibt VM-Swapping und Richtlinien für ESX-CPU und -Speicher.
+
+* Datenmenge
++
+Es gibt Verzögerungen je Ebene und falsch ausgerichtete Volume-Richtlinien.
+
+

@@ -1,0 +1,123 @@
+---
+permalink: config-admin/dell-emc-ecs-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Dieser Datensammler erfasst Bestands- und Performancedaten von EMC ECS Speichersystemen. Für die Konfiguration benötigt der Data Collector eine IP-Adresse des ECS-Servers und ein Administrator-Level-Domänenkonto. 
+---
+= Dell EMC ECS-Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dieser Datensammler erfasst Bestands- und Performancedaten von EMC ECS Speichersystemen. Für die Konfiguration benötigt der Data Collector eine IP-Adresse des ECS-Servers und ein Administrator-Level-Domänenkonto.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Bestandsinformationen aus der EMC ECS-Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Cluser
+ a| 
+Storage
+
+
+
+ a| 
+Mandant
+ a| 
+Storage-Pool
+
+
+
+ a| 
+Eimer
+ a| 
+Internes Volumen
+
+
+
+ a| 
+Festplatte
+ a| 
+Festplatte
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* Eine IP-Adresse der ECS Management Console
+* Domain-Konto auf Administratorebene für das ECS-System
+* Port 443 (HTTPS): Erfordert eine ausgehende Verbindung zum TCP-Port 443 des ECS-Systems.
+* Für die Leistung können Sie den schreibgeschützten Benutzernamen und das Kennwort für den ssh/scp-Zugriff verwenden.
+* Für die Leistung ist Port 22 erforderlich.
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+ECS Host
+ a| 
+IP-Adressen oder vollständig qualifizierte Domänennamen des ECS-Systems
+
+
+
+ a| 
+ECS-Host-Port
+ a| 
+Port, der für die Kommunikation mit ECS Host verwendet wird
+
+
+
+ a| 
+ECS Anbieter-ID
+ a| 
+Anbieter-ID für ECS
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort wird für ECS verwendet
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (Minuten)
+ a| 
+Intervall zwischen Bestandsabstimmungen Der Standardwert ist 360 Minuten.
+
+|===

@@ -1,0 +1,38 @@
+---
+permalink: howto/custom-dashboard-roll-up.html 
+sidebar: sidebar 
+keywords:  
+summary: Die in Dashboard-Widgets angezeigten Daten werden aus den erfassten Datenpunkten gerollt, wodurch Flexibilität und Konzisilität in Ihren Dashboards ermöglicht werden. 
+---
+= Roll-up und Aggregation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die in Dashboard-Widgets angezeigten Daten werden aus den erfassten Datenpunkten gerollt, wodurch Flexibilität und Konzisilität in Ihren Dashboards ermöglicht werden.
+
+Die in jedem Widget angezeigten Daten werden aus den zugrunde liegenden Datenpunkten, die während der Erfassung erfasst wurden, aufgerollt. Wenn Sie beispielsweise ein Liniendiagramm mit Storage-IOPS im Laufe der Zeit haben, kann es sinnvoll sein, eine separate Zeile für jedes Ihrer Datacenter zu sehen, um einen schnellen Vergleich zu erzielen. Sie haben verschiedene Möglichkeiten, diese Daten einzurollen:
+
+* *AVG*: Zeigt jede Zeile als den _Mittelwert_ der zugrunde liegenden Daten an.
+* *Max*: Zeigt jede Zeile als _Maximum_ der zugrunde liegenden Daten an.
+* *Min*: Zeigt jede Zeile als _minimum_ der zugrunde liegenden Daten an.
+* *Sum*: Zeigt jede Zeile als die _Summe_ der zugrunde liegenden Daten an.
+
+
+Wählen Sie dazu in der Abfrage Ihres Widgets zunächst einen Asset-Typ (z. B. _Storage_) und eine Metrik (z. B. __IOPS - Tota__l) aus. Wählen Sie für *Roll-up* eine Rollup-Methode (wie _AVG_) und wählen Sie ein Attribut oder eine Anmerkung aus, mit dem die Daten zusammengefasst werden sollen (z. B. _Data Center_). Das Widget wird automatisch aktualisiert und zeigt eine Zeile für jedes Ihrer Rechenzentren an.
+
+Sie können auch wählen, _all_ der zugrunde liegenden Daten in das Diagramm oder die Tabelle zu Rollen. In diesem Fall erhalten Sie eine einzelne Zeile für jede Abfrage im Widget, die den Durchschnitt, die min, die max oder die Summe der gewählten Metrik für alle zugrunde liegenden Assets anzeigen wird.
+
+Wenn Sie einen Filter für die Abfrage eingerichtet haben, basieren die gerollten Daten auf den gefilterten Daten.
+
+Beachten Sie, dass Sie, wenn Sie ein Widget nach einem beliebigen Feld Rollen möchten (z. B. _Model_), weiterhin *Filtern nach* dieses Feld benötigen, um die Daten für dieses Feld richtig auf dem Diagramm oder der Tabelle anzuzeigen.
+
+*Daten aggregieren:* Sie können Ihre Zeitreihendiagramme (Linie, Bereich, etc.) weiter ausrichten, indem Sie Datenpunkte in Minuten-, Stunden- oder Tagesbuckets zusammenfassen, bevor diese Daten anschließend nach Attribut (falls ausgewählt) aufgerollt werden. Sie können die Datenpunkte nach dem Durchschnitt, Max, Min oder Summe oder nach dem letzten Datenpunkt, der während des ausgewählten Intervalls erfasst wurde, aggregieren. Um eine Aggregationsmethode zu wählen, klicken Sie in der Abfrage des Widgets auf *Weitere Optionen*.
+
+Das zulässige Mindestintervall beträgt zehn Minuten. Ein kleines Intervall kombiniert mit einem langen Zeitbereich kann zu einem "Aggregationsintervall führte zu zu zu vielen Datenpunkten" führen. Warnung. Falls Sie in einem kleinen Intervall den Zeitrahmen für das Dashboard auf 7 Tage verkürzen möchten, werden Sie diesen vielleicht feststellen. In diesem Fall erhöht Insight das Aggregationsintervall vorübergehend auf 1 Stunde, bis Sie einen kleineren Zeitrahmen auswählen.
+
+Sie können auch Daten in Balkendiagramm-Widget und ein-Wert-Widget aggregieren.
+
+Die meisten Asset-Zähler aggregieren standardmäßig auf _Avg_. Einige Zähler aggregieren standardmäßig auf _max_, _Min_ oder _sum_. Beispiel: Port-Fehler aggregieren nach _sum_ standardmäßig, wo Storage-IOPS-Aggregat zu _Avg_.

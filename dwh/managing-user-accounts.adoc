@@ -1,0 +1,33 @@
+---
+permalink: dwh/managing-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Benutzerkonten, Benutzerauthentifizierung und Benutzerautorisierung über das Data Warehouse-Portal konfigurieren. Jedem Benutzerkonto wird eine Rolle mit einer der folgenden Berechtigungsstufen zugewiesen. Die Anzahl der Benutzer wird durch die Anzahl der Reporting-Lizenzen begrenzt, die jeder Rolle zugeordnet sind. 
+---
+= Verwalten von Benutzerkonten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Benutzerkonten, Benutzerauthentifizierung und Benutzerautorisierung über das Data Warehouse-Portal konfigurieren. Jedem Benutzerkonto wird eine Rolle mit einer der folgenden Berechtigungsstufen zugewiesen. Die Anzahl der Benutzer wird durch die Anzahl der Reporting-Lizenzen begrenzt, die jeder Rolle zugeordnet sind.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster auf der linken Seite auf *Benutzerverwaltung*.
++
+image::../media/user-admin-dwh.gif[Benutzerverwaltung dwh]
+
+. Führen Sie einen der folgenden Schritte aus:
++
+** Um einen vorhandenen Benutzer zu bearbeiten, wählen Sie die Zeile für den Benutzer aus und klicken Sie auf *Bearbeiten*.
+** Um das Passwort eines Benutzers zu ändern, wählen Sie die Zeile für den Benutzer aus und klicken Sie auf *Passwort ändern*.
+** Um einen Benutzer zu löschen, wählen Sie die Zeile für den Benutzer aus und klicken auf *Löschen*
+
+
+. Um einen Benutzer zu aktivieren oder zu deaktivieren, wählen Sie die Zeile für den Benutzer aus und klicken Sie auf *Aktivieren* oder *Deaktivieren*.
+

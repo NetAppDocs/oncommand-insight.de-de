@@ -1,0 +1,14 @@
+---
+permalink: howto/best-practices-for-dashboards-and-widgets.html 
+sidebar: sidebar 
+keywords:  
+summary: Tipps und Tricks, damit Sie die leistungsstarken Funktionen von Dashboards und Widgets optimal nutzen können. 
+---
+= Best Practices für Dashboards und Widgets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tipps und Tricks, damit Sie die leistungsstarken Funktionen von Dashboards und Widgets optimal nutzen können.

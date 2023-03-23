@@ -1,0 +1,32 @@
+---
+permalink: howto/custom-dashboard-top-bottom-results.html 
+sidebar: sidebar 
+keywords:  
+summary: In einem Diagramm-Widget auf einem benutzerdefinierten Dashboard können Sie entweder die oberen oder unteren Ergebnisse für aufgerollte Daten anzeigen und die Anzahl der angezeigten Ergebnisse auswählen. In einem Tabellen-Widget können Sie die Anzahl der angezeigten Zeilen auswählen und nach einer beliebigen Spalte sortieren. 
+---
+= Anzeigen der Ergebnisse von oben/unten in Dashboard-Widgets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In einem Diagramm-Widget auf einem benutzerdefinierten Dashboard können Sie entweder die oberen oder unteren Ergebnisse für aufgerollte Daten anzeigen und die Anzahl der angezeigten Ergebnisse auswählen. In einem Tabellen-Widget können Sie die Anzahl der angezeigten Zeilen auswählen und nach einer beliebigen Spalte sortieren.
+
+
+
+== Diagramm-Widget oben/unten
+
+Wenn Sie in einem Diagramm-Widget Daten nach einem bestimmten Attribut einrollen möchten, haben Sie die Möglichkeit, entweder die oberen N- oder unteren N-Ergebnisse anzuzeigen. Beachten Sie, dass Sie die oberen oder unteren Ergebnisse nicht auswählen können, wenn Sie durch _all_-Attribute Rollen möchten.
+
+Sie können wählen, welche Ergebnisse angezeigt werden sollen, indem Sie im Feld *Anzeigen* oder *unten* der Abfrage * einen Wert aus der Liste auswählen.
+
+
+
+== Tabelle Widget zeigt Einträge an
+
+In einem TabellenWidget können Sie die Anzahl der in den Tabellenergebnissen angezeigten Ergebnisse auswählen. Sie können zwischen 5, 10, 20 oder 50 Ergebnissen wählen. Sie haben nicht die Möglichkeit, obere oder untere Ergebnisse zu wählen, da Sie in der Tabelle nach Bedarf aufsteigend oder absteigend sortieren können.
+
+Sie können die Anzahl der Ergebnisse auswählen, die in der Tabelle auf dem Dashboard angezeigt werden sollen, indem Sie einen Wert aus dem Feld *Einträge anzeigen* der Abfrage auswählen.
+
+Beachten Sie, dass je mehr Ergebnisse Sie anzeigen möchten, desto größer wird Ihr Widget, wenn Sie es auf dem Dashboard speichern. Sie können die Größe des Widgets nicht kleiner als die Anzahl der angezeigten Zeilen ändern.

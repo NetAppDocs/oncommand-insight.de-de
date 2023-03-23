@@ -1,0 +1,55 @@
+---
+permalink: config-admin/what-s-included-in-the-autosupport-package.html 
+sidebar: sidebar 
+keywords:  
+summary: Das AutoSupport-Paket enthält die Datenbanksicherung sowie erweiterte Informationen. 
+---
+= Inhalt des AutoSupport-Pakets (ASUP)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das AutoSupport-Paket enthält die Datenbanksicherung sowie erweiterte Informationen.
+
+Das AutoSupport-Paket umfasst Folgendes:
+
+* Bestandsdaten
+* Performance-Daten (wenn für die Aufnahme in ASUP ausgewählt)
+* Datenquellen und Einstellungen der Datenquelle
+* Integrationspakete
+* Fernbedienungseinheiten
+* Ethernet-Überwachungseinheiten
+* ASUP/Proxy-Einstellungen
+* Einstellungen für den Speicherort der Sicherung
+* Einstellungen für den Archivspeicherort
+* Benachrichtigungseinstellungen
+* Punktzahlen und Geräte für die Anomalieerkennung
+* Applikationseinstellungen für die Erkennung von Anomalien
+* Benutzer
+* Performance-Richtlinien
+* Geschäftseinheiten und Applikationen
+* Regeln und Einstellungen für die Geräteauflösung
+* Dashboards und Widgets
+* Dashboards und Widgets für die Asset-Seite
+* Abfragen
+* Anmerkungen und Anmerkungsregeln
+* Protokolle
+* Lizenzen Zu Haben
+* Erfassungs-/Datenquellstatus
+* MySQL-Status
+* Systeminformationen
+
+
+Das AutoSupport-Paket umfasst Folgendes nicht:
+
+* Einstellungen des Sicherheitstools/Vault-Informationen (gesichert über separaten CLI-Prozess)
+* Performance-Daten (wenn nicht für die Aufnahme in ASUP ausgewählt)
+
+
+[NOTE]
+====
+Wenn Sie sich dafür entscheiden, Performance-Daten in ASUP zu integrieren, werden auch die Daten der letzten sieben Tage berücksichtigt. Die übrigen Daten befinden sich im Archiv, wenn diese Funktion aktiviert ist. Archivdaten sind nicht in ASUP enthalten.
+
+====

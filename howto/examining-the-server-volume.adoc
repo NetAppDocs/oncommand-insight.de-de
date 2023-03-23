@@ -1,0 +1,18 @@
+---
+permalink: howto/examining-the-server-volume.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Volume-Landing-Page zeigt dieselbe bekannte IOPS-Spitze wie die zugehörigen Assets. 
+---
+= Das Volumen wird untersucht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Volume-Landing-Page zeigt dieselbe bekannte IOPS-Spitze wie die zugehörigen Assets.
+
+image::../media/server-vol-lp.gif[Server Vol. lp]
+
+Im Abschnitt „Ressourcen“ wird die VM für die Anwendung „Reisebuchung“ identifiziert. Klicken Sie auf den Link VM, um die Landing Page der VM anzuzeigen.

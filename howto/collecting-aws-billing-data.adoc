@@ -1,0 +1,22 @@
+---
+permalink: howto/collecting-aws-billing-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Kostendatenquelle Amazon AWS Cloud importiert die von Amazon erstellten Abrechnungsdaten als Integrationsdaten in Insight und steht damit dem Data Warehouse für die Berichterstellung zur Verfügung. 
+---
+= Erfassen und Reporting von AWS-Abrechnungsdaten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Kostendatenquelle Amazon AWS Cloud importiert die von Amazon erstellten Abrechnungsdaten als Integrationsdaten in Insight und steht damit dem Data Warehouse für die Berichterstellung zur Verfügung.
+
+Es besteht aus drei Teilen, um die Daten zu Cloud-Abrechnungen für Insight verfügbar zu machen:
+
+Überprüfen der AWS Kontoinformationen
+
+Konfigurieren der AWS Cloud-Kostendatenquelle in Insight zur Erfassung der Daten.
+
+Senden der Daten über ETL an Data Warehouse zur Verwendung in Berichten.

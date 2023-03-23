@@ -1,0 +1,137 @@
+---
+permalink: howto/custom-dashboard-example-with-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: Erstellen Sie ein benutzerdefiniertes Dashboard für die Storage-Analyse, das Variablen für Storage, Storage-Pool, Node, Tier, Auslastung und Latenz enthält. 
+---
+= Beispiel für ein Dashboard zur Auslastung von Storage-Nodes mit Variablen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Erstellen Sie ein benutzerdefiniertes Dashboard für die Storage-Analyse, das Variablen für Storage, Storage-Pool, Node, Tier, Auslastung und Latenz enthält.
+
+
+
+== Bevor Sie beginnen
+
+Es wird empfohlen, sich mit Dashboards in Insight vertraut zu machen, jedoch nicht erforderlich.
+
+
+
+== Über diese Aufgabe
+
+Mit dem folgenden Verfahren wird ein benutzerdefiniertes Dashboard zur Storage-Analyse erstellt, das Variablen für Storage, Storage-Pool, Node, Tier, Auslastung und Latenz verwendet. Variablen im folgenden Beispiel werden verwendet, um die angezeigten Assets oder Metriken über ein oder mehrere Widgets zu filtern, die auf dem Dashboard verfügbar sind. Die Widgets, die diese Variablen als Filter verwenden, werden nach Bedarf mit gefiltertem Inhalt aktualisiert, entsprechend den Werten, die in den Variablenfeldern im Dashboard eingegeben wurden. So können Sie schnell mehrere Diagramme und Diagramme filtern, um einen bestimmten Bereich von Interesse zu finden.
+
+Wenn Sie die Schritte in diesem Beispiel befolgen, erstellen Sie ein Dashboard wie das folgende. Sie können diese Widgets ändern oder eine beliebige Anzahl zusätzlicher Widgets hinzufügen, um die von Ihnen ausgewählten Daten hervorzuheben.
+
+image::../media/node-dashboard-example-2.gif[Node-Dashboard – Beispiel 2]
+
+
+
+== Schritte
+
+. Erstellen Sie ein neues Dashboard und nennen Sie es „`Analyse: Storage Overview`“ – oder etwas, das ebenso aussagekräftig ist.
+. Klicken Sie auf die Dropdown-Liste *Variable* und wählen Sie den Variablentyp *Text*. Standardmäßig wird die Variable _€21.1_ genannt. Klicken Sie auf _ € var1_, um den Namen zu bearbeiten, und ändern Sie ihn in _ € Storage_. Klicken Sie dann auf das Häkchen, um die Variable zu speichern. Wiederholen Sie diese Schritte, um Textvariablen für _€Knoten_, _€Pool_ und _€Volumen_ zu erstellen.
+. Wiederholen Sie den oben genannten Prozess, um Variablen vom Typ *Anzahl* mit den Namen _ USD Utilization_ und _ USD Latenz_ zu erstellen.
+. Klicken Sie auf die Dropdown-Liste *Variable* und suchen Sie nach der _Tier_-Anmerkung. Wählen Sie diese Option aus, um eine Variable mit dem Namen „ _ USD -Stufe_“ zu erstellen.
++
+Sie können Variablen jederzeit hinzufügen, es ist jedoch einfacher, sie im Voraus zu erstellen und somit für alle Widgets verfügbar zu machen, während Sie sie erstellen.
+
+. Fügen Sie ein Widget hinzu, indem Sie auf das Dropdown-Menü *Widget* klicken und entweder ein **Liniendiagramm**oder *Bereichsdiagramm*-Widget auswählen. Benennen Sie das Widget „`Node Utilization`“. Klicken Sie auf den Asset-Typ *Storage* und ändern Sie ihn in *Storage Node*. Wählen Sie *Auslastung - Gesamt* für die Diagrammdaten.
+. Klicken Sie auf die Schaltfläche *Filtern nach +*, um einen Filter hinzuzufügen. Suchen und wählen Sie *Storage* aus, klicken Sie dann auf *any* und wählen Sie die Variable _€Storage_ aus.
+. Klicken Sie auf die Schaltfläche**+**, um einen weiteren Filter für *Name* hinzuzufügen. Setzen Sie die Variable auf _€Knoten_.
++
+Dem Anmerkungsnamensfilter können verschiedene Variablen zugewiesen werden. Verwenden Sie je nach Objekt im Widget das Name/Variablenpaar auf der untersten Ebene. Beispiel:
+
++
+** Sie können die Variable _€Knoten_ dem Filter *Name* für ein Knoten-fokussiertes Widget zuweisen.
+** Sie können die Variable _€Pool_ dem Filter *Name* für ein Pool-orientiertes Widget zuweisen.
+
+
+. Klicken Sie auf die Schaltfläche**+**, um einen weiteren Filter für *Utilization - Total (%)* hinzuzufügen. Setzen Sie die Variable auf _>= € Utilization_.
+. Klicken Sie auf das Feld *X* nach dem**Roll Up**, um das Feld auszublenden.
+. Wählen Sie *Top 5 anzeigen* und klicken Sie auf *Speichern*, um das Widget zu speichern und zu Ihrem Dashboard zurückzukehren.
++
+Ihr Widget sollte so aussehen:
+
++
+image::../media/widget-node-util-1.gif[Widget-Knoten util 1]
+
+. Fügen Sie Ihrem Dashboard ein weiteres Linien- oder Bereichsdiagramm-Widget hinzu. Wählen Sie *Storage Node* als Asset-Typ und *Latency - Total* als Metrik zum Diagramm aus.
+. Klicken Sie auf die Schaltfläche *Filtern nach +*, um Filter für *Speicher: € Speicher* und *Name: € Knoten* hinzuzufügen.
+. Fügen Sie einen Filter für *Latency - Total* hinzu und wählen Sie die Variable *€llatenz* aus.
+. Benennen Sie das Widget „`Node Latency`“, und speichern Sie es.
+. Sie können unterstützende Tabellen hinzufügen, um weitere Details für die erstellten Diagramme anzuzeigen, z. B. maximale oder durchschnittliche Knotenauslastung. Fügen Sie dem Dashboard ein Widget *Tabelle* hinzu und wählen Sie *Storage Node* als Asset-Typ aus. Erstellen Sie Filter für *Storage: € Storage*, *Name: € Node* und *Utilization – Total: € Utilization*.
+. Fügen Sie der Tabelle Spalten für *Auslastung - Max*, *Auslastung - Gesamt* oder andere gewünschte Spalten hinzu.
+. Benennen Sie das Widget „`Node Peak and Average Utilization`“, und speichern Sie es.
++
+image::../media/nodeutiltablesettings.gif[Nodeutiltettings]
+
+. Wiederholen Sie die Schritte, um eine Tabelle für Node Latency zu erstellen, wobei *Latency - max*, *Latency - Total* oder andere Spalten wie gewünscht angezeigt werden.
+. Um Ihr Dashboard abzurunden, können Sie für einige oder alle der folgenden Elemente zusätzliche Diagramm- und Tabellen-Widgets hinzufügen:
+
+
+|===
+
+
+| Diagramm | Tabelle 
+
+
+ a| 
+Storage-Pool-Auslastung
+ a| 
+Storage Pool: Maximale Auslastung und durchschn. Auslastung
+
+
+
+ a| 
+Durchsatz Im Storage Pool
+ a| 
+Storage Pool: Höchster und durchschn. Durchsatz
+
+
+
+ a| 
+Volume-Latenz
+ a| 
+Volume-Spitzenlatenz und durchschn. Latenz
+
+
+
+ a| 
+Volume IOPS
+ a| 
+Maximale und durchschn. IOPS des Volume
+
+|===
+. Sie können die Widgets in jeder gewünschten Position auf Ihrem Dashboard verschieben und ihre Größe ändern. Wenn Sie fertig sind, achten Sie darauf, das Dashboard zu speichern.
++
+Ihr letztes Dashboard sieht in etwa so aus:
+
++
+image::../media/node-dashboard-example-2.gif[Node-Dashboard – Beispiel 2]
+
+. Sie können die Variablen verwenden, um sich auf bestimmte Assets in Ihrem Dashboard zu konzentrieren. Wenn Sie Werte in die Variablenfelder eingeben, werden die Widgets automatisch aktualisiert, um diese Variablen wiederzugeben. Wenn Sie beispielsweise „`15`“ in das Feld „Variable für die Verwendung von USD eingeben, werden für die Widgets, die diese Variable verwenden, nur Assets mit Gesamtauslastung >= 15 % angezeigt.
++
+Widget „Node-Auslastung“ mit den obersten 5 Nodes:
+
++
+image::../media/nodeutil-unfiltered.gif[Nodeutil ungefiltert]
+
++
+Widget „Node-Auslastung“ mit mindestens 15 % Auslastung:
+
++
+image::../media/nodeutil-filtered.gif[Nodeutil gefiltert]
+
+. Beachten Sie beim Erstellen Ihrer Widgets Folgendes:
++
+** Die Variable „USD“ wirkt sich nur auf Ressourcen aus, die mit der Anmerkung *Tier* versehen werden.
+** Nicht alle Filter wirken sich auf alle Widgets aus, je nachdem, ob das Widget die angegebene(n) Variable(n) akzeptiert.
+** Zahlenvariablen werden als „`größer oder gleich`“ des angegebenen Werts angewendet. Beachten Sie, dass jede Variable als Filter für jedes Widget auf jeder Ebene einer Speicherhierarchie verwendet werden kann, sofern die Variable für das Asset gültig ist, für das das Widget ausgeführt wird. Wenn Sie von einer Knotenebene auf einen Speicherpool zu einem Widget „Volume“ wechseln, sind weitere Variablen für die Zuweisung als Filter vorhanden. So können beispielsweise in einem Widget auf Storage Node-Ebene die Variablen _Storage_ und _Name_ als Filter zugewiesen werden. Auf der Ebene des Speicherpools stehen alle _Storage_, _Nodes_, _Storage Pools_ und _Name_ zur Verfügung. Weisen Sie Ihre Variablen nach Bedarf zu und verwenden Sie die Variable „US-Dollar-Name“ auf der untersten Ebene im Stapel. Dadurch kann Ihre Namensvariable nach dem tatsächlichen Namen des Assets filtern, für das das Widget ausgeführt wird.
+
+
+

@@ -1,0 +1,23 @@
+---
+permalink: dwh/preparing-annotations-in-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Anmerkungen müssen in OnCommand Insight vorbereitet werden, bevor sie in das Data Warehouse importiert werden können. 
+---
+= Anmerkungen werden in OnCommand Insight vorbereitet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Anmerkungen müssen in OnCommand Insight vorbereitet werden, bevor sie in das Data Warehouse importiert werden können.
+
+
+
+== Schritte
+
+. Melden Sie sich beim OnCommand Insight-Portal als Administrator an `+https://hostname+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight installiert ist.
+. Klicken Sie auf *Admin* > *Troubleshooting*. Klicken Sie unten auf der Seite auf *Erweiterte Fehlerbehebung*.
+. Klicken Sie auf der Registerkarte *Aktionen* auf *DWH-Anmerkungen aktualisieren (gelöscht einbeziehen)*.
+

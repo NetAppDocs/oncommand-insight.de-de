@@ -1,0 +1,14 @@
+---
+permalink: config-admin/asset-page-sections.html 
+sidebar: sidebar 
+keywords:  
+summary: Auf einer Anlagenseite werden mehrere Abschnitte mit Informationen angezeigt, die für die Anlage relevant sind. Die angezeigten Abschnitte hängen vom Typ des Assets ab. 
+---
+= Abschnitte der Anlagenseite
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf einer Anlagenseite werden mehrere Abschnitte mit Informationen angezeigt, die für die Anlage relevant sind. Die angezeigten Abschnitte hängen vom Typ des Assets ab.

@@ -1,0 +1,51 @@
+---
+permalink: config-admin/editing-or-removing-annotations-from-assets-in-bulk.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können mehrere Anmerkungen für Anlagen bearbeiten oder mehrere Anmerkungen aus Anlagen entfernen, indem Sie eine Abfrage verwenden, anstatt sie manuell bearbeiten oder entfernen zu müssen. 
+---
+= Bearbeiten oder Entfernen mehrerer Anmerkungen aus Anlagen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können mehrere Anmerkungen für Anlagen bearbeiten oder mehrere Anmerkungen aus Anlagen entfernen, indem Sie eine Abfrage verwenden, anstatt sie manuell bearbeiten oder entfernen zu müssen.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen bereits eine Abfrage erstellt haben, die alle Assets sucht, die Sie bearbeiten möchten.
+
+
+
+== Schritte
+
+. Klicken Sie auf *Abfragen* und wählen Sie *Alle Anfragen anzeigen*.
++
+Die Seite Abfragen wird angezeigt.
+
+. Klicken Sie auf den Namen der Abfrage, die die Assets sucht.
++
+Die Liste der mit der Abfrage verknüpften Assets wird angezeigt.
+
+. Wählen Sie die gewünschten Assets in der Liste aus, oder klicken Sie auf image:../media/select-assets.gif[""] Um *Alle* auszuwählen.
++
+Die Schaltfläche *actions* wird angezeigt.
+
+. Um den Assets eine Anmerkung hinzuzufügen oder den Wert einer Anmerkung zu bearbeiten, die den Assets zugewiesen ist, klicken Sie auf image:../media/actions-button.gif[""], Und wählen Sie *Anmerkung bearbeiten*.
++
+.. Klicken Sie auf *Anmerkung* und wählen Sie eine Anmerkung aus, für die Sie den Wert ändern möchten, oder wählen Sie eine neue Anmerkung aus, um sie allen Anlagen zuzuweisen.
+.. Klicken Sie auf *Wert* und wählen Sie einen Wert für die Anmerkung aus.
+.. Klicken Sie Auf *Speichern*.
+
+
+. Um eine den Assets zugewiesene Anmerkung zu entfernen, klicken Sie auf image:../media/actions-button.gif[""], Und wählen Sie *Anmerkung entfernen*.
++
+.. Klicken Sie auf *Anmerkung* und wählen Sie die Anmerkung aus, die Sie aus den Assets entfernen möchten.
+.. Klicken Sie Auf *Löschen*.
+
+
+

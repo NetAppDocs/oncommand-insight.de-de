@@ -1,0 +1,222 @@
+---
+permalink: config-admin/emc-vplex-cli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Für die Konfiguration erfordert diese Datenquelle eine IP-Adresse des VPLEX-Servers und ein Domänenkonto auf Administratorebene. 
+---
+= EMC VPLEX-Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für die Konfiguration erfordert diese Datenquelle eine IP-Adresse des VPLEX-Servers und ein Domänenkonto auf Administratorebene.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Bestandsinformationen aus der EMC VPLEX-Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Cluster
+ a| 
+Storage
+
+
+
+ a| 
+Motor
+ a| 
+Storage-Node
+
+
+
+ a| 
+Gerät, System Erweitern
+ a| 
+Back-End Storage-Pool
+
+
+
+ a| 
+Virtual Volume
+ a| 
+Datenmenge
+
+
+
+ a| 
+Front-End-Port, Back-End-Port
+ a| 
+Port
+
+
+
+ a| 
+Verteiltes Gerät
+ a| 
+Storage-Synchronisierung
+
+
+
+ a| 
+Übersicht Storage
+ a| 
+Volume Map, Volume Mask
+
+
+
+ a| 
+Storage Volume
+ a| 
+Back-End LUN
+
+
+
+ a| 
+ITLS
+ a| 
+Back-End-Pfad
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* Eine IP-Adresse des VPLEX-Servers
+* Domänenkonto auf Administratorebene für den VPLEX-Server
+* Port 443 (HTTPS): Erfordert eine ausgehende Verbindung zum TCP-Port 443 auf der VPLEX-Managementstation.
+* Für die Leistung können Sie den schreibgeschützten Benutzernamen und das Kennwort für den ssh/scp-Zugriff verwenden.
+* Für die Leistung ist Port 22 erforderlich.
+* Überprüfen Sie den Zugriff mit `telnet` Zu Port 443. Für einen anderen Port als den Standardport, mit jedem Browser verwenden
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+IP-Adresse der VPLEX Management Console
+ a| 
+IP-Adresse oder vollqualifizierter Domänenname der VPLEX Management Console
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für VPLEX-CLI
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort, das für die VPLEX-CLI verwendet wird
+
+
+
+ a| 
+Remote-IP-Adresse der Performance der VPLEX-Managementkonsole
+ a| 
+Performance Remote IP-Adresse der VPLEX Management Console
+
+
+
+ a| 
+Performance Remote User Name
+ a| 
+Performance Remote-Benutzername der VPLEX Management Console
+
+
+
+ a| 
+Kennwort Für Das Remote-Netzwerk Der Performance
+ a| 
+Remote-Kennwort für die Performance der VPLEX Management Console
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Kommunikations-Port
+ a| 
+Für VPLEX-CLI verwendeter Port
+
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 20 Minuten)
+
+
+
+ a| 
+Verbindungs-Timeout (Sek.)
+ a| 
+Verbindungs-Timeout (Standard: 60 Sekunden)
+
+
+
+ a| 
+Anzahl Wiederholungen
+ a| 
+Anzahl der Versuche für einen erneuten Versuch in der Bestandsaufnahme
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abfragen (Standard: 600 Sekunden)
+
+
+
+ a| 
+Performance SSH-Prozess Wartezeit (Sek.)
+ a| 
+SSH-Prozess-Timeout (Standard: 600 Sekunden)
+
+
+
+ a| 
+SSH-Banner-Wartezeit (Sek.)
+ a| 
+SSH Banner Wait Timeout (Standard: 20 Sekunden)
+
+
+
+ a| 
+Anzahl Wiederholungen
+ a| 
+Anzahl der Wiederholversuche für die Performance
+
+|===

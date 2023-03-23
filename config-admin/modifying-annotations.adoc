@@ -1,0 +1,55 @@
+---
+permalink: config-admin/modifying-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können den Namen, die Beschreibung oder die Werte für eine Anmerkung ändern oder eine Anmerkung löschen, die Sie nicht mehr verwenden möchten. 
+---
+= Anmerkungen ändern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Namen, die Beschreibung oder die Werte für eine Anmerkung ändern oder eine Anmerkung löschen, die Sie nicht mehr verwenden möchten.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web-Benutzeroberfläche an.
+. Klicken Sie auf *Verwalten* und wählen Sie *Anmerkungen*.
++
+Die Seite Anmerkungen wird angezeigt.
+
+. Bewegen Sie den Cursor über die Anmerkung, die Sie bearbeiten möchten, und klicken Sie auf image:../media/edit-recipient-icon.gif[""].
++
+Das Dialogfeld * Anmerkung bearbeiten* wird angezeigt.
+
+. Sie können die folgenden Änderungen an einer Anmerkung vornehmen:
++
+.. Ändern Sie den Namen, die Beschreibung oder beides.
++
+Beachten Sie jedoch, dass Sie für den Namen und die Beschreibung maximal 255 Zeichen eingeben können und Sie den Typ einer Anmerkung nicht ändern können. Bei Anmerkungen auf Systemebene können Sie den Namen oder die Beschreibung nicht ändern. Sie können jedoch Werte hinzufügen oder entfernen, wenn es sich um einen Listentyp handelt.
+
++
+[NOTE]
+====
+Wenn eine benutzerdefinierte Anmerkung im Data Warehouse veröffentlicht wird und Sie sie umbenennen, gehen die historischen Daten verloren.
+
+====
+.. Um einer Anmerkung des Listentyps einen weiteren Wert hinzuzufügen, klicken Sie auf image:../media/add-annotation-icon.gif[""].
+.. Um einen Wert aus einer Anmerkung des Listentyps zu entfernen, klicken Sie auf image:../media/trash-can-query.gif[""].
++
+Sie können einen Anmerkungswert nicht löschen, wenn dieser Wert einer Anmerkung zugeordnet ist, die in einer Anmerkungsregel, einer Abfrage oder einer Leistungsrichtlinie enthalten ist.
+
+
+
+. Klicken Sie auf *Speichern*, wenn Sie fertig sind.
+
+
+
+
+== Nachdem Sie fertig sind
+
+Wenn Sie Anmerkungen im Data Warehouse verwenden möchten, müssen Sie eine Aktualisierung der Anmerkungen im Data Warehouse erzwingen. Weitere Informationen finden Sie im _OnCommand Insight Data Warehouse Administration Guide_.

@@ -1,0 +1,200 @@
+---
+permalink: reporting/oncommand-insight-data-model-descriptions.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight umfasst mehrere Datenmodelle, aus denen Sie entweder vordefinierte Berichte auswählen oder Ihren eigenen benutzerdefinierten Bericht erstellen können. 
+---
+= OnCommand Insight Datenmodelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight umfasst mehrere Datenmodelle, aus denen Sie entweder vordefinierte Berichte auswählen oder Ihren eigenen benutzerdefinierten Bericht erstellen können.
+
+Jedes Datenmodell enthält einen einfachen Data Marts und einen erweiterten Data Marts:
+
+* Der einfache Data Mart bietet schnellen Zugriff auf die am häufigsten verwendeten Datenelemente und umfasst nur den letzten Snapshot der Data Warehouse-Daten; er enthält keine historischen Daten.
+* Advanced Data Mart bietet alle Werte und Details, die aus dem einfachen Data Mart zur Verfügung stehen, und beinhaltet den Zugriff auf historische Datenwerte.
+* *Kapazitätsdatenmodell*
++
+Mit können Sie Fragen zur Storage-Kapazität, Auslastung des Filesystems, zur internen Volume-Kapazität, Port-Kapazität, qtree-Kapazität, beantworten. Und Kapazität von Virtual Machines (VMs). Das Kapazitätsdatenmodell ist ein Container für mehrere Kapazitätsmodelle. Mit diesem Datenmodell können Sie Berichte erstellen, die verschiedene Arten von Fragen beantworten:
+
++
+** *Storage- und Storage-Pool-Kapazitätsdatenmodell*
++
+Ermöglicht das Antworten auf Fragen zur Ressourcenplanung von Storage-Kapazitäten, einschließlich Storage- und Storage-Pools, und umfasst sowohl physische als auch virtuelle Storage-Pool-Daten. Dieses einfache Datenmodell unterstützt Sie bei der Beantwortung von Fragen hinsichtlich Kapazität im Boden und der Kapazitätsauslastung von Storage-Pools nach Tier und Datacenter im Laufe der Zeit.
+
++
+Neue Kapazitätsberichte sind die Basis für ein Datenmodell, da es sich um ein einfacheres, zielgerichtetes Datenmodell handelt. Sie können Fragen wie die folgenden beantworten, indem Sie dieses Datenmodell verwenden:
+
++
+*** Welches ist der voraussichtliche Termin für die Erreichung der Kapazitätsgrenze von 80 % meines physischen Storage?
+*** Wie hoch ist die physische Storage-Kapazität auf einem Array für eine bestimmte Tier?
+*** Wie groß ist meine Speicherkapazität nach Hersteller und Familie sowie nach Rechenzentrum?
+*** Welchen Trend geht zur Storage-Auslastung bei einem Array für alle Tiers?
+*** Welches sind meine 10 wichtigsten Storage-Systeme bei höchster Auslastung?
+*** Wie sieht der Trend zur Storage-Auslastung der Storage Pools aus?
+*** Wie viel Kapazität ist bereits zugewiesen?
+*** Welche Kapazität ist für die Zuweisung verfügbar?
+
+
+** *Datenmodell für die Auslastung des Dateisystems*
++
+Ermöglicht die Beantwortung von Fragen zur Auslastung des Dateisystems. Dieses Datenmodell bietet eine Übersicht über die Kapazitätsauslastung durch Hosts auf Filesystem-Ebene. Administratoren können zugewiesene und genutzte Kapazität pro Filesystem ermitteln, den Typ des Filesystems festlegen und Trendstatistiken nach Filesystem-Typ ermitteln. Folgende Fragen können Sie mit diesem Datenmodell beantworten:
+
++
+*** Wie groß ist das Filesystem?
+*** Wo sind die Daten aufbewahrt und wie wird auf sie zugegriffen, z. B. lokal oder SAN?
+*** Was sind historische Trends für die Kapazität des Filesystems? Und was können wir dann, basierend auf diesen, für zukünftige Anforderungen erwarten?
+
+
+** *Kapazitäts-Datenmodell des internen Volumes*
++
+Hier können Sie Fragen zur verwendeten Kapazität des internen Volume, zu der zugewiesenen Kapazität und zur Kapazitätsauslastung beantworten:
+
++
+*** Welche internen Volumes haben eine Auslastung über einem vordefinierten Schwellenwert?
+*** Welche internen Volumes besteht in der Gefahr, dass die Kapazität aufgrund von Trends nicht mehr verfügbar ist?
+*** Welche Kapazität haben wir im Vergleich zur zugewiesenen Kapazität in unseren internen Volumes?
+
+
+** *Datenmodell der Portkapazität*
++
+Mit dieser Option können Sie Fragen zu Switch-Port-Konnektivität, Portstatus und Portgeschwindigkeit im Laufe der Zeit beantworten. Sie können Fragen wie die folgenden beantworten, um die Anschaffung neuer Switches zu planen:
+
++
+*** Wie kann ich eine Portverbrauchsprognose erstellen, die Ressourcenverfügbarkeit (Port) prognostiziert (nach Rechenzentrum, Switch-Anbieter und Port-Geschwindigkeit)?
+*** Welche Ports werden wahrscheinlich zu Kapazitätsknapp, wenn es um Datengeschwindigkeit, Datacenter, Anbieter und Anzahl der Host- und Storage-Ports geht?
+*** Welche Trends haben die Switch-Port-Kapazität im Laufe der Zeit?
+*** Welche Port-Geschwindigkeiten werden verwendet?
+*** Welche Art von Port-Kapazität ist erforderlich und welches Unternehmen wird gerade dabei sein, einen bestimmten Port-Typ oder einen bestimmten Anbieter zu nutzen?
+*** Wie lange kann diese Kapazität optimal erworben und verfügbar gemacht werden?
+
+
+** *Qtree Kapazitätsdatenmodell*
++
+Ermöglicht die Trend-Nutzung von qtree (mit Daten wie genutzter bzw. zugewiesener Kapazität) im Laufe der Zeit. Sie können die Informationen nach verschiedenen Dimensionen anzeigen, z. B. nach Geschäftseinheit, Applikation, Stufe und Service-Level. Folgende Fragen können Sie mit diesem Datenmodell beantworten:
+
++
+*** Wie hoch ist die genutzte Kapazität von qtrees im Vergleich zu den Limits, die pro Applikation oder Geschäftseinheit gesetzt werden?
+*** Welche Trends haben wir bei unserer genutzten und freien Kapazität, sodass wir Kapazitäten planen können?
+*** Welche Geschäftseinheiten nutzen die größte Kapazität?
+*** Welche Applikationen belegen die größte Kapazität?
+
+
+** *Modell der VM-Kapazitätsdaten*
++
+Ermöglicht Ihnen, Berichte über Ihre virtuelle Umgebung und deren Kapazitätsauslastung zu erstellen. Mit diesem Datenmodell können Sie Änderungen des Kapazitätsverbrauchs über die Zeit für VMs und Datenspeicher berichten. Das Datenmodell bietet außerdem Thin Provisioning und Chargeback-Daten für Virtual Machines.
+
++
+*** Wie kann ich das Kapazitätszuordnungsberechnung basierend auf der Kapazität bestimmen, die für VMs und Datenspeicher bereitgestellt wird?
+*** Welche Kapazitäten werden nicht von VMs genutzt, und welcher Anteil ungenutzte Kapazitäten ist frei, verwaist oder anderer?
+*** Welche Anschaffungen müssen wir anhand von Verbrauchstrends erwerben?
+*** Wie hoch sind meine Storage-Effizienzeinsparungen durch Storage Thin Provisioning und Deduplizierungstechnologien? Die Kapazitäten im VM-Kapazitätsdatenmodell werden von virtuellen Festplatten (VMDKs) genutzt. Das bedeutet, dass die bereitgestellte Größe einer VM mit dem VM-Kapazitätsdatenmodell die Größe der virtuellen Festplatten entspricht. Dies unterscheidet sich von der bereitgestellten Kapazität in der Ansicht der Virtual Machines in OnCommand Insight, in der die bereitgestellte Größe für die VM selbst angezeigt wird.
+
+
+** *Datenmodell der Volume-Kapazität*
++
+Ermöglicht die Analyse sämtlicher Volumes in Ihrer Umgebung und die Organisation von Daten nach Anbieter, Modell, Tier, Service Level und Datacenter. Sie können die Kapazität für verwaiste Volumes, ungenutzte Volumes und Datensicherungs-Volumes (zur Replizierung genutzt) anzeigen. Außerdem können Sie unterschiedliche Volume-Technologien (iSCSI oder FC) sehen und virtuelle Volumes mit nicht-virtuellen Volumes vergleichen, um Probleme bei der Array-Virtualisierung zu beheben. Sie können Fragen wie die folgenden mit diesem Datenmodell beantworten:
+
++
+*** Welche Volumes haben eine Auslastung, die über einem vordefinierten Schwellenwert liegt?
+*** Welchen Trend geht in meinem Datacenter hinsichtlich verwaister Volume-Kapazität?
+*** Wie viel meiner Datacenter-Kapazität ist virtualisiert oder Thin Provisioning?
+*** Wie viel meiner Datacenter-Kapazität muss für die Replizierung reserviert werden?
+
+
+
+
+* *Chargeback-Datenmodell*
++
+Ermöglicht das Antworten auf Fragen zur genutzten Kapazität und zugewiesenen Kapazität in Storage-Ressourcen (Volumes, interne Volumes und qtrees). Dieses Datenmodell liefert Informationen zur Kostenverrechnung und Transparenz der Storage-Kapazität nach Hosts, Applikationen und Geschäftseinheiten und schließt sowohl aktuelle als auch historische Daten ein. Berichtsdaten können nach Service Level und Storage Tier kategorisiert werden.
+
++
+Sie können dieses Datenmodell verwenden, um Berichte zur Rückberechnung zu erstellen, indem Sie die Menge an Kapazität ermitteln, die von einer Geschäftseinheit verwendet wird. Dieses Datenmodell ermöglicht Ihnen die Erstellung einheitlicher Berichte für verschiedene Protokolle (einschließlich NAS, SAN, FC und iSCSI).
+
++
+** Bei Storage ohne interne Volumes werden Berichte zur Kostenverrechnung nach Volumes angezeigt.
+** Zur Speicherung mit internen Volumes:
++
+*** Wenn den Volumes Geschäftseinheiten zugewiesen sind, werden Chargeback-Berichte nach Volumes angezeigt.
+*** Wenn Geschäftseinheiten nicht Volumes zugewiesen, aber qtrees zugewiesen sind, werden Chargeback-Berichte durch qtrees angezeigt.
+*** Wenn Geschäftseinheiten nicht Volumes zugewiesen und nicht qtrees zugewiesen sind, wird das interne Volume durch Chargeback-Berichte angezeigt.
+*** Die Entscheidung, ob die Kostenzuordnung nach Volume, qtree oder internem Volume angezeigt werden soll, wird für jedes interne Volume getroffen. Somit ist es möglich, dass verschiedene interne Volumes im selben Storage Pool die Chargeback auf verschiedenen Ebenen zur Verfügung stehen. Kapazitätfakten werden nach einem Standard-Zeitintervall gelöscht. Weitere Informationen finden Sie unter Data Warehouse-Prozesse.
+
+
+
+
++
+Berichte, die das Chargeback-Datenmodell verwenden, können andere Werte anzeigen als die Berichte, die das Storage Capacity-Datenmodell verwenden.
+
++
+** Bei Storage Arrays, die keine NetApp Storage-Systeme sind, bleiben die Daten beider Datenmodelle gleich.
+** Bei Storage-Systemen von NetApp und Celerra verwendet das Chargeback-Datenmodell eine einzelne Schicht (von Volumes, internen Volumes oder qtrees), um die Gebühren zu senken. Das Storage-Kapazitätsdatenmodell nutzt dagegen mehrere Schichten (von Volumes und internen Volumes), um ihre Gebühren zu sichern.
+
+
+* *Bestandsdatenmodell*
++
+Mit Hilfe von Antworten auf Fragen zu Bestandsressourcen, einschließlich Hosts, Speichersystemen, Switches, Festplatten, Tapes Qtrees, Quotas, Virtual Machines und Server sowie generische Geräte. Das Bestandsdatenmodell enthält mehrere Unterverzeichnis, mit denen Sie Informationen zu Replikationen, FC-Pfaden, iSCSI-Pfaden, NFS-Pfaden und Verstößen anzeigen können. Das Bestandsdatenmodell enthält keine historischen Daten. Fragen, die Sie mit diesem Data Mart beantworten können, können die folgenden sein:
+
++
+** Welche Assets habe ich und wo sind sie?
+** Wer nutzt die Ressourcen?
+** Welche Gerätetypen habe ich und welche Komponenten sind diese Geräte?
+** Wie viele Hosts je Betriebssystem habe ich und wie viele Ports sind auf diesen Hosts vorhanden?
+** Welche Storage-Arrays pro Anbieter gibt es in den einzelnen Datacentern?
+** Über wie viele Switches je Anbieter verfügt ich in jedem Datacenter?
+** Wie viele Ports sind nicht lizenziert?
+** Welche Tapes von welchem Anbieter verwenden wir und wie viele Ports sind auf jedem Tape vorhanden?
+** Werden alle generischen Geräte identifiziert, bevor wir mit der Arbeit an Berichten beginnen?
+** Welche Pfade sind zwischen den Hosts und Storage Volumes oder Tapes?
+** Welche Pfade gibt es zwischen generischen Geräten und Speicher-Volumes oder Bändern?
+** Wie viele Verstöße gegen die einzelnen Typen gibt es pro Datacenter?
+** Was sind die Quell- und Ziel-Volumes für jedes replizierte Volume?
+** Erhalte ich Firmware-Inkompatibilitäten oder falsche Portgeschwindigkeiten zwischen Fibre Channel Host HBAs und Switches?
+
+
+* *Modell der Leistungsdaten*
++
+Antworten auf Fragen zur Performance von Volumes, Applikations-Volumes, internen Volumes, Switches, Applikationen VMs, VMDKs, ESX und VM, Hosts und Applikations-Nodes. Mit diesem Datenmodell können Sie Berichte erstellen, die verschiedene Arten von Fragen zum Performance-Management beantworten:
+
++
+** Auf welche Volumes oder internen Volumes wurde in einem bestimmten Zeitraum nicht zugegriffen?
+** Können wir mögliche Fehlkonfigurationen beim Storage für eine (nicht verwendete) Applikation ermitteln?
+** Wie sieht das Zugriffsverhalten einer Applikation insgesamt aus?
+** Werden für eine bestimmte Applikation entsprechend Tiered Volumes zugewiesen?
+** Könnten wir für eine Applikation, die derzeit läuft, einen günstigeren Storage nutzen, ohne die Applikations-Performance zu beeinträchtigen?
+** Welche Applikationen bieten mehr Zugriffe auf den derzeit konfigurierten Storage? Wenn Sie die Switch-Leistungstabellen verwenden, können Sie folgende Informationen abrufen:
+** Ist mein Host-Verkehr durch verbundene Ports ausgeglichen?
+** Welche Switches oder Ports weisen eine hohe Anzahl an Fehlern auf?
+** Welche Switches werden am häufigsten an der Port-Performance verwendet?
+** Welche nicht ausgelasteten Switches basieren auf der Port-Performance?
+** Welcher Durchsatz beim Trending des Hosts basiert auf der Port-Performance?
+** Wie hoch ist die Performance-Auslastung der letzten X Tage für einen angegebenen Host, ein Storage-System, ein Tape oder Switch?
+** Welche Geräte erzeugen Datenverkehr auf einem bestimmten Switch (z. B. welche Geräte sind für den Einsatz eines stark genutzten Switches verantwortlich)?
+** Wie hoch ist der Durchsatz für einen bestimmten Geschäftsbereich in unserer Umgebung? Wenn Sie die Tabellen zur Festplatten-Performance verwenden, erhalten Sie folgende Informationen:
+** Wie ist der Durchsatz für einen angegebenen Storage-Pool auf Basis von Festplatten-Performance-Daten?
+** Was ist der am höchsten genutzte Storage-Pool?
+** Wie hoch ist die durchschnittliche Festplattenauslastung für einen bestimmten Storage?
+** Was ist der Trend zur Nutzung eines Storage-Systems oder eines Storage-Pools basierend auf den Festplatten-Performance-Daten?
+** Wie sieht der Trend zur Festplattennutzung für einen bestimmten Storage Pool aus? Wenn Sie VM- und VMDK-Performance-Tabellen verwenden, erhalten Sie folgende Informationen:
+** Arbeitet meine virtuelle Umgebung mit optimaler Performance?
+** Welche VMDKs stellen die höchsten Workloads dar?
+** Wie kann ich die von VMDs gemeldete Performance bei verschiedenen Datastores nutzen, um Entscheidungen zum Re-Tiering zu treffen. Das Performance-Datenmodell enthält Informationen, mit denen Sie die Angemessenheit von Tiers, Storage-Fehlkonfigurationen für Applikationen und die letzten Zugriffszeiten von Volumes und internen Volumes ermitteln können. Dieses Datenmodell bietet Daten wie Reaktionszeiten, IOPS, Durchsatz, Anzahl der ausstehenden Schreibvorgänge und den Status des Datenzugriffs.
+
+
+* *Datenmodell Storage-Effizienz*
++
+Nachverfolgung des Storage-Effizienz-Ergebnisses und des Potenzials im Laufe der Zeit Dieses Datenmodell speichert Messungen nicht nur der bereitgestellten Kapazität, sondern auch der genutzten oder verbrauchten Menge (der physischen Messung). Wenn beispielsweise Thin Provisioning aktiviert ist, zeigt OnCommand Insight an, wie viel Kapazität vom Gerät genommen wird. Mithilfe dieses Modells lässt sich außerdem die Effizienz bei aktivierter Deduplizierung bestimmen. Sie können verschiedene Fragen mithilfe des Storage-Effizienz-Data Marts beantworten:
+
++
+** Wie hoch sind unsere Storage-Effizienzeinsparungen als Ergebnis der Implementierung von Thin Provisioning und Deduplizierungstechnologien?
+** Wie hoch sind die Storage-Einsparungen in den gesamten Datacentern?
+** Wann müssen wir, basierend auf Trends bei früheren Kapazitäten, zusätzlichen Storage erwerben?
+** Was würde der Kapazitätsgewinn bedeuten, wenn wir Technologien wie Thin Provisioning und Deduplizierung aktivieren würden?
+** Sind Sie hinsichtlich der Storage-Kapazität aktuell in Gefahr?
+
+
+

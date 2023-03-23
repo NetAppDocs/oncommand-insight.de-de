@@ -1,0 +1,59 @@
+---
+permalink: faq/faq-insight-licensing.html 
+sidebar: sidebar 
+keywords:  
+summary: Antworten auf häufig gestellte Fragen zur OnCommand Insight-Lizenzierung. 
+---
+= OnCommand Insight-Lizenzierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antworten auf häufig gestellte Fragen zur OnCommand Insight-Lizenzierung.
+
+
+
+== OCI-Lizenzierungsübersicht
+
+OCI wird nach Kapazität lizenziert. Kunden müssen für jedes Modul eine Lizenz erwerben, das sie aktivieren möchten:
+
+*Discover* ist eine Voraussetzung für Assure, Perform und Plan und wird nicht alleine angeboten. Discover wird nach TB gemanagter Kapazität lizenziert.
+
+*Assure* wird nach TB gemanagter Kapazität lizenziert (als eine einzige Einheit für die gesamte Speicherinfrastruktur: FC, NAS, iSCSI, FCoE).
+
+*Perform* wird nach TB verwalteter Kapazität lizenziert.
+
+*Plan* wird nach TB verwalteter Kapazität lizenziert.
+
+„`Managed Capacity`“ ist definiert als die Rohkapazität der physischen Laufwerke, virtuellen Laufwerke und Bänder vor der Formatierung. Dies gilt für alle von Insight erkannten Storage sowohl lokal als auch in der Cloud.
+
+Die meisten Datenquellen nehmen die Bruttokapazität von 2 auf der Festplatte an. Die Festplattenrolle, z. B. eine Ersatzfestplatte, nicht zugewiesene Festplatte oder eine RAID-Festplatte, wird nicht berücksichtigt.
+
+Es gibt zwei Arten von Insight-Lizenzen: *Perpetual* und *Subscription*.
+
+*Perpetual-Lizenzen* ermöglichen Ihnen die unbegrenzte Nutzung der spezifischen Version/Freigabe der Software, die Sie erhalten, vorbehaltlich der geltenden Lizenzbedingungen. Wenn Sie einen Software Support-Plan (SSP) erworben haben, bietet NetApp über die NetApp Support Site Zugang zu kommerziell verfügbaren Software Updates, sobald und sofern Updates gemäß den Bedingungen der Support Services verfügbar sind. NetApp bietet darüber hinaus den Zugang zu speziellen Patches, die vom NetApp Technical Support Center festgelegt werden.
+
+*Abonnement* ist eine befristete Lizenz von Software, die das Recht auf:
+
+* Verwenden Sie die Software nur für einen begrenzten Zeitraum (in der Regel 12 Monate) vor Ort unter Einhaltung der geltenden Lizenzbedingungen
+* Software-Support (bisher als SSP bezeichnet) für die Dauer der Laufzeit erhalten
+* Der Lizenznehmer darf zwar die aktuellste im Handel erhältliche Version, Veröffentlichung oder Aktualisierung verwenden, sollte diese verfügbar gemacht werden und erhält Unterstützung für die Software
+
+
+Am Ende jeder festen Laufzeit (meistens 12 Monate) kann die Lizenz um einen zusätzlichen, festen Zeitraum verlängert werden (meistens 12 Monate). Wenn die Lizenz nicht verlängert wird, hat der Lizenznehmer nicht mehr die Rechte zur Nutzung der Software, hat keinen Anspruch mehr auf die Vorteile von SSP und muss alle Kopien der Software vernichten.
+
+
+
+== Weitere Informationen zu OCI-Lizenzmodulen
+
+OCI verfügt über 4 zentrale Lizenzmodule, um heutige Datacenter-Umgebungen zu erfüllen. Diese Module sind *Discover, Perform, Assure und Plan*. Discover ist das Basismodul und für alle anderen Modulkäufe erforderlich.
+
+Mit dem Modul *Discover* kann OCI die Assets im Rechenzentrum lokalisieren und die Servicepfade des Geräts dynamisch abbilden. Es werden Informationen wie Kapazität, Herstellerinformationen, Modell, Firmware und Seriennummern bereitgestellt.
+
+*Perform* ist das Performance-Erfassungsmodul von OCI. Performance erfasst IOPS, Durchsatz, Latenz sowie Informationen zu CPU und Arbeitsspeicher und liefert andere Analysen.
+
+*Assure* ist in Richtung Fibre-Channel-Umgebungen und Effizienztechnologien positioniert. Sie hilft bei der Erkennung und dem Management von Risiken in Fibre Channel- und iSCSI-Umgebungen. Unterstützung bei der Identifizierung, Zuordnung und Ausgabe von Warnmeldungen bei Masking, Mapping und Zoning von Servicepfadeinträgen und Best Practice-Richtlinien für Effizienz wie Fabric-Redundanz, Switch Hops, Fan-out-Verhältnissen und Thin Provisioning
+
+*Plan* bietet die Möglichkeit, Trends bei Computing, Fabric und verschiedenen Storage-Typen (cDOT, 7-Mode, Drittanbieter) in hybriden On-Premises- und global verteilten Data Center-Umgebungen zu erkennen und vorherzusagen. Es ermöglicht längere Aufbewahrungszeiten. Das Data Warehouse besteht aus einer integrierten Intelligenz zur Erstellung von Berichten und vermeidet die doppelte Zählung von Kennzahlen in gemeinsam genutzten Speicherumgebungen. Es kann ein Kompliment von „`Out of the box`“-Berichten generieren und planen oder eigene Berichte mit den integrierten `“ Drag-and-Drop`“-Tools zur Berichterstellung erstellen.

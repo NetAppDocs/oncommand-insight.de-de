@@ -1,0 +1,73 @@
+---
+permalink: howto/configuring-data-center-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Anmerkung des Datacenters wird in der Regel verwendet, um ein Storage-Array, einen Switch oder eine physische Host-Ressource einem Datacenter-Standort zuzuordnen. Sie können die Annotation des Datacenters auch anderen Assets in Ihrer Umgebung zuordnen. 
+---
+= Konfigurieren von Anmerkungen zum Rechenzentrum
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Anmerkung des Datacenters wird in der Regel verwendet, um ein Storage-Array, einen Switch oder eine physische Host-Ressource einem Datacenter-Standort zuzuordnen. Sie können die Annotation des Datacenters auch anderen Assets in Ihrer Umgebung zuordnen.
+
+Schritte
+
+* Melden Sie sich bei Insight als Benutzer mit Administratorrechten an.
+* Wählen Sie *Verwalten* > *Anmerkungen*.
+* Wählen Sie die Anmerkung *Data Center* und klicken Sie auf das Symbol *Bearbeiten*.
+* Klicken Sie auf *+Add*, und fügen Sie den Namen und die Beschreibung Ihres ersten Rechenzentrums zur Anmerkungsliste hinzu.
+* Gleichen Sie für Ihre anderen Rechenzentren.
+* Wenn Sie fertig sind, klicken Sie auf *Speichern*.
+
+
+Beispiele für Anmerkungen zum Rechenzentrum:
+
+|===
+
+
+| Name | Beschreibung 
+
+
+ a| 
+DC1_SVL
+ a| 
+Sunnyvale Geb. 1
+
+
+
+ a| 
+DC2_SVLb3
+ a| 
+SVL geb. 3 eng
+
+
+
+ a| 
+DC3_NY
+ a| 
+New York
+
+
+
+ a| 
+DC4_London
+ a| 
+London
+
+
+
+ a| 
+...
+ a| 
+
+|===
+Insight bietet mehrere Out-of-the-Box-Anmerkungstypen, mit denen Benutzer Werte gemäß ihren Anforderungen definieren oder ändern können. Diese standardmäßigen Anmerkungstypen sind immer für die Web-Benutzeroberfläche von Insight und für die Berichterstellung verfügbar. Neu erstellte benutzerdefinierte Annotationen sind auf der Web-Benutzeroberfläche von Insight sichtbar, erfordern jedoch zusätzliche Maßnahmen, um sie für die Berichterstellung zur Verfügung zu stellen. Für Informationen über das Einfügen benutzerdefinierter Anmerkungen in Berichte. Wenden Sie sich an Ihren Ansprechpartner im NetApp Customer Support.
+
+[NOTE]
+====
+Einige Benutzer sind möglicherweise geneigt, die Länderanmerkung zum Festlegen der Anlagenstandorte zu verwenden, im Gegensatz zu oder in Verbindung mit der Anmerkung zum Rechenzentrum. Beachten Sie jedoch, dass die Länderanmerkung im Insight Data Warehouse als benutzerdefinierter Anmerkungstyp behandelt wird und daher möglicherweise nicht in der gleichen Granularität wie das Data Center angezeigt wird.
+
+====

@@ -1,0 +1,154 @@
+---
+section: dwh
+title: Data Warehouse-Administration
+entries:
+- title: Willkommen im OnCommand Insight Data Warehouse
+  url: "/dwh/welcome-to-data-warehouse.html"
+  entries:
+  - title: Data Warehouse-Funktionen
+    url: "/dwh/data-warehouse-features.html"
+  - title: Data Warehouse-Komponenten
+    url: "/dwh/data-warehouse-components.html"
+    entries:
+    - title: Was Sie mit dem Data Warehouse Portal tun können
+      url: "/dwh/oncommand-insight-data-warehouse-portal.html"
+    - title: Softwarekomponenten von Data Warehouse
+      url: "/dwh/data-warehouse-software-components.html"
+  - title: Data Warehouse-Prozesse
+    url: "/dwh/data-warehouse-processes.html"
+  - title: Wie Data Warehouse Daten extrahiert
+    url: "/dwh/how-data-warehouse-extracts-data.html"
+  - title: ETL-Frequenz- und Datumsdaten
+    url: "/dwh/etl-frequency.html"
+  - title: Wie historische Daten im Data Warehouse aufbewahrt werden
+    url: "/dwh/historical-data-retention-in-data-warehouse.html"
+    entries:
+    - title: Datenaufbewahrung, ETL und Zeiträume
+      url: "/dwh/data-retention-and-time-periods.html"
+- title: Erste Schritte mit Data Warehouse
+  url: "/dwh/getting-started-with-data-warehouse.html"
+  entries:
+  - title: Zugriff auf das Data Warehouse-Portal
+    url: "/dwh/accessing-the-data-warehouse-portal.html"
+  - title: Verwalten von Benutzerkonten für Data Warehouse und Reporting
+    url: "/dwh/managing-data-warehouse-and-reporting-user-accounts.html"
+    entries:
+    - title: Zugriff auf das Data Warehouse- und Reporting-Portal
+      url: "/dwh/accessing-the-data-warehouse-and-reporting.html"
+    - title: Reporting-Benutzerrollen
+      url: "/dwh/reporting-user-roles.html"
+    - title: Hinzufügen eines Reporting-Benutzers
+      url: "/dwh/adding-a-reporting-user.html"
+    - title: Verwalten von Benutzerkonten
+      url: "/dwh/managing-user-accounts.html"
+    - title: Konfigurieren von LDAP für die Berichterstellung
+      url: "/dwh/configuring-reporting-ldap.html"
+  - title: Verbinden von Data Warehouse mit OnCommand Insight-Servern
+    url: "/dwh/connecting-data-warehouse-to-oncommand-insight-servers.html"
+  - title: Data Warehouse-Datenbank aus Verlaufsübersicht erstellen
+    url: "/dwh/data-warehouse-database-build-from-history-overview.html"
+    entries:
+    - title: Hinzufügen eines Jobs, der aus dem Verlauf eine Data Warehouse-Datenbank
+        erstellt
+      url: "/dwh/adding-a-build-from-history-job.html"
+    - title: Abbrechen eines Builds aus einem Verlaufsjob
+      url: "/dwh/canceling-a-build-from-history-job.html"
+  - title: Sichern der Data Warehouse-Datenbank
+    url: "/dwh/backing-up-the-data-warehouse-database.html"
+  - title: Backup benutzerdefinierter Berichte und Artefakte in Berichten
+    url: "/dwh/backing-up-custom-reports-and-report-artifacts.html"
+  - title: Wiederherstellen der Data Warehouse-Datenbank
+    url: "/dwh/restoring-the-data-warehouse-database.html"
+  - title: Einrichtung mehrerer Mandanten in Berichten
+    url: "/dwh/setting-up-multiple-tenancy-in-reporting.html"
+    entries:
+    - title: Benutzerkonten werden konfiguriert
+      url: "/dwh/configuring-user-accounts.html"
+    - title: Zuweisen von Benutzern zu Geschäftseinheiten
+      url: "/dwh/assigning-users-to-business-entities.html"
+  - title: Fehlerbehebung bei Setup-Problemen
+    url: "/dwh/troubleshooting-setup-issues.html"
+    entries:
+    - title: Warum ich meine Anmerkungen nicht sehen kann
+      url: "/dwh/why-i-cannot-see-my-annotations.html"
+      entries:
+      - title: Erzwingen einer Aktualisierung von Anmerkungen für Data Warehouse
+        url: "/dwh/forcing-an-update-of-annotations-for-data-warehouse.html"
+      - title: Generieren eines manuellen Data Warehouse-Builds
+        url: "/dwh/generating-a-manual-data-warehouse-build.html"
+      - title: Benutzerdefinierte Anmerkungen werden in Data Warehouse importiert
+        url: "/dwh/importing-user-defined-annotations-into-data-warehouse.html"
+    - title: Was tun mit fehlgeschlagenen historischen Build-Punkten
+      url: "/dwh/what-to-do-with-failing-historical-build-points.html"
+- title: Administrative Aufgaben, die Sie mit Data Warehouse durchführen können
+  url: "/dwh/administrative-tasks-you-can-perform-using-data-warehouse.html"
+  entries:
+  - title: Verwalten von Jobs
+    url: "/dwh/managing-jobs.html"
+  - title: Überwachung des Zustands von Data Warehouses
+    url: "/dwh/monitoring-data-warehouse-health.html"
+  - title: Planung täglicher Builds
+    url: "/dwh/scheduling-daily-builds.html"
+  - title: Konfigurieren eines wöchentlichen Zeitplans
+    url: "/dwh/configuring-a-weekly-schedule.html"
+  - title: Planen täglicher Backups
+    url: "/dwh/scheduling-daily-backups.html"
+  - title: Ausführen von benutzerdefinierten Skripts in Data Warehouse
+    url: "/dwh/running-external-scripts-in-data-warehouse.html"
+  - title: Was Sie mit Anmerkungen tun können
+    url: "/dwh/annotations.html"
+    entries:
+    - title: Anmerkungen werden in OnCommand Insight vorbereitet
+      url: "/dwh/preparing-annotations-in-oncommand-insight.html"
+    - title: Benutzerdefinierte Anmerkungen werden in Data Warehouse importiert
+      url: "/dwh/importing-user-defined-annotations-into-data-warehouse.html"
+    - title: Anzeigen des Jobs mit Anmerkungen in der Liste Jobs
+      url: "/dwh/viewing-the-annotations-job-in-the-jobs-list.html"
+    - title: Anzeigen von Anmerkungsänderungen im Datenbankschema
+      url: "/dwh/seeing-the-annotation-changes-in-the-database-schema.html"
+  - title: Einstellen von E-Mail-Benachrichtigungen
+    url: "/dwh/setting-email-notifications.html"
+  - title: Zugriff auf das Reporting Portal
+    url: "/dwh/accessing-the-reporting-portal.html"
+  - title: Anzeigen der Dokumentation des Data Warehouse-Datenbankschemas
+    url: "/dwh/viewing-the-data-warehouse-documentation.html"
+  - title: Anzeigen des Data Warehouse-Datenbankschemas
+    url: "/dwh/viewing-the-data-warehouse-database-schema.html"
+  - title: Anzeigen von Systeminformationen
+    url: "/dwh/editing-the-site-name-and-viewing-system-information.html"
+  - title: Erweiterte Optionen
+    url: "/dwh/advanced-options.html"
+    entries:
+    - title: Fehlgeschlagene Builds werden übersprungen
+      url: "/dwh/skipping-failed-builds.html"
+    - title: Zurücksetzen der Data Warehouse-Datenbank oder des Reporting-Servers
+      url: "/dwh/resetting-the-data-warehouse-database.html"
+    - title: Wiederherstellen und Aktualisieren von Berichten für Versionen vor 6.3
+      url: "/dwh/restoring-and-upgrading-reports-for-versions-prior-to-6-3.html"
+    - title: Zugriff auf MySQL über die Befehlszeilenschnittstelle
+      url: "/dwh/accessing-mysql-using-the-command-line-interface-valid.html"
+    - title: Fehlerbehebung Bei Data Warehouse
+      url: "/dwh/troubleshooting-data-warehouse.html"
+      entries:
+      - title: Problemlösung mit ASUP
+        url: "/dwh/issue-resolution-with-autosupport-asup.html"
+        entries:
+        - title: Deaktivieren der automatischen ASUP-Übertragung
+          url: "/dwh/configuring-your-asup-processing.html"
+        - title: Einschließlich einer Sicherung der Data Warehouse-Datenbank
+          url: "/dwh/including-the-data-warehouse-database.html"
+        - title: Senden von Insight Protokollen an ASUP
+          url: "/dwh/sending-oncommand-insight-logs-to-asup.html"
+      - title: Anzeigen von OnCommand Insight-Protokollen
+        url: "/dwh/viewing-oncommand-insight-logs.html"
+      - title: Probleme bei der Konsolidierung mehrerer Server-Chassis
+        url: "/dwh/multiple-server-chassis-consolidation-issues.html"
+        entries:
+        - title: Anzeigen von Problemen mit der Konsolidierung von Hosts und Adaptern
+          url: "/dwh/viewing-hosts-and-adapters-consolidation-issues.html"
+        - title: Anzeigen von Problemen bei der Konsolidierung von Speicher-Arrays
+          url: "/dwh/viewing-storage-arrays-consolidation-issues.html"
+        - title: Anzeigen von Problemen mit der Konsolidierung von Switches
+          url: "/dwh/viewing-switches-consolidation-issues.html"
+      - title: Lösung mehrerer Probleme bei der Konsolidierung von Serveranmerkungen
+        url: "/dwh/resolving-multiple-server-annotation-consolidation-issues.html"

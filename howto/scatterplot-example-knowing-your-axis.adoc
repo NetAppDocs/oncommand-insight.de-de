@@ -1,0 +1,53 @@
+---
+permalink: howto/scatterplot-example-knowing-your-axis.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie die Reihenfolge der Zähler in einem Streudiagramm-Widget ändern, werden die Achsen geändert, auf denen die Daten angezeigt werden. 
+---
+= Streudiagramm Beispiel: Wissen der Achse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die Reihenfolge der Zähler in einem Streudiagramm-Widget ändern, werden die Achsen geändert, auf denen die Daten angezeigt werden.
+
+
+
+== Über diese Aufgabe
+
+Dieses Beispiel erstellt ein Scatter-Diagramm, mit dem Sie leistungsschwache VMs sehen können, die eine hohe Latenz im Vergleich zu niedrigen IOPS haben.
+
+
+
+== Schritte
+
+. Erstellen oder öffnen Sie ein Dashboard im Bearbeitungsmodus und fügen Sie ein Widget *Streudiagramm* hinzu.
+. Wählen Sie einen Asset-Typ aus, zum Beispiel *Virtual Machine*.
+. Wählen Sie den ersten Zähler aus, den Sie zeichnen möchten. Wählen Sie für dieses Beispiel *Latency - Total* aus.
++
+_Latenz - Total_ wird entlang der X-Achse des Diagramms kartiert.
+
+. Wählen Sie den zweiten Zähler aus, den Sie zeichnen möchten. Wählen Sie in diesem Beispiel *IOPS - Total* aus.
++
+_IOPS - Total_ wird entlang der Y-Achse im Diagramm dargestellt. VMs mit höherer Latenz werden rechts im Diagramm angezeigt. Es werden nur die 100 VMs mit der höchsten Latenz angezeigt, da die Einstellung *Top by X-Axis* aktuell ist.
+
++
+image::../media/scatterplot1.gif[Streuplot1]
+
+. Kehren Sie nun die Reihenfolge der Zähler um, indem Sie den ersten Zähler auf *IOPS - Total* und den zweiten auf *Latency - Total* setzen.
++
+_Iatency- Total_ wird nun entlang der Y-Achse im Diagramm und__IOPS - Tota__l entlang der X-Achse dargestellt. VMs mit höheren IOPS werden jetzt rechts im Diagramm angezeigt.
+
++
+Da wir die *Top by X-Axis*-Einstellung nicht geändert haben, zeigt das Widget jetzt die Top 100 VMs mit den höchsten IOPS an, da dies das ist, was derzeit entlang der X-Achse dargestellt wird.
+
++
+image::../media/scatterplot2.gif[Streuplot2]
+
+. Sie können wählen, dass das Diagramm die obere N nach X-Achse, die obere N nach Y-Achse, die untere N nach X-Achse oder die untere N nach Y-Achse anzeigt. In unserem letzten Beispiel werden die 100 besten VMs angezeigt, die die höchsten _Gesamt-IOPS_ haben. Wenn wir ihn auf die Y-Achse oben ändern, werden im Diagramm erneut die 100 wichtigsten VMs mit der höchsten _Gesamtlatenz_ angezeigt.
++
+Beachten Sie, dass Sie in einem Streudiagramm-Diagramm auf einen Punkt klicken können, um die Bestandsseite für diese Ressource zu öffnen.
+
+

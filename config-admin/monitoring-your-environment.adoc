@@ -1,0 +1,14 @@
+---
+permalink: config-admin/monitoring-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight ermöglicht die Vermeidung von Systemproblemen und ermöglicht eine schnelle Behebung potenzieller Probleme. 
+---
+= Monitoring Ihrer Umgebung und
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight ermöglicht die Vermeidung von Systemproblemen und ermöglicht eine schnelle Behebung potenzieller Probleme.

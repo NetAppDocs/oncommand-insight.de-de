@@ -1,0 +1,16 @@
+---
+permalink: howto/setting-up-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Insight so konfigurieren, dass Benachrichtigungen bei auslösenden Ereignissen wie Performance-Richtlinie, globalem Pfad oder Kapazitätsverletzungen per E-Mail, SNMP oder Syslog gesendet werden. Sie können Insight auch so konfigurieren, dass E-Mail-Benachrichtigungen bei Ereignissen auf Systemebene wie Datenquellfehlern oder Ausfällen der Erfassungseinheiten gesendet werden. 
+---
+= Einrichten von Benachrichtigungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Insight so konfigurieren, dass Benachrichtigungen bei auslösenden Ereignissen wie Performance-Richtlinie, globalem Pfad oder Kapazitätsverletzungen per E-Mail, SNMP oder Syslog gesendet werden. Sie können Insight auch so konfigurieren, dass E-Mail-Benachrichtigungen bei Ereignissen auf Systemebene wie Datenquellfehlern oder Ausfällen der Erfassungseinheiten gesendet werden.
+
+Dies sind grundlegende Anweisungen. Weitere Informationen zu Benachrichtigungen finden Sie unter Konfiguration und Administration > Insight-Konfiguration und -Administration > Einrichten von Insight.

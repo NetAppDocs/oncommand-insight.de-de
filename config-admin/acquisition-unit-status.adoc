@@ -1,0 +1,29 @@
+---
+permalink: config-admin/acquisition-unit-status.html 
+sidebar: sidebar 
+keywords:  
+summary: Der Bildschirm „Acquisition Unit“ bietet eine Übersicht über alle Ihre Akquisitionseinheiten, einschließlich des Status und aller vorhandenen Fehler. 
+---
+= Status der Erfassungseinheit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Bildschirm „Acquisition Unit“ bietet eine Übersicht über alle Ihre Akquisitionseinheiten, einschließlich des Status und aller vorhandenen Fehler.
+
+Der Status der mit Ihrem Server verbundenen Insight-Erfassungseinheiten wird in der Tabelle *Admin* > *Acquisition Units* angezeigt. In dieser Tabelle werden die folgenden Informationen für jede Erfassungseinheit angezeigt:
+
+* *Name*
+* *IP*
+* *Status* ist der Betriebszustand der Erfassungseinheit.
+* **Letzte Meldung**zeigt das letzte Mal an, wenn eine Datenquelle mit der Erfassungseinheit verbunden wurde.
+* *Hinweis* zeigt eine vom Benutzer eingegebene Notiz im Zusammenhang mit der AU an.
+
+
+Wenn bei einer Erfassungseinheit in der Liste ein Problem auftritt, zeigt das Feld Status einen roten Kreis mit kurzen Informationen zum Problem an. Sie sollten alle Probleme mit den Erfassungseinheiten untersuchen, da diese sich wahrscheinlich auf die Datenerfassung auswirken.
+
+Um eine Erfassungseinheit neu zu starten, bewegen Sie den Mauszeiger über das Gerät und klicken Sie auf die Schaltfläche _Neustarten der Erfassungseinheit_, die angezeigt wird.
+
+Um eine Textnotiz hinzuzufügen, bewegen Sie den Mauszeiger über eine Erfassungseinheit, und klicken Sie auf die Schaltfläche „_Notiz hinzufügen_“, die angezeigt wird. Es wird nur die zuletzt eingegebene Notiz angezeigt.

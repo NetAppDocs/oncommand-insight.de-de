@@ -1,0 +1,39 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Geschäftseinheiten definieren, um Ihre Umgebungsdaten granular zu verfolgen und darüber Berichte zu erstellen. Im Abschnitt „Benutzerdaten“ auf der Seite „Anlage“ können Sie die einem Asset zugewiesene Geschäftseinheit ändern oder eine Geschäftseinheit aus einem Asset entfernen. 
+---
+= Verwenden des Abschnitts Benutzerdaten, um Geschäftseinheiten zuzuweisen oder zu ändern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Geschäftseinheiten definieren, um Ihre Umgebungsdaten granular zu verfolgen und darüber Berichte zu erstellen. Im Abschnitt „Benutzerdaten“ auf der Seite „Anlage“ können Sie die einem Asset zugewiesene Geschäftseinheit ändern oder eine Geschäftseinheit aus einem Asset entfernen.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Suchen Sie eine Asset-Seite, indem Sie eine der folgenden Aktionen ausführen:
++
+** Klicken Sie in der Insight-Symbolleiste auf image:../media/icon-sanscreen-magnifying-glass-gif.gif[""]Geben Sie den Namen des Assets ein, und wählen Sie das Asset aus der Liste aus.
+** Klicken Sie auf *Dashboards*, wählen Sie *Assets Dashboard*, suchen Sie einen Asset-Namen und klicken Sie darauf. Die Seite Anlage wird angezeigt.
+
+
+. Sie haben folgende Möglichkeiten:
++
+** Um die zugewiesene Entität zu ändern oder eine Entität zuzuweisen, klicken Sie auf image:../media/pencil-icon-landing-page-be.gif[""] Und wählen Sie eine Einheit aus der Liste aus.
+** Um eine Geschäftseinheit zu entfernen, klicken Sie auf image:../media/trash-can-query.gif[""].
++
+[NOTE]
+====
+Sie können keine Entität entfernen, die von einer Anwendung abgeleitet wurde, die dem Asset zugewiesen ist.
+
+====
+
+
+

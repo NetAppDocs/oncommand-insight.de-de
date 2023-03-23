@@ -1,0 +1,50 @@
+---
+permalink: howto/grouping-example-with-rollup-explained.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit den Tabelle-Widgets können Sie Daten gruppieren, um die Anzeige zu erleichtern. 
+---
+= Beispiel für Gruppierung (mit Rollup-Erklärung)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit den Tabelle-Widgets können Sie Daten gruppieren, um die Anzeige zu erleichtern.
+
+
+
+== Über diese Aufgabe
+
+In diesem Beispiel werden wir ein TabellenWidget erstellen, das alle VMs nach Datacenter gruppiert zeigt.
+
+
+
+== Schritte
+
+. Erstellen oder öffnen Sie ein Dashboard, und fügen Sie ein Widget mit * Table* hinzu.
+. Wählen Sie *Virtual Machine* als Asset-Typ für dieses Widget aus.
+. Klicken Sie auf die Spaltenauswahl image:../media/column-picker-button.gif[""] Und wählen Sie _Hypervisor Name_ und _IOPS - Total_.
++
+Diese Spalten werden jetzt in der Tabelle angezeigt.
+
+. Ignorieren Sie alle VMs ohne IOPS und schließen Sie nur VMs ein, die insgesamt IOPS mehr als 1 haben. Klicken Sie auf die Schaltfläche *Filtern nach +* und wählen Sie *IOPS - Gesamt*. Klicken Sie auf *any*, und geben Sie im Feld *von* 1 ein. Lassen Sie das Feld * to* leer. Klicken Sie auf die Schaltfläche, um den Filter anzuwenden.
++
+In der Tabelle werden jetzt alle VMs mit IOPS-Gesamtwerten größer oder gleich 1 angezeigt. Beachten Sie, dass es keine Gruppierung in der Tabelle gibt. Alle VMs werden angezeigt.
+
+. Klicken Sie auf die Schaltfläche *Gruppieren nach +*.
++
+Da *All* standardmäßig als Gruppierungsmethode ausgewählt ist, werden alle VMs in eine einzelne Gruppe mit dem Namen „`All`“ verschoben.
+
+. Oberhalb der Spalte _IOPS - Total_ ist nun eine Option *Roll Up*. Die Standard-Rollup-Methode lautet _Avg_. Das bedeutet, dass die für die Gruppe angezeigte Zahl der Durchschnitt aller gesamten IOPS ist, die für jede VM innerhalb der Gruppe gemeldet wurden. Sie können diese Spalte mit _AVG_, _Sum_, _Min_ oder _Max_ nach oben Rollen. Jede Spalte, die Sie anzeigen, die Leistungskennzahlen enthält, kann einzeln aufgerollt werden.
+. Klicken Sie auf *All* und wählen Sie *Hypervisor Name*.
++
+Die VM-Liste ist jetzt nach Hypervisor gruppiert. Sie können jeden Hypervisor erweitern, um die von ihm gehosteten VMs anzuzeigen.
+
++
+image::../media/table-grouping-example.gif[Beispiel für eine Tabellengruppierung]
+
+. Klicken Sie auf *Speichern*, um die Tabelle im Dashboard zu speichern. Sie können die Größe des Widgets ändern.
+. Klicken Sie auf *Speichern*, um das Dashboard zu speichern.
+

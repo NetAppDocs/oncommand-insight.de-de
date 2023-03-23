@@ -1,0 +1,27 @@
+---
+permalink: install-linux/uninstalling-a-remote-acquisition-unit-rau.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können eine Remote-Erfassungseinheit deinstallieren, wenn Sie sie nicht mehr benötigen. 
+---
+= Deinstallieren einer Remote-Akquisitionseinheit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Remote-Erfassungseinheit deinstallieren, wenn Sie sie nicht mehr benötigen.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Remote Acquisition Unit-Server mit einem Konto mit sudo-Berechtigungen an.
+. Stellen Sie sicher, dass alle OnCommand Insight-Fenster geschlossen sind.
+. Sie können Syntax, Befehlsargumente und Parameterverwendung für anzeigen `uninstall.sh` Indem Sie den folgenden Befehl eingeben: `sudo /usr/bin/oci-uninstall.sh --help`
+. Geben Sie den folgenden Befehl ein: `sudo /usr/bin/oci-uninstall.sh`
++
+Das Deinstallationsskript wird ausgeführt. Befolgen Sie alle Anweisungen.
+
+

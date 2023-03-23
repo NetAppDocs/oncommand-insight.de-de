@@ -1,0 +1,49 @@
+---
+permalink: config-admin/exporting-ip-identification-to-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können vorhandene IP-Gerätekennungen über die Funktion „Geräteauflösung“ aus Insight exportieren. Möglicherweise möchten Sie eine Gerätekennung exportieren, damit Sie sie ändern und dann wieder in Insight importieren können, damit sie zur Identifizierung von Geräten verwendet werden kann, die denen der exportierten Identifikation ähneln. 
+---
+= Exportieren der IP-Geräteidentifikation in eine CSV-Datei
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können vorhandene IP-Gerätekennungen über die Funktion „Geräteauflösung“ aus Insight exportieren. Möglicherweise möchten Sie eine Gerätekennung exportieren, damit Sie sie ändern und dann wieder in Insight importieren können, damit sie zur Identifizierung von Geräten verwendet werden kann, die denen der exportierten Identifikation ähneln.
+
+
+
+== Über diese Aufgabe
+
+Wenn Sie eine IP-Geräteidentifikation in eine CSV-Datei exportieren, enthält die Datei die folgenden Informationen in der angezeigten Reihenfolge:
+
+|===
+
+
+ a| 
+Adresse
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Name
+
+|===
+
+
+== Schritte
+
+. Melden Sie sich bei der Web-UI von Insight an.
+. Klicken Sie Auf *Verwalten* > *Geräteauflösung*
+. Wählen Sie die Registerkarte *IP identiffy*.
+. Wählen Sie das IP-Gerät oder die Geräte aus, deren Kennung Sie exportieren möchten.
+. Klicken Sie auf den Export image:../media/export-to-csv.gif[""] Symbol.
+. Wählen Sie aus, ob Sie die CSV-Datei öffnen oder die Datei speichern möchten.
+

@@ -1,0 +1,14 @@
+---
+permalink: install-windows/completing-post-upgrade-tasks.html 
+sidebar: sidebar 
+keywords:  
+summary: Nachdem Sie ein Upgrade auf die neueste Version von Insight durchgeführt haben, müssen Sie weitere Aufgaben ausführen. 
+---
+= Aufgaben nach dem Upgrade werden ausgeführt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie ein Upgrade auf die neueste Version von Insight durchgeführt haben, müssen Sie weitere Aufgaben ausführen.

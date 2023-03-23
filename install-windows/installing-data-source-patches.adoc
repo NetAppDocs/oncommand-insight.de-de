@@ -1,0 +1,40 @@
+---
+permalink: install-windows/installing-data-source-patches.html 
+sidebar: sidebar 
+keywords:  
+summary: Falls zutreffend, sollten Sie die neuesten Patches installieren, die für Ihre Datenquellen verfügbar sind, um die neuesten Funktionen und Verbesserungen nutzen zu können. Nach dem Hochladen eines Datenquellpatches können Sie ihn auf allen Datenquellen desselben Typs installieren. 
+---
+= Installieren von Patches für Datenquellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Falls zutreffend, sollten Sie die neuesten Patches installieren, die für Ihre Datenquellen verfügbar sind, um die neuesten Funktionen und Verbesserungen nutzen zu können. Nach dem Hochladen eines Datenquellpatches können Sie ihn auf allen Datenquellen desselben Typs installieren.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen sich an den technischen Support wenden und den erhalten haben `.zip` Datei, die die neuesten Datenquellpatches enthält, indem sie ihnen die Version bereitstellt, von der Sie ein Upgrade durchführen möchten, und die Version, auf die Sie aktualisieren möchten.
+
+
+
+== Schritte
+
+. Platzieren Sie die Patch-Datei auf dem Insight-Server.
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Patches*.
+. Wählen Sie über die Schaltfläche Aktionen die Option *Patch anwenden* aus.
+. Klicken Sie im Dialogfeld *Data source Patch anwenden* auf *Browse*, um die hochgeladene Patch-Datei zu finden.
+. Überprüfen Sie die Typen *Patch-Name*, *Beschreibung* und *betroffene Datenquellen*.
+. Wenn der ausgewählte Patch korrekt ist, klicken Sie auf *Patch anwenden*.
++
+Alle Datenquellen des gleichen Typs werden mit diesem Patch aktualisiert. Insight zwingt den Neustart der Erfassung automatisch, sobald eine Datenquelle hinzugefügt wird. Die Erkennung umfasst die Erkennung von Änderungen in der Netzwerktopologie, einschließlich des Hinzufügens oder Löschens von Knoten oder Schnittstellen.
+
+. Um den Ermittlungsvorgang manuell zu erzwingen, klicken Sie auf *Datenquellen* und klicken Sie neben der Datenquelle auf *erneut abrufen*, um die Datenerhebung sofort zu erzwingen.
++
+Wenn sich die Datenquelle bereits in einem Erfassungsprozess befindet, ignoriert Insight die Abfrage erneut.
+
+

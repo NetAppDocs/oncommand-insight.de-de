@@ -1,0 +1,22 @@
+---
+permalink: dwh/viewing-the-data-warehouse-documentation.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die Schemainformationen der Data Warehouse-Datenbank überprüfen. 
+---
+= Anzeigen der Dokumentation des Data Warehouse-Datenbankschemas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Schemainformationen der Data Warehouse-Datenbank überprüfen.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie in der Symbolleiste Data Warehouse auf image:../media/oci-7-help-icon-gif.gif[""] Und wählen Sie *Schema*.
+

@@ -1,0 +1,180 @@
+---
+permalink: config-admin/configuring-insight-for-ldap-s.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight muss mit Lightweight Directory Access Protocol \(LDAP\)-Einstellungen konfiguriert werden, da diese in Ihrer LDAP-Domäne des Unternehmens konfiguriert sind.' 
+---
+= Konfigurieren von Insight für LDAP(s)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight muss mit LDAP-Einstellungen (Lightweight Directory Access Protocol) konfiguriert werden, da diese in Ihrer LDAP-Domäne des Unternehmens konfiguriert sind.
+
+Bevor Sie Insight für die Verwendung mit LDAP oder Secure LDAP (LDAPS) konfigurieren, notieren Sie sich die Active Directory-Konfiguration in Ihrer Unternehmensumgebung. Insight-Einstellungen müssen mit denen in der LDAP-Domänenkonfiguration Ihres Unternehmens übereinstimmen. Lesen Sie die folgenden Konzepte, bevor Sie Insight für die Verwendung mit LDAP konfigurieren, und wenden Sie sich an Ihren LDAP-Domänenadministrator, um die richtigen Attribute für Ihre Umgebung zu ermitteln.
+
+Für alle Secure Active Directory (d. h. LDAPS)-Benutzer müssen Sie den AD-Servernamen genau so verwenden, wie er im Zertifikat definiert ist. Sie können die IP-Adresse nicht für die sichere AD-Anmeldung verwenden.
+
+[NOTE]
+====
+OnCommand Insight unterstützt LDAP und LDAPS über Microsoft Active Directory Server oder Azure AD. Zusätzliche LDAP-Implementierungen funktionieren möglicherweise, wurden aber nicht für Insight qualifiziert. Die Verfahren in diesen Handbüchern gehen davon aus, dass Sie Microsoft Active Directory Version 2 oder 3 LDAP (Lightweight Directory Access Protocol) verwenden.
+
+====
+*User Principal Name Attribut:*
+
+Das Attribut LDAP User Principal Name (userPrincipalName) wird von Insight als Attribut username verwendet. Der Hauptname des Benutzers ist in einer Active Directory (AD)-Gesamtstruktur garantiert global eindeutig, aber in vielen großen Unternehmen ist der Hauptname eines Benutzers möglicherweise nicht sofort ersichtlich oder bekannt. Ihr Unternehmen kann für den primären Benutzernamen eine Alternative zum Attribut User Principal Name verwenden.
+
+Im Folgenden finden Sie einige alternative Werte für das Attributfeld User Principal Name:
+
+* *SAMAccountName*
++
+Dieses Benutzerattribut ist der alte Benutzername vor Windows 2000 NT - das ist es, was die meisten Benutzer gewohnt sind, sich auf ihrem persönlichen Windows-Rechner anzumelden. Dies ist nicht garantiert weltweit einzigartig in einer AD-Gesamtstruktur.
+
++
+
+NOTE: SAMAccountName berücksichtigt Groß- und Kleinschreibung für das Attribut User Principal Name.
+
+* *Mail*
++
+In AD-Umgebungen mit MS Exchange ist dieses Attribut die primäre E-Mail-Adresse für den Endbenutzer. Dies sollte global einzigartig in einer AD-Gesamtstruktur sein (und auch für Endbenutzer bekannt), im Gegensatz zu ihrem userPrincipalName-Attribut. Das Mail-Attribut ist in den meisten nicht-MS Exchange-Umgebungen nicht vorhanden.
+
+* *Empfehlung*
++
+Eine LDAP-Weiterleitung ist die Art und Weise eines Domänencontrollers, einer Client-Anwendung zu zeigen, dass sie keine Kopie eines angeforderten Objekts hat (genauer gesagt: Dass es nicht den Abschnitt des Verzeichnisbaums enthält, in dem das Objekt sein würde, wenn es tatsächlich existiert) und dem Client einen Speicherort gibt, der das Objekt wahrscheinlicher enthält. Der Client wiederum verwendet die Weiterleitung als Grundlage für eine DNS-Suche nach einem Domänencontroller. Im Idealfall verweisen Verweise immer auf einen Domänencontroller, der das Objekt tatsächlich enthält. Es ist jedoch möglich, dass der verwies Domänencontroller eine weitere Empfehlung generiert, obwohl es in der Regel nicht lange dauert, zu erkennen, dass das Objekt nicht existiert und den Client zu informieren.
+
+
+
+
+TIP: SAMAccountName wird im Allgemeinen dem Hauptnamen des Benutzers vorgezogen. SAMAccountName ist in der Domain eindeutig (obwohl er in der Domänenstruktur nicht eindeutig ist), aber es ist die String-Domain, die Benutzer normalerweise für die Anmeldung verwenden (z. B.,_netapp\username_).der Distinguished Name ist der eindeutige Name in der Gesamtstruktur, ist aber in der Regel von den Benutzern nicht bekannt.
+
+
+TIP: Auf dem Windows-Systemteil derselben Domäne können Sie immer eine Eingabeaufforderung öffnen und SET eingeben, um den richtigen Domänennamen zu finden (USERDOMAIN=). Der OCI-Anmeldename lautet dann `USERDOMAIN\sAMAccountName`.
+
+Verwenden Sie für den Domainnamen *mydomain.x.y.z.com* `DC=x,DC=y,DC=z,DC=com` Geben Sie in Insight im Feld Domain ein.
+
+*Ports*:
+
+Der Standardport für LDAP ist 389, und der Standardport für LDAPS ist 636
+
+Typische URL für LDAPS: `ldaps://<ldap_server_host_name>:636`
+
+Protokolle befinden sich bei:``\\<install directory>\SANscreen\wildfly\standalone\log\ldap.log``
+
+Standardmäßig erwartet Insight die in den folgenden Feldern angegebenen Werte. Wenn sich diese Änderungen in Ihrer Active Directory-Umgebung ändern, müssen Sie sie in der Insight LDAP-Konfiguration ändern.
+
+|===
+
+
+ a| 
+Rollenattribut
+
+
+
+ a| 
+Mitgliedschafts
+
+
+
+ a| 
+Mail-Attribut
+
+
+
+ a| 
+E-Mail
+
+
+
+ a| 
+Attribut Distinguished Name
+
+
+
+ a| 
+Name wird unterschieden
+
+
+
+ a| 
+Empfehlung
+
+
+
+ a| 
+Folgen
+
+|===
+*Gruppen:*
+
+Um Benutzer mit unterschiedlichen Zugriffsrollen auf den OnCommand Insight- und DWH-Servern zu authentifizieren, müssen Sie Gruppen in Active Directory erstellen und diese Gruppennamen auf OnCommand Insight- und DWH-Servern eingeben. Die folgenden Gruppennamen sind nur Beispiele. Die Namen, die Sie für LDAP in Insight konfigurieren, müssen mit denen übereinstimmen, die für Ihre Active Directory-Umgebung eingerichtet wurden.
+
+|===
+
+
+| Insight Group | Beispiel 
+
+
+ a| 
+Insight Server Administratorgruppe
+ a| 
+insight.server.admins
+
+
+
+ a| 
+Insight Administratoren
+ a| 
+Insight.Administratoren
+
+
+
+ a| 
+Insight Benutzergruppe
+ a| 
+insight.users
+
+
+
+ a| 
+Insight Gästegruppe
+ a| 
+Insight.Gäste
+
+
+
+ a| 
+Administratorgruppe für Berichte
+ a| 
+Insight.Report.Administratoren
+
+
+
+ a| 
+Gruppe der pro-Autoren berichten
+ a| 
+insight.report.proauthors
+
+
+
+ a| 
+Gruppe „Verfasser von Berichten“
+ a| 
+insight.report.business.authors
+
+
+
+ a| 
+Gruppe der meldesstattenen Verbraucher
+ a| 
+Insight.Report.Business.Consumers
+
+
+
+ a| 
+Gruppe der Reporting-Empfänger
+ a| 
+Insight.Report.Empfänger
+
+|===

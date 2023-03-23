@@ -1,0 +1,33 @@
+---
+permalink: config-admin/generating-logs-for-customer-support.html 
+sidebar: sidebar 
+keywords:  
+summary: Generieren Sie auf Anfrage des Kundensupports einen Server, eine Akquisition oder ein Remote-Protokoll zur Fehlerbehebung. 
+---
+= Erstellen von Protokollen für den Kundendienst
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Generieren Sie auf Anfrage des Kundensupports einen Server, eine Akquisition oder ein Remote-Protokoll zur Fehlerbehebung.
+
+
+
+== Über diese Aufgabe
+
+Wenn der NetApp Kundensupport Anfragen, verwenden Sie diese Option, um die Protokolle zu generieren.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin* und wählen Sie *Fehlerbehebung*.
+. Klicken Sie unten auf der Seite im Bereich Weitere Aufgaben auf *Erweiterte Fehlerbehebung*.
+. Klicken Sie auf der nächsten Seite im Menü Erweitert auf den Link *Fehlerbehebung*.
+. Klicken Sie auf die Registerkarte *Logs* und wählen Sie die Protokolldatei zum Herunterladen aus.
++
+Es wird ein Dialogfeld geöffnet, in dem Sie das Protokoll öffnen oder lokal speichern können.
+
+

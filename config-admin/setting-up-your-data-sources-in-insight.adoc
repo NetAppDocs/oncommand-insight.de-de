@@ -1,0 +1,25 @@
+---
+permalink: config-admin/setting-up-your-data-sources-in-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Datenquellen sind die kritischsten Komponenten bei der Wartung einer Insight Umgebung. Datenquellen erkennen Netzwerkinformationen, die zur Analyse und Validierung verwendet werden. Die Datenquellen müssen in Insight so konfiguriert werden, dass sie innerhalb des Netzwerks überwacht werden können. 
+---
+= Richten Sie Ihre Datenquellen in Insight ein
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Datenquellen sind die kritischsten Komponenten bei der Wartung einer Insight Umgebung. Datenquellen erkennen Netzwerkinformationen, die zur Analyse und Validierung verwendet werden. Die Datenquellen müssen in Insight so konfiguriert werden, dass sie innerhalb des Netzwerks überwacht werden können.
+
+Für jede Datenquelle hängen die spezifischen Anforderungen zur Definition dieser Datenquelle vom Anbieter und Modell der entsprechenden Geräte ab. Bevor Sie die Datenquellen hinzufügen, benötigen Sie Netzwerkadressen, Kontoinformationen und Passwörter für alle Geräte und möglicherweise folgende zusätzliche Details:
+
+* Schalter
+* Gerätemanagement-Stationen
+* Storage-Systeme mit IP-Konnektivität
+* Speicherverwaltungsstationen
+* Hostserver, auf denen die Managementsoftware für Speichergeräte ausgeführt wird, die keine IP-Verbindung haben
+
+
+Weitere Informationen zu den Definitionen Ihrer Datenquellen finden Sie in den Informationen zu „Vendor-Specific Data source reference“ in diesem Abschnitt.

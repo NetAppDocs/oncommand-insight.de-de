@@ -1,0 +1,156 @@
+---
+permalink: config-admin/emc-celerra-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Die Datenquelle Celerra \(SSH\) erfasst Bestandsdaten aus Celerra-Speicher. Für die Konfiguration erfordert diese Datenquelle die IP-Adresse der Speicherprozessoren sowie einen schreibgeschützten Benutzernamen und ein Kennwort.' 
+---
+= EMC Celerra Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Celerra (SSH)-Datenquelle erfasst Bestandsdaten vom Celerra-Speicher. Für die Konfiguration erfordert diese Datenquelle die IP-Adresse der Speicherprozessoren und einen _Read-Only_ Benutzernamen und ein Passwort.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Bestandsinformationen aus der EMC Celerra-Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Celerra Network Server
+ a| 
+Storage
+
+
+
+ a| 
+Celerra Meta Volume/Celerra Storage Pool
+ a| 
+Storage-Pool
+
+
+
+ a| 
+File-System
+ a| 
+Internes Volumen
+
+
+
+ a| 
+Data Mover
+ a| 
+Controller
+
+
+
+ a| 
+Dateisystem, das auf einem Data Mover gemountet ist
+ a| 
+Dateifreigabe
+
+
+
+ a| 
+CIFS- und NFS-Exporte
+ a| 
+Share
+
+
+
+ a| 
+Festplatten-Volume
+ a| 
+Back-End LUN
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* Die IP-Adresse des Speicherprozessors
+* Schreibgeschützter Benutzername und Kennwort
+* SSH-Port 22
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Adresse der Celerra
+ a| 
+IP-Adresse oder vollständig qualifizierter Domänenname des Celerra-Geräts
+
+
+
+ a| 
+Benutzername
+ a| 
+Name, der für die Anmeldung beim Celerra-Gerät verwendet wird
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort für die Anmeldung beim Celerra-Gerät
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (Minuten)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 20 Minuten)
+
+
+
+ a| 
+SSH-Prozess-Wartezeit (Sek.)
+ a| 
+SSH-Prozess-Timeout (Standard: 600 Sekunden)
+
+
+
+ a| 
+Anzahl Wiederholungen
+ a| 
+Anzahl der Versuche für einen erneuten Versuch in der Bestandsaufnahme
+
+
+
+ a| 
+SSH-Banner-Wartezeit (Sek.)
+ a| 
+SSH Banner Wait Timeout (Standard: 20 Sekunden)
+
+|===

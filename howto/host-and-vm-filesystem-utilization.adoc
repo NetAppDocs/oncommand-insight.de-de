@@ -1,0 +1,26 @@
+---
+permalink: howto/host-and-vm-filesystem-utilization.html 
+sidebar: sidebar 
+keywords: filesystem 
+summary: Die Datenquelle „Host and VM File Systems“ ermöglicht in Kombination mit der Host Utilization License die Berichterstellung und Kostenverrechnung für bekannte Hosts und VMs auf Filesystem-Ebene. 
+---
+= Erfassen von Host- und VM-Dateisystemauslastungs-Daten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Datenquelle „Host and VM File Systems“ ermöglicht in Kombination mit der Host Utilization License die Berichterstellung und Kostenverrechnung für bekannte Hosts und VMs auf Filesystem-Ebene.
+
+OnCommand Insight erfasst Daten von Storage-Geräten, von denen die meisten ihre Volumes als Block-Geräte melden. Dadurch kann Insight Berichte zur Auslastung auf Storage-Ebene erstellen, jedoch nicht auf Filesystem-Ebene. Storage Arrays wissen in der Regel, auf welche Blöcke geschrieben wurden, jedoch nicht, auf welche Blöcke freigegeben wurden.
+
+Client-Hosts und VMs implementieren Dateisysteme (ntfs, ext*...) Auf diesen Blockgeräten. Die meisten Dateisysteme enthalten ein Inhaltsverzeichnis mit Verzeichnis- und Dateimetadaten. Wenn Dateien gelöscht werden, werden ihre Einträge einfach aus dem Inhaltsverzeichnis entfernt. Von diesen Dateien verbrauchte Blöcke sind jetzt für die Wiederverwendung durch das Dateisystem geeignet, aber das Speicher-Array weiß dies nicht. Damit Insight Berichte über die Dateisystemnutzung erstellen kann, müssen diese aus Sicht des Client-Hosts oder der VM gesammelt werden, um eine genaue Kostenzuordnung zu ermöglichen.
+
+Insight ermöglicht die Erfassung von Daten zur Filesystem-Auslastung auf dieser Ebene über die Datenquelle *NetApp Host and VM File System* in Kombination mit der *Host Utilization* Lizenz. VM's müssen mit dem entsprechenden *Compute Resource Group*-Namen versehen werden, und zugehörige Speicher-Arrays müssen mit entsprechenden *Tier*-Anmerkungen mit den richtigen Kosten versehen werden, um eine genaue Kostenberichterstellung zu ermöglichen.
+
+[NOTE]
+====
+Die Host Utilization License ist ressourcenbasiert und nicht kapazitätsbasiert wie andere Insight-Lizenzen.
+
+====

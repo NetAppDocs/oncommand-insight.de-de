@@ -1,0 +1,26 @@
+---
+permalink: reporting/enabling-security-headers.html 
+sidebar: sidebar 
+keywords:  
+summary: HTTP-Header können so konfiguriert werden, dass die allgemeine Sicherheit der Cognos Analytics-Webanwendung erhöht wird. 
+---
+= Aktivieren Von Sicherheitsüberschriften
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+HTTP-Header können so konfiguriert werden, dass die allgemeine Sicherheit der Cognos Analytics-Webanwendung erhöht wird.
+
+So fügen Sie die Antwortkopfzeilen hinzu:
+
+* Melden Sie sich bei der Cognos Analytics-Benutzeroberfläche an und navigieren Sie zu *Verwalten \-> Konfiguration \-> System \-> Erweiterte Einstellungen*
+* Fügen Sie den folgenden Schlüssel/Wert hinzu, und wenden Sie sie an:
++
+** Schlüssel: `BIHeaderFilter.responseHeaders`
+** Wert: `[{"name":"X-FRAME-OPTIONS","value":"SAMEORIGIN"},{"name":"X-XSS-Protection","value":"1"},{"name":"X-Content-Type-Options","value":"nosniff"}]`
+
+
+* Aktualisiere deinen Browser, um die Header zu aktivieren.
+

@@ -1,0 +1,33 @@
+---
+permalink: reporting/how-to-plan-the-results-of-your-custom-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Bevor Sie die Berichtdesign-Tools öffnen, können Sie die gewünschten Ergebnisse aus dem Bericht planen. Mit den Tools zur Erstellung von Berichten können Sie problemlos Berichte erstellen und benötigen möglicherweise keine umfangreiche Planung. Es ist jedoch sinnvoll, den Berichtsinfragesteller zu den Berichtanforderungen zu verstehen. 
+---
+= So planen Sie die Ergebnisse Ihres benutzerdefinierten Berichts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie die Berichtdesign-Tools öffnen, können Sie die gewünschten Ergebnisse aus dem Bericht planen. Mit den Tools zur Erstellung von Berichten können Sie problemlos Berichte erstellen und benötigen möglicherweise keine umfangreiche Planung. Es ist jedoch sinnvoll, den Berichtsinfragesteller zu den Berichtanforderungen zu verstehen.
+
+* Geben Sie die genaue Frage an, die Sie beantworten möchten. Beispiel:
++
+** Wie viel Kapazität habe ich noch übrig?
+** Wie hoch sind die Kosten für die Rückberechnung pro Geschäftsbereich?
+** Wie groß ist die Kapazität je Tier, um sicherzustellen, dass die Geschäftsbereiche auf die richtige Storage-Tier ausgerichtet sind?
+** Wie kann ich einen Strom- und Kühlungsbedarf vorhersagen? (Fügen Sie benutzerdefinierte Metadaten durch Hinzufügen von Annotationen zu Ressourcen hinzu.)
+
+
+* Ermitteln Sie die Datenelemente, die Sie zur Unterstützung der Antwort benötigen.
+* Identifizieren Sie die Beziehungen zwischen Daten, die in der Antwort angezeigt werden sollen. Nehmen Sie keine unlogischen Beziehungen in Ihre Frage auf, zum Beispiel "`Ich möchte die Ports sehen, die sich auf die Kapazität beziehen.`"
+* Ermitteln der für Daten erforderlichen Berechnungen
+* Bestimmen Sie, welche Filtertypen erforderlich sind, um die Ergebnisse zu begrenzen.
+* Bestimmen, ob aktuelle oder historische Daten verwendet werden müssen.
+* Legen Sie fest, ob Sie Zugriffsberechtigungen für Berichte festlegen müssen, um die Daten auf bestimmte Zielgruppen zu beschränken.
+* Ermitteln Sie, wie der Bericht verteilt werden soll. Sollte er beispielsweise per E-Mail an einen festgelegten Zeitplan gesendet oder im Bereich „Team Content Folder“ enthalten sein?
+* Bestimmen Sie, wer den Bericht verwalten soll. Dies kann sich auf die Komplexität des Designs auswirken.
+* Erstellen Sie ein Modell des Berichts.
+

@@ -1,0 +1,35 @@
+---
+permalink: config-admin/installing-a-patch-on-all-data-sources-of-one-type.html 
+sidebar: sidebar 
+keywords:  
+summary: Nach dem Hochladen eines Datenquellpatches können Sie ihn auf allen Datenquellen desselben Typs installieren. 
+---
+= Installation eines Patches auf einer Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach dem Hochladen eines Datenquellpatches können Sie ihn auf allen Datenquellen desselben Typs installieren.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen eine Patch-Datei hochgeladen haben, die Sie auf einer Datenquelle installieren möchten.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Patches*.
+. Wählen Sie über die Schaltfläche Aktionen die Option *Patch anwenden* aus.
+. Klicken Sie im Dialogfeld *Data source Patch anwenden* auf *Browse*, um die hochgeladene Patch-Datei zu finden.
+. Überprüfen Sie die Typen *Patch-Name*, *Beschreibung* und *betroffene Datenquellen*.
+. Wenn der ausgewählte Patch korrekt ist, klicken Sie auf *Patch anwenden*.
++
+Alle Datenquellen des gleichen Typs werden mit diesem Patch aktualisiert.
+
+

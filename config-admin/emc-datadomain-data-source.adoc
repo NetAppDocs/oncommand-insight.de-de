@@ -1,0 +1,149 @@
+---
+permalink: config-admin/emc-datadomain-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Diese Datenquelle erfasst Speicher- und Konfigurationsinformationen von EMC Data Domain Deduplizierungssystemen. Um die Datenquelle hinzuzufügen, müssen Sie spezifische Konfigurationsanweisungen und -Befehle verwenden und die Anforderungen an die Datenquelle sowie Empfehlungen zur Verwendung kennen. 
+---
+= EMC Data Domain Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese Datenquelle erfasst Speicher- und Konfigurationsinformationen von EMC Data Domain Deduplizierungssystemen. Um die Datenquelle hinzuzufügen, müssen Sie spezifische Konfigurationsanweisungen und -Befehle verwenden und die Anforderungen an die Datenquelle sowie Empfehlungen zur Verwendung kennen.
+
+
+
+== Terminologie
+
+OnCommand Insight bezieht die folgenden Bestandsinformationen aus der EMC Data Domain-Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Festplatte
+ a| 
+Festplatte
+
+
+
+ a| 
+Array Erledigen
+ a| 
+Storage
+
+
+
+ a| 
+Port
+ a| 
+Port
+
+
+
+ a| 
+Dateiys
+ a| 
+Internes Volumen
+
+
+
+ a| 
+Mtree
+ a| 
+Qtree
+
+
+
+ a| 
+Kontingente
+ a| 
+Kontingente
+
+
+
+ a| 
+NFS- und CIFS-Freigabe
+ a| 
+Dateifreigabe
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* IP-Adresse des Data Domain-Geräts
+* Schreibgeschützter Benutzername und Kennwort für den Data Domain-Speicher
+* SSH-Port 22
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+IP-Adresse
+ a| 
+Die IP-Adresse oder der vollqualifizierte Domänenname des Data Domain-Speicherarrays
+
+
+
+ a| 
+Benutzername
+ a| 
+Der Benutzername für das Data Domain-Speicherarray
+
+
+
+ a| 
+Passwort
+ a| 
+Das Kennwort für das Data Domain-Speicherarray
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 20 Minuten)
+
+
+
+ a| 
+SSH-Prozess-Wartezeit (Sek.)
+ a| 
+SSH-Prozess-Timeout (Standard: 180 Sekunden)
+
+
+
+ a| 
+SSH-Port
+ a| 
+SSH-Service-Port
+
+|===

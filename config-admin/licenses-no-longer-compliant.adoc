@@ -1,0 +1,18 @@
+---
+permalink: config-admin/licenses-no-longer-compliant.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie auf der Insight-Lizenzseite die Meldung „nicht konform“ sehen, verwaltet Insight mehr Terabyte als Ihr Unternehmen lizenziert hat. 
+---
+= Lizenzen sind nicht mehr kompatibel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie auf der Insight-Lizenzseite die Meldung „nicht konform“ sehen, verwaltet Insight mehr Terabyte als Ihr Unternehmen lizenziert hat.
+
+Die Meldung „nicht konform“ bedeutet, dass Ihr Unternehmen für weniger Terabyte bezahlt hat, als Insight derzeit verwaltet. Der Unterschied zwischen den verwalteten Terabytes und der lizenzierten Anzahl von Terabytes wird neben der Meldung „Nichteinhaltung“ angezeigt.
+
+Der Betrieb Ihres Insight Systems wird dadurch nicht beeinträchtigt, wenden Sie sich jedoch an Ihren NetApp Ansprechpartner, um Ihren Lizenzabdeckung zu erhöhen und die entsprechende Lizenz zu aktualisieren.

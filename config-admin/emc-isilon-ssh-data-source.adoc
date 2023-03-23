@@ -1,0 +1,155 @@
+---
+permalink: config-admin/emc-isilon-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Isilon SSH-Datenquelle erfasst Inventar und Performance aus EMC Isilon Scale-out-NAS-Speicher. 
+---
+= EMC Isilon Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Isilon SSH-Datenquelle erfasst Inventar und Performance aus EMC Isilon Scale-out-NAS-Speicher.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Bestandsinformationen aus der EMC Isilon-Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Laufwerk
+ a| 
+Festplatte
+
+
+
+ a| 
+Cluster
+ a| 
+Storage
+
+
+
+ a| 
+Knoten
+ a| 
+Storage-Node
+
+
+
+ a| 
+File-System
+ a| 
+Internes Volumen
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* Administratorberechtigungen für den Isilon-Speicher
+* Validierter Zugriff durch `telnet` Zu Port 22
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+IP-Adresse
+ a| 
+Die IP-Adresse oder der vollständig qualifizierte Domänenname des Isilon-Clusters
+
+
+
+ a| 
+Benutzername
+ a| 
+Der Benutzername für das Isilon-Cluster
+
+
+
+ a| 
+Passwort
+ a| 
+Das Passwort für den Isilon-Cluster
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 20 Minuten)
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+
+
+ a| 
+Zeitüberschreitung für SSH-Prozess
+ a| 
+SSH-Prozess-Timeout (Standard: 60 Sekunden)
+
+
+
+ a| 
+SSH-Port
+ a| 
+SSH-Service-Port
+
+|===
+
+
+== Ausführen von CLI-Befehlen
+
+Ab OnCommand Insight Version 7.3.11 und Service Pack 9 enthält die Datenquelle von EMC Isilon eine Erweiterung, die dazu führt, dass Insight mehr CLI-Befehle ausführt. Wenn Sie einen nicht-Root-Benutzer in Ihrer Datenquelle verwenden, haben Sie wahrscheinlich eine „sudoers“-Datei konfiguriert, um diesem Benutzerkonto die Möglichkeit zu geben, bestimmte CLI-Befehle über SSH auszuführen.
+
+Damit Insight die Funktion „Access Zones“ von EMC verstehen kann, führt Insight nun zusätzlich die folgenden neuen CLI-Befehle aus:
+
+* `sudo isi zone zones list --format json –verbose`
+* `sudo isi zone zones list`
+
+
+Insight analysiert die Ausgabe dieser Befehle und führt mehrere Instanzen vorhandener Befehle aus, um die logische Konfiguration von Objekten wie qtrees, Quotas und NAS-Freigaben/-Exporten zu erhalten, die sich in nicht standardmäßigen Access Zones befinden. Insight meldet diese Objekte nun als Ergebnis dieser Verbesserung für nicht standardmäßige Zugriffszonen. Da Insight diese Daten durch Ausführen vorhandener Befehle (mit unterschiedlichen Optionen) erhält, ist keine Änderung der sudoers-Datei erforderlich, damit diese funktionieren; nur mit der Einführung der neuen Befehle oben ist die Änderung erforderlich.
+
+Aktualisieren Sie Ihre sudoers-Datei, damit Ihr Insight-Servicekonto diese Befehle ausführen kann, bevor Sie ein Upgrade auf diese Insight-Version durchführen. Wenn Sie dies nicht tun, kann es zu einem Ausfall Ihrer Isilon-Datenquellen kommen.
+
+
+
+== Statistik „Dateisystem“
+
+Ab OnCommand Insight 7.3.12 führt der EMC Isilon Data Collector Statistiken zum „Dateisystem“ für das Node-Objekt für EMC Isilon ein. Die von OnCommand Insight gemeldeten bestehenden Node-Statistiken basieren auf „Festplatten“ – d. h. für IOPS und Durchsatz eines Storage-Nodes, welche Vorgänge machen die Festplatten in diesem Node aggregiert? Bei Workloads, bei denen Lesezugriffe im Speicher zwischengespeichert und/oder Komprimierung verwendet werden, kann der Filesystem-Workload erheblich höher sein als die tatsächlichen Treffer auf den Festplatten – ein Datensatz, der 5:1 komprimiert, könnte daher einen „Filesystem-Lesedurchsatz“ Wert haben den 5-fachen des Storage-Node-Lesedurchsatzes. Bei Letzterem werden die Lesevorgänge von der Festplatte gemessen. Diese werden um das 5-Fache erweitert, wenn der Node die Daten entkomprimiert, um die Leseanforderung des Kunden zu bedienen.

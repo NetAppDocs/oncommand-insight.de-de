@@ -1,0 +1,228 @@
+---
+permalink: install-windows/upgrading-insight-to-version-7-3-12-or-later-windows.html 
+sidebar: sidebar 
+keywords: upgrade,previous version,wizard,backup,conversion 
+summary: Vor dem Upgrade von OnCommand Insight 7.3.10 auf 7.3.11 Version 7.3.12 oder höher müssen Sie das OCI Datenmigrationstool ausführen. 
+---
+= Aktualisieren von Insight auf Version 7.3.12 oder höher - Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vor dem Upgrade von OnCommand Insight 7.3.10 auf 7.3.11 Version 7.3.12 oder höher müssen Sie das OCI Datenmigrationstool ausführen.
+
+
+
+== Hintergrund
+
+OnCommand Insight Version 7.3.12 und höher verwenden zugrunde liegende Software, die möglicherweise mit früheren Versionen nicht kompatibel ist. Insight Version 7.3.12 und höher enthalten ein *Data Migration Tool* zur Unterstützung beim Upgrade.
+
+[NOTE]
+====
+OnCommand Insight Versionen 7.3.9 und früher werden nicht mehr unterstützt. Wenn Sie eine dieser Versionen ausführen, müssen Sie vor dem Upgrade auf 7.3.12 oder höher auf Insight Version 7.3.10 oder höher (7.3.11 wird dringend empfohlen) aktualisieren.
+
+====
+
+
+== Welche Funktionen Bietet Das Datenmigrationstool?
+
+Das Migrationstool führt zunächst eine Kompatibilitätsprüfung durch und folgt dann einem von drei verschiedenen Upgrade-Pfaden. Der ausgewählte Pfad basiert auf der Datenkompatibilität Ihrer aktuellen Version.
+
+[NOTE]
+====
+Vor dem Upgrade müssen Sie das Data Migration Tool ausführen und die empfohlenen Schritte ausführen.
+
+====
+
+
+== Bevor Sie beginnen
+
+* Es wird dringend empfohlen, das OnCommand Insight-System vor dem Ausführen des Datenmigrationstools zu sichern.
+* Der Elasticsearch-Service auf dem Server muss betriebsbereit sein.
+* Das Data Migration Tool _must_ muss für die Datenbank und alle Performance-Archive ausgeführt werden, bevor Sie Insight aktualisieren.
+
+
+
+
+== Ausführen des Data Migration Tools
+
+. Laden Sie die aktuelle Version des Data Migration Tools (z. B. _SANScreenDataMigrationTool-x86-7.3.12-97.zip_) sowie die entsprechende Insight Installer-Datei auf Ihren Insight Server herunter. Entpacken Sie die ZIP-Datei in einen Arbeitsordner. Downloads finden Sie auf der https://mysupport.netapp.com/site/products/all/details/oncommand-insight/downloads-tab["NetApp Support Website"].
+. Öffnen Sie ein Befehlsfenster, und navigieren Sie zu Ihrem Arbeitsordner.
++
+** Öffnen Sie PowerShell als Administrator.
+
+
+. Führen Sie das Datenmigrationstool über den folgenden Befehl aus:
++
+** _`.\SANScreenDataMigrationTool.ps1`_
+
+
+. Befolgen Sie bei Bedarf die Anweisungen. Im Folgenden ein Beispiel.
+
+
+[listing]
+----
+.\SANScreenDataMigrationTool.ps1
+
+NetApp SANScreen Data Migration Tool 7.3.12-121
+
+Checking OnCommand Insight Installation...
+OnCommand Insight 7.3.10 (139) is installed
+
+Getting installation parameters...
+Installation Directory:  C:\Program Files\SANscreen\
+Elasticsearch Rest Port: 9200
+
+Checking Elasticsearch service...
+Elasticsearch service is up
+
+Checking for obsolete (version 5) indexes...
+Found 54 obsolete indexes. Of these,
+    54 indexes may be migrated with OCI server running,
+       the most recent of which is for 2021-05-13
+
+Verifying migration component is present...
+SANscreen Server service is Running
+
+Proceed with online migration of 54 indexes (y or [n])?:
+----
+Das Data Migration Tool überprüft, ob veraltete Indizes auf Ihrem System vorhanden sind, und meldet, ob sie gefunden wurden. Wenn keine vorhanden sind, wird das Werkzeug beendet.
+
+Einige Indizes können migriert werden, während der SANscreen-Serverdienst ausgeführt wird. Andere können nur migriert werden, wenn der Server angehalten wird. Wenn keine Indizes vorhanden sind, die migriert werden können, wird das Tool beendet. Befolgen Sie andernfalls die Anweisungen, wie Sie dazu aufgefordert werden.
+
+Wenn das Data Migration Tool abgeschlossen ist, wird es erneut auf veraltete Indizes überprüft. Wenn alle Indizes migriert wurden, informiert Sie das Tool darüber, dass ein Upgrade auf OnCommand Insight 7.3.12 unterstützt wird. Sie können jetzt mit dem Upgrade der Insight fortfahren.
+
+[listing]
+----
+.\SANScreenDataMigrationTool.ps1
+
+NetApp SANScreen Data Migration Tool 7.3.12-127
+
+Checking OnCommand Insight Installation...
+OnCommand Insight 7.3.10 (139) is installed
+
+Getting installation parameters...
+Installation Directory:  D:\SANscreen\
+Elasticsearch Rest Port: 9200
+
+Checking Elasticsearch service...
+Elasticsearch service is up
+
+Checking for obsolete (version 5) indexes...
+Found 5 obsolete indexes. Of these,
+     5 indexes need to be migrated with OCI server stopped
+
+Verifying migration component is present...
+SANscreen Server service is Stopped
+
+Proceed with offline migration of 5 indexes (y or [n])?: y
+Preparing to perform migration...
+Preparing to migrate ociint-inventory-snmp_win2012_host: copied; backup; delete old; restore new; cleanup; done.
+Preparing to migrate ociint-inventory-snmp_win2012_interface: copied; backup; delete old; restore new; cleanup; done.
+Preparing to migrate ociint-inventory-snmp_win2012_load_average: copied; backup; delete old; restore new; cleanup; done.
+Preparing to migrate ociint-inventory-snmp_win2012_storage: copied; backup; delete old; restore new; cleanup; done.
+Preparing to migrate ociint-inventory-snmp_win2012_tcp_connection: copied; backup; delete old; restore new; cleanup; done.
+Execution time 0:00:15
+
+Checking for obsolete (version 5) indexes...
+No obsolete indexes found.  Upgrade to 7.3.12+ is supported.
+
+C:\Users\root\Desktop\SANScreenDataMigrationTool-x64-7.3.12-127>
+----
+Wenn Sie aufgefordert wurden, den SANscreen-Dienst zu beenden, starten Sie ihn vor dem Upgrade von Insight neu.
+
+
+
+== Validierungsfehler
+
+Falls die Indexvalidierung fehlschlägt, informiert Sie das Migrationstool vor dem Beenden über das Problem.
+
+*OnCommand Insight ist nicht vorhanden:*
+
+[listing]
+----
+.\SANScreenDataMigrationTool.ps1
+
+NetApp SANScreen Data Migration Tool V1.0
+
+Checking OnCommand Insight Installation...
+ERROR: OnCommand Insight is not installed
+----
+*Ungültige Insight-Version:*
+
+[listing]
+----
+.\SANScreenDataMigrationTool.ps1
+
+NetApp SANScreen Data Migration Tool 7.3.12-105
+
+Checking OnCommand Insight Installation...
+OnCommand Insight 7.3.4 (126) is installed
+ERROR: The OCI Data Migration Tool is intended to be run against OCI 7.3.5 - 7.3.11
+----
+*Elasticsearch-Dienst läuft nicht:*
+
+[listing]
+----
+.\SANScreenDataMigrationTool.ps1
+
+NetApp SANScreen Data Migration Tool 7.3.12-105
+
+Checking OnCommand Insight Installation...
+OnCommand Insight 7.3.11 (126) is installed
+
+Getting installation parameters...
+Installation Directory:  C:\Program Files\SANscreen\
+Elasticsearch Rest Port: 9200
+
+Checking Elasticsearch service...
+ERROR: The Elasticsearch service is not running
+
+Please start the service and wait for initialization to complete
+Then rerun OCI Data Migration Tool
+----
+
+
+== Befehlszeilenoptionen
+
+Das Datenmigrationstool enthält einige optionale Parameter, die sich auf den Betrieb auswirken.
+
+|===
+
+
+| Option (Windows) | Funktion 
+
+
+ a| 
+-S
+ a| 
+Alle Eingabeaufforderungen unterdrücken
+
+
+
+ a| 
+-Perf_Archive
+ a| 
+Wenn angegeben, werden vorhandene Archiveinträge für alle Daten ersetzt, deren Index(e) migriert werden. Der Pfad sollte auf das Verzeichnis verweisen, das die ZIP-Dateien für den Archiveintrag enthält.
+
+Ein Argument von '-' kann angegeben werden, um anzuzeigen, dass kein Performance-Archiv aktualisiert werden muss.
+
+Wenn dieses Argument vorhanden ist, wird die Eingabeaufforderung für den Archivspeicherort unterdrückt.
+
+
+
+ a| 
+-Check
+ a| 
+Falls vorhanden, wird das Skript sofort nach der Meldung der Indexzahlen beendet.
+
+
+
+ a| 
+-Dryrun
+ a| 
+Falls vorhanden, meldet die ausführbare Migrationsdatei die Aktionen, die ausgeführt werden würden (zum Migrieren von Daten und Aktualisieren von Archiveinträgen), führt die Vorgänge jedoch nicht aus.
+
+|===

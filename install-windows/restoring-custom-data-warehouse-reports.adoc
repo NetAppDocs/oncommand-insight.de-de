@@ -1,0 +1,45 @@
+---
+permalink: install-windows/restoring-custom-data-warehouse-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Falls zutreffend, können Sie alle benutzerdefinierten Berichte, die Sie vor dem Upgrade gesichert haben, manuell wiederherstellen. Sie müssen dies jedoch nur tun, wenn Sie Berichte verlieren, wenn diese beschädigt wurden. 
+---
+= Benutzerdefinierte Data Warehouse-Berichte werden wiederhergestellt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Falls zutreffend, können Sie alle benutzerdefinierten Berichte, die Sie vor dem Upgrade gesichert haben, manuell wiederherstellen. Sie müssen dies jedoch nur tun, wenn Sie Berichte verlieren, wenn diese beschädigt wurden.
+
+
+
+== Schritte
+
+. Öffnen Sie Ihren Bericht mit einem Texteditor, und wählen Sie den Inhalt aus, und kopieren Sie ihn.
+. Melden Sie sich beim Reporting-Portal unter an `+https://fqdn/reporting+`.
+. Klicken Sie in der Symbolleiste Data Warehouse auf image:../media/oci-reporting-portal-icon.gif[""] Um das Insight Reporting-Portal zu öffnen.
+. Wählen Sie im Menü Start die Option *Report Studio*.
+. Wählen Sie ein beliebiges Paket aus.
++
+Report Studio wird angezeigt.
+
+. Klicken Sie auf *Create New*.
+. Wählen Sie *Liste*.
+. Wählen Sie im Menü Extras die Option *Bericht aus Zwischenablage öffnen*.
++
+Das Dialogfeld *Bericht aus Zwischenablage öffnen* wird angezeigt.
+
+. Wählen Sie im Menü Datei die Option *Speichern unter* und speichern Sie den Bericht im Ordner Benutzerdefinierte Berichte.
+. Öffnen Sie den Bericht, um zu überprüfen, ob er importiert wurde.
++
+Wiederholen Sie diese Aufgabe für jeden Bericht.
+
++
+[NOTE]
+====
+Beim Laden eines Berichts wird möglicherweise ein „`Expression Parsing error`“ angezeigt. Das bedeutet, dass die Abfrage einen Verweis auf mindestens ein Objekt enthält, das nicht vorhanden ist, was bedeutet, dass im Fenster Quelle kein Paket ausgewählt ist, um den Bericht zu validieren. Klicken Sie in diesem Fall mit der rechten Maustaste auf eine Data-Mart-Dimension im Fenster Quelle, und wählen Sie Berichtspaket, Wählen Sie dann das dem Bericht zugeordnete Paket aus (z. B. das Bestandspaket, wenn es sich um einen Bestandsbericht handelt, oder eines der Leistungspakete, wenn es sich um einen Leistungsbericht handelt), damit Report Studio es validieren und speichern kann.
+
+====
+

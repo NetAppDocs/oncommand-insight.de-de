@@ -1,0 +1,60 @@
+---
+permalink: config-admin/understanding-this-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: Spezielle Variablen auf der anpassbaren Seite „zusätzliche Daten“ eines Assets ermöglichen es Ihnen, auf einfache Weise zusätzliche Informationen anzuzeigen, die direkt mit dem aktuellen Asset in Verbindung stehen. 
+---
+= Die Variablen „ USD“ verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Spezielle Variablen auf der anpassbaren Seite „zusätzliche Daten“ eines Assets ermöglichen es Ihnen, auf einfache Weise zusätzliche Informationen anzuzeigen, die direkt mit dem aktuellen Asset in Verbindung stehen.
+
+
+
+== Über diese Aufgabe
+
+Um die Variablen „`` €“ in Widgets auf der anpassbaren Landing Page Ihres Assets zu verwenden, führen Sie die folgenden Schritte aus. Für dieses Beispiel fügen wir ein Tabellen-Widget hinzu.
+
+[NOTE]
+====
+„`` diese“-Variablen sind nur für die anpassbare Landing Page eines Assets gültig. Für andere Insight Dashboards sind sie nicht verfügbar. Die verfügbaren Variablen „`` this“ variieren je nach Asset-Typ.
+
+====
+
+
+== Schritte
+
+. Navigieren Sie zu einer Anlagenseite für ein Asset Ihrer Wahl. Wählen wir für dieses Beispiel eine Seite mit den Assets der Virtual Machine (VM) aus. Suchen Sie nach einer VM, und klicken Sie auf den Link, um zur Bestandsseite der VM zu gelangen.
++
+Die Bestandsseite für die VM wird geöffnet.
+
+. Klicken Sie auf das Dropdown-Menü *Ansicht ändern:* > *zusätzliche Daten der virtuellen Maschine*, um zur anpassbaren Landing Page des Assets zu gelangen.
+. Klicken Sie auf die Schaltfläche *Widget* und wählen Sie *Tabelle Widget*.
++
+Das Widget „Tabelle“ wird zur Bearbeitung geöffnet. Standardmäßig werden alle Speicher in der Tabelle angezeigt.
+
+. Wir wollen alle virtuellen Maschinen anzeigen. Klicken Sie auf die Asset Selector und ändern Sie *Storage* in *Virtual Machine*.
++
+Alle virtuellen Maschinen werden nun in der Tabelle angezeigt.
+
+. Klicken Sie auf die Schaltfläche *Spaltenauswahl*image:../media/column-picker-button.gif[""]Und fügen Sie der Tabelle das Feld *Hypervisor Name* hinzu.
++
+Der Hypervisor-Name wird für jede VM in der Tabelle angezeigt.
+
+. Es ist uns nur der Hypervisor wichtig, der die aktuelle VM hostet. Klicken Sie auf die Schaltfläche**+**des Felds *Filter by* und wählen Sie *Hypervisor Name* aus.
+. Klicken Sie auf *any* und wählen Sie die Variable * this.host.name* aus. Klicken Sie auf die Schaltfläche, um den Filter zu speichern.
++
+image::../media/variable-this-example-1.gif[Variable dieses Beispiel 1]
+
+. Die Tabelle zeigt nun alle VMs, die vom Hypervisor der aktuellen VM gehostet werden. Klicken Sie Auf *Speichern*.
+
+
+
+
+== Ergebnisse
+
+Die Tabelle, die Sie für diese Seite „VM-Anlage“ erstellt haben, wird für alle angezeigten VM-Asset-Seiten angezeigt. Die Verwendung der Variablen * this.host.name €* im Widget bedeutet, dass nur die VMs, die dem Hypervisor der aktuellen Assets gehören, in der Tabelle angezeigt werden.

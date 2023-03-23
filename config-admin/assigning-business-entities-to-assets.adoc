@@ -1,0 +1,48 @@
+---
+permalink: config-admin/assigning-business-entities-to-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie können einem Asset eine Business Entity zuweisen \( Host, Port, Storage, Switch, Virtual Machine, Qtree, Share, Volume oder internes Volume\) ohne Zuordnung der Geschäftseinheit zu einer Applikation; Unternehmenseinheiten werden jedoch automatisch einer Ressource zugewiesen, wenn diese Ressource einer Applikation zugeordnet ist, die zu einer Geschäftseinheit gehört.' 
+---
+= Zuordnen von Geschäftseinheiten zu Assets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einer Ressource eine Geschäftseinheit zuweisen (Host, Port, Speicher, Switch, virtuelle Maschine, Qtree, Share, Volume oder internes Volume) ohne Zuordnung der Geschäftseinheit zu einer Applikation, doch werden Geschäftseinheiten automatisch einer Ressource zugewiesen, wenn diese Ressource einer Applikation zugeordnet ist, die zu einer Geschäftseinheit gehört.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen bereits eine Geschäftseinheit erstellt haben.
+
+
+
+== Über diese Aufgabe
+
+Sie können Geschäftseinheiten zwar direkt Assets zuweisen, es wird jedoch empfohlen, Applikationen Assets zuzuweisen und dann Geschäftseinheiten Assets zuzuweisen.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Suchen Sie das Asset, auf das Sie die Geschäftseinheit anwenden möchten, indem Sie einen der folgenden Schritte ausführen:
++
+** Klicken Sie im Asset Dashboard auf das Asset.
+** Klicken Sie Auf image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] Geben Sie in der Symbolleiste, um das Feld *Assets suchen* anzuzeigen, den Namen des Assets ein, und wählen Sie dann das Asset aus der Liste aus.
+
+
+. Positionieren Sie im Abschnitt *Benutzerdaten* der Asset-Seite Ihren Cursor auf *Keine* neben *Business Entities* und klicken Sie dann auf image:../media/pencil-icon-landing-page-be.gif[""].
++
+Die Liste der verfügbaren Geschäftseinheiten wird angezeigt.
+
+. Geben Sie in das Feld *Suchen* ein, um die Liste nach einer bestimmten Entität zu filtern, oder scrollen Sie in der Liste nach unten; wählen Sie eine Business Entity aus der Liste aus.
++
+Wenn die ausgewählte Geschäftseinheit mit einer Applikation verknüpft ist, wird der Anwendungsname angezeigt. In diesem Fall wird neben dem Namen der Geschäftseinheit das Wort „`derived`“ angezeigt. Wenn Sie die Einheit nur für das Asset und nicht für die zugehörige Anwendung verwalten möchten, können Sie die Zuweisung der Anwendung manuell überschreiben.
+
+. Um eine Anwendung zu überschreiben, die von einer Geschäftseinheit abgeleitet wurde, setzen Sie den Cursor auf den Anwendungsnamen, und klicken Sie auf image:../media/trash-can-query.gif[""]Wählen Sie eine andere Geschäftseinheit aus, und wählen Sie eine andere Anwendung aus der Liste aus.
+

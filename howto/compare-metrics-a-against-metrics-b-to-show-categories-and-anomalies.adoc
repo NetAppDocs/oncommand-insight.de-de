@@ -1,0 +1,25 @@
+---
+permalink: howto/compare-metrics-a-against-metrics-b-to-show-categories-and-anomalies.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können ein Streudiagramm verwenden, um zwei Datensätze für jedes Objekt anzuzeigen. Beispielsweise können Sie festlegen, dass für jedes Objekt die Summe aus IOPS-Lese- und -Latenz angezeigt wird. Mithilfe dieses Diagramms können Sie anhand der IOPS und der Latenz zusammen das Objekt identifizieren, das Sie als lästig erachten. 
+---
+= Vergleichen Sie Metriken-A mit Metriken-B, um Kategorien und Anomalien anzuzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Streudiagramm verwenden, um zwei Datensätze für jedes Objekt anzuzeigen. Beispielsweise können Sie festlegen, dass für jedes Objekt die Summe aus IOPS-Lese- und -Latenz angezeigt wird. Mithilfe dieses Diagramms können Sie anhand der IOPS und der Latenz zusammen das Objekt identifizieren, das Sie als lästig erachten.
+
+
+
+== Schritte
+
+. Fügen Sie dem neuen Dashboard ein Widget mit einem Streudiagramm hinzu: *Widget* > *Streudiagramm*
+. Ändern Sie das Standardgerät in Virtual Machine: Klicken Sie auf *Storage* > *Virtual Machine* > *Latency total* > *IOPS Read*
++
+Das System zeigt einen Streudiagramm ähnlich der folgenden an: image:../media/guid-a2c666db-f53d-42b8-82ef-62743b8b0fe2.gif[""]
+
+

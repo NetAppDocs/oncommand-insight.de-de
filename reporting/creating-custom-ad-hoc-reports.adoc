@@ -1,0 +1,21 @@
+---
+permalink: reporting/creating-custom-ad-hoc-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die Tools zur Erstellung benutzerdefinierter Berichte verwenden. Nachdem Sie Berichte erstellt haben, können Sie sie speichern und regelmäßig ausführen. Die Ergebnisse der Berichte können automatisch per E-Mail an sich selbst und andere gesendet werden. 
+---
+= Erstellen benutzerdefinierter Ad-hoc-Berichte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Tools zur Erstellung benutzerdefinierter Berichte verwenden. Nachdem Sie Berichte erstellt haben, können Sie sie speichern und regelmäßig ausführen. Die Ergebnisse der Berichte können automatisch per E-Mail an sich selbst und andere gesendet werden.
+
+Die Beispiele in diesem Abschnitt veranschaulichen den folgenden Prozess, der für jedes der OnCommand Insight-Datenmodelle verwendet werden kann:
+
+* Ermitteln einer Frage, die mit einem Bericht beantwortet werden soll
+* Ermitteln der für die Ergebnisse erforderlichen Daten
+* Auswählen von Datenelementen für den Bericht
+

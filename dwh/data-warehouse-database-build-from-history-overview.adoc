@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-database-build-from-history-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die Data Warehouse-Datenbank mithilfe von historischen Daten auf Ihrem OnCommand Insight-Server erstellen. Data Warehouse extrahiert Daten von den OnCommand Insight-Servern und erstellt die Data Warehouse-Data Marts gemäß dem Zeitplan für die Erstellung aus dem Verlauf. 
+---
+= Data Warehouse-Datenbank aus Verlaufsübersicht erstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Data Warehouse-Datenbank mithilfe von historischen Daten auf Ihrem OnCommand Insight-Server erstellen. Data Warehouse extrahiert Daten von den OnCommand Insight-Servern und erstellt die Data Warehouse-Data Marts gemäß dem Zeitplan für die Erstellung aus dem Verlauf.
+
+Für diese Option ist keine spezielle Lizenz erforderlich, und Bestandsdaten sind im Build enthalten. Für die Erstellung von Kapazitätsinformationen sind jedoch der OnCommand Insight-Plan und die OnCommand Insight Perform Lizenzen erforderlich.
+
+Wenn bereits ein Build (aus dem Verlauf oder der aktuellen Version) ausgeführt wurde, kann der Build nicht an Daten vor dem letzten Job ausgeführt werden. Dies bedeutet, dass Sie bei der Ausführung eines aktuellen Builds nicht aus dem Verlauf erstellen können. Genauer gesagt, wenn Sie Builds aus der Geschichte durchgeführt haben, die am 1. Januar 2012 endete, können Sie keine Build auf dem Jahr 2011 durchführen.
+
+Wenn der Verlauf nicht ein oder zwei der erfolglosen ETL-Prozesse enthält, versuchen Sie nicht, einen Verlauf für nur diese Tage zu erstellen. Historische Daten sind für längere Zeiträume, und ein oder zwei Tage wird sich der Trend nicht signifikant ändern. Wenn Sie aus dem Verlauf neu erstellen möchten, erstellen Sie den gesamten Verlauf neu.
+
+In der Ansicht Build from History werden alle Build-Jobs von allen Connectors angezeigt. Beispielsweise kann die Ansicht einen Bestandsjob für jeden Konnektor, einen Port-Kapazitätsjob für jeden Build-Lauf und einen Job mit Anmerkungen anzeigen.
+
+Bevor Sie das Build aus dem Verlauf konfigurieren, müssen Sie Folgendes ausführen:
+
+* Anschlüsse müssen konfiguriert werden.
+* Anmerkungen sollten in OnCommand Insight eingegeben werden und können manuell über die Option *Aktualisierung von Anmerkungen für DWH erzwingen* im alten OnCommand Insight-Portal aktualisiert werden oder werden automatisch 15 Minuten nach ihrer Einstellung aktualisiert.
+

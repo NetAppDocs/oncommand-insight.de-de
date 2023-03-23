@@ -1,0 +1,79 @@
+---
+permalink: install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Die Installation ist in sich abgeschlossen und beinhaltet die Elemente, die zum Ausführen und Betrieb von OnCommand Insight Data Warehouse \ (DWH\) und der Reporting-Dienstprogramme erforderlich sind.' 
+---
+= Installieren von OnCommand Insight Data Warehouse und Reporting
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Installation ist in sich abgeschlossen und beinhaltet die Elemente, die zum Ausführen und Betrieb des OnCommand Insight Data Warehouse (DWH) und der Reporting-Dienstprogramme erforderlich sind.
+
+
+
+== Bevor Sie beginnen
+
+Beachten Sie Folgendes, bevor Sie die Installation oder Aktualisierung durchführen.
+
+* Wenn Sie ein Upgrade durchführen, erstellen Sie ein Backup von DWH.
+* Sie müssen über lokale __Administrator__Berechtigungen verfügen, um OnCommand Insight Data Warehouse mit Berichterstellung zu installieren.
+* Stellen Sie sicher, dass der Windows Modules Installer-Dienst aktiviert ist (entweder automatisch oder manuell).
+* Bei der Installation auf einem Laufwerk ohne C: Müssen kurze Dateinamen aktiviert sein. Wenn es nicht aktiviert ist, wird es vom Installationsprogramm aktiviert.
+* Für die DB2-Komponente kann der DB2-Benutzer entweder _Domain_ user oder _local_ user sein.
++
+** Wenn der DB2-Benutzer ein _Domain_-Benutzer ist, müssen Sie über Folgendes verfügen:
++
+*** DB2-Benutzer muss bereits erstellt worden sein, und Sie müssen den Benutzernamen und das Kennwort kennen
+*** Als Benutzer, der DWH mit Reporting installiert, müssen Sie in der Lage sein, den DB2-Benutzer abzufragen. Sie können dies mit dem folgenden Befehl überprüfen:
++
+**** `net user <db2 user name> /domain`
+
+
+
+
+** Wenn DB2-Benutzer ein _local_-Benutzer ist, müssen Sie über Folgendes verfügen:
++
+*** Benutzername und Passwort für den Benutzer, der als DB2-Benutzer ausgeführt wird. Wenn dieser Benutzer nicht existiert, wird er von der Installation erstellt.
+
+
+** [HINWEIS]
+
+
+
+
+[]
+====
+Der DB2-Benutzername sowie der Windows-Anmeldename haben folgende Einschränkungen: * Gültige Zeichen sind: 'A' bis 'Z'; 'A' bis 'z'; '0' bis '9'; '#'; '@'; '_'; '!'; ' '('; ')'; '{'; '}'; '-'; und '.'. * Bei Verwendung der Sonderzeichen '!'; ' '('; ')'; '{'; '}'; '-'; und '.' Sie müssen für den Benutzernamen alle Großbuchstaben verwenden. * Das erste Zeichen in der Zeichenfolge muss ein alphabetisches Zeichen, @, # oder € sein; es kann keine Zahl sein oder die Buchstabensequenzen _SYS_, _DBM_ oder _IBM_ * Es darf 128 Byte lang sein. * Es kann nicht BENUTZER sein, ADMINISTRATOREN, GÄSTE, ÖFFENTLICH, LOKAL oder ein SQL-reserviertes Wort.
+
+====
+* Der DB2-Benutzer kann nicht mit dem Benutzer identisch sein, der die Installation durchführt.
+
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse-Server mit einem Konto mit Administratorrechten an.
+. Laden Sie die ZIP-Datei „Data Warehouse with Reporting“ herunter, und extrahieren Sie die Dateien in einen Installationsordner.
+. Navigieren Sie zum Ordner _<download location>\oci_dwh_Installer\_ und führen Sie das Skript _install_oci_dwh.bat_ aus.
++
+[NOTE]
+====
+Bei OnCommand Insight 7.3.10 und höher müssen Sie das Skript für die ordnungsgemäße Installation von DWH/Reporting ausführen. Führen Sie die ausführbare .MSI-Installationsdatei nicht aus.
+
+====
+. Geben Sie die DB2-Domäne ein, oder drücken Sie die Eingabetaste für die lokale Domäne.
+. Geben Sie den DB2-Benutzernamen ein. Einschränkungen für Benutzernamen siehe oben.
+. Geben Sie das Kennwort für den DB2-Benutzer ein. Geben Sie das Passwort erneut ein, wenn Sie dazu aufgefordert werden.
+. Geben Sie den Installationspfad für die DB2-Komponente ein, oder drücken Sie die Eingabetaste, um die Standardeinstellung zu übernehmen.
+. Die von Ihnen eingegebenen Informationen werden angezeigt. Überprüfen Sie alle Einstellungen sorgfältig. Drücken Sie die Eingabetaste, um die Installation zu starten.
+. Wenn Sie dazu aufgefordert werden, lassen Sie Windows mit der DB2-Installation fortfahren.
+. Nach der DB2-Installation wird der DWH-Installationsassistent ausgeführt. Befolgen Sie die Anweisungen, um DWH mit Reporting zu installieren.
++
+Data Warehouse mit Reporting Installation kann bis zu einer Stunde dauern.
+
+

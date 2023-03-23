@@ -1,0 +1,188 @@
+---
+permalink: config-admin/amazon-aws-ec2-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight verwendet diese Datenquelle, um Inventar und Performance für Amazon AWS EC2 zu erkennen. 
+---
+= Amazon AWS EC2 Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight verwendet diese Datenquelle, um Inventar und Performance für Amazon AWS EC2 zu erkennen.
+
+
+
+== Voraussetzungen:
+
+Um Daten von Amazon EC2 Geräten zu erfassen, müssen Sie folgende Informationen haben:
+
+* Sie müssen über die ID des IAM-Zugriffsschlüssels verfügen
+* Sie müssen über den geheimen Zugriffsschlüssel für Ihr Amazon EC2 Cloud-Konto verfügen
+* Sie müssen über die Berechtigung „Listenorganisation“ verfügen
+* Port 433 HTTPS
+* EC2-Instanzen können als Virtual Machine oder (weniger natürlich) als Host gemeldet werden. EBS Volumes können sowohl von der VM als virtualisierte Festplatte genutzt werden als auch als Datenspeicher, die die Kapazität der virtuellen Festplatte bereitstellen.
+
+
+Zugriffsschlüssel bestehen aus einer Zugriffsschlüssel-ID (z. B. AKIAIOSFODN7EXAMPLE) und einem geheimen Zugriffsschlüssel (z. B. wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY). Sie verwenden Zugriffsschlüssel, um programmatische Anfragen zu signieren, die Sie an EC@ stellen, wenn Sie die Amanzon EC2-SDKs, REST- oder Abfrage-API-Operationen verwenden. Diese Schlüssel werden mit Ihrem Vertrag von Amazon zur Verfügung gestellt.
+
+
+
+== So konfigurieren Sie diese Datenquelle
+
+Zum Konfigurieren der Amazon AWS EC2 Datenquelle benötigen Sie die AWS IAM Access Key ID und den Secret Access Key für Ihr AWS Konto.
+
+Füllen Sie die Datenquellenfelder gemäß den folgenden Tabellen aus:
+
+
+
+== Konfiguration:
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+AWS Region
+ a| 
+Wählen Sie die Region AWS
+
+
+
+ a| 
+IAM-Rolle
+ a| 
+Nur zur Verwendung bei Übernahme auf einer AU in AWS. Im Folgenden finden Sie weitere Informationen zu IAM-Rollen.
+
+
+
+ a| 
+AWS IAM Access Key-ID
+ a| 
+Geben Sie die AWS IAM-Zugriffsschlüssel-ID ein. Erforderlich, wenn Sie die IAM-Rolle nicht verwenden.
+
+
+
+ a| 
+AWS IAM Secret Access Key
+ a| 
+Geben Sie den AWS IAM-Schlüssel für den geheimen Zugriff ein. Erforderlich, wenn Sie die IAM-Rolle nicht verwenden.
+
+
+
+ a| 
+Ich verstehe, dass AWS mir API-Anfragen in Rechnung stellt
+ a| 
+Überprüfen Sie dies, um zu überprüfen, ob AWS Ihnen bei API-Anfragen, die durch Insight Polling gestellt werden, Rechnungen stellt
+
+|===
+
+
+== Erweiterte Konfiguration:
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Zusätzliche Regionen Einschließen
+ a| 
+Geben Sie zusätzliche Bereiche an, die in die Abfrage einbezogen werden sollen.
+
+
+
+ a| 
+Accountübergreifende Rolle
+ a| 
+Rolle für den Zugriff auf Ressourcen in unterschiedlichen AWS Konten.
+
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 60 Minuten)
+
+
+
+ a| 
+HTTP-Verbindung und Socket-Timeout (s)
+ a| 
+HTTP-Verbindungs-Timeout (Standard: 300 Sekunden)
+
+
+
+ a| 
+AWS-Tags einschließen
+ a| 
+Aktivieren Sie diese Option, um die Unterstützung für AWS-Tags in Insight Annotationen zu aktivieren
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abfragen (Standard: 1800 Sekunden)
+
+|===
+
+
+== Zuordnen von AWS Tags zu Insight Annotationen
+
+Die AWS EC2 Datenquelle enthält eine Option, mit der Sie Insight Annotationen mit auf AWS konfigurierten Tags füllen können. Die Annotationen müssen genau wie die AWS Tags benannt werden. Insight wird immer Anmerkungen vom gleichen Namen in Textart einfügen und einen „besten Versuch“ machen, Anmerkungen anderer Typen (Zahl, Boolesch usw.) zu füllen. Wenn Ihre Anmerkung einen anderen Typ hat und die Datenquelle sie nicht ausfüllen kann, muss die Anmerkung möglicherweise entfernt und als Textart neu erstellt werden.
+
+Bei AWS muss die Groß-/Kleinschreibung nicht beachtet werden. Bei Insight muss die Groß-/Kleinschreibung nicht beachtet werden. Wenn Sie also in Insight eine Annotation mit dem Namen „`OWNER`“ und Tags mit den Namen „`OWNER`“, „`owner`“ und „`owner`“ erstellen, werden alle AWS-Variationen von „`owner`“ der Annotation „`OWNER`“ von Insight zugeordnet.
+
+Verwandte Informationen:
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html["Verwalten von Zugriffsschlüsseln für IAM-Benutzer"]
+
+
+
+== Zusätzliche Regionen Einschließen
+
+Im Abschnitt AWS Data Collector *Erweiterte Konfiguration* können Sie das Feld * zusätzliche Regionen* so einstellen, dass zusätzliche durch Komma oder Semikolon getrennte Bereiche einbezogen werden. Standardmäßig ist dieses Feld auf *_US-.*_* gesetzt, das auf allen US AWS Regionen sammelt. Um in _all_ Regionen zu sammeln, setzen Sie dieses Feld auf *_.*_*.
+
+Ist das Feld *zusätzliche Regionen* leer, sammelt der Datensammler die im Feld *AWS Region* angegebenen Werte, wie im Abschnitt *Konfiguration* angegeben.
+
+
+
+== *Sammeln von AWS Child Accounts*
+
+Insight unterstützt die Erfassung von untergeordneten Konten für AWS innerhalb eines einzigen AWS-Datensammlers. Die Konfiguration dieser Sammlung erfolgt in der AWS-Umgebung:
+
+* Sie müssen jedes untergeordnete Konto so konfigurieren, dass es über eine AWS-Rolle verfügt, die es der primären Konto-ID ermöglicht, über das untergeordnete Konto auf EC2-Details zuzugreifen.
+* Für jedes untergeordnete Konto muss der Rollenname als dieselbe Zeichenfolge konfiguriert sein
+* Geben Sie diese Zeichenfolge für den Rollennamen im Abschnitt Insight AWS Data Collector *Advanced Configuration* im Feld *Cross Account role* ein.
+
+
+Best Practice: Es wird dringend empfohlen, die AWS vordefinierte AmazonEC2ReadOnly Access Policy dem ECS-Hauptkonto zuzuweisen. Außerdem sollte dem in der Datenquelle konfigurierten Benutzer mindestens die vordefinierte __AWSOrganisationenReadOnlyAccess__Policy zugewiesen sein, um AWS abzufragen.
+
+Im Folgenden finden Sie Informationen zur Konfiguration Ihrer Umgebung, damit Insight von untergeordneten AWS-Konten erfasst werden kann:
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html["Tutorial: Delegieren des Zugriffs über AWS Konten mithilfe von IAM-Rollen"]
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html["AWS Setup: Zugriff auf einen IAM-Benutzer in einem anderen AWS-Konto bereitstellen, das Sie besitzen"]
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["Erstellen einer Rolle zum Delegieren von Berechtigungen an einen IAM-Benutzer"]
+
+
+
+== IAM-Rollen
+
+Wenn Sie _IAM Role_ Security verwenden, müssen Sie sicherstellen, dass die von Ihnen erstellte oder angegebene Rolle über die entsprechenden Berechtigungen verfügt, die für den Zugriff auf Ihre Ressourcen erforderlich sind.
+
+Wenn Sie beispielsweise eine IAM-Rolle mit dem Namen _InstanceEc2ReadOnly_ erstellen, müssen Sie die Richtlinie einrichten, um allen EC2-Ressourcen für diese IAM-Rolle schreibgeschützten Zugriff auf EC2-Listen zu gewähren. Außerdem müssen Sie STS (Security Token Service)-Zugriff gewähren, damit diese Rolle Rollenübergreifende Konten übernehmen kann.
+
+Nachdem Sie eine IAM-Rolle erstellt haben, können Sie sie beim Erstellen einer neuen EC2-Instanz oder einer vorhandenen EC2-Instanz anhängen.
+
+Nachdem Sie die IAM-Rolle _InstanceEc2ReadOnly_ an eine EC2-Instanz angehängt haben, können Sie die temporären Anmeldedaten über die Metadaten der Instanz per IAM-Rollennamen abrufen und verwenden, um von jeder auf dieser EC2-Instanz ausgeführten Anwendung auf AWS-Ressourcen zuzugreifen.
+
+
+NOTE: Die IAM-Rolle kann nur verwendet werden, wenn die Acquisition Unit in einer AWS-Instanz ausgeführt wird.

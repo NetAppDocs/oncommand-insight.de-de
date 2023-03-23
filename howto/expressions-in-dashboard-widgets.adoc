@@ -1,0 +1,16 @@
+---
+permalink: howto/expressions-in-dashboard-widgets.html 
+sidebar: sidebar 
+keywords:  
+summary: Ausdrücke in Zeitreihen-Widgets ermöglichen es Ihnen, Daten basierend auf Berechnungen mit Metriken Ihrer Wahl anzuzeigen. 
+---
+= Ausdrücke in Dashboard-Widgets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ausdrücke in Zeitreihen-Widgets ermöglichen es Ihnen, Daten basierend auf Berechnungen mit Metriken Ihrer Wahl anzuzeigen.
+
+In einem Dashboard können Sie mit einem Widget mit beliebigen Zeitreihen (Linie, Spline, Bereich, gestapelter Bereich) Ausdrücke aus von Ihnen ausgewählten Metriken erstellen und das Ergebnis dieser Ausdrücke in einem einzigen Diagramm anzeigen. Die folgenden Beispiele verwenden Ausdrücke, um bestimmte Probleme zu lösen. Im ersten Beispiel möchten wir den IOPS-Wert für alle Storage Assets in unserer Umgebung als Prozentsatz von IOPS insgesamt darstellen. Das zweite Beispiel gibt uns einen Einblick in das „System“ oder den „Overhead“ der IOPS in unserer Umgebung, d. h. die IOPS, die nicht aus dem Lesen oder Schreiben von Daten stammen.

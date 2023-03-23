@@ -1,0 +1,46 @@
+---
+permalink: config-admin/adding-fc-devices-manually.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können ein Fibre-Channel-Gerät manuell zu OnCommand Insight hinzufügen, indem Sie die manuelle Add-Funktion verwenden, die auf der Registerkarte Geräteauflösung FC-Identifizierung verfügbar ist. Dieser Prozess kann für die Voridentifizierung eines Geräts verwendet werden, das in Zukunft entdeckt werden soll. 
+---
+= Manuelles Hinzufügen eines Fibre-Channel-Geräts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Fibre-Channel-Gerät manuell zu OnCommand Insight hinzufügen, indem Sie die manuelle Add-Funktion verwenden, die auf der Registerkarte Geräteauflösung FC-Identifizierung verfügbar ist. Dieser Prozess kann für die Voridentifizierung eines Geräts verwendet werden, das in Zukunft entdeckt werden soll.
+
+
+
+== Bevor Sie beginnen
+
+Zum erfolgreichen Hinzufügen einer Geräteidentifikation zum System müssen Sie die WWN- oder IP-Adresse und den Gerätenamen kennen.
+
+
+
+== Über diese Aufgabe
+
+Sie können einen Host, Speicher, Band oder ein unbekanntes Fibre Channel-Gerät manuell hinzufügen.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der Web-Benutzeroberfläche von Insight an
+. Klicken Sie auf *Verwalten* > *Geräteauflösung*
+. Klicken Sie auf die Registerkarte *FC identifiere*.
+. Klicken Sie auf die Schaltfläche Hinzufügen.
++
+Das Dialogfeld Gerät hinzufügen wird angezeigt
+
+. Geben Sie die WWN- oder IP-Adresse, den Gerätenamen ein, und wählen Sie den Gerätetyp aus.
+
+
+
+
+== Ergebnisse
+
+Das von Ihnen eingegebene Gerät wird der Liste der Geräte auf der Registerkarte FC-Identifizierung hinzugefügt. Die „`Regel`“ wird als manuell gekennzeichnet.

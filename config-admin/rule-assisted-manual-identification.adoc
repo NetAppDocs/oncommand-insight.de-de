@@ -1,0 +1,57 @@
+---
+permalink: config-admin/rule-assisted-manual-identification.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Diese Funktion wird für spezielle Fälle verwendet, in denen Sie eine bestimmte Regel oder eine Liste von Regeln ausführen möchten \(mit oder ohne eine einmalige Neuanordnung\), um unbekannte Hosts, Speicher und Bandgeräte oder Gruppen von ihnen zu lösen.' 
+---
+= Regelgestützte manuelle Identifizierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese Funktion wird für spezielle Fälle verwendet, in denen Sie eine bestimmte Regel oder eine Liste von Regeln (mit oder ohne eine einmalige Neuanordnung) ausführen möchten, um unbekannte Hosts, Speicher und Bandgeräte oder Gruppen von ihnen zu lösen.
+
+
+
+== Bevor Sie beginnen
+
+Sie verfügen über eine Reihe von Geräten, die nicht identifiziert wurden, und Sie haben auch mehrere Regeln, die andere Geräte erfolgreich identifiziert haben.
+
+
+
+== Über diese Aufgabe
+
+[NOTE]
+====
+Wenn Ihre Quelle nur einen Teil eines Host- oder Gerätenamens enthält, verwenden Sie eine Regel für reguläre Ausdrücke, und formatieren Sie sie, um den fehlenden Text hinzuzufügen.
+
+====
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Klicken Sie auf *Verwalten* > *Geräteauflösung*
+. Klicken Sie auf die Registerkarte *FC identifiere*.
++
+Das System zeigt die identifizierten und nicht identifizierten Geräte an.
+
+. Wählen Sie mehrere nicht identifizierte Geräte aus.
+. Klicken Sie auf *identifiere* > *set Host Resolution* oder *> set Tape Resolution*
++
+Das System zeigt den Identify-Bildschirm an, der eine Liste aller Regeln enthält, die Geräte erfolgreich identifiziert haben.
+
+. Ändern Sie die Reihenfolge der Regeln in eine Bestellung, die Ihren Anforderungen entspricht.
++
+Die Reihenfolge der Regeln wird im Identify-Bildschirm geändert, aber nicht global geändert.
+
+. Wählen Sie die Methode aus, die Ihren Anforderungen entspricht.
++
+OnCommand Insight führt den Host-Auflösungsprozess in der Reihenfolge aus, in der die Methoden angezeigt werden, beginnend mit den Methoden oben.
+
++
+Wenn geltende Regeln gefunden werden, werden in der Spalte Regeln Regelnamen angezeigt und als Handbuch identifiziert.
+
+

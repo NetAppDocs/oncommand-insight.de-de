@@ -1,0 +1,22 @@
+---
+permalink: dwh/viewing-the-annotations-job-in-the-jobs-list.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können den Job Anmerkungen in der Liste Jobs anzeigen und die Änderungen der Anmerkungen auf Data Warehouse Data Marts anwenden. 
+---
+= Anzeigen des Jobs mit Anmerkungen in der Liste Jobs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Job Anmerkungen in der Liste Jobs anzeigen und die Änderungen der Anmerkungen auf Data Warehouse Data Marts anwenden.
+
+
+
+== Schritte
+
+. Melden Sie sich als Administrator beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster links auf *Jobs*.
+

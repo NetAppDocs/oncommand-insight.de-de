@@ -1,0 +1,16 @@
+---
+permalink: install-windows/insight-logs.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight bietet zahlreiche Protokolldateien, die Sie bei der Recherche und Fehlerbehebung unterstützen. Die verfügbaren Protokolle werden im Protokollverzeichnis aufgeführt. Sie können ein Protokollüberwachungstool wie BareTail verwenden, um alle Protokolle gleichzeitig anzuzeigen. 
+---
+= Insight-Protokolle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight bietet zahlreiche Protokolldateien, die Sie bei der Recherche und Fehlerbehebung unterstützen. Die verfügbaren Protokolle werden im Protokollverzeichnis aufgeführt. Sie können ein Protokollüberwachungstool wie BareTail verwenden, um alle Protokolle gleichzeitig anzuzeigen.
+
+Die Protokolldateien befinden sich im `<install directory>\SANscreen\wildfly\standalone\log` Verzeichnis. Die Erfassungsprotokolle befinden sich im `<install directory>\SANscreen\Acq\Log` Verzeichnis.

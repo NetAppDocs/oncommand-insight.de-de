@@ -1,0 +1,22 @@
+---
+section: faq
+title: Häufig gestellte Fragen
+entries:
+- title: Allgemeine Fragen
+  url: "/faq/faq-general-insight-questions.html"
+- title: OnCommand Insight-Lizenzierung
+  url: "/faq/faq-insight-licensing.html"
+- title: Konfiguration und unterstützte Geräte
+  url: "/faq/faq-configuration-and-supported-devices.html"
+- title: Skalierbarkeit und Benutzerfreundlichkeit
+  url: "/faq/faq-scale-and-ease-of-use.html"
+- title: Fehlerbehebung bei der Performance
+  url: "/faq/faq-performance-troubleshooting.html"
+- title: Management Ihrer Umgebung
+  url: "/faq/faq-environment-management.html"
+- title: Integration von Insight in andere Tools
+  url: "/faq/faq-integrating-insight-and-third-party-tools.html"
+- title: Data ONTAP Storage-IOPS
+  url: "/faq/oci-faq-netapp-storage-iops.html"
+- title: Anomalieerkennung
+  url: "/faq/faq-anomaly-detection.html"

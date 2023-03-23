@@ -1,0 +1,69 @@
+---
+permalink: install-windows/remote-acquisition-unit-server-requirements.html 
+sidebar: sidebar 
+keywords: redhat 
+summary: 'Sie müssen eine Remote Acquisition Unit \(rau\) installieren, um Informationen von SAN-Geräten zu erhalten, die sich hinter einer Firewall, an einem Remote-Standort, in einem privaten Netzwerk oder in verschiedenen Netzwerksegmenten befinden. Bevor Sie die rau installieren, sollten Sie sicherstellen, dass Ihre Umgebung den Anforderungen an das rau-Betriebssystem, die CPU, den Arbeitsspeicher und den Festplattenspeicher entspricht.' 
+---
+= Anforderungen an den Remote Acquisition Unit-Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen eine Remote Acquisition Unit (rau) installieren, um Informationen von SAN-Geräten zu erhalten, die sich hinter einer Firewall, an einem Remote-Standort, in einem privaten Netzwerk oder in verschiedenen Netzwerksegmenten befinden. Bevor Sie die rau installieren, sollten Sie sicherstellen, dass Ihre Umgebung den Anforderungen an das rau-Betriebssystem, die CPU, den Arbeitsspeicher und den Festplattenspeicher entspricht.
+
+|===
+
+
+| Komponente | Anforderungen 
+
+
+ a| 
+Betriebssystem
+ a| 
+Ein Computer, auf dem 64-Bit Microsoft Windows Server 2012, 2012 R2, 2016 oder 2019 mit dem neuesten Service Pack ausgeführt wird
+
+
+
+ a| 
+CPU
+ a| 
+4 CPU-Kerne
+
+
+
+ a| 
+Speicher
+ a| 
+16 GB RAM
+
+
+
+ a| 
+Verfügbarer Festplattenspeicher
+ a| 
+40 GB
+
+
+
+ a| 
+Netzwerk
+ a| 
+100 Mbit/s /1 Gbit/s Ethernet-Verbindung, statische IP-Adresse, IP-Verbindung zu allen FC-Geräten und ein erforderlicher Port zum OnCommand Insight-Server (80 oder 443).
+
+
+
+ a| 
+Berechtigungen
+ a| 
+Lokale Administratorberechtigungen auf dem rau-Server
+
+
+
+ a| 
+Virenscan
+ a| 
+Während der Installation dieser OnCommand Insight-Komponente müssen Sie alle Virenscanner vollständig deaktivieren. Nach der Installation müssen die von der Insight-Komponente verwendeten Pfade vom Virenscan ausgeschlossen werden. Außerdem müssen Sie den IBM/DB2-Ordner (z. B. _C:\Program Files\IBM\DB2_) nach der Installation von der Virenprüfung ausschließen.
+
+|===

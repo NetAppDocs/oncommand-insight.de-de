@@ -1,0 +1,38 @@
+---
+permalink: reporting/reporting-made-easy.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können vordefinierte Berichte über das OnCommand Insight-Berichtsportal erstellen, diese per E-Mail an andere Benutzer senden und sogar ändern. Mithilfe mehrerer Berichte können Sie nach Gerät, Geschäftseinheit oder Tier filtern. Die Berichterstellungs-Tools verwenden IBM Cognos als Grundlage und bieten Ihnen viele Möglichkeiten zur Datenpräsentation. 
+---
+= Berichterstellung leicht gemacht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können vordefinierte Berichte über das OnCommand Insight-Berichtsportal erstellen, diese per E-Mail an andere Benutzer senden und sogar ändern. Mithilfe mehrerer Berichte können Sie nach Gerät, Geschäftseinheit oder Tier filtern. Die Berichterstellungs-Tools verwenden IBM Cognos als Grundlage und bieten Ihnen viele Möglichkeiten zur Datenpräsentation.
+
+* Die vordefinierten OnCommand Insight Berichte zeigen Ihren Bestand, Ihre Storage-Kapazität, Kostenverrechnung, Performance, Storage-Effizienz, Und Daten zu Cloud-Kosten. Sie können diese vordefinierten Berichte ändern und Ihre Änderungen speichern.
+
+
+Die Ihnen zur Verfügung stehenden Berichtsdaten werden von verschiedenen Faktoren gesteuert, darunter:
+
+* Melden Sie sich beim OnCommand Insight-Reporting-Portal an, das durch Rollen definiert ist.
+* Die Einrichtung des OnCommand InsightData Warehouse, das die Daten für die Berichte speichert.
+
+
+Sie können Berichte in verschiedenen Formaten generieren, darunter HTML, PDF, CSV, XML, Und Excel.
+
+OnCommand Insight unterstützt mehrere Mandanten in der Berichterstellung, da Sie Benutzer Geschäftseinheiten zuordnen können. Mit dieser Funktion können Administratoren Daten oder Berichte nach den Attributen eines Benutzers oder seiner Zugehörigkeit trennen.
+
+[NOTE]
+====
+Ab Cognos Version 11.1.2 gelten Reporting-URLs nicht als „stabil“ und können sich ändern. Wenn Sie mit einem Lesezeichen versehene Berichts-URLs haben, können diese Lesezeichen später fehlschlagen. Weitere Informationen finden Sie hier: http://queryvision.com/ibm-analytics-11-x-urls-they-are-a-changing/[]
+
+====
+[NOTE]
+====
+OnCommand Insight unterstützt keine Dashboards, die mit Paketen in IBM Cognos erstellt wurden, es sei denn, die neue Datenmodulfunktion wird verwendet.
+
+====

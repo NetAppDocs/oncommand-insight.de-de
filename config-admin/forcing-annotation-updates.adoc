@@ -1,0 +1,29 @@
+---
+permalink: config-admin/forcing-annotation-updates.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie die Anmerkungen geändert haben und sie sofort in Berichten verwenden möchten, verwenden Sie eine der Optionen für Anmerkungen erzwingen. 
+---
+= Erzwingen von Anmerkungsaktualisierungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die Anmerkungen geändert haben und sie sofort in Berichten verwenden möchten, verwenden Sie eine der Optionen für Anmerkungen erzwingen.
+
+
+
+== Schritte
+
+. Klicken Sie in der Web-Benutzeroberfläche auf *Admin* und wählen Sie *Troubleshooting*.
+. Klicken Sie unten auf der Seite auf den Link *Erweiterte Fehlerbehebung*.
+. Klicken Sie auf die Registerkarte *actions*.
+. Wählen Sie eine der folgenden Optionen aus:
++
+** *Aktualisierung der DWH-Anmerkungen*, um die Aktualisierung von Anmerkungen im Data Warehouse für Berichte zu erzwingen.
+** *DWH-Anmerkungen aktualisieren (inkl. Gelöscht)*, um eine Aktualisierung von Anmerkungen (einschließlich gelöschter Objekte) im Data Warehouse zu erzwingen, die für Berichte verwendet werden soll.
+
+
+

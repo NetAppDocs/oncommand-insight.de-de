@@ -1,0 +1,51 @@
+---
+permalink: howto/using-performance-policies-to-reduce-risk-in-thin-provisioning.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie sollten Performance-Richtlinien erstellen, um Alarme auszugeben, wenn Schwellenwerte in Ihrer virtuellen Infrastruktur verletzt wurden. Mit diesen Warnmeldungen können Sie auf Änderungen in der Systemumgebung reagieren, bevor sie zu Unterbrechungen oder Betriebsausfällen führen. 
+---
+= Einsatz von Performance-Richtlinien zur Reduzierung des Risikos bei Thin Provisioning
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten Performance-Richtlinien erstellen, um Alarme auszugeben, wenn Schwellenwerte in Ihrer virtuellen Infrastruktur verletzt wurden. Mit diesen Warnmeldungen können Sie auf Änderungen in der Systemumgebung reagieren, bevor sie zu Unterbrechungen oder Betriebsausfällen führen.
+
+Richtlinien zur Unterstützung des Monitorings der virtuellen Infrastruktur umfassen die folgenden:
+
+* * Datastore*
++
+Sie könnten die folgenden Richtlinien auf dem Datenspeicher verwenden:
+
++
+** Kapazitätsverhältnis – Überprovisionierung
+** Kapazitätsverhältnis - verwendet
+** Kapazität – Verwendet
+** Kapazität – Gesamt
+
+
+* *Speicherpool*
++
+Die folgenden Richtlinien schützen vor Kapazitätsausfällen in Thin Provisioning Umgebungen im Zusammenhang mit Storage:
+
++
+** Bereitgestellte Kapazität
+** Genutzte Kapazität
+** Kapazitätsverhältnis – Überprovisionierung
+** Kapazitätsverhältnis - verwendet
+
+
+
+
+Über diese Richtlinien lässt sich die Kapazität in der virtuellen Infrastruktur erweitern, einschließlich:
+
+* Interne Volumes
+* LUNs
+* Festplatten
+* VMDKs
+* VMs
+
+
+Richtlinien können mithilfe von Annotationen konfiguriert werden. Sie weisen die gleiche Anmerkung den spezifischen Ressourcen zu, die eine Anwendung unterstützen. Sie können beispielsweise den Datenspeichern und den Storage-Pools einer Applikation mit Thin Provisioning Anmerkungen zuweisen. Möglicherweise haben Sie Anmerkungen mit dem Namen „Produktion“ für die Produktionsumgebung, „Entwicklung“ für die Entwicklungsumgebung usw. Sie können die Schwellenwerte und die Kritikalität von Warnungen abhängig von der Art der Anwendung, die die Assets unterstützen, ändern. Beispielsweise könnte ein Verstoß gegen einen Schwellenwert für den Datastore einer Produktionsapplikation eine _kritische Warnung_ erzeugen, während dieselbe Sicherheitsverletzung für eine Entwicklungsumgebung möglicherweise nur eine _Warnung_ erhöht. Die Einbindung von Anmerkungen in definierte Richtlinien kann dazu beitragen, unerwünschte Warnmeldungen für nicht kritische Assets weiter zu reduzieren.

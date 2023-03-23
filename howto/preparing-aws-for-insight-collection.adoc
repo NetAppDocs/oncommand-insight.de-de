@@ -1,0 +1,56 @@
+---
+permalink: howto/preparing-aws-for-insight-collection.html 
+sidebar: sidebar 
+keywords:  
+summary: Ihr AWS Konto muss ordnungsgemäß konfiguriert sein, damit Insight Cloud-Kostendaten erfassen kann. 
+---
+= Die Datenerfassung von AWS für Insight wird vorbereitet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ihr AWS Konto muss ordnungsgemäß konfiguriert sein, damit Insight Cloud-Kostendaten erfassen kann.
+
+
+
+== Über diese Aufgabe
+
+Die folgenden Schritte werden über Ihr AWS-Konto durchgeführt. Weitere Informationen finden Sie in der Dokumentation zu Amazon: https://docs.aws.amazon.com["http://docs.aws.amazon.com"]. Wenn Sie das Einrichten eines AWS-Cloud-Kontos nicht kennen, wenden Sie sich an Ihren Cloud-Anbieter.
+
+[NOTE]
+====
+Diese Schritte werden hier als Höflichkeit zur Verfügung gestellt und gelten zum Zeitpunkt der Veröffentlichung als richtig. NetApp übernimmt keine Garantie für die Richtigkeit dieser Schritte. Wenden Sie sich an Ihren Cloud-Provider oder AWS-Kontoinhaber, um Informationen oder Unterstützung bei der Konfiguration Ihres AWS-Kontos zu erhalten.
+
+====
+Best Practice: Insight empfiehlt, einen primären IAM-Benutzer auf demselben Konto zu erstellen, dem auch der S3-Bucket gehört, in den die Abrechnungsberichte hochgeladen werden. Verwenden Sie diesen Benutzer, um AWS-Abrechnungsdaten zu konfigurieren und zu erfassen.
+
+So konfigurieren Sie Ihr AWS Konto so, dass Insight Daten erfassen kann:
+
+
+
+== Schritte
+
+. Melden Sie sich als IAM-Benutzer (Identity Access Management) bei Ihrem AWS-Konto an. Melden Sie sich für eine ordnungsgemäße Erfassung beim primären IAM-Konto an und nicht bei einem Gruppen-IAM-Konto.
+. Gehen Sie zu *Amazon S3*, um Ihren Bucket zu erstellen. Geben Sie einen eindeutigen Bucket-Namen ein, und überprüfen Sie die richtige Region.
+. Aktivieren Sie Ihren Amazon-Kosten- und Nutzungsbericht. Siehe https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-gettingstarted-turnonreports.html[] Zur Information.
++
+.. Gehen Sie zum AWS **Billing and Cost Management Dashboard**und wählen Sie *Reports*.
+.. Klicken Sie auf *Report erstellen* und geben Sie den Berichtsnamen ein. Wählen Sie für *Zeiteinheit* die Option Täglich. Aktivieren Sie das Kontrollkästchen, um *Ressourcen-IDs* einzuschließen, und klicken Sie auf *Weiter*.
+.. Klicken Sie auf den Link *Beispielrichtlinie* auf der Seite Lieferoptionen auswählen. Kopieren Sie den Text der Beispielrichtlinie im Feld in die Zwischenablage. Klicken Sie Auf *Schließen*.
+.. Gehen Sie zurück zum erstellten S3-Bucket, klicken Sie auf die Registerkarte *Berechtigungen* und wählen Sie die Schaltfläche *Bucket Policy*.
+.. Fügen Sie den Text aus der Beispielrichtlinie ein, und ersetzen Sie ihn `<bucketname>` Geben Sie den tatsächlichen Bucket-Namen in jeder Zeile ein, die Folgendes enthält: `"Resource": "arn:aws:s3:: <bucketname>"`. *Speichern* die Politik.
+.. Kehren Sie zum Bildschirm Bericht erstellen zurück, geben Sie Ihren S3-Bucket ein und klicken Sie auf die Schaltfläche *Verify*. Klicken Sie Auf *Weiter*.
+.. Überprüfen Sie Ihre Informationen und klicken Sie auf *Überprüfen und vervollständigen*.
+
+
+. Damit Insight Daten aus AWS erfassen kann, müssen Sie die entsprechenden Berechtigungen erteilen. Der folgende Link bietet Details dazu, wie Sie Berechtigungen für *Alle Buckets auflisten* (Schritt 4.1) und Berechtigungen für die Objekte im Ordner festlegen (Schritt 5.2): https://docs.aws.amazon.com/AmazonS3/latest/dev/walkthrough1.html[].
+. Gehen Sie in der IAM-Konsole zu *Policies* und klicken Sie auf *Create Policy*.
+. Geben Sie einen Namen in das Feld *Richtlinienname* ein, und klicken Sie unten auf *Richtlinie erstellen*.
+. Wählen Sie in der IAM-Konsole Ihren Benutzer aus, und wählen Sie dann unten im Bildschirm *Inline-Richtlinie hinzufügen* aus.
+. Klicken Sie auf *Service auswählen* und wählen Sie S3.
+. Gehen Sie auf die Registerkarte *JSON*. Kopieren Sie den JSON-Beispieltext aus Schritt 5.1.2.g der AWS Walkthrough in das JSON-Feld.
+. Ersetzen Sie die Felder _companybucket_ und _Development_ in der JSON durch Ihre S3-Informationen.
+. Klicken Sie auf *Richtlinie prüfen*, um Ihre Richtlinieneinstellungen zu überprüfen.
+

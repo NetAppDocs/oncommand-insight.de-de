@@ -1,0 +1,14 @@
+---
+permalink: install-windows/uninstalling-the-insight-software.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie müssen die alten Versionen von Data Warehouse und Remote Acquisition deinstallieren, um die neuen Versionen zu installieren. Sie sollten dies tun, bevor Sie versuchen, eine dieser Komponenten zu aktualisieren. Die Software auf dem Insight-Server wird während des in-Place-Upgrades deinstalliert. 
+---
+= Deinstallieren der Software
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die alten Versionen von Data Warehouse und Remote Acquisition deinstallieren, um die neuen Versionen zu installieren. Sie sollten dies tun, bevor Sie versuchen, eine dieser Komponenten zu aktualisieren. Die Software auf dem Insight-Server wird während des in-Place-Upgrades deinstalliert.

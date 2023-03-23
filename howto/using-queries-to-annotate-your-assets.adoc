@@ -1,0 +1,16 @@
+---
+permalink: howto/using-queries-to-annotate-your-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Nachdem Sie nun Ihre ersten Anmerkungen erstellt haben, wollen wir uns ansehen, wie Sie diese Annotationen bestimmten Assets zuordnen. 
+---
+= Verwenden von Abfragen zum Kommentieren von Assets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie nun Ihre ersten Anmerkungen erstellt haben, wollen wir uns ansehen, wie Sie diese Anmerkungen mit bestimmten Assets verknüpfen.
+
+In den folgenden Beispielen werden diese Anmerkungen auf bestimmte Assets angewendet. Beispielsweise erstellen wir eine Abfrage, um alle Storage-Arrays aufzulisten, die sich in einem bestimmten Datacenter befinden, und diese mit der entsprechenden Anmerkung zu markieren. Dies gilt auch für Ressourcen, die zu einer bestimmten Ebene und einem bestimmten Service-Level gehören.

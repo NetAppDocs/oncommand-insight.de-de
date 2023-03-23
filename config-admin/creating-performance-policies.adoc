@@ -1,0 +1,72 @@
+---
+permalink: config-admin/creating-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie erstellen Performance-Richtlinien, um Schwellenwerte festzulegen, die Warnmeldungen auslösen, um Sie über Probleme im Zusammenhang mit den Ressourcen in Ihrem Netzwerk zu informieren. Sie können beispielsweise eine Performance-Richtlinie erstellen, um Sie zu benachrichtigen, wenn die Gesamtauslastung für Storage-Pools über 60 % liegt.' 
+---
+= Erstellung von Performance-Richtlinien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie erstellen Performance-Richtlinien, um Schwellenwerte festzulegen, die Warnmeldungen auslösen, um Sie über Probleme im Zusammenhang mit den Ressourcen in Ihrem Netzwerk zu informieren. Sie können beispielsweise eine Performance-Richtlinie erstellen, um Sie zu benachrichtigen, wenn die Gesamtauslastung für Storage-Pools über 60 % liegt.
+
+
+
+== Schritte
+
+. Öffnen Sie OnCommand Insight in Ihrem Browser.
+. Wählen Sie *Verwalten* > *Leistungsrichtlinien* Aus.
++
+Die Seite Leistungsrichtlinien wird angezeigt.image:../media/performance-policies-page.gif[""]
+
++
+Richtlinien werden nach Objekten organisiert und in der Reihenfolge bewertet, in der sie in der Liste für das Objekt angezeigt werden.
+
+. Klicken Sie auf *Neue Richtlinie hinzufügen*.
++
+Das Dialogfeld Richtlinie hinzufügen wird angezeigt.
+
+. Geben Sie im Feld *Richtlinienname* einen Namen für die Richtlinie ein.
++
+Sie müssen einen Namen verwenden, der sich von allen anderen Richtliniennamen für das Objekt unterscheidet. Sie können beispielsweise nicht zwei Richtlinien mit dem Namen „`Latency`“ für ein internes Volume verwenden. Sie können jedoch eine „`Latency`“-Richtlinie für ein internes Volume und eine weitere „`Latency`“-Richtlinie für ein anderes Volume haben. Es empfiehlt sich, immer einen eindeutigen Namen für eine Richtlinie zu verwenden, unabhängig vom Objekttyp.
+
+. Wählen Sie in der Liste *auf Objekte des Typs anwenden* den Objekttyp aus, für den die Richtlinie gilt.
+. Wählen Sie in der Liste *with annotation* ggf. einen Anmerkungstyp aus und geben Sie einen Wert für die Anmerkung in das Feld *Wert* ein, um die Richtlinie nur auf Objekte anzuwenden, die diesen speziellen Anmerkungssatz haben.
+. Wenn Sie *Port* als Objekttyp ausgewählt haben, wählen Sie aus der Liste *Connected To* aus, mit welchem Port verbunden ist.
+. Wählen Sie in der Liste *Übernehmen nach einem Fenster von* aus, wann eine Warnung ausgelöst wird, um eine Schwellenverletzung anzuzeigen.
++
+Die Option „Erstes Auftreten“ löst eine Warnung aus, wenn ein Schwellenwert bei der ersten Datenprobe überschritten wird. Alle anderen Optionen lösen eine Warnung aus, wenn der Schwellenwert einmal überschritten wird und mindestens die angegebene Zeit lang kontinuierlich überschritten wird.
+
+. Wählen Sie aus der Liste *with severity* den Schweregrad für die Verletzung aus.
+. Standardmäßig werden E-Mail-Benachrichtigungen zu Richtlinienverstößen an die Empfänger in der globalen E-Mail-Liste gesendet. Sie können diese Einstellungen überschreiben, sodass Benachrichtigungen für eine bestimmte Richtlinie an bestimmte Empfänger gesendet werden.
++
+** Klicken Sie auf den Link, um die Empfängerliste zu öffnen, und klicken Sie dann auf die Schaltfläche *+*, um Empfänger hinzuzufügen. Verstöße gegen diese Richtlinie werden an alle Empfänger in der Liste gesendet.
+
+
+. Klicken Sie auf den Link *any* im Abschnitt *Create alert if eines der folgenden sind wahr*, um zu steuern, wie Alarme ausgelöst werden:
++
+** *Beliebig*
++
+Dies ist die Standardeinstellung, die Warnungen erstellt, wenn einer der Schwellenwerte für eine Richtlinie überschritten wird.
+
+** * Alle*
++
+Durch diese Einstellung wird eine Meldung erstellt, wenn alle Schwellenwerte für eine Richtlinie überschritten werden. Wenn Sie *all* auswählen, wird der erste Schwellenwert, den Sie für eine Performance Policy erstellen, als primäre Regel bezeichnet. Sie müssen sicherstellen, dass der primäre Regelschwellenwert der Verstoß ist, den Sie für die Performance Policy am meisten befürchten.
+
+
+
+. Wählen Sie im Abschnitt *Warnung erstellen, wenn* einen Leistungszähler und einen Operator aus, und geben Sie dann einen Wert ein, um einen Schwellenwert zu erstellen.
+. Klicken Sie auf *Schwellenwert hinzufügen*, um weitere Schwellenwerte hinzuzufügen.
+. Um einen Schwellenwert zu entfernen, klicken Sie auf das Papierkorb-Symbol.
+. Aktivieren Sie das Kontrollkästchen *Verarbeitung weiterer Richtlinien beenden, wenn Warnung generiert wird*, wenn die Policy die Verarbeitung beenden soll, wenn eine Warnung auftritt.
++
+Wenn Sie beispielsweise vier Richtlinien für Datastores haben und die zweite Richtlinie so konfiguriert ist, dass sie die Verarbeitung bei Auftreten einer Meldung stoppt, werden die dritte und vierte Richtlinie nicht verarbeitet, während ein Verstoß gegen die zweite Richtlinie aktiv ist.
+
+. Klicken Sie Auf *Speichern*.
++
+Die Seite Performance Policies wird angezeigt, und die Performance Policy wird in der Liste der Policies für den Objekttyp angezeigt.
+
+

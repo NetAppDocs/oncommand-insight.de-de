@@ -1,0 +1,50 @@
+---
+permalink: config-admin/setting-up-weekly-backups-for-your-oci-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Möglicherweise möchten Sie zur Sicherung Ihrer Daten automatische wöchentliche Backups für Ihre Insight-Datenbank einrichten. Diese automatischen Backups überschreiben die Dateien im angegebenen Sicherungsverzeichnis. 
+---
+= Einrichtung wöchentlicher Backups für Ihre Insight-Datenbank
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise möchten Sie zur Sicherung Ihrer Daten automatische wöchentliche Backups für Ihre Insight-Datenbank einrichten. Diese automatischen Backups überschreiben die Dateien im angegebenen Sicherungsverzeichnis.
+
+
+
+== Über diese Aufgabe
+
+*Best Practice*: Wenn Sie das wöchentliche Backup der OCI-Datenbank einrichten, müssen Sie die Backups auf einem anderen Server als Insight speichern, falls der Server ausfällt. Speichern Sie keine manuellen Backups im wöchentlichen Backup-Verzeichnis, da jedes wöchentliche Backup die Dateien im Verzeichnis überschreibt.
+
+Die Sicherungsdatei enthält Folgendes:
+
+* Bestandsdaten
+* Leistungsdaten von bis zu 7 Tagen
+
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin* > *Setup*.
+. Klicken Sie auf die Registerkarte *Backup & Archive*.
+. Wählen Sie im Abschnitt wöchentliches Backup *wöchentliches Backup aktivieren* aus.
+. Geben Sie den Pfad zum *Backup-Speicherort* ein. Dies kann auf dem lokalen Insight-Server oder auf einem Remote-Server erfolgen, auf den über den Insight-Server zugegriffen werden kann.
++
+[NOTE]
+====
+Die Backup-Speicherort-Einstellung ist im Backup selbst enthalten. Wenn Sie das Backup auf einem anderen System wiederherstellen, beachten Sie, dass der Speicherort des Backup-Ordners auf dem neuen System möglicherweise ungültig ist. Überprüfen Sie nach dem Wiederherstellen einer Sicherung die Einstellungen des Sicherungsstandorts.
+
+====
+. Wählen Sie die Option *Cleanup*, um entweder die letzten zwei oder die letzten fünf Backups beizubehalten.
+. Klicken Sie Auf *Speichern*.
+
+
+
+
+== Ergebnisse
+
+Sie können auch unter *Admin* > *Troubleshooting* ein On-Demand-Backup erstellen.

@@ -1,0 +1,42 @@
+---
+permalink: dwh/resetting-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können den Inhalt der Data Warehouse Data Marts löschen und alle konfigurierten Konnektoren löschen. Sie können dies tun, wenn eine Installation oder ein Upgrade nicht erfolgreich abgeschlossen wurde und die Data Warehouse-Datenbank in einem Zwischenzustand belassen wurde. Sie können auch nur das Bestandsdatenmodell oder das Cognos Reporting-Datenmodell löschen. 
+---
+= Zurücksetzen der Data Warehouse-Datenbank oder des Reporting-Servers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Inhalt der Data Warehouse Data Marts löschen und alle konfigurierten Konnektoren löschen. Sie können dies tun, wenn eine Installation oder ein Upgrade nicht erfolgreich abgeschlossen wurde und die Data Warehouse-Datenbank in einem Zwischenzustand belassen wurde. Sie können auch nur das Bestandsdatenmodell oder das Cognos Reporting-Datenmodell löschen.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster links auf *DWH-Datenbank zurücksetzen*.
+. Klicken Sie auf eine der folgenden Optionen:
++
+** *DWH-Datenbank zurücksetzen*
++
+Dadurch werden die Inhalte aller Data Warehouse Data Marts und aller konfigurierten Konnektoren gelöscht und das Data Warehouse wird ohne benutzerdefinierte Konfigurationen in den Standard-Installationszustand versetzt. Sie können diese Option wählen, wenn Sie zum Beispiel Ihre verbundenen Server geändert haben, aber versehentlich eine andere Data Warehouse-Datenbank auf Ihrem Server wiederhergestellt haben und in einen standardmäßig installierten Zustand zurückkehren müssen. Dadurch werden keine Berichte gelöscht. (Berichte werden im Cognos Content Store gespeichert.)
+
+** *Nur Lagerbestand Zurücksetzen*
++
+Dadurch wird nur der Inhalt des Bestandsdatenmodells gelöscht. Dadurch werden keine historischen Daten gelöscht.
+
+** *Berichtsinhalt Zurücksetzen*
++
+Dadurch wird der Inhalt des Reporting-Servers zurückgesetzt. Dadurch werden alle benutzerdefinierten Berichte gelöscht, die Sie möglicherweise haben. Sichern Sie Ihre Berichte, bevor Sie diese Option wählen.
+
+
+
++
+Eine Warnmeldung wird angezeigt.
+
+. Klicken Sie auf *Ja*, um fortzufahren.
+

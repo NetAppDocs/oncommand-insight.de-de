@@ -1,0 +1,42 @@
+---
+permalink: config-admin/assets-used-in-queries-and-dashboards.html 
+sidebar: sidebar 
+keywords: queryable,Data Store,objects,custom landing page 
+summary: Insight-Abfragen und Dashboard-Widgets können mit einer Vielzahl von Asset-Typen verwendet werden 
+---
+= In Abfragen und Dashboards verwendete Assets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight-Abfragen und Dashboard-Widgets können mit einer Vielzahl von Asset-Typen verwendet werden
+
+Die folgenden Asset-Typen können in Abfragen, Dashboard-Widgets und benutzerdefinierten Asset-Seiten verwendet werden. Die für Filter, Ausdrücke und Anzeigen verfügbaren Felder und Zähler variieren je nach Asset-Typen. Nicht alle Assets können in allen Widgets verwendet werden.
+
+* Applikation
+* Datenspeicher
+* Festplatte
+* Fabric
+* Generisches Gerät
+* Host
+* Internes Volumen
+* ISCSI-Sitzung
+* ISCSI-Netzwerkportal
+* Pfad
+* Port
+* Qtree
+* Kontingente
+* Share
+* Storage
+* Storage-Node
+* Storage-Pool
+* Switch
+* Tape
+* VMDK
+* Virtual Machine
+* Datenmenge
+* Zone
+* Zonenmitglied
+

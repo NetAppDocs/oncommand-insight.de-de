@@ -1,0 +1,18 @@
+---
+permalink: reporting/colors-used-in-data-model-elements.html 
+sidebar: sidebar 
+keywords:  
+summary: Farben auf Datenmodellelementen haben unterschiedliche Indikationen. 
+---
+= Farben, die in Datenmodellelementen verwendet werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Farben auf Datenmodellelementen haben unterschiedliche Indikationen.
+
+* Gelbe Werte: Stellen Messungen dar.
+* Nicht-gelbe Werte: Repräsentieren Attribute. Diese Werte aggregieren nicht.
+

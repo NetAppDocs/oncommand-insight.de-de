@@ -1,0 +1,20 @@
+---
+permalink: reporting/data-model-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight bietet mehrere Datenmodelle für die Berichtentwicklung. Jedes Datenmodell ist eine Aggregation, die Daten zusammenfasst, sodass sie abgefragt und durchsucht werden können. Berichte zur Kapazitätsplanung verwenden beispielsweise das Kapazitätsdatenmodell. 
+---
+= Datenmodell im Überblick
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight bietet mehrere Datenmodelle für die Berichtentwicklung. Jedes Datenmodell ist eine Aggregation, die Daten zusammenfasst, sodass sie abgefragt und durchsucht werden können. Berichte zur Kapazitätsplanung verwenden beispielsweise das Kapazitätsdatenmodell.
+
+Die Datenmodelle für die Unternehmensberichterstattung von OnCommand Insight bieten Datenelemente und interaktive Beziehungen zwischen Datenelementen, die eine geschäftliche Sicht der Daten ermöglichen. Mithilfe der Datenelemente und Beziehungen können Sie Berichte mit den von NetApp empfohlenen Berichterzeugungstools von IBM Cognos Analytics erstellen.
+
+OnCommand Insight bietet auch Data Marts, mit denen Sie Ihre eigenen SQL-Abfragen entwickeln können. Es besteht eine Unterscheidung zwischen diesen SQL-Abfragedaten und den in der Berichterstellung verwendeten Datenmodellen. Die einzelnen OnCommand Insight-Berichtsdatenmodelle verwenden das zugrunde liegende OnCommand Insight-Datenbankschema, das in den Data Marts angegeben ist; allerdings verwenden die Datenmodelle zusätzliche Tabellen und manchmal neue Elemente in den Tabellen. Das Datenmodell umfasst beispielsweise eine Tabelle mit den monatlichen Kapazitätsinfaktdaten im Datenmodell für die Storage-Kapazität, die auf der Tabelle mit den Kapazitätsinfaktanzen aus dem Datenbankschema und dem Data Mart basiert. Das Datenmodell filtert die Werte aus der Datenbank-Schematabelle heraus, um nur Monatsinformationen anzuzeigen.
+
+Ein weiteres Beispiel für einen Unterschied zwischen dem Datenbankschema, das in Data Marts verwendet wird, und dem Datenmodell ist in der Verletzungstabelle und in der Spalte „Typ der Verletzung“ zu finden. Das Datenmodell übersetzt programmatisch benannte Werte in die Datenbank, um den in der OnCommand Insight-Webbenutzeroberfläche angezeigten Text abzugleichen.

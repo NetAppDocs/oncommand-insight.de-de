@@ -1,0 +1,30 @@
+---
+permalink: config-admin/deleting-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können eine Anmerkung löschen, die Sie nicht mehr verwenden möchten. Eine Annotation auf Systemebene oder eine Annotation, die in einer Annotationsregel, einer Abfrage oder einer Performance-Richtlinie verwendet wird, kann nicht gelöscht werden. 
+---
+= Anmerkungen werden gelöscht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Anmerkung löschen, die Sie nicht mehr verwenden möchten. Eine Annotation auf Systemebene oder eine Annotation, die in einer Annotationsregel, einer Abfrage oder einer Performance-Richtlinie verwendet wird, kann nicht gelöscht werden.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Klicken Sie auf *Verwalten* und wählen Sie *Anmerkungen*.
++
+Die Seite Anmerkungen wird angezeigt.
+
+. Setzen Sie den Cursor auf die Anmerkung, die Sie löschen möchten, und klicken Sie auf image:../media/trash-can-query.gif[""].
++
+Ein Bestätigungsdialogfeld wird angezeigt.
+
+. Klicken Sie auf *OK*.
+

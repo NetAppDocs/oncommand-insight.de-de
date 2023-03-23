@@ -1,0 +1,62 @@
+---
+permalink: config-admin/ibm-totalstorage-ds4000-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Diese Datenquelle erfasst Bestands- und Leistungsinformationen. Es gibt zwei mögliche Konfigurationen \(Firmware 6.x und 7.x+\), und beide haben die gleichen Werte. Die API sammelt die Volume-Datenstatistiken.' 
+---
+= IBM TotalStorage DS4000 Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese Datenquelle erfasst Bestands- und Leistungsinformationen. Es gibt zwei mögliche Konfigurationen (Firmware 6.x und 7.x+), und beide haben die gleichen Werte. Die API sammelt die Volume-Datenstatistiken.
+
+
+
+== Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Kommagetrennte Liste der Array-SANtricity-Controller-IPs
+ a| 
+IP-Adressen oder vollständig qualifizierte Domänennamen von Controllern, durch Kommas getrennt
+
+|===
+
+
+== Anforderungen
+
+* Die IP-Adresse jedes DS5- oder FAStT-Arrays
+* Zugriffsvalidierung: Pingen Sie die IP-Adresse beider Controller auf jedem Array.
+
+
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 30 Minuten)
+
+
+
+ a| 
+Leistungsintervall (bis zu 3600 Sekunden)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+|===

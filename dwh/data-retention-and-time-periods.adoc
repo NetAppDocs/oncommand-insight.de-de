@@ -1,0 +1,100 @@
+---
+permalink: dwh/data-retention-and-time-periods.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Das OnCommand Insight Data Warehouse speichert die Daten, die aus dem Extrahierung-, Transform- und Load \(ETL\)-Prozess gewonnen werden, für verschiedene Zeiträume, basierend auf den unterschiedlichen Datentabellen und der Zeitgranularität der Daten.' 
+---
+= Datenaufbewahrung, ETL und Zeiträume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das OnCommand Insight Data Warehouse speichert Daten, die aus dem ETL-Prozess (Extract, Transform, Load) gewonnen werden, für verschiedene Zeiträume, basierend auf den unterschiedlichen Datentabellen und der Zeitgranularität der Daten.
+
+
+
+== Performance Marts und stündliche Granularität für Volumes und interne Volumes
+
+Das OnCommand Insight Data Warehouse zeichnet 14 Tage lang die stündlichen Durchschnittswerte, die Stundenmaxima und das Zugriffs-Bit für jede Stunde des Tages (24 Datenpunkte) auf. Das Access Bit ist ein boolescher Wert, der wahr ist, wenn auf das Volume zugegriffen wird, oder falsch, wenn während des stündlichen Intervalls kein Zugriff auf das Volume erfolgt. Alle 24 Datenpunkte für den Vortag werden während des ersten ETL-Prozesses des Tages ermittelt.
+
+Sie müssen nicht einen ETL-Prozess pro Stunde ausführen, um die stündlichen Datenpunkte zu erfassen. Beim Ausführen zusätzlicher ETL-Prozesse während des Tages werden keine Leistungsinformationen von den OnCommand Insight-Servern abgerufen.
+
+
+
+== Performance Marts und tägliche Granularität für Volumes und interne Volumes
+
+An jedem Tag, an dem die ETL verarbeitet wird, werden die Tagesdurchschnittswerte für den vorhergehenden Tag berechnet und in Data Warehouse eingetragen. Der Tagesdurchschnitt ist eine Zusammenfassung der 24 Datenpunkte des Vortages. Die Performance-Datentabellen speichern täglich Zusammenfassungen für Volumes und interne Volumes über 13 Monate.
+
+
+
+== Kapazität und tägliche Granularität
+
+Die Capacity Marts liefern täglich Messungen für verschiedene Kapazitätsfakten über einen Zeitraum von 13 Monaten. Die Kapazitätsdaten in Data Warehouse sind aktuell bei der letzten Datenquellenerfassung für das Gerät vor der ETL.
+
+
+
+== KapazitätsMärz und monatliche Granularität
+
+Data Warehouse speichert tägliche Kapazitätsdaten über 13 Monate. Nach Erreichen der 13-monatigen Schwelle werden die Kapazitätsdaten monatlich zusammengefasst. Die monatlichen Daten basieren auf den Werten, die durch das Datum, das das repräsentative Datum des Monats darstellt, reflektiert werden.
+
+Die folgende Tabelle zeigt, welche monatlichen Daten in der monatlichen Zusammenfassung enthalten sind:
+
+|===
+
+
+| Datum | Ist der Wert des Vertreters für den Monat | Zugewiesene Kapazität 
+
+
+ a| 
+Januar
+ a| 
+1 (Wahr)
+ a| 
+50 TB
+
+
+
+ a| 
+Januar 2
+ a| 
+0 (Falsch)
+ a| 
+52 TB
+
+
+
+ a| 
+...
+ a| 
+...
+ a| 
+...
+
+
+
+ a| 
+Januar 31
+ a| 
+0 (Falsch)
+ a| 
+65 TB
+
+
+
+ a| 
+Februar
+ a| 
+1 (Wahr)
+ a| 
+65 TB
+
+|===
+Auf der Grundlage dieser Tabelle würde ein Monatsbericht 50 TB für Januar und 65 TB für Februar anzeigen. Alle anderen Kapazitätswerte für Januar würden nicht in der monatlichen Zusammenfassung enthalten sein.
+
+
+
+== Inventory Mart
+
+Der Bestandsdatenbestand ist nicht historisch. Jedes Mal, wenn ein ETL-Prozess ausgeführt wird, wird der Inventory Mart gelöscht und neu erstellt. Daher spiegeln alle Berichte, die aus dem Inventory Mart generiert wurden, nicht die historische Bestandskonfiguration wider.

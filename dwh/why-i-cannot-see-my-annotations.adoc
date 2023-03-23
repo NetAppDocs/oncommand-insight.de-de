@@ -1,0 +1,16 @@
+---
+permalink: dwh/why-i-cannot-see-my-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie Anmerkungen in Data Warehouse nicht sehen können, müssen Sie möglicherweise eine Aktualisierung der Anmerkungen erzwingen und dann ein Data Warehouse Build starten. 
+---
+= Warum ich meine Anmerkungen nicht sehen kann
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie Anmerkungen in Data Warehouse nicht sehen können, müssen Sie möglicherweise eine Aktualisierung der Anmerkungen erzwingen und dann ein Data Warehouse Build starten.
+
+Fehlende Anmerkungen beeinflussen die Art und Weise, wie Daten in das Data Warehouse importiert und in den Berichten angezeigt werden. Wenn beispielsweise die Anmerkung „`Tier`“ nicht verfügbar ist, können Sie Speichersysteme in Data Warehouse-Berichten nicht nach Ebene gruppieren.

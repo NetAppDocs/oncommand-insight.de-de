@@ -1,0 +1,44 @@
+---
+permalink: config-admin/types-of-asset-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Asset-Seiten fassen den aktuellen Status eines Assets zusammen und enthalten Links zu zusätzlichen Informationen über das Asset und die zugehörigen Assets. 
+---
+= Typen von Bestandsseiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Asset-Seiten fassen den aktuellen Status eines Assets zusammen und enthalten Links zu zusätzlichen Informationen über das Asset und die zugehörigen Assets.
+
+OnCommand Insight stellt Asset-Seiten für die folgenden Ressourcen bereit:
+
+* Virtual Machine
+* Datenmenge
+* Internes Volumen
+* Physischer Host
+* Storage-Pool
+* Storage
+* Datenspeicher
+* Hypervisor
+* Applikation
+* Storage-Node
+* Qtree
+* Festplatte
+* VMDK
+* Port
+* Switch
+* Fabric
+* Objektspeicher (z. B. Atmos, Centera, Amazon S3)
+* Zone
+
+
+Zuordnungs- und Maskierungsinformationen können in Tabellen auf den Bestandsseiten Zone, Volume, VM und Host/Hypervisor angezeigt werden.
+
+[NOTE]
+====
+Zusammenfassende Informationen sind für Objekt-Storage-Ressourcen verfügbar. Sie können diese Informationen jedoch nur über die Detailseite Datenquellen aufrufen.
+
+====

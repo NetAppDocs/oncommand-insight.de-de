@@ -1,0 +1,105 @@
+---
+permalink: config-admin/emc-vnx-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Für die Konfiguration erfordert die Datenquelle EMC VNX \(SSH\) die IP-Adresse der Control Station sowie einen schreibgeschützten Benutzernamen und ein Kennwort.' 
+---
+= EMC VNX-Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für die Konfiguration erfordert die Datenquelle EMC VNX (SSH) die IP-Adresse der Control Station sowie einen Benutzernamen und ein Kennwort _Read-Only_.
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+VNX-IP
+ a| 
+IP-Adresse oder vollqualifizierter Domänenname der VNX Control Station
+
+
+
+ a| 
+VNX-Benutzername
+ a| 
+Benutzername für die VNX Control Station
+
+
+
+ a| 
+VNX-Kennwort
+ a| 
+Kennwort für die VNX Control Station
+
+|===
+
+
+== Anforderungen
+
+* Eine IP-Adresse der Control Station
+* Nur-Lese-Benutzername und Kennwort.
+* Zugriffsvalidierung: Überprüfen Sie den SSH-Zugriff über PuTTY.
+
+
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 40 Minuten)
+
+
+
+ a| 
+VNX SSH-Zeitüberschreitung beim Prozess (Sek.)
+ a| 
+VNX SSH-Prozess-Timeout (Standard: 600 Sekunden)
+
+
+
+ a| 
+Wiederholversuche Für Celerra-Befehle
+ a| 
+Anzahl der Wiederholversuche für Celerra-Befehle
+
+
+
+ a| 
+CLARiiON External Process Timeout for Inventory (Sek.)
+ a| 
+CLARiiON-Timeout für externen Prozess für Bestandsaufnahme (Standard: 1800 Sekunden)
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+
+
+ a| 
+CLARiiON External Process Timeout for Performance (Sek.)
+ a| 
+CLARiiON-Timeout für externe Prozesse für Performance (Standard: 1800 Sekunden)
+
+|===

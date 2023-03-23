@@ -1,0 +1,23 @@
+---
+permalink: config-admin/maintaining-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Unabhängig davon, ob Sie für Insight neu sind und ein neues System einrichten möchten oder Ihr System bereits seit einiger Zeit in Betrieb ist, müssen Sie Maßnahmen ergreifen, um den reibungslosen Betrieb von Insight und Ihrem Netzwerk aufrechtzuerhalten. Das wichtigste Wartungskonzept ist, dass Änderungen in Ihrem Netzwerk in der Regel in Insight berücksichtigt werden müssen. 
+---
+= Transparenz Aufrechterhalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unabhängig davon, ob Sie für Insight neu sind und ein neues System einrichten möchten oder Ihr System bereits seit einiger Zeit in Betrieb ist, müssen Sie Maßnahmen ergreifen, um den reibungslosen Betrieb von Insight und Ihrem Netzwerk aufrechtzuerhalten. Das wichtigste Wartungskonzept ist, dass Änderungen in Ihrem Netzwerk in der Regel in Insight berücksichtigt werden müssen.
+
+Dies sind die häufigsten Wartungsaufgaben:
+
+* Verwalten von Insight-Backups
+* Abgelaufene Insight-Lizenzen werden aktualisiert
+* Koordination von Patches für Datenquellen
+* Aktualisieren der Insight-Version auf allen Erfassungseinheiten
+* Löschen von entfernten Datenquellen aus Insight
+

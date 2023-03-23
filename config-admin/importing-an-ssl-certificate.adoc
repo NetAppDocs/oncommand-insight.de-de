@@ -1,0 +1,132 @@
+---
+permalink: config-admin/importing-an-ssl-certificate.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können SSL-Zertifikate hinzufügen, um die erweiterte Authentifizierung und Verschlüsselung zu aktivieren und so die Sicherheit Ihrer OnCommand Insight-Umgebung zu erhöhen. 
+---
+= SSL-Zertifikate werden importiert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können SSL-Zertifikate hinzufügen, um die erweiterte Authentifizierung und Verschlüsselung zu aktivieren und so die Sicherheit Ihrer OnCommand Insight-Umgebung zu erhöhen.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen sicherstellen, dass Ihr System die erforderliche Mindestbitebene (1024 Bit) erfüllt.
+
+
+
+== Über diese Aufgabe
+
+[NOTE]
+====
+Bevor Sie diesen Vorgang durchführen, sollten Sie das vorhandene sichern `server.keystore` Datei und benennen Sie die Sicherung `server.keystore.old`. Korrumpieren oder beschädigen `server.keystore` Die Datei kann zu einem nicht funktionsfähigen Insight-Server führen, nachdem der Insight-Server neu gestartet wurde. Wenn Sie ein Backup erstellen, können Sie bei Problemen auf die alte Datei zurücksetzen.
+
+====
+
+
+== Schritte
+
+. Erstellen Sie eine Kopie der ursprünglichen Keystore-Datei: `cp c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore.old`
+. Listen Sie den Inhalt des Keystore auf: `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. Wenn Sie zur Eingabe eines Passworts aufgefordert werden, geben Sie ein `changeit`.
+
+
++
+Das System zeigt den Inhalt des Keystore an. Es sollte mindestens ein Zertifikat im Schlüsselspeicher vorhanden sein, `"ssl certificate"`.
+
+. Löschen Sie die `"ssl certificate"`: `keytool -delete -alias "ssl certificate" -keystore c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore`
+. Einen neuen Schlüssel generieren: `C:\Program Files\SANscreen\java64\bin\keytool.exe -genkey -alias "ssl certificate" -keyalg RSA -keysize 2048 -validity 365 -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. Wenn Sie nach vor- und Nachnamen gefragt werden, geben Sie den vollständig qualifizierten Domänennamen (FQDN) ein, den Sie verwenden möchten.
+.. Geben Sie die folgenden Informationen zu Ihrer Organisation und Organisationsstruktur an:
++
+*** Land: Zweistellige ISO-Abkürzung für Ihr Land (z. B. USA)
+*** Bundesland oder Provinz: Name des Bundesstaates oder der Provinz, in dem sich der Hauptsitz Ihres Unternehmens befindet (z. B. Massachusetts)
+*** Ort: Name der Stadt, in der sich der Hauptsitz Ihrer Organisation befindet (z. B. Waltham)
+*** Name des Unternehmens: Name des Unternehmens, dem der Domain-Name gehört (z. B. NetApp)
+*** Name der Organisationseinheit: Name der Abteilung oder Gruppe, die das Zertifikat verwenden soll (z. B. Support)
+*** Domänenname/ Allgemeiner Name: Der FQDN, der für DNS-Suchen Ihres Servers verwendet wird (z. B. www.example.com). Das System antwortet mit Informationen wie den folgenden: `Is CN=www.example.com, OU=support, O=NetApp, L=Waltham, ST=MA, C=US correct?`
+
+
+.. Eingabe `Yes` Wenn der allgemeine Name (CN) gleich dem FQDN ist.
+.. Wenn Sie zur Eingabe des Schlüsselpassworts aufgefordert werden, geben Sie das Kennwort ein, oder drücken Sie die Eingabetaste, um das vorhandene Schlüsselspeicher-Passwort zu verwenden.
+
+
+. Erstellen Sie eine Zertifikatanforderungsdatei: `C:\Program Files\SANscreen\java64\bin\keytool.exe -certreq -alias "ssl certificate" -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -file c:\localhost.csr`
++
+Der `c:\localhost.csr` Die Datei ist die neu generierte Zertifikatanforderungsdatei.
+
+. Senden Sie die `c:\localhost.csr` Bei der Zertifizierungsstelle zur Genehmigung einreichen.
++
+Nachdem die Zertifikatanforderungsdatei genehmigt wurde, möchten Sie das Zertifikat in zurücksenden `.der` Formatieren. Die Datei wird möglicherweise als zurückgegeben `.der` Datei: Das Standarddateiformat ist `.cer` Für Microsoft CA-Services.
+
++
+Die CAS der meisten Unternehmen verwenden ein Vertrauensstellungsmodell, einschließlich einer Stammzertifizierungsstelle, die häufig offline ist. Es hat die Zertifikate für nur wenige untergeordnete CAS, bekannt als intermediate CAS, unterzeichnet.
+
++
+Sie müssen den öffentlichen Schlüssel (Zertifikate) für die gesamte Vertrauenskette erhalten – das Zertifikat für die Zertifizierungsstelle, die das Zertifikat für den OnCommand Insight-Server signiert hat, und alle Zertifikate zwischen dieser Zertifizierungsstelle bis hin zur Unternehmensstammzertifizierungsstelle.
+
++
+Wenn Sie in einigen Unternehmen eine Signaturanfrage einreichen, erhalten Sie möglicherweise eine der folgenden Informationen:
+
++
+** Eine PKCS12-Datei, die Ihr signiertes Zertifikat und alle öffentlichen Zertifikate in der Vertrauenskette enthält
+** A `.zip` Datei, die einzelne Dateien (einschließlich Ihres signierten Zertifikats) und alle öffentlichen Zertifikate in der Vertrauenskette enthält
+** Nur Ihr signiertes Zertifikat
++
+Sie müssen die öffentlichen Zertifikate erhalten.
+
+
+
+. Importieren Sie das genehmigte Zertifikat für Server.keystore: `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -alias OCI.hostname.com -file c:\localhost2.DER -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. Wenn Sie dazu aufgefordert werden, geben Sie das Passwort für den Keystore ein.
++
+Die folgende Meldung wird angezeigt: `Certificate reply was installed in keystore`
+
+
+
+. Importieren Sie das genehmigte Zertifikat für den Server.trustore: `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -alias OCI.hostname.com -file c:\localhost2.DER -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.trustore"`
++
+.. Geben Sie bei Aufforderung das trustore-Passwort ein.
++
+Die folgende Meldung wird angezeigt: `Certificate reply was installed in trustore`
+
+
+
+. Bearbeiten Sie das `SANscreen\wildfly\standalone\configuration\standalone-full.xml` Datei:
++
+Ersetzen Sie die folgende Alias-Zeichenfolge: `alias="cbc-oci-02.muccbc.hq.netapp.com"`. Beispiel:
+
++
+`<keystore path="server.keystore" relative-to="jboss.server.config.dir" keystore-password="${VAULT::HttpsRealm::keystore_password::1}" alias="cbc-oci-02.muccbc.hq.netapp.com" key-password="${VAULT::HttpsRealm::key_password::1}"/>`
+
+. Starten Sie den SANscreen-Serverdienst neu.
++
+Sobald Insight ausgeführt wird, können Sie auf das Vorhängeschloss-Symbol klicken, um die auf dem System installierten Zertifikate anzuzeigen.
+
++
+Wenn ein Zertifikat mit Informationen „ausgestellt an“ angezeigt wird, die mit den Informationen „ausgestellt von“ übereinstimmen, ist weiterhin ein selbstsigniertes Zertifikat installiert. Selbstsignierte Insight Zertifikate, die vom Insight Installer generiert werden, laufen 100 Jahre ab.
+
++
+NetApp kann nicht garantieren, dass dieses Verfahren Warnungen zu digitalen Zertifikaten entfernt. NetApp kann nicht steuern, wie Ihre Endbenutzer-Workstations konfiguriert sind. Betrachten Sie die folgenden Szenarien:
+
++
+** Microsoft Internet Explorer und Google Chrome verwenden beide Microsoft-native Zertifikatfunktionalität auf Windows.
++
+Das bedeutet, dass wenn Ihre Active Directory-Administratoren die CA-Zertifikate Ihres Unternehmens in die Zertifikattrustores des Endbenutzers übertragen, die Benutzer dieser Browser die Zertifikatwarnungen verschwinden sehen, wenn die selbstsignierten OnCommand Insight-Zertifikate durch die Zertifikate ersetzt wurden, die von der internen CA-Infrastruktur signiert wurden.
+
+** Java und Mozilla Firefox haben ihre eigenen Zertifikatsspeicher.
++
+Wenn Ihre Systemadministratoren das Einspielen der CA-Zertifikate in die vertrauenswürdigen Zertifikatsspeicher dieser Anwendungen nicht automatisieren, generieren Sie möglicherweise weiterhin mithilfe des Insight Java-Clients oder Firefox-Browsers aufgrund eines nicht vertrauenswürdigen Zertifikats Zertifikatwarnungen, selbst wenn das selbstsignierte Zertifikat ersetzt wurde. Eine zusätzliche Anforderung ist, die Zertifikatskette Ihres Unternehmens in den trustore zu installieren.
+
+
+
+

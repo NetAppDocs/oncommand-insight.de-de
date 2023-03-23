@@ -1,0 +1,73 @@
+---
+permalink: config-admin/adding-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: Über das Dialogfeld Datenquelle hinzufügen können Sie Datenquellen schnell hinzufügen. 
+---
+= Hinzufügen von Datenquellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über das Dialogfeld Datenquelle hinzufügen können Sie Datenquellen schnell hinzufügen.
+
+
+
+== Schritte
+
+. Öffnen Sie OnCommand Insight in Ihrem Browser, und melden Sie sich als Benutzer mit Administratorrechten an.
+. Wählen Sie *Admin* und wählen Sie *Datenquellen*.
+. Klicken Sie auf die Schaltfläche *+Add*.
++
+Der Assistent Datenquelle hinzufügen wird geöffnet.
+
+. Geben Sie im Abschnitt *Einstellungen* folgende Informationen ein:
++
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Name
+ a| 
+Geben Sie einen eindeutigen Netzwerknamen für diese Datenquelle ein. HINWEIS: Nur Buchstaben, Zahlen und der Unterstrich (_) sind im Datenquellennamen zulässig.
+
+
+
+ a| 
+Anbieter
+ a| 
+Wählen Sie den Anbieter der Datenquelle aus der Dropdown-Liste aus.
+
+
+
+ a| 
+Modell
+ a| 
+Wählen Sie das Modell der Datenquelle aus der Dropdown-Liste aus.
+
+
+
+ a| 
+Laufort
+ a| 
+Wählen Sie „Lokal“, oder wählen Sie eine Remote-Erfassungseinheit aus, wenn RAUs in Ihrer Umgebung konfiguriert sind.
+
+
+
+ a| 
+Was zu sammeln ist
+ a| 
+Für die meisten Datenquellen sind diese Optionen „Bestandsaufnahme“ und „Leistung“. Die Option „Inventar“ ist standardmäßig immer ausgewählt und kann nicht deaktiviert werden. Beachten Sie, dass einige Datenquellen unterschiedliche Optionen haben können. Die von Ihnen ausgewählten Erfassungsoptionen ändern die verfügbaren Felder in den Abschnitten Konfiguration und Erweiterte Konfiguration.
+
+|===
+. Klicken Sie auf den Link *Konfiguration* und geben Sie die grundlegenden Setup-Informationen ein, die für die Datenquelle mit Ihrem ausgewählten Datenerfassungstyp erforderlich sind.
+. Wenn diese Art von Datenquelle normalerweise detailliertere Informationen benötigt, um sie in Ihrem Netzwerk einzurichten, klicken Sie auf den Link *Erweiterte Konfiguration*, um zusätzliche Informationen einzugeben.
+. Weitere Informationen zur Konfiguration oder zur erweiterten Konfiguration, die für Ihre spezifische Datenquelle erforderlich oder verfügbar sind, finden Sie im link:vendor-specific-data-source-reference.md#["Herstellerspezifische Datenquelle"].
+. Klicken Sie auf den Link *Test*, um sicherzustellen, dass die Datenquelle ordnungsgemäß konfiguriert ist.
+. Klicken Sie Auf *Speichern*.
+

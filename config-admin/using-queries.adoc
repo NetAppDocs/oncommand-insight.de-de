@@ -1,0 +1,14 @@
+---
+permalink: config-admin/using-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Abfragen ermöglichen Ihnen die Überwachung und Fehlerbehebung im Netzwerk, indem Sie die Assets in Ihrer Umgebung auf granularer Ebene durchsuchen, die auf vom Benutzer ausgewählten Kriterien basieren \(Annotationen und Performance-Metriken\). Außerdem ist für Anmerkungsregeln, die Anlagen automatisch Anmerkungen zuweisen, eine Abfrage erforderlich.' 
+---
+= Elemente werden abgefragt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Abfragen ermöglichen Ihnen die Überwachung und Fehlerbehebung im Netzwerk, indem Sie die Assets in Ihrer Umgebung auf granularer Ebene durchsuchen, die auf vom Benutzer ausgewählten Kriterien (Annotationen und Performance-Metriken) basieren. Außerdem ist für Anmerkungsregeln, die Anlagen automatisch Anmerkungen zuweisen, eine Abfrage erforderlich.

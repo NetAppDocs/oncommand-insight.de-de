@@ -1,0 +1,226 @@
+---
+permalink: config-admin/netapp-data-ontap-operating-in-7-mode-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Bei Storage-Systemen mit der Data ONTAP Software 7-Mode sollten Sie die ONTAPI Datenquelle verwenden, die zum Abrufen von Kapazitätsnummern die CLI verwendet. 
+---
+= NetApp Data ONTAP Datenquelle in 7-Mode
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei Storage-Systemen mit der Data ONTAP Software 7-Mode sollten Sie die ONTAPI Datenquelle verwenden, die zum Abrufen von Kapazitätsnummern die CLI verwendet.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Inventarinformationen aus der NetApp Data ONTAP 7-Mode Datenquelle. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Festplatte
+ a| 
+Festplatte
+
+
+
+ a| 
+Raid-Gruppe
+ a| 
+Festplattengruppe
+
+
+
+ a| 
+Filer
+ a| 
+Storage
+
+
+
+ a| 
+Filer
+ a| 
+Storage-Node
+
+
+
+ a| 
+Aggregat
+ a| 
+Storage-Pool
+
+
+
+ a| 
+LUN
+ a| 
+Datenmenge
+
+
+
+ a| 
+Datenmenge
+ a| 
+Internes Volumen
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+* IP-Adresse des FAS Storage Controllers und des Partners
+* Port 443
+* Benutzername und Passwort für den Controller und den Partner
+* Ein benutzerdefinierter Benutzername und Passwort für den Admin-Level für den Controller und den Partner-Controller mit den folgenden Rollenfunktionen für 7-Mode:
++
+** „api-*“: Nutzen Sie diese, um OnCommand Insight die Ausführung aller NetApp Storage-API-Befehle zu ermöglichen.
+** „login-http-admin“: Hiermit kann OnCommand Insight über HTTP eine Verbindung mit dem NetApp Storage herstellen.
+** „Security-API-vfiler“: Nutzen Sie dies, um OnCommand Insight zu ermöglichen, NetApp Storage API Befehle auszuführen, um vFiler Einheitsinformationen abzurufen.
+** „cli-Optionen“: Hier können Sie Storage-Systemoptionen lesen.
+** „cli-lun“: Greifen Sie auf diese Befehle zum Verwalten von LUNs zu. Zeigt den Status (LUN-Pfad, Größe, Online/Offline-Zustand und Shared-Zustand) der angegebenen LUN oder Klasse von LUNs an.
+** „cli-df“: Verwenden Sie dies, um freien Speicherplatz anzuzeigen.
+** „cli-ifconfig“: Verwenden Sie diese, um Schnittstellen und IP-Adressen anzuzeigen.
+
+
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Adresse des Filer
+ a| 
+IP-Adresse oder vollqualifizierter Domänenname für den NetApp Filer
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für den NetApp Filer
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort für den NetApp Filer
+
+
+
+ a| 
+Adresse des HA Partner Filer im Cluster
+ a| 
+IP-Adresse oder vollqualifizierter Domänenname für den HA-Partner Filer
+
+
+
+ a| 
+Benutzername des HA Partner Filer in Cluster
+ a| 
+Benutzername für den NetApp HA Partner Filer
+
+
+
+ a| 
+Passwort des HA Partner Filer in Cluster
+ a| 
+Passwort für den NetApp HA-Partner Filer
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 20 Minuten)
+
+
+
+ a| 
+Verbindungstyp
+ a| 
+Wählen Sie den Verbindungstyp
+
+
+
+ a| 
+Verbindungsport
+ a| 
+Für NetApp API verwendeter Port
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+|===
+
+
+== Storage-Systemverbindung
+
+Als Alternative zur Verwendung des standardmäßigen administrativen Benutzers für diese Datenquelle können Sie einen Benutzer mit administrativen Rechten direkt auf den NetApp Storage-Systemen konfigurieren, damit diese Datenquelle Daten von NetApp Storage-Systemen erfassen kann.
+
+Für die Verbindung zu NetApp Storage-Systemen muss der Benutzer, der beim Erwerb der Haupt-pfiler angegeben ist (auf dem das Speichersystem vorhanden ist), die folgenden Bedingungen erfüllen:
+
+* Der Benutzer muss auf vfiler0 (root Filer/pfiler) sein.
++
+Storage-Systeme werden beim Erwerb der Haupt-Filer erworben.
+
+* Mit den folgenden Befehlen werden die Fähigkeiten der Benutzerrolle definiert:
++
+** „api-*“: Nutzen Sie diese, um OnCommand Insight die Ausführung aller NetApp Storage-API-Befehle zu ermöglichen. Dieser Befehl ist erforderlich, um das ZAPI zu verwenden.
+** „login-http-admin“: Hiermit kann OnCommand Insight über HTTP eine Verbindung mit dem NetApp Storage herstellen. Dieser Befehl ist erforderlich, um das ZAPI zu verwenden.
+** „Security-API-vfiler“: Nutzen Sie dies, um OnCommand Insight zu ermöglichen, NetApp Storage API Befehle auszuführen, um vFiler Einheitsinformationen abzurufen.
+** „cli-Opes“: Zum Befehl „Opes“, der für Partner-IP und aktivierte Lizenzen verwendet wird.
+** „ cli-lun“: Greifen Sie zum Verwalten von LUNs auf diesen Befehl zu. Zeigt den Status (LUN-Pfad, Größe, Online/Offline-Zustand und Shared-Zustand) der angegebenen LUN oder Klasse von LUNs an.
+** „cli-df“: Für „df -s“, „df -r“, „df -A -r“ und für die Anzeige des freien Speicherplatzes
+** „cli-ifconfig“: Für „ifconfig -a“ Befehl und verwendet für das Abrufen von Filer IP Adresse.
+** "cli-rdfile": Für den Befehl "rdfile /etc/netgroup" und für das Abrufen von Netzgruppen verwendet.
+** „cli-Datum“: Für den Befehl „Datum“ und mit dem vollständigen Datum für das Abrufen von Snapshot Kopien.
+** „cli-Snap“: Für den Befehl „Snap list“ und zum Abrufen von Snapshot Kopien verwendet.
+
+
+
+
+Wenn cli-Datum oder cli-Snap Berechtigungen nicht bereitgestellt werden, kann die Erfassung abgeschlossen werden. Snapshot Kopien werden jedoch nicht gemeldet.
+
+Um eine 7-Mode Datenquelle erfolgreich zu erhalten und keine Warnungen auf dem Speichersystem zu generieren, sollten Sie eine der folgenden Befehlstrings verwenden, um Ihre Benutzerrollen zu definieren. Der zweite hier aufgeführte String ist eine optimierte Version des ersten:
+
+[listing]
+----
+login-http-admin,api-*,security-api-vfile,cli-rdfile,cli-options,cli-df,cli-lun,cli-ifconfig,cli-date,cli-snap,
+or
+login-http-admin,api-*,security-api-vfile,cli-*
+----

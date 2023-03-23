@@ -1,0 +1,78 @@
+---
+permalink: howto/finding-the-right-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Insight Ressourcen, auf die Sie in Widget-Filtern verweisen können, variieren von Asset-Typ zu Asset-Typ. 
+---
+= Best Practice: Die richtigen Assets finden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Insight Ressourcen, auf die Sie in Widget-Filtern verweisen können, variieren von Asset-Typ zu Asset-Typ.
+
+In Dashboards bestimmt der Asset-Typ, um den Sie Ihr Widget erstellen, die anderen Asset-Typ-Zähler, für die Sie eine Spalte filtern oder hinzufügen können. Beachten Sie beim Erstellen Ihres Widgets Folgendes:
+
+|===
+
+
+| Dieser Asset-Typ / Zähler: | Kann unter diesen Assets gefiltert werden: 
+
+
+ a| 
+Virtual Machine
+ a| 
+VMDK
+
+
+
+ a| 
+Datenspeicher(e)
+ a| 
+Internes VolumeVMDK
+
+Virtual Machine
+
+Datenmenge
+
+
+
+ a| 
+Hypervisor
+ a| 
+Virtual Machine
+
+
+
+ a| 
+Für Hypervisor
+ a| 
+Host
+
+
+
+ a| 
+Host(s)
+ a| 
+Internes VolumeVolume
+
+
+
+ a| 
+Cluster
+ a| 
+HostVirtual Machine
+
+
+
+ a| 
+Fabric
+ a| 
+Port
+
+|===
+Dies ist keine umfassende Liste.
+
+Best Practice: Wenn Sie nach einem bestimmten Asset-Typ filtern, der nicht in der Liste angezeigt wird, versuchen Sie, Ihre Abfrage um einen alternativen Asset-Typ zu erstellen.

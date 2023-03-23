@@ -1,0 +1,252 @@
+---
+permalink: config-admin/emc-solutions-enabler-cli-with-smi-s-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight ermittelt Symmetrix-Speicher-Arrays mithilfe von Solutions Enabler-Symcli-Befehlen in Verbindung mit einem vorhandenen Solutions Enabler-Server in Ihrer Umgebung. Der vorhandene Solutions Enabler-Server verfügt über eine Verbindung zum Symmetrix-Speicher-Array durch Zugriff auf Gatekeeper-Volumes. Für den Zugriff auf dieses Gerät sind Administratorberechtigungen erforderlich. 
+---
+= EMC Solutions Enabler mit SMI-S Performance-Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight erkennt Symmetrix-Speicher-Arrays mithilfe von Solutions Enabler `symcli` Befehle in Verbindung mit einem vorhandenen Solutions Enabler-Server in Ihrer Umgebung. Der vorhandene Solutions Enabler-Server verfügt über eine Verbindung zum Symmetrix-Speicher-Array durch Zugriff auf Gatekeeper-Volumes. Für den Zugriff auf dieses Gerät sind Administratorberechtigungen erforderlich.
+
+
+
+== Terminologie
+
+OnCommand Insight erfasst die folgenden Bestandsinformationen aus der Datenquelle „EMC Solutions Enabler“. Für jeden von Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Insight Laufzeit 
+
+
+ a| 
+Festplatte
+ a| 
+Festplatte
+
+
+
+ a| 
+Festplattengruppe
+ a| 
+Festplattengruppe
+
+
+
+ a| 
+Storage Array Durchführt
+ a| 
+Storage
+
+
+
+ a| 
+Direktor
+ a| 
+Storage-Node
+
+
+
+ a| 
+Geräte-Pool, Storage-Ressourcen-Pool (SRP)
+ a| 
+Storage-Pool
+
+
+
+ a| 
+Gerät, TDEV
+ a| 
+Datenmenge
+
+|===
+[NOTE]
+====
+Es handelt sich dabei nur um gängige Terminologiezuordnungen, die für diese Datenquelle möglicherweise nicht alle Fälle darstellen.
+
+====
+
+
+== Anforderungen
+
+Bevor Sie diese Datenquelle konfigurieren, sollten Sie sicherstellen, dass der OnCommand Insight-Server über eine TCP-Verbindung zu Port 2707 auf dem vorhandenen Solutions Enabler-Server verfügt. OnCommand Insight ermittelt alle Symmetrix-Arrays, die „`Local`“ für diesen Server sind, wie in der Ausgabe von „`symcfg list`“ dieses Servers dargestellt.
+
+* Die EMC Solutions Enabler (CLI) mit SMI-S Provider-Anwendung muss installiert sein und die Version muss mit der auf dem Solutions Enabler Server ausgeführten Version übereinstimmen oder älter sein.
+* Eine ordnungsgemäß konfiguriert `+{installdir}\EMC\SYMAPI\config\netcnfg+` Datei ist erforderlich. Diese Datei definiert Dienstnamen für Solutions Enabler-Server sowie die Zugriffsmethode (SECURE / NOSECURE /ANY).
+* Wenn Sie eine Lese-/Schreiblatenz auf Speicherknotenebene benötigen, muss der SMI-S-Provider mit einer laufenden Instanz der UNISPHERE for VMAX-Anwendung kommunizieren.
+* Administratorberechtigungen auf dem Solutions Enabler (SE)-Server
+* Schreibgeschützter Benutzername und Kennwort für die SE-Software
+* Anforderungen für Solutions Enabler Server 6.5X:
++
+** SMI-S Provider 3.3.1 für SMIS-S V1.2 installiert
+** Führen Sie nach der Installation aus `\Program Files\EMC\SYMCLI\bin>stordaemon start storsrvd`
+
+
+* DIE UNISPHERE for VMAX-Anwendung muss ausgeführt werden und Statistiken für die Symmetrix VMAX-Speicher-Arrays sammeln, die von der SMI-S Provider-Installation gemanagt werden
+* Zugriffsvalidierung: Überprüfen Sie, ob der SMI-S-Provider ausgeführt wird: `telnet <se_server\> 5988`
+
+
+
+
+== Konfiguration
+
+[NOTE]
+====
+Wenn die SMI-S-Benutzerauthentifizierung nicht aktiviert ist, werden die Standardwerte in der OnCommand Insight-Datenquelle ignoriert.
+
+====
+Wenn Symauth auf Symmetrix-Arrays aktiviert ist, kann OnCommand Insight diese möglicherweise nicht erkennen. Die OnCommand Insight-Erfassung wird als SYSTEMBENUTZER auf dem Server der OnCommand Insight/Remote-Erfassungseinheit ausgeführt, der mit dem Solutions Enabler-Server kommuniziert. Wenn hostname\SYSTEM keine symauth-Berechtigungen hat, kann OnCommand Insight das Array nicht ermitteln.
+
+Die Datenquelle EMC Solutions Enabler Symmetrix CLI umfasst Unterstützung für die Gerätekonfiguration für Thin Provisioning und Symmetrix Remote Data Facility (SRDF).
+
+Definitionen werden für Fibre-Channel- und Switch-Performance-Pakete bereitgestellt.
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Name Des Service
+ a| 
+Dienstname wie in der netcnfg-Datei angegeben
+
+
+
+ a| 
+Vollständiger Pfad zur CLI
+ a| 
+Vollständiger Pfad zur Symmetrix-CLI
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 40 Minuten)
+
+
+
+ a| 
+Wählen Sie „Ausschließen“ oder „Einschließen“, um eine Liste anzugeben
+ a| 
+Geben Sie an, ob die Array-Liste unten bei der Datenerfassung ein- oder ausgeschlossen werden soll
+
+
+
+ a| 
+Inventory Exclude Devices
+ a| 
+Kommagetrennte Liste der Geräte-IDs, die einbezogen oder ausgeschlossen werden sollen
+
+
+
+ a| 
+Verbindungs-Caching
+ a| 
+Verbindungszwischenspeicherung wählen:
+
+* LOKAL bedeutet, dass der OnCommand Insight Acquisition-Service auf dem Solutions Enabler-Server ausgeführt wird, der über Fibre-Channel-Konnektivität zu den Symmetrix-Arrays verfügt, die Sie ermitteln möchten, und Zugriff auf Gatekeeper-Volumes hat. Dies ist möglicherweise in einigen Konfigurationen der Remote Acquisition Unit (rau) zu sehen.
+* REMOTE_CACHED ist die Standardeinstellung und sollte in den meisten Fällen verwendet werden. Hierbei werden die NETCNFG-Dateieinstellungen verwendet, um eine Verbindung über IP mit dem Solutions Enabler-Server herzustellen. Dieser muss über eine Fibre-Channel-Verbindung zu den Symmetrix-Arrays verfügen, die Sie ermitteln möchten, und hat Zugriff auf Gatekeeper-Volumes.
+* Falls DIE REMOTE_CACHED-Optionen CLI-Befehle fehlschlagen lassen, verwenden Sie die REMOTE-Option. Denken Sie daran, dass es den Erfassungsprozess verlangsamen wird (möglicherweise auf Stunden oder sogar Tage in extremen Fällen). Die NETCNFG-Dateieinstellungen werden weiterhin für eine IP-Verbindung zum Solutions Enabler-Server verwendet, der über Fibre Channel-Verbindungen zu den erkannten Symmetrix-Arrays verfügt.
+
+
+[NOTE]
+====
+Diese Einstellung ändert das OnCommand Insight-Verhalten in Bezug auf die Arrays, die in der Ausgabe „symcfg list“ als REMOTE aufgeführt werden, nicht. OnCommand Insight sammelt nur Daten auf Geräten, die mit diesem Befehl als LOKAL angezeigt werden.
+
+====
+
+
+ a| 
+CLI-Zeitüberschreitung (Sek.)
+ a| 
+CLI-Prozess-Timeout (Standard: 7200 Sekunden)
+
+
+
+ a| 
+SMI-S-HOST-IP
+ a| 
+IP-Adresse des SMI-S Provider-Hosts
+
+
+
+ a| 
+SMI-S-Port
+ a| 
+Vom SMI-S Provider-Host verwendeter Port
+
+
+
+ a| 
+Protokoll
+ a| 
+Protokoll für die Verbindung mit dem SMI-S-Provider
+
+
+
+ a| 
+SMI-S Namespace
+ a| 
+Für die Verwendung durch den SMI-S-Provider konfigurierte Interoperabilität
+
+
+
+ a| 
+SMI-S-Benutzername
+ a| 
+Benutzername für den SMI-S Provider Host
+
+
+
+ a| 
+SMI-S-Passwort
+ a| 
+Benutzername für den SMI-S Provider Host
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 1000 Sekunden)
+
+
+
+ a| 
+Typ Des Leistungsfilters
+ a| 
+Geben Sie an, ob die unten aufgeführte Array-Liste beim Erfassen von Performancedaten einbezogen oder ausgeschlossen werden soll
+
+
+
+ a| 
+Geräteliste Für Leistungsfilter
+ a| 
+Kommagetrennte Liste der Geräte-IDs, die einbezogen oder ausgeschlossen werden sollen
+
+
+
+ a| 
+RPO-Abfrageintervall (s)
+ a| 
+Intervall zwischen RPO-Abfragen (Standard: 300 Sekunden)
+
+|===

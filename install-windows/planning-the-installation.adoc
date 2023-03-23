@@ -1,0 +1,26 @@
+---
+permalink: install-windows/planning-the-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: Um eine erfolgreiche Bereitstellung zu gewährleisten, müssen Sie bestimmte Systemelemente berücksichtigen, bevor Sie OnCommand Insight installieren. 
+---
+= Planen der Implementierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um eine erfolgreiche Bereitstellung zu gewährleisten, müssen Sie bestimmte Systemelemente berücksichtigen, bevor Sie OnCommand Insight installieren.
+
+
+
+== Über diese Aufgabe
+
+Zur Planung Ihrer Insight Implementierung gehören die folgenden Systemelemente:
+
+* Insight Architektur
+* Ihre zu überwachenden Netzwerkkomponenten
+* Voraussetzungen für die Insight Installation und Serveranforderungen
+* Webbrowser-Anforderungen für Insight
+

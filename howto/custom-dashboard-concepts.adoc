@@ -1,0 +1,48 @@
+---
+permalink: howto/custom-dashboard-concepts.html 
+sidebar: sidebar 
+keywords:  
+summary: Benutzerdefinierte Dashboards und Widgets bieten große Flexibilität bei der Anzeige von Daten. Nachfolgend finden Sie einige Konzepte, mit denen Sie Ihre individuellen Dashboards optimal nutzen können. Jedes Konzept wird in den folgenden Abschnitten näher erläutert. 
+---
+= Konzepte des benutzerdefinierten Dashboards
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Benutzerdefinierte Dashboards und Widgets bieten große Flexibilität bei der Anzeige von Daten. Nachfolgend finden Sie einige Konzepte, mit denen Sie Ihre individuellen Dashboards optimal nutzen können. Jedes Konzept wird in den folgenden Abschnitten näher erläutert.
+
+*Variablen*
+
+Variablen ermöglichen es Ihnen, die in einigen oder allen Widgets auf einem Dashboard angezeigten Daten gleichzeitig zu ändern. Wenn jedes Widget auf eine gemeinsame Variable eingestellt wird, führen Änderungen an einem Ort dazu, dass die in jedem Widget angezeigten Daten automatisch aktualisiert werden.
+
+*Mehrere Abfragen und/oder Ausdrücke*
+
+Jedes Widget für Zeitreihen (Linien-, Spline-, Bereich- oder gestapelte Flächendiagramme) kann bis zu fünf Abfragen und/oder Ausdrücke enthalten, um zu bestimmen, welche Daten angezeigt werden sollen, sodass Sie verschiedene Datensätze auf einem einzelnen Diagramm vergleichen können. Beispielsweise können Sie ein Liniendiagramm mit IOPS sowohl für Storage als auch für VMs oder ein Einzeldiagramm mit Durchsatz und Latenz für alle Storage-Pools erstellen.
+
+* Rollup und Gruppieren*
+
+Die in jedem Widget angezeigten Daten werden aus den erfassten Datenpunkten aufgerollt. Sie haben verschiedene Möglichkeiten, diese Daten einzurollen:
+
+* AVG: Erfasst Daten als Durchschnitt der zugrunde liegenden Daten
+* Max: Rollt Daten bis zum Maximum der zugrunde liegenden Daten
+* Min: Rollt Daten auf das Minimum der zugrunde liegenden Daten
+* Summe: Fasst Daten als Summe der zugrunde liegenden Daten zusammen
+
+
+Standardmäßig werden alle zugrunde liegenden Daten in einem einzelnen Eintrag (Alle) auf dem Diagramm oder der Tabelle zusammengefasst. Sie können stattdessen Daten für ein bestimmtes Attribut, wie z. B. Data Center oder Tier, erstellen, um die zugrunde liegenden Daten in die gewünschten Gruppen zu verteilen. Ihr Widget zeigt nur die Daten für die ausgewählten Attribute an.
+
+Sie können Daten in einem Tabellenwidget nach dem ausgewählten Attribut gruppieren. Sie können beispielsweise die Tabelle nach Rechenzentrum gruppieren. Gruppen können beliebig erweitert oder reduziert werden. Leistungsdaten in einer Tabelle werden in der Gruppenkopfzeile gemäß der im Widget festgelegten Rollup-Methode (Durchschnitt, Max, Min oder Summe) aufgerollt.
+
+Tabellen-Widgets können nach jeder Spalte sortiert werden, und Spalten können nach Bedarf verschoben oder in der Größe geändert werden.
+
+*Oben/Unten*
+
+Verwenden Sie diese Option, um die Ergebnismenge in Diagramm-Widgets zu begrenzen, um auszuwählen, ob die oberen N-Ergebnisse in Ihrem Widget oder die unteren N-Ergebnisse angezeigt werden sollen. Sie können diese Option wählen, wenn Daten nicht automatisch gerollt oder von einem bestimmten Attribut aufgerollt werden.
+
+*Dashboard-Zeit überschreiben*
+
+Standardmäßig zeigen die meisten Widgets, die Sie einem Dashboard hinzufügen, Daten entsprechend der Einstellung des Zeitbereichs des Dashboards an (3h, 24h, 3d, 7d, 30d oder benutzerdefinierter Bereich). Sie können diese Zeiteinstellung jedoch in einzelnen Widgets überschreiben, um sie zu zwingen, Daten in einem bestimmten Zeitkontext anzuzeigen, unabhängig von der Zeiteinstellung des Dashboards.
+
+Diese Konzepte werden im folgenden Abschnitt näher erläutert.

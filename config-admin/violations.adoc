@@ -1,0 +1,18 @@
+---
+permalink: config-admin/violations.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können den Abschnitt Verstöße auf einer Bestandsseite verwenden, um die Verstöße, falls vorhanden, zu sehen, die in Ihrer Umgebung aufgrund einer Performance-Richtlinie auftreten, die einem Asset zugewiesen wurde. Leistungsrichtlinien überwachen Ihre Netzwerkschwellenwerte und ermöglichen es Ihnen, einen Verstoß gegen einen Schwellenwert sofort zu erkennen, die Auswirkungen zu erkennen und die Auswirkungen und die Ursache des Problems auf eine Weise zu analysieren, die eine schnelle und effektive Korrektur ermöglicht. 
+---
+= Verstöße
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Abschnitt Verstöße auf einer Bestandsseite verwenden, um die Verstöße, falls vorhanden, zu sehen, die in Ihrer Umgebung aufgrund einer Performance-Richtlinie auftreten, die einem Asset zugewiesen wurde. Leistungsrichtlinien überwachen Ihre Netzwerkschwellenwerte und ermöglichen es Ihnen, einen Verstoß gegen einen Schwellenwert sofort zu erkennen, die Auswirkungen zu erkennen und die Auswirkungen und die Ursache des Problems auf eine Weise zu analysieren, die eine schnelle und effektive Korrektur ermöglicht.
+
+Das folgende Beispiel zeigt den Abschnitt „Violations“, der auf einer Asset-Seite für einen Hypervisor angezeigt wird:
+
+image::../media/violations-section.gif[Abschnitt „Verstöße“]

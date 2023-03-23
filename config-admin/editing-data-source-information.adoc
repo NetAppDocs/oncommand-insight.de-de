@@ -1,0 +1,29 @@
+---
+permalink: config-admin/editing-data-source-information.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die Setup-Informationen der Datenquelle schnell bearbeiten. 
+---
+= Bearbeiten von Datenquellinformationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Setup-Informationen der Datenquelle schnell bearbeiten.
+
+
+
+== Schritte
+
+. Klicken Sie auf *Admin* und navigieren Sie zur Ansicht der Datenquellliste
+. Suchen Sie die Datenquelle, die Sie bearbeiten möchten.
+. Verwenden Sie eine dieser Methoden, um die Änderungen zu beginnen:
++
+** Klicken Sie rechts neben der ausgewählten Datenquelle auf *Datenquelle bearbeiten*.
+** Klicken Sie auf den verknüpften Namen der ausgewählten Datenquelle und dann auf *Bearbeiten*. Beide Methoden öffnen das Dialogfeld Datenquelle bearbeiten.
+
+
+. Nehmen Sie die gewünschten Änderungen vor und klicken Sie auf *Speichern*.
+

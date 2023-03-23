@@ -1,0 +1,14 @@
+---
+permalink: install-windows/performing-the-software-upgrade.html 
+sidebar: sidebar 
+keywords:  
+summary: Nachdem Sie alle erforderlichen Aufgaben abgeschlossen haben, können Sie alle Insight-Komponenten auf eine neue Version aktualisieren, indem Sie das entsprechende Installationspaket auf jedem Server herunterladen und ausführen. 
+---
+= Durchführen des Software-Upgrades
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie alle erforderlichen Aufgaben abgeschlossen haben, können Sie alle Insight-Komponenten auf eine neue Version aktualisieren, indem Sie das entsprechende Installationspaket auf jedem Server herunterladen und ausführen.

@@ -1,0 +1,48 @@
+---
+permalink: howto/defining-applications-how-to-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie Kostendaten zu bestimmten Applikationen verfolgen möchten, die in Ihrer Umgebung ausgeführt werden, müssen Sie zunächst die Applikationen definieren. 
+---
+= Definition von Applikationen für die Verwendung mit Chargeback
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie Kostendaten zu bestimmten Applikationen verfolgen möchten, die in Ihrer Umgebung ausgeführt werden, müssen Sie zunächst die Applikationen definieren.
+
+
+
+== Bevor Sie beginnen
+
+Wenn Sie eine Applikation einer Geschäftseinheit zuordnen möchten, müssen Sie die Geschäftseinheit bereits erstellt haben.
+
+[NOTE]
+====
+In diesem Beispiel werden keine Anwendungen mit Geschäftseinheiten verknüpft.
+
+====
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Klicken Sie Auf *Verwalten* > *Anwendung*
++
+Nachdem Sie eine Applikation definiert haben, werden auf der Seite Anwendungen der Name der Applikation, ihre Priorität und gegebenenfalls die mit der Applikation verknüpfte Geschäftseinheit angezeigt.
+
+. Klicken Sie Auf**Hinzufügen**
++
+Das Dialogfeld Anwendung hinzufügen wird angezeigt.
+
+. Geben Sie im Feld Name einen eindeutigen Namen für die Anwendung ein. Geben Sie die im Bericht „African Tours“, „APAC Commercial Sales“ usw. identifizierten Anwendungen ein.
+. Klicken Sie auf *Priorität* und wählen Sie die Priorität (kritisch, hoch, mittel oder niedrig) für die Anwendung in Ihrer Umgebung aus.
+. Wenn Sie diese Anwendung mit einer Business Entity verwenden möchten, klicken Sie auf *Business Entity* und wählen Sie die Entity aus der Liste aus.
+. Sie werden keine Volume-Freigabe verwenden, klicken Sie auf, um das Feld *Validieren* Volume-Freigabe zu deaktivieren.
+. Klicken Sie Auf *Speichern*.
++
+Die Anwendungen werden auf der Seite Anwendungen angezeigt. Wenn Sie auf den Namen der Anwendung klicken, zeigt Insight die Seite der Anlage für die Anwendung an. Nachdem Sie eine Anwendung definiert haben, können Sie eine Anlagenseite für Host, virtuelle Maschine, Volume, internes Volume oder Hypervisor aufrufen, um eine Anwendung einem Asset zuzuweisen.
+
+

@@ -1,0 +1,57 @@
+---
+permalink: config-admin/configuring-annotation-rules-for-automatic-assignment.html 
+sidebar: sidebar 
+keywords:  
+summary: Alternativ zum manuellen Anwenden von Anmerkungen auf einzelne Assets können Sie mithilfe von Anmerkungsregeln automatisch Anmerkungen auf mehrere Assets anwenden. Wenn Insight die Anmerkungsregeln auswertet, haben Annotationen, die manuell auf den Seiten einzelner Assets festgelegt wurden, Vorrang vor regelbasierten Annotationen. 
+---
+= Anmerkungsregeln werden erstellt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Alternativ zum manuellen Anwenden von Anmerkungen auf einzelne Assets können Sie mithilfe von Anmerkungsregeln automatisch Anmerkungen auf mehrere Assets anwenden. Wenn Insight die Anmerkungsregeln auswertet, haben Annotationen, die manuell auf den Seiten einzelner Assets festgelegt wurden, Vorrang vor regelbasierten Annotationen.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen eine Abfrage für die Anmerkungsregel erstellt haben.
+
+
+
+== Über diese Aufgabe
+
+Sie können zwar die Anmerkungstypen bearbeiten, während Sie die Regeln erstellen, aber Sie sollten die Typen bereits im Voraus definiert haben.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Klicken Sie auf *Verwalten* und wählen Sie *Anmerkungsregeln*.
++
+Auf der Seite Anmerkungsregeln wird die Liste der vorhandenen Anmerkungsregeln angezeigt.
+
+. Klicken Sie Auf image:../media/add-annotation-icon.gif[""].
++
+Das Dialogfeld Regel hinzufügen wird angezeigt.
+
+. Gehen Sie wie folgt vor:
++
+.. Geben Sie im Feld *Name* einen eindeutigen Namen ein, der die Regel beschreibt.
++
+Dieser Name wird auf der Seite Anmerkungsregeln angezeigt.
+
+.. Klicken Sie auf *Abfrage* und wählen Sie die Abfrage aus, die OnCommand Insight verwenden soll, um die Anmerkung auf Anlagen anzuwenden.
+.. Klicken Sie auf *Anmerkung* und wählen Sie die Beschriftung aus, die Sie anwenden möchten.
+.. Klicken Sie auf *Wert* und wählen Sie einen Wert für die Anmerkung aus.
++
+Wenn Sie beispielsweise als Anmerkung Geburtstag auswählen, geben Sie ein Datum für den Wert an.
+
+
+
+. Klicken Sie Auf *Speichern*.
+. Klicken Sie auf *Alle Regeln*, wenn Sie alle Regeln sofort ausführen möchten; andernfalls werden die Regeln in einem regelmäßigen geplanten Intervall ausgeführt.
+

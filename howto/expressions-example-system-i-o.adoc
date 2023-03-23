@@ -1,0 +1,57 @@
+---
+permalink: howto/expressions-example-system-i-o.html 
+sidebar: sidebar 
+keywords:  
+summary: Ausdrücke geben Ihnen die Freiheit, Daten zu graten, die aus anderen Metriken berechnet werden können. 
+---
+= Ausdrücke Beispiel: "System" I/O
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ausdrücke geben Ihnen die Freiheit, Daten zu graten, die aus anderen Metriken berechnet werden können.
+
+
+
+== Über diese Aufgabe
+
+Beispiel 2: OnCommand Insight erwirbt viele Kennzahlen aus Datenquellen. Dazu zählen Lese-, Schreib- und IOPS-Werte. Die von der Erfassung gemeldete Gesamtzahl an IOPS umfasst jedoch manchmal „System“-IOPS. Dabei handelt es sich um solche I/O-Vorgänge, die keinen direkten Teil des Lesens und Schreibens von Daten darstellen. Dieser System-I/O kann auch als „Overhead“-I/O bezeichnet werden, der für einen ordnungsgemäßen Systembetrieb, aber nicht direkt mit Datenoperationen benötigt wird.
+
+Zur Anzeige dieser System-I/OS können die Lese- und Schreib-IOPS von den insgesamt gemeldeten IOPS aus der Übernahme entfernt werden. Die Formel könnte wie folgt aussehen:
+
+* System-IOPS = IOPS insgesamt – (Lese-IOPS + Schreib-IOPS)
+
+
+Diese Daten können dann in einem Liniendiagramm auf Ihrem Dashboard angezeigt werden. Um dies zu tun, führen Sie folgende Schritte aus:
+
+
+
+== Schritte
+
+. Erstellen Sie ein neues Dashboard oder öffnen Sie ein vorhandenes Dashboard im *Edit-Modus*.
+. Fügen Sie ein Widget zum Dashboard hinzu. Wählen Sie *Liniendiagramm*.
++
+Das Widget wird im Bearbeitungsmodus geöffnet. Standardmäßig wird eine Abfrage mit *IOPS - Total* für *Storage*-Assets angezeigt. Wählen Sie bei Bedarf einen anderen Asset-Typ aus.
+
+. Klicken Sie auf die Schaltfläche, um eine Kopie der Abfrage zu erstellen.
++
+Ein Duplikat der Abfrage wird unterhalb des Originals hinzugefügt.
+
+. Klicken Sie in der zweiten Abfrage auf die Schaltfläche *in Ausdruck konvertieren*.
++
+Die aktuelle Abfrage wird in den Ausdrucksmodus konvertiert. Klicken Sie auf *Zurücksetzen auf Abfrage*, wenn Sie jederzeit wieder in den Abfragemodus wechseln möchten. Beachten Sie, dass durch Umschalten zwischen den Modi die Felder auf ihre Standardeinstellungen zurückgesetzt werden.
+
++
+Bleiben Sie jetzt im *Expression*-Modus.
+
+. Die Metrik *IOPS - Total* befindet sich jetzt im Feld „`a`“ der alphabetischen Variablen. Klicken Sie auf *IOPS - Total* und ändern Sie es in *IOPS - Lesen*. .
+. Klicken Sie im Feld Variable „`b`“ auf *Auswählen* und wählen Sie *IOPS - Schreiben*.
+. Im Feld *Ausdruck* verwenden Sie die Buchstaben, die jeder Variablen entsprechen, um Ihren Ausdruck zu erstellen. Wir würden unseren Ausdruck einfach schreiben als: `a + b`. Wählen Sie im Abschnitt *Anzeige* für diesen Ausdruck**Flächendiagramm**.
+. Das Feld *Beschriftung* kennzeichnet den Ausdruck. Ändern Sie die Bezeichnung in „`System IOPS`“ oder etwas, das für Sie gleichermaßen bedeutsam ist.
++
+Im Diagramm wird die IOPS insgesamt als Liniendiagramm angezeigt. In einem Flächendiagramm wird die Kombination aus Lese- und Schreib-IOPS unterhalb dieser Werte angezeigt. Die Lücke zwischen den beiden gibt die IOPS an, die nicht direkt mit Lese- oder Schreibvorgängen verbunden sind.
+
+. Klicken Sie auf *Speichern*, um das Diagramm auf Ihrem Dashboard zu speichern.
+

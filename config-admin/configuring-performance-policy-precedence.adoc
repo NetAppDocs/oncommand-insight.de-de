@@ -1,0 +1,33 @@
+---
+permalink: config-admin/configuring-performance-policy-precedence.html 
+sidebar: sidebar 
+keywords:  
+summary: Standardmäßig bewertet Insight die Richtlinien eines Objekts sequenziell. Sie können die Reihenfolge konfigurieren, in der Insight die Performance-Richtlinien evaluiert. Wenn Sie beispielsweise eine Richtlinie konfiguriert haben, die die Verarbeitung bei einem Verstoß für Gold-Tier-Speicher beendet, können Sie diese Richtlinie an erster Stelle in der Liste platzieren und vermeiden, dass weitere allgemeine Verstöße für dieselbe Speicherressource auftreten. 
+---
+= Ändern der Priorität einer Performance Policy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Standardmäßig bewertet Insight die Richtlinien eines Objekts sequenziell. Sie können die Reihenfolge konfigurieren, in der Insight die Performance-Richtlinien evaluiert. Wenn Sie beispielsweise eine Richtlinie konfiguriert haben, die die Verarbeitung bei einem Verstoß für Gold-Tier-Speicher beendet, können Sie diese Richtlinie an erster Stelle in der Liste platzieren und vermeiden, dass weitere allgemeine Verstöße für dieselbe Speicherressource auftreten.
+
+
+
+== Schritte
+
+. Öffnen Sie Insight in Ihrem Browser.
+. Wählen Sie im Menü *Verwalten* die Option *Leistungsrichtlinien* aus.
++
+Die Seite Leistungsrichtlinien wird angezeigt.
+
+. Bewegen Sie den Mauszeiger über einen Richtliniennamen in der Liste der Performance-Richtlinien eines Objekttyps.
++
+Die Rangfolge-Pfeile erscheinen rechts von der Richtlinie.
+
+. Um eine Richtlinie in der Liste nach oben zu verschieben, klicken Sie auf den Aufwärtspfeil. Um eine Richtlinie in der Liste nach unten zu verschieben, klicken Sie auf den Abwärtspfeil.
++
+Standardmäßig werden neue Richtlinien nacheinander zur Liste der Richtlinien eines Objekts hinzugefügt.
+
+

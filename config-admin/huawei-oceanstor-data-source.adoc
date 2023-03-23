@@ -1,0 +1,167 @@
+---
+permalink: config-admin/huawei-oceanstor-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight verwendet die Datenquelle Huawei OceanStor \(REST/HTTPS\), um den Bestand für Huawei OceanStor-Speicher zu ermitteln.' 
+---
+= Datenquelle von Huawei OceanStor
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight verwendet die Datenquelle Huawei OceanStor (REST/HTTPS), um Bestände für Huawei OceanStor-Speicher zu ermitteln.
+
+
+
+== Terminologie
+
+OnCommand Insight erwirbt die folgenden Bestands- und Leistungsinformationen vom Huawei OceanStor. Für jeden von OnCommand Insight erworbenen Asset-Typ wird die für dieses Asset am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+|===
+
+
+| Anbieter-/Modelllaufzeit | Laufzeit der OnCommand Insight 
+
+
+ a| 
+Storage-Pool
+ a| 
+Storage-Pool
+
+
+
+ a| 
+File-System
+ a| 
+Internes Volumen
+
+
+
+ a| 
+Controller
+ a| 
+Storage-Node
+
+
+
+ a| 
+FC-Port (zugeordnet)
+ a| 
+Volume-Zuordnung
+
+
+
+ a| 
+Host FC Initiator (zugeordnet)
+ a| 
+Volume-Maske
+
+
+
+ a| 
+NFS/CIFS-Freigabe
+ a| 
+Share
+
+
+
+ a| 
+Share
+ a| 
+ISCSI-Ziel-Node
+
+
+
+ a| 
+ISCSI-Link-Initiator
+ a| 
+ISCSI-Initiator-Node
+
+
+
+ a| 
+Festplatte
+ a| 
+Festplatte
+
+
+
+ a| 
+LUN
+ a| 
+Datenmenge
+
+|===
+
+
+== Anforderungen
+
+Die folgenden Anforderungen gelten für die Konfiguration und Verwendung dieses Datensammlers:
+
+* Geräte-IP
+* Anmeldeinformationen für den Zugriff auf OceanStor Geräte-Manager
+* Port 8088 muss verfügbar sein
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+OceanStor Host-IP-Adresse
+ a| 
+IP-Adresse oder vollqualifizierter Domain-Name des OceanStor Device Managers
+
+
+
+ a| 
+Benutzername
+ a| 
+Name, der zur Anmeldung beim OceanStor Device Manager verwendet wird
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort zur Anmeldung beim OceanStor Device Manager
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+TCP-Port
+ a| 
+TCP-Port zur Verbindung mit OceanStor Device Manager (Standard 8088 )
+
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 60 Minuten)
+
+
+
+ a| 
+Verbindungs-Timeout (s)
+ a| 
+Verbindungs-Timeout (Standard: 60 Sekunden)
+
+|===

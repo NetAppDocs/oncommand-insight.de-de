@@ -1,0 +1,153 @@
+---
+permalink: config-admin/brocade-sphereon-intrepid-switch-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight verwendet die Brocade Sphereon/Intrepid Switch \(SNMP\) Datenquelle zur Bestandsaufnahme von Brocade Sphereon oder Intrepid Switches.' 
+---
+= Datenquelle von Brocade Sphereon/Intrepid Switch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight verwendet die Brocade Sphereon/Intrepid Switch (SNMP) Datenquelle zur Bestandsaufnahme von Brocade Sphereon oder Intrepid Switches.
+
+
+
+== Anforderungen
+
+[NOTE]
+====
+Dieser Datensammler ist ab OnCommand Insight 7.3.11 nicht verfügbar.
+
+====
+* Für alle Switches in der Fabric muss eine IP-Konnektivität vorhanden sein. Wenn Sie das Kontrollkästchen Alle Switches in der Fabric ermitteln aktivieren, identifiziert OCI alle Switches in der Fabric. Zur Erkennung ist jedoch eine IP-Verbindung zu diesen zusätzlichen Switches erforderlich.
+* Schreibgeschützte Community-Zeichenfolge bei Verwendung von SNMP V1 oder SNMP V2
+* HTTP-Zugriff auf den Switch, um Zoning-Informationen zu erhalten.
+* Greifen Sie auf die Validierung zu, indem Sie den ausführen `snmpwalk` Dienstprogramm zum Schalter (siehe `<install_path\>\bin\)`.
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Sphereon Switch
+ a| 
+IP-Adresse oder vollqualifizierter Domain-Name des Switches
+
+
+
+ a| 
+SNMP-Version
+ a| 
+SNMP-Version
+
+
+
+ a| 
+SNMP-Community
+ a| 
+SNMP read-only Community String verwendet, um auf den Switch zugreifen
+
+
+
+ a| 
+Benutzername
+ a| 
+SMI-S-Benutzername für den Switch (nur SNMP v3)
+
+
+
+ a| 
+Passwort
+ a| 
+SMI-S-Kennwort für den Switch (nur SNMP v3)
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| *Feld* | *Beschreibung* 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 15 Minuten)
+
+
+
+ a| 
+SNMP-Auth-Protokoll
+ a| 
+SNMP-Authentifizierungsprotokoll (nur SNMPv3)
+
+
+
+ a| 
+SNMP-Datenschutzprotokoll
+ a| 
+SNMP-Datenschutzprotokoll (nur SNMPv3)
+
+
+
+ a| 
+SNMP-Datenschutzkennwort
+ a| 
+SNMP-Datenschutzkennwort
+
+
+
+ a| 
+SNMP-Anzahl der Wiederholungen
+ a| 
+Anzahl der SNMP-Wiederholungsversuche
+
+
+
+ a| 
+SNMP-Timeout (ms)
+ a| 
+SNMP-Timeout (Standard 5000 ms)
+
+
+
+ a| 
+Fabric-Name
+ a| 
+Fabric-Name, der von der Datenquelle gemeldet werden soll. Lassen Sie das Feld leer, um den Fabric-Namen als WWN zu melden.
+
+
+
+ a| 
+Trapping Aktivieren
+ a| 
+Wählen Sie diese Option aus, um die Erfassung beim Empfang eines SNMP-Trap vom Gerät zu aktivieren. Wenn Sie Trapping aktivieren auswählen, müssen Sie auch SNMP aktivieren.
+
+
+
+ a| 
+Mindestzeit zwischen Ttraps (Sekunden)
+ a| 
+Mindestzeit zwischen durch Traps ausgelösten Erfassungsversuchen (Standard: 10 Sekunden)
+
+
+
+ a| 
+Leistungsintervall (Sek.)
+ a| 
+Intervall zwischen Performance-Abstimmungen (standardmäßig 300 Sekunden)
+
+|===

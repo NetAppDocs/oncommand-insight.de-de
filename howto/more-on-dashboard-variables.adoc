@@ -1,0 +1,76 @@
+---
+permalink: howto/more-on-dashboard-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: Dashboard-Variablen enthalten verschiedene Typen, können in verschiedenen Feldern verwendet werden und müssen Regeln für die Benennung befolgen. Diese Konzepte werden hier erläutert. 
+---
+= Mehr zu Dashboard-Variablen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dashboard-Variablen enthalten verschiedene Typen, können in verschiedenen Feldern verwendet werden und müssen Regeln für die Benennung befolgen. Diese Konzepte werden hier erläutert.
+
+
+
+== Variabentypen
+
+Eine Variable kann einen der folgenden Typen sein:
+
+*Text*: Alphanumerische Zeichenfolge. Dies ist der Standard-Variablentyp.
+
+*Numerisch*: Eine Zahl oder ein Zahlenbereich.
+
+*Boolean*: Verwenden Sie Felder mit Werten von True/False, Yes/No, 0/1, etc Für die boolesche Variable sind die Auswahlmöglichkeiten _Yes_, _No_, _None_, _Any_.
+
+*Datum*: Ein Datum oder ein Datumsbereich.
+
+
+
+== „`Generic`“-Variablen
+
+Sie können eine generische oder universelle Variable festlegen, indem Sie auf die Schaltfläche *Variable* klicken und einen der oben aufgeführten Typen auswählen. Diese Typen werden immer oben in der Dropdown-Liste angezeigt. Die Variable erhält einen Standardnamen, z. B. „` var1`“, und ist nicht an eine bestimmte Anmerkung oder ein bestimmtes Attribut gebunden.
+
+Durch das Konfigurieren einer generischen Variable können Sie diese Variable in Widgets verwenden, um nach _any_ -Feldern dieses Typs zu filtern. Wenn Sie beispielsweise ein Tabellen-Widget haben, das _Name_, _Alias_ und _Vendor_ (alle Textattribute) anzeigt, und „`€2var1`“ eine Textvariable ist, können Sie für jedes dieser Felder im Widget Filter festlegen, um die Variable €2var1 zu verwenden. Sie können andere Widgets so einstellen, dass sie für diese oder beliebige Textfelder var1 verwenden.
+
+Wenn Sie auf Ihrer Dashboard-Seite einen Wert von var1 einstellen (z. B. „`NetApp`“), wird _all_ der Felder in _all_ Widgets filtern, die so eingestellt sind, dass sie diese Variable verwenden. Auf diese Weise können Sie mehrere Widgets gleichzeitig aktualisieren, um Dashboard-Daten hervorzuheben, die Sie nach Bedarf auswählen.
+
+Da generische Variablen für jedes Feld dieses Typs verwendet werden können, können Sie den Namen einer generischen Variable ändern, ohne deren Funktionalität zu ändern.
+
+[NOTE]
+====
+Alle Variablen werden als "generische" Variablen behandelt, auch solche, die Sie für ein bestimmtes Attribut erstellen, da alle konfigurierten Variablen eines Typs angezeigt werden, wenn Sie einen Filter für alle Attribute oder Anmerkungen dieses Typs festlegen. Es empfiehlt sich jedoch, eine generische Variable zu erstellen, wenn Sie sie zum Filtern nach einem Wert in mehreren Feldern verwenden, wie im Beispiel „_Name/Alias/Vendor_“ oben beschrieben.
+
+====
+
+
+== Variablenbenennung
+
+Variablennamen:
+
+* Muss immer mit einem „``“ vorangestellt werden. Diese wird automatisch hinzugefügt, wenn Sie eine Variable konfigurieren.
+* Sonderzeichen dürfen nicht enthalten sein. Es sind nur die Buchstaben a bis z und die Ziffern 0-9 zulässig.
+* Darf nicht länger als 20 Zeichen sein, einschließlich des „``“-Symbols.
+* Nicht Groß-/Kleinschreibung beachten: Cityname und Cityname im Wert von US-Dollar sind die gleiche Variable.
+* Darf nicht mit einem vorhandenen Variablennamen identisch sein.
+* Kann nicht nur das „``“-Symbol sein.
+
+
+
+
+== Widgets, die Variablen verwenden
+
+Variablen können mit den folgenden Widgets verwendet werden:
+
+* Flächendiagramm
+* Balkendiagramm
+* Box Plot Chart
+* Liniendiagramm
+* Streudiagramm
+* Widget „Einzelner Wert“
+* Spline-Diagramm
+* Gestapeltes Flächendiagramm
+* Tabellenwidget
+

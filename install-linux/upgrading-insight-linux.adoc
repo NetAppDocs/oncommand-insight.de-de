@@ -1,0 +1,21 @@
+---
+permalink: install-linux/upgrading-insight-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Wenn eine neue Version von OnCommand Insight verfügbar ist, sollten Sie ein Upgrade durchführen, um von neuen Funktionen und Fehlerbehebungen zu profitieren. Sie müssen den Insight-Server und das Data Warehouse \ (DWH\) separat aktualisieren.' 
+---
+= Aktualisieren Von Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn eine neue Version von OnCommand Insight verfügbar ist, sollten Sie ein Upgrade durchführen, um von neuen Funktionen und Fehlerbehebungen zu profitieren. Sie müssen den Insight-Server und das Data Warehouse (DWH) separat aktualisieren.
+
+
+IMPORTANT: Sie sollten keine automatischen oder manuellen Backups in den Insight-Installationsverzeichnissen speichern, da der gesamte Installationsordner während des Upgrade-Vorgangs überschrieben wird. Wenn Sie Sicherungsdateien in einem dieser Verzeichnisse gespeichert haben, müssen Sie Ihre Backups an einen anderen Speicherort verschieben, bevor Sie einen Upgrade- oder Deinstallationsvorgang durchführen.
+
+Neuere Versionen von Insight verfügen über mehr Speicherplatz, Arbeitsspeicher und CPU-Anforderungen. Lesen Sie vor dem Upgrade auf die neueste Version von Insight die Installationsanforderungen. Es wird dringend empfohlen, sich vor der Installation oder dem Upgrade von Insight an Ihren Sales Engineer zu wenden, um eine detaillierte Anleitung zur Größenbestimmung zu erhalten.
+
+Es empfiehlt sich, vor dem Upgrade der Insight-Software ein Sicherheits-Backup und ein Datenbank-Backup durchzuführen.

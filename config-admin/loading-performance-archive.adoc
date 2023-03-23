@@ -1,0 +1,34 @@
+---
+permalink: config-admin/loading-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: Führen Sie zum Laden des Performance-Datenarchivs die folgenden Schritte aus. 
+---
+= Performance-Archiv wird geladen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Führen Sie zum Laden des Performance-Datenarchivs die folgenden Schritte aus.
+
+
+
+== Bevor Sie beginnen
+
+Vor dem Laden des Performance-Datenarchivs müssen Sie eine gültige wöchentliche oder manuelle Sicherung wiederherstellen.
+
+
+
+== Schritte
+
+. Klicken Sie in der Symbolleiste auf *Admin* > *Fehlerbehebung*.
+. Klicken Sie im Abschnitt Wiederherstellen unter *Load Performance Archive* auf *Load*.
++
+[NOTE]
+====
+Das Laden des Archivs erfolgt im Hintergrund. Das vollständige Archiv kann sehr lange geladen werden, da die archivierten Performance-Daten der einzelnen Tage in Insight eingetragen sind. Der Status des Archivladens wird im Archiv-Bereich dieser Seite angezeigt.
+
+====
+

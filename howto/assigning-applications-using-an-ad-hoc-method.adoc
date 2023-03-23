@@ -1,0 +1,61 @@
+---
+permalink: howto/assigning-applications-using-an-ad-hoc-method.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie weisen einem Asset eine Anwendung zu, sodass Sie die Ressourcen des Assets identifizieren können, das von der Anwendung verwendet wird. Wenn einem Asset Kosten zugewiesen sind, können Sie die Kosten identifizieren, die der Applikation entstehen. Wenn die Ressource nach Größe gemessen wird, können Sie bestimmen, ob die Ressource wieder aufgefüllt werden muss. 
+---
+= Zuweisen von Anwendungen zu Assets mithilfe einer Ad-hoc-Methode
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie weisen einem Asset eine Anwendung zu, sodass Sie die Ressourcen des Assets identifizieren können, das von der Anwendung verwendet wird. Wenn einem Asset Kosten zugewiesen sind, können Sie die Kosten identifizieren, die der Applikation entstehen. Wenn die Ressource nach Größe gemessen wird, können Sie bestimmen, ob die Ressource wieder aufgefüllt werden muss.
+
+
+
+== Über diese Aufgabe
+
+Verwenden Sie die folgende Methode, um Anwendungen Assets zuzuweisen.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Suchen Sie das Asset (Host, virtuelle Maschine, Volume oder internes Volume), auf das Sie die Anwendung anwenden möchten, indem Sie einen der folgenden Schritte ausführen:
++
+|===
+
+
+| Option | Beschreibung 
+
+
+ a| 
+Navigieren Sie zur Liste der Assets
+ a| 
+Klicken Sie auf *Dashboard* > *Assets Dashboard* und wählen Sie das Asset aus.
+
+
+
+ a| 
+Suchen Sie nach dem Asset
+ a| 
+Klicken Sie Auf image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] Geben Sie in der Symbolleiste, um das Feld *Assets suchen* anzuzeigen, den Namen des Assets ein, und wählen Sie dann das Asset aus der Liste aus.
+
+|===
+. Positionieren Sie im Bereich *Benutzerdaten* der Asset-Seite den Cursor über den Namen der Applikation, die dem Asset aktuell zugewiesen ist (wenn keine Anwendung zugewiesen ist, wird *Keine* angezeigt), und klicken Sie dann auf image:../media/pencil-icon-landing-page-be.gif[""] (Anwendung bearbeiten).
++
+Die Liste der verfügbaren Anwendungen für das ausgewählte Asset wird angezeigt. Den Anwendungen, die derzeit mit dem Asset verknüpft sind, wird ein Häkchen vorangestellt.
+
+. Sie können in das Suchfeld eingeben, um die Anwendungsnamen zu filtern, oder Sie können in der Liste nach unten blättern.
+. Wählen Sie die Anwendungen aus, die Sie dem Asset zuordnen möchten.
++
+Sie können dem Host, der virtuellen Maschine und dem internen Volume mehrere Anwendungen zuweisen. Sie können einem Volume jedoch nur eine Anwendung zuweisen.
+
+. Klicken Sie Auf image:../media/check-box-ok.gif[""] So weisen Sie der Anlage die ausgewählte Applikation oder die ausgewählten Anwendungen zu.
++
+Die Applikationsnamen werden im Abschnitt Benutzerdaten angezeigt. Wenn die Applikation mit einer Geschäftseinheit verknüpft ist, wird auch der Name der Geschäftseinheit in diesem Abschnitt angezeigt.
+
+

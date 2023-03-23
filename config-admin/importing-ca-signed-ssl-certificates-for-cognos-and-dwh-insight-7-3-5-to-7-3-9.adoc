@@ -1,0 +1,113 @@
+---
+permalink: config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-5-to-7-3-9.html 
+sidebar: sidebar 
+keywords: CAC,Cognos 11,SSL certificates 
+summary: Sie können SSL-Zertifikate hinzufügen, um eine erweiterte Authentifizierung und Verschlüsselung für Ihre Data Warehouse- und Cognos-Umgebung zu ermöglichen. 
+---
+= Importieren von CA-signierten SSL-Zertifikaten für Cognos und DWH (Insight 7.3.5 auf 7.3.9)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können SSL-Zertifikate hinzufügen, um eine erweiterte Authentifizierung und Verschlüsselung für Ihre Data Warehouse- und Cognos-Umgebung zu ermöglichen.
+
+
+
+== Bevor Sie beginnen
+
+Dieses Verfahren gilt für Systeme mit OnCommnand Insight 7.3.5 bis 7.3.9.
+
+[NOTE]
+====
+Die aktuellsten CAC- und Zertifikatanweisungen finden Sie in den folgenden Knowledgebase-Artikeln (Support-Anmeldung erforderlich):
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["So konfigurieren Sie die Common Access Card (CAC)-Authentifizierung für OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["Konfigurieren der Authentifizierung für allgemeine Zugriffskarten (Common Access Card, CAC) für OnCommand Insight Data Warehouse"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["Erstellen und Importieren eines signierten Zertifikats einer Zertifizierungsstelle (CA) in OnComand Insight und OnCommand Insight Data Warehouse 7.3.x"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["So erstellen Sie ein selbstsigniertes Zertifikat in OnCommand Insight 7.3.X, das auf einem Windows-Host installiert ist"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Importieren eines von Cognos signierten Zertifikats einer Zertifizierungsstelle (CA) in OnCommand DataWarehouse 7.3.3 und höher"]
+
+
+====
+
+
+== Über diese Aufgabe
+
+Sie müssen über Administratorrechte verfügen, um dieses Verfahren durchführen zu können.
+
+
+
+== Schritte
+
+. Erstellen Sie ein Backup von `..\SANScreen\cognos\analytics\configuration\cogstartup.xml`.
+. Erstellen Sie unter eine Sicherungskopie der Ordner „`certs`“ und „`csk`“ `..\ SANScreen\cognos\analytics\configuration`.
+. Erstellen Sie eine Zertifikatsverschlüsselungsanforderung von Cognos. Führen Sie in einem Admin-CMD-Fenster Folgendes aus:
++
+.. cd `“\Program Files\sanscreen\cognos\analytics\bin”`
+.. `ThirdPartyCertificateTool.bat -java:local -c -e -p NoPassWordSet -a RSA -d “CN=FQDN,O=orgname,C=US” -r c:\temp\encryptRequest.csr`
+
+
+. Öffnen Sie das `c:\temp\encryptRequest.csr` Datei und kopieren Sie den generierten Inhalt.
+. Senden Sie die cryptRequest.csr an die Zertifizierungsstelle (CA), um ein SSL-Zertifikat zu erhalten.
++
+Fügen Sie zusätzliche Attribute wie „`SAN:dns=FQDN“ hinzu (z. B. hostname.netapp.com)`", um den SubjectAltName hinzuzufügen. Google Chrome Version 58 und später beschwert sich, wenn die SubjectAltName fehlt aus dem Zertifikat.
+
+. Laden Sie die Kettenzertifikate unter Einbeziehung des Stammzertifikats im PKCS7-Format herunter
++
+Dadurch wird die Datei fqdn.p7b heruntergeladen
+
+. Holen Sie sich ein Zertifikat im .p7b-Format von Ihrer CA. Verwenden Sie einen Namen, der ihn als Zertifikat für den Cognos-Webserver kennzeichnet.
+. ThirdPartyCertificateTool.bat kann die gesamte Kette nicht importieren, so dass mehrere Schritte erforderlich sind, um alle Zertifikate zu exportieren. Teilen Sie die Kette auf, indem Sie sie einzeln wie folgt exportieren:
++
+.. Öffnen Sie das .p7b-Zertifikat unter „`Crypto Shell Extensions`“.
+.. Navigieren Sie im linken Fensterbereich zu „`Zertifikate`“.
+.. Klicken Sie mit der rechten Maustaste auf Stammzertifizierungsstelle > Alle Aufgaben > Exportieren.
+.. Wählen Sie Base64-Ausgabe.
+.. Geben Sie einen Dateinamen ein, der ihn als Stammzertifikat identifiziert.
+.. Wiederholen Sie die Schritte 8a bis 8c, um alle Zertifikate separat in .cer-Dateien zu exportieren.
+.. Benennen Sie die Dateien intermediateX.cer und cognos.cer.
+
+
+. Ignorieren Sie diesen Schritt, wenn Sie nur ein CA-Zertifikat haben, andernfalls fügen Sie root.cer und intermediateX.cer in eine Datei zusammen.
++
+.. Intermediate.cer mit Notepad öffnen und Inhalt kopieren.
+.. Öffnen Sie root.cer mit Notepad und speichern Sie den Inhalt aus 9a.
+.. Speichern Sie die Datei unter CA.cer.
+
+
+. Importieren Sie die Zertifikate in den Cognos-Keystore mithilfe der Admin-CMD-Eingabeaufforderung:
++
+.. cd „`Program Files\sanscreen\cognos\Analytics\bin`“
+.. ThirdPartyCertificateTool.bat -java:local -i -T -r c:\temp\CA.cer
++
+Dadurch wird CA.cer als Stammzertifizierungsstelle festgelegt.
+
+.. ThirdPartyCertificateTool.bat -java:local -i -e -r c:\temp\cognos.cer -t c:\temp\CA.cer
++
+Dadurch wird Cognos.cer als von CA.cer signiertes Verschlüsselungszertifikat festgelegt.
+
+
+
+. Öffnen Sie die IBM Cognos-Konfiguration.
++
+.. Wählen Sie Lokale Konfiguration--> Sicherheit --> Kryptographie --> Cognos
+.. „`Drittanbieter-CA verwenden?`“ ändern Nach wahr.
+.. Speichern Sie die Konfiguration.
+.. Cognos Neu Starten
+
+
+. Exportieren Sie das neueste Cognos-Zertifikat in cognos.crt mithilfe der Admin CMD-Eingabeaufforderung:
++
+.. „D:\Programme\SANscreen\java\bin\keytool.exe“ -exportcert -file „`c:\temp\cognos.crt`“ -keystore „D:\Programme\SANscreen\cognos\Analytics\Configuration\certs\CAMKeystore“ -storetype PKCS12 -storepass NoPassWordSet -alias-Verschlüsselung
+
+
+. Importieren Sie „`c:\temp\cognos.crt`“ in dwh trustore, um mithilfe des Admin CMD-Eingabefensters die SSL-Kommunikation zwischen Cognos und DWH herzustellen.
++
+.. „D:\Programme\SANscreen\java\bin\keytool.exe“ -importcert -file „`c:\temp\cognos.crt`“ -keystore „D:\Programme\SANscreen\wildfly\Standalone\Configuration\Server.trustore“ -storepass changeit -alias cognoscert
+
+
+. Starten Sie den SANscreen-Dienst neu.
+. Führen Sie eine Sicherungskopie des DWH durch, um sicherzustellen, dass DWH mit Cognos kommuniziert.
+

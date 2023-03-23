@@ -1,0 +1,50 @@
+---
+permalink: install-linux/installing-the-oncommand-insight-server-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: Der OnCommand Insight-Server wird über die Befehlszeile installiert. 
+---
+= Installieren des OnCommand Insight-Servers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der OnCommand Insight-Server wird über die Befehlszeile installiert.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen alle Installationsvoraussetzungen erfüllt haben.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Insight-Server mit einem Konto mit sudo-Berechtigungen an.
+. Navigieren Sie zu dem Verzeichnis auf dem Server, in dem sich die Installationsdateien befinden, und geben Sie den folgenden Befehl ein:
++
+`unzip oci-<version>-linux-x86_64.zip`
+
++
+Überprüfen Sie die Versionsnummer der Installationsdatei. Die Versionsnummer kann sich von der im Befehl angezeigten Versionsnummer unterscheiden.
+
+. Sie können Syntax, Befehlsargumente und Parameterverwendung für anzeigen `oci-install.sh` :
++
+`sudo ./oci-<version>-linux-x86_64/oci-install.sh --help`
+
+. Führen Sie das Installationsskript aus:
++
+`sudo ./oci-<version>-linux-x86_64/oci-install.sh`
+
+. Lesen Sie die Lizenzvereinbarung, akzeptieren Sie sie und befolgen Sie die Anweisungen.
+. Wenn Sie das Insight Consumption Licensing-Modell verwenden, müssen Sie das Senden von Nutzungsinformationen an NetApp aktivieren. Eingabe `Y` An dieser Eingabeaufforderung.
+
+
+
+
+== Ergebnisse
+
+Nachdem Sie alle Eingabeaufforderungen beantwortet haben, beginnt die Installation und sollte je nach installierter Anwendung ca. 10 Minuten dauern.

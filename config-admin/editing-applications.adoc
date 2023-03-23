@@ -1,0 +1,46 @@
+---
+permalink: config-admin/editing-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: Möglicherweise möchten Sie die Priorität einer Applikation, die mit einer Applikation verknüpfte Geschäftseinheit oder den Status der Volume-Freigabe ändern. 
+---
+= Bearbeiten von Anwendungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Priorität einer Anwendung, die mit einer Anwendung verknüpfte Geschäftseinheit oder den Status der Volume-Freigabe ändern.
+
+
+
+== Schritte
+
+. Melden Sie sich bei der OnCommand Insight Web UI an.
+. Klicken Sie auf *Verwalten* und wählen Sie *Anwendungen*.
+. Bewegen Sie den Cursor über die Anwendung, die Sie bearbeiten möchten, und klicken Sie auf image:../media/edit-recipient-icon.gif[""].
++
+Das Dialogfeld Anwendung bearbeiten wird angezeigt.
+
+. Führen Sie einen der folgenden Schritte aus:
++
+** Klicken Sie auf *Priority* und wählen Sie eine andere Priorität.
++
+[NOTE]
+====
+Sie können den Namen der Anwendung nicht ändern.
+
+====
+** Klicken Sie auf *Business Entity* und wählen Sie eine andere Business Entity aus, der die Applikation zugeordnet werden soll, oder wählen Sie *None* aus, um die Verknüpfung der Applikation mit der Business Entity zu entfernen.
+** Klicken Sie auf, um die Option zu löschen oder wählen Sie *Volume-Freigabe validieren*.
++
+[NOTE]
+====
+Diese Option ist nur verfügbar, wenn Sie über die Lizenz „Assure“ verfügen.
+
+====
+
+
+. Klicken Sie Auf *Speichern*.
+

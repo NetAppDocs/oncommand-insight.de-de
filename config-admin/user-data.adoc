@@ -1,0 +1,18 @@
+---
+permalink: config-admin/user-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Im Abschnitt Benutzerdaten einer Anlagenseite werden benutzerdefinierte Daten wie Anwendungen, Geschäftseinheiten und Anmerkungen angezeigt und können geändert werden. 
+---
+= Benutzerdaten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Abschnitt Benutzerdaten einer Anlagenseite werden benutzerdefinierte Daten wie Anwendungen, Geschäftseinheiten und Anmerkungen angezeigt und können geändert werden.
+
+Das folgende Beispiel zeigt, was im Abschnitt „Benutzerdaten“ einer Asset-Seite einer virtuellen Maschine angezeigt werden kann, wenn der Ressource eine Applikation, eine Geschäftseinheit und eine Annotation zugewiesen werden:
+
+image::../media/user-data-section.bmp[Abschnitt „Benutzerdaten“]

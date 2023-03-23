@@ -1,0 +1,84 @@
+---
+permalink: config-admin/red-hat-rhev-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Die Datenquelle von Red hat Enterprise Virtualization \(REST\) sammelt Informationen über RHEV-Instanzen über HTTPS.' 
+---
+= Red hat (RHEV) Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Red hat Enterprise Virtualization (REST)-Datenquelle sammelt Informationen über RHEV-Instanzen über HTTPS.
+
+
+
+== Anforderungen
+
+* IP-Adresse des RHEV-Servers über Port 443 über REST-API
+* Nur-Lese-Benutzername und Kennwort
+* RHEV Version 3.0+
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+RHEV-Server-IP-Adresse
+ a| 
+IP-Adresse oder vollständig qualifizierter Domänenname des RHEV-Servers
+
+
+
+ a| 
+Benutzername
+ a| 
+Benutzername für den RHEV-Server
+
+
+
+ a| 
+Passwort
+ a| 
+Für den RHEV-Server verwendetes Passwort
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+HTTPS-Kommunikationsschnittstelle
+ a| 
+Port, der für die HTTPS-Kommunikation mit RHEV verwendet wird
+
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 20 Minuten)
+
+
+
+ a| 
+Verbindungs-Timeout (Sek.)
+ a| 
+Verbindungs-Timeout (Standard: 60 Sekunden)
+
+|===

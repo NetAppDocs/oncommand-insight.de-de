@@ -1,0 +1,33 @@
+---
+permalink: config-admin/adding-a-new-data-source-patch-us26313-fr.html 
+sidebar: sidebar 
+keywords:  
+summary: Neue Datenquellen werden als Patch-Dateien freigegeben, die mit dem Patch-Prozess auf das System geladen werden können. Dadurch sind neue Datenquellen zwischen geplanten Versionen von OnCommand Insight verfügbar. 
+---
+= Hinzufügen einer neuen Datenquelle nach Patch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Neue Datenquellen werden als Patch-Dateien freigegeben, die mit dem Patch-Prozess auf das System geladen werden können. Dadurch sind neue Datenquellen zwischen geplanten Versionen von OnCommand Insight verfügbar.
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen die Patch-Datei hochgeladen haben, die Sie installieren möchten.
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin*.
+. Wählen Sie *Patches*.
+. Wählen Sie *Actions* > *Service Pack oder Patch installieren*.
+. Klicken Sie im Dialogfeld *Service Pack oder Patch installieren* auf *Durchsuchen*, um die hochgeladene Patch-Datei zu suchen und auszuwählen.
+. Klicken Sie im Dialogfeld *Patch Summary* auf *Weiter*.
+. Überprüfen Sie die *Read Me*-Informationen, und klicken Sie auf *Next*, um fortzufahren.
+. Klicken Sie im Dialogfeld *Installieren* auf *Fertig stellen*.
+

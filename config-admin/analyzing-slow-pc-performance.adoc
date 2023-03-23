@@ -1,0 +1,45 @@
+---
+permalink: config-admin/analyzing-slow-pc-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie Anrufe von Netzwerkbenutzern erhalten, die sich beschweren, dass ihre Computer langsam laufen, müssen Sie die Hostleistung analysieren und die betroffenen Ressourcen identifizieren. 
+---
+= Analyse der langsamen PC-Leistung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie Anrufe von Netzwerkbenutzern erhalten, die sich beschweren, dass ihre Computer langsam laufen, müssen Sie die Hostleistung analysieren und die betroffenen Ressourcen identifizieren.
+
+
+
+== Bevor Sie beginnen
+
+In diesem Beispiel gab der Anrufer den Hostnamen an.
+
+
+
+== Schritte
+
+. Öffnen Sie Insight in Ihrem Browser.
+. Geben Sie den Hostnamen in das Feld *Assets suchen* ein und klicken Sie in den Suchergebnissen auf den Hostnamen.
++
+Die _Asset-Seite_ für die Ressource wird geöffnet.
+
+. Prüfen Sie auf der Systemseite für den Host die Leistungsdiagramme in der Mitte der Seite. Neben der üblicherweise vorab ausgewählten Latenz und IOPS können Sie verschiedene Datentypen anzeigen. Aktivieren Sie die Kontrollkästchen für andere Datentypen, wie Durchsatz, Speicher, CPU oder IP-Durchsatz, je nach Gerätetyp.
+. Um eine Beschreibung eines Punktes auf einem Diagramm anzuzeigen, positionieren Sie den Mauszeiger über dem Punkt.
+. Sie können auch den Zeitraum ändern, indem Sie die Auswahl oben auf der Seite auf 3 Stunden bis zu 7 Tagen oder Alle verfügbaren Daten festlegen.
+. Untersuchen Sie die Liste der *Top korrelierten Ressourcen*, um zu sehen, ob es andere Ressourcen mit dem gleichen Aktivitätsmuster wie die Basisressource gibt.
++
+Die erste Ressource in der Liste ist immer die Basisressource.
+
++
+.. Klicken Sie auf einen verknüpften Prozentsatz neben einer korrelierten Ressource, um zu sehen, ob das korrelierte Aktivitätsmuster für IOPS oder CPU für die Basisressource und eine andere Ressource ist.
+.. Aktivieren Sie das Kontrollkästchen für eine korrelierte Ressource, um ihre Daten zu den Leistungsdiagrammen hinzuzufügen.
+.. Klicken Sie auf den verknüpften Namen der korrelierten Ressource, um die Bestandsseite anzuzeigen.
+
+
+. Suchen Sie für eine VM, wie in diesem Beispiel, den Speicherpool unter *Top correlated Resources* und klicken Sie auf den Namen des Speicherpools.
+

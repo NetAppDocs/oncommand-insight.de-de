@@ -1,0 +1,116 @@
+---
+permalink: howto/finding-the-right-metric.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight erfasst Zähler und Metriken anhand von Namen, die sich manchmal von Datenquelle zu Datenquelle unterscheiden. 
+---
+= Best Practice: Die richtige Metrik finden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight erfasst Zähler und Metriken anhand von Namen, die sich manchmal von Datenquelle zu Datenquelle unterscheiden.
+
+Bei der Suche nach der richtigen Metrik oder dem Zähler für Ihr Dashboard-Widget sollten Sie bedenken, dass die Metrik, die Sie benötigen, unter einem anderen Namen als der Metrik stehen kann, an die Sie denken. Obwohl Dropdown-Listen in OnCommand Insight normalerweise alphabetisch sind, wird ein Begriff manchmal nicht in der Liste angezeigt, wo er Ihrer Meinung nach erscheinen sollte. Beispielsweise werden Begriffe wie „Rohkapazität“ und „genutzte Kapazität“ in den meisten Listen nicht zusammen angezeigt.
+
+Best Practice: Verwenden Sie die Suchfunktion in Feldern wie *Filter by* oder Orten wie der Spaltenauswahl image:../media/column-picker-button.gif[""] Um zu finden, wonach Sie suchen. Wenn Sie beispielsweise nach „Cap“ suchen, werden alle Metriken mit „Capacity“ in ihren Namen angezeigt, unabhängig davon, wo sie auftreten. Sie können dann ganz einfach die gewünschten Metriken aus dieser kurzen Liste auswählen.
+
+Hier sind ein paar alternative Formulierungen, die Sie bei der Suche nach Metriken versuchen können:
+
+|===
+
+
+| Wann Sie suchen möchten: | Versuchen Sie auch die Suche nach: 
+
+
+ a| 
+CPU
+ a| 
+Prozessor
+
+
+
+ a| 
+Kapazität
+ a| 
+Genutzte KapazitätRohkapazität
+
+Bereitgestellte Kapazität
+
+Speicher-Pools Kapazität
+
+<other asset type>-Kapazität
+
+Geschriebene Kapazität
+
+
+
+ a| 
+Festplattengeschwindigkeit
+ a| 
+Niedrigste FestplattenschnelleLeast performing Disk type
+
+
+
+ a| 
+Host
+ a| 
+HypervisorHosten
+
+
+
+ a| 
+Hypervisor
+ a| 
+Hostis-Hypervisor
+
+
+
+ a| 
+Mikrocode
+ a| 
+Firmware
+
+
+
+ a| 
+Name
+ a| 
+AliasHypervisor-Name
+
+Speichername
+
+Der Name der <other asset type>
+
+Einfacher Name
+
+Ressourcenname
+
+Fabric-Alias
+
+
+
+ a| 
+Lesen/Schreiben
+ a| 
+Partielles R/WAusstehende Schreibvorgänge
+
+IOPS – Schreiben
+
+Geschriebene Kapazität
+
+Latenz – Lesen
+
+Cache-Auslastung – Lesen
+
+
+
+ a| 
+Virtual Machine
+ a| 
+VMIS virtuell
+
+|===
+Dies ist keine umfassende Liste. Dies sind nur Beispiele für mögliche Suchbegriffe.

@@ -1,0 +1,31 @@
+---
+permalink: config-admin/e-series-landing-page-terminology-storage.html 
+sidebar: sidebar 
+keywords:  
+summary: Begriffe, die auf Objekte oder Referenzen angewendet werden, die auf Landing-Pages für Storage-Assets der NetApp E-Series möglicherweise zu finden sind. 
+---
+= E-Series Storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Begriffe, die auf Objekte oder Referenzen angewendet werden, die auf Landing-Pages für Storage-Assets der NetApp E-Series möglicherweise zu finden sind.
+
+
+
+== E-Series Storage-Terminologie
+
+Die folgenden Begriffe gelten für Objekte oder Referenzen, die Sie auf den Landing Pages für Storage-Assets der NetApp E-Series finden können. Viele dieser Bedingungen gelten auch für andere Datensammler.
+
+* Model – Modellname des Geräts.
+* Vendor – derselbe Anbietername, den Sie sehen würden, wenn Sie eine neue Datenquelle konfigurieren würden.
+* Seriennummer -- die Seriennummer des Arrays. Bei Storage-Systemen mit Cluster-Architektur wie NetApp Clustered Data ONTAP ist diese Seriennummer möglicherweise weniger nützlich als die einzelnen Seriennummern „`Storage-Nodes`“.
+* IP – im Allgemeinen sind die IP(s) oder Hostnamen (s) wie in der Datenquelle konfiguriert.
+* Microcode-Version -- Firmware.
+* RAW Capacity -- Basis 2 Summe aller physischen Festplatten im System, unabhängig von ihrer Rolle.
+* Latenz – eine Darstellung der mit dem Host konfrontiert Workloads, sowohl bei Lese- als auch bei Schreibvorgängen. Insight berechnet einen IOPS-gewichteten Durchschnitt aus den Volumes im Storage.
+* Durchsatz – der gesamte für den Host bestimmte Durchsatz des Arrays. Insight summiert den Durchsatz der Volumes`, um diesen Wert abzuleiten.
+* Verwaltung – dieser kann einen Hyperlink für die Managementoberfläche des Geräts enthalten. Programmgesteuert von der Insight-Datenquelle als Teil der Bestandsberichterstattung erstellt.
+

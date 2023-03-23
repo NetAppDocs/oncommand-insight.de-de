@@ -1,0 +1,33 @@
+---
+permalink: config-admin/updating-expired-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn eine oder mehrere Ihrer Insight-Lizenzen abgelaufen sind, können Sie die Lizenzen schnell mit demselben Verfahren aktualisieren, wie Sie die Lizenzen ursprünglich installiert haben. 
+---
+= Abgelaufene Lizenzen werden aktualisiert
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn eine oder mehrere Ihrer Insight-Lizenzen abgelaufen sind, können Sie die Lizenzen schnell mit demselben Verfahren aktualisieren, wie Sie die Lizenzen ursprünglich installiert haben.
+
+
+
+== Schritte
+
+. Öffnen Sie in einem Text-Editor, z. B. Editor, die neue Lizenzdatei, die Sie vom NetApp Support erhalten haben, und kopieren Sie den Text des Lizenzschlüssels in die Zwischenablage in Windows.
+. Öffnen Sie OnCommand Insight in Ihrem Browser.
+. Klicken Sie in der Symbolleiste auf *Admin*.
+. Klicken Sie Auf *Setup*.
+. Klicken Sie auf die Registerkarte *Lizenzen*.
+. Klicken Sie Auf *Lizenz Aktualisieren*.
+. Kopieren Sie den Text des Lizenzschlüssels in das Textfeld *Lizenz*.
+. Wählen Sie den Vorgang *Update (am häufigsten)* aus.
++
+Durch diesen Vorgang werden Ihre neuen Lizenzen allen derzeit aktiven Insight-Lizenzen hinzugefügt.
+
+. Klicken Sie Auf *Speichern*.
+. Wenn Sie das Insight Consumption Licensing-Modell verwenden, müssen Sie das Kontrollkästchen aktivieren, um das Senden von Nutzungsinformationen an NetApp im Abschnitt „Verwendung“ zu aktivieren. Proxy muss ordnungsgemäß konfiguriert und für Ihre Umgebung aktiviert sein.
+

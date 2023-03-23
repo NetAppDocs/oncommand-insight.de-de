@@ -1,0 +1,63 @@
+---
+permalink: reporting/creating-a-report-cognos-11.html 
+sidebar: sidebar 
+keywords:  
+summary: Das Erstellen von Berichten mit Cognos 11 unterscheidet sich von früheren Versionen von Cognos. Verwenden Sie dieses Verfahren, um einen Bericht mithilfe der vordefinierten OnCommand Insight-Berichte zu erstellen. 
+---
+= Erstellen eines Berichts mit Cognos 11
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Erstellen von Berichten mit Cognos 11 unterscheidet sich von früheren Versionen von Cognos. Verwenden Sie dieses Verfahren, um einen Bericht mithilfe der vordefinierten OnCommand Insight-Berichte zu erstellen.
+
+
+
+== Über diese Aufgabe
+
+Mithilfe der folgenden Schritte erstellen Sie einen einfachen Bericht über die physische Kapazität von Speicher und Speicherpools in einer Reihe von Rechenzentren.
+
+
+
+== Schritte
+
+. Klicken Sie in der Symbolleiste auf image:../media/new-report.gif[""]
+. Klicken Sie Auf *Bericht*
+. Klicken Sie Auf *Vorlagen* > *Leer*
+. Klicken Sie auf *Themes* > *Cool Blue* > *OK*
++
+Die Registerkarte „Quelle und Daten“ wird angezeigt
+
+. Klicken Sie Auf *Quelle* > *image:../media/new-report.gif[""]*
+. Klicken Sie im Dialogfeld Datei öffnen auf *Teaminhalt* > *Pakete*
++
+Eine Liste der verfügbaren Pakete wird angezeigt.
+
+. Klicken Sie auf *Storage and Storage Pool Capacity* > *Open*
+. Klicken Sie Auf image:../media/new-report.gif[""]
++
+Die verfügbaren Stile für Ihren Bericht werden angezeigt.
+
+. Klicken Sie Auf *Liste*
++
+Fügen Sie entsprechende Namen für Liste und Abfrage hinzu
+
+. Klicken Sie auf *OK*
+. Erweitern Sie *Physische Kapazität*
+. Erweitern Sie sich auf die unterste Ebene von *Data Center*
+. Ziehen image:../media/data-center.gif[""] Am Gaumen melden.
+. Erweitern Sie * Kapazität (MB)*
+. Ziehen Sie *Capacity (MB)* auf den Meldungs-Gaumen.
+. Ziehen Sie *Used Capacity (MB)* auf den Meldenden Gaumen.
+. Führen Sie den Bericht aus, indem Sie auf klicken image:../media/run-report.gif[""] Und Auswahl eines Ausgabetyps.
+
+
+
+
+== Ergebnisse
+
+Ein Bericht wie der folgende wird erstellt:
+
+image::../media/cognos-11-report.gif[bericht cognos 11]

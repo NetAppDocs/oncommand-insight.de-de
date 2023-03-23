@@ -1,0 +1,119 @@
+---
+permalink: config-admin/netapp-host-and-vm-filesystems-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Mithilfe der Datenquelle von NetApp Host und VM File Systems können Sie Dateisystemdetails und Storage-Ressourcenzuordnungen für alle Microsoft Windows Host- und VM- \(Virtual Machine\)-Dateisysteme und für alle unterstützten Linux-VMs abrufen \(nur virtuell zugeordnete VMs\) Vorhanden im Insight-Server, die mit der konfigurierten Compute Resource Group \(CRG\) beschriftet werden.' 
+---
+= NetApp Host und VM File Systems Datenquelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe der NetApp Host- und VM-Dateisystemquelle können Sie Details zum Filesystem und Storage-Ressourcenzuordnungen für alle Microsoft Windows Host- und VM-Dateisysteme (Virtual Machine) und für alle unterstützten Linux VMs (nur virtuell zugeordnete VMs) abrufen. Vorhanden im Insight-Server, die mit der konfigurierten Compute Resource Group (CRG) beschriftet werden.
+
+
+
+== Allgemeine Anforderungen
+
+* Diese Funktion muss separat erworben werden.
++
+Wenden Sie sich an Ihren Insight-Ansprechpartner, um Unterstützung zu erhalten.
+
+* Überprüfen Sie bitte die Supportmatrix von Insight, um sich zu vergewissern, dass Ihr Host oder das Betriebssystem Ihrer Virtual Machine unterstützt wird.
++
+Um zu überprüfen, ob Verknüpfungen zwischen Dateisystemen und Speicherressourcen erstellt werden, prüfen Sie, ob der betreffende Speicher- oder Virtualisierungsanbietertyp und die Version die erforderlichen Identifikationsdaten für das Volume oder die virtuellen Laufwerke melden.
+
+
+
+
+
+== Anforderungen Für Microsoft Windows
+
+* Diese Datenquelle verwendet WMI-Datenstrukturen (Window Management Instrumentation), um Daten abzurufen.
++
+Dieser Service muss betriebsbereit sein und Remote verfügbar sein. Insbesondere muss Port 135 zugänglich sein und geöffnet werden, wenn hinter einer Firewall.
+
+* Windows-Domänenbenutzer müssen über die entsprechenden Berechtigungen verfügen, um auf WMI-Strukturen zuzugreifen.
+* Administratorberechtigungen sind erforderlich.
+* Dynamische TCP-Ports, die 1024-65535 für Windows 2003 und älter zugewiesen sind
+* Ports 49152--65535 für Windows 2008
+
+
+[NOTE]
+====
+Wenn Sie versuchen, eine Firewall zwischen Insight, einer AU und dieser Datenquelle zu verwenden, sollten Sie Ihr Microsoft Team konsultieren, um die Ports zu identifizieren, von denen sie glauben, dass sie erforderlich sind.
+
+====
+
+
+== Linux-Anforderungen
+
+* Diese Datenquelle verwendet eine SSH-Verbindung (Secure Shell) zur Ausführung von Befehlen auf Linux VMs.
++
+Der SSH-Service muss betriebsbereit sein und Remote verfügbar sein. Insbesondere muss Port 22 zugänglich sein und geöffnet werden, wenn hinter einer Firewall.
+
+* SSH-Benutzer müssen über sudo-Berechtigungen verfügen, um schreibgeschützte Befehle auf Linux-VMs auszuführen.
++
+Sie müssen dasselbe Passwort verwenden, um sich bei SSH anzumelden und jede Sudo-Kennwortherausforderung zu beantworten.
+
+
+
+
+
+== Nutzungsempfehlungen
+
+* Sie sollten eine Gruppe von Hosts und virtuellen Maschinen mit gemeinsamen Betriebssystemanmeldeinformationen mit derselben Anmerkung zu Compute Resource Group versehen.
++
+Jede Gruppe verfügt über eine Instanz dieser Datenquelle, die Dateisystemdetails von diesen Hosts und virtuellen Maschinen ermittelt.
+
+* Wenn Sie eine Instanz dieser Datenquelle haben, für die die Erfolgsrate niedrig ist (z. B. ermittelt OnCommand Insight Dateisystemdetails für nur 50 von 1000 Hosts und virtuelle Maschinen in einer Gruppe), Sie sollten die Hosts und virtuellen Maschinen, für die die Erkennung erfolgreich war, in eine separate Compute Resource Group verschieben.
+
+
+
+
+== Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Benutzername
+ a| 
+Betriebssystembenutzer mit den entsprechenden Rechten zum Abrufen von Dateisystemdaten für Windows-Betriebssystembenutzer muss das Domänenpräfix enthalten.
+
+
+
+ a| 
+Passwort
+ a| 
+Passwort für den Betriebssystembenutzer
+
+
+
+ a| 
+Rechnerressourcengruppe
+ a| 
+Der Anmerkungswert, der zum Markieren von Host- und virtuellen Maschinen für die Datenquelle verwendet wird, erkennt Dateisysteme.Ein leerer Wert gibt an, dass die Datenquelle Dateisysteme für alle Hosts und virtuellen Maschinen erkennt, die derzeit nicht mit einer Compute Resource Group beschriftet sind.
+
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+ a| 
+Abfrageintervall für Bestand (min)
+ a| 
+Intervall zwischen Bestandsabstimmungen (Standard: 360 Minuten)
+
+|===

@@ -1,0 +1,66 @@
+---
+permalink: howto/configure-service-level-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Anmerkung zum Service-Level wird verwendet, um Anlagen ihren jeweiligen Service-Levels zuzuordnen. 
+---
+= Konfigurieren Sie Service-Level-Anmerkungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Anmerkung zum Service-Level wird verwendet, um Anlagen ihren jeweiligen Service-Levels zuzuordnen.
+
+Service-Level-Annotationen werden normalerweise nur in Kundenumgebungen festgelegt, die Auto-Tiering verwenden. Im Insight Data Warehouse wird Tiering bevorzugt. Als Best Practice empfiehlt es sich jedoch, den Service-Level zu verwenden, wenn Sie Details zu den bereitgestellten Kosten und zu den bereitgestellten Kosten im Detail anzeigen möchten Kundenkosten. Wenn beide in Data Warehouse vorhanden sind, ersetzt Service Level die Ebene.
+
+Schritte
+
+* Wählen Sie die Anmerkung *Service Level* und klicken Sie auf das Symbol *Bearbeiten*.
+* Klicken Sie auf *+Add*, und fügen Sie den Namen und die Beschreibung Ihres ersten Service-Levels zur Anmerkungsliste hinzu.
+* Tun Sie dasselbe für Ihre anderen Service-Level.
+* Wenn Sie fertig sind, klicken Sie auf *Speichern*.
+
+
+Beispiel für Anmerkungen zum Service-Level:
+
+|===
+
+
+| Name | Beschreibung | Kosten pro GB 
+
+
+ a| 
+Service-Level 1
+ a| 
+FAS Controller mit FC oder SAS, lokale & Remote-Spiegelung und Band
+ a| 
+0.93
+
+
+
+ a| 
+Service-Level 2
+ a| 
+FAS-Controller mit FC oder SAS, lokalen und Remote-Spiegelungen
+ a| 
+0.85
+
+
+
+ a| 
+Service-Level 3
+ a| 
+FAS Controller mit SATA und lokaler Spiegelung
+ a| 
+0.48
+
+
+
+ a| 
+...
+ a| 
+ a| 
+
+|===

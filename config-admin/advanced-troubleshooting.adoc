@@ -1,0 +1,20 @@
+---
+permalink: config-admin/advanced-troubleshooting.html 
+sidebar: sidebar 
+keywords: Legacy portal 
+summary: Um die OnCommand Insight-Konfiguration abzuschließen, müssen Sie die erweiterten Tools zur Fehlerbehebung verwenden. Diese Tools werden im Browser ausgeführt und auf der Seite Admin \> Fehlerbehebung geöffnet. 
+---
+= Erweiterte Fehlerbehebung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um die OnCommand Insight-Konfiguration abzuschließen, müssen Sie die erweiterten Tools zur Fehlerbehebung verwenden. Diese Tools laufen im Browser und werden auf der Seite *Admin* > *Troubleshooting* geöffnet.
+
+Um die erweiterten Tools zur Fehlerbehebung im Browser zu öffnen, klicken Sie unten auf der Seite auf den Link *Erweiterte Fehlerbehebung*.
+
+Mit den erweiterten Fehlerbehebungstools können Sie verschiedene Berichte, Systeminformationen, installierte Pakete und Protokolle anzeigen sowie zahlreiche Aktionen ausführen, wie z. B. den Neustart des Servers oder der Erfassungseinheiten, die Aktualisierung von DWH-Anmerkungen und den Import von Anmerkungen.
+
+Alle verfügbaren Optionen finden Sie auf der Seite Erweiterte Fehlerbehebung.

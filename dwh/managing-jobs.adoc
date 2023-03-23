@@ -1,0 +1,40 @@
+---
+permalink: dwh/managing-jobs.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können eine Liste der aktuellen Jobs und deren Status anzeigen. Der erste Job in einem Build-Zyklus ist fett gedruckt. Das Build, das Data Warehouse für jeden Konnektor und für jeden Data Mart ausführt, wird als Job betrachtet. 
+---
+= Verwalten von Jobs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Liste der aktuellen Jobs und deren Status anzeigen. Der erste Job in einem Build-Zyklus ist fett gedruckt. Das Build, das Data Warehouse für jeden Konnektor und für jeden Data Mart ausführt, wird als Job betrachtet.
+
+
+
+== Über diese Aufgabe
+
+Sie können alle ausstehenden Aufträge abbrechen, die Sie geplant oder begonnen haben. Sie können auch den Verlauf der zuvor ausgeführten Jobs löschen. Sie können den Verlauf von Jobs löschen, die nicht ausstehen, ausgeführt werden oder gerade abgebrochen werden. Sie können den gesamten Verlauf oder den gesamten Verlauf außer den letzten 24 Stunden löschen, um alle Einträge außer dem letzten Tag zu entfernen.
+
+Sie können Informationen zu den folgenden Jobtypen sehen: Lizenz, Vorbestand, Inventar, Nachbestand, Abmessungen, Datenvorbereitung, Kapazität, Ports, Speichereffizienz, Auslastung Des Dateisystems, Leistung, Job Status Notification, History Build, dynamische Anmerkungen, Connector entfernen, Build, Phone Home und Maintenance wurden übersprungen.
+
+Ein Wartungsauftrag wird wöchentlich ausgeführt und verwendet MySQL-Tools zur Optimierung der Datenbank.
+
+
+
+== Schritte
+
+. Melden Sie sich beim Data Warehouse Portal unter an `+https://hostname/dwh+`, Wo `hostname` Ist der Name des Systems, auf dem OnCommand Insight Data Warehouse installiert ist.
+. Klicken Sie im Navigationsfenster links auf *Jobs*.
++
+image::../media/oci-dwh-admin-jobs-gif.gif[DWH-Hauptmenü Jobs Link]
+
++
+Wenn der Status „Ausstehend“ angezeigt wird, wird ein Link zum Abbrechen angezeigt.
+
+. Um einen ausstehenden Auftrag abzubrechen, klicken Sie auf *Abbrechen*.
+. Um den Job-Verlauf zu entfernen, klicken Sie auf *Alle* oder *Alle außer letzte 24h*.
+

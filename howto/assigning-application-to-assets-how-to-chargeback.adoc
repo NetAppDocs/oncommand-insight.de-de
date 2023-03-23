@@ -1,0 +1,14 @@
+---
+permalink: howto/assigning-application-to-assets-how-to-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: Nachdem Sie Ihre Anwendungen definiert haben, müssen Sie die Anwendungen bestimmten Assets zuordnen. Sie können eine einfache Ad-hoc-Methode verwenden, um Anwendungen auf ein Asset anzuwenden. Benutzer, die Anwendungen in großen Mengen anwenden möchten, sollten eine Abfragemethode verwenden, um die Assets zu identifizieren, die sie einer Anwendung zuweisen möchten. 
+---
+= Zuweisen von Anwendungen zu Assets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie Ihre Anwendungen definiert haben, müssen Sie die Anwendungen bestimmten Assets zuordnen. Sie können eine einfache Ad-hoc-Methode verwenden, um Anwendungen auf ein Asset anzuwenden. Benutzer, die Anwendungen in großen Mengen anwenden möchten, sollten eine Abfragemethode verwenden, um die Assets zu identifizieren, die sie einer Anwendung zuweisen möchten.

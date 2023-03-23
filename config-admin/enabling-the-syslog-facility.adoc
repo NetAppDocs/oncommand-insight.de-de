@@ -1,0 +1,56 @@
+---
+permalink: config-admin/enabling-the-syslog-facility.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können einen Speicherort für das Protokoll der OnCommand Insight Verstöße, Performance-Alarme und Audit-Meldungen ermitteln und den Protokollierungsprozess aktivieren. 
+---
+= Aktivieren der Syslog-Funktion
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Speicherort für das Protokoll der OnCommand Insight Verstöße, Performance-Alarme und Audit-Meldungen ermitteln und den Protokollierungsprozess aktivieren.
+
+
+
+== Bevor Sie beginnen
+
+* Sie müssen über die IP-Adresse des Servers verfügen, auf dem das Systemprotokoll gespeichert werden soll.
+* Sie müssen die Einrichtungsebene kennen, die dem Programmtyp entspricht, der die Meldung protokolliert, z. B. LOCAL1 oder BENUTZER.
+
+
+
+
+== Über diese Aufgabe
+
+Das Syslog enthält die folgenden Informationstypen:
+
+* Meldungen zu Verstößen
+* Performance-Warnmeldungen
+* Optional: Audit-Protokollmeldungen
+
+
+Die folgenden Einheiten werden im Syslog verwendet:
+
+* Auslastungsmetriken: Prozentsatz
+* Verkehrsmetriken: MB
+* Datenverkehrsrate: MB/s
+
+
+
+
+== Schritte
+
+. Klicken Sie in der Insight-Symbolleiste auf *Admin* und wählen Sie *Notifications*.
+. Scrollen Sie nach unten zum Abschnitt *Syslog* der Seite.
+. Aktivieren Sie das Kontrollkästchen *enable syslog*.
+. Aktivieren Sie bei Bedarf das Kontrollkästchen *Audit senden*. Neue Überwachungsprotokollmeldungen werden zusätzlich zur Anzeige auf der Seite „Audit“ an syslog gesendet. Beachten Sie, dass bereits vorhandene Audit-Log-Meldungen nicht an syslog gesendet werden, sondern nur neu generierte Protokollmeldungen werden gesendet.
+. Geben Sie im Feld *Server* die IP-Adresse des Protokollservers ein.
++
+Sie können einen benutzerdefinierten Port angeben, indem Sie ihn nach einem Doppelpunkt am Ende der Server-IP anhängen (z. B. Server:Port). Wenn der Port nicht angegeben ist, wird der Standard-Syslog-Port von 514 verwendet.
+
+. Wählen Sie im Feld *Anlage* die Einrichtungsebene aus, die dem Programmtyp entspricht, der die Nachricht protokolliert.
+. Klicken Sie Auf *Speichern*.
+
