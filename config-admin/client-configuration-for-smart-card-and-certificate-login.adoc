@@ -35,9 +35,9 @@ Die aktuellsten CAC- und Zertifikatanweisungen finden Sie in den folgenden Knowl
 
 Die folgenden allgemeinen Anforderungen an die Client-Konfiguration:
 
-* Installieren von Smart Card Middleware, z. B. ActivClient (siehe http://militarycac.com/activclient.htm)[]
-* Ändern des IE-Browsers (siehe http://militarycac.com/files/Making_AKO_work_with_Internet_Explorer_color.pdf)[]
-* Ändern des Firefox-Browsers (siehe https://militarycac.com/firefox2.htm)[]
+* Installieren von Smart Card Middleware, z. B. ActivClient (siehe
+* Ändern des IE-Browsers (siehe
+* Ändern des Firefox-Browsers (siehe
 
 
 Weitere Konfigurationsschritte sind:

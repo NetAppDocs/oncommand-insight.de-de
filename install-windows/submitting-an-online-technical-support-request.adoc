@@ -17,7 +17,7 @@ Wenn Sie als registrierter Support-Kunde Probleme mit der Installation von Insig
 
 == Bevor Sie beginnen
 
-Sie müssen sich unter Verwendung Ihrer Unternehmens-E-Mail-Adresse als Support-Kunde registrieren, um Online-Support-Services zu erhalten. Die Registrierung erfolgt über die Support Site (http://support.netapp.com)[].
+Sie müssen sich unter Verwendung Ihrer Unternehmens-E-Mail-Adresse als Support-Kunde registrieren, um Online-Support-Services zu erhalten. Die Registrierung erfolgt über die Support Site .
 
 
 
