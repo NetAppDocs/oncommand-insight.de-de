@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="de">
   <head class="at-element-marker">
-  <title>Konfigurieren Sie Anmerkungen zur benutzerdefinierten Umgebung</title>
+  <title>Datensammler Hitachi Ops Center</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Konfigurieren Sie Anmerkungen zur benutzerdefinierten Umgebung" />
+  <meta property="og:title" content="Datensammler Hitachi Ops Center" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/de-de/oncommand-insight/howto/configure-custom-environment-annotations.html" />
-	<meta property="og:description" content="Die Umgebungsanmerkung ist eine benutzerdefinierte Anmerkung zur Zuordnung von Anlagen zu ihrem jeweiligen Umgebungsort oder ihrer Verwendung, z. B. Labor, F..." />
+	<meta property="og:url" content="https://docs.netapp.com/de-de/oncommand-insight/collector_hds_ops_center.html" />
+	<meta property="og:description" content="Konfiguration des HDS Ops Center Data Collector" />
   <meta property="og:image" content="https://docs.netapp.com/de-de/oncommand-insight/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Die Umgebungsanmerkung ist eine benutzerdefinierte Anmerkung zur Zuordnung von Anlagen zu ihrem jeweiligen Umgebungsort oder ihrer Verwendung, z. B. Labor, F...">
-  <meta name="keywords" content=" "><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Konfiguration des HDS Ops Center Data Collector">
+  <meta name="keywords" content=" data collector, Hitachi Ops Center"><!-- Icons -->
   <link rel="icon" href="/de-de/oncommand-insight/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -32,17 +32,17 @@
   <link rel="stylesheet" href="/de-de/oncommand-insight/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/de-de/oncommand-insight/css/tabbed-blocks.css" type="text/css">
   <!-- Canonical url -->
-  <link rel="canonical" href="https://docs.netapp.com/de-de/oncommand-insight/howto/configure-custom-environment-annotations.html" />
-  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/oncommand-insight/howto/configure-custom-environment-annotations.html" />
-  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/oncommand-insight/howto/configure-custom-environment-annotations.html" />
-  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/oncommand-insight/howto/configure-custom-environment-annotations.html" />
-  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/oncommand-insight/howto/configure-custom-environment-annotations.html" />
-  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/oncommand-insight/howto/configure-custom-environment-annotations.html" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/oncommand-insight/howto/configure-custom-environment-annotations.html" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/oncommand-insight/howto/configure-custom-environment-annotations.html" />
-  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/oncommand-insight/howto/configure-custom-environment-annotations.html" />
-  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/oncommand-insight/howto/configure-custom-environment-annotations.html" />
-  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/oncommand-insight/howto/configure-custom-environment-annotations.html" />
+  <link rel="canonical" href="https://docs.netapp.com/de-de/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/oncommand-insight/collector_hds_ops_center.html" />
   <link rel='stylesheet' href='/de-de/oncommand-insight/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
     function addAdobeLaunch(adobeId) {
       var head = document.getElementsByTagName('head')[0];
@@ -177,7 +177,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight.de-de/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/de-de/oncommand-insight/howto/configure-custom-environment-annotations.html&page-title=Konfigurieren Sie Anmerkungen zur benutzerdefinierten Umgebung" class="page-nav-contribute-link" role="button"><img src="/de-de/oncommand-insight/images/discuss-sm.svg" alt="" class="github-icon" />Dokumentationsänderungen beantragen</a><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight/blob/main/howto/configure-custom-environment-annotations.adoc" class="page-nav-contribute-link" role="button"><img src="/de-de/oncommand-insight/images/edit-sm.svg" alt="" class="github-icon" />In GitHub bearbeiten</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/de-de/oncommand-insight/images/article-sm.svg" alt="" class="github-icon" />Leitfaden für Beitragende</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight.de-de/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/de-de/oncommand-insight/collector_hds_ops_center.html&page-title=Datensammler Hitachi Ops Center" class="page-nav-contribute-link" role="button"><img src="/de-de/oncommand-insight/images/discuss-sm.svg" alt="" class="github-icon" />Dokumentationsänderungen beantragen</a><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight/blob/main/config-admin/collector_hds_ops_center.adoc" class="page-nav-contribute-link" role="button"><img src="/de-de/oncommand-insight/images/edit-sm.svg" alt="" class="github-icon" />In GitHub bearbeiten</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/de-de/oncommand-insight/images/article-sm.svg" alt="" class="github-icon" />Leitfaden für Beitragende</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">AUF DIESER SEITE</div>
@@ -297,23 +297,23 @@
       </div>
 
       <ul class="custom-dropdown-menu"><li>
-          <a href="https://docs.netapp.com/de-de/oncommand-insight/howto/configure-custom-environment-annotations.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+          <a href="https://docs.netapp.com/de-de/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/us-en/oncommand-insight/howto/configure-custom-environment-annotations.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+          <a href="https://docs.netapp.com/us-en/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">English</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ja-jp/oncommand-insight/howto/configure-custom-environment-annotations.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+          <a href="https://docs.netapp.com/ja-jp/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/oncommand-insight/howto/configure-custom-environment-annotations.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/ko-kr/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-cn/oncommand-insight/howto/configure-custom-environment-annotations.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+          <a href="https://docs.netapp.com/zh-cn/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-tw/oncommand-insight/howto/configure-custom-environment-annotations.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+          <a href="https://docs.netapp.com/zh-tw/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/es-es/oncommand-insight/howto/configure-custom-environment-annotations.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
+          <a href="https://docs.netapp.com/es-es/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/fr-fr/oncommand-insight/howto/configure-custom-environment-annotations.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+          <a href="https://docs.netapp.com/fr-fr/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/it-it/oncommand-insight/howto/configure-custom-environment-annotations.html" target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+          <a href="https://docs.netapp.com/it-it/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Italiano</span></a>
         </li></ul>
     </div>
     <!-- End Language Selector -->
@@ -2368,6 +2368,8 @@
             Datenquelle von HDS HiCommand Device Manager
           </a>
           
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
 
 
 
@@ -2383,6 +2385,8 @@
   
 
 
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
 
 
 
@@ -4063,8 +4067,6 @@
 
 
 
-    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
-  
 
 
         </li>
@@ -7136,7 +7138,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="HDS Ops Center"
       data-li-level="5#" 
-      class=" "
+      class="  active "
     ><a class="na-navbar-padding" href="/de-de/oncommand-insight/collector_hds_ops_center.html">
         HDS Ops Center
       </a></li><li 
@@ -7164,7 +7166,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="HDS Ops Center"
       data-li-level="4#" 
-      class=" "
+      class="  active "
     ><a class="na-navbar-padding" href="/de-de/oncommand-insight/collector_hds_ops_center.html">
         HDS Ops Center
       </a></li><li 
@@ -9040,7 +9042,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="Konfigurieren Sie Anmerkungen zur benutzerdefinierten Umgebung"
       data-li-level="4#" 
-      class="  active "
+      class=" "
     ><a class="na-navbar-padding" href="/de-de/oncommand-insight/howto/configure-custom-environment-annotations.html">
         Konfigurieren Sie Anmerkungen zur benutzerdefinierten Umgebung
       </a></li></ul></li><li 
@@ -9791,14 +9793,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Konfigurieren Sie Anmerkungen zur benutzerdefinierten Umgebung</h1>
+  <h1 class="n-doc__component-detail-heading">Datensammler Hitachi Ops Center</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2023-03-23 21:41:43 +0000">03/23/2023</time>
+    <time datetime="2023-06-01 18:07:20 +0000">06/01/2023</time>
     
   
 
@@ -9808,46 +9810,144 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
-<p>Die Umgebungsanmerkung ist eine benutzerdefinierte Anmerkung zur Zuordnung von Anlagen zu ihrem jeweiligen Umgebungsort oder ihrer Verwendung, z. B. Labor, Forschung und Entwicklung, Produktion, Usw. Durch die Erstellung der Umgebungsanmerkung und die Einstellung auf diese Ressourcen können Sie Ihre Laborressourcen einfach separat von Ihren Produktionsanlagen finden, filtern und Berichte erstellen.</p>
+<p>Dieser Datensammler verwendet die integrierte Anwendungssuite von Hitachi Ops Center, um auf Bestands- und Performancedaten mehrerer Speichergeräte zuzugreifen. Eine Bestandsaufnahme und Kapazitätserkennung muss in Ihrer Ops Center-Installation sowohl die Komponenten „Common Services“ als auch „Administrator“ enthalten. Zur Performance-Erfassung muss zusätzlich „Analyzer“ implementiert sein.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="terminologie">Terminologie</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Schritte</p>
+<p>OnCommand Insight erfasst die folgenden Bestandsinformationen aus diesem Datensammler. Für jeden erfassten Asset-Typ wird die am häufigsten für dieses Dokument verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Anbieter-/Modelllaufzeit</th>
+<th class="tableblock halign-left valign-top">Laufzeit der OnCommand Insight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Storage-Systeme</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Storage</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datenmenge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datenmenge</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Paritätsgruppen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Speicherpool (RAID), Festplattengruppen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Festplatte</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Festplatte</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Storage-Pool</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Speicherpool (Thin, SNAP)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Externe Paritätsgruppen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Speicherpool (Backend), Festplattengruppen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Port</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Storage-Node → Controller-Node →-Port</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Host-Gruppen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volume-Zuordnung und -Maskierung</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volume-Paare</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Storage-Synchronisierung</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="inventaranforderungen">Inventaranforderungen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Zur Erfassung von Bestandsdaten müssen Sie Folgendes haben:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Wählen Sie <strong>Verwalten</strong> &gt; <strong>Anmerkungen</strong>.</p>
+<p>IP-Adresse oder Hostname des Ops Center-Servers, der die „Common Services“-Komponente hostet</p>
 </li>
 <li>
-<p>Klicken Sie oben auf der Seite auf die Schaltfläche <strong>+Add</strong>.</p>
-</li>
-<li>
-<p>Geben Sie für <strong>Name</strong> &#8216;<strong>Environment</strong>&#8217; ein.</p>
-</li>
-<li>
-<p>Geben Sie für <strong>Description</strong> &#8216;<strong>Asset environment type</strong>&#8217; ein.</p>
-</li>
-<li>
-<p>Wählen Sie für <strong>Typ</strong> <strong>Liste</strong>. Neue Felder werden angezeigt, damit Sie Ihre Liste erstellen können.</p>
-</li>
-<li>
-<p>Lassen Sie jetzt <strong>Neue Assets spontan hinzufügen</strong> deaktiviert. Aktivieren Sie diese Option, wenn Sie der Auswahlliste neue Umgebungen hinzufügen möchten, während Sie sie gleichzeitig mit Assets verknüpfen.</p>
-</li>
-<li>
-<p>Geben Sie den Namen und die Beschreibung Ihrer ersten Umgebung ein.</p>
-</li>
-<li>
-<p>Klicken Sie auf <strong>+Add</strong> und tun Sie das gleiche für Ihre anderen Umgebungen.</p>
-</li>
-<li>
-<p>Wenn Sie fertig sind, klicken Sie auf <strong>Speichern</strong>.</p>
+<p>Root/sysadmin Benutzerkonto und Passwort, die auf allen Servern vorhanden sind, auf denen Ops Center Komponenten gehostet werden. HDS hat KEINE REST-API-Unterstützung für LDAP/SSO-Benutzer bis Ops Center 10.8+ implementiert</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Beispiele für Umgebungskommentare:</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="performance-anforderungen-erfüllt">Performance-Anforderungen erfüllt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Zur Erfassung von Leistungsdaten müssen die folgenden Anforderungen erfüllt sein:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Das HDS Ops Center „Analyzer“-Modul muss installiert sein</p>
+</li>
+<li>
+<p>Speicher-Arrays müssen das Ops Center „Analyzer“-Modul speisen</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="konfiguration">Konfiguration</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feld</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hitachi Ops Center-IP-Adresse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IP-Adresse oder vollqualifizierter Domänenname des Ops Center-Servers, der die Komponente „Allgemeine Dienste“ hostet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Benutzername</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Benutzername für den Ops-Center-Server.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Passwort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Passwort, das für den Ops-Center-Server verwendet wird.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="erweiterte-konfiguration">Erweiterte Konfiguration</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -9855,41 +9955,40 @@
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feld</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Beschreibung</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Labor</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Labor</p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verbindungstyp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTPS (Port 443) ist der Standard</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Abw</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Entwicklung</p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TCP-Port überschreiben</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geben Sie den zu verwendenden Port an, wenn nicht der Standardport</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Prd</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Produktion</p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abfrageintervall für Bestand (min)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intervall zwischen Bestandsabstimmungen Der Standardwert ist 40.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>&#8230;&#8203;</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wählen Sie „Ausschließen“ oder „Einschließen“, um eine Liste anzugeben</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geben Sie an, ob die unten aufgeführte Array-Liste beim Sammeln von Daten aufgenommen oder ausgeschlossen werden soll.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geräteliste filtern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kommagetrennte Liste der einzuschließenden oder auszuschließenden Geräteseriennummer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Leistungsintervall (Sek.)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intervall zwischen Performance-Abstimmungen Der Standardwert ist 300.</p></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Weitere Informationen finden Sie im <a href="concept_requesting_support.html">"Unterstützung"</a> Oder auf der <a href="https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf">"Data Collector Supportmatrix"</a>.</p>
+</div>
+</div>
+</div>
 
     </article>
     <!-- Page Container -->
