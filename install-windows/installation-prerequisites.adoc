@@ -25,7 +25,7 @@ Das aktuelle Produkt verbraucht möglicherweise zusätzliche Hardwareressourcen 
 * Java 8 für die Java-Benutzeroberfläche von OnCommand Insight.
 +
 
-NOTE: OnCommand Insight enthält eine kostenpflichtige Oracle-Lizenz für Java SE 8. Kunden müssen keine zusätzlichen Java SE 8 Lizenzen erwerben. Diese Lizenz deckt die Verwendung von Java SE 8 mit allen OCI-Komponenten ab. Weitere Informationen finden Sie im http://docs.netapp.com/oci-73/topic/com.netapp.ndc.notices/GUID-93BE9A1E-D79E-4A97-87A2-4DBE31372A16.html["Mitteilungen"] Für spezifische Details.
+NOTE: OnCommand Insight enthält eine kostenpflichtige Oracle-Lizenz für Java SE 8. Kunden müssen keine zusätzlichen Java SE 8 Lizenzen erwerben. Diese Lizenz deckt die Verwendung von Java SE 8 mit allen OCI-Komponenten ab. Weitere Informationen finden Sie im link:legal-notices.html["Mitteilungen"] Für spezifische Details.
 
 * Virenscan-Software deaktiviert
 +
