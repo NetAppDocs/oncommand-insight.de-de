@@ -34,9 +34,14 @@ Sie verwenden das `securityadmin` Tool zur Verwaltung der Sicherheit:
 == Schritte
 
 . Führen Sie eine Remote-Anmeldung beim Insight-Server durch.
-. Starten Sie das Sicherheitsadministrator-Tool im interaktiven Modus (-i).
+. Starten Sie das Sicherheitsadministrator-Tool im interaktiven Modus:
++
+** Fenster – `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux `/bin/oci-securityadmin.sh -i`
 +
 Das System fordert Anmeldeinformationen an.
+
+
 
 . Geben Sie den Benutzernamen und das Kennwort für ein Konto mit „`Admin`“-Anmeldeinformationen ein.
 . Wählen Sie *Local Acquisition Unit* aus, um die Sicherheitskonfiguration der Local Acquisition Unit neu zu konfigurieren.
@@ -61,8 +66,6 @@ Stellt die Zip-Sicherung des erstellten Tresors wieder her. Nach der Wiederherst
 [NOTE]
 ====
 Restore kann verwendet werden, um Passwörter und Schlüssel auf mehreren Servern zu synchronisieren, zum Beispiel: - Verschlüsselungsschlüssel auf DEM LAU ändern - Erstellen einer Sicherung des Tresors - Wiederherstellen der Vault-Sicherung auf jedem der Raus
-
-+
 
 ====
 ** *Verschlüsselungsschlüssel Ändern*

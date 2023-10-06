@@ -25,10 +25,6 @@ Sie verwenden das `securityadmin` Tool zur Verwaltung der Sicherheit:
 
 Ein Szenario für die Aktualisierung der Sicherheitskonfiguration für DIE LAU, rau, ist die Aktualisierung des Benutzerpassworts für die 'Erfassung', wenn das Passwort für diesen Benutzer auf dem Server geändert wurde. Für die Kommunikation mit dem Server verwenden alle RAUS und DIE LAU dasselbe Passwort wie das des Benutzers „Acquisition“ des Servers.
 
-[NOTE]
-====
-
-====
 Der Benutzer „Acquisition“ ist nur auf dem Insight-Server vorhanden. Die rau oder LAU melden sich als dieser Benutzer an, wenn sie eine Verbindung zum Server herstellen.
 
 Gehen Sie wie folgt vor, um Sicherheitsoptionen auf einer rau zu verwalten:
@@ -38,9 +34,14 @@ Gehen Sie wie folgt vor, um Sicherheitsoptionen auf einer rau zu verwalten:
 == Schritte
 
 . Führen Sie eine Remote-Anmeldung beim Server durch, auf dem die rau ausgeführt wird
-. Starten Sie das Sicherheitsadministrator-Tool im interaktiven Modus: `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
+. Starten Sie das Sicherheitsadministrator-Tool im interaktiven Modus:
++
+** Fenster – `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux `/bin/oci-securityadmin.sh -i`
 +
 Das System fordert Anmeldeinformationen an.
+
+
 
 . Geben Sie den Benutzernamen und das Kennwort für ein Konto mit „`Admin`“-Anmeldeinformationen ein.
 +
@@ -64,8 +65,6 @@ Stellt die Zip-Sicherung des erstellten Tresors wieder her. Nach der Wiederherst
 [NOTE]
 ====
 Restore kann verwendet werden, um Passwörter und Schlüssel auf mehreren Servern zu synchronisieren, zum Beispiel: - Verschlüsselungsschlüssel auf einem Server ändern - Erstellen einer Sicherung des Tresors - Wiederherstellen der Vault-Sicherung auf dem zweiten Server
-
-+
 
 ====
 ** *Verschlüsselungsschlüssel Ändern*

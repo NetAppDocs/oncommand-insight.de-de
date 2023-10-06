@@ -28,9 +28,14 @@ Sie verwenden das `securityadmin` Tool zur Verwaltung der Sicherheit:
 == Schritte
 
 . Führen Sie eine Remote-Anmeldung beim Insight-Server durch.
-. Starten Sie das Sicherheitsadministrator-Tool im interaktiven Modus: `securityadmin -i`
+. Starten Sie das Sicherheitsadministrator-Tool im interaktiven Modus:
++
+** Fenster – `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux `/bin/oci-securityadmin.sh -i`
 +
 Das System fordert Anmeldeinformationen an.
+
+
 
 . Geben Sie den Benutzernamen und das Kennwort für ein Konto mit „`Admin`“-Anmeldeinformationen ein.
 . Wählen Sie *Server*.
@@ -55,8 +60,6 @@ Stellt die Zip-Sicherung des erstellten Tresors wieder her. Nach der Wiederherst
 [NOTE]
 ====
 Restore kann verwendet werden, um Passwörter und Schlüssel auf mehreren Servern zu synchronisieren, zum Beispiel: - Ändern des Server-Verschlüsselungsschlüssels auf einem Server - Erstellen einer Sicherung des Tresors - Wiederherstellen der Vault-Sicherung auf dem zweiten Server
-
-+
 
 ====
 ** *Verschlüsselungsschlüssel Ändern*
@@ -85,22 +88,23 @@ Wenn Sie die Verschlüsselungsschlüssel ändern, sollten Sie Ihre neue Sicherhe
 
 
 
-+
+
+
 [NOTE]
 ====
 Einige Konten müssen synchronisiert werden, wenn Passwörter geändert werden. Wenn Sie beispielsweise das Passwort für den Benutzer „Acquisition“ auf dem Server ändern, müssen Sie das Kennwort für den Benutzer „Acquisition“ auf DER LAU, rau und DWH ändern, damit es übereinstimmt. Wenn Sie Kennwörter ändern, sollten Sie außerdem Ihre neue Sicherheitskonfiguration sichern, damit Sie sie nach einem Upgrade oder einer Installation wiederherstellen können.
 
 ====
-+
-** *Auf die Standardeinstellungen zurücksetzen*
+* *Auf die Standardeinstellungen zurücksetzen*
 +
 Setzt Schlüssel und Passwörter auf die Standardwerte zurück. Standardwerte sind die Werte, die während der Installation angegeben werden.
 
-** *Ausgang*
+* *Ausgang*
 +
 Beenden Sie das `securityadmin` Werkzeug.
 
++
+.. Wählen Sie die Option aus, die Sie ändern möchten, und folgen Sie den Anweisungen.
 
 
-. Wählen Sie die Option aus, die Sie ändern möchten, und folgen Sie den Anweisungen.
 
