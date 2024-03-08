@@ -22,11 +22,6 @@ Stellen Sie vor der Installation von OnCommand Insight sicher, dass folgende Inf
 Das aktuelle Produkt verbraucht möglicherweise zusätzliche Hardwareressourcen (aufgrund der erweiterten OnCommand Insight-Produktfunktionen), die bei früheren Versionen des OnCommand Insight Produkts nicht in Anspruch genommen wurden.
 
 * Ein Bereitstellungsplan, der die Hardware- und Netzwerkkonfigurationen für den OnCommand Insight-Server, das Data Warehouse und die Berichterstellung sowie die Remote-Erfassungseinheiten umfasst.
-* Java 8 für die Java-Benutzeroberfläche von OnCommand Insight.
-+
-
-NOTE: OnCommand Insight enthält eine kostenpflichtige Oracle-Lizenz für Java SE 8. Kunden müssen keine zusätzlichen Java SE 8 Lizenzen erwerben. Diese Lizenz deckt die Verwendung von Java SE 8 mit allen OCI-Komponenten ab. Weitere Informationen finden Sie im link:legal-notices.html["Mitteilungen"] Für spezifische Details.
-
 * Virenscan-Software deaktiviert
 +
 Während der Installation von OnCommand Insight müssen Sie alle Virenscanner vollständig deaktivieren. Nach der Installation müssen die von der Komponente Insight verwendeten Pfade (Installations-, Backup- und Archivierpfade) vom Virenscan ausgeschlossen werden, zusätzlich zum Ausschluss des gesamten `sanscreen` Verzeichnis aus dem Scan.

@@ -2,7 +2,7 @@
 permalink: install-windows/oncommand-insight-installation-instructions.html 
 sidebar: sidebar 
 keywords:  
-summary: Bei der Installation müssen Sie mehrere OnCommand Insight-Komponenten installieren, darunter Insight Server, Data Warehouse und Reporting sowie Anomaly Detection. 
+summary: Bei der Installation müssen Sie mehrere OnCommand Insight Komponenten installieren, darunter Insight Server sowie Data Warehouse und Reporting. 
 ---
 = Installationsanleitung für Insight
 :allow-uri-read: 
@@ -11,8 +11,7 @@ summary: Bei der Installation müssen Sie mehrere OnCommand Insight-Komponenten 
 
 
 [role="lead"]
-Bei der Installation müssen Sie mehrere OnCommand Insight-Komponenten installieren, darunter Insight Server, Data Warehouse und Reporting sowie Anomaly Detection.
-
+Bei der Installation müssen Sie mehrere OnCommand Insight Komponenten installieren, darunter Insight Server sowie Data Warehouse und Reporting.
 Die Installation umfasst die folgenden Hauptaufgaben:
 
 * Herunterladen des OnCommand Insight-Installationsprogramms
@@ -20,7 +19,6 @@ Die Installation umfasst die folgenden Hauptaufgaben:
 * Installieren von Lizenzen
 * Optional Installation von DWH und Reporting (muss auf einer separaten Maschine oder virtuellen Maschine installiert sein)
 * Optional können Sie eine Remote Acquisition Unit (rau) installieren, die Informationen von den Geräteressourcen erfasst, die sich hinter einer Firewall befinden, sich an einem Remote-Standort befinden oder sich in einem privaten Netzwerk befinden
-* Optional: Installation des Anomalieerkennung-Engines (muss auf einem separaten Rechner oder einer virtuellen Maschine mit Linux installiert sein)
 * Aktualisieren der OnCommand Insight-Berichte für Upgrades.
 
 

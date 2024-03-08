@@ -39,32 +39,3 @@ Die folgenden allgemeinen Anforderungen an die Client-Konfiguration:
 * Ändern des IE-Browsers (siehe
 * Ändern des Firefox-Browsers (siehe
 
-
-Weitere Konfigurationsschritte sind:
-
-
-
-== Schritte
-
-. Deaktivieren Sie unnötige Dialogfenster-Popups beim Starten des Java-Clients:
-+
-.. Öffnen Sie das Bedienfeld „`Java`“.
-.. Wählen Sie die Registerkarte „`Erweitert`“ aus.
-.. Wählen Sie „`Erweiterte Sicherheitseinstellungen`“.
-.. Deaktivieren Sie die Option „`Zertifikate und Schlüssel im Browser-Keystore verwenden`“.
-
-
-. Importieren Sie Soft-Zertifikate in persönliche Zertifikate eines Benutzers über den Chrome-Browser:
-+
-.. Navigieren Sie zu „`Erweiterte Einstellungen`“.
-.. Wählen Sie „`Zertifikate Verwalten`“.
-.. Wählen Sie die Registerkarte „`Persönliche“-Zertifikate`“ aus.
-.. Wählen Sie „`Import...`“.
-.. Wählen Sie die .p12-Datei aus.
-.. Füllen Sie den Assistenten aus, und füllen Sie das Passwort aus, das zum Erstellen des Zertifikats verwendet wurde.
-
-
-+
-Zum Konfigurieren der Browser Internet Explorer und Firefox sind ähnliche Schritte erforderlich.
-
-

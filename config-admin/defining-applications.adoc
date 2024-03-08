@@ -34,12 +34,6 @@ Applikationen können folgenden Assets zugewiesen werden: Hosts, virtuelle Masch
 +
 Nachdem Sie eine Applikation definiert haben, werden auf der Seite Anwendungen der Name der Applikation, ihre Priorität und gegebenenfalls die mit der Applikation verknüpfte Geschäftseinheit angezeigt.
 
-+
-[NOTE]
-====
-Wenn das Engine zur Erkennung von Anomalien installiert ist, wird auf der Seite Anwendungspaly Dashboard auch ein Anomaly Score für die Anwendung angezeigt. Weitere Informationen zum Installieren und Konfigurieren der Anomalieerkennung finden Sie im _OnCommand Insight Konfigurations- und Administrationshandbuch_.
-
-====
 . Klicken Sie Auf *Hinzufügen*.
 +
 Das Dialogfeld Anwendung hinzufügen wird angezeigt.

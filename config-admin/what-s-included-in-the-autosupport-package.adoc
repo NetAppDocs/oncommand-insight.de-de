@@ -20,13 +20,10 @@ Das AutoSupport-Paket umfasst Folgendes:
 * Datenquellen und Einstellungen der Datenquelle
 * Integrationspakete
 * Fernbedienungseinheiten
-* Ethernet-Überwachungseinheiten
 * ASUP/Proxy-Einstellungen
 * Einstellungen für den Speicherort der Sicherung
 * Einstellungen für den Archivspeicherort
 * Benachrichtigungseinstellungen
-* Punktzahlen und Geräte für die Anomalieerkennung
-* Applikationseinstellungen für die Erkennung von Anomalien
 * Benutzer
 * Performance-Richtlinien
 * Geschäftseinheiten und Applikationen

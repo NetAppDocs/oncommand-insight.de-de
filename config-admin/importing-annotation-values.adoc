@@ -165,7 +165,9 @@ Zwischen den Optionen und ihren Werten gibt es keine Leerzeichen.
 ====
 Die folgenden Schlüsselwörter sind reserviert und verhindern, dass Benutzer sie als Anmerkungsnamen angeben: - Application - Application_Priority - Tenant - Line_of_Business - Business_Unit - Projektfehler werden generiert, wenn Sie versuchen, einen Anmerkungstyp mit einem der reservierten Schlüsselwörter zu importieren. Wenn Sie mit diesen Stichwörtern Beschriftungsnamen erstellt haben, müssen Sie diese ändern, damit das Importdienstprogramm ordnungsgemäß funktioniert.
 
+====
 +
 
-====
+NOTE: Das Dienstprogramm Annotation Import erfordert Java 8 oder Java 11. Stellen Sie sicher, dass eine dieser Komponenten vor dem Ausführen des Importdienstprogramms installiert ist. Es wird empfohlen, die neueste OpenJDK 11 zu verwenden.
+
 

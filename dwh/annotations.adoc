@@ -27,7 +27,7 @@ Um sicherzustellen, dass in OnCommand Insight eingegebene Anmerkungen in Data Wa
 +
 Dazu können Sie die Option *Troubleshooting* > *Aktualisierung von Anmerkungen für Data Warehouse* manuell ausführen oder bis zum nächsten geplanten transienten Datenlauf warten. Wenn Sie die Aktualisierung von Anmerkungen erzwingen, erzwingen Sie, dass der OnCommand Insight-Server die transienten Daten (z. B. Anmerkungswerte) berechnet und in Datenbanktabellen platziert, damit der Data Warehouse ETL-Prozess die Daten lesen kann. Die Aktualisierung der Beschriftungsdaten erfolgt automatisch alle 15 Minuten. Sie können sie jedoch häufiger ausführen.
 
-* Anschließend importieren Sie mithilfe der Option Data Warehouse**Annotationen** Anmerkungen in das Data Warehouse.
+* Anschließend importieren Sie Anmerkungen in Data Warehouse mithilfe der Option Data Warehouse **Anmerkungen**.
 * Wenn Sie Anmerkungen in Berichte aufnehmen möchten, die Sie mithilfe der Berichterstellungs-Tools des OnCommand Insight Reporting Portals erstellen, müssen Sie das Metadatenmodell für die OnCommand Insight-Berichterstellung aktualisieren.
 
 

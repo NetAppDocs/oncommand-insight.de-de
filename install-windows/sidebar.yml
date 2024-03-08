@@ -22,10 +22,6 @@ entries:
     url: "/install-windows/data-warehouse-and-reporting-server-requirements.html"
   - title: Anforderungen an den Remote Acquisition Unit-Server
     url: "/install-windows/remote-acquisition-unit-server-requirements.html"
-  - title: Anforderungen bei der Anomalieerkennung
-    url: "/install-windows/anomaly-detection-requirements.html"
-  - title: Anforderungen an die Benutzeroberfläche von Insight Java
-    url: "/install-windows/insight-java-ui-requirements.html"
   - title: Von OnCommand Insight unterstützte Browser
     url: "/install-windows/insight-browser-support.html"
 - title: Installationsanleitung für Insight
@@ -49,10 +45,6 @@ entries:
       url: "/install-windows/verifying-the-rau-service.html"
     - title: Überprüfen der Installation der Fernbedienungseinheit
       url: "/install-windows/validating-the-rau-installation.html"
-  - title: Installieren der Software zur Erkennung von Anomalien
-    url: "/install-windows/installing-the-anomaly-detection-software.html"
-  - title: Installieren einer Ethernet-Überwachungseinheit
-    url: "/install-windows/installing-an-ethernet-monitoring-unit-linux.html"
   - title: Überprüfen der Installation
     url: "/install-windows/checking-the-installation.html"
     entries:
@@ -112,8 +104,6 @@ entries:
       url: "/install-windows/back-up-the-security-configuration.html"
     - title: Aktualisierung der Server der Remote-Akquisitionseinheit
       url: "/install-windows/upgrading-remote-acquisition-servers.html"
-    - title: Upgrade des Engine zur Erkennung von Anomalien
-      url: "/install-windows/upgrading-the-anomaly-detection-engine.html"
   - title: Aufgaben nach dem Upgrade werden ausgeführt
     url: "/install-windows/completing-post-upgrade-tasks.html"
     entries:
@@ -150,5 +140,3 @@ entries:
     url: "/install-windows/uninstalling-the-data-warehouse-software.html"
   - title: Deinstallieren der Software der Remote-Erfassungseinheit
     url: "/install-windows/uninstalling-the-remote-acquisition-unit-software.html"
-  - title: Deinstallieren des Anomalieerkennungsmotors
-    url: "/install-windows/uninstalling-the-anomaly-detection-engine-linux.html"

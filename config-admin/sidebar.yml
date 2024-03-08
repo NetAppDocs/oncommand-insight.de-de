@@ -28,8 +28,6 @@ entries:
       url: "/config-admin/editing-a-user-definition.html"
     - title: Löschen eines Benutzerkontos
       url: "/config-admin/deleting-a-user-account.html"
-    - title: Konfigurieren von Single Sign-On (SSO)
-      url: "/config-admin/configuring-sso.html"
   - title: Festlegen einer Warnmeldung für die Anmeldung
     url: "/config-admin/configuring-a-login-warning-message.html"
   - title: Insight Sicherheit
@@ -135,17 +133,6 @@ entries:
       url: "/config-admin/editing-applications.html"
     - title: Löschen von Anwendungen
       url: "/config-admin/deleting-an-application.html"
-  - title: Funktionsweise der Erkennung von OnCommand Insight-Anomalien
-    url: "/config-admin/about-oncommand-insight-anomaly-detection.html"
-    entries:
-    - title: Konfigurieren von Anwendungen für die Erkennung von Anomalien
-      url: "/config-admin/configuring-anomaly-detection-for-applications.html"
-    - title: Verwenden des Abschnitts „Anomalien“
-      url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
-    - title: Überwachungsstatus der Anomalieerkennung
-      url: "/config-admin/anomaly-detection-monitoring-status.html"
-    - title: Erstellen einer Richtlinie zur Anwendungsleistung
-      url: "/config-admin/creating-an-application-performance-policy.html"
   - title: Die Hierarchie Ihrer Geschäftseinheiten
     url: "/config-admin/your-business-entities-hierarchy.html"
     entries:
@@ -295,17 +282,6 @@ entries:
   url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
 - title: SSL-Zertifikate werden importiert
   url: "/config-admin/importing-an-ssl-certificate.html"
-- title: Funktionsweise der Erkennung von OnCommand Insight-Anomalien
-  url: "/config-admin/about-oncommand-insight-anomaly-detection.html"
-  entries:
-  - title: Konfigurieren von Anwendungen für die Erkennung von Anomalien
-    url: "/config-admin/configuring-anomaly-detection-for-applications.html"
-  - title: Verwenden des Abschnitts „Anomalien“
-    url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
-  - title: Überwachungsstatus der Anomalieerkennung
-    url: "/config-admin/anomaly-detection-monitoring-status.html"
-  - title: Erstellen einer Richtlinie zur Anwendungsleistung
-    url: "/config-admin/creating-an-application-performance-policy.html"
 - title: Die Hierarchie Ihrer Geschäftseinheiten
   url: "/config-admin/your-business-entities-hierarchy.html"
   entries:
@@ -659,8 +635,6 @@ entries:
         url: "/config-admin/moving-mysql-data-using-the-command-line.html"
     - title: Erzwingen von Anmerkungsaktualisierungen
       url: "/config-admin/forcing-annotation-updates.html"
-    - title: Konfigurieren der Client-Einstellungen
-      url: "/config-admin/configuring-client-settings.html"
     - title: Überprüfen des Status der Serverressourcen
       url: "/config-admin/checking-the-status-of-server-resources.html"
     - title: Suchen von Geisterdatenquellen
@@ -715,11 +689,6 @@ entries:
         - title: Verwenden des Abschnitts „Benutzerdaten“ zum Zuweisen oder Ändern
             von Anmerkungen
           url: "/config-admin/what-the-user-data-section-enables-you-to-do-with-annotations.html"
-      - title: Anomalien
-        url: "/config-admin/anomalies.html"
-        entries:
-        - title: Verwenden des Abschnitts „Anomalien“
-          url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
       - title: Expertenansicht
         url: "/config-admin/expert-view.html"
         entries:

@@ -94,12 +94,6 @@ Ihre Anmerkungen werden in der Liste auf der Seite Anmerkungen angezeigt.
 
 
 
-
-
-== Nachdem Sie fertig sind
-
-In der Web-Benutzeroberfläche steht die Beschriftung sofort zur Verfügung. Um die Anmerkung im Java-Client zu verwenden, müssen Sie jeden laufenden Java-Client neu starten, bevor Sie die Anmerkung anwenden können. Wenn Sie Anmerkungswerte hinzufügen oder ändern oder einen Anmerkungstyp löschen, müssen Sie den Java-Client nicht neu starten.
-
 *Verwandte Informationen*
 
 link:importing-and-exporting-user-data.md#["Importieren und Exportieren von Benutzerdaten"]

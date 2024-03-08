@@ -39,7 +39,6 @@ Für Insight Server können Software-Firewalls installiert sein. Die "Löcher", 
 * Remote-Erfassungseinheiten, die eine Verbindung zum Insight-Server herstellen möchten
 * OCI DWH-Server mit Verbindungen zu diesem Insight-Server.
 * Programmatische Interaktionen mit der Insight REST-API
-* Anomaly Detection Engine versucht, Insight-Performance-Daten für das Rendern von Anomalieinformationen zu liefern
 
 
 Unsere allgemeine Empfehlung für alle, die eine Firewall auf Insight Server-Ebene implementieren möchten, ist der HTTPS-Zugriff auf alle IP-Blöcke des Unternehmensnetzwerks.

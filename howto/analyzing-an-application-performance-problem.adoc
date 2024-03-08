@@ -35,7 +35,7 @@ Beim Durchführen einer Suche können Sie vor dem Objektnamen einen Objektdeskri
 ====
 . Wenn Sie in den Suchergebnissen „Exchange 2016“ auswählen, wird die Zielseite der Anwendung angezeigt.
 +
-image::../media/exch2016-land-page.gif[Exch2016 Landseite]
+image::../media/exch2016-land-page.png[Exch2016 Landseite]
 
 +
 Auf der Landing Page der Anwendung sind folgende Informationen von Interesse:

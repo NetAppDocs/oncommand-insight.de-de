@@ -17,7 +17,7 @@ In diesem FAQ werden häufig gestellte Fragen zur Fehlerbehebung bei OnCommand I
 
 == Wie kann ich eine Liste aller gierigen Ressourcen in meiner Umgebung erstellen?
 
-Die Korrelationsanalyse von OCI hilft bei der Identifizierung übergriffiger und beeinträchtigter Ressourcen für einen bestimmten Service-Pfad. Die von der Korrelationsfunktion generierte Analyse wird in Echtzeit durchgeführt, während jedes Objekt angezeigt wird. Die Analyse ermöglicht es, Performance-Probleme schneller zu beheben und die Ursache zu identifizieren. Die Untersuchung generierter Verstöße gegen definierte Performance-Richtlinien sind ein Ansatzpunkt für die Erkennung übergriffiger und beeinträchtigter Ressourcen. Die Funktionen zur Erkennung von Anomalien im OCI können auch als aktiverer Ansatz genutzt werden, um die übergriffigen und beeinträchtigten Ressourcen einer Applikationsinfrastruktur zu ermitteln, bevor sie zu Serviceunterbrechungen werden. Sowohl Widgets als auch Dashboards, die die neueste Abfragefunktion verwenden, helfen beim Filtern, Sortieren und Visualisieren von Ressourcen mit mehr als erwarteten IOPS (übergriffige), Auslastung oder Latenz.
+Die Korrelationsanalyse von OCI hilft bei der Identifizierung übergriffiger und beeinträchtigter Ressourcen für einen bestimmten Service-Pfad. Die von der Korrelationsfunktion generierte Analyse wird in Echtzeit durchgeführt, während jedes Objekt angezeigt wird. Die Analyse ermöglicht es, Performance-Probleme schneller zu beheben und die Ursache zu identifizieren. Die Untersuchung generierter Verstöße gegen definierte Performance-Richtlinien sind ein Ansatzpunkt für die Erkennung übergriffiger und beeinträchtigter Ressourcen. Sowohl Widgets als auch Dashboards, die die neueste Abfragefunktion verwenden, helfen beim Filtern, Sortieren und Visualisieren von Ressourcen mit mehr als erwarteten IOPS (übergriffige), Auslastung oder Latenz.
 
 
 
@@ -28,8 +28,6 @@ Ja. Die Performance-Fehlerbehebung in OCI kann auf verschiedene Weise erreicht w
 Das OCI Dashboard für Verstöße ermöglicht Benutzern eine Priorisierung von Vorgängen basierend auf Anzahl der Ereignisse, Dauer und Tageszeit. Ein Beispiel für verschiedene Alarmtypen sind Latenz, IOPS, Auslastung, Schweregrad, Geschäftsbereich oder sogar zugehörige Applikationen.
 
 Die Korrelationsanalyse von OCI hilft Administratoren, Objekte der betroffenen Ressource zu vergleichen und ihre Auswirkungen auf IOPS, Latenz, Auslastung, CPU- und BB-Gutschriften zu bestimmen.
-
-Die neuesten Fortschritte von OCI bei der Anomalieerkennung und ethernet-Überwachung bieten einen aggressiveren und proaktiven Ansatz zur Erkennung abweichender Ressourcenverhalten, bevor es zu Serviceunterbrechungen oder -Ausfällen kommt.
 
 Die Query-Technologie und Widget Dashboards von OCI ermöglichen das genaue Auffinden von Details in organisierten Ansichten, die auf Problembereiche im Datacenter abzielen.
 

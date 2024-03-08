@@ -125,7 +125,7 @@ Das bedeutet, dass wenn Ihre Active Directory-Administratoren die CA-Zertifikate
 
 ** Java und Mozilla Firefox haben ihre eigenen Zertifikatsspeicher.
 +
-Wenn Ihre Systemadministratoren das Einspielen der CA-Zertifikate in die vertrauenswürdigen Zertifikatsspeicher dieser Anwendungen nicht automatisieren, generieren Sie möglicherweise weiterhin mithilfe des Insight Java-Clients oder Firefox-Browsers aufgrund eines nicht vertrauenswürdigen Zertifikats Zertifikatwarnungen, selbst wenn das selbstsignierte Zertifikat ersetzt wurde. Eine zusätzliche Anforderung ist, die Zertifikatskette Ihres Unternehmens in den trustore zu installieren.
+Wenn Ihre Systemadministratoren das Einspielen der CA-Zertifikate in die vertrauenswürdigen Zertifikatsspeicher dieser Anwendungen nicht automatisieren, kann die Verwendung des Firefox-Browsers weiterhin Zertifikatwarnungen aufgrund eines nicht vertrauenswürdigen Zertifikats generieren, selbst wenn das selbstsignierte Zertifikat ersetzt wurde. Eine zusätzliche Anforderung ist, die Zertifikatskette Ihres Unternehmens in den trustore zu installieren.
 
 
 

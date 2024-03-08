@@ -37,7 +37,7 @@ Das Dialogfeld Anmerkung hinzufügen wird angezeigt.
 
 . Klicken Sie Auf *Speichern*.
 +
-Die Anmerkung wird dem Asset zugewiesen. Sie können Assets später mithilfe einer Abfrage nach Anmerkungen filtern. Wenn Sie Assets nach Anmerkungen gruppieren möchten, müssen Sie die Java-Benutzeroberfläche verwenden.
+Die Anmerkung wird dem Asset zugewiesen. Sie können Assets später mithilfe einer Abfrage nach Anmerkungen filtern.
 
 . Wenn Sie den Wert der Anmerkung ändern möchten, nachdem Sie sie zugewiesen haben, klicken Sie auf image:../media/change-annotation-value.gif[""] Und wählen Sie einen anderen Wert aus.
 +

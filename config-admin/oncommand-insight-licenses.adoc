@@ -102,7 +102,7 @@ Applikation
  a| 
 Ja.
  a| 
-Keine Leistungsdaten oder Diagramme; keine Widgets zur Erkennung von Anomalien
+Keine Leistungsdaten oder Diagramme
 
 
 

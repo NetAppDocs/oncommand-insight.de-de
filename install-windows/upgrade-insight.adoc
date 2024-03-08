@@ -2,7 +2,7 @@
 permalink: install-windows/upgrade-insight.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Normalerweise muss ein Upgrade auf allen Insight Servern \ (Insight Server, Data Warehouse Server, Remote Acquisition Unit, Ethernet Monitoring Unit\) durchgeführt werden, mit Ausnahme des Servers, auf dem die Software Anomaly Detection ausgeführt wird. Die Upgrade-Anforderungen für eine neue Version von OnCommand Insight sollten immer in den Versionshinweisen nachschlagen.' 
+summary: 'Normalerweise muss ein Upgrade auf allen Insight-Servern durchgeführt werden \(Insight-Server, Data Warehouse-Server, Remote-Erfassungseinheit.\). Die Upgrade-Anforderungen für eine neue Version von OnCommand Insight sollten immer in den Versionshinweisen nachschlagen.' 
 ---
 = OnCommand Insight wird aktualisiert
 :allow-uri-read: 
@@ -11,6 +11,6 @@ summary: 'Normalerweise muss ein Upgrade auf allen Insight Servern \ (Insight Se
 
 
 [role="lead"]
-Normalerweise muss ein Upgrade auf allen Insight Servern (Insight Server, Data Warehouse Server, Remote Acquisition Unit, Ethernet Monitoring Unit) durchgeführt werden, mit Ausnahme des Servers, auf dem die Software Anomaly Detection ausgeführt wird. Die Upgrade-Anforderungen für eine neue Version von OnCommand Insight sollten immer in den Versionshinweisen nachschlagen.
+Normalerweise muss ein Upgrade auf allen Insight Servern (Insight Server, Data Warehouse Server, Remote Acquisition Unit) durchgeführt werden. Die Upgrade-Anforderungen für eine neue Version von OnCommand Insight sollten immer in den Versionshinweisen nachschlagen.
 
 Sofern nicht anders angegeben, gelten die Anforderungen und Verfahren für das Upgrade von Insight 7.x auf die aktuelle Version von Insight. Wenn Sie ein Upgrade von einer Version vor 7.0 durchführen, wenden Sie sich an Ihren Kundenbetreuer.
