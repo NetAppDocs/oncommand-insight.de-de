@@ -44,4 +44,8 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 In den Benachrichtigungsdateien finden Sie Informationen zu Urheberrechten und Lizenzen von Drittanbietern, die in der NetApp Software verwendet werden.
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2683210["Hinweis für OnCommand Insight 7.3"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2887138["Hinweis für OnCommand Insight 7.3.15"^]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2882721["Hinweis für OnCommand Insight 7.3.14"^]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2881199["Hinweis für OnCommand Insight 7.3.13"^]
