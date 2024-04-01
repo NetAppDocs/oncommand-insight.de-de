@@ -1,0 +1,246 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_kafka.html 
+keywords: telegraf, installation, install, kafka 
+summary: Konfiguration der Kafka Datensammler 
+---
+= Kafka Data Collector
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights verwendet diese Datensammler, um Metriken aus Kafka zu sammeln.
+
+
+
+== Installation
+
+. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*. Wählen Sie Kafka.
++
+Wählen Sie das Betriebssystem oder die Plattform aus, auf dem der Telegraf-Agent installiert ist.
+
+. Wenn Sie noch keinen Agent für die Sammlung installiert haben oder einen Agent für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um das zu erweitern link:task_config_telegraf_agent.html["Agenten-Installation"] Anweisungen.
+. Wählen Sie den Agent-Zugriffsschlüssel für diesen Datensammler aus. Sie können einen neuen Agent-Zugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agent Access Key* klicken. Best Practice: Verwenden Sie einen anderen Agent-Zugriffsschlüssel nur, wenn Sie Datensammler gruppieren möchten, zum Beispiel nach Betriebssystem/Plattform.
+. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.
+
+
+image:KafkaDCConfigWindows.png["Konfiguration von Kafka"]
+
+
+
+== Einrichtung
+
+Das Kafka Plugin basiert auf dem telegraf's Jolokia Plugin. Um Informationen aus allen Kafka-Brokern zu sammeln, muss JMX über Jolokia auf allen Komponenten konfiguriert und zugänglich gemacht werden.
+
+
+
+=== Kompatibilität
+
+Konfiguration wurde gegen Kafka Version 0.11.0 entwickelt.
+
+
+
+=== Einrichtung
+
+Alle Anweisungen unten Nehmen wir an, dass Ihr Installationsort für kafka '/opt/kafka' ist. Sie können die nachfolgenden Anweisungen an Ihren Installationsort anpassen.
+
+
+
+==== Jolokia Agent Jar
+
+Eine Version die Jolokia Agent jar-Datei muss sein link:https://jolokia.org/download.html["Heruntergeladen"]. Die gegen die Version getestete war Jolokia Agent 1.6.0.
+
+Anweisungen unten gehen davon aus, dass die heruntergeladene JAR-Datei (jolokia-jvm-1.6.0-Agent.jar) unter dem Speicherort '/opt/kafka/libs/' abgelegt wird.
+
+
+
+==== Kafka Brokers
+
+Um Kafka Brokers so zu konfigurieren, dass sie die Jolokia API aussetzen, können Sie in <KAFKA_HOME>/bin/kafka-Server-Start.sh kurz vor dem Anruf „kafka-run-class.sh“ Folgendes hinzufügen:
+
+[listing]
+----
+export JMX_PORT=9999
+export RMI_HOSTNAME=`hostname -I`
+export KAFKA_JMX_OPTS="-javaagent:/opt/kafka/libs/jolokia-jvm-1.6.0-agent.jar=port=8778,host=0.0.0.0  -Dcom.sun.management.jmxremote.password.file=/opt/kafka/config/jmxremote.password -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=$RMI_HOSTNAME -Dcom.sun.management.jmxremote.rmi.port=$JMX_PORT"
+----
+Beachten Sie, dass das obige Beispiel 'Hostname -i' verwendet, um die Umgebungsvariable 'RMI_HOSTNAME' einzurichten. In mehreren IP-Maschinen muss dies optimiert werden, um die IP, die Sie für RMI-Verbindungen interessieren, zu erfassen.
+
+Sie können einen anderen Port für JMX (9999 oben) und Jolokia (8778) wählen. Wenn Sie eine interne IP haben, um Jolokia zu sperren, können Sie die „Catch all“ 0.0.0.0 durch Ihre eigene IP ersetzen. Beachten Sie, dass diese IP über das telegraf-Plugin zugänglich sein muss. Sie können die Option '-Dcom.sun.management.jmxremote.authenticate=false' verwenden, wenn Sie nicht authentifizieren möchten. Nutzung auf eigenes Risiko.
+
+
+
+== Objekte und Zähler
+
+Folgende Objekte und ihre Zähler werden gesammelt:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objekt: | Kennungen: | Attribute: | Datenpunkte: 
+
+
+| Kafka Broker | Cluster
+Namespace
+Broker | Node-Name
+Knoten-IP | Replica Manager Fetcher Max. Verzögerung
+Zookeeper Client-Verbindungen
+ZooKeeper Client-Verbindungen (15 m Rate)
+ZooKeeper Client-Verbindungen (5 m Frequenz)
+ZooKeeper Client-Verbindungen (mittlere Rate)
+ZooKeeper Client-Verbindungen (1 m Rate)
+Partitionsanzahl Des Replikatmanagers
+Thread Count Daemon
+Thread-Anzahl Spitze
+Thread-Anzahl Aktuell
+Thread-Anzahl Insgesamt Gestartet
+Offline-Partitionen
+Gesamtdauer der Anfrage erstellen (50. Perzentil)
+Gesamtzeit der Anfrage erstellen (75. Perzentil)
+Gesamtzeit der Anfrage erstellen (95. Perzentil)
+Gesamtzeit Der Anfrage Erstellen (98 Perzentil)
+Gesamtzeit der Anfrage erstellen (999. Perzentil)
+Gesamtzeit der Anfrage erstellen (99. Perzentil)
+Gesamtzeit Der Anfragen Erstellen
+Anfrage Erstellen Gesamtzeit Max
+Anfragen Erstellen Gesamtzeit Mittel
+Anfrage Erstellen Gesamtzeit Min
+Anfrage Erstellen Gesamtzeit Stddev
+Der ISR von Replica Manager wird verkleinert
+Replikate Manager ISR schrumpft (15 m Rate)
+Replikate Manager ISR schrumpft (5-m-Rate)
+Replikate Manager ISR schrumpft (mittlere Rate)
+Replikate Manager ISR schrumpft (1 m Rate)
+Request Handler Mittl. Frei
+Request Handler mittl. Leerlauf (15 m Rate)
+Request Handler durchschn. Leerlauf (5 m Rate)
+Request Handler mittl. Frei (mittlere Rate)
+Request Handler mittl. Leerlauf (1 m Rate)
+Garbage Collection G1 Anzahl alter Generationen
+Garbage Collection G1 Zeit der alten Generation
+Garbage Collection G1 Young Generation Count
+Garbage Collection G1 Young Generation Time
+Zookeeper, Nur-Lese-Verbindung
+ZooKeeper – nur-Lese-Verbindungen (15 m)
+ZooKeeper, nur-Lese-Verbindungen (5 m Frequenz)
+ZooKeeper nur-Lese-Verbindungen (mittlere Rate)
+ZooKeeper – nur-Lese-Verbindungen (1 m Rate)
+Durchschn. Leerlaufleistung Des Netzwerkprozessors
+Anfragen Fetch Follower Gesamtzeit (50. Perzentil)
+Anfragen holen Follower Gesamtzeit (75. Perzentil)
+Anfragen Fetch Follower Gesamtzeit (95. Perzentil)
+Anfragen holen Follower Gesamtzeit (98. Perzentil)
+Anfragen rufen Follower Gesamtzeit ab (999. Perzentil)
+Anfragen holen Follower Gesamtzeit (99. Perzentil)
+Anfragen Rufen Follower Gesamtzeit Ab
+Anforderungen Abrufen Follower Gesamtzeit Max
+Anfragen Holen Follower Gesamtzeit Mittelwert
+Anforderungen Abrufen Follower Gesamtzeit Min
+Anfragen Rufen Follower Gesamtzeit Stddev Ab
+Anfragen, die in „Purgatory produzieren“ warten
+Netzwerkanfragen Rufen Den Verbraucher Ab
+Netzwerkanfragen abrufen Verbraucher (5 m Rate)
+Netzwerkanfragen rufen Verbraucher ab (15 m Rate)
+Netzwerkanfragen abrufen Verbraucher (mittlere Rate)
+Netzwerkanfragen abrufen Verbraucher (1 m Rate)
+Unsaubere Wahl Der Führer
+Unsaubere Wahl der Führer (15 Mio. Satz)
+Unsaubere Wahl der Führer (5 Mio. Satz)
+Unsaubere Wahl der Führer (Mittelwert)
+Unsaubere Wahl der Führer (1 Mio. Satz)
+Aktive Controller
+Heap-Speicher Festgeschrieben
+Heap Memory Init
+Max. Heap-Speicher
+Verwendeter Heap-Speicher
+Zookeeper-Sitzung Läuft Ab
+ZooKeeper-Sitzung läuft ab (15-m-Rate)
+ZooKeeper-Sitzung läuft ab (5-m-Rate)
+ZooKeeper-Sitzung läuft ab (mittlere Rate)
+ZooKeeper-Sitzung läuft ab (1 m Rate)
+Fehler Bei Der Zookeeper-Authentifizierung
+Fehler bei der ZooKeeper-Authentifizierung (15 m Rate)
+Fehler bei der ZooKeeper-Authentifizierung (5-m-Rate)
+Fehler bei der ZooKeeper-Authentifizierung (mittlere Rate)
+Fehler bei der ZooKeeper-Authentifizierung (1 m Rate)
+Wahlzeit des Führers (50. Perzentil)
+Wahlzeit des Vorgesetzten (75. Perzentil)
+Wahlzeit des Vorgesetzten (95. Perzentil)
+Wahlzeit des Führers (98. Perzentil)
+Wahlzeit des Führers (999. Perzentil)
+Wahlzeit des Führers (99. Perzentil)
+Anzahl Der Leader-Wahlen
+Wahlzeit des Leiters (15 Mio. Satz)
+Wahlzeit des Leiters (5 Mio. Satz)
+Max. Wahlzeit Des Vorgesetzten
+Wahlzeit Des Vorgesetzten Mittelwert
+Wahlzeit des Leiters (Mittelwert)
+Wahlzeit Des Vorgesetzten Min
+Wahlzeit des Leiters (1 Mio. Satz)
+Wahlzeit des Vorgesetzten (stddev)
+Netzwerkanforderungen Rufen Den Follower Ab
+Netzwerkanfragen abrufen Follower (15 m Rate)
+Netzwerkanfragen abrufen Follower (5 m Rate)
+Netzwerkanfragen abrufen Follower (mittlere Rate)
+Netzwerkanfragen abrufen Follower (1 m Rate)
+Nachrichten Zu Brokerthemen
+Nachrichten zum Thema des Brokers (15 m Rate)
+Nachrichten zu Themen des Brokers (5 m Rate)
+Nachrichten zu Themen des Brokers (mittlere Rate)
+Nachrichten zum Thema des Brokers (1 m Rate)
+Broker-Thema Bytes In
+Broker Topic Bytes in (15 m Rate)
+Broker Topic Bytes in (5-m-Rate)
+Broker Topic Bytes in (mittlere Rate)
+Broker Topic Bytes in (1 m Rate)
+Zookeeper Trennt Die Anzahl Der Verbindungen
+ZooKeeper trennt sich (15 m Frequenz)
+ZooKeeper schaltet ab (5 m Frequenz)
+ZooKeeper schaltet sich ab (mittlere Rate)
+ZooKeeper trennt sich (1 m Frequenz)
+Netzwerkanfragen rufen die Gesamtzeit des Verbrauchers ab (50. Perzentil)
+Netzwerkanfragen rufen die Gesamtzeit des Verbrauchers ab (75. Perzentil)
+Netzwerkanfragen rufen die Gesamtzeit des Verbrauchers ab (95. Perzentil)
+Netzwerkanfragen rufen die Gesamtzeit des Verbrauchers ab (98. Perzentil)
+Netzwerkanfragen rufen die Gesamtzeit des Verbrauchers ab (999. Perzentil)
+Netzwerkanfragen rufen die Gesamtzeit des Verbrauchers ab (99. Perzentil)
+Netzwerkanfragen Rufen Die Gesamtzeit Des Verbrauchers Ab
+Netzwerkanforderungen Rufen Die Maximale Gesamtzeit Des Verbrauchers Ab
+Netzwerkanfragen Rufen Den Gesamtzeit-Mittelwert Des Verbrauchers Ab
+Netzwerkanforderungen Rufen Die Gesamtzeit Des Verbrauchers Ab
+Netzwerkanforderungen Rufen Die Gesamtzeit Des Verbrauchers Ab
+Führungsanzahl
+Anfragen, die im Fetch Purgatory warten
+Broker-Thema Bytes Heraus
+Broker Topic Bytes out (15 m Rate)
+Broker Topic Bytes out (5-m-Rate)
+Broker Topic Bytes out (mittlere Rate)
+Broker Topic Bytes out (1 m Rate)
+Zookeeper Authentifizierungen
+ZooKeeper-Authentifizierung (15 m Rate)
+ZooKeeper-Authentifizierung (5-m-Rate)
+ZooKeeper Authentifizierungen (mittlere Rate)
+ZooKeeper-Authentifizierung (1 m Rate)
+Anfragen Produzieren Anzahl
+Anforderungen produzieren (15 m Rate)
+Anforderungen produzieren (5-m-Rate)
+Anfrage produzieren (Mittelwert)
+Anfragen produzieren (1-m-Rate)
+Replikatmanager ISR wird erweitert
+Replica Manager ISR erweitert (15 m Rate)
+Replica Manager ISR erweitert (5-m-Rate)
+Replica Manager ISR erweitert (mittlere Rate)
+Replica Manager ISR erweitert (1 m Rate)
+Replica Manager Unter Replizierten Partitionen 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen finden Sie im link:concept_requesting_support.html["Unterstützung"] Seite.

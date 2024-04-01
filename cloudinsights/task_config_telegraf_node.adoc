@@ -1,0 +1,173 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_node.html 
+keywords: telegraf, installation, install, node, host 
+summary: Konfiguration des Datensammlers Flik 
+---
+= Erfassung Von Node-Daten
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights sammelt Kennzahlen von dem Knoten, auf dem Sie einen Agent installieren.
+
+
+
+== Installation
+
+. Wählen Sie unter *Observability > Collectors* ein Betriebssystem/eine Plattform aus. Beachten Sie, dass durch die Installation eines Datensammlers für die Integration (Kubernetes, Docker, Apache usw.) auch die Erfassung von Node-Daten konfiguriert wird.
+. Befolgen Sie die Anweisungen, um den Agenten zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.
+
+
+
+
+== Objekte und Zähler
+
+Die folgenden Objekte und ihre Zähler werden als Node-Kennzahlen erfasst:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objekt: | Kennungen: | Attribute: | Datenpunkte: 
+
+
+| Knoten Dateisystem | Node-UUID
+Gerät
+Pfad
+Typ | Knoten-IP
+Node-Name
+Node-BS
+Modus | Kostenlos
+Inodes Frei
+Inodes Gesamt
+Verwendete Inodes
+Gesamt
+Insgesamt Verwendet
+Verwendet 
+
+
+| Node-Festplatte | Node-UUID
+Festplatte | Knoten-IP
+Node-Name
+Node-BS | E/A-Zeit insgesamt
+IOPS in Bearbeitung
+Gelesene Bytes (pro Sekunde)
+Lesezeit Gesamt
+Lesevorgänge (pro Sekunde)
+Gewichtete E/A-Zeit gesamt
+Schreib-Bytes (pro Sekunde)
+Schreibzeit Gesamt
+Schreibvorgänge (pro Sekunde)
+Aktuelle Länge Der Festplattenwarteschlange
+Schreibzeit
+Lesezeit
+I/O-Zeit 
+
+
+| Knoten-CPU | Node-UUID
+CPU | Knoten-IP
+Node-Name
+Node-BS | CPU-Auslastung des Systems
+Benutzer-CPU-Auslastung
+CPU-Auslastung im Leerlauf
+CPU-Auslastung des Prozessors
+Unterbrechen Sie die CPU-Nutzung
+DPC-CPU-Auslastung 
+
+
+| Knoten | Node-UUID | Knoten-IP
+Node-Name
+Node-BS | Kernel-Boot-Zeit
+Kernel-Kontext-Switches (pro Sekunde)
+Kernel Entropy Verfügbar
+Kernel-Interrupts (pro Sekunde)
+Kernel-Prozesse Forked (pro Sekunde)
+Speicher Aktiv
+Verfügbarer Speicher Insgesamt
+Verfügbarer Speicher
+Speicher Gepuffert
+Cache-Speicher
+Speicherfestsetzgrenze
+Speicher Als Belegt
+Speicher Verschmutzt
+Speicherfrei
+Speicher Hoch Frei
+Speicher Insgesamt Hoch
+Speicher – Riesige Seitengröße
+Memory Riesige Seiten Kostenlos
+Speicher Riesige Seiten Insgesamt
+Wenig Freier Speicher
+Niedriger Gesamtspeicher
+Speicher Zugeordnet
+Tabellen Der Speicherseite
+Freigegebener Speicher
+Memory Slab
+Speicheraustausch Im Cache
+Freier Speicheraustausch
+Speicheraustausch Insgesamt
+Speicher Gesamt
+Insgesamt Verwendeter Speicher
+Verwendeter Speicher
+Memory Vmalloc Chunk
+Speicher Vmalloc Gesamt
+Verwendeter Speicher-Vmalloc
+Speicher Verdrahtet
+Memory Writeback Total
+Memory Writeback Tmp
+Fehler Im Speicher-Cache
+Speicher Benötigt Null Fehler
+Fehler Auf Der Speicherseite
+Speicherseiten
+Speicher Nicht Ausgelagert
+Speicher Ausgelagert
+Arbeitsspeicher-Cache-Kern
+Speicher-Standby-Cache Normal
+Speicher-Standby-Cache-Reserve
+Fehler Beim Speicherübergang
+Prozesse Blockiert
+Prozesse Tot
+Prozesse Im Leerlauf
+Verarbeitet Funkruf
+Laufende Prozesse
+Prozesse Schlafen
+Prozesse Angehalten
+Prozesse Insgesamt
+Verarbeitet Gesamtgewindevorgänge
+Prozesse Unbekannt
+Verarbeitet Zombies
+Länge Der Prozessorwarteschlange
+Kostenloser Austausch
+Summe Tauschen
+Genutzte Summe Austauschen
+Austausch Verwendet
+Eintauschen
+Austausch
+Systembetriebszeit
+System Num CPU
+Systemanzahl Benutzer
+Systemanrufe 
+
+
+| Node-Netzwerk | Netzwerkschnittstelle
+Node-UUID | Node-Name
+Knoten-IP
+Node-BS | Empfangene Bytes
+Gesendete Bytes
+Ausgelegte Pakete Verworfen
+Fehler Bei Paketausgang
+Empfangene Pakete Verworfen
+Empfangene Pakete
+Empfangene Pakete
+Pakete Gesendet 
+|===
+
+
+== Einrichtung
+
+Informationen zur Einrichtung und Fehlerbehebung finden Sie im link:task_config_telegraf_agent.html["Konfigurieren eines Agenten"] Seite.

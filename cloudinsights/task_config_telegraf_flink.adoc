@@ -1,0 +1,264 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_flink.html 
+keywords: telegraf, installation, install, flink 
+summary: Konfiguration des Datensammlers Flik 
+---
+= Flik Data Collector
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights verwendet diese Datenerfassung zum Erfassen von Kennzahlen aus Flink.
+
+
+
+== Installation
+
+. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*. Wählen Sie „Flink“.
++
+Wählen Sie das Betriebssystem oder die Plattform aus, auf dem der Telegraf-Agent installiert ist.
+
+. Wenn Sie noch keinen Agent für die Sammlung installiert haben oder einen Agent für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um das zu erweitern link:task_config_telegraf_agent.html["Agenten-Installation"] Anweisungen.
+. Wählen Sie den Agent-Zugriffsschlüssel für diesen Datensammler aus. Sie können einen neuen Agent-Zugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agent Access Key* klicken. Best Practice: Verwenden Sie einen anderen Agent-Zugriffsschlüssel nur, wenn Sie Datensammler gruppieren möchten, zum Beispiel nach Betriebssystem/Plattform.
+. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.
+
+
+image:FlinkDCConfigWindows.png["Flik-Konfiguration"]
+
+
+
+== Einrichtung
+
+Eine vollständige Flink-Implementierung umfasst die folgenden Komponenten:
+
+JobManager: Das Primärsystem Flik. Koordiniert eine Reihe von TaskManagers. In einer Konfiguration mit hoher Verfügbarkeit verfügt das System über mehr als einen JobManager.
+Taskmanager: Hier werden Flik-Operatoren ausgeführt.
+Das Flink Plugin basiert auf dem telegraf Jolokia Plugin. Als Voraussetzung für die Erfassung von Informationen aus allen Flik-Komponenten muss JMX auf allen Komponenten konfiguriert und über Jolokia freigelegt werden.
+
+
+
+=== Kompatibilität
+
+Die Konfiguration wurde gegen die Version 1.7 von Flink entwickelt.
+
+
+
+=== Einrichtung
+
+
+
+==== Jolokia Agent Jar
+
+Für alle einzelnen Komponenten muss eine Version der Jolokia Agent JAR-Datei heruntergeladen werden. Die gegen getestete Version war link:https://jolokia.org/download.html["Jolokia Agent 1.6.0"].
+
+Anweisungen unten gehen davon aus, dass die heruntergeladene JAR-Datei (jolokia-jvm-1.6.0-Agent.jar) unter dem Speicherort '/opt/flink/lib/' platziert wird.
+
+
+
+==== JobManager
+
+Um JobManager so zu konfigurieren, dass die Jolokia API freigegeben wird, können Sie die folgende Umgebungsvariable auf Ihren Knoten einrichten und dann den JobManager neu starten:
+
+ export FLINK_ENV_JAVA_OPTS="-javaagent:/opt/flink/lib/jolokia-jvm-1.6.0-agent.jar=port=8778,host=0.0.0.0"
+Sie können einen anderen Port für Jolokia (8778) wählen. Wenn Sie eine interne IP haben, um Jolokia zu sperren, können Sie die „Catch all“ 0.0.0.0 durch Ihre eigene IP ersetzen. Beachten Sie, dass diese IP über das telegraf-Plugin zugänglich sein muss.
+
+
+
+==== Taskmanager
+
+So konfigurieren Sie TaskManager(s), um die Jolokia-API zu öffnen, können Sie die folgende Umgebungsvariable auf Ihren Knoten einrichten und dann den TaskManager neu starten:
+
+ export FLINK_ENV_JAVA_OPTS="-javaagent:/opt/flink/lib/jolokia-jvm-1.6.0-agent.jar=port=8778,host=0.0.0.0"
+Sie können einen anderen Port für Jolokia (8778) wählen. Wenn Sie eine interne IP haben, um Jolokia zu sperren, können Sie die „Catch all“ 0.0.0.0 durch Ihre eigene IP ersetzen. Beachten Sie, dass diese IP über das telegraf-Plugin zugänglich sein muss.
+
+
+
+== Objekte und Zähler
+
+Folgende Objekte und ihre Zähler werden gesammelt:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objekt: | Kennungen: | Attribute: | Datenpunkte: 
+
+
+| Flik Task Manager | Cluster
+Namespace
+Server | Node-Name
+Task-Manager-ID
+Knoten-IP | Netzwerkspeichersegmente Verfügbar
+Netzwerkspeichersegmente Insgesamt
+Garbage Collection – Anzahl der PS MarkSweep-Daten
+Garbage Collection PS MarkSweep Time
+Anzahl der PS-Rache für die Speicherbereinigung
+Garbage Collection – PS-rächtselige Zeit
+Heap-Speicher Festgeschrieben
+Heap Memory Init
+Max. Heap-Speicher
+Verwendeter Heap-Speicher
+Thread Count Daemon
+Thread-Anzahl Spitze
+Thread-Anzahl
+Thread-Anzahl Insgesamt Gestartet 
+
+
+| Druckauftrag Einflken | Cluster
+Namespace
+Server
+Job-ID | Node-Name
+Job-Name
+Knoten-IP
+Letzter Externer Checkpoint-Pfad
+Neustartzeit | Ausfallzeit
+Vollständige Neustarts
+Letzte Checkpoint-Ausrichtung Gepuffert
+Dauer Des Letzten Kontrollpunkts
+Größe Des Letzten Kontrollpunkts
+Anzahl der abgeschlossenen Kontrollpunkte
+Anzahl der fehlgeschlagenen Kontrollpunkte
+Anzahl der laufenden Kontrollpunkte
+Anzahl der Kontrollpunkte
+Verfügbarkeit 
+
+
+| Flik Job Manager | Cluster
+Namespace
+Server | Node-Name
+Knoten-IP | Garbage Collection – Anzahl der PS MarkSweep-Daten
+Garbage Collection PS MarkSweep Time
+Anzahl der PS-Rache für die Speicherbereinigung
+Garbage Collection – PS-rächtselige Zeit
+Heap-Speicher Festgeschrieben
+Heap Memory Init
+Max. Heap-Speicher
+Verwendeter Heap-Speicher
+Anzahl Registrierter Task Manager
+Anzahl Der Ausgeführten Jobs
+Verfügbare Aufgabenplätze
+Aufgabenplätze Insgesamt
+Thread Count Daemon
+Thread-Anzahl Spitze
+Thread-Anzahl
+Thread-Anzahl Insgesamt Gestartet 
+
+
+| Flik-Aufgabe | Cluster
+Namespace
+Job-ID
+Task-ID | Server
+Node-Name
+Job-Name
+Index Unteraufgabe
+Versuch-ID der Aufgabe
+Nummer Des Versuchs Der Aufgabe
+Aufgabenname
+Task-Manager-ID
+Knoten-IP
+Wasserzeichen Für Den Aktuellen Eingang | Puffer In Poolnutzung
+Puffer In Warteschlangenlänge
+Puffert Die Poolnutzung
+Puffers Out Queue Length
+Anzahl Puffer In Lokal
+Anzahl Puffer In Lokaler Anzahl Pro Sekunde
+Anzahl Puffer in lokaler Rate pro Sekunde
+Anzahl Puffer In Remote
+Anzahl Puffer In Remote Pro Sekunde Anzahl
+Anzahl Puffer In Remote-Rate Pro Sekunde
+Anzahl Puffer Aus
+Anzahl Der Puffer Pro Sekunde
+Anzahl Der Puffer Pro Sekunde
+Anzahl Der Bytes Im Lokalen Bereich
+Anzahl Der Bytes In Lokaler Anzahl Pro Sekunde
+Anzahl Bytes In Lokaler Rate Pro Sekunde
+Anzahl Bytes In Remote
+Anzahl Der Bytes In Remote Pro Sekunde
+Anzahl Der Bytes Im Remote-Wert Pro Sekunde
+Anzahl Bytes Heraus
+Anzahl Der Bytes Pro Sekunde
+Anzahl Bytes Pro Sekunde Rate
+Anzahl Datensätze In
+Anzahl Datensätze Pro Sekunde Anzahl
+Anzahl Datensätze Pro Sekunde Rate
+Anzahl Datensätze Ausgezogen
+Anzahl Datensätze Pro Sekunde Anzahl
+Anzahl Datensätze Pro Sekunde Rate 
+
+
+| Flik Task Operator | Cluster
+Namespace
+Job-ID
+Benutzer-ID
+Task-ID | Server
+Node-Name
+Job-Name
+Name Des Mitarbeiters
+Index Unteraufgabe
+Versuch-ID der Aufgabe
+Nummer Des Versuchs Der Aufgabe
+Aufgabenname
+Task-Manager-ID
+Knoten-IP | Wasserzeichen Für Den Aktuellen Eingang
+Wasserzeichen Für Stromausgang
+Anzahl Datensätze In
+Anzahl Datensätze Pro Sekunde Anzahl
+Anzahl Datensätze Pro Sekunde Rate
+Anzahl Datensätze Ausgezogen
+Anzahl Datensätze Pro Sekunde Anzahl
+Anzahl Datensätze Pro Sekunde Rate
+Anzahl Der Abgeworbenen Späten Datensätze
+Zugewiesene Partitionen
+Verbrauchte Byte-Rate
+Durchschn. Commit Latency
+Max. Festschreiben Der Latenz
+Commit-Rate
+Commits Fehlgeschlagen
+Commits Erfolgreich
+Verbindungsabschlussrate
+Anzahl Der Verbindungen
+Verbindungserstellungs-Rate
+Zählen
+Durchschn. Abruflatenz
+Max. Abruflatenz
+Abrufrate
+Abrufgröße Durchschn
+Abrufgröße Max
+Durchlaufzeit Abrufen Durchschnitt
+Holen Throttle Time Max
+Herzfrequenz
+Eingehende Byte-Rate
+I/O-Verhältnis
+Durchschn. I/O-Zeit (ns)
+I/O-Wartezeit
+Durchschn. I/O-Wartezeit (ns)
+Join Rate
+Join Time Avg
+Letzter Heartbeat Vor
+Netzwerk-I/O-Rate
+Ausgehende Byte-Rate
+Verbrauchte Datensätze
+Max. Aufzeichnungsverzögerung
+Datensätze pro Anforderung durchschn
+Anforderungsrate
+Durchschn. Anforderungsgröße
+Anforderungsgröße Max
+Ansprechrate
+Wählen Sie Rate
+Synchronisierungsrate
+Durchschn. Synchronisierungszeit
+Heartbeat Response Time Max
+Join Time Max
+Synchronisierungszeit Max 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen finden Sie im link:concept_requesting_support.html["Unterstützung"] Seite.

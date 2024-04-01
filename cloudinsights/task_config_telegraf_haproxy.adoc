@@ -1,0 +1,263 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_haproxy.html 
+keywords: telegraf, installation, install, haproxy 
+summary: HAProxy Data Collector-Konfiguration 
+---
+= HAProxy Data Collector
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights verwendet diese Datensammlung, um Kennzahlen von HAProxy zu erfassen.
+
+
+
+== Installation
+
+. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*. Wählen Sie HAProxy.
++
+Wählen Sie das Betriebssystem oder die Plattform aus, auf dem der Telegraf-Agent installiert ist.
+
+. Wenn Sie noch keinen Agent für die Sammlung installiert haben oder einen Agent für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um das zu erweitern link:task_config_telegraf_agent.html["Agenten-Installation"] Anweisungen.
+. Wählen Sie den Agent-Zugriffsschlüssel für diesen Datensammler aus. Sie können einen neuen Agent-Zugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agent Access Key* klicken. Best Practice: Verwenden Sie einen anderen Agent-Zugriffsschlüssel nur, wenn Sie Datensammler gruppieren möchten, zum Beispiel nach Betriebssystem/Plattform.
+. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.
+
+
+image:HAProxyDCConfigLinux.png["HAProxy-Konfiguration"]
+
+
+
+== Einrichtung
+
+Telegraf's Plugin für HAProxy setzt auf HAProxy Stats Aktivierung. Diese Konfiguration ist in HAProxy integriert, ist jedoch nicht sofort aktiviert. Wenn HAProxy aktiviert ist, wird ein HTML-Endpunkt angezeigt, der in Ihrem Browser angezeigt werden kann oder für die Extraktion des Status aller HAProxy-Konfigurationen abgekratzt werden kann.
+
+
+
+=== Kompatibilität:
+
+Die Konfiguration wurde gegen HAProxy-Version 1.9.4 entwickelt.
+
+
+
+=== Einrichtung:
+
+Um Statistiken zu aktivieren, bearbeiten Sie Ihre haproxy-Konfigurationsdatei und fügen Sie nach dem Abschnitt 'Standards' die folgenden Zeilen hinzu: Verwenden Sie Ihren eigenen Benutzer/Ihr Passwort und/oder die haproxy-URL:
+
+[listing]
+----
+stats enable
+stats auth myuser:mypassword
+stats uri  /haproxy?stats
+----
+Im Folgenden finden Sie eine vereinfachte Beispiel-Konfigurationsdatei mit aktivierten Statistiken:
+
+[listing]
+----
+global
+  daemon
+  maxconn 256
+
+defaults
+  mode http
+  stats enable
+  stats uri /haproxy?stats
+  stats auth myuser:mypassword
+  timeout connect 5000ms
+  timeout client 50000ms
+  timeout server 50000ms
+
+frontend http-in
+  bind *:80
+  default_backend servers
+
+frontend http-in9080
+  bind *:9080
+  default_backend servers_2
+
+backend servers
+  server server1 10.128.0.55:8080 check ssl verify none
+  server server2 10.128.0.56:8080 check ssl verify none
+
+backend servers_2
+  server server3 10.128.0.57:8080 check ssl verify none
+  server server4 10.128.0.58:8080 check ssl verify none
+----
+Vollständige und aktuelle Anweisungen finden Sie im link:https://cbonte.github.io/haproxy-dconv/1.8/configuration.html#4-stats%20enable["HAProxy-Dokumentation"].
+
+
+
+== Objekte und Zähler
+
+Folgende Objekte und ihre Zähler werden gesammelt:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objekt: | Kennungen: | Attribute: | Datenpunkte: 
+
+
+| HAProxy Frontend | Namespace
+Adresse
+Proxy | Knoten-IP
+Node-Name
+Proxy-ID
+Modus
+Prozess-ID
+Tariflimit Für Sitzungen
+Server-ID
+Sitzungslimit
+Status | Bytes In
+Bytes Heraus
+Cache-Treffer
+Cache-Lookups
+Komprimierung Bytes Umgangen
+Komprimierungsbytes In
+Komprimierung Bytes Heraus
+Komprimierungsreaktionen
+Verbindungsrate
+Max. Verbindungsrate
+Verbindungen Insgesamt
+Anforderungen, die von der Verbindungsregel abgelehnt wurden
+Anforderungen, die von Sicherheitsbedenken abgelehnt wurden
+Antworten, die von Sicherheitsbedenken abgelehnt wurden
+Anträge, die von Sitzungsregel abgelehnt wurden
+Fordert Fehler An
+Antworten 1xx
+Antworten 2xx
+Antworten 3xx
+Antworten 4xx
+Antworten 5xx
+Andere Antworten
+Anfragen Abgefangen
+Sitzungsrate
+Maximale Sitzungsrate
+Anfragen Rate
+Max. Anw.-Rate
+Anfragen Gesamt
+Sitzungen
+Sitzungen Max
+Sitzungen Gesamt
+Anfragen Werden Neu Geschrieben 
+
+
+| HAProxy-Server | Namespace
+Adresse
+Proxy
+Server | Knoten-IP
+Node-Name
+Überprüfen Sie die Zeit bis zum Ende
+Prüfen Sie Die Fallkonfiguration
+Integritätswert Prüfen
+Rise-Konfiguration Prüfen
+Überprüfen Sie Den Status
+Proxy-ID
+Uhrzeit Der Letzten Änderung
+Uhrzeit Der Letzten Sitzung
+Modus
+Prozess-ID
+Server-ID
+Status
+Gewicht | Aktive Server
+Backup Server
+Bytes In
+Bytes Heraus
+Prüfen Sie Downs
+Prüfung Schlägt Fehl
+Client Bricht Ab
+Verbindungen
+Durchschnittszeit Der Verbindung
+Ausfallzeit Insgesamt
+Abgelehnte Antworten
+Verbindungsfehler
+Antwortfehler
+Antworten 1xx
+Antworten 2xx
+Antworten 3xx
+Antworten 4xx
+Antworten 5xx
+Andere Antworten
+Server Insgesamt Ausgewählt
+Warteschlange Aktuell
+Warteschlange Max
+Durchschnittliche Warteschlangenzeit
+Sitzungen pro Sekunde
+Sitzungen pro Sekunde Max
+Verbindungswiederverwendung
+Durchschnitt Der Reaktionszeit
+Sitzungen
+Sitzungen Max
+Serverübertragung Wird Abgebrochen
+Sitzungen Gesamt
+Durchschnitt Der Gesamtzeit Der Sitzungen
+Fordert Neudispatches An
+Fordert Wiederholungen An
+Anfragen Werden Neu Geschrieben 
+
+
+| HAProxy-Back-End | Namespace
+Adresse
+Proxy | Knoten-IP
+Node-Name
+Proxy-ID
+Uhrzeit Der Letzten Änderung
+Uhrzeit Der Letzten Sitzung
+Modus
+Prozess-ID
+Server-ID
+Sitzungslimit
+Status
+Gewicht | Aktive Server
+Backup Server
+Bytes In
+Bytes Heraus
+Cache-Treffer
+Cache-Lookups
+Prüfen Sie Downs
+Client Bricht Ab
+Komprimierung Bytes Umgangen
+Komprimierungsbytes In
+Komprimierung Bytes Heraus
+Komprimierungsreaktionen
+Verbindungen
+Durchschnittszeit Der Verbindung
+Ausfallzeit Insgesamt
+Anforderungen, die von Sicherheitsbedenken abgelehnt wurden
+Antworten, die von Sicherheitsbedenken abgelehnt wurden
+Verbindungsfehler
+Antwortfehler
+Antworten 1xx
+Antworten 2xx
+Antworten 3xx
+Antworten 4xx
+Antworten 5xx
+Andere Antworten
+Server Insgesamt Ausgewählt
+Warteschlange Aktuell
+Warteschlange Max
+Durchschnittliche Warteschlangenzeit
+Sitzungen pro Sekunde
+Sitzungen pro Sekunde Max
+Anfragen Gesamt
+Verbindungswiederverwendung
+Durchschnitt Der Reaktionszeit
+Sitzungen
+Sitzungen Max
+Serverübertragung Wird Abgebrochen
+Sitzungen Gesamt
+Durchschnitt Der Gesamtzeit Der Sitzungen
+Fordert Neudispatches An
+Fordert Wiederholungen An
+Anfragen Werden Neu Geschrieben 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen finden Sie im link:concept_requesting_support.html["Unterstützung"] Seite.

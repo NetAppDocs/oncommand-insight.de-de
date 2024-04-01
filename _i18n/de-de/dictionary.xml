@@ -7925,4 +7925,2914 @@ Die Installation umfasst die folgenden Hauptaufgaben:</block>
   <block id="2d38b7c541c52f4778b0146ee5977422" category="paragraph"><block ref="2d38b7c541c52f4778b0146ee5977422" category="inline-link-rx"></block></block>
   <block id="84cf7cbe773d4bdce52df2d271ec42ad" category="inline-link">Hinweis für OnCommand Insight 7.3.13</block>
   <block id="7b06c1df3904beda719ace07d24e5d2e" category="paragraph"><block ref="7b06c1df3904beda719ace07d24e5d2e" category="inline-link-rx"></block></block>
+  <block id="18906ecb044421552f4c94c742621646" category="summary">Konfiguration des Kapacitors</block>
+  <block id="d3761f3a03696694e546430b624f3542" category="doc">Kapacitor Data Collector</block>
+  <block id="1d82355e9a49b0e00b0df8f87a981b73" category="paragraph">Cloud Insights verwendet diesen Datensammler, um Metriken von influxdatapacitor zu sammeln.</block>
+  <block id="7cd8fb6e31cc946c078d2740c76a9899" category="section-title">Installation</block>
+  <block id="34328c30b9aeceaed8fcff2dfe3eec30" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie Kapacitor.</block>
+  <block id="577ef588d3f183c37ef82368a6ff589c" category="paragraph">Wählen Sie das Betriebssystem oder die Plattform aus, auf dem der Telegraf-Agent installiert ist.</block>
+  <block id="1be0a2da8f4fd3b263e749ccf7b51da7" category="inline-link-macro">Agenten-Installation</block>
+  <block id="16a55be69114dba2ac674b708e441474" category="list-text">Wenn Sie noch keinen Agent für die Sammlung installiert haben oder einen Agent für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um das zu erweitern <block ref="f5c63eced10ddc346253829eec79c562" category="inline-link-macro-rx"></block> Anweisungen.</block>
+  <block id="92d44d4b64d18fea589854680c8cd732" category="list-text">Wählen Sie den Agent-Zugriffsschlüssel für diesen Datensammler aus. Sie können einen neuen Agent-Zugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agent Access Key* klicken. Best Practice: Verwenden Sie einen anderen Agent-Zugriffsschlüssel nur, wenn Sie Datensammler gruppieren möchten, zum Beispiel nach Betriebssystem/Plattform.</block>
+  <block id="d9f03c7fbabce6eb575b8ba4bbe299bc" category="list-text">Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.</block>
+  <block id="6501fa3c86462ded7187a4c119d46e5b" category="inline-image-macro">Kapacitor-Konfiguration</block>
+  <block id="dbf6b5b2cdedf021b5f438c1d0d94f55" category="paragraph"><block ref="dbf6b5b2cdedf021b5f438c1d0d94f55" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad2376beebecdcf7846ba973fa1a005b" category="section-title">Einrichtung</block>
+  <block id="e711cd4bbd4573cce8f56f9019ee69f5" category="inline-link">Kapacitor-Dokumentation</block>
+  <block id="613c0ccc72426c675ba16888b7beb75b" category="paragraph">Informationen zur Einrichtung finden Sie im<block ref="4a1162f0f136a577fb8e0c35cb055638" category="inline-link-rx"></block></block>
+  <block id="a7a78b5087753fa02d45d7bbd76ed0d6" category="section-title">Objekte und Zähler</block>
+  <block id="df3df39a15aeb5cf831a87d21a352935" category="paragraph">Folgende Objekte und ihre Zähler werden gesammelt:</block>
+  <block id="497031794414a552435f90151ac3b54b" category="cell">Objekt</block>
+  <block id="e2da36de4fe1aaf514aaef4ecca2c8ec" category="cell">Identifikatoren</block>
+  <block id="287234a1ff35a314b5b6bc4e5828e745" category="cell">Merkmale</block>
+  <block id="9568886685b0148a2a42e61380688e11" category="cell">Datenpunkte:</block>
+  <block id="496e790e66d36d3bfbadd9eca21b9d6b" category="cell">Kapacitor</block>
+  <block id="8aff22b7ab299e63ad122521b8cce856" category="cell">Namespace
+Node-Name
+Knoten-IP</block>
+  <block id="3f6d224a7b20e18c557bf21bfe5ede71" category="cell">Betriebssystemarchitektur
+Betriebssystemname
+Betriebssystemversion
+Laufzeitspezifikation
+Anbieter Der Laufzeitspezifikation
+Version Der Laufzeitspezifikation
+Verfügbarkeit
+Kapacitor-Version
+VM-Name der Laufzeit
+Runtime VM Vendor
+Runtime VM-Version</block>
+  <block id="1d3092a2cd5069209f6c8a3a894f204c" category="cell">Zugewiesene Bytes
+Buck Hash System
+Frei
+GC-System
+GCC PU-Fraktion
+Heap-Zuweisung
+Heap Frei
+Heap-Nutzung
+Heap-Objekte
+Heap Freigegeben
+Heap-System
+Letzte GC (ns)
+Suchen Sie Nach
+Störung
+Mcache Wird Verwendet
+Mcache-System
+Mspan Wird Verwendet
+Mspan-System
+Next GC (ns)
+Num GC
+Anderes System
+Pause gesamt (ns)
+Stapel Wird Verwendet
+Stapelsystem
+Systembytes
+Insgesamt Zugewiesene Bytes
+Durchschnittliche Ausführungszeit (ns)
+Fehler</block>
+  <block id="28362762be9926ed2f769fa58e5451bf" category="paragraph">Weitere Informationen finden Sie im <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> Seite.</block>
+  <block id="4002c18c39606cdbd9ec7cf8e2a090ad" category="summary">Redis Konfiguration des Datensammlers</block>
+  <block id="001dce6e76a3b3b754db59e538750dd8" category="doc">Redis Data Collector</block>
+  <block id="0188f056a49bdb8c4c3a015b2229d13e" category="paragraph">Cloud Insights verwendet diesen Datensammler, um Kennzahlen von Redis zu sammeln. Redis ist ein Open Source, in-Memory Data Structure Store, der als Datenbank-, Cache- und Nachrichten-Broker verwendet wird und die folgenden Datenstrukturen unterstützt: Strings, Hash-Funktionen, Listen, Sätze und mehr.</block>
+  <block id="3c9d727e041ea1596d9e67f7568b3d4b" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie „Redis“.</block>
+  <block id="602c395372ffc11185f0cc2291099c7f" category="inline-image-macro">Redis Data Collector Konfiguration</block>
+  <block id="5c452c3f36884795da26d34b96db691c" category="paragraph"><block ref="5c452c3f36884795da26d34b96db691c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6f6c7e0bd9df07afbd8f27f303fba934" category="inline-link-macro">Redis-Dokumentation</block>
+  <block id="ae042fc4879ccb38022624b37b7c15bd" category="paragraph">Informationen finden Sie unter <block ref="f84fd6d9d2467b4d3f4dd370ee4175c5" category="inline-link-macro-rx"></block>.</block>
+  <block id="f322d46b7caf7e1252191f92e72ed682" category="cell">Objekt:</block>
+  <block id="7bb916f645305a34ea12c0e8306013e0" category="cell">Kennungen:</block>
+  <block id="77174410b72decfd0b259961f1f65a8f" category="cell">Attribute:</block>
+  <block id="e111446745a1825b862f8727ae63bce4" category="cell">Redis</block>
+  <block id="f69f559468f0eeb001c1c4ac7e03ba16" category="cell">Namespace
+Server</block>
+  <block id="57e45a1f550d7e2a276b57b6bca05dca" category="summary">Konfiguration des netstat Datensammlers</block>
+  <block id="38fe3e3fc1af1752c621d2c58ca1d537" category="doc">Netstat Data Collector</block>
+  <block id="1d90778793975e863bbd8302e8bebf4f" category="paragraph">Cloud Insights verwendet diese Datensammlung, um netstat-Kennzahlen zu sammeln.</block>
+  <block id="3d0738af358079dc547755789be4774a" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie Netstat.</block>
+  <block id="fbe4c8006ab6084c9caa4749e31a48b2" category="inline-image-macro">Windows Netstat-Konfiguration</block>
+  <block id="3b600482a8cf2d80423a46534f251590" category="paragraph"><block ref="3b600482a8cf2d80423a46534f251590" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5640ddf22fd2c345be7dd9bb71023b38" category="cell">Netstat</block>
+  <block id="c3e78df51911e54e9bf950f6adb83f17" category="cell">Node-UUID</block>
+  <block id="f3149829d80f1010c9764cf219626e96" category="cell">Knoten-IP
+Node-Name</block>
+  <block id="3af2b23a1e0e5c8f8f71ba7f0645e753" category="summary">HAProxy Data Collector-Konfiguration</block>
+  <block id="d7f6334a8fd2ef6e012df8e7d1bc1840" category="doc">HAProxy Data Collector</block>
+  <block id="f43901d1ca245307f30d36ef67a4ef53" category="paragraph">Cloud Insights verwendet diese Datensammlung, um Kennzahlen von HAProxy zu erfassen.</block>
+  <block id="419697cbdba3ded9f042d2b7a045a7be" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie HAProxy.</block>
+  <block id="6c1dacdba2adca5cfa22ff19b2d327fe" category="inline-image-macro">HAProxy-Konfiguration</block>
+  <block id="00f9d91055267fed1b468bf28bbfbb04" category="paragraph"><block ref="00f9d91055267fed1b468bf28bbfbb04" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cb69e07b7e1dc3bc5864b07b79bba857" category="paragraph">Telegraf's Plugin für HAProxy setzt auf HAProxy Stats Aktivierung. Diese Konfiguration ist in HAProxy integriert, ist jedoch nicht sofort aktiviert. Wenn HAProxy aktiviert ist, wird ein HTML-Endpunkt angezeigt, der in Ihrem Browser angezeigt werden kann oder für die Extraktion des Status aller HAProxy-Konfigurationen abgekratzt werden kann.</block>
+  <block id="427a02dad880facfe9fb816312194295" category="section-title">Kompatibilität:</block>
+  <block id="4be336e5cd4f5bf12e0746a849c25857" category="paragraph">Die Konfiguration wurde gegen HAProxy-Version 1.9.4 entwickelt.</block>
+  <block id="0c3983f3904b2dc8bf6ac988603783d3" category="section-title">Einrichtung:</block>
+  <block id="376c8f5141386640268a2d2c2187ca53" category="paragraph">Um Statistiken zu aktivieren, bearbeiten Sie Ihre haproxy-Konfigurationsdatei und fügen Sie nach dem Abschnitt 'Standards' die folgenden Zeilen hinzu: Verwenden Sie Ihren eigenen Benutzer/Ihr Passwort und/oder die haproxy-URL:</block>
+  <block id="06e964df53203dd063d51650b2e750c1" category="paragraph">Im Folgenden finden Sie eine vereinfachte Beispiel-Konfigurationsdatei mit aktivierten Statistiken:</block>
+  <block id="c3236962a66f7a46e03d64979b9d1600" category="inline-link-macro">HAProxy-Dokumentation</block>
+  <block id="b4ba6dee394cc6642974efbba5297a9a" category="paragraph">Vollständige und aktuelle Anweisungen finden Sie im <block ref="5a379a5f4fc2aff325e2186c5a680899" category="inline-link-macro-rx"></block>.</block>
+  <block id="cd1ff811c7eb5c250dc81f6a5286cf43" category="cell">HAProxy Frontend</block>
+  <block id="8dea80f14c6104c5733a52c154ef935e" category="cell">Namespace
+Adresse
+Proxy</block>
+  <block id="c45e1928ae65186fbbe90a9be80ee483" category="cell">Knoten-IP
+Node-Name
+Proxy-ID
+Modus
+Prozess-ID
+Tariflimit Für Sitzungen
+Server-ID
+Sitzungslimit
+Status</block>
+  <block id="958c01b1efd28326ab76cd02bbd1597e" category="cell">Bytes In
+Bytes Heraus
+Cache-Treffer
+Cache-Lookups
+Komprimierung Bytes Umgangen
+Komprimierungsbytes In
+Komprimierung Bytes Heraus
+Komprimierungsreaktionen
+Verbindungsrate
+Max. Verbindungsrate
+Verbindungen Insgesamt
+Anforderungen, die von der Verbindungsregel abgelehnt wurden
+Anforderungen, die von Sicherheitsbedenken abgelehnt wurden
+Antworten, die von Sicherheitsbedenken abgelehnt wurden
+Anträge, die von Sitzungsregel abgelehnt wurden
+Fordert Fehler An
+Antworten 1xx
+Antworten 2xx
+Antworten 3xx
+Antworten 4xx
+Antworten 5xx
+Andere Antworten
+Anfragen Abgefangen
+Sitzungsrate
+Maximale Sitzungsrate
+Anfragen Rate
+Max. Anw.-Rate
+Anfragen Gesamt
+Sitzungen
+Sitzungen Max
+Sitzungen Gesamt
+Anfragen Werden Neu Geschrieben</block>
+  <block id="dada9c5c3057d3996c71c414bb95f293" category="cell">HAProxy-Server</block>
+  <block id="b79b9d688e7feb386a427ddee600bf90" category="cell">Namespace
+Adresse
+Proxy
+Server</block>
+  <block id="5576d0777cc9aa03fb396cdae277dc93" category="cell">Knoten-IP
+Node-Name
+Überprüfen Sie die Zeit bis zum Ende
+Prüfen Sie Die Fallkonfiguration
+Integritätswert Prüfen
+Rise-Konfiguration Prüfen
+Überprüfen Sie Den Status
+Proxy-ID
+Uhrzeit Der Letzten Änderung
+Uhrzeit Der Letzten Sitzung
+Modus
+Prozess-ID
+Server-ID
+Status
+Gewicht</block>
+  <block id="7eb59f1dcd9a062c8263f5e4b2ebeb69" category="cell">Aktive Server
+Backup Server
+Bytes In
+Bytes Heraus
+Prüfen Sie Downs
+Prüfung Schlägt Fehl
+Client Bricht Ab
+Verbindungen
+Durchschnittszeit Der Verbindung
+Ausfallzeit Insgesamt
+Abgelehnte Antworten
+Verbindungsfehler
+Antwortfehler
+Antworten 1xx
+Antworten 2xx
+Antworten 3xx
+Antworten 4xx
+Antworten 5xx
+Andere Antworten
+Server Insgesamt Ausgewählt
+Warteschlange Aktuell
+Warteschlange Max
+Durchschnittliche Warteschlangenzeit
+Sitzungen pro Sekunde
+Sitzungen pro Sekunde Max
+Verbindungswiederverwendung
+Durchschnitt Der Reaktionszeit
+Sitzungen
+Sitzungen Max
+Serverübertragung Wird Abgebrochen
+Sitzungen Gesamt
+Durchschnitt Der Gesamtzeit Der Sitzungen
+Fordert Neudispatches An
+Fordert Wiederholungen An
+Anfragen Werden Neu Geschrieben</block>
+  <block id="f7e484ed281631da8383d690f4eddd80" category="cell">HAProxy-Back-End</block>
+  <block id="97147057d2a68260221e7116c41c9222" category="cell">Knoten-IP
+Node-Name
+Proxy-ID
+Uhrzeit Der Letzten Änderung
+Uhrzeit Der Letzten Sitzung
+Modus
+Prozess-ID
+Server-ID
+Sitzungslimit
+Status
+Gewicht</block>
+  <block id="9a0ea7807c7dd21ed7a14f4f90d3e5ba" category="cell">Aktive Server
+Backup Server
+Bytes In
+Bytes Heraus
+Cache-Treffer
+Cache-Lookups
+Prüfen Sie Downs
+Client Bricht Ab
+Komprimierung Bytes Umgangen
+Komprimierungsbytes In
+Komprimierung Bytes Heraus
+Komprimierungsreaktionen
+Verbindungen
+Durchschnittszeit Der Verbindung
+Ausfallzeit Insgesamt
+Anforderungen, die von Sicherheitsbedenken abgelehnt wurden
+Antworten, die von Sicherheitsbedenken abgelehnt wurden
+Verbindungsfehler
+Antwortfehler
+Antworten 1xx
+Antworten 2xx
+Antworten 3xx
+Antworten 4xx
+Antworten 5xx
+Andere Antworten
+Server Insgesamt Ausgewählt
+Warteschlange Aktuell
+Warteschlange Max
+Durchschnittliche Warteschlangenzeit
+Sitzungen pro Sekunde
+Sitzungen pro Sekunde Max
+Anfragen Gesamt
+Verbindungswiederverwendung
+Durchschnitt Der Reaktionszeit
+Sitzungen
+Sitzungen Max
+Serverübertragung Wird Abgebrochen
+Sitzungen Gesamt
+Durchschnitt Der Gesamtzeit Der Sitzungen
+Fordert Neudispatches An
+Fordert Wiederholungen An
+Anfragen Werden Neu Geschrieben</block>
+  <block id="29f2c433c8324679db838494d114ace0" category="summary">Konfiguration der Elasticsearch-Datenerfassung</block>
+  <block id="b254328dbad8d7bef169a1d38f1b1bec" category="doc">Elasticsearch Data Collector</block>
+  <block id="7ad1c9b2a026e8cd588b98357fc68620" category="paragraph">Cloud Insights verwendet diese Datenerfassung zum Erfassen von Metriken aus Elasticsearch.</block>
+  <block id="c22bbce40f7866184fc5238e4cf0526d" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie Elasticsearch.</block>
+  <block id="8dc7af6f97dac4ac46d66b12e0c86974" category="inline-image-macro">Elasticsearch-Konfiguration</block>
+  <block id="5b3344ac5bf291f59c070db863943014" category="paragraph"><block ref="5b3344ac5bf291f59c070db863943014" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7423bcb1039be167bcf002d43ee6670e" category="inline-link-macro">Elasticsearch-Dokumentation</block>
+  <block id="1cd7a99f1b7abd82e5c52da438eb8098" category="paragraph">Informationen finden Sie unter <block ref="bcfb5ea01b37890a7134cc470707e795" category="inline-link-macro-rx"></block>.</block>
+  <block id="824ae3473df67a0ffcc2e7213c8155ab" category="cell">Elasticsearch-Cluster</block>
+  <block id="b47ef76054c94c60d8ded4d3bf1ca5ae" category="cell">Namespace
+Cluster</block>
+  <block id="89fc526a8bc54d6b35b9f537497ad12b" category="cell">Knoten-IP
+Node-Name
+Cluster-Status</block>
+  <block id="8abf5b6d1ce731d469067e732db35e2c" category="cell">Anzahl Der Master-Nodes
+Gesamtanzahl Der Knoten
+Verfügbare Dateisystemdaten (Bytes)
+Filesystem Data Free (Bytes)
+Dateisystem-Daten gesamt (Bytes)
+JVM-Threads
+Vom Betriebssystem zugewiesene Prokkkkzenten
+Verfügbare Prozessoren des Betriebssystems
+OS Mem Free (Byte)
+Ohne Betriebssystem
+OS Mem gesamt (Bytes)
+Verwendetes BS-Mem (Byte)
+OS Mem verwendet
+CPU verarbeiten
+Indizes Abschlussgröße (Bytes)
+Indexanzahl
+Index Docs Anzahl
+Indizes Docs Gelöscht
+Indizes Felddatenräumungen
+Indizes Felddaten Speichergröße (Bytes)
+Anzahl Der Cache-Abfragen Für Indizes
+Indexcache-Größe
+Indizes Segmentanzahl
+Indiziert Segmente Dokumentwerte Speicher (Bytes)
+Indizes Shards Index Primaries Durchschn
+Indizes Shards Index Primaries Max
+Indizes Shards Index Primaries Min
+Indizes Shards Index Replikation Durchschn
+Indizes Shards Index Replikation Max
+Indizes Shards Index Replikation Min
+Indizes – Durchschnitt
+Indizes Shards Max
+Indizes Schardvorwahlen
+Indiziert Shards Replication
+Index Shards Total
+Indexspeicher (Byte)</block>
+  <block id="dc74b66d0fe6a965e5a23640119f3c60" category="cell">Elasticsearch-Node</block>
+  <block id="673731fc48d3aeb518baecf281fb2c22" category="cell">Namespace
+Cluster
+Es-Knoten-ID
+Es-Knoten-IP
+Es-Knoten</block>
+  <block id="ca7086c6ed2859db76f290c9cc1ed037" category="cell">Zone-ID</block>
+  <block id="63fa005b729d1d453dbcab794d84a459" category="cell">Maschinelles Lernen Aktiviert
+Speicher Für Maschinelles Lernen
+Max. Offene Jobs Für Maschinelles Lernen
+X-Pack installiert
+Breakers Accounting geschätzte Größe (Bytes)
+Unterbrecher Accounting Limit Size (Byte)
+Leistungsschalter Rechnungslegungsaufwand
+Leistungsschalter Rechnungslegung Ausgelöst
+Unterbrecher Felddaten geschätzte Größe (Bytes)
+Begrenzungsgröße für Felddaten (Bytes)
+Leistungsschalter Felddaten-Overhead
+Leistungsschalter Felddaten Ausgelöst
+Breakers in-Flight Stimulated Size (Bytes)
+Begrenzungsgröße für Leistungsschalter (Bytes)
+Leistungsschalter In-Flight Overhead
+Leistungsschalter Im Flug Ausgelöst
+Geschätzte Größe der Übertreter (Bytes)
+Übergeordnete Grenzgröße der Leistungsschalter (Bytes)
+Leistungsschalter Überbelastung
+Leistungsschalter Elternteil Ausgelöst
+Geschätzte Größe der Unterbrechungsanforderung (Bytes)
+Unterbrecher Request Limit Size (Bytes)
+Leistungsschalter Fordern Overhead An
+Anfrage Für Leistungsschalter Ausgelöst
+Verfügbare Dateisystemdaten (Bytes)
+Filesystem Data Free (Bytes)
+Dateisystem-Daten gesamt (Bytes)
+Dateisystem-IO-Statistik Devices Ops
+Dateisystem-I/O-Statistik: Auslesen von Geräten (kb)
+Dateisystem-I/O-Statistik Devices Read Ops
+Dateisystem-E/A-Statistik Devices Erite (kb)
+Dateisystem-E/A-Statistik Devices Write Ops
+Dateisystem-I/O-Statistik Total Ops
+Dateisystem-I/O-Statistik, Lesezugriff insgesamt (kb)
+Dateisystem-IO Stats Read Ops
+Dateisystem-I/O-Statistik Schreibvorgänge insgesamt (kb)
+Dateisystem-I/O-Statistik Write Ops
+Schätzung der geringsten Auslastung des Dateisystems verfügbar (Byte)
+Dateisystem – Schätzung der geringsten Auslastung insgesamt (Bytes)
+Dateisystem - Festplatte Mit Der Geringsten Auslastung
+Dateisystem höchste verfügbare Nutzungsschätzung (Bytes)
+Dateisystem höchste Auslastung Schätzung gesamt (Bytes)
+Dateisystem Most Usage Used Disk
+Dateisystem insgesamt verfügbar (Bytes)
+Dateisystem gesamt frei (Bytes)
+Dateisystem gesamt (Bytes)
+Indizes Abschlussgröße (Bytes)
+Index Docs Anzahl
+Indizes Docs Gelöscht
+Indizes Felddatenräumungen
+Indizes Felddaten Speichergröße (Bytes)
+Indizes Periodisch Spülen
+Indizes Flush Total
+Indizes Flush Gesamtzeit
+Indizes Werden Aktuell
+Indizes Abrufen Ist Zeit
+Indizes Abrufen Existiert Insgesamt
+Indizes Insgesamt Abrufen
+Indizes Indexierung Insgesamt Löschen
+Indizes Indexindex Gesamt
+Indizes Indexing Noop Update Gesamt
+Indiziert Die Indexierung Throttle Time
+HTTP Aktuell geöffnet
+HTTP Total geöffnet
+Direkte Anzahl JVM-Puffer-Pool
+JVM-Klassen Aktuelle geladene Anzahl
+JVM GC Collectors Alte Sammlung Anzahl
+JVM Mem Heap committed (Bytes)
+CPU-Auslastung des Betriebssystems durchschnittlich 15 m
+BS-CPU
+OS Mem Free (Byte)
+OS Swap Free (Byte)
+CPU verarbeiten
+CPU-Gesamtprozess
+Max. Dateideskriptoren Verarbeiten
+Process Mem Total Virtual (Bytes)
+Thread Pool Analyse Aktiv
+Thread-Pool-Analyse Abgeschlossen
+Thread Pool Analyse Größte
+Warteschlange Für Thread-Pool-Analyse
+Thread-Pool-Analyse Abgelehnt
+Thread-Pool: Threads Analysieren
+Thread-Pool-Abruf Shard Wurde Aktiv Gestartet
+Thread Pool Holen Shard Gestartet Abgeschlossen
+Thread Pool Fetch Shard Startete Größte
+Thread Pool Holen Shard Gestartet Queue
+Thread Pool Fetch Shard Gestartet Abgelehnt
+Thread Pool Fetch Shard Hat Die Schseit Gestartet
+Thread Pool Holen Sie Shard Store Aktiv
+Thread Pool Holen Shard Store Abgeschlossen
+Transport RX (pro Sekunde)
+Transport von RX-Bytes (pro Sekunde)
+Transport Server Geöffnet
+Transport TX (pro Sekunde)
+Transport von TX Bytes (pro Sekunde)</block>
+  <block id="1da80b1336c0c9594d16e3d3dab10d20" category="summary">Konfiguration des Consul-Datensammlers</block>
+  <block id="c4079b6998dfb2e5f02a35b303e1acce" category="doc">Consul Data Collector</block>
+  <block id="44aa5a1c223b0773b5006801b857966b" category="paragraph">Cloud Insights verwendet diesen Datensammler, um Metriken von Consul zu erfassen.</block>
+  <block id="6ed4f0f0b93d3def9b1fe51a22e44d7a" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie Konsul.</block>
+  <block id="90b5256380802f2feaca144a438190c3" category="inline-link-macro">Installieren Sie einen Agenten</block>
+  <block id="dc31f8b70f914e6d9f6e9267b53fb552" category="paragraph">Wenn Sie keinen Agenten für die Sammlung konfiguriert haben, werden Sie aufgefordert <block ref="a1b69a79c96be75135c991d76ebf15bb" category="inline-link-macro-rx"></block> Ihrer Umgebung zu unterstützen.</block>
+  <block id="bfd9f9769236435b451e6625d2b38cd5" category="paragraph">Wenn Sie bereits einen Agenten konfiguriert haben, wählen Sie das entsprechende Betriebssystem oder die entsprechende Plattform aus, und klicken Sie auf *Weiter*.</block>
+  <block id="bddbdda6ad83151063cda71734d4faf4" category="list-text">Befolgen Sie die Anweisungen auf dem Bildschirm Consul Configuration, um den Datensammler zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.</block>
+  <block id="488f9e22c68fcc3e89060d2f5f537744" category="inline-link-macro">Dokumentation für Konsul</block>
+  <block id="a47b0fae235ee24589e1075c2fe0daeb" category="paragraph">Informationen finden Sie unter <block ref="209f85ad7011f70864ffdec527911e92" category="inline-link-macro-rx"></block>.</block>
+  <block id="058912364976efe3be18dc926c430355" category="section-title">Objekte und Zähler für Konsul</block>
+  <block id="52668346d353c3e6fdee1d0c1b711981" category="cell">Konsul</block>
+  <block id="24a1a9023bf78f02042ebc02aae1acda" category="cell">Namespace
+ID prüfen
+Service-Knoten</block>
+  <block id="4cbed0b534c83a56e07762ba4b9a62f4" category="cell">Knoten-IP
+Node-BS
+Node-UUID
+Node-Name
+Name Des Service
+Prüfen Sie Den Namen
+Service-ID
+Status</block>
+  <block id="701fda79498070ea91a9c98bbdd1dd4e" category="cell">Kritisch
+Bestehen
+Warnung</block>
+  <block id="aee1b49e2ea5679073623959ef024069" category="summary">HTTP-Datensammler-Konfiguration</block>
+  <block id="d5418d1fa8d23d7e5951dbf339c3c5a8" category="doc">ActiveMQ Data Collector</block>
+  <block id="123afee47eb477e020c1546a00fd80a1" category="paragraph">Cloud Insights verwendet diesen Datensammler, um Metriken aus ActiveMQ zu erfassen.</block>
+  <block id="4bcd3cf21ebb34b835f0e6aa0d638f54" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie ActiveMQ.</block>
+  <block id="52e070f5418cead2f633bf0a2288946c" category="inline-image-macro">ActiveMQ-Konfiguration</block>
+  <block id="21562149e2176820b6c8d39f6bf47011" category="paragraph"><block ref="21562149e2176820b6c8d39f6bf47011" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="16fc9b4d33f552995ec677b1a481fba5" category="inline-link">ActiveMQ-Dokumentation</block>
+  <block id="af713bd2f304582c4b486e93a2e9e5a6" category="paragraph">Informationen finden Sie unter<block ref="d9a53f438d966f90bfb05037caa61b81" category="inline-link-rx"></block></block>
+  <block id="8a07863586a1d1c6f2c552f72c46e180" category="cell">ActiveMQ-Warteschlange</block>
+  <block id="203da89ec2d37f8da5871651156dc15a" category="cell">Namespace
+Warteschlange
+Port
+Server</block>
+  <block id="b76bb2de5529facad404eaf6a5c4b511" category="cell">Node-Name
+Knoten-IP
+Node-UUID</block>
+  <block id="18734ab50531cecf383920035017d2cc" category="cell">Anzahl Verbraucher
+Anzahl Der Entwarteschlangen
+Anzahl Der Warteschlangen
+Warteschlangengröße</block>
+  <block id="f0e7ed43fc90ff6a4e95ff91a0a7a480" category="cell">ActiveMQ-Abonnenten</block>
+  <block id="e6ced1c4e8201f48dae7310d7e19b364" category="cell">Client-ID
+Verbindungs-ID
+Port
+Server
+Namespace</block>
+  <block id="825eed3baabe97b7c40a52703d100946" category="cell">Ist Aktiv
+Ziel
+Node-Name
+Knoten-IP
+Node-UUID
+Node-BS
+Auswahl
+Abonnement</block>
+  <block id="710583130d9d27b7a330a9eafed00d38" category="cell">Anzahl Der Entwarteschlangen
+Anzahl Der Versandvorgänge
+Größe Der Versandwarteschlange
+Anzahl Der Warteschlangen
+Größe Der Ausstehenden Warteschlange</block>
+  <block id="31c61bb8a89aefd1e2819389798f7ec7" category="cell">ActiveMQ-Thema</block>
+  <block id="125e537310f9a240c5cd57e48866cfea" category="cell">Thema
+Port
+Server
+Namespace</block>
+  <block id="22a6fbd49f601102da3f17cc56176d59" category="cell">Node-Name
+Knoten-IP
+Node-UUID
+Node-BS</block>
+  <block id="592897d62e3575026edb33cb4cb753ae" category="cell">Anzahl Verbraucher
+Anzahl Der Entwarteschlangen
+Anzahl Der Warteschlangen
+Größe</block>
+  <block id="9d2537f158357c95ae162019d658de08" category="doc">RethinkDB Data Collector</block>
+  <block id="86e303e0c497b52b7c3e448d2a739f78" category="paragraph">Cloud Insights verwendet diesen Datensammler, um Kennzahlen von RethinkDB zu sammeln.</block>
+  <block id="5ccd9dd8e50ca94f3cd4db51f6b42c50" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie RethinkDB.</block>
+  <block id="10e1e1205ffd97adbe671ede9a7d4f2d" category="inline-image-macro">Konfiguration des RephinkDB Data Collector</block>
+  <block id="dd379e6631df8e94fe26188b06220cf7" category="paragraph"><block ref="dd379e6631df8e94fe26188b06220cf7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7fc41d1df644e11b26a2696444f69499" category="inline-link-macro">RetinkDB-Dokumentation</block>
+  <block id="61c63e4b6fa084c1807e368faaf150e4" category="paragraph">Informationen finden Sie unter <block ref="02af3cecada50a802d68e28a6a325991" category="inline-link-macro-rx"></block>.</block>
+  <block id="89be6ffd9cf2244c68503bbda41ae112" category="summary">Cloud Insights unterstützt Telegraf als Agent für die Erfassung von Integrationsdaten und kann unter Windows oder Linux konfiguriert werden.</block>
+  <block id="2ddc4416c197500bc7619829b98c8b77" category="doc">Konfigurieren eines Agenten zur Datenerfassung (Windows/Linux)</block>
+  <block id="bdb9a31f361d8d3be1c6915647e92d4d" category="inline-link-macro">Telegraf</block>
+  <block id="23da8c24c0f52acdf7f6f9c4a08997c8" category="paragraph">Cloud Insights verwendet <block ref="eed175bcf32f20f81ea47b9c982c2797" category="inline-link-macro-rx"></block> Als Agent für die Erfassung von Integrationsdaten. Telegraf ist ein Plug-in-gestützter Server-Agent, mit dem Kennzahlen, Ereignisse und Protokolle erfasst und protokolliert werden können. Input-Plugins werden verwendet, um die gewünschten Informationen in den Agenten zu sammeln, indem Sie direkt auf das System/Betriebssystem zugreifen, indem Sie APIs von Drittanbietern aufrufen oder konfigurierte Streams (d. h. anhören Kafka, StatsD usw.). Mit Output-Plug-ins werden die gesammelten Metriken, Ereignisse und Protokolle vom Agenten an Cloud Insights gesendet.</block>
+  <block id="5186b139e52f7a5447ce73de13e4e524" category="paragraph">Die aktuelle Telegraf-Version für Cloud Insights ist *1.24.0*.</block>
+  <block id="8334797b9b3383d4f48d98178b8845ea" category="inline-link-macro">Auf dieser Seite</block>
+  <block id="6dac8d8f7e40ada8d5686e3e8192f90f" category="paragraph">Informationen zur Installation auf Kubernetes finden Sie unter <block ref="36dbd85d6f83f853e5478a62019a359b" category="inline-link-macro-rx"></block>.</block>
+  <block id="ae2f2b5e87a12f1cd650f0e46b92e4ec" category="admonition">Für eine genaue Audit- und Datenberichterstattung wird dringend empfohlen, die Zeit auf dem Agent-Rechner mit *Network Time Protocol (NTP)* oder *Simple Network Time Protocol (SNTP)* zu synchronisieren.</block>
+  <block id="f97f94f0ff0c35a96686e2fd00940ac8" category="admonition">Wenn Sie die Installationsdateien überprüfen möchten, bevor Sie den Agent installieren, lesen Sie den Abschnitt unten auf <block ref="1d9f3d6343939e76574c60762a7f2fae" category="inline-xref-macro-rx"></block>.</block>
+  <block id="137bac1c26ca6d0b61bc783c9a2fcbbd" category="section-title">Installieren eines Agenten</block>
+  <block id="a4c0f3c4bd8931418c028fb88c45e72f" category="paragraph">Wenn Sie einen Service Data Collector installieren und noch keinen Agent konfiguriert haben, werden Sie aufgefordert, zuerst einen Agent für das entsprechende Betriebssystem zu installieren. Dieses Thema enthält Anweisungen zur Installation des Telegraf-Agenten auf folgenden Betriebssystemen:</block>
+  <block id="8d6f7baf6fd8e47d9316fcc507ab0f85" category="list-text"><block ref="85415f26af88eac138de6f713927df0c" category="inline-xref-macro-rx"></block></block>
+  <block id="95f68796200de884bc3186742179de85" category="list-text"><block ref="8311b71d9af22c435aebd4b15988ca17" category="inline-xref-macro-rx"></block></block>
+  <block id="d41bd76f36789e8fddb867c10a5eca40" category="list-text"><block ref="f0b8d86b1d5e602002cf4f7e7b6c1cac" category="inline-xref-macro-rx"></block></block>
+  <block id="4705018fb833a2cd4979b3acd0c3171f" category="paragraph">Um einen Agent zu installieren, müssen Sie, unabhängig von der verwendeten Plattform, zunächst die folgenden Schritte ausführen:</block>
+  <block id="60e927136e016a2a126538b1a592e8c5" category="list-text">Melden Sie sich beim Host an, den Sie für Ihren Agenten verwenden werden.</block>
+  <block id="513f11f8d213c209a990a1bb086ea780" category="list-text">Melden Sie sich in Ihrer Cloud Insights-Umgebung an und navigieren Sie zu *Observability &gt; Collectors*.</block>
+  <block id="212039b527f83b6053ae8fd23bb11e26" category="list-text">Klicken Sie auf *+Data Collector* und wählen Sie einen zu installierenden Datensammler aus.</block>
+  <block id="72213a3f462eab56462e1fd1892f6fc0" category="list-text">Wählen Sie die passende Plattform für Ihren Host (Windows, Linux)</block>
+  <block id="0b5b60f6bf77a0318f6283c5d8ce5be7" category="list-text">Befolgen Sie die verbleibenden Schritte für jede Plattform.</block>
+  <block id="09e0466fcc22c337dc6af8a799296033" category="admonition">Sobald Sie einen Agent auf einem Host installiert haben, müssen Sie auf diesem Host keinen Agenten mehr installieren.</block>
+  <block id="4779eaa1340da59df6b8231755992886" category="inline-link-macro">Node-Metriken</block>
+  <block id="02cec17a35aef41b0e1a09a9070bf893" category="admonition">Sobald Sie einen Agent auf einem Server/einer VM installiert haben, sammelt Cloud Insights Kennzahlen von diesem System und sammelt Daten von allen von Ihnen konfigurierten Datensammlern. Diese Kennzahlen werden als erfasst <block ref="721decf63f7a81173878238d526f87a6" category="inline-link-macro-rx"></block>.</block>
+  <block id="2611d0720b029b968257661771d287e6" category="admonition">Wenn Sie einen Proxy verwenden, lesen Sie die Proxy-Anweisungen für Ihre Plattform, bevor Sie den Telegraf-Agent installieren.</block>
+  <block id="b2997605f7b826343b475f71837415f4" category="section-title">Speicherorte Protokollieren</block>
+  <block id="21872dffda230726cb93a6dddff7dd00" category="paragraph">Telegraf-Protokollmeldungen werden von stdout zu den folgenden Standardprotokolldateien umgeleitet:</block>
+  <block id="176f2e3b515143c4119028872457ab70" category="list-text">RHEL/CentOS: /Var/log/telegraf/telegraf.log</block>
+  <block id="dba98037ac90ffd514afa8ae59edc426" category="list-text">Ubuntu/Debian: /Var/log/telegraf/telegraf.log</block>
+  <block id="e6c0bd06ad9776dae0a5cf43e60b0ff4" category="list-text">Windows: C:\Programme\telegraf\telegraf.log</block>
+  <block id="e881539baa442c22144c7ae555cac843" category="list-text">PowerShell muss installiert sein</block>
+  <block id="2156565620990981867eac598ee8b32d" category="list-text">Wenn Sie sich hinter einem Proxy befinden, müssen Sie die Anweisungen im Abschnitt * Proxy-Unterstützung für Windows konfigurieren* befolgen.</block>
+  <block id="77fe3eec7153b8f297a2bc358451e189" category="section-title">Proxy-Unterstützung für Windows wird konfiguriert</block>
+  <block id="f3dd6d7b854220a72089f42589f41cba" category="admonition">Wenn in Ihrer Umgebung ein Proxy verwendet wird, lesen Sie diesen Abschnitt vor der Installation.</block>
+  <block id="9b08a379d02da9e64bce4ee2389fc783" category="admonition">In den folgenden Schritten werden die Aktionen beschrieben, die zum Festlegen der Umgebungsvariablen _http_Proxy/HTTPS_Proxy_ erforderlich sind. In einigen Proxyumgebungen müssen Benutzer möglicherweise auch die Variable _no_Proxy-Umgebung_ einstellen.</block>
+  <block id="a5f3019989ce33b954d73eef96682b0a" category="paragraph">Führen Sie für Systeme, die sich hinter einem Proxy befinden, folgende Schritte aus, um die Umgebungsvariable _https_Proxy_ und/oder _http_Proxy_ vor der Installation des Telegraf-Agenten festzulegen:</block>
+  <block id="59c020eb3b2fac7b9a29161528b3da48" category="section-title">Installieren des Agenten</block>
+  <block id="8774ad5045a9c9dbd5af8443ad85146e" category="inline-image-macro">Windows Agent-Installation</block>
+  <block id="dcdaa0ef05a3fb89ab74a979905c80d2" category="paragraph"><block ref="dcdaa0ef05a3fb89ab74a979905c80d2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5002498d543f683aae80ee22af4a4919" category="list-title">Schritte zur Installation von Agent unter Windows:</block>
+  <block id="08c86f7c6085b75b443831ac2339b9eb" category="list-text">Wählen Sie einen Agent-Zugriffsschlüssel aus.</block>
+  <block id="210f49b0f42e5dd87eb3a71d8a25532e" category="list-text">Kopieren Sie den Befehlsblock aus dem Agent-Installationsdialog. Sie können auf das Clipboard-Symbol klicken, um den Befehl schnell in die Zwischenablage zu kopieren.</block>
+  <block id="cc9e3ada3e15910f4f34f7dddee7971a" category="list-text">Öffnen Sie ein PowerShell-Fenster</block>
+  <block id="19e2304cac236ec4b99e287bd1711c9a" category="list-text">Fügen Sie den Befehl in das PowerShell Fenster ein, und drücken Sie die Eingabetaste.</block>
+  <block id="72aaa179eba4eb63e2dc64b9a417771d" category="list-text">Der Befehl lädt das entsprechende Agent-Installationsprogramm herunter, installiert es und legt eine Standardkonfiguration fest. Nach Abschluss des Vorgangs wird der Agent-Service neu gestartet. Der Befehl hat einen eindeutigen Schlüssel und ist 24 Stunden lang gültig.</block>
+  <block id="ffd71ae6a321e93c38ab5f9b79ceb31a" category="list-text">Klicken Sie auf *Fertig* oder *Weiter*</block>
+  <block id="4fa34467eb66080db7c23f897ac4b8af" category="paragraph">Nach der Installation des Agent können Sie den Dienst mit den folgenden Befehlen starten/stoppen:</block>
+  <block id="573a1cc1840c9732e7145a21d3f3734d" category="section-title">Deinstallieren des Agenten</block>
+  <block id="d19721dc26042ef4a2f9474f15fd9551" category="paragraph">Gehen Sie zum Deinstallieren des Agent unter Windows in einem PowerShell-Fenster wie folgt vor:</block>
+  <block id="a8e0b2a2a3d514566af06fa837684d99" category="list-text">Stoppen und löschen Sie den Telegraf-Dienst:</block>
+  <block id="b5de2c13f95171f5dc8fed7123f4fd51" category="list-text">Entfernen Sie das Zertifikat aus dem trustore:</block>
+  <block id="f68c6450fe9cbf9bcf2153b40c67f142" category="list-text">Löschen Sie den Ordner _C:\Programme\telegraf_, um die Binärdateien, Protokolle und Konfigurationsdateien zu entfernen</block>
+  <block id="482671fee2a539ceb19e6bc08e0b0655" category="list-text">Entfernen Sie den Schlüssel _SYSTEM\CurrentControlSet\Services\EventLog\Application\telegraf_ aus der Registrierung</block>
+  <block id="bc72b4980d123f85b510df4ebcab83bf" category="section-title">Aktualisieren des Agenten</block>
+  <block id="8cf39a7fcad49926187638c2ef3888e4" category="paragraph">Um den telegraf-Agent zu aktualisieren, gehen Sie wie folgt vor:</block>
+  <block id="2131151d9623bddef4c64eb9b42c4c1e" category="list-text">Stoppen und löschen sie den telegraf-Dienst:</block>
+  <block id="307db1eaa318a5a19e7f13b2a410df0a" category="list-text">Löschen Sie den Schlüssel _SYSTEM\CurrentControlSet\Services\EventLog\Application\telegraf_ aus der Registrierung</block>
+  <block id="54bab0726441aa1bd7acb54e33ed0af1" category="list-text">Löschen _C:\Programme\telegraf\telegraf.conf_</block>
+  <block id="e548b13be6208523f2daa7458e9ab258" category="list-text">Löschen Sie _C:\Programme\telegraf\telegraf.exe_</block>
+  <block id="44bbcb23890d6d6f6e19f827fe6a3239" category="inline-link-macro">Installieren Sie den neuen Agenten</block>
+  <block id="1e3047ccd30b2ed259aa8b3fe3e877d1" category="list-text"><block ref="67cec2de8f18c94e7ba97311262ff17e" category="inline-link-macro-rx"></block>.</block>
+  <block id="b523f646735e8e8381556641bbff1d1f" category="section-title">RHEL und CentOS</block>
+  <block id="267bedda4c5c4a640bb527d89667582d" category="list-text">Folgende Befehle müssen verfügbar sein: Curl, sudo, ping, sha256sum, openssl, Und Dmidecode</block>
+  <block id="d45fc0c2a28126623498664c1e032858" category="list-text">Wenn Sie sich hinter einem Proxy befinden, müssen Sie die Anweisungen im Abschnitt * Proxy-Unterstützung für RHEL/CentOS* befolgen.</block>
+  <block id="019f11868271c32347a01f45447d4e72" category="section-title">Proxy-Unterstützung für RHEL/CentOS wird konfiguriert</block>
+  <block id="80b682b4c5b4642df4eae385b21569a1" category="paragraph">Führen Sie für Systeme, die sich hinter einem Proxy befinden, die folgenden Schritte vor der Installation des Telegraf-Agenten durch:</block>
+  <block id="b28d80fd10a0256acc49b263b43162c6" category="list-text">Legen Sie die Umgebungsvariable _https_Proxy_ und/oder _http_Proxy_ für den aktuellen Benutzer fest:</block>
+  <block id="1572d13b281f402b801b3e8fe53aa37b" category="list-text">_/etc/default/telegraf_ erstellen und Definitionen für die Variable(en) _https_Proxy_ und/oder _http_Proxy_ einfügen:</block>
+  <block id="e0d7a90b12ef3cae3c8429a34b69736a" category="inline-image-macro">RHEL/CentOS Agent Installation</block>
+  <block id="530723ab95ea5239b9c308f8890b5069" category="paragraph"><block ref="530723ab95ea5239b9c308f8890b5069" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c9a13bf8b19a106ff517d02fffbce168" category="list-title">Schritte zum Installieren von Agent auf RHEL/CentOS:</block>
+  <block id="371155faf9e65eedebc467c42881ab64" category="list-text">Öffnen Sie ein Fenster „Bash“</block>
+  <block id="cb672d725b5532024df625e16f4b2c0c" category="list-text">Fügen Sie den Befehl in das Fenster „Bash“ ein, und drücken Sie die Eingabetaste.</block>
+  <block id="9fdc20ebb14c5dab6824fe28b1600c94" category="paragraph">Wenn Ihr Betriebssystem systemd (CentOS 7+ und RHEL 7+) verwendet:</block>
+  <block id="e16e46804943331d9caf8452c87dfa2b" category="paragraph">Wenn Ihr Betriebssystem keine systemd verwendet (CentOS 7+ und RHEL 7+):</block>
+  <block id="58cbdcc7fe2213684c932ead0296c88a" category="paragraph">Gehen Sie zum Deinstallieren des Agent auf RHEL/CentOS in einem Bash Terminal wie folgt vor:</block>
+  <block id="561c2b82227ce1633c89ee229e9285c3" category="list-text">Stoppen Sie den Telegraf-Service:</block>
+  <block id="4092367a698b248c0ef54aa8fa6d6589" category="list-text">Entfernen Sie den Telegraf-Agent:</block>
+  <block id="00685c25e29deb7cd384ac57b9da8a6a" category="list-text">Entfernen Sie alle Konfigurations- oder Protokolldateien, die zurückgelassen werden können:</block>
+  <block id="8454d961e549d71d53dc014fde0b5dff" category="list-text">Stoppen sie den telegraf-Service:</block>
+  <block id="4a1301eea91ca5bc33f38eb5756f1f68" category="list-text">Entfernen Sie den vorherigen telegraf-Agent:</block>
+  <block id="bf2c36be7f2bc4dd2e37e375e76d6d4a" category="list-text"><block ref="8fae6fa4f132bafa12a111b0e12ddf22" category="inline-link-macro-rx"></block>.</block>
+  <block id="7ae220dde836123a83ab52aa985caa47" category="section-title">Ubuntu und Debian</block>
+  <block id="5c45aaf7999f2a6de4e86ca7726bce2b" category="list-text">Wenn Sie sich hinter einem Proxy befinden, müssen Sie die Anweisungen im Abschnitt * Proxy-Unterstützung für Ubuntu/Debian* befolgen.</block>
+  <block id="777a7eacf1727a42155a716a8fa767e9" category="section-title">Proxy-Unterstützung für Ubuntu/Debian konfigurieren</block>
+  <block id="0d0d38b5222d561807cc4ef53f325bd5" category="list-text">Erstellen Sie /etc/default/telegraf und fügen Sie Definitionen für die Variable(en) _https_Proxy_ und/oder _http_Proxy_ ein:</block>
+  <block id="3fcd2752c343d8536926bfb628eec3dc" category="inline-image-macro">Ubuntu/Debian Agent Install</block>
+  <block id="49d620df1cdf6184275e83524131195e" category="paragraph"><block ref="49d620df1cdf6184275e83524131195e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2ccb8fda807f639572273dc350f43bbf" category="list-title">Schritte zur Installation von Agent auf Debian oder Ubuntu:</block>
+  <block id="6271d65c06a7a1fd244d963c100a1a1c" category="paragraph">Wenn Ihr Betriebssystem systemd verwendet:</block>
+  <block id="b5648f15565fb8185bfc83aaabee9577" category="paragraph">Wenn Ihr Betriebssystem keine systemd verwendet:</block>
+  <block id="936ff88b3ce432ac2624f7f2bb4998a4" category="paragraph">Um den Agent auf Ubuntu/Debian zu deinstallieren, führen Sie in einem Bash-Terminal Folgendes aus:</block>
+  <block id="7f3a9bda6122a676154f73d5edf02232" category="list-text"><block ref="760050cb55c606cd7ef0af21f798bf45" category="inline-link-macro-rx"></block>.</block>
+  <block id="99b7973dda927022b1a7232d7b78e926" category="section-title">Prüfsummen Werden Überprüft</block>
+  <block id="25334cc3e68d534ebb5ad59907c70159" category="paragraph">Das Cloud Insights Agent-Installationsprogramm führt Integritätsprüfungen durch. Einige Benutzer müssen jedoch vor der Installation oder Anwendung heruntergeladener Artefakte möglicherweise ihre eigenen Überprüfungen durchführen. Dazu können Sie das Installationsprogramm herunterladen und eine Prüfsumme für das heruntergeladene Paket erstellen. Anschließend wird die Prüfsumme mit dem in der Installationsanleitung angegebenen Wert verglichen.</block>
+  <block id="1078df24543dad61e1b5b51f611f5b0f" category="section-title">Laden Sie das Installationspaket herunter, ohne es zu installieren</block>
+  <block id="48feb91430f93bd8ac9740e9cdc40c75" category="paragraph">Um einen ausschließlich herunterladbaren Vorgang durchzuführen (im Gegensatz zum Standard-Download-and-install), können Benutzer den Agent-Installationbefehl von der UI erhalten bearbeiten und die nachgestellte Option „install“ entfernen.</block>
+  <block id="deadee5e2cfce7600cfd5def40a7d618" category="paragraph">Führen Sie hierzu folgende Schritte aus:</block>
+  <block id="8c386e0a7a8cfc20ef9a26dacd925e69" category="list-text">Kopieren Sie das Agent Installer-Snippet wie angewiesen.</block>
+  <block id="225b18b0098145b352b8fbf6c04e8098" category="list-text">Anstatt das Snippet in ein Befehlsfenster einzufügen, fügen Sie es in einen Texteditor ein.</block>
+  <block id="98cd1da81daac82fdd86ce7412e50a24" category="list-text">Entfernen Sie die nachstehende „--install“ (Linux) oder „-install“ (Windows) aus dem Befehl.</block>
+  <block id="34e3334224025c0302c21ab69b535b6e" category="list-text">Kopieren Sie den gesamten Befehl aus dem Texteditor.</block>
+  <block id="d2a9c05594a3807487efd306f7e06ff5" category="list-text">Fügen Sie es nun in Ihr Befehlsfenster ein (in einem Arbeitsverzeichnis) und führen Sie es aus.</block>
+  <block id="02761a47fb2c7ca60e3b94426c0516d2" category="paragraph">Nicht-Windows (diese Beispiele gelten für Kubernetes; die tatsächlichen Skriptnamen können variieren):</block>
+  <block id="051ab73b0c77a3e60cd6e6de57fc9319" category="list-text">Download und Installation (Standard):</block>
+  <block id="a3ef489d553e0422ea8926faf65bf77a" category="list-text">Nur Download:</block>
+  <block id="140710a8dd48496a1ea3b09f2799c408" category="paragraph">Windows:</block>
+  <block id="10835cdc0c344b8183321c8a0e88269e" category="paragraph">Der Download-Only-Befehl lädt alle erforderlichen Artefakte vom Cloud Insights in das Arbeitsverzeichnis herunter. Die Artefakte umfassen, dürfen aber nicht beschränkt sein auf:</block>
+  <block id="8d4a361a3f25b78818c569d8f15cf4a6" category="list-text">Ein Installationsskript</block>
+  <block id="b015398c226e1e3576258432ece31819" category="list-text">Einer Umgebungsdatei</block>
+  <block id="004cac3ce7d67014b5fadcffaf9b5b70" category="list-text">YAML-Dateien</block>
+  <block id="9f32134bbefffdc9df70a2d73c2df6a6" category="list-text">Eine Prüfsummendatei (endet mit sha256.signed oder sha256.ps1)</block>
+  <block id="4f1c754cd67cd57cebe0be2f5e8638a4" category="paragraph">Das Installationsskript, die Umgebungsdatei und die YAML-Dateien können mittels Sichtprüfung verifiziert werden.</block>
+  <block id="d8f6d626cfe2a4f97d97ff93d95db51b" category="section-title">Prüfsummenwert generieren</block>
+  <block id="d1703bc5bb53c90ffbbae52dfe829603" category="paragraph">Um den Prüfsummenwert zu generieren, führen Sie für die entsprechende Plattform den folgenden Befehl aus:</block>
+  <block id="9374ddadb9776b458a2963573b22f63d" category="list-text">RHEL/Ubuntu:</block>
+  <block id="aacd43790bd404cab1a350cb047a9a9d" category="section-title">Überprüfen Sie die Prüfsumme</block>
+  <block id="43e3c65a555911ad6d7235d9e9206e4c" category="paragraph">Extrahieren Sie die erwartete Prüfsumme aus der Prüfsummendatei</block>
+  <block id="47a6cd89e04d0d805a75aa0fe5822c20" category="list-text">Nicht Windows:</block>
+  <block id="b59ea01f26635c31c3c1df660848f6c8" category="section-title">Installieren Sie das heruntergeladene Paket</block>
+  <block id="6c32334bfce9f857b0fdbdca68040a0b" category="paragraph">Sobald alle Artefakte zufriedenstellend überprüft wurden, kann die Agenteninstallation durch Ausführen von gestartet werden:</block>
+  <block id="19032097e8464bc9b326d59737b0bdbc" category="paragraph">Einige Dinge, die Sie versuchen können, wenn Probleme beim Einrichten eines Agenten auftreten:</block>
+  <block id="2c53f37725165d35104102da8d88caf1" category="cell">Versuchen Sie dies:</block>
+  <block id="3a0f609bf65bf53f905fdcfae464bcae" category="cell">Nach der Konfiguration eines neuen Plugins und dem Neustart von Telegraf startet Telegraf Telegraf nicht. Die Protokolle weisen darauf hin, dass ein Fehler wie folgt auftritt:
+
+"[telegraf] Fehler beim Ausführen des Agenten: Fehler beim Laden der Konfigurationsdatei /etc/telegraf/telegraf.d/cloudinsights-default.conf: Plugin Outputs.http: Line &lt;linenumber&gt;: Configuration hat die Felder ["use_System_Proxy"] angegeben, aber sie wurden nicht verwendet"</block>
+  <block id="39930ddf87d2960ef2f5a8ff06e4993e" category="cell">Die installierte Telegraf-Version ist veraltet. Befolgen Sie die Schritte auf dieser Seite, um *Upgrade the Agent* für Ihre entsprechende Plattform.</block>
+  <block id="90388b17e672eeaae8e092ebd4bf6362" category="cell">Ich habe das Installer-Skript auf einer alten Installation ausgeführt und jetzt sendet der Agent keine Daten</block>
+  <block id="7cc579c6f20ffbe0b9452d6f5fff9167" category="cell">Deinstallieren Sie den telegraf-Agent und führen Sie dann das Installationsskript erneut aus. Folgen Sie den Schritten *Upgrade the Agent* auf dieser Seite für Ihre entsprechende Plattform.</block>
+  <block id="fb0132b157c251ea47224310ff68ee9b" category="cell">Ich habe bereits einen Agent mit Cloud Insights installiert</block>
+  <block id="1fed0141939f301599f8ba56fcb40b18" category="cell">Wenn Sie bereits einen Agent auf Ihrem Host/VM installiert haben, müssen Sie den Agent nicht erneut installieren. Wählen Sie in diesem Fall im Bildschirm Agenteninstallation einfach die entsprechende Plattform und die entsprechende Taste aus und klicken Sie auf *Weiter* oder *Fertig*.</block>
+  <block id="eca45129c8446e68f5ce8f765f25b4c7" category="cell">Ich habe bereits einen Agent installiert, aber nicht mit dem Cloud Insights Installer</block>
+  <block id="ceba88aab9e14c687ffb3ce263a229a1" category="cell">Entfernen Sie den vorherigen Agent, und führen Sie die Installation des Cloud Insights Agent aus, um die richtigen Standardeinstellungen für die Konfigurationsdatei zu gewährleisten. Klicken Sie nach Abschluss auf *Weiter* oder *Fertig*.</block>
+  <block id="5ea8c0bc0f3ff2ad5a8ecd87179c69f1" category="inline-link-macro">Data Collector Supportmatrix</block>
+  <block id="47c66df8007a6168673191bfaef7dfab" category="paragraph">Weitere Informationen finden Sie im <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> Oder auf der <block ref="9dd2beb67fe62b2f58f66806d3cbe842" category="inline-link-macro-rx"></block>.</block>
+  <block id="98f1b16edd9c418c18f29042ee157677" category="summary">Optionen zur Anzeige von Telegraf-Daten</block>
+  <block id="59a039b9bdde97f886d094af635410bd" category="doc">Neue Metriken</block>
+  <block id="d66e199a7109fa5e8cb92ddc071162c4" category="paragraph">Cloud Insights bietet verschiedene *transform*-Optionen für bestimmte Metriken in Widgets (insbesondere die Metriken "Custom" oder Integration Metrics, wie etwa von Kubernetes, ONTAP Advanced Data, Telegraf Plugins, etc.), so dass Sie die Daten auf eine Reihe von Möglichkeiten anzuzeigen. Beim Hinzufügen transformbarer Metriken zu einem Widget werden Sie mit einem Dropdown-Menü mit den folgenden Optionen zur Transformation angezeigt:</block>
+  <block id="6adf97f83acf6453d4a6a4b1070f3754" category="list-text">Keine</block>
+  <block id="8dff9b3275d903bce911a227cbed3634" category="list-text">Die Daten werden ohne Manipulation als IS angezeigt.</block>
+  <block id="dcb66ff6e4a2517ade22183779939c9d" category="list-text">Preis</block>
+  <block id="9b3e9f4a548e4f107c31fe2a21eed22a" category="list-text">Aktueller Wert geteilt durch den Zeitbereich seit der vorherigen Beobachtung.</block>
+  <block id="eb2527806a7e1ef48009eaaa785368fe" category="list-text">Kumulativ</block>
+  <block id="81be1e144a5ed592ed4813fe9a14b16d" category="list-text">Die Akkumulation der Summe der vorherigen Werte und des aktuellen Werts.</block>
+  <block id="db1f4ab5845def61a83d5df13e0c2397" category="list-text">Delta</block>
+  <block id="a1933dae1248a2768b141e98f357f4e1" category="list-text">Die Differenz zwischen dem vorhergehenden Beobachtungswert und dem aktuellen Wert.</block>
+  <block id="182287f79b18308934050eed051fa06e" category="list-text">Delta-Preis</block>
+  <block id="c4b4b6e9c3267be39ae1c34d6560414a" category="list-text">Delta-Wert geteilt durch den Zeitraum seit der vorherigen Beobachtung.</block>
+  <block id="bef0e8af1d9f29c6ecb74d3390d4f227" category="list-text">Kumulierter Betrag</block>
+  <block id="71d65ae1cbf6688be0226ae6c7ce8a47" category="list-text">Kumulativer Wert geteilt durch den Zeitraum seit der vorherigen Beobachtung.</block>
+  <block id="7ade6c64e9a88c6a4e7b10ff7debb111" category="paragraph">Beachten Sie, dass bei der Transformation von Metriken nicht die zugrunde liegenden Daten selbst, sondern nur die Art und Weise geändert werden, wie Daten angezeigt werden.</block>
+  <block id="1914b55914b6ee44bc0dcd84cc7caeb3" category="summary">Konfiguration des Apache Data Collector</block>
+  <block id="a2c447b19901c50472d86c46b78e4269" category="doc">Apache Data Collector</block>
+  <block id="7f9a66bbf7786386f3da129eb0ca4ce8" category="paragraph">Dieser Datensammler ermöglicht die Erfassung von Daten von Apache-Servern in Ihrer Umgebung.</block>
+  <block id="e11da9afe91d381489a365c86cc614ab" category="list-title">Voraussetzungen</block>
+  <block id="1194c1f585884540788ba8946023cc33" category="list-text">Sie müssen Ihren Apache HTTP Server einrichten und ordnungsgemäß ausführen lassen</block>
+  <block id="6b1dbef46026830edbb8a38bb35f7c07" category="list-text">Sie müssen über sudo- oder Administratorberechtigungen auf Ihrem Agent-Host/VM verfügen</block>
+  <block id="c16390c8cf2123acd316f38a743628ab" category="list-text">In der Regel ist das Apache _mod_Status_-Modul so konfiguriert, dass eine Seite am Speicherort '/Server-Status?Auto' des Apache-Servers angezeigt wird. Die Option _ExtendedStatus_ muss aktiviert sein, um alle verfügbaren Felder zu erfassen. Informationen zum Konfigurieren des Servers finden Sie in der Apache-Moduldokumentation:<block ref="7174f93683616a9a4040d970e3c6eb19" category="inline-link-rx"></block></block>
+  <block id="b0896396e0f3a7aa981b2ef8957b9208" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie Apache.</block>
+  <block id="db3b3ca5f6c31a760f5aa49a9a809802" category="inline-image-macro">Apache-Konfiguration</block>
+  <block id="5ec6fd62051ccff5584535e6108b55ba" category="paragraph"><block ref="5ec6fd62051ccff5584535e6108b55ba" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ed6e8b2146d5bd121cfea083307611f3" category="paragraph">Das Telegraf-Plugin für Apache's HTTP Server setzt auf das 'mod_Status'-Modul, um aktiviert zu werden. Wenn diese Option aktiviert ist, wird Apache HTTP Server einen HTML-Endpunkt anzeigen, der in Ihrem Browser angezeigt oder für die Extraktion des Status aller Apache HTTP Server-Konfigurationen gepatzt werden kann.</block>
+  <block id="8461c6dd6dfb26c96b75667840908e25" category="paragraph">Die Konfiguration wurde gegen Apache HTTP Server Version 2.4.38 entwickelt.</block>
+  <block id="5e35671340e6c9c7b25787ff637f0d95" category="section-title">Aktivieren von mod_Status:</block>
+  <block id="0f3bcff634f4d3862c37ca9068d609a1" category="paragraph">Das Aktivieren und Bereitstellen der 'mod_Status'-Module umfasst zwei Schritte:</block>
+  <block id="efb59b39eb3bfe8e4da0936bb46519fc" category="list-text">Modul wird aktivieren</block>
+  <block id="3b817156f776bb94b972cf7a91ba3184" category="list-text">Legen Sie Statistiken aus dem Modul fest</block>
+  <block id="27c3a633e4b056a5469dc8064c89f668" category="section-title">Modul aktivieren:</block>
+  <block id="44371abdc5e441e96423652f2b9d834b" category="paragraph">Das Laden von Modulen wird durch die Konfigurationsdatei unter '/usr/local/apache/conf/httpd.conf' gesteuert. Bearbeiten Sie die config-Datei und heben Sie die folgenden Zeilen aus:</block>
+  <block id="5096c93091356730cc76dca2451a6d0c" category="section-title">Statistiken aus dem Modul offenlegen:</block>
+  <block id="553822327e85ab49367d681e24c3df28" category="paragraph">Die Offenlegung von 'mod_Status' wird durch die Konfigurationsdatei unter '/usr/local/apache2/conf/extra/httpd-info.conf' gesteuert. Stellen Sie sicher, dass Sie in dieser Konfigurationsdatei Folgendes haben (mindestens sind weitere Richtlinien vorhanden):</block>
+  <block id="bc34f8d241b1e1bccaf9d0575c5b92b3" category="inline-link-macro">Apache-Dokumentation</block>
+  <block id="7727bb6b0739435252f5c813bbbdb290" category="paragraph">Detaillierte Anweisungen zum Modul „MOD_Status“ finden Sie im <block ref="1384449c324b5981491fad302f32d968" category="inline-link-macro-rx"></block></block>
+  <block id="e9713ae04a02a810d6f33dd956f42794" category="cell">Apache</block>
+  <block id="aaba4d734bb5c6c1cd828a66a204028f" category="cell">Knoten-IP
+Node-Name
+Port
+Generierung Der Konfiguration Des Übergeordneten Servers
+MPM-Generierung des übergeordneten Servers
+Server-Betriebszeit
+Wird Angehalten</block>
+  <block id="af40aea2350db56f2ccf87bd2e878384" category="cell">Beschäftigte Mitarbeiter
+Byte pro Anforderung
+Byte pro Sekunde
+CPU-Children-System
+CPU-untergeordnete Benutzer
+CPU-Auslastung
+CPU-System
+CPU-Benutzer
+Asynchrone Verbindungen Werden Geschlossen
+Asynchrone Verbindungen Bleiben Aktiv
+Asynchrone Verbindungen Werden Geschrieben
+Verbindungen Insgesamt
+Dauer pro Anfrage
+Unbeschäftigte Mitarbeiter
+Lastdurchschnitt (letzte 1 m)
+Lastdurchschnitt (letzte 15 m)
+Lastdurchschnitt (letzte 5 m)
+Prozesse
+Anfragen pro Sekunde
+Zugriffe Insgesamt
+Gesamtdauer
+Summe KBytes
+Scoreboard Wird Geschlossen
+Scoreboard-DNS-Lookups
+Anzeigetafel-Endbearbeitung
+Anzeigetafel Leerlaufbereinigung
+Anzeigetafel Am Leben Bleiben
+Protokollierung Der Anzeigetafel
+Anzeigetafel Geöffnet
+Anzeigetafel Lesen
+Anzeigetafel Wird Gesendet
+Anzeigetafel Wird Gestartet
+Anzeigetafel Wartet</block>
+  <block id="a1151f371f1db5ddea0adcadbc49738e" category="summary">Konfiguration des PostgreSQL-Datensammlers</block>
+  <block id="28279ca1d2fa23440d64e252b10c2f2e" category="doc">PostgreSQL Data Collector</block>
+  <block id="45946606e52c951c2b379ff7a77d2b76" category="paragraph">Cloud Insights verwendet diesen Datensammler, um Metriken aus PostgreSQL zu sammeln.</block>
+  <block id="0ba3615a02f45b8a7b485192d849f02b" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie PostgreSQL.</block>
+  <block id="9efde47a7f6913de0fa15c50384c3916" category="inline-image-macro">PostgreSQL-Konfiguration</block>
+  <block id="ee807d599c86ec0cddb65a95252754a9" category="paragraph"><block ref="ee807d599c86ec0cddb65a95252754a9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="939acd793e013bec3f238716d1e5a1e9" category="inline-link-macro">PostgreSQL-Dokumentation</block>
+  <block id="5d213cdd76206e521a99ee763867f286" category="paragraph">Informationen finden Sie unter <block ref="3b5af5b1f584ca750656ee54bcf2acd9" category="inline-link-macro-rx"></block>.</block>
+  <block id="b3cba72c5eaf0e9b001ad474d3a7f104" category="cell">PostgreSQL Server</block>
+  <block id="9eb39642e01cf00ecfb6933ae0d8c91e" category="cell">Namespace
+Datenbank
+Server</block>
+  <block id="8439f36077726e546877845c0ee98c4a" category="cell">Node-Name
+Knoten-IP</block>
+  <block id="416d97bf6aa220146cd29e24d4f5ae1f" category="cell">Puffer Zugewiesen
+Pufferbackend
+Puffert Die Dateisynchronisierung Im Back-End-Bereich
+Puffer-Kontrollpunkt
+Puffer Reinigen
+Kontrollpunkte Synchronisierungszeit
+Kontrollpunkte Schreibzeit
+Checkpoints-Anforderungen
+Kontrollpunkte Zeitlich
+Max Geschrieben Sauber</block>
+  <block id="f9fa8e4ec8d4dfd8388984164c7cfd07" category="cell">PostgreSQL Datenbank</block>
+  <block id="47587388fb25edfeb337d39473d4183f" category="cell">Datenbank-OID
+Node-Name
+Knoten-IP</block>
+  <block id="03ccb35e4244ef1cc7ff8662031b0a7f" category="cell">Lesezeit Für Blöcke
+Schreibzeit Blöcke
+Blockeinschläge
+Blöcke Werden Gelesen
+Konflikte
+Deadlocks
+Kundennummer
+Temp-Dateien Bytes
+Temp.-Dateinummer
+Zeilen Gelöscht
+Zeilen Abgerufen
+Zeilen Eingefügt
+Zeilen Zurückgegeben
+Zeilen Aktualisiert
+Transaktionen Festgelegt
+Transaktionen Mit Rollbacked</block>
+  <block id="f23d43a2f8827bf71755047f9233d1d7" category="summary">Konfiguration des Datensammlers Flik</block>
+  <block id="43b4fe530611e0a29d40ae51f1110192" category="doc">Erfassung Von Node-Daten</block>
+  <block id="a95bc37c275448ac1c6069158f92b809" category="paragraph">Cloud Insights sammelt Kennzahlen von dem Knoten, auf dem Sie einen Agent installieren.</block>
+  <block id="baaf023f6d75d85198bf4906a1760b9a" category="list-text">Wählen Sie unter *Observability &gt; Collectors* ein Betriebssystem/eine Plattform aus. Beachten Sie, dass durch die Installation eines Datensammlers für die Integration (Kubernetes, Docker, Apache usw.) auch die Erfassung von Node-Daten konfiguriert wird.</block>
+  <block id="5f6ce12582c69bad9341e28467c0c0d0" category="list-text">Befolgen Sie die Anweisungen, um den Agenten zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.</block>
+  <block id="c166791fe89a8eb17ee0a37ad809ba2b" category="paragraph">Die folgenden Objekte und ihre Zähler werden als Node-Kennzahlen erfasst:</block>
+  <block id="1f8c535824144ce794fd8ac5fdcfe9f1" category="cell">Knoten Dateisystem</block>
+  <block id="8fcdaf1e82ebe454e557f94d0676e94b" category="cell">Node-UUID
+Gerät
+Pfad
+Typ</block>
+  <block id="1f887fd15f6189f871338dd33033cd43" category="cell">Knoten-IP
+Node-Name
+Node-BS
+Modus</block>
+  <block id="ad06ad8b4ea618930277691a7ca85b8a" category="cell">Kostenlos
+Inodes Frei
+Inodes Gesamt
+Verwendete Inodes
+Gesamt
+Insgesamt Verwendet
+Verwendet</block>
+  <block id="995a8be8130452c3880f8f3a8efb892f" category="cell">Node-Festplatte</block>
+  <block id="8d31b98bd62df2c8e71a8ccda6950620" category="cell">Node-UUID
+Festplatte</block>
+  <block id="395504c5fc3cdba387d8e31a83c56f88" category="cell">Knoten-IP
+Node-Name
+Node-BS</block>
+  <block id="504e0980cd10557e0d0eeeadb727d763" category="cell">E/A-Zeit insgesamt
+IOPS in Bearbeitung
+Gelesene Bytes (pro Sekunde)
+Lesezeit Gesamt
+Lesevorgänge (pro Sekunde)
+Gewichtete E/A-Zeit gesamt
+Schreib-Bytes (pro Sekunde)
+Schreibzeit Gesamt
+Schreibvorgänge (pro Sekunde)
+Aktuelle Länge Der Festplattenwarteschlange
+Schreibzeit
+Lesezeit
+I/O-Zeit</block>
+  <block id="9560e0d605d2cc7aa05155382b767318" category="cell">Knoten-CPU</block>
+  <block id="7f0dc83c5502913a601c96af73494913" category="cell">Node-UUID
+CPU</block>
+  <block id="19e5a412b9d9ce58d147c936a5bf221e" category="cell">CPU-Auslastung des Systems
+Benutzer-CPU-Auslastung
+CPU-Auslastung im Leerlauf
+CPU-Auslastung des Prozessors
+Unterbrechen Sie die CPU-Nutzung
+DPC-CPU-Auslastung</block>
+  <block id="16d2c29487805cc97063b63f5f00c68e" category="cell">Kernel-Boot-Zeit
+Kernel-Kontext-Switches (pro Sekunde)
+Kernel Entropy Verfügbar
+Kernel-Interrupts (pro Sekunde)
+Kernel-Prozesse Forked (pro Sekunde)
+Speicher Aktiv
+Verfügbarer Speicher Insgesamt
+Verfügbarer Speicher
+Speicher Gepuffert
+Cache-Speicher
+Speicherfestsetzgrenze
+Speicher Als Belegt
+Speicher Verschmutzt
+Speicherfrei
+Speicher Hoch Frei
+Speicher Insgesamt Hoch
+Speicher – Riesige Seitengröße
+Memory Riesige Seiten Kostenlos
+Speicher Riesige Seiten Insgesamt
+Wenig Freier Speicher
+Niedriger Gesamtspeicher
+Speicher Zugeordnet
+Tabellen Der Speicherseite
+Freigegebener Speicher
+Memory Slab
+Speicheraustausch Im Cache
+Freier Speicheraustausch
+Speicheraustausch Insgesamt
+Speicher Gesamt
+Insgesamt Verwendeter Speicher
+Verwendeter Speicher
+Memory Vmalloc Chunk
+Speicher Vmalloc Gesamt
+Verwendeter Speicher-Vmalloc
+Speicher Verdrahtet
+Memory Writeback Total
+Memory Writeback Tmp
+Fehler Im Speicher-Cache
+Speicher Benötigt Null Fehler
+Fehler Auf Der Speicherseite
+Speicherseiten
+Speicher Nicht Ausgelagert
+Speicher Ausgelagert
+Arbeitsspeicher-Cache-Kern
+Speicher-Standby-Cache Normal
+Speicher-Standby-Cache-Reserve
+Fehler Beim Speicherübergang
+Prozesse Blockiert
+Prozesse Tot
+Prozesse Im Leerlauf
+Verarbeitet Funkruf
+Laufende Prozesse
+Prozesse Schlafen
+Prozesse Angehalten
+Prozesse Insgesamt
+Verarbeitet Gesamtgewindevorgänge
+Prozesse Unbekannt
+Verarbeitet Zombies
+Länge Der Prozessorwarteschlange
+Kostenloser Austausch
+Summe Tauschen
+Genutzte Summe Austauschen
+Austausch Verwendet
+Eintauschen
+Austausch
+Systembetriebszeit
+System Num CPU
+Systemanzahl Benutzer
+Systemanrufe</block>
+  <block id="695c8433fb0290581bae584e00feeee4" category="cell">Node-Netzwerk</block>
+  <block id="0a7c391bbf4a5a2942fabe6c508c95eb" category="cell">Netzwerkschnittstelle
+Node-UUID</block>
+  <block id="7e497ea07b0bb26a9fccfea169adadb5" category="cell">Node-Name
+Knoten-IP
+Node-BS</block>
+  <block id="228775e556bb7d0b1893a0069479cc55" category="cell">Empfangene Bytes
+Gesendete Bytes
+Ausgelegte Pakete Verworfen
+Fehler Bei Paketausgang
+Empfangene Pakete Verworfen
+Empfangene Pakete
+Empfangene Pakete
+Pakete Gesendet</block>
+  <block id="620f85b913de46972f8dc2d9791d0335" category="inline-link-macro">Konfigurieren eines Agenten</block>
+  <block id="11e9a60bae5c09e0b15ee77e596f4b30" category="paragraph">Informationen zur Einrichtung und Fehlerbehebung finden Sie im <block ref="253f1bddd94d888bccb7868889c4eaa6" category="inline-link-macro-rx"></block> Seite.</block>
+  <block id="d500a402a0f4d5ab2dedb2c5a7ec2eaf" category="summary">Konfiguration des memcached Data Collector</block>
+  <block id="0f5c57f0abc7ee69be3379cf9f5ede78" category="doc">Memcached Data Collector</block>
+  <block id="353f811fa170b612fa3a1340d62d9219" category="paragraph">Cloud Insights verwendet diese Datensammlung, um Kennzahlen aus Memcached zu erfassen.</block>
+  <block id="589728f32967406f1fdbd032c3fe018d" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie Memcached.</block>
+  <block id="198cd654ded33685760b4676e579ff66" category="inline-image-macro">Konfiguration mit Memcached</block>
+  <block id="a986c1bc689361d60658b48c116b9bda" category="paragraph"><block ref="a986c1bc689361d60658b48c116b9bda" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e26124564f900a300b66ae6ad54d0791" category="inline-link-macro">Wiki mit Memcached</block>
+  <block id="275cfcf9eff65ee82ad249d1a35cadfb" category="paragraph">Informationen finden Sie unter <block ref="5ded07e322e421e6ecffb5f41bada1c9" category="inline-link-macro-rx"></block>.</block>
+  <block id="05894ba2c918dd33592bf1bd21c347f6" category="cell">Gememcachte</block>
+  <block id="05345376e590de98cc623cdd4392065e" category="cell">Verbindungen Werden Akzeptiert
+Authentifizierungsanforderungen Verarbeitet
+Fehlgeschlagene Authentifizierungen
+Verwendete Bytes
+Gelesene Byte (pro Sekunde)
+Geschriebene Byte (pro Sekunde)
+CAS-Radval
+CAS-Treffer
+CAS-Fehlschläge
+Spülanforderungen (pro Sekunde)
+Get-Anforderungen (pro Sekunde)
+Anforderungen festlegen (pro Sekunde)
+Touch-Anforderungen (pro Sekunde)
+Verbindungsausbeute (pro Sekunde)
+Verbindungsstrukturen
+Offene Verbindungen
+Aktuell Gespeicherte Objekte
+Decr Requests Hits (pro Sekunde)
+Dec-Anforderungen-Fehlschläge (pro Sekunde)
+Aufrufe von Löschanfragen (pro Sekunde)
+Nichtübereinstimmungen bei Löschanforderungen (pro Sekunde)
+Elemente Entfernt
+Gültige Räumungen
+Abgelaufene Elemente
+Get Hits (pro Sekunde)
+Get Misses (pro Sekunde)
+Verwendete Hash-Bytes
+Hash Wird Erweitert
+Hash-Leistungsstufe
+InCR-Zugriffe (pro Sekunde)
+Inkr-Anfragen – Fehlschläge (pro Sekunde)
+Server Max. Byte
+Wiedergabe Deaktiviert Anzahl
+Zurückgewonnen
+Anzahl Der Arbeitsgewinde
+Alle Geöffneten Verbindungen
+Insgesamt Gespeicherte Artikel
+Tippen Sie Auf Treffer
+Tippen Sie Auf Fehlschläge
+Server-Betriebszeit</block>
+  <block id="83fbc11c171008ea835730f7922a6417" category="summary">Konfiguration des OpenZFS-Datensammlers</block>
+  <block id="280698a257edec445fc9d2a3c41f9089" category="doc">OpenZFS Data Collector</block>
+  <block id="9109116c1e875f98e978783a131e4466" category="paragraph">Cloud Insights verwendet diesen Datensammler, um Metriken von OpenZFS zu erfassen.</block>
+  <block id="5888b2a0267a27f9f34b34863d7a8110" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie OpenZFS.</block>
+  <block id="c5ea32057bfe11187d339d524ccea393" category="inline-image-macro">Linux OpenZFS-Konfiguration</block>
+  <block id="252ab915aaf37678f2c31259844d9830" category="paragraph"><block ref="252ab915aaf37678f2c31259844d9830" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b016f6d8b58fbc57dff98ba0460cd713" category="inline-link-macro">OpenZFS-Dokumentation</block>
+  <block id="5f9f2125ea94bc8ee63a894e33ebaf33" category="paragraph">Weitere Informationen finden Sie im <block ref="0ee1b5ccb1dd9edb24ef60d421e0c18a" category="inline-link-macro-rx"></block>.</block>
+  <block id="3ed1623d8dee972d71ef8f8f97d1e7b7" category="summary">Konfiguration der JVM-Datenerfassung</block>
+  <block id="83940d42e25b16f92792429af8696c02" category="doc">JVM Data Collector</block>
+  <block id="1df30fc376f79b28898758816aee8108" category="paragraph">Cloud Insights verwendet diese Datenerfassung zum Erfassen von Kennzahlen aus JVM.</block>
+  <block id="2f646a2871ea4aa3befe55d29f178062" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie JVM.</block>
+  <block id="cfc15582c99f2d93d641ceef808c0dea" category="inline-image-macro">JVM-Konfiguration</block>
+  <block id="a1a11aab15942415d5fa3dbff92e14bd" category="paragraph"><block ref="a1a11aab15942415d5fa3dbff92e14bd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1d4d54ae01b1b207ad71b19545e065d0" category="inline-link-macro">JVM-Dokumentation</block>
+  <block id="a6915e59acb56cb585cb472961b7fcf4" category="paragraph">Informationen finden Sie unter <block ref="d6ec76238b83ccbfb02cd8a51ed9fed7" category="inline-link-macro-rx"></block>.</block>
+  <block id="18b5a217c4dad25662d3a05edb0e39d7" category="cell">JVM</block>
+  <block id="ba34515ac828f8372a3b624324d6c279" category="cell">Namespace
+JVM</block>
+  <block id="803c4a5e4b5f34cadc25972b0c14aa04" category="cell">Betriebssystemarchitektur
+Betriebssystemname
+Betriebssystemversion
+Laufzeitspezifikation
+Anbieter Der Laufzeitspezifikation
+Version Der Laufzeitspezifikation
+Verfügbarkeit
+VM-Name der Laufzeit
+Runtime VM Vendor
+Runtime VM-Version
+Node-Name
+Knoten-IP</block>
+  <block id="a53a32f48009c614f61507a6499dfbf6" category="cell">Klasse Geladen
+Klasse Geladen Gesamt
+Klasse Entladen
+Memory Heap Belegt
+Speicher Heap Init
+Speicher Heap Verwendet Max
+Speicher Heap Verwendet
+Speicher Nicht Heap Belegt
+Speicher Nicht Heap Init
+Speicher Nicht Heap Max
+Speicher Nicht Heap Verwendet
+Speicherobjekte, Deren Fertigstellung Noch Aussteht
+Betriebssystem-Prozessoren verfügbar
+Größe des fest zugesicherten virtuellen Speichers des Betriebssystems
+Größe des freien physischen Speichers des Betriebssystems
+Größe des freien Austauschbereichs des Betriebssystems
+Max. Anzahl der BS-Dateideskriptoren
+Anzahl Offener BS-Dateideskriptoren
+CPU-Auslastung des BS-Prozessors
+CPU-Zeit des BS-Prozessors
+CPU-Auslastung des BS-Systems
+Betriebssystemlast Durchschnitt
+Größe des physischen Speichers des Betriebssystems insgesamt
+Größe des gesamten Swap-Speicherplatzes des Betriebssystems
+Anzahl Der Thread-Daemon
+Thread Spitzenanzahl
+Thread-Anzahl
+Thread Insgesamt Gestartet Anzahl
+Anzahl Der Sammlung Der Garbage Collector-Kopien
+Uhrzeit Der Sammlung Der Garbage Collector-Kopie
+Anzahl der Sammlung der Garbage Collector-Mark-Sweep-Sammlung
+Zeit für die Sammlung der Garbage Collector-Markierung
+Garbage Collector G1 Anzahl der Sammlung alter Generationen
+Garbage Collector G1 Erfassungszeit der alten Generation
+Garbage Collector G1 Young Generation Collection Anzahl
+Garbage Collector G1 Young Generation Collection Time
+Anzahl der gleichzeitigen Markenswepungen für Garbage Collector
+Garbage Collector Zeit für gleichzeitige Markenswepung
+Anzahl Der Parallelen Sammlung Des Garbage Collectors
+Garbage Collector Parallel Collection Time
+Anzahl der Sammlung der parallelen Sammlung der Sammlung der Datenbereinigung durch den Garbage Collector
+Garbage Collector Parallel Scavenge Mark-Sweep Collection Zeit
+Anzahl Der Sammlung Paralleler Speicherbereinigung Durch Den Garbage Collector
+Garbage Collector Parallel Scavenge Collection Time</block>
+  <block id="ccb06b64aa7e8cb6a869d22deb1de8bd" category="summary">Kubernetes-Konfiguration für den Data Collector</block>
+  <block id="5c7f848c8021f50b6420b0c983ceafd0" category="doc">Kubernetes Data Collector</block>
+  <block id="e93e9e1daf8e7243cd54ae6878bcbd91" category="paragraph">Cloud Insights verwendet diese Datensammler, um Kubernetes Pod, Node und Container-Kennzahlen zu erfassen.</block>
+  <block id="9a3185d3dd699a74f8c315584250a80c" category="inline-link-macro">Agenteninstallation</block>
+  <block id="853a529a2cb031ba8c442d361b80f74e" category="paragraph">Eine Anleitung zur Kubernetes Installation finden Sie im <block ref="83baed86820f9347147bd19d20167e7d" category="inline-link-macro-rx"></block> Seite.</block>
+  <block id="9202ccff1bbfb1125df09b7eb605eb6c" category="admonition">Informationen über *kube-State-metrics* wurden in die verschoben <block ref="83baed86820f9347147bd19d20167e7d" category="inline-link-macro-rx"></block> Seite.</block>
+  <block id="2c1099d2eb2a8a08bba13169800b9ecb" category="cell">Kubernetes Container</block>
+  <block id="5415e066c63454268882855520be8f45" category="cell">Namespace
+Pod
+Container
+Cluster</block>
+  <block id="7bc7c32edd5f6378984b7385ffc0ed80" category="cell">Kubernetes Node
+Node-Name
+Node-BS
+Node-UUID
+Knoten-IP</block>
+  <block id="5ef967423ece776ba4ee9c6e0f94650f" category="cell">CPU-Nanosekunden
+CPU-Auslastung Nanocores
+Hauptfehler Der Speicherseite
+Speicherresident Set Size (RSS)
+Speicher-Arbeitsdatensatz
+Fehler Auf Der Speicherseite
+Speicherauslastung
+Root-Dateisystem Verfügbar
+Root-Dateisystemkapazität
+Root-Dateisystem Verwendet</block>
+  <block id="201aa8b6df1bf9b6d3e7978dd379f568" category="cell">Kubernetes Node</block>
+  <block id="58c8faf6f85ccaa7fc8d2d01063a95b9" category="cell">Kubernetes Node
+Cluster</block>
+  <block id="484a187381025ea8b53e38a49719005d" category="cell">Node-Name
+Node-BS
+Node-UUID
+Knoten-IP</block>
+  <block id="67505af3915f51555c02bfad9febc3b5" category="cell">CPU-Auslastung Nanocores
+CPU-Auslastung Nanosekunden
+Dateisystem Verfügbar
+Dateisystem Insgesamt
+Verwendetes Dateisystem
+Verfügbarer Speicher
+Speicherauslastung
+Hauptfehler Der Speicherseite
+Fehler Auf Der Speicherseite
+Speicherresident Set Size (RSS)
+Speicher-Arbeitsdatensatz
+Netzwerk-RX-Fehler (pro Sekunde)
+Netzwerk-RX-Byte (pro Sekunde)
+Netzwerk-TX-Fehler (pro Sekunde)
+Netzwerk-TX Byte (pro Sekunde)
+Laufzeitbild-Dateisystem Verfügbar
+Verwendetes Laufzeitbild-Dateisystem
+Laufzeitabbild Dateisystemkapazität</block>
+  <block id="d34c4d1c2c5e1fd5027617805f18d578" category="cell">Kubernetes Pod</block>
+  <block id="b93534eac0ffef15e4bc6e622b649edb" category="cell">Namespace
+Pod
+Cluster</block>
+  <block id="9fa53e6369971b13a4de86d77930fa7d" category="cell">Kubernetes Node
+Node-Name
+Knoten-IP
+Node-BS
+Node-UUID</block>
+  <block id="d5da5a0488eed8f6bd2a7b8ff56baa7d" category="cell">Netzwerk-TX Byte (pro Sekunde)
+Netzwerk-TX-Fehler (pro Sekunde)
+Netzwerk-RX-Byte (pro Sekunde)
+Netzwerk-RX-Fehler (pro Sekunde)</block>
+  <block id="71c7112b40180e67cc433b17314c1e5a" category="cell">Kubernetes Pod Volume</block>
+  <block id="95177894fca839bb4f125dc82e11bcd5" category="cell">Datenmenge
+Pod
+Cluster
+Namespace</block>
+  <block id="23be9b4dfda51095be8d72ec54e75785" category="cell">Kubernetes Node
+Node-Name
+Node-UUID
+Knoten-IP
+Node-BS</block>
+  <block id="872a1fa9654389ef8254b1ea3c159c67" category="cell">Verfügbar
+Kapazität
+Verwendet</block>
+  <block id="31b831445602d4355cb2a53eb882ccb0" category="cell">Kubernetes System-Container</block>
+  <block id="bba6b40acdcc344bcea91f489658ca7f" category="cell">System-Container
+Kubernetes Node
+Cluster</block>
+  <block id="a5ebe27628fe912bf017622a96de6fe3" category="cell">Node-Name
+Knoten-IP
+Node-BS
+Node-UUID</block>
+  <block id="963d5703dfad66d7b08aef8039584b0f" category="cell">CPU-Auslastung Nanocores
+CPU-Auslastung Kern Nanosekunden
+Hauptfehler Der Speicherseite
+Fehler Auf Der Speicherseite
+Speicherresident Set Size (RSS)
+Speicherauslastung
+Speicher-Arbeitsdatensatz
+Root-Dateisystem Verfügbar
+Root-Dateisystemkapazität
+Protokolle Dateisystem Verfügbar
+Protokolliert Die Kapazität Des Dateisystems</block>
+  <block id="79617508491cde046161eba3cfb5fd1e" category="cell">Ich habe den Kubernetes Agent Installer-Befehl ausgeführt, aber ich sehe keinen Telegraf Agent-Pod über:
+
+ Sudo kubectl --Namespace CI-Monitoring get Pods</block>
+  <block id="da2a3d7c97da2247d78d19b6b5451992" category="cell">Prüfen Sie, ob beim Bereitstellen des DemonSet Fehler aufgetreten sind:
+
+ Sudo kubectl --Namespace CI-Monitoring Beschreiben Sie ds telegraf-ds
+
+Wenn Fehler in Bezug auf SecurityContextConstraints auftreten, gehen Sie wie folgt vor:
+
+1. Generieren Sie die Telegraf DemonSet YAML
+
+ Sudo kubectl --Namespace CI-Monitoring get ds telegraf-ds -o yaml &gt; /tmp/telegraf-ds.yaml
+
+2. Stoppen Sie den Telegraf Service
+
+ Sudo kubectl --Namespace CI-Monitoring delete ds telegraf-ds
+
+3. Erstellen Sie die erforderliche SecurityContextConstraint (siehe Abschnitt „Konfigurieren des Agenten zum Sammeln von Daten“)
+
+4. Erstellen Sie das Telegraf DemonSet neu</block>
+  <block id="fd2109b8b8dd431e9abcb1057799aa87" category="cell">Ich habe Telegraf so konfiguriert, dass er Informationen über meinen Kubernetes Cluster erhält, aber in Cloud Insights sind keine Informationen zu finden. Ich sehe „Ungültige Header field value“ Fehler in der Telegraf log Datei, die sich auf das kubernetes Input Plugin beziehen, das ich konfiguriert habe.</block>
+  <block id="4fcad48adea3c25275399dda7aa9b491" category="cell">Stellen Sie sicher, dass die referenzierte Inhabertoken-Datei keine nachgestellte Newline hat. Führen Sie zum Überprüfen den folgenden Befehl aus, und bestätigen Sie, dass er 0 zurückgibt:
+
+ Tail -c1 &lt;bearer_token_file&gt;</block>
+  <block id="689738a624a7f72a8b98c8ed8f1ab58b" category="summary">Konfiguration des Apache Zookeeper Data Collector</block>
+  <block id="b640a79fa52794aecc8878f82be8c28e" category="doc">Zookeeper Data Collector</block>
+  <block id="7c19206117ce83d65989db0a25c382ee" category="paragraph">Cloud Insights verwendet diese Datensammlung, um Kennzahlen von Apache Zookeeper zu erfassen.</block>
+  <block id="6f449010e727da85fc5dba4dc0566129" category="list-text">Klicken Sie in *Admin &gt; Data Collectors* auf *+Data Collector*. Wählen Sie Apache Zookeeper.</block>
+  <block id="8429b9b7552e9131928dae7613de806c" category="inline-image-macro">ZooKeeper-Konfiguration</block>
+  <block id="95e6ebb37419864b276c313f8f6c3cbb" category="paragraph"><block ref="95e6ebb37419864b276c313f8f6c3cbb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fb4ac192a5f039c2e2c335ba5ced3583" category="inline-link-macro">Zookeeper</block>
+  <block id="c3a641e09298ba4de1409a1510576930" category="paragraph">Mindestens müssen Sie dem Zookeeper vier Buchstaben-Serverbefehle _mntr_, _srvr_ und _stat_ erlauben.
+Sie können diese Befehle im folgenden Format aktivieren: _4lw.commands.whitelist=mntr, srvr, stat_ in der Datei _zoo.cfg_.
+In Ihrer Konfiguration sind möglicherweise weitere Befehle mit vier Buchstaben erforderlich. Siehe <block ref="228947e8a732f5af21701eca589dabd2" category="inline-link-macro-rx"></block> Dokumentation für weitere Informationen.</block>
+  <block id="acbfb3e07bc6528e76ff58b9441ce7e6" category="cell">ZooKeeper</block>
+  <block id="30cda581f57d507b5c4e7230009bb6ff" category="cell">Status
+Knoten-IP
+Node-Name
+Port</block>
+  <block id="263026a1c82c98e0f26e5963c3c57811" category="cell">Ungefähre Datengröße
+Durchschnittliche Latenz
+Ephemerals-Anzahl
+Max. Anzahl Der Dateibeschreibungen
+Max. Latenz
+Minimale Latenz
+Anzahl Lebender Verbindungen
+Anzahl Der Open File Descriptor
+Ausstehende Anfragen
+Anzahl Der Uhren
+Znode-Anzahl</block>
+  <block id="dc1e65eec84ecdddd9d944665f004c81" category="summary">Konfiguration der Kafka Datensammler</block>
+  <block id="20c91ea30ac10f88575658fade0888da" category="doc">Kafka Data Collector</block>
+  <block id="2f36f64899c7519b8c8cd9277f2bb502" category="paragraph">Cloud Insights verwendet diese Datensammler, um Metriken aus Kafka zu sammeln.</block>
+  <block id="e71ca37de84258d54f5428c43e7d7278" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie Kafka.</block>
+  <block id="a57380b3846ffa1f0e4bfb5181cdd4cc" category="inline-image-macro">Konfiguration von Kafka</block>
+  <block id="581191fc8057a11baa82fdf0c8a4684d" category="paragraph"><block ref="581191fc8057a11baa82fdf0c8a4684d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="13369c33358db64680a157cf34f27d9c" category="paragraph">Das Kafka Plugin basiert auf dem telegraf's Jolokia Plugin. Um Informationen aus allen Kafka-Brokern zu sammeln, muss JMX über Jolokia auf allen Komponenten konfiguriert und zugänglich gemacht werden.</block>
+  <block id="df9c715f20aaf58fb3926cc02b08ec53" category="section-title">Kompatibilität</block>
+  <block id="85d4881f2910a8efd14957d8ea3ad22f" category="paragraph">Konfiguration wurde gegen Kafka Version 0.11.0 entwickelt.</block>
+  <block id="c550ee824967bc436f44d06626836b46" category="section-title">Einrichtung</block>
+  <block id="842dbc10bf2936a69101c9ada487cfb9" category="paragraph">Alle Anweisungen unten Nehmen wir an, dass Ihr Installationsort für kafka '/opt/kafka' ist. Sie können die nachfolgenden Anweisungen an Ihren Installationsort anpassen.</block>
+  <block id="74f1c760151734cb26fb8795538faefc" category="section-title">Jolokia Agent Jar</block>
+  <block id="56f18825a76309ae6391073aeb14f1b3" category="inline-link-macro">Heruntergeladen</block>
+  <block id="b4492a410e1a2bd30cdf9f247f446872" category="paragraph">Eine Version die Jolokia Agent jar-Datei muss sein <block ref="03eda4c0436e65ce27568c6a2dfc2a07" category="inline-link-macro-rx"></block>. Die gegen die Version getestete war Jolokia Agent 1.6.0.</block>
+  <block id="9494328c2f532a3a7698d443b58084c9" category="paragraph">Anweisungen unten gehen davon aus, dass die heruntergeladene JAR-Datei (jolokia-jvm-1.6.0-Agent.jar) unter dem Speicherort '/opt/kafka/libs/' abgelegt wird.</block>
+  <block id="c85a72d841365870905b8d39edf7008f" category="section-title">Kafka Brokers</block>
+  <block id="952eb44621cfe8be5bf3ffac42243da9" category="paragraph">Um Kafka Brokers so zu konfigurieren, dass sie die Jolokia API aussetzen, können Sie in &lt;KAFKA_HOME&gt;/bin/kafka-Server-Start.sh kurz vor dem Anruf „kafka-run-class.sh“ Folgendes hinzufügen:</block>
+  <block id="c7a51c522cf686cccad4634633637a98" category="paragraph">Beachten Sie, dass das obige Beispiel 'Hostname -i' verwendet, um die Umgebungsvariable 'RMI_HOSTNAME' einzurichten. In mehreren IP-Maschinen muss dies optimiert werden, um die IP, die Sie für RMI-Verbindungen interessieren, zu erfassen.</block>
+  <block id="a2ca14d29d006aa3bc52960c80f3ec10" category="paragraph">Sie können einen anderen Port für JMX (9999 oben) und Jolokia (8778) wählen. Wenn Sie eine interne IP haben, um Jolokia zu sperren, können Sie die „Catch all“ 0.0.0.0 durch Ihre eigene IP ersetzen. Beachten Sie, dass diese IP über das telegraf-Plugin zugänglich sein muss. Sie können die Option '-Dcom.sun.management.jmxremote.authenticate=false' verwenden, wenn Sie nicht authentifizieren möchten. Nutzung auf eigenes Risiko.</block>
+  <block id="edea81abf1b2e3f44366dbd2866631eb" category="cell">Kafka Broker</block>
+  <block id="80d610f6ec2e0d70bb310ea6b21d8e09" category="cell">Cluster
+Namespace
+Broker</block>
+  <block id="344d982f50f03dc86d09f356f5f05441" category="cell">Replica Manager Fetcher Max. Verzögerung
+Zookeeper Client-Verbindungen
+ZooKeeper Client-Verbindungen (15 m Rate)
+ZooKeeper Client-Verbindungen (5 m Frequenz)
+ZooKeeper Client-Verbindungen (mittlere Rate)
+ZooKeeper Client-Verbindungen (1 m Rate)
+Partitionsanzahl Des Replikatmanagers
+Thread Count Daemon
+Thread-Anzahl Spitze
+Thread-Anzahl Aktuell
+Thread-Anzahl Insgesamt Gestartet
+Offline-Partitionen
+Gesamtdauer der Anfrage erstellen (50. Perzentil)
+Gesamtzeit der Anfrage erstellen (75. Perzentil)
+Gesamtzeit der Anfrage erstellen (95. Perzentil)
+Gesamtzeit Der Anfrage Erstellen (98 Perzentil)
+Gesamtzeit der Anfrage erstellen (999. Perzentil)
+Gesamtzeit der Anfrage erstellen (99. Perzentil)
+Gesamtzeit Der Anfragen Erstellen
+Anfrage Erstellen Gesamtzeit Max
+Anfragen Erstellen Gesamtzeit Mittel
+Anfrage Erstellen Gesamtzeit Min
+Anfrage Erstellen Gesamtzeit Stddev
+Der ISR von Replica Manager wird verkleinert
+Replikate Manager ISR schrumpft (15 m Rate)
+Replikate Manager ISR schrumpft (5-m-Rate)
+Replikate Manager ISR schrumpft (mittlere Rate)
+Replikate Manager ISR schrumpft (1 m Rate)
+Request Handler Mittl. Frei
+Request Handler mittl. Leerlauf (15 m Rate)
+Request Handler durchschn. Leerlauf (5 m Rate)
+Request Handler mittl. Frei (mittlere Rate)
+Request Handler mittl. Leerlauf (1 m Rate)
+Garbage Collection G1 Anzahl alter Generationen
+Garbage Collection G1 Zeit der alten Generation
+Garbage Collection G1 Young Generation Count
+Garbage Collection G1 Young Generation Time
+Zookeeper, Nur-Lese-Verbindung
+ZooKeeper – nur-Lese-Verbindungen (15 m)
+ZooKeeper, nur-Lese-Verbindungen (5 m Frequenz)
+ZooKeeper nur-Lese-Verbindungen (mittlere Rate)
+ZooKeeper – nur-Lese-Verbindungen (1 m Rate)
+Durchschn. Leerlaufleistung Des Netzwerkprozessors
+Anfragen Fetch Follower Gesamtzeit (50. Perzentil)
+Anfragen holen Follower Gesamtzeit (75. Perzentil)
+Anfragen Fetch Follower Gesamtzeit (95. Perzentil)
+Anfragen holen Follower Gesamtzeit (98. Perzentil)
+Anfragen rufen Follower Gesamtzeit ab (999. Perzentil)
+Anfragen holen Follower Gesamtzeit (99. Perzentil)
+Anfragen Rufen Follower Gesamtzeit Ab
+Anforderungen Abrufen Follower Gesamtzeit Max
+Anfragen Holen Follower Gesamtzeit Mittelwert
+Anforderungen Abrufen Follower Gesamtzeit Min
+Anfragen Rufen Follower Gesamtzeit Stddev Ab
+Anfragen, die in „Purgatory produzieren“ warten
+Netzwerkanfragen Rufen Den Verbraucher Ab
+Netzwerkanfragen abrufen Verbraucher (5 m Rate)
+Netzwerkanfragen rufen Verbraucher ab (15 m Rate)
+Netzwerkanfragen abrufen Verbraucher (mittlere Rate)
+Netzwerkanfragen abrufen Verbraucher (1 m Rate)
+Unsaubere Wahl Der Führer
+Unsaubere Wahl der Führer (15 Mio. Satz)
+Unsaubere Wahl der Führer (5 Mio. Satz)
+Unsaubere Wahl der Führer (Mittelwert)
+Unsaubere Wahl der Führer (1 Mio. Satz)
+Aktive Controller
+Heap-Speicher Festgeschrieben
+Heap Memory Init
+Max. Heap-Speicher
+Verwendeter Heap-Speicher
+Zookeeper-Sitzung Läuft Ab
+ZooKeeper-Sitzung läuft ab (15-m-Rate)
+ZooKeeper-Sitzung läuft ab (5-m-Rate)
+ZooKeeper-Sitzung läuft ab (mittlere Rate)
+ZooKeeper-Sitzung läuft ab (1 m Rate)
+Fehler Bei Der Zookeeper-Authentifizierung
+Fehler bei der ZooKeeper-Authentifizierung (15 m Rate)
+Fehler bei der ZooKeeper-Authentifizierung (5-m-Rate)
+Fehler bei der ZooKeeper-Authentifizierung (mittlere Rate)
+Fehler bei der ZooKeeper-Authentifizierung (1 m Rate)
+Wahlzeit des Führers (50. Perzentil)
+Wahlzeit des Vorgesetzten (75. Perzentil)
+Wahlzeit des Vorgesetzten (95. Perzentil)
+Wahlzeit des Führers (98. Perzentil)
+Wahlzeit des Führers (999. Perzentil)
+Wahlzeit des Führers (99. Perzentil)
+Anzahl Der Leader-Wahlen
+Wahlzeit des Leiters (15 Mio. Satz)
+Wahlzeit des Leiters (5 Mio. Satz)
+Max. Wahlzeit Des Vorgesetzten
+Wahlzeit Des Vorgesetzten Mittelwert
+Wahlzeit des Leiters (Mittelwert)
+Wahlzeit Des Vorgesetzten Min
+Wahlzeit des Leiters (1 Mio. Satz)
+Wahlzeit des Vorgesetzten (stddev)
+Netzwerkanforderungen Rufen Den Follower Ab
+Netzwerkanfragen abrufen Follower (15 m Rate)
+Netzwerkanfragen abrufen Follower (5 m Rate)
+Netzwerkanfragen abrufen Follower (mittlere Rate)
+Netzwerkanfragen abrufen Follower (1 m Rate)
+Nachrichten Zu Brokerthemen
+Nachrichten zum Thema des Brokers (15 m Rate)
+Nachrichten zu Themen des Brokers (5 m Rate)
+Nachrichten zu Themen des Brokers (mittlere Rate)
+Nachrichten zum Thema des Brokers (1 m Rate)
+Broker-Thema Bytes In
+Broker Topic Bytes in (15 m Rate)
+Broker Topic Bytes in (5-m-Rate)
+Broker Topic Bytes in (mittlere Rate)
+Broker Topic Bytes in (1 m Rate)
+Zookeeper Trennt Die Anzahl Der Verbindungen
+ZooKeeper trennt sich (15 m Frequenz)
+ZooKeeper schaltet ab (5 m Frequenz)
+ZooKeeper schaltet sich ab (mittlere Rate)
+ZooKeeper trennt sich (1 m Frequenz)
+Netzwerkanfragen rufen die Gesamtzeit des Verbrauchers ab (50. Perzentil)
+Netzwerkanfragen rufen die Gesamtzeit des Verbrauchers ab (75. Perzentil)
+Netzwerkanfragen rufen die Gesamtzeit des Verbrauchers ab (95. Perzentil)
+Netzwerkanfragen rufen die Gesamtzeit des Verbrauchers ab (98. Perzentil)
+Netzwerkanfragen rufen die Gesamtzeit des Verbrauchers ab (999. Perzentil)
+Netzwerkanfragen rufen die Gesamtzeit des Verbrauchers ab (99. Perzentil)
+Netzwerkanfragen Rufen Die Gesamtzeit Des Verbrauchers Ab
+Netzwerkanforderungen Rufen Die Maximale Gesamtzeit Des Verbrauchers Ab
+Netzwerkanfragen Rufen Den Gesamtzeit-Mittelwert Des Verbrauchers Ab
+Netzwerkanforderungen Rufen Die Gesamtzeit Des Verbrauchers Ab
+Netzwerkanforderungen Rufen Die Gesamtzeit Des Verbrauchers Ab
+Führungsanzahl
+Anfragen, die im Fetch Purgatory warten
+Broker-Thema Bytes Heraus
+Broker Topic Bytes out (15 m Rate)
+Broker Topic Bytes out (5-m-Rate)
+Broker Topic Bytes out (mittlere Rate)
+Broker Topic Bytes out (1 m Rate)
+Zookeeper Authentifizierungen
+ZooKeeper-Authentifizierung (15 m Rate)
+ZooKeeper-Authentifizierung (5-m-Rate)
+ZooKeeper Authentifizierungen (mittlere Rate)
+ZooKeeper-Authentifizierung (1 m Rate)
+Anfragen Produzieren Anzahl
+Anforderungen produzieren (15 m Rate)
+Anforderungen produzieren (5-m-Rate)
+Anfrage produzieren (Mittelwert)
+Anfragen produzieren (1-m-Rate)
+Replikatmanager ISR wird erweitert
+Replica Manager ISR erweitert (15 m Rate)
+Replica Manager ISR erweitert (5-m-Rate)
+Replica Manager ISR erweitert (mittlere Rate)
+Replica Manager ISR erweitert (1 m Rate)
+Replica Manager Unter Replizierten Partitionen</block>
+  <block id="d1f2d0eb68a6b45c8dc6a6dba792539e" category="summary">dcos-Konfiguration</block>
+  <block id="072a17ceb11d2f7027c8a1539261d0b0" category="doc">DC/OS Data Collector</block>
+  <block id="54005140701b4d1ac4638683a951ef68" category="paragraph">Cloud Insights verwendet diese Datenerfassung zum Erfassen von Kennzahlen aus DC/OS.</block>
+  <block id="ada6106f548a6369154652d4ea69d9a1" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie *DC/OS*.</block>
+  <block id="906f9dd57fb2872473e89e09bf5bf50e" category="list-text">Befolgen Sie die Anweisungen im Bildschirm DC/OS-Konfiguration, um den Datensammler zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.</block>
+  <block id="169d74d7790e089aeca58cb836db2fcc" category="inline-link">DC/OS-Dokumentation</block>
+  <block id="b0f77e8918eef13e0142c8675b792231" category="paragraph">Informationen zur Einrichtung finden Sie im<block ref="bcf6b27a44ba394f1a86a682cd050dc1" category="inline-link-rx"></block>.</block>
+  <block id="90fd43f146814c9c0cb1e9040b914fa0" category="cell">Datenpunkte</block>
+  <block id="c43575a6656a31d36fd3cee9520b5838" category="cell">dcos_Node</block>
+  <block id="a675bd36bf3917644534c43b4ba2e55f" category="cell">dcos_Container
+dcos_App</block>
+  <block id="022435a7e2f917aa3bce64222061f83d" category="cell">Cluster
+Hostname
+Pfad (nur Dateisystemfelder)
+Schnittstelle (nur Netzwerkfelder)
+Container_id
+Task_Name</block>
+  <block id="2cf0eab79c0db36a5df9e2deeba2b2c2" category="cell">System_Betriebszeit (float)
+cpu_Cores (Float)
+cpu_gesamt (float)
+cpu_User (float)
+cpu_System (Float)
+cpu_Leerlauf (float)
+cpu_Wait (float)
+Last_1min (Float)
+Last_5min (float)
+Last_15min (Float)
+Filesystem_Capacity_total_Bytes (int)
+Filesystem_Capacity_used_Bytes (int)
+Filesystem_Capacity_free_Bytes (int)
+Filesystem_Inode_total (float)
+Filesystem_Inode_used (float)
+Filesystem_Inode_free (float)
+Memory_total_Bytes (int)
+Memory_free_Bytes (int)
+Memory_Buffer_Bytes (int)
+Memory_cached_Bytes (int)
+Swap_total_Bytes (int)
+Swap_free_Bytes (int)
+Swap_used_Bytes (int)
+Network_in_Bytes (int)
+Network_out_Bytes (int)
+Network_in_Packets (float)
+Network_out_Packets (float)
+Network_in_dropped (float)
+Network_out_dropped (float)
+Network_in_errors (float)
+Network_out_errors (float)
+Prozessanzahl (float)</block>
+  <block id="bc9c01f26c422a397298e3d733c43cb5" category="paragraph">Weitere Informationen finden Sie im <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> Seite.</block>
+  <block id="3dc395f34d5747fa5d58e08302ab67fd" category="summary">Nginx-Konfiguration des Datensammlers</block>
+  <block id="21a6c8824057335f8e9dc232584c6ea0" category="doc">Nginx Data Collector</block>
+  <block id="a04ac927bc32d4712f954795733890da" category="paragraph">Cloud Insights verwendet diesen Datensammler, um Metriken von Nginx zu erfassen.</block>
+  <block id="993b018a6d59665db1ee4e45e62026f4" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie Nginx.</block>
+  <block id="e7e86cae130886a78274ae9b77db6f35" category="inline-image-macro">Linux-Nginx-Konfiguration</block>
+  <block id="de93697b48f7103f9289abf65ca587b4" category="paragraph"><block ref="f310f9809260b458b5b99732eb2d720e" category="inline-image-macro-rx" type="image"></block>
+<block ref="884ba5b9c64ace436091d4a7d4619c6c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ed8b6bdc341556c944fb012aca6b84d4" category="inline-link-macro">http_stub_Status_Module</block>
+  <block id="6d1ee9bcac1552cb3e77bfff99ff625e" category="paragraph">Für die nginx-metrische Sammlung ist Nginx erforderlich <block ref="9b25bbc6607a95e9c0486769f8ad1d09" category="inline-link-macro-rx"></block> Aktiviert sein.</block>
+  <block id="3cbf4d6ad75e10ca79741aee2213bd64" category="inline-link-macro">Nginx-Dokumentation</block>
+  <block id="55c28d13135e5d996f9471516e4d7523" category="paragraph">Weitere Informationen finden Sie im <block ref="f61e491fe5dc644cc25aa0f3a87b7491" category="inline-link-macro-rx"></block>.</block>
+  <block id="62e0b5b350c9e3d2c19aa801d9442ba9" category="cell">Nginx</block>
+  <block id="b5044973d8a3d9239bbbeaeeee9db4a5" category="cell">Knoten-IP
+Node-Name
+Port</block>
+  <block id="359d1921d88a2e1a27105eb5a262c103" category="cell">Akzeptiert
+Aktiv
+Behandelt
+Lesen
+Anträge
+Warten
+Schreiben</block>
+  <block id="4bfbaf73f806e0f2e37658d94bd02b1d" category="summary">Konfiguration des Puppet Datensammlers</block>
+  <block id="4f3343312b305965c29f8f14046d895c" category="doc">Puppet Agent Data Collector</block>
+  <block id="3fb67cc5cc9f9143457c24db7b7dd502" category="paragraph">Cloud Insights verwendet diesen Datensammler, um Metriken vom Puppet Agent zu erfassen.</block>
+  <block id="8a8e72cdfe9e0062f257b6b3af0a66fc" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie Puppet.</block>
+  <block id="f28ce6829aadfe8650a22f9c6a697a20" category="inline-image-macro">Puppet-Konfiguration</block>
+  <block id="f02b842ccd15155934dc65921239d4f0" category="paragraph"><block ref="f02b842ccd15155934dc65921239d4f0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4c6265f8b688769e31b9b757f9e54749" category="inline-link">Puppet-Dokumentation</block>
+  <block id="1554b3e5df91d78952d35aa9c0ee325f" category="paragraph">Informationen finden Sie unter<block ref="114b9d35c3c72b635a83707f2087ecd5" category="inline-link-rx"></block></block>
+  <block id="774594156e74c09914941ef11ed2caa5" category="cell">Puppet Agent</block>
+  <block id="ff5f20e069b5c2643ec78dffe736ccad" category="cell">Namespace
+Node-UUID</block>
+  <block id="2d6d04c4d20bee58922505cce875cd62" category="cell">Node-Name
+Standort
+Knoten-IP
+Konfigurationszeichenfolge Der Version
+Version Von Puppet</block>
+  <block id="61bb9c3d200381413da5b615c1c8f827" category="cell">Änderungen Gesamt
+Fehler Bei Ereignissen
+Erfolgreiche Veranstaltungen
+Ereignisse Insgesamt
+Die Ressourcen Haben Sich Geändert
+Ressourcen Fehlgeschlagen
+Ressourcen Konnten Nicht Neu Gestartet Werden
+Ressourcen Nicht Synchronisiert
+Ressourcen Wurden Neu Gestartet
+Ressourcen Geplant
+Ressourcen Übersprungen
+Ressourcen Gesamt
+Zeitanker
+Time Configretrieval
+Zeit Cron
+Time Exec
+Zeitdatei
+Zeitdatei-Bucket
+Zeit Lastrun
+Zeitpaket
+Zeitplan
+Zeitdienst
+Time Scauthorizedkey
+Zeit Insgesamt
+Zeitbenutzer</block>
+  <block id="1d292eb6751a0db171502dec84f9f7c0" category="summary">Der NetApp Kubernetes Monitoring Operator verfügt über eine Reihe konfigurierbarer Optionen.</block>
+  <block id="57e4cf9437210e6248eb8a2137609c4e" category="doc">Konfigurationsoptionen für NetApp Kubernetes Monitoring Operator</block>
+  <block id="92631a8aee2d30caecb661301eccee48" category="inline-link-macro">NetApp Kubernetes Monitoring Operator</block>
+  <block id="c35a33c9875991494585fbfbed175784" category="paragraph">Der <block ref="f0d3e43e41da35ba651820db811551cd" category="inline-link-macro-rx"></block> Installation und Konfiguration können individuell angepasst werden.</block>
+  <block id="7753286779cc80ff196972ced13aef62" category="paragraph">In der folgenden Tabelle sind die möglichen Optionen für die AgentConfiguration-Datei aufgeführt:</block>
+  <block id="b33aed8f3134996703dc39f9a7c95783" category="cell">Agent</block>
+  <block id="4e49d105e5ecfd95da78eb980f698488" category="cell">Konfigurationsoptionen, die allen Komponenten gemeinsam sind, die der Bediener installieren kann. Diese können als "globale" Optionen betrachtet werden.</block>
+  <block id="286bec770910c4da609323e21222e283" category="cell">DockerRepo</block>
+  <block id="73a46ab7157abd31c3ea3ef600cb7798" category="cell">Ein ockerRepo override, um Bilder von Kunden private Docker-Repos im Vergleich zu Cloud Insights Docker Repo zu ziehen. Der Standardwert ist Cloud Insights Docker Repo</block>
+  <block id="994be3a18bf7e0a16ab2be2d5c1643ae" category="cell">DockerImagePullSecret</block>
+  <block id="9f033a5b208feb9ef67ab1def3051525" category="cell">Optional: Ein Geheimnis für den Kunden private repo</block>
+  <block id="343d28c140c3f5ce20a1ac3f8f7dae2c" category="cell">ClusterName</block>
+  <block id="c21207144818cb50a67a3aa45ad90cc1" category="cell">Freitextfeld, das einen Cluster über alle Kundencluster eindeutig identifiziert. Diese sollte bei einem Cloud Insights-Mandanten eindeutig sein. Der Standardwert ist das, was der Kunde in die Benutzeroberfläche für das Feld „Cluster Name“ eingibt</block>
+  <block id="b5249bb082b669e275606cdef10879b6" category="cell">Proxy
+Format:
+Proxy:
+  Server:
+  Anschluss:
+  Benutzername:
+  Kennwort:
+  Noproxy:
+  IsTelegrafProxyEnabled:
+  IsAuProxyEnabled:
+  IsFluentbitProxyEnabled:
+  IsCollectorProxyEnabled:</block>
+  <block id="f430d84b3603b6c921d2a45741baab1e" category="cell">Optional für den Kunden zum Festlegen des Proxys. Dies ist in der Regel Kunden Corporate Proxy.</block>
+  <block id="aa3a0177193f5479812eadbbb3e6c303" category="cell">telegraf</block>
+  <block id="0c8011c6947aae43789eb8972c306e85" category="cell">Konfigurationsoptionen, mit denen die telegraf-Installation des Bedieners angepasst werden kann</block>
+  <block id="fe071453b5b9af9d9a481afb504f78cb" category="cell">Erfassungsintervall</block>
+  <block id="43087b2e6dfc2a4eecd03be4305fb0cb" category="cell">Messgrößen-Erfassungsintervall, in Sekunden (max. = 60 s)</block>
+  <block id="2129471bf14899d19206e2b1aa6c00ca" category="cell">DsCpuLimit</block>
+  <block id="718918f6bff9fdd2a6292afbe4549d0b" category="cell">CPU-Limit für telegraf ds</block>
+  <block id="5eeea2f6351dff2df3a80bcff5cdd5be" category="cell">DsMemLimit</block>
+  <block id="bf35f5b9d6933443b78e7cd6b5b24039" category="cell">Speicherlimit für telegraf ds</block>
+  <block id="32baad7599efdd63fc7dd0ebd6fb0462" category="cell">DsCpuRequest</block>
+  <block id="fb50fe579fe2186737910f4faafbfae2" category="cell">CPU-Anforderung für telegraf ds</block>
+  <block id="4fd630053ba42e53bf847444b5857abf" category="cell">DsMemRequest</block>
+  <block id="03a9d404d5e9073d007d6e38a710ebb1" category="cell">Speicheranforderung für telegraf ds</block>
+  <block id="00edda16a430ed1a43f73b6b6f8e5230" category="cell">RsCpuLimit</block>
+  <block id="be5f478627c9d3676f638d423c9b320b" category="cell">CPU-Limit für telegraf rs</block>
+  <block id="19db0dd97225788d8cd2ac82554de9d3" category="cell">RsMemLimit</block>
+  <block id="7ad3bdf2f332902d109247d0c3970fb4" category="cell">Speichergrenze für telegraf rs</block>
+  <block id="1be922c4a70261e6656d70f9cc86dde2" category="cell">RsCpuRequest</block>
+  <block id="76b9e3aaffb44c3c4a7084bd7430088d" category="cell">CPU-Anforderung für telegraf rs</block>
+  <block id="b3e9404f7fb1acb7c3d66e587a4c411b" category="cell">RsMemRequest</block>
+  <block id="dce1fa2cb47347aa09d7dceac624c5f7" category="cell">Speicheranforderung für telegraf rs</block>
+  <block id="04808c0fd1505eb55198b91e2910694e" category="cell">DockerMountPoint</block>
+  <block id="8b4f648381c209aa11d7baaf654c5f90" category="cell">Eine Überschreibung für dockerMountPoint-Pfad. Dies gilt für nicht standardmäßige Docker-Installationen auf K8s-Plattformen wie Cloud Foundry</block>
+  <block id="986b967d4a19de83ed59389872e2eb46" category="cell">DockerUnixSocket</block>
+  <block id="4dccb3941fc9760d547f9ae348685ad3" category="cell">Eine Überschreibung für dockerUnixSocket-Pfad. Dies gilt für nicht standardmäßige Docker-Installationen auf K8s-Plattformen wie Cloud Foundry.</block>
+  <block id="6ae45dc429d1f96b8c63fba54419b0f7" category="cell">CrioSockPath</block>
+  <block id="eeec0978474a40f056df3ffd9acfa360" category="cell">Eine Überschreibung für crioSockPath-Pfad. Dies gilt für nicht standardmäßige Docker-Installationen auf K8s-Plattformen wie Cloud Foundry.</block>
+  <block id="6fd605953233d5564943f85815683d62" category="cell">RunPrivileged</block>
+  <block id="06b131db41fa22ef6ac7de5a7eae4aef" category="cell">Führen Sie den telegraf Container im privilegierten Modus aus. Setzen Sie diese Einstellung auf TRUE, wenn SELinux auf Ihren K8s-Knoten aktiviert ist</block>
+  <block id="986b07451fa1766c43f2eead1470731c" category="cell">Stapelgröße</block>
+  <block id="f73038607dbfd988c8ed06aa707b67b6" category="inline-link-macro">Telegraf-Konfigurationsdokumentation</block>
+  <block id="4a686d41d5d06d7af488bce13a4b6b1c" category="cell">Siehe <block ref="1220f98ff4e67fb30a54b092e87489e7" category="inline-link-macro-rx"></block></block>
+  <block id="977c5d665ca82fa3d9d007ab47991cab" category="cell">BufferLimit</block>
+  <block id="3d5beabcc75357b9f0517b37a51d848b" category="cell">Rundintervall</block>
+  <block id="0457354b493031778121a8634e49db5e" category="cell">SammlungJitter</block>
+  <block id="e2794d8f12719281eff5601251c8a680" category="cell">Präzision</block>
+  <block id="43a58acb58cbbbfc1abb27f189ec375c" category="cell">Flushintervall</block>
+  <block id="e177bfc26cdd2bb790365e538eef32a6" category="cell">FlushJitter</block>
+  <block id="8bdbcdcecbcc5e3e45877e3a15ebe124" category="cell">AusgabeTimeout</block>
+  <block id="a3f0ee128de7eabdc5dbd73136882ab6" category="cell">DockerMetricCollectionEnabled</block>
+  <block id="0710c2522c29e39ba719becf4972a9aa" category="cell">Erfassen von Docker-Kennzahlen Standardmäßig ist dieser Wert auf „true“ gesetzt, und Docker-Kennzahlen werden für lokale, Docker-basierte K8s-Bereitstellungen erfasst. Um die Erfassung der Docker-Metrik zu deaktivieren, setzen Sie diese auf FALSE.</block>
+  <block id="bb0a12c3834207119851374142a76ac0" category="cell">DsToleranzen</block>
+  <block id="77e9ea38d66b01840eaf712dab598ce0" category="cell">telegraf-ds zusätzliche Toleranzen.</block>
+  <block id="569d3e422e1e57a8d8f17b102bb10bfc" category="cell">RsToleranzen</block>
+  <block id="0a1cb9f6e7c89d89c765fdd1efa6183b" category="cell">telegraf-rs zusätzliche Toleranzen.</block>
+  <block id="58af01fce51ad07206150454f8b829be" category="cell">status-Kennzahlen von kube</block>
+  <block id="81beb48dd63a014bf8c446eeeb319a2e" category="cell">Konfigurationsoptionen, mit denen die installation von kube-Statusmetriken des Operators angepasst werden kann</block>
+  <block id="8804d25db5f16b9db006116b6edf45bc" category="cell">CpuLimit</block>
+  <block id="8b673d5f702e58efd947465ead5c9647" category="cell">CPU-Limit für die bereitstellung von kube-State-Metriken</block>
+  <block id="65a010afe1e2186ecb5c9ef8cf978e2d" category="cell">MemLimit</block>
+  <block id="e49ddab01d68c08aeef7fdff59e6def6" category="cell">MEM-Limit für die implementierung von kube-State-Metriken</block>
+  <block id="664e65ce2a5a996437f898217e74c9dd" category="cell">CpuRequest</block>
+  <block id="3237c3bd0df775b78c9dafaf3c9bf9e6" category="cell">CPU-Anforderung für die Bereitstellung von kube-Statusmetriken</block>
+  <block id="c8f947b6b972e9866cc682a82d5ec34a" category="cell">MemRequest</block>
+  <block id="03dd8511b379b0b92595299b980d36e4" category="cell">MEM-Anforderung für die Bereitstellung von kube-Statuskennzahlen</block>
+  <block id="55b558c7ef820e6e00e5993b9e55d93b" category="cell">Ressourcen</block>
+  <block id="3b720d9649ae501d73e8f8c4a7a15348" category="cell">Eine kommagetrennte Liste der zu erfassenden Ressourcen.
+Beispiel: Cronjobs,demonsets,Deployments,ingresses,Jobs,Namespaces,Nodes,persistent Volumeclaims,
+PersistentVolumes,Pods,Replikasets,Ressourcenequotas,Services,StatusFulsets</block>
+  <block id="d6c26478ca41a23cc9741a4e92576269" category="cell">Toleranzen</block>
+  <block id="c511c601aee805f46f3767063104cdd8" category="cell">zusätzliche Toleranzen für kube-State-Metriken.</block>
+  <block id="42cecfeff00cc916fef4f64e7b921079" category="cell">Etiketten</block>
+  <block id="cea61529c4fbcfd86c0a3459bc229a87" category="cell">Eine kommagetrennte Liste von Ressourcen, die kube-State-metrics erfassen sollte
+
++++
+Beispiel: Cronjobs=[*],demonsets=[*],Deployments=[*],ingresses=[*],Jobs=[*],Namespaces=[*],Nodes=[*],
+Persistent volumeclaims=[*],persistent Volumes=[*],Pods=[*],replikasets=[*],resourcequotas=[*],Services=[*],statefulsets=[*]
++++</block>
+  <block id="d795ec2d0a164433572a8d5d91b8fae0" category="cell">Konfigurationsoptionen, mit denen die Protokollsammlung und die Installation des Bedieners angepasst werden können</block>
+  <block id="031104420a282e1bdb63e280c40a4938" category="cell">Wieder FromHead</block>
+  <block id="d7ff51440723c6bba696ef19f757a8af" category="cell">Wahr/falsch, sollte fließendes Bit das Protokoll vom Kopf lesen</block>
+  <block id="90272dda245ae1fb3cf197e91a8689dc" category="cell">Zeitüberschreitung</block>
+  <block id="6136e8e4f59c6ebf3a47733e15cd8f8f" category="cell">Timeout in Sekunden</block>
+  <block id="a28f540659f42fa52be34b45558bb6c6" category="cell">DnsMode</block>
+  <block id="5c0864cc25dbf397d47948de9ac342f1" category="cell">TCP/UDP, Modus für DNS</block>
+  <block id="7e7b391c65060e4613a7fb96bfd2ef31" category="cell">Fluent-Bit-Tolerationen</block>
+  <block id="035bf5f67349238f72eae5d508efac99" category="cell">Fluent-Bit-ds zusätzliche Toleranzen.</block>
+  <block id="8776d1f0ee4232b1c2ff5bc38e4b2603" category="cell">Ereignis-Exporteur-Tolerationen</block>
+  <block id="bac5ce71f32beb834c27a988cad33543" category="cell">Ereignis-Exporteur zusätzliche Toleranzen.</block>
+  <block id="6f70b1b29646b4f3864aa8abbbca1c59" category="cell">Workload-Zuordnung</block>
+  <block id="061016eea4bb256a8b08c9190fbefeec" category="cell">Konfigurationsoptionen, mit denen die Erfassung der Workload-Zuordnung und die Installation des Operators angepasst werden können</block>
+  <block id="3a8e375aaa03d4b48cdd1a1758a69d81" category="cell">CPU-Limit für Netto-Observer ds</block>
+  <block id="3803b93f400a67f6fef5fecdec95cb8c" category="cell">MEM-Grenze für Netto-Beobachter ds</block>
+  <block id="967cc12aa2f5f95e9e26d28fae3bd7b3" category="cell">CPU-Anforderung für Netto-Observer-ds</block>
+  <block id="0ae1bca85ce414d0f1862e84b9f66acc" category="cell">MEM-Anforderung für Netto-Beobachter ds</block>
+  <block id="1de805c2687b2c30b46a937270519488" category="cell">MetricAggregationInterval</block>
+  <block id="8d5efaeb90931394d0afdcc8d00b6b90" category="cell">Intervall für die metrische Aggregation in Sekunden</block>
+  <block id="c561450e999b4dfedfdbbc8b48e36db7" category="cell">BpfPollInterval</block>
+  <block id="a75c6546b06d6f58867213c5349a5f15" category="cell">BPF-Abfrageintervall in Sekunden</block>
+  <block id="3b7c5615013c6b42362845591653e503" category="cell">EnableDNSLookup</block>
+  <block id="1d2b775d8b166dda0a22ca0ffa3f537c" category="cell">True/false, DNS-Suche aktivieren</block>
+  <block id="287ab13fa00dc2700e0567bc50f5a663" category="cell">l4-Tolerationen</block>
+  <block id="bef6178937f26cf5776d5c67e6c1d23c" category="cell">NET-Observer-l4-ds zusätzliche Toleranzen.</block>
+  <block id="349a396fe021418ac0edbee3b447f4d5" category="section-title">Beispieldatei für AgentConfiguration</block>
+  <block id="fc8a8119975d70c9ea4470d26aa4640b" category="paragraph">Unten finden Sie eine Beispieldatei für AgentConfiguration. Beachten Sie, dass hier nicht alle Optionen erfasst werden:</block>
+  <block id="170ac79db4abf3af53c36b5ba23d297a" category="summary">Konfiguration des CouchDB Datensammlers</block>
+  <block id="1aa7fb61fdaf60c81a318c790c7e545e" category="doc">CouchDB Data Collector</block>
+  <block id="2aa655c0610f5e45884f5257e54d539e" category="paragraph">Cloud Insights verwendet diesen Datensammler, um Metriken von CouchDB zu sammeln.</block>
+  <block id="c3dba9c80e9fa5a82c71abb7fa5cf37f" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie CouchDB.</block>
+  <block id="9d3601e78c51a4b184d2fe86128539e4" category="inline-image-macro">Konfiguration von CouchDB</block>
+  <block id="61d7e3da551b2e4c1549750fbb518e22" category="paragraph"><block ref="61d7e3da551b2e4c1549750fbb518e22" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8a7006055e2291f0b9e46ee915f0ad0c" category="inline-link-macro">CouchDB-Dokumentation</block>
+  <block id="bc781ab763b71df7b975bbfe7c860bba" category="paragraph">Informationen finden Sie unter <block ref="3147fac008aa304c440ef0d367c93828" category="inline-link-macro-rx"></block>.</block>
+  <block id="dea8b0c01ac3c8f22d85423d187ec3d2" category="cell">CouchDB</block>
+  <block id="64f2993184c14c565d6ba3100a20ca05" category="cell">Cache-Zugriffe Für Die Authentifizierung
+Authentifizierungscache Nicht Ausgeführt
+Datenbanklesevorgänge
+Datenbankschreibvorgänge
+Datenbanken Geöffnet
+Öffnen Sie die Betriebssystemdateien
+Max. Anforderungszeit
+Min. Anfragezeit
+Httpd Request Methods Copy
+Httpd Request Methods Delete
+Httpd Anforderungsmethoden Abrufen
+Httpd Request Methods Head
+Httpd Request Methods Post
+Httpd Anforderungsmethoden Put
+Statuscodes 200
+Statuscodes 201
+Statuscodes 202
+Statuscodes 301
+Statuscodes 304
+Statuscodes 400
+Statuscodes 401
+Statuscodes 403
+Statuscodes 404
+Statuscodes 405
+Statuscodes 409
+Statuscodes 412
+Statuscodes 500</block>
+  <block id="13b9b5c6c0fb1445ca79a2155f4dc602" category="summary">Konfiguration des Hadoop Data Collector</block>
+  <block id="38af629ca8cce22e7b7e641b96f8197b" category="doc">Hadoop Data Collector</block>
+  <block id="20bacb7d7672e3432126a809496c0ace" category="paragraph">Cloud Insights verwendet diese Datenerfassung zum Erfassen von Kennzahlen aus Hadoop.</block>
+  <block id="65f4403a1570898156c13c0053e0d957" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Für Hadoop.</block>
+  <block id="e844ff1ebc3eef465aed7960b58160c3" category="inline-image-macro">Hadoop Konfiguration</block>
+  <block id="026b451ea6f45b0c92de7f54611efaf2" category="paragraph"><block ref="47353d83abd9981302d8e2ae7057d5b3" category="inline-image-macro-rx" type="image"></block>
+<block ref="7afda35c9e63e32c054b3ad27f5a4ccb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f420dce044ac00b84abcfafd6e9f994a" category="paragraph">Eine vollständige Hadoop Implementierung umfasst die folgenden Komponenten:</block>
+  <block id="d713d040466c91cefd2167bcebd60062" category="list-text">NameNode: Das primäre System Hadoop Distributed File System (HDFS) Koordiniert eine Reihe von DataNodes.</block>
+  <block id="da8ea8d009db4b0c889dc3686a8d9638" category="list-text">Sekundärer NameNode: Ein warmer Failover für den NameNode. In Hadoop erfolgt die Heraufstufung auf NameNode nicht automatisch. Secondary NameNode sammelt Informationen von NameNode, damit sie bei Bedarf heraufgestuft werden können.</block>
+  <block id="a4c57bdec853ab95919855b4747bfa32" category="list-text">DataNode: Tatsächlicher Eigentümer von Daten.</block>
+  <block id="9c600745fb11557034d343ea8107d75a" category="list-text">ResourceManager: Das primäre Computersystem (Yarn). Koordiniert eine Reihe von NodeManagers.</block>
+  <block id="39f4bb6feff48cfe7b9520c7318f9767" category="list-text">NodeManager: Die Ressource für Computing. Aktueller Speicherort für das Ausführen von Anwendungen.</block>
+  <block id="f95e602d74c2ca81c1416dbb467a0df7" category="list-text">JobHistorieServer: Verantwortlich für die Bearbeitung aller Anfragen im Zusammenhang mit der Jobhistorie.</block>
+  <block id="c1917bdd072d470e050bd2c06f83e344" category="paragraph">Das Hadoop Plugin basiert auf dem telegraf Jolokia Plugin. Um Informationen aus allen Hadoop Komponenten zu sammeln, muss JMX auf allen Komponenten konfiguriert und zugänglich gemacht werden.</block>
+  <block id="0f37fe3dfe5894ca54f816b3a822ab75" category="paragraph">Die Konfiguration wurde mit Hadoop Version 2.9 entwickelt.</block>
+  <block id="0eb08f5b635663822078f16d3fc578db" category="section-title">Einrichtung</block>
+  <block id="788386447f3336a53e1c2ce1bfe69253" category="inline-link-macro">Jolokia Agent 1.6.0</block>
+  <block id="12b5a09ab5184ab662baeccbd4410892" category="paragraph">Für alle einzelnen Komponenten muss eine Version der Jolokia Agent JAR-Datei heruntergeladen werden. Die gegen getestete Version war <block ref="adb2184741946d946bb10cd791c6089f" category="inline-link-macro-rx"></block>.</block>
+  <block id="cdd86f53b4b8b0d623b6a8ee7a48c7bc" category="paragraph">Die nachfolgende Anleitung setzt voraus, dass die heruntergeladene JAR-Datei (jolokia-jvm-1.6.0-Agent.jar) unter der Adresse '/opt/hadoop/lib/' abgelegt wird.</block>
+  <block id="32b6eea89ffa772d5a299a3fa2ae0f4e" category="section-title">NameNode</block>
+  <block id="232e93d6785b24d7d392240ca50f3ae2" category="paragraph">Um NameNode zu konfigurieren, um die Jolokia API freizugeben, können Sie unter &lt;HADOOP_HOME&gt;/etc/hadoop/hadoop-env.sh Folgendes einrichten:</block>
+  <block id="9bc82d5913c313160e8e66d24078bba0" category="section-title">Sekundärer NameNode</block>
+  <block id="f18509f1fb2f9a71f232159773b2fd87" category="paragraph">Um den sekundären NameNode zu konfigurieren, um die Jolokia API freizugeben, können Sie Folgendes in &lt;HADOOP_HOME&gt;/etc/hadoop/hadoop-env.sh einrichten:</block>
+  <block id="315104928eaa5842590c6ce58545354d" category="section-title">DataNode</block>
+  <block id="45fef23823b56451d4fe53fc6c8d98c7" category="paragraph">Um die DataNodes so zu konfigurieren, dass sie die Jolokia API aussetzen, können Sie Folgendes in &lt;HADOOP_HOME&gt;/etc/hadoop/hadoop-env.sh einrichten:</block>
+  <block id="ed760e01ef8cb789b502ad1c9a3829a2" category="section-title">ResourceManager</block>
+  <block id="b475783ddb9124cc9510e5e42cf8e80f" category="paragraph">Um den ResourceManager so zu konfigurieren, dass die Jolokia API zur Verfügung gestellt wird, können Sie Folgendes in &lt;HADOOP_HOME&gt;/etc/hadoop/hadoop-env.sh einrichten:</block>
+  <block id="1acfb853dd9d284090a1f6804f68d238" category="section-title">NodeManager</block>
+  <block id="08dc29be4fde03fbd2b992b1227f2990" category="paragraph">Um die NodeManagers so zu konfigurieren, dass sie die Jolokia API aussetzen, können Sie Folgendes in &lt;HADOOP_HOME&gt;/etc/hadoop/hadoop-env.sh einrichten:</block>
+  <block id="ff3d03ec141ab7e4f5faa0c83687126c" category="section-title">JobGeschichteServer</block>
+  <block id="4087664a919c61abae79b6d518148613" category="paragraph">Um den JobHistorieServer so zu konfigurieren, dass die Jolokia API zur Verfügung gestellt wird, können Sie Folgendes in &lt;HADOOP_HOME&gt;/etc/hadoop/hadoop-env.sh einrichten:</block>
+  <block id="bfa0ceac01bc6e1226697171b0d5b352" category="cell">Sekundärer Hadoop NameNode</block>
+  <block id="cc4f08bdf048f36eae4a37c7b9b75ba1" category="cell">Cluster
+Namespace
+Server</block>
+  <block id="fe1a99e660c022ae82cc4f285f9c1fae" category="cell">Node-Name
+Knoten-IP
+Info Kompilieren
+Version</block>
+  <block id="ec47af2c19dd80097f2d69a8d2df39de" category="cell">GC-Zählung
+Anzahl GC-Kopien
+GC-Markierungen: Kompakte Anzahl der Bereinigung
+Schwellenwert für Informationen zur GC-Nummer überschritten
+Schwellenwert für GC-Nummernwarnung überschritten
+GC-Zeit
+GC-Kopierzeit
+GC-Markierungen: Kompakte Zeit für die Bereinigung
+GC Total Extra Sleep Time
+Anzahl Der Protokollfehler
+Protokollierung Fatal Anzahl
+Anzahl Der Protokollinformationen
+Anzahl Der Warnungen Für Protokolle
+Memory Heap Belegt
+Speicher Heap Max
+Speicher Heap Verwendet
+Max. Speicher
+Speicher Nicht Heap Belegt
+Speicher Nicht Heap Max
+Speicher Nicht Heap Verwendet
+Gewinde Blockiert
+Threads Neu
+Fäden Lauffähig
+Threads Beendet
+Threads, Die Gewartet Wurden
+Threads Warten</block>
+  <block id="7c1a0861b825b536f9d829a1bb1e2d51" category="cell">Hadoop NodeManager</block>
+  <block id="42c247c7d7aab3cc05a61467ea1c6d4b" category="cell">Container Zugewiesen
+Speicherzuweisung
+Speicher Zugewiesen Oportunistic
+Virtuelle Kerne Zugewiesen Oportunistic
+Virtuelle Kerne Zugewiesen
+Verfügbarer Speicher
+Virtuelle Kerne Verfügbar
+Verzeichnisse Lokal Schlecht
+Verzeichnisse Fehlerhaftes Protokoll
+Cachegröße Vor Bereinigung
+Container-Startdauer Durchschn. Zeit
+Container-Startdauer Anzahl Der Operationen
+Container Abgeschlossen
+Container Fehlgeschlagen
+Container Initing
+Container Wurden Getötet
+Container Gestartet
+Behälterreinitation
+Container wurden bei einem Ausfall wieder ausgeführt
+Container Werden Ausgeführt
+Festplattenauslastung Gute Lokale Verzeichnisse
+Festplattenauslastung Gute Protokollverzeichnisse
+Bytes Private Gelöscht
+Öffentliche Bytes Gelöscht
+Container Mit Geschäftschancen
+Gelöschte Bytes Insgesamt
+Verbindungen Zufällig Wiedergeben
+Zufallswiedergabe Der Ausgabebytes
+Zufallsausgänge Fehlgeschlagen
+Zufallsausgänge Sind In Ordnung
+GC-Zählung
+Anzahl GC-Kopien
+GC-Markierungen: Kompakte Anzahl der Bereinigung
+Schwellenwert für Informationen zur GC-Nummer überschritten
+Schwellenwert für GC-Nummernwarnung überschritten
+GC-Zeit
+GC-Kopierzeit
+GC-Markierungen: Kompakte Zeit für die Bereinigung
+GC Total Extra Sleep Time
+Anzahl Der Protokollfehler
+Protokollierung Fatal Anzahl
+Anzahl Der Protokollinformationen
+Anzahl Der Warnungen Für Protokolle
+Memory Heap Belegt
+Speicher Heap Max
+Speicher Heap Verwendet
+Max. Speicher
+Speicher Nicht Heap Belegt
+Speicher Nicht Heap Max
+Speicher Nicht Heap Verwendet
+Gewinde Blockiert
+Threads Neu
+Fäden Lauffähig
+Threads Beendet
+Threads, Die Gewartet Wurden
+Threads Warten</block>
+  <block id="df6174495390f87b029379629c6f2b33" category="cell">Hadoop ResourceManager</block>
+  <block id="df7b62f4d6c4d5682ffa7d976584d4d4" category="cell">Startverzögerung des ApplicationMaster durchschn
+Verzögerungsnummer für den Start des ApplicationMaster
+Anmeldeverzögerung des ApplicationMaster mittl
+ApplicationMaster Register Verzögerungsnummer
+NodeManager Active Number
+NodeManager Demissed Number
+NodeManager-Demissing-Nummer
+NodeManager: Verlorene Nummer
+NodeManager-Neustartnummer
+NodeManager Shutdown-Nummer
+NodeManager-gesunde Anzahl
+NodeManager-Speicherlimit
+Limit für virtuelle NodeManager-Kerne
+Genutzte Kapazität
+Aktive Anwendungen
+Aktive Benutzer
+Aggregate Container Zugewiesen
+Aggregat-Container Als Vorweggenommen
+Container Aggregieren Freigegeben
+Aggregierte Speichersekunde Wurde Aufgehoben
+Aggregate Node Lokale Container Zugewiesen
+Aggregate Off Switch Container Zugewiesen
+Aggregate Ack Lokale Container Zugewiesen
+Zusammenfassung Der Virtuellen Kerne Sekunden Als Voreingestellt
+Container Zugewiesen
+Speicher Zugewiesen
+Virtuelle Kerne Zugewiesen
+Anwendungsversuch Erste Containerzuweisungsverzögerung Durchschn. Zeit
+Anwendungsversuch Erste Container-Zuweisung Verzögerungsnummer
+Anwendungen Abgeschlossen
+Anwendungen Fehlgeschlagen
+Anwendungen Abgebrochen
+Ausstehende Anwendungen
+Laufende Anwendungen
+Anträge Eingereicht
+Verfügbarer Speicher
+Virtuelle Kerne Verfügbar
+Ausstehende Container
+Arbeitsspeicher Ausstehend
+Virtuelle Kerne Ausstehend
+Container Reserviert
+Reservierter Speicher
+Virtuelle Kerne Reserviert
+Verwendeter Speicher-ApplicationMaster
+Anwendungsmaster für virtuelle Kerne verwendet
+Genutzte Kapazität
+GC-Zählung
+Anzahl GC-Kopien
+GC-Markierungen: Kompakte Anzahl der Bereinigung
+Schwellenwert für Informationen zur GC-Nummer überschritten
+Schwellenwert für GC-Nummernwarnung überschritten
+GC-Zeit
+GC-Kopierzeit
+GC-Markierungen: Kompakte Zeit für die Bereinigung
+GC Total Extra Sleep Time
+Anzahl Der Protokollfehler
+Protokollierung Fatal Anzahl
+Anzahl Der Protokollinformationen
+Anzahl Der Warnungen Für Protokolle
+Memory Heap Belegt
+Speicher Heap Max
+Speicher Heap Verwendet
+Max. Speicher
+Speicher Nicht Heap Belegt
+Speicher Nicht Heap Max
+Speicher Nicht Heap Verwendet
+Gewinde Blockiert
+Threads Neu
+Fäden Lauffähig
+Threads Beendet
+Threads, Die Gewartet Wurden
+Threads Warten</block>
+  <block id="569b69985a3ba9860b112ed47851e6f3" category="cell">Hadoop DataNode</block>
+  <block id="8751de48b6635b7a5598ab69137093dc" category="cell">Node-Name
+Knoten-IP
+Cluster-ID
+Version</block>
+  <block id="5f3d32367ec5caecbbe837295ddebebb" category="cell">Sender/Empfänger-Anzahl
+Übertragung läuft
+Cache-Kapazität
+Cache Verwendet
+Kapazität
+DFS verwendet
+Geschätzter Insgesamt Verlorener Kapazität
+Fehlerrate Des Letzten Volumes
+Anzahl Der Zwischengespeicherten Blöcke
+Blocknummer konnte nicht zwischengespeichert werden
+Die Blocknummer konnte nicht aufgehoben werden
+Anzahl Der Volumes Fehlgeschlagen
+Verbleibende Kapazität
+GC-Zählung
+Anzahl GC-Kopien
+GC-Markierungen: Kompakte Anzahl der Bereinigung
+Schwellenwert für Informationen zur GC-Nummer überschritten
+Schwellenwert für GC-Nummernwarnung überschritten
+GC-Zeit
+GC-Kopierzeit
+GC-Markierungen: Kompakte Zeit für die Bereinigung
+GC Total Extra Sleep Time
+Anzahl Der Protokollfehler
+Protokollierung Fatal Anzahl
+Anzahl Der Protokollinformationen
+Anzahl Der Warnungen Für Protokolle
+Memory Heap Belegt
+Speicher Heap Max
+Speicher Heap Verwendet
+Max. Speicher
+Speicher Nicht Heap Belegt
+Speicher Nicht Heap Max
+Speicher Nicht Heap Verwendet
+Gewinde Blockiert
+Threads Neu
+Fäden Lauffähig
+Threads Beendet
+Threads, Die Gewartet Wurden
+Threads Warten</block>
+  <block id="5a0c1fdf2f2b483f386886e066dfae1b" category="cell">Hadoop NameNode</block>
+  <block id="637b504f65b25d54361a662bf71a4164" category="cell">Node-Name
+Knoten-IP
+Transaktions-ID zuletzt geschrieben
+Zeit Seit Der Letzten Geladenen Bearbeitungen
+HA-Status
+Dateisystemstatus
+Block Pool-ID
+Cluster-ID
+Info Kompilieren
+Anzahl Der Unterschiedlichen Versionen
+Version</block>
+  <block id="551ce6b2e6cc4e5633e4ebd59fde4056" category="cell">Blockkapazität
+Blöcke Insgesamt
+Gesamtkapazität
+Genutzte Kapazität
+Verwendete Kapazität nicht-DFS
+Blöcke Beschädigt
+Geschätzter Insgesamt Verlorener Kapazität
+Blockiert Überschuss
+Herzschläge Abgelaufen
+Dateien Insgesamt
+Länge Der Warteschlange Für Dateisystemsperre
+Blöcke Fehlen
+Blöcke fehlende Replikation mit Faktor 1
+Clients Aktiv
+Data Nodes Dead
+Deaktivierung Von Daten-Nodes Inaktiv
+Daten-Nodes Werden Live Stillgelegt
+Data Nodes Wird Nicht Mehr Ausgeführt
+Nummer Der Verschlüsselungszonen
+Daten-Nodes Werden In Wartung Eingegeben
+Dateien In Bearbeitung
+Data Nodes Dead in Maintenance
+Datenknoten werden in Wartung gespeichert
+Data Nodes Live
+Lagerung Veraltet
+Replikation Mit Ausstehenden Timeouts
+Data Node-Nachricht Steht Aus
+Blöcke Mit Ausstehender Löschung
+Blöcke Mit Ausstehender Replikation
+Blöcke Falsch Repliziert Verschoben
+Blöcke Geplante Replizierung
+Snapshots
+Snapshottable-Verzeichnisse
+Veraltete Daten-Nodes
+Dateien Insgesamt
+Insgesamt Laden
+Synchronisierungsanzahl Insgesamt
+Transaktionen Seit Dem Letzten Kontrollpunkt
+Transaktionen Seit Der Letzten Protokollrolle
+Blöcke Nicht Repliziert
+Volume-Fehler Insgesamt
+Synchronisierungszeiten Gesamt
+Max. Anzahl Objekte
+Operations Block Add
+Operationen Ermöglichen Snapshots
+Batched-Operationen-Block
+Operations Block In Warteschlange
+Betriebsblock empfangen und gelöscht
+Durchschn. Betriebsbericht
+Berichtsnummer Des Operations Block
+Durchschnittszeit Cache-Bericht
+Nummer Des Cacheberichts
+Operationen Datei Erstellen
+Operationen Erstellen Von Snapshots
+Operationen Symlink erstellen
+Operationen Datei Löschen
+Operationen Snapshot Löschen
+Vorgänge Snapshot Nicht Zulassen
+Betriebsdatei Ein/Aus
+Dateien Angehängt
+Dateien Erstellt
+Dateien Gelöscht
+Dateiliste
+Dateien Umbenannt
+Dateien Abgeschnitten
+Ladedauer Des Dateisystems
+Operationen generieren EDEK Durchschn. Zeit
+Operationen generieren EDEK
+Operations Get Additional Data Node
+Blöcke Erhalten Standorte
+Durchschnittliche Bearbeitungszeit Abrufen
+Bearbeitungsnummer Abrufen
+Durchschnittszeit Für Bild Abrufen
+Bildnummer Abrufen
+Operationen Verknüpfungsziel Abrufen
+Operations Get Listing
+Operations List Snapshottable Dir
+Replikation Nicht Geplant Nummer
+Mittl. Zeit Für Bild Setzen
+Put Bildnummer
+Vorgänge Umbenennen Von Snapshots
+Durchschnittliche Zeit Der Ressourcenüberprüfung
+Zeitnummer Der Ressourcenüberprüfung
+Zeit Im Abgesicherten Modus
+Operations Snapshot Diff Report
+Operations Storage Block Report
+Replikation Erfolgreich
+Durchschn. Synchronisierungszeit
+Synchronisierungsnummer Des Betriebs
+Zeitüberschreitung Bei Der Replikation
+Operationen Insgesamt
+Durchschn. Transaktionszeit
+Transaktion Batchd Synchron
+Transaktionsnummer
+EDEK Aufwärmezeit durchschn
+EDEK Warmup-Nummer
+Belegter Block-Pool-Speicherplatz
+Cache-Kapazität
+Cache Verwendet
+Freie Kapazität
+Prozentsatz Der Blockpool-Nutzung
+Prozent Verbleibend
+Prozent Verwendet
+Gewinde
+GC-Zählung
+Anzahl GC-Kopien
+GC-Markierungen: Kompakte Anzahl der Bereinigung
+Schwellenwert für Informationen zur GC-Nummer überschritten
+Schwellenwert für GC-Nummernwarnung überschritten
+GC-Zeit
+GC-Kopierzeit
+GC-Markierungen: Kompakte Zeit für die Bereinigung
+GC Total Extra Sleep Time
+Anzahl Der Protokollfehler
+Protokollierung Fatal Anzahl
+Anzahl Der Protokollinformationen
+Anzahl Der Warnungen Für Protokolle
+Memory Heap Belegt
+Speicher Heap Max
+Speicher Heap Verwendet
+Max. Speicher
+Speicher Nicht Heap Belegt
+Speicher Nicht Heap Max
+Speicher Nicht Heap Verwendet
+Gewinde Blockiert
+Threads Neu
+Fäden Lauffähig
+Threads Beendet
+Threads, Die Gewartet Wurden
+Threads Warten</block>
+  <block id="0460c951ea9c38503a35b138121da86c" category="cell">Hadoop JobGeschichteServer</block>
+  <block id="0982f7ddf38c72531e91321d3b4e198e" category="summary">Docker Konfiguration für die Datenerfassung</block>
+  <block id="d80788e8d22d139775039533ead6bae8" category="doc">Docker Data Collector</block>
+  <block id="6e48769f92efb7218705b56e64b2cc22" category="paragraph">Cloud Insights verwendet diese Datenerfassung zum Erfassen von Kennzahlen aus Docker.</block>
+  <block id="9ee6c12aac4505f529c285b136202ce5" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Für Docker:</block>
+  <block id="0f4a5a5b8072d8e43816253b9197d0f1" category="list-text">Befolgen Sie die Anweisungen im Bildschirm Docker-Konfiguration, um den Datensammler zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.</block>
+  <block id="4ed4e51db0aa02d2ed7e8fb292cc39c8" category="inline-image-macro">Docker-Konfiguration</block>
+  <block id="ee96e45eed0143814810825fc37d2fa8" category="paragraph"><block ref="ee96e45eed0143814810825fc37d2fa8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2622d06a8a5a13f122149c79381978f8" category="paragraph">Das Telegraf-Input-Plug-in für Docker erfasst Kennzahlen über einen bestimmten UNIX-Socket oder einen TCP-Endpunkt.</block>
+  <block id="047938f8b934d1717dddfdf0dbb9f6bc" category="paragraph">Die Konfiguration wurde mit Docker Version 1.12.6 entwickelt.</block>
+  <block id="43d4b6a220eea649b1a53bac845809d2" category="section-title">Zugriff auf Docker über einen UNIX-Socket</block>
+  <block id="ce07d3c38928e864e20e82c242ae0f98" category="paragraph">Wenn der Telegraf-Agent auf bareMetal läuft, fügen Sie den telegraf Unix-Benutzer zur Docker Unix-Gruppe hinzu, indem Sie Folgendes ausführen:</block>
+  <block id="0c38156add26ac675264862ed09bc25d" category="paragraph">Wenn der Telegraf-Agent in einem Kubernetes Pod ausgeführt wird, legen Sie den Docker Unix-Socket offen, indem Sie den Socket als Volume in den POD einbilden und das Volume dann in /var/run/docker.sock mounten.  Fügen Sie zum Beispiel der PodSpec Folgendes hinzu:</block>
+  <block id="69821e3ecac0b5542b2dfa0b6083a7be" category="paragraph">Fügen Sie dann dem Container Folgendes hinzu:</block>
+  <block id="b9aa3f7cd738fe521730a211a77f68d6" category="paragraph">Beachten Sie, dass sich das für die Kubernetes-Plattform bereitgestellte Cloud Insights-Installationsprogramm automatisch um diese Zuordnung kümmert.</block>
+  <block id="73553149828f2c198e9e7df4807e33bf" category="section-title">Zugriff auf Docker über einen TCP-Endpunkt</block>
+  <block id="b4f5dd84e7c731654efa53663ef21180" category="paragraph">Docker verwendet standardmäßig Port 2375 für unverschlüsselte Zugriffe und Port 2376 für verschlüsselten Zugriff.</block>
+  <block id="681992b8581f6d4247af5523a14d0ce4" category="cell">Docker Engine</block>
+  <block id="f4a3b0c461a1d83562753ce679c373cc" category="cell">Namespace
+Docker Engine</block>
+  <block id="8ab71e8b7ccb8786b890c85e686d1dbf" category="cell">Node-Name
+Knoten-IP
+Node-UUID
+Node-BS
+Kubernetes Cluster
+Docker-Version
+Einheit</block>
+  <block id="efb21860adb0899b80a09ed3d53daca5" category="cell">Speicher
+Container
+Container Angehalten
+Container Werden Ausgeführt
+Container Angehalten
+CPUs
+Gehen Sie Routinen
+Bilder
+Listener-Ereignisse
+Verwendete Dateibeschreibungen
+Daten Verfügbar
+Daten Gesamt
+Verwendete Daten
+Verfügbare Metadaten
+Metadaten Insgesamt
+Verwendete Metadaten
+Blockgröße Des Pools</block>
+  <block id="c4d05fe785e9118926263f1d8d731968" category="cell">Docker Container</block>
+  <block id="ef6673f2b613d194f98744f7a7d34b5d" category="cell">Namespace
+Containername
+Docker Engine</block>
+  <block id="85251df3c314f73ff378bbb53d0cbb1f" category="cell">Kubernetes Container-Hash
+Kubernetes-Container-Ports
+Anzahl Kubernetes-Container-Neustart
+Message Path Für Kubernetes Container-Beendigung
+Richtlinie Für Kubernetes Container Message Termination
+Kulanzzeit Nach Kubernetes Pod-Kündigung
+Container-Image
+Containerstatus
+Container-Version
+Node-Name
+Kubernetes Container Log Path
+Name Des Kubernetes Containers
+Docker-Typ Kubernetes
+Name Des Kubernetes Pod
+Kubernetes Pod-Namespace
+Kubernetes-Pod-UID
+Kubernetes Sandbox-ID
+Knoten-IP
+Node-UUID
+Docker-Version
+Kubernetes IO-Konfiguration erkannt
+Kubernetes IO-Konfigurationsquelle
+OpenShift-E/A-SCC
+Kubernetes Beschreibung
+Kubernetes-Anzeigename
+OpenShift-Tags
+Kompose Service
+Pod-Vorlagen-Hash
+Hash Der Controller-Revision
+Pod-Vorlagenerstellung
+Lizenz
+Schema Build-Datum
+Schemalizenz
+Schemaname
+Schema-URL
+Schema VCS-URL
+Schemaanbieter
+Schemaversion
+Schemaschema-Version
+Betreuer
+Kunden-Pod
+Kubernetes Status efulSet Pod-Name
+Mandant
+Webconsole
+Der Netapp Architektur Sind
+Maßgeblicher Quell-URL
+Build-Datum
+RH-Build-Host
+RH-Komponente
+Vertriebsumfang
+Installieren
+Freigabe
+Laufen
+Zusammenfassung
+Deinstallieren
+VCS-Ref
+VCS-Typ
+Anbieter
+Version
+Integritätsstatus
+Container-ID</block>
+  <block id="5ff8370214b985307753a0ff9465c15b" category="cell">Memory Active Anonymous
+Aktive Speicherdatei
+Arbeitsspeicher-Cache
+Hierarchischer Speichergrenzwert
+Memory Inactive Anonymous
+Memory Inactive File
+Speicherlimit
+Speicher-Mapping-Datei
+Max. Speicherauslastung
+Speicherseitenfehler
+Hauptfehler Der Speicherseite
+Speicher Einpager
+Speicher Ausgepager
+Speicherresident Set Size
+Memory Resident Set Size Riesig
+Memory Total Active Anonymous
+Speicher Gesamte Aktive Datei
+Speicher Gesamt-Cache
+Memory Total Inactive Anonymous
+Speicher Insgesamt Inaktive Datei
+Speicher Gesamte Zugeordnete Datei
+Fehler Bei Der Gesamten Speicherseite
+Memory Total Page Major-Fehler
+Speicher Insgesamt Einges
+Speicher Insgesamt Ausgelagert
+Speicher Gesamtgröße Des Resident Set
+Speicher Gesamte Resident Set Size Riesig
+Speicher Insgesamt Nicht Verfügbar
+Speicher Nicht Verfügbar
+Speicherauslastung
+Speicherauslastung In Prozent
+Exit-Code
+Toom getötet
+PID
+Gestartet Um
+Fehler Bei Streak</block>
+  <block id="213eaa882abd038ecefb94d1c9ad53dd" category="cell">Docker Container Block IO</block>
+  <block id="b6c8eb0e1f3a075790a46177f5f664a9" category="cell">Namespace
+Containername
+Gerät
+Docker Engine</block>
+  <block id="a8ca9934ba37964ab75dc00b1fa3e8fe" category="cell">Kubernetes Container-Hash
+Kubernetes-Container-Ports
+Anzahl Kubernetes-Container-Neustart
+Message Path Für Kubernetes Container-Beendigung
+Richtlinie Für Kubernetes Container Message Termination
+Kulanzzeit Nach Kubernetes Pod-Kündigung
+Container-Image
+Containerstatus
+Container-Version
+Node-Name
+Kubernetes Container Log Path
+Name Des Kubernetes Containers
+Docker-Typ Kubernetes
+Name Des Kubernetes Pod
+Kubernetes Pod-Namespace
+Kubernetes-Pod-UID
+Kubernetes Sandbox-ID
+Knoten-IP
+Node-UUID
+Docker-Version
+Kubernetes Konfiguration Gesehen
+Kubernetes-Konfigurationsquelle
+OpenShift-SCC
+Kubernetes Beschreibung
+Kubernetes-Anzeigename
+OpenShift-Tags
+Schemaschema-Version
+Pod-Vorlagen-Hash
+Hash Der Controller-Revision
+Pod-Vorlagenerstellung
+Kompose Service
+Schema Build-Datum
+Schemalizenz
+Schemaname
+Schemaanbieter
+Kunden-Pod
+Kubernetes Status efulSet Pod-Name
+Mandant
+Webconsole
+Build-Datum
+Lizenz
+Anbieter
+Der Netapp Architektur Sind
+Maßgeblicher Quell-URL
+RH-Build-Host
+RH-Komponente
+Vertriebsumfang
+Installieren
+Betreuer
+Freigabe
+Laufen
+Zusammenfassung
+Deinstallieren
+VCS-Ref
+VCS-Typ
+Version
+Schema-URL
+Schema VCS-URL
+Schemaversion
+Container-ID</block>
+  <block id="34792b46d5f4d118993b97dc65a3ed9b" category="cell">I/O-Servicebytes rekursiv asynchron
+I/O-Servicebytes rekursives Lesen
+Rekursive Synchronisierung von IO-Servicebytes
+I/O-Service Bytes rekursiv insgesamt
+I/O-Servicebytes rekursives Schreiben
+I/O-Wartung rekursiv asynchron
+I/O-Serviced Recursive Read
+Rekursiver Sync von IO-Wartung
+Rekursiver IO-Serviced Total
+Rekursiver I/O-Schreibzugriff</block>
+  <block id="c19b7a0868fcc8b657cf119904c8f4ee" category="cell">Docker Container Network</block>
+  <block id="831c5d0c57dec418323ed2d160458d81" category="cell">Namespace
+Containername
+Netzwerk
+Docker Engine</block>
+  <block id="6fcf9c483cfa3017433456584bcd7f8f" category="cell">Container-Image
+Containerstatus
+Container-Version
+Node-Name
+Knoten-IP
+Node-UUID
+Node-BS
+K8s-Cluster
+Docker-Version
+Container-ID</block>
+  <block id="3fcbd1f352221dab310964db15bbae4d" category="cell">RX fallen gelassen
+RX-Bytes
+RX-Fehler
+RX-Pakete
+TX abgebrochen
+TX Byte
+TX-Fehler
+TX-Pakete</block>
+  <block id="e11e2314917505f9b82d06bdd3c6e4b2" category="cell">Docker Container-CPU</block>
+  <block id="722c21d9c801a7b062bf40cd7bd5ae06" category="cell">Namespace
+Containername
+CPU
+Docker Engine</block>
+  <block id="51accef59e0d9b09555ad4a6b152e847" category="cell">Kubernetes Container-Hash
+Kubernetes-Container-Ports
+Anzahl Kubernetes-Container-Neustart
+Message Path Für Kubernetes Container-Beendigung
+Richtlinie Für Kubernetes Container Message Termination
+Kulanzzeit Nach Kubernetes Pod-Kündigung
+Kubernetes Konfiguration Gesehen
+Kubernetes-Konfigurationsquelle
+OpenShift-SCC
+Container-Image
+Containerstatus
+Container-Version
+Node-Name
+Kubernetes Container Log Path
+Name des Kubernetes-Containers
+Docker-Typ Kubernetes
+Name Des Kubernetes Pod
+Kubernetes Pod-Namespace
+Kubernetes-Pod-UID
+Kubernetes Sandbox-ID
+Knoten-IP
+Node-UUID
+Node-BS
+Kubernetes Cluster
+Docker-Version
+Kubernetes Beschreibung
+Kubernetes-Anzeigename
+OpenShift-Tags
+Schemaversion
+Pod-Vorlagen-Hash
+Hash Der Controller-Revision
+Pod-Vorlagenerstellung
+Kompose Service
+Schema Build-Datum
+Schemalizenz
+Schemaname
+Schemaanbieter
+Kunden-Pod
+Kubernetes Status efulSet Pod-Name
+Mandant
+Webconsole
+Build-Datum
+Lizenz
+Anbieter
+Der Netapp Architektur Sind
+Maßgeblicher Quell-URL
+RH-Build-Host
+RH-Komponente
+Vertriebsumfang
+Installieren
+Betreuer
+Freigabe
+Laufen
+Zusammenfassung
+Deinstallieren
+VCS-Ref
+VCS-Typ
+Version
+Schema-URL
+Schema VCS-URL
+Schemaversion
+Container-ID</block>
+  <block id="01515237e5a51a70ac5f1a57ab2c74a5" category="cell">Drosselungszeiträume
+Drosselung Gedrosselte Perioden
+Drosselung Gedrosselte Zeit
+Verwendung Im Kernel-Modus
+Verwendung Im Benutzermodus
+Auslastung In Prozent
+Verwendungssystem
+Verbrauch Insgesamt</block>
+  <block id="be43542983d169babaee275ec60ecb75" category="cell">Nach den Anweisungen auf der Konfigurationsseite sehe ich meine Docker-Metriken in Cloud Insights nicht.</block>
+  <block id="905bf4f9d8189256f8247dcef263d5cb" category="cell">Überprüfen Sie die Telegraf Agent-Protokolle, um festzustellen, ob der folgende Fehler gemeldet wird:
+
+ E! Fehler in Plugin [inputs.Docker]: Beim Versuch, eine Verbindung zum Docker Daemon-Socket herzustellen, wurde die Berechtigung verweigert
+
+Wenn dies der Fall ist, ergreifen Sie die erforderlichen Schritte, um dem Telegraf-Agenten den Zugriff auf den Docker Unix-Socket wie oben angegeben zu ermöglichen.</block>
+  <block id="c75d4b042f6604bc016e5b15ff4dea18" category="summary">Cloud Insights unterstützt Telegraf als Agent bei der Erfassung von Integrationsdaten in Kubernetes.</block>
+  <block id="562442a302f1457c8c9df7cbde80c0b4" category="doc">Konfiguration des NetApp Kubernetes Monitoring Operator</block>
+  <block id="b9f54c4d152facdb82c18e1719662b9f" category="paragraph">Cloud Insights bietet die Sammlung *NetApp Kubernetes Monitoring Operator* (NKMO) für Kubernetes an. Wählen Sie beim Hinzufügen eines Datensammlers einfach die Kachel „Kubernetes“.</block>
+  <block id="4f39aea7decea72af93c7cb4ba3fe487" category="admonition">Wenn Sie Cloud Insights Federal Edition besitzen, können Ihre Installations- und Konfigurationsanweisungen von den Anweisungen auf dieser Seite abweichen. Befolgen Sie die Anweisungen unter Cloud Insights, um den NetApp Kubernetes Monitoring Operator zu installieren.</block>
+  <block id="f34adaf8e760e7cb58ba333e44c4dc52" category="inline-image-macro">Kubernetes Data Collector</block>
+  <block id="a0eda368f17db54a54c6f0246fd5c816" category="paragraph"><block ref="a0eda368f17db54a54c6f0246fd5c816" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eaee203e2e728070e3c454936f257fdf" category="paragraph">Der Betreiber und die Datensammler werden von der Cloud Insights Docker Registry heruntergeladen. Nach der Installation verwaltet NKMO dann alle Operator-kompatiblen Kollektoren, die in den Kubernetes-Cluster-Knoten zur Datengewinnung bereitgestellt werden, einschließlich der Verwaltung des Lebenszyklus dieser Kollektoren. Nach dieser Kette werden die Daten von den Sammlern erfasst und an Cloud Insights gesendet.</block>
+  <block id="6a65175f7f76169aeeaf32acdda0d82f" category="section-title">Vor der Installation des NetApp Kubernetes Monitoring Operator</block>
+  <block id="3e4299c002d64ba4e1a384acbdafad4c" category="inline-link-macro">*Vor der Installation oder Aktualisierung*</block>
+  <block id="449735a59883598ca6b4afe7cb57336a" category="admonition">Lesen Sie die <block ref="98b00674e05edc386cc19257d013cae8" category="inline-link-macro-rx"></block> Dokumentation vor der Installation oder dem Upgrade des NetApp Kubernetes Monitoring Operator.</block>
+  <block id="143bc427903e01a7afe2d41b83643f5e" category="section-title">Installation des NetApp Kubernetes Monitoring Operator</block>
+  <block id="e6955fda6db57ce036906d2f15519731" category="paragraph"><block ref="0ac387629bcb7a9ba3f6f8e72a2f2cd7" category="inline-image-macro-rx" type="image"></block>
+<block ref="6ba665c891b77a3a5dfb5c061b6e2ba3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7591998776b8f5daf9acfbbe7be1312b" category="list-title">Schritte zur Installation des NetApp Kubernetes Monitoring Operator Agent auf Kubernetes:</block>
+  <block id="b1709369b19b51deac976f5fc9dce527" category="inline-xref">Aktualisierung</block>
+  <block id="c22968bfe7941ac13825abafc2a7f5b1" category="list-text">Geben Sie einen eindeutigen Cluster-Namen und einen eindeutigen Namespace ein. Wenn Sie es sind <block ref="0aef99036de6ea3b65be8c21025bb151" category="inline-xref-macro-rx"></block> Verwenden Sie aus einem früheren Kubernetes-Operator den gleichen Cluster-Namen und Namespace.</block>
+  <block id="14acb12fc5baee38469b462494a56a68" category="list-text">Sobald diese eingegeben wurden, können Sie den Download-Befehl-Snippet in die Zwischenablage kopieren.</block>
+  <block id="492eb11b2ab5e4b044176b40a2eebeac" category="list-text">Fügen Sie das Snippet in ein _bash_ Fenster ein und führen Sie es aus. Die Installationsdateien des Bedieners werden heruntergeladen. Beachten Sie, dass das Snippet einen eindeutigen Schlüssel hat und für 24 Stunden gültig ist.</block>
+  <block id="aa976aff83a7c1132e171f3598f5502c" category="list-text">Wenn Sie ein benutzerdefiniertes oder privates Repository haben, kopieren Sie das optionale Bild-Pull-Snippet, fügen Sie es in eine _bash_-Shell ein und führen Sie es aus. Nachdem die Bilder gezogen wurden, kopieren Sie sie in Ihr privates Repository. Stellen Sie sicher, dass Sie dieselben Tags und Ordnerstrukturen beibehalten. Aktualisieren Sie die Pfade in _Operator-Deployment.yaml_ sowie die Einstellungen des Docker-Repository in _Operator-config.yaml_.</block>
+  <block id="cae73b6a00921ef48cee176b0d4336fe" category="inline-link-macro">Konfigurationsoptionen</block>
+  <block id="ca9e0cae80a67833d83894f2324f8945" category="list-text">Prüfen Sie bei Bedarf die verfügbaren Konfigurationsoptionen, z. B. Proxy- oder private Repository-Einstellungen. Sie können mehr über lesen <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>.</block>
+  <block id="2d9b30e80afc5eb380c508d14b4f0676" category="list-text">Wenn Sie bereit sind, stellen Sie den Operator bereit, indem Sie den kubectl Apply-Snippet kopieren, herunterladen und ausführen.</block>
+  <block id="cc56bec82b2c1d802e942018b5923042" category="list-text">Die Installation wird automatisch ausgeführt. Klicken Sie anschließend auf die Schaltfläche „_Next_“.</block>
+  <block id="512795526de87931c50ae79cb1cb0a2b" category="list-text">Wenn die Installation abgeschlossen ist, klicken Sie auf die Schaltfläche „_Next_“. Achten Sie darauf, auch die Datei _Operator-Secrets.yaml_ zu löschen oder sicher zu speichern.</block>
+  <block id="faaf8961a729f548e51c3b9f1af0f7e8" category="inline-xref">Proxy wird konfiguriert</block>
+  <block id="038f6519626a44bf13147d0f6bf585c1" category="paragraph">Weitere Informationen <block ref="1a6ccc12a618fccf7330b5bee5bca7b7" category="inline-xref-macro-rx"></block>.</block>
+  <block id="c149af672528f58d22f99809653add8a" category="inline-xref">Ein benutzerdefiniertes/privates Docker-Repository verwenden</block>
+  <block id="868b132e8ef5a6adb3f9c30cc2596dfc" category="paragraph">Weitere Informationen <block ref="5616d0aefbf2e33b5f6c94a93c02e259" category="inline-xref-macro-rx"></block>.</block>
+  <block id="d815ee1e41746ef06fd66b3b30d2bc78" category="paragraph">Die Kubernetes EMS-Protokollerfassung ist standardmäßig aktiviert, wenn Sie den NetApp Kubernetes Monitoring Operator installieren. Um diese Sammlung nach der Installation zu deaktivieren, klicken Sie oben auf der Detailseite des Kubernetes-Clusters auf die Schaltfläche *Bereitstellung ändern*, und heben Sie die Auswahl von „Protokollsammlung“ auf.</block>
+  <block id="88b2095fc7879662ec05b3f703681a11" category="inline-image-macro">Bildschirm „Bereitstellung ändern“ mit Kontrollkästchen für „Log Collection“</block>
+  <block id="5afc0f33a3c779dc228b788e5b0cae22" category="paragraph"><block ref="5afc0f33a3c779dc228b788e5b0cae22" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f9f142ab6222e3ae7de290d8287b2920" category="paragraph">Dieser Bildschirm zeigt auch den aktuellen Status der Protokollerfassung an. Im Folgenden sind die möglichen Zustände aufgeführt:</block>
+  <block id="b9f5c797ebbf55adccdd8539a65a0241" category="list-text">Deaktiviert</block>
+  <block id="00d23a76e43b46dae9ec7aa9dcbebb32" category="list-text">Aktiviert</block>
+  <block id="5e7360afad9787a415b6f706e486423c" category="list-text">Aktiviert – Installation wird ausgeführt</block>
+  <block id="d5461aa4ef1df0b08d1c023caca59a6e" category="list-text">Aktiviert – Offline</block>
+  <block id="3a7ceac4689e5c9ea84be781707cd148" category="list-text">Aktiviert – Online</block>
+  <block id="be85cefb4673c1f486c73de818be2056" category="list-text">Fehler: API-Schlüssel verfügt über unzureichende Berechtigungen</block>
+  <block id="edcc6d64ff09289fd7b549c0265f3ea6" category="section-title">Aktualisierung</block>
+  <block id="20e38ff1d741d05cb351043049612af2" category="section-title">Upgrade auf den aktuellen NetApp Kubernetes Monitoring Operator</block>
+  <block id="59f9e8b92a6bc55e991031f0b5fea324" category="paragraph">Ermitteln Sie, ob eine AgentConfiguration bei dem vorhandenen Operator vorhanden ist (wenn Ihr Namespace nicht der Standardwert _netapp-Monitoring_ ist, ersetzen Sie den entsprechenden Namespace):</block>
+  <block id="bb5c0afa0b80550de02b1ac19c1226b4" category="paragraph">Wenn eine AgentConfiguration vorhanden ist:</block>
+  <block id="349838fb1d851d3e2014b9fe39203275" category="inline-xref">Installieren</block>
+  <block id="7f7436ae77d35f1d44077fc6a514e554" category="list-text"><block ref="1fa08d04c08db5225793f360e12d623f" category="inline-xref-macro-rx"></block> Der letzte Operator über den vorhandenen Operator.</block>
+  <block id="f60428f53f8ec06db7eeb3c6dc8a3ec1" category="inline-xref">Die neuesten Container-Bilder werden angezeigt</block>
+  <block id="727021f9728a61f5f57027c22e99ed17" category="list-text">Stellen Sie sicher, dass Sie es sind <block ref="70886476cda3a9669d1d2ba99218e076" category="inline-xref-macro-rx"></block> Wenn Sie ein benutzerdefiniertes Repository verwenden.</block>
+  <block id="a7e8df3295c386ff0d7a33ebd0ce4762" category="paragraph">Wenn AgentConfiguration nicht vorhanden ist:</block>
+  <block id="62648df30f88e4c53ea40e1b390e145a" category="list-text">Notieren Sie sich den von Cloud Insights erkannten Cluster-Namen (wenn Ihr Namespace nicht der standardmäßige netapp-Monitoring ist, ersetzen Sie den entsprechenden Namespace):</block>
+  <block id="af43624bdc80303ec074448a745b7a3c" category="list-text">Erstellen Sie eine Sicherung des bestehenden Operators (wenn Ihr Namespace nicht der Standard-netapp-Überwachung ist, ersetzen Sie den entsprechenden Namespace):</block>
+  <block id="a27dfe771799a09fd55fea73286eb6ab" category="inline-xref">Deinstallieren</block>
+  <block id="9fc345bef178837fdc05e65957ebec12" category="list-text"><block ref="202bdd2c16e54d75fc99028d87bc1bc6" category="inline-xref-macro-rx"></block> Der vorhandene Operator.</block>
+  <block id="98dc8e0a1ca4088c0cc75feb9c6a5560" category="list-text"><block ref="1fa08d04c08db5225793f360e12d623f" category="inline-xref-macro-rx"></block> Der neueste Operator.</block>
+  <block id="4c42e83b5a46ef16402aa2bea7ab525e" category="list-text">Verwenden Sie denselben Cluster-Namen.</block>
+  <block id="9e274d61eab1c1a3b088854ed50639ff" category="list-text">Nachdem Sie die neuesten Operator YAML-Dateien heruntergeladen haben, können Sie alle in Agent_Backup.yaml gefundenen Anpassungen vor der Bereitstellung an den heruntergeladenen Operator-config.yaml übertragen.</block>
+  <block id="447ede71efbff97ddd4418212a6b52c9" category="section-title">Stoppen und Starten des NetApp Kubernetes Monitoring Operator</block>
+  <block id="450670e2626f71fbb9a492373158ed02" category="paragraph">So beenden Sie den NetApp Kubernetes Monitoring Operator:</block>
+  <block id="c1bdaebddc4968d3e08193cf297db84b" category="paragraph">So starten Sie den NetApp Kubernetes Monitoring Operator:</block>
+  <block id="c2aaea4dacecce78b34302e41fcef75e" category="section-title">Deinstallation</block>
+  <block id="f9d83bcd2ea0c04a50e5e1cd5bc469ac" category="section-title">Um den NetApp Kubernetes Monitoring Operator zu entfernen</block>
+  <block id="7a8d7f509007f2970254571be4a339db" category="paragraph">Beachten Sie, dass der Standard-Namespace für den NetApp Kubernetes Monitoring Operator „netapp-Monitoring“ ist.  Wenn Sie Ihren eigenen Namespace festgelegt haben, ersetzen Sie diesen Namespace in diesen und allen nachfolgenden Befehlen und Dateien.</block>
+  <block id="12deeaac5f633c54b730f8c247dbf7e0" category="paragraph">Neuere Versionen des Überwachungsoperators können mit den folgenden Befehlen deinstalliert werden:</block>
+  <block id="aee5f180cc531b30ec6cf8dcf509d9b8" category="paragraph">Wenn der Überwachungsoperator in seinem eigenen dedizierten Namespace bereitgestellt wurde, löschen Sie den Namespace:</block>
+  <block id="97e76f0c81cc1c26b3d8ffe0d972c5af" category="paragraph">Wenn der erste Befehl „Keine Ressourcen gefunden“ zurückgibt, verwenden Sie die folgenden Anweisungen, um ältere Versionen des Überwachungsoperators zu deinstallieren.</block>
+  <block id="0b14d0fbc4256c7ec7c3bb39b2c28854" category="paragraph">Führen Sie jeden der folgenden Befehle in der Reihenfolge aus. Abhängig von Ihrer aktuellen Installation können einige dieser Befehle Nachrichten ‘object not found’ zurückgeben. Diese Meldungen können sicher ignoriert werden.</block>
+  <block id="82a8cca794947463478c2f08445a8ff4" category="paragraph">Wenn zuvor eine Sicherheitskontextbeschränkung erstellt wurde:</block>
+  <block id="a945216a5c61e628c867b8948c797454" category="section-title">Über Kube-State-Metrics</block>
+  <block id="bacf6d7427784a1658e1d5fb278300f8" category="paragraph">Der NetApp Kubernetes Monitoring Operator installiert kube-State-Metriken automatisch. Gleichzeitig ist keine Interaktion mit den Benutzern erforderlich.</block>
+  <block id="8f5d4322bbada1e271bc144d48fbd530" category="section-title">kube-State-Metrics Counters</block>
+  <block id="0868aed0151117af81e4d8a3bf48f5d1" category="paragraph">Verwenden Sie die folgenden Links, um auf Informationen zu diesen kube State-Metriken zuzugreifen:</block>
+  <block id="dcd18b6a9c1c857332184b4ab6b6b876" category="inline-link">Kennzahlen für die Konfigmap</block>
+  <block id="43c0e039eb7d522a6d4d124fdff7e06f" category="list-text"><block ref="43c0e039eb7d522a6d4d124fdff7e06f" category="inline-link-rx"></block></block>
+  <block id="8369bd4693cb273c71ad92f42fb3e791" category="inline-link">DemonSet Metrics</block>
+  <block id="9c6d0e0120fcf6c4d873e186cc9739bf" category="list-text"><block ref="9c6d0e0120fcf6c4d873e186cc9739bf" category="inline-link-rx"></block></block>
+  <block id="b1a7a1cd05f9351c6bef8223f686cd0b" category="inline-link">Implementierungsmetriken</block>
+  <block id="aa7c0000dea1ded472606bf83241d554" category="list-text"><block ref="aa7c0000dea1ded472606bf83241d554" category="inline-link-rx"></block></block>
+  <block id="3743b47b26a692a03362afc5a67c0463" category="inline-link">Ingress Metrics</block>
+  <block id="4cb7ce0b5790952cc6bda2997a7dabc9" category="list-text"><block ref="4cb7ce0b5790952cc6bda2997a7dabc9" category="inline-link-rx"></block></block>
+  <block id="e1f5942f12d62c7e887c901f5f6c7e30" category="inline-link">Namespace-Kennzahlen</block>
+  <block id="5fdc0df1bae486ee24716c612b24ca02" category="list-text"><block ref="5fdc0df1bae486ee24716c612b24ca02" category="inline-link-rx"></block></block>
+  <block id="1e8f3ee4ce1dbb00442a7fb041fa09e7" category="inline-link">Node-Kennzahlen</block>
+  <block id="8b04a06b05700061d42a433c93746a63" category="list-text"><block ref="8b04a06b05700061d42a433c93746a63" category="inline-link-rx"></block></block>
+  <block id="551df464e5bd2444d259057c7eacc9f7" category="inline-link">Persistente Volume-Kennzahlen</block>
+  <block id="69207fca599a65027f8a0597b95b093d" category="list-text"><block ref="69207fca599a65027f8a0597b95b093d" category="inline-link-rx"></block></block>
+  <block id="ea541521b7c5e710af931c8e4f58eb87" category="inline-link">Kenngrößen Für Die Forderung Im Persistenten Volume</block>
+  <block id="628462d67f17543dc95a839333690c0e" category="list-text"><block ref="628462d67f17543dc95a839333690c0e" category="inline-link-rx"></block></block>
+  <block id="7fc93683f45a50f207241b90641f402b" category="inline-link">Pod-Metriken</block>
+  <block id="3962a47d5b09f2b1246c86d8bc272414" category="list-text"><block ref="3962a47d5b09f2b1246c86d8bc272414" category="inline-link-rx"></block></block>
+  <block id="0017245fe792a61975ebc02c48b109c5" category="inline-link">Kennzahlen für ReplicaSet</block>
+  <block id="5df76f1cf3ae3096632fd05036cd39a0" category="list-text"><block ref="5df76f1cf3ae3096632fd05036cd39a0" category="inline-link-rx"></block></block>
+  <block id="8f9fbab4275b3c6156f4a1e2bd589d5e" category="inline-link">Geheimkennzahlen</block>
+  <block id="94500053c0d8262e7a0caa0908ba6f8d" category="list-text"><block ref="94500053c0d8262e7a0caa0908ba6f8d" category="inline-link-rx"></block></block>
+  <block id="de3e236a6c33c06117bf9ae35e2b9bb0" category="inline-link">Service-Kennzahlen</block>
+  <block id="4e3e0b949c1506c4eb21f3ebfc141e3b" category="list-text"><block ref="4e3e0b949c1506c4eb21f3ebfc141e3b" category="inline-link-rx"></block></block>
+  <block id="e0c0cc3c69b0271b0179dc71d1e9bfa7" category="inline-link">StatfulSet-Kennzahlen</block>
+  <block id="3a41cf72ebe7dd71e2b8cb6f1a7e14ff" category="list-text"><block ref="3a41cf72ebe7dd71e2b8cb6f1a7e14ff" category="inline-link-rx"></block></block>
+  <block id="cac54dc379f23a7aed8745bde8386662" category="inline-link-macro">Verfügbare Einstellungen</block>
+  <block id="cfda62a17e54042dffdf6eb6a74c7977" category="paragraph">In neueren Versionen des Operators können die am häufigsten geänderten Einstellungen in der benutzerdefinierten Ressource _AgentConfiguration_ konfiguriert werden. Sie können diese Ressource bearbeiten, bevor Sie den Operator bereitstellen, indem Sie die Datei _Operator-config.yaml_ bearbeiten. Diese Datei enthält kommentierte Beispiele für einige Einstellungen. Siehe Liste von <block ref="d0a687c4569dc784e63f3960b33ab7c7" category="inline-link-macro-rx"></block> Für die neueste Version des Bedieners.</block>
+  <block id="342414165099895140bbfbd3ffb613ca" category="paragraph">Sie können diese Ressource auch bearbeiten, nachdem der Operator bereitgestellt wurde. Verwenden Sie dazu den folgenden Befehl:</block>
+  <block id="3ab04e244a91c8a73c48633c62ac613a" category="paragraph">Um festzustellen, ob die bereitgestellte Version des Operators AgentConfiguration unterstützt, führen Sie den folgenden Befehl aus:</block>
+  <block id="51ba9262aad7e83aa5f74ed6dc93a039" category="paragraph">Wenn die Meldung „Fehler vom Server (notfound)“ angezeigt wird, muss Ihr Bediener aktualisiert werden, bevor Sie die AgentConfiguration verwenden können.</block>
+  <block id="b33361bde0bcb58125ffdc8fc36d8b99" category="section-title">Proxy-Unterstützung Wird Konfiguriert</block>
+  <block id="4ce29774235b5ad70135520aad0c4a92" category="paragraph">An zwei Stellen können Sie in Ihrer Umgebung einen Proxy verwenden, um den NetApp Kubernetes Monitoring Operator zu installieren. Es kann sich um dieselben oder separate Proxy-Systeme handelt:</block>
+  <block id="b30dfc4554e987d8435414f85e0afc5c" category="list-text">Proxy benötigt bei Ausführung des Installationscodes Snippet (mit "Curl"), um das System, an dem das Snippet ausgeführt wird, mit Ihrer Cloud Insights-Umgebung zu verbinden</block>
+  <block id="58b692b7f72614bb3545960fa7db5fde" category="list-text">Proxy für die Kommunikation mit Ihrer Cloud Insights Umgebung durch das Ziel-Kubernetes-Cluster</block>
+  <block id="7a9065c97476c0400d1ffaaa20c4bbe5" category="paragraph">Wenn Sie einen Proxy für diesen oder beide verwenden, müssen Sie für die Installation des NetApp Kubernetes Operating Monitor zunächst sicherstellen, dass Ihr Proxy konfiguriert ist und eine gute Kommunikation mit Ihrer Cloud Insights-Umgebung ermöglicht. Wenn Sie über einen Proxy verfügen und über den Server/die VM auf Cloud Insights zugreifen können, von dem aus Sie den Operator installieren möchten, wird Ihr Proxy wahrscheinlich richtig konfiguriert.</block>
+  <block id="73689eeba538dc0b4e24b0c08682858c" category="paragraph">Legen Sie für den Proxy, der zur Installation des NetApp Kubernetes Operating Monitor verwendet wurde, vor der Installation des Operators die Umgebungsvariablen _http_Proxy/https_Proxy_ fest. In einigen Proxy-Umgebungen müssen Sie möglicherweise auch die Variable _no_Proxy Environment_ festlegen.</block>
+  <block id="05de88b1f0962d418af51426b2e42b5c" category="paragraph">Um die Variable(en) festzulegen, führen Sie auf Ihrem System *vor* der Installation des NetApp Kubernetes Monitoring Operators folgende Schritte aus:</block>
+  <block id="601e2f4bdb8c8d256c0862eb39ab26dd" category="list-text">Wenn der Proxy, der eingerichtet wird, keine Authentifizierung (Benutzername/Passwort) aufweist, führen Sie den folgenden Befehl aus:</block>
+  <block id="aec78dde754edc4769d775d718da8408" category="list-text">Wenn der Proxy, der eingerichtet wird, über Authentifizierung (Benutzername/Passwort) verfügt, führen Sie folgenden Befehl aus:</block>
+  <block id="a4e1e6009cd02048a3c4c625810efdde" category="paragraph">Nachdem Sie alle diese Anweisungen gelesen haben, installieren Sie den Proxy, der für die Kommunikation Ihres Kubernetes Clusters mit Ihrer Cloud Insights-Umgebung verwendet wurde.</block>
+  <block id="6a487db38d52ee4c14d91f1b1ddd2fac" category="paragraph">Konfigurieren Sie den Proxy-Abschnitt von AgentConfiguration in Operator-config.yaml, bevor Sie den NetApp Kubernetes Monitoring Operator bereitstellen.</block>
+  <block id="ba5a4399ff89e39d6d73b55b320d32dc" category="section-title">Verwenden eines benutzerdefinierten oder privaten Docker Repositorys</block>
+  <block id="496310011786854d1bf0863b20b159b3" category="paragraph">Standardmäßig sendet der NetApp Kubernetes Monitoring Operator Container-Images aus dem Cloud Insights-Repository. Wenn Sie ein Kubernetes-Cluster als Ziel für das Monitoring verwenden und der Cluster so konfiguriert ist, dass er nur Container-Images aus einem benutzerdefinierten oder privaten Docker-Repository oder der Container-Registrierung zieht, müssen Sie den Zugriff auf die Container konfigurieren, die vom NetApp Kubernetes Monitoring Operator benötigt werden.</block>
+  <block id="664cfa316d48b417a500c0e898f37409" category="paragraph">Führen Sie das „Image Pull Snippet“ aus der NetApp Monitoring Operator Installationskachel aus. Dieser Befehl meldet sich beim Cloud Insights-Repository an, zieht alle Image-Abhängigkeiten für den Operator und meldet sich vom Cloud Insights-Repository ab. Wenn Sie dazu aufgefordert werden, geben Sie das angegebene temporäre Repository-Passwort ein. Mit diesem Befehl werden alle vom Bediener verwendeten Bilder heruntergeladen, einschließlich optionaler Funktionen. Nachfolgend sehen Sie, für welche Funktionen diese Bilder verwendet werden.</block>
+  <block id="e353fb1c241718a57c3f1ebea2f2eda2" category="paragraph">Core Operator-Funktionalität und Kubernetes Monitoring</block>
+  <block id="aadb900c6eaeed8ade58660fe972acec" category="list-text">netapp Monitoring</block>
+  <block id="4a3ecd51c30dc55cebd7ed9babbb7931" category="list-text">kube-rbac-Proxy</block>
+  <block id="7b1808ad616c2f87f5c28aa1d89f75f7" category="list-text">Distroless-root-user</block>
+  <block id="f8dcd7540ab5947fed469158330013cc" category="paragraph">Ereignisprotokoll</block>
+  <block id="bb84790255aac66744320e4417143dd8" category="list-text">Fluent-Bit</block>
+  <block id="2941fa605b5a46d4cf07aade64af8b6e" category="list-text">kubernetes Event Exporter</block>
+  <block id="e081b29a739e8831bbe1f8ad1c2a2859" category="paragraph">Netzwerkleistung und -Zuordnung</block>
+  <block id="a050c9f3e338616510e46bf6d9714f64" category="list-text">ci-Netz-Beobachter</block>
+  <block id="a3cdf80b89a5235481aa9bc21b5857e9" category="paragraph">Übertragen Sie das Operator-Docker-Image gemäß Ihren Unternehmensrichtlinien in das private/lokale/unternehmenseigene Docker-Repository. Stellen Sie sicher, dass die Bild-Tags und Verzeichnispfade zu diesen Bildern in Ihrem Repository mit denen im Cloud Insights-Repository übereinstimmen.</block>
+  <block id="8b4599b5810466dc4e8956fc5bc3c54c" category="paragraph">Bearbeiten Sie die Bereitstellung des Monitoring-Operators in Operator-Deployment.yaml, und ändern Sie alle Bildverweise, um Ihr privates Docker-Repository zu verwenden.</block>
+  <block id="49174c164a8c6cc17236236504f05c4e" category="paragraph">Bearbeiten Sie die AgentConfiguration in Operator-config.yaml, um die neue Position des Docker-Repo zu berücksichtigen. Erstellen Sie ein neues imagePullSecret für Ihr privates Repository. Weitere Informationen finden Sie unter _https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_</block>
+  <block id="90e3576ed0e73e03c00705419f3411a3" category="section-title">OpenShift-Anweisungen</block>
+  <block id="ed8127bf6d6013cbef18d300d151a78a" category="paragraph">Wenn Sie OpenShift 4.6 oder höher ausführen, müssen Sie die AgentConfiguration in _Operator-config.yaml_ bearbeiten, um die Einstellung _runPrivileged_ zu aktivieren:</block>
+  <block id="493c4ff608e06cc5a02d0561f6bb02a3" category="paragraph">OpenShift kann zusätzliche Sicherheitsstufen implementieren, die den Zugriff auf einige Kubernetes-Komponenten blockieren könnten.</block>
+  <block id="d8c9294ea12d1c7d12e34008f3ecee39" category="section-title">Ein Hinweis über Geheimnisse</block>
+  <block id="1169bc31edb2122ab9876b9b0289225c" category="paragraph">Löschen Sie die folgenden Ressourcen aus der Datei _Operator-Setup.yaml_, um die Berechtigung für den NetApp-Kubernetes-Überwachungsoperator zu entfernen, um die Geheimnisse im gesamten Cluster anzuzeigen:</block>
+  <block id="1790cdbccc4ddd4389eb90d73e043f4b" category="paragraph">Wenn es sich um ein Upgrade handelt, löschen Sie auch die Ressourcen aus Ihrem Cluster:</block>
+  <block id="a66e68a20b3b94a700f3a3b9baa06764" category="paragraph">Wenn die Änderungsanalyse aktiviert ist, ändern Sie die Optionen _AgentConfiguration_ oder _Operator-config.yaml_, um den Änderungsmanagementabschnitt zu entkommentieren und _kindsToIgnoreFromWatch: '"Secrets"_ im Bereich Change-Management aufzunehmen. Notieren Sie sich das Vorhandensein und die Position von einfachen und doppelten Anführungszeichen in dieser Zeile.</block>
+  <block id="342761835c95d3618833ced82b6260ac" category="section-title">Überprüfen Von Kubernetes Prüfsummen</block>
+  <block id="06da10bf5b15bdaae23d623ecea6b7f6" category="paragraph">Das Cloud Insights Agent-Installationsprogramm führt Integritätsprüfungen durch. Einige Benutzer müssen jedoch vor der Installation oder Anwendung heruntergeladener Artefakte möglicherweise ihre eigenen Überprüfungen durchführen. Um einen nur-Download-Vorgang durchzuführen (im Gegensatz zum Standard-Download-and-install), können diese Benutzer den Agent-Installation Befehl erhalten von der UI und entfernen Sie die nachhängbare "Installation" Option.</block>
+  <block id="8ff498fedef16be83cafa8d00c04dd6d" category="list-text">Entfernen Sie den nachfolgenden „--install“ aus dem Befehl.</block>
+  <block id="9f38037f1d71ce0a3fe1ba3e1c8aa8e1" category="paragraph">Der Download-Only-Befehl lädt alle erforderlichen Artefakte vom Cloud Insights in das Arbeitsverzeichnis herunter.  Die Artefakte umfassen, dürfen aber nicht beschränkt sein auf:</block>
+  <block id="700459827d4941a6a127bc7de7938d5d" category="list-text">Eine signierte Prüfsumme-Datei (sha256.signed)</block>
+  <block id="e1f4fa985535cfb2dd4b3f50c918b7eb" category="list-text">Eine PEM-Datei (netapp_cert.pem) zur Signaturverifizierung</block>
+  <block id="7c9f5399bb10652ab7e06778c4de02e1" category="paragraph">Die PEM-Datei kann durch Bestätigung des Fingerabdrucks wie folgt verifiziert werden:</block>
+  <block id="7a2babd4fa48c9b0c07e4b865ff53efa" category="paragraph">Genauer gesagt,</block>
+  <block id="76dfc651463ab4e67ce2140b8aadb473" category="paragraph">Die signierte Prüfsummendatei kann mit der PEM-Datei verifiziert werden:</block>
+  <block id="72e6fd543a67010efd03f7fdc1a1e1bc" category="paragraph">Einige Dinge, die Sie versuchen können, wenn Probleme bei der Einrichtung des NetApp Kubernetes Monitoring Operators auftreten:</block>
+  <block id="3dcf0a51075fbcf98f9e53d661506adf" category="cell">Ich sehe keinen Hyperlink/Verbindung zwischen meinem Kubernetes Persistent Volume und dem entsprechenden Back-End Storage-Gerät. Mein Kubernetes Persistent Volume wird mit dem Hostnamen des Storage-Servers konfiguriert.</block>
+  <block id="31374f026fd34f38c1768e8bcae58183" category="cell">Befolgen Sie die Schritte, um den bestehenden Telegraf-Agent zu deinstallieren, und installieren Sie dann den neuesten Telegraf-Agent erneut. Sie müssen Telegraf Version 2.0 oder höher verwenden, und Ihr Kubernetes Cluster Storage muss von Cloud Insights aktiv überwacht werden.</block>
+  <block id="a603e86bb87b54e9b7acc7e242269514" category="cell">Ich sehe Nachrichten in den Protokollen, die folgendermaßen aussehen:
+
+E0901 15:21:39.962145 1 Reflector.go:178] k8s.io/kube-State-metrics/internal/Store/Builder.go:352: Konnte *v1.MutatingWebhookKonfiguration: Der Server konnte die angeforderte Ressource nicht finden
+E0901 15:21:43.168161 1 Reflector.go:178] k8s.io/kube-State-metrics/internal/Store/Builder.go:352: Fehler beim Auflisten von *v1.Lease: Der Server konnte die angeforderte Ressource nicht finden (get Leases.Coordination.k8s.io)
+Usw.</block>
+  <block id="0428b79968fc5aa0a5b6d427e6815d82" category="cell">Diese Nachrichten können auftreten, wenn Sie kube-State-Metrics Version 2.0.0 oder höher mit Kubernetes-Versionen unter 1.20 ausführen.
+
+
+So erhalten Sie die Kubernetes-Version:
+
+ _Kubectl Version_
+
+So erhalten Sie die kube-State-metrics-Version:
+
+ _Kubectl get deploy/kube-State-metrics -o jsonpath='{..image}'_
+
+Um zu verhindern, dass diese Meldungen stattfinden, können Benutzer ihre Bereitstellung von kube-State-Metrics ändern, um die folgenden Leasings zu deaktivieren:
+
+_Mutatingwebhookkonfigurationen_
+_Validatingwebhookkonfigurationen_
+_Volumeattachments-Ressourcen_
+
+Genauer gesagt können sie das folgende CLI-Argument verwenden:
+
+Ressourcen=zertifiziertigningrequests,configmaps,cronjobs,demonsets, Bereitstellungen,Endpunkte,horizontalpodautoscalers,ingresses,Jobs,limitranges, Namespaces,Netzwerkrichtlinien,Nodes,persistent Volumeclaims,persistent Volumes, poddisruptionbudgets,Pods,Replikasets,Replikationcontroller,resourcequotas, Secrets,Services,Statefulsets,Storageclasses
+
+Die Standardressourcenliste lautet:
+
+„Zertificatezigningrequest,configmaps,cronjobs,demonsets,Bereitstellungen, Endpunkte,horizontalpodautoscalers,ingresses,Jobs,Leases,limitranges, mutatingwebhookkonfigurationen,Namespaces,Netzwerkrichtlinien,Nodes,persistent Volumeclaims,persistent,Volumes,poddisruptionbudgets,Pods,Replikasets,resourcequotas,Secrets,Services,statectorSets,statectoresets Validatingwebhookkonfigurationen, Volumeanhänge“</block>
+  <block id="b8ce784188c470b3c8ff0c7cc1a403e1" category="cell">Ich sehe Fehlermeldungen von Telegraf wie die folgenden, aber Telegraf startet und läuft:
+
+Oct 11 14:23:41 ip-172-31-39-47 systemd[1]: Startete den Plugin-gesteuerten Server-Agent für die Berichterstattung von Kennzahlen in InfluxDB.
+Okt 11 14:23:41 ip-172-31-39-47 telegraf[1827]: Time=„2021-10-11T14:23:41Z“ Level=error msg=„konnte kein Cache-Verzeichnis erstellen. /Etc/telegraf/.Cache/snowflake, err: Mkdir /etc/telegraf/.ca
+Che: Erlaubnis verweigert. Ignored\n“ func=„gosnowflake.(*defaultLogger).Errorf“ file=„log.go:120“
+Okt. 11 14:23:41 ip-172-31-39-47 telegraf[1827]: Time=„2021-10-11T14:23:41Z“ Level=error msg=„Öffnen fehlgeschlagen. Ignoriert. Open /etc/telegraf/.Cache/snowflake/ocsp_response_Cache.json: Nicht so
+Datei oder Verzeichnis\n“ func=„gosnowflake.(*defaultLogger).Errorf“ file=„log.go:120“
+Okt. 11 14:23:41 ip-172-31-39-47 telegraf[1827]: 2021-10-11T14:23:41Z i! Telegraf 1.19.3 Starten</block>
+  <block id="0ccd64b2e6202fbb544d22cd48a872b2" category="inline-link-macro">Dieser GitHub-Artikel</block>
+  <block id="8f176f657f418586c2a4828045ab0c37" category="cell">Dies ist ein bekanntes Problem.  Siehe <block ref="23bd9a1f0b26414ad35f4299a95464f0" category="inline-link-macro-rx"></block> Entnehmen. Solange Telegraf läuft, können Benutzer diese Fehlermeldungen ignorieren.</block>
+  <block id="9aab00e938cede2932654042bc507309" category="cell">Auf Kubernetes berichten meine Telegraf POD(s) die folgende Fehlermeldung:
+"Fehler bei der Verarbeitung von mountstats-Info: Mountstats-Datei konnte nicht geöffnet werden: /Hostfs/proc/1/mountstats, Fehler: Open /hostfs/proc/1/mountstats: Berechtigung verweigert"</block>
+  <block id="cf0c5ed1e47d7431af16b71ad06bfcba" category="cell">Wenn SELinux aktiviert und durchgesetzt wird, wird wahrscheinlich verhindert, dass die Telegraf PODs auf die Datei /proc/1/mountstats auf dem Kubernetes-Knoten zugreifen. Um diese Einschränkung zu überwinden, bearbeiten Sie die Agentkonfiguration und aktivieren Sie die runPrivileged-Einstellung. Weitere Informationen finden Sie unter:<block ref="b799c83c0330c0824f3118282f39ee9e" category="inline-link-rx"></block>.</block>
+  <block id="f997e79142f159c33823b9deeab809eb" category="cell">Auf Kubernetes meldet mein Telegraf ReplicaSet POD den folgenden Fehler:
+
+ [inputs.prometheus] Fehler im Plugin: Konnte keypair /etc/kubernetes/pki/etcd/Server.crt:/etc/kubernetes/pki/etcd/Server.key nicht laden: Öffnen /etc/kubernetes/pki/etcd/Server.crt: Datei oder Verzeichnis nicht vorhanden</block>
+  <block id="9df12d675c4f61381132e45173ef90d0" category="cell">Der Pod Telegraf ReplicaSet soll auf einem Knoten ausgeführt werden, der als Master oder für etc bestimmt ist. Wenn der ReplicaSet-Pod auf einem dieser Knoten nicht ausgeführt wird, werden diese Fehler angezeigt. Überprüfen Sie, ob Ihre Master/etcd-Knoten eine Tönungswalle haben. Fügen Sie in diesem Fall die erforderlichen Verträgungen in das Telegraf ReplicaSet, telegraf-rs ein.
+
+Bearbeiten Sie beispielsweise das ReplicaSet...
+
+ Kubectl bearbeiten rs telegraf-rs
+
+...Und fügen Sie die entsprechenden Toleranzen in die Spezifikation ein. Starten Sie anschließend den Pod ReplicaSet neu.</block>
+  <block id="7f213685ee85ff84e10c6c9b9c633789" category="cell">Ich habe eine PSP/PSA Umgebung. Hat dies Auswirkungen auf meinen Überwachungsperator?</block>
+  <block id="180998c51dd0da936f3ebbeb1b922f6b" category="cell">Wenn Ihr Kubernetes Cluster mit der Pod Security Policy (PSP) oder PSA (Pod Security Admission) ausgeführt wird, müssen Sie ein Upgrade auf den aktuellen NetApp Kubernetes Monitoring Operator durchführen. Führen Sie die folgenden Schritte aus, um ein Upgrade auf das aktuelle NKMO mit Unterstützung für PSP/PSA durchzuführen:
+
+1. <block ref="a7177598d8f3c4f7d3503ecefe58c480" category="inline-xref-macro-rx"></block> Der vorherige Überwachungsoperator:
+
+ Kubectl delete Agent-Monitoring-netapp -n netapp-Monitoring
+ Kubectl löschen ns netapp-Monitoring
+ Kubectl löschen crd agents.monitoring.netapp.com
+ Kubectl delete clusterrole Agent-Manager-role Agent-Proxy-role Agent-metrics-reader
+ Kubectl delete clusterrolebinding Agent-Manager-rolebinding Agent-Proxy-rolebinding Agent-Cluster-admin-rolebinding
+
+2. <block ref="8e5c51a62ab45f504ec71f39c03c1633" category="inline-xref-macro-rx"></block> Die neueste Version des Überwachungsbedieners.</block>
+  <block id="6ae137903bc328659928ed818d9ee78a" category="cell">Bei der Bereitstellung des NKMO begegnete mir Probleme, und PSP/PSA ist im Einsatz.</block>
+  <block id="63c5c26973f4cb2983185abedde31f4b" category="cell">1. Bearbeiten Sie den Agenten mit dem folgenden Befehl:
+
+Kubectl -n &lt;name-space&gt;-Bearbeitungsagent
+
+2. Markieren Sie "Sicherheit-Politik-aktiviert" als "falsch". Dadurch werden Pod Security Policies und Pod Security Admission deaktiviert und die Bereitstellung des NKMO ermöglicht. Bestätigen Sie die Bestätigung mit folgenden Befehlen:
+
+Kubectl get psp (sollte zeigen, dass die Pod-Sicherheitsrichtlinie entfernt wurde)
+Kubectl get all -n &lt;namespace&gt; (sollte zeigen, dass nichts gefunden wird)</block>
+  <block id="59e3026f71d01a624108642cdb778ebd" category="cell">„ImagePullBackoff“-Fehler erkannt</block>
+  <block id="43340e6cc4e88197d57f8d6d5ea50a46" category="inline-xref">Weitere Informationen</block>
+  <block id="d18743173cd6691e1637fd7bb6299057" category="cell">Diese Fehler treten möglicherweise auf, wenn Sie über ein benutzerdefiniertes oder privates Docker Repository verfügen und den NetApp Kubernetes Monitoring Operator noch nicht so konfiguriert haben, dass es richtig erkannt wird.  <block ref="64c2e35c96e92fc99426098fae703fff" category="inline-xref-macro-rx"></block> Info zur Konfiguration für benutzerdefinierte/private Repo.</block>
+  <block id="6da3e5f4ef4407262c741e8325a8249d" category="cell">Ich habe ein Problem mit der Installation meines Monitoring-Bedieners, und die aktuelle Dokumentation hilft mir nicht, es zu lösen.</block>
+  <block id="368fbe1d48012e8e4f24249e2b27a8dd" category="paragraph">Erfassen oder notieren Sie die Ausgabe der folgenden Befehle, und wenden Sie sich an den technischen Support.</block>
+  <block id="0538684ab7c9197cd8966c3859e59c6a" category="cell">NET-Observer (Workload Map)-Pods im NKMO-Namespace befinden sich in CrashLoopBackOff</block>
+  <block id="b1dd812a8bc65d5769e88b945f591999" category="cell">Diese Pods entsprechen dem Workload Map-Datensammler für Network Observability. Versuchen Sie Folgendes:
+• Überprüfen Sie die Protokolle eines der Pods, um die minimale Kernel-Version zu bestätigen. Beispiel:
+
+----
+{„CI-Tenant-id“:„your-Tenant-id“,„Collector-Cluster“:„your-k8s-Cluster-Name“,„environment“:„prod“,„Level“:„error“,„msg“:„failed in validation. Grund: Kernelversion 3.10.0 ist kleiner als die minimale Kernelversion von 4.18.0","Time":"2022-11-09T08:23:08Z"}
+----
+
+• Net-Observer PODs benötigen die Linux Kernel Version mindestens 4.18.0. Überprüfen Sie die Kernel-Version mit dem Befehl „uname -r“ und stellen Sie sicher, dass sie &gt;= 4.18.0 sind</block>
+  <block id="c37dcb848a7244594adc1af67cc44fb5" category="cell">Pods werden in NKMO Namespace ausgeführt (Standard: netapp-Monitoring), es werden jedoch keine Daten in der UI für die Workload-Zuordnung oder Kubernetes-Kennzahlen in Abfragen angezeigt</block>
+  <block id="b301a7b156c241fb466de1bca776811c" category="cell">Überprüfen Sie die Zeiteinstellung auf den Knoten des K8S-Clusters. Für eine genaue Prüfung und Datenberichterstattung wird dringend empfohlen, die Zeit auf dem Agent-Rechner mit Network Time Protocol (NTP) oder Simple Network Time Protocol (SNTP) zu synchronisieren.</block>
+  <block id="4ded7a1a9e117c3e40fb8fd746b0652d" category="cell">Einige der Net-Observer-Pods im NKMO-Namespace befinden sich im Status „Ausstehend“</block>
+  <block id="c55a7a21faf06d9f162882100bc46e42" category="cell">NET-Observer ist ein DemonSet und führt in jedem Knoten des K8s-Clusters einen Pod aus.
+• Beachten Sie den Pod, der sich im Status „Ausstehend“ befindet, und prüfen Sie, ob ein Ressourcenproblem für CPU oder Speicher vorliegt. Stellen Sie sicher, dass der erforderliche Arbeitsspeicher und die erforderliche CPU im Knoten verfügbar sind.</block>
+  <block id="04e7b6395fd3a2be3a25869ea1196f3d" category="cell">Ich sehe Folgendes in meinen Protokollen sofort nach der Installation des NetApp Kubernetes Monitoring Operators:
+
+[inputs.prometheus] Fehler im Plugin: Fehler beim Erstellen der HTTP-Anfrage an<block ref="189319aba70d8b3a1cf8eef70b48f546" category="inline-link-rx"></block> Verstehen<block ref="189319aba70d8b3a1cf8eef70b48f546" category="inline-link-rx"></block> TCP wählen: Lookup kube-State-metrics.&lt;namespace&gt;.svc.Cluster.local: Kein solcher Host</block>
+  <block id="d232f49a9877a99204dde54474c23ce6" category="cell">Diese Meldung wird normalerweise nur angezeigt, wenn ein neuer Operator installiert ist und der Pod „_telegraf-rs_“ vor dem Einschalten des Pod „_ksm_“ steht. Diese Meldungen sollten beendet werden, sobald alle Pods ausgeführt werden.</block>
+  <block id="02230bab9788e4843408e124331bb1ca" category="cell">Ich sehe keine Kennzahlen für die Kubernetes-Kronjobs, die in meinem Cluster vorhanden sind, erfasst.</block>
+  <block id="81467098050f12a1f4ece9dea82405f0" category="cell">Überprüfen Ihrer Kubernetes Version (d. h.<block ref="4fc58818ca77fb3a60cbd34a7f7d5071" prefix=" " category="inline-code"></block>).  Wenn es v1.20.x oder niedriger ist, ist dies eine erwartete Einschränkung.  Die mit dem NetApp Kubernetes Monitoring Operator implementierte Version von kube-State-Metrics unterstützt nur v1.cronjob.  Bei Kubernetes 1.20.x und niedriger befindet sich die Ressource cronjob unter v1beta.cronjob.  Daher können kube-State-Metriken die Ressource cronjob nicht finden.</block>
+  <block id="45698e13b1c2f7241751839133834506" category="cell">Nach der Installation des Bedieners geben die telegraf-ds-Pods CrashLoopBackOff ein und die POD-Protokolle zeigen „su: Authentication failure“ an.</block>
+  <block id="856e2dfd00ab497c6f91560e87be666f" category="cell">Bearbeiten Sie den Abschnitt netapp-Monitoring-Configuration in _AgentConfiguration_ und setzen Sie _dockerMetricCollectionEnabled_ auf false. Weitere Informationen finden Sie im Abschnitt des Bedieners <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>.
+
+HINWEIS: wenn Sie die Cloud Insights Federal Edition verwenden, können Benutzer mit Einschränkungen hinsichtlich der Verwendung von _su_ keine Docker-Metriken erfassen, da der Zugriff auf den Dockersockel entweder den telegraf-Container als root ausführen muss oder _su_ verwenden muss, um den telegraf-Benutzer zur Docker-Gruppe hinzuzufügen. Die Docker Metric Collection und die Verwendung von _su_ sind standardmäßig aktiviert. Um beides zu deaktivieren, entfernen Sie den Eintrag _telegraf.Docker_ in der Datei _AgentConfiguration_:
+
+...
+Spez.:
+...
+telegraf:
+    ...
+     - Name: docker
+            Run-Modus:
+              - DemonSet
+            Ersetzungen:
+              - SCHLÜSSEL: DOCKER_UNIX_SOCK_PLACEHOLDER
+                Wert: unix:///run/Docker.Sock
+    ...
+...</block>
+  <block id="9de497f607f8a73311408d3d7b337399" category="cell">Ich sehe wiederholte Fehlermeldungen wie die folgenden in meinen Telegraf-Protokollen:
+
+ E! [Agent] Fehler beim Schreiben in Outputs.http: Post <block ref="95209f65da8fece27c962b4b503ef61a" category="inline-link-rx"></block> Kontext-Deadline überschritten (Client.Timeout beim Warten auf Header überschritten)</block>
+  <block id="34e1dafcca7166ebef6820ec79ddd7cf" category="cell">Bearbeiten Sie jede Telegraf-Konfigurationsdatei (z. B. /etc/telegraf/telegraf.d/*.conf), und erhöhen Sie das Timeout für die Telegraf-Ausgabemodule.  Beispiel: Ersetzen Sie in jeder conf-Datei alle Instanzen von...
+
+[[Outputs.http]]
+...
+Timeout = „5s“
+...
+
+
+...Mit den folgenden:
+
+[[Outputs.http]]
+...
+Timeout = „10s“
+...
+
+Starten Sie Telegraf anschließend neu.</block>
+  <block id="4f05106cca363b0f3c492314ab777534" category="cell">Ich vermisse _involvedobject_ Daten für einige Event Logs.</block>
+  <block id="67ee92e19812baa7cedb346320ca0182" category="cell">Stellen Sie sicher, dass Sie die Schritte im befolgt haben <block ref="d9283cdb1b027ed2a61fa92c8dc3e314" category="inline-link-macro-rx"></block> Abschnitt oben.</block>
+  <block id="5e77ada1a807785ef1b03c3f1b96779c" category="cell">Wieso werden zwei Monitoring Operator Pods ausgeführt, einer mit dem Namen netapp-CI-Monitoring-Operator-&lt;pod&gt; und der andere mit dem Namen Monitoring-Operator-&lt;pod&gt;?</block>
+  <block id="1c1bebc9155c93bfe8263d7dd59e4d97" category="inline-xref">Entfernen Sie den alten Bediener</block>
+  <block id="3aadd91c93bca2d335851fd692f310be" category="inline-xref">Installieren Sie den neuen</block>
+  <block id="e7d6cf6485500824df0535ac307eb301" category="cell">Ab dem 12. Oktober 2023 hat Cloud Insights den Betreiber refaktorisiert, um unseren Nutzern besser zu dienen. Damit diese Änderungen vollständig übernommen werden, müssen Sie dies tun <block ref="860504374016936ed59489a365e20672" category="inline-xref-macro-rx"></block> Und <block ref="d0e6f11bd593aa32efc140a3c31c51b6" category="inline-xref-macro-rx"></block>.</block>
+  <block id="23cda888e57eaac9d48f4167127da1b8" category="cell">Meine kubernetes-Ereignisse berichteten unerwartet nicht mehr an Cloud Insights.</block>
+  <block id="0f21fa822dc46792cc163d7e77fe6c2c" category="paragraph">Rufen Sie den Namen des POD für den Event-Exporter ab:</block>
+  <block id="9df5220f9f1e94f2849e58be10655af5" category="paragraph">Es sollte entweder „netapp-CI-Event-Exporteur“ oder „Event-Exporteur“ sein.  Bearbeiten Sie anschließend den Monitoring-Agent<block ref="254deec50834604297ddd3caab0d8ce7" prefix=" " category="inline-code"></block>, Und legen Sie den Wert für LOG_FILE so fest, dass der entsprechende POD-Name für den Event-Exporter im vorherigen Schritt angezeigt wird.  Genauer gesagt sollte LOG_FILE auf "/var/log/Containers/netapp-CI-Event-exporteur.log" oder "/var/log/Containers/Event-exporteur*.log" gesetzt werden</block>
+  <block id="fe98497efedbe156ecc4b953aea77e07" category="inline-xref">Deinstallieren</block>
+  <block id="7b4d917229221f1292dd0dc7b693cccf" category="inline-xref">Neu installieren</block>
+  <block id="8878dc3c5cd3e696f38ddc994eba9593" category="paragraph">Alternativ kann man auch <block ref="eb03b2f692ebf826fa07016cc9fa15a6" category="inline-xref-macro-rx"></block> Und <block ref="2be7be71447d2c340aab35ab29970e30" category="inline-xref-macro-rx"></block> Der Agent.</block>
+  <block id="5be7a9b90aa61d46f99cd06715e40a54" category="cell">Ich sehe POD(s), die von dem NetApp-Kubernetes-Monitoring-Operator aufgrund von unzureichenden Ressourcen bereitgestellt werden.</block>
+  <block id="740cd109d583d1b28a1ebd66338906b7" category="cell">Weitere Informationen finden Sie im NetApp Kubernetes Monitoring Operator <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block> Um die CPU- und/oder Speichergrenzen je nach Bedarf zu erhöhen.</block>
+  <block id="8250aff5bf291c0fd6c60d86a94af326" category="summary">Konfiguration des Couchbase Datensammlers</block>
+  <block id="c85700224d4de4029d47e8f7419f121a" category="doc">Couchbase Data Collector</block>
+  <block id="2cc7a39d9220b0a6ca309f2f84801606" category="paragraph">Cloud Insights verwendet diese Datensammlung, um die Kennzahlen von Couchbase zu erfassen.</block>
+  <block id="80502f098bcf776c1d9ceec1ba9d636a" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie Couchbase.</block>
+  <block id="d7712cfab308e47f5bb1445e9fbcb070" category="inline-image-macro">Konfiguration von Couchbase</block>
+  <block id="64fffda04d6b10150c8c8726100e6239" category="paragraph"><block ref="64fffda04d6b10150c8c8726100e6239" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="41bdcd289793051395a360769595211c" category="inline-link-macro">Couchbase Dokumentation</block>
+  <block id="f2b2ffbd53b392b14604a492426ea7ac" category="paragraph">Informationen finden Sie unter <block ref="6a0d18e0abc795e5bc07d2ebcfb2d123" category="inline-link-macro-rx"></block>.</block>
+  <block id="c3a20296fdda109e5a387244bb33fbf6" category="cell">Couchbase Node</block>
+  <block id="e4ef366ae6be226c757b37e27fcb263c" category="cell">Namespace
+Cluster
+Couchbase Node-Hostname</block>
+  <block id="5c89437098c8abb0c4893d4e1c655f2c" category="cell">Speicherfrei
+Speicher Gesamt</block>
+  <block id="a852fa80ca1bc5024319d7b5d7d84b6d" category="cell">Couchbase Bucket</block>
+  <block id="d62c713a51121af573c0ef402ab3a282" category="cell">Namespace
+Eimer
+Cluster</block>
+  <block id="4e6556682c31b5913aa78d687bb53082" category="cell">Verwendete Daten
+Datenabruft
+Verwendete Festplatte
+Artikelanzahl
+Verwendeter Speicher
+Operationen Pro Sekunde
+Kontingent Verwendet</block>
+  <block id="760f80f90fb384d40bb66a9f0b4823fd" category="doc">Flik Data Collector</block>
+  <block id="54387b91997cebc2b9f94c02572ea7c8" category="paragraph">Cloud Insights verwendet diese Datenerfassung zum Erfassen von Kennzahlen aus Flink.</block>
+  <block id="b9edb2d8cbff35711b7021f32a2692dd" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie „Flink“.</block>
+  <block id="c1a584a645c5a21efa505b7deca25b2b" category="inline-image-macro">Flik-Konfiguration</block>
+  <block id="2462dee15f2229ca8b824af60aa5037f" category="paragraph"><block ref="2462dee15f2229ca8b824af60aa5037f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="88f3c1a97fbc332ad9adb7ff5179d0f5" category="paragraph">Eine vollständige Flink-Implementierung umfasst die folgenden Komponenten:</block>
+  <block id="5ec659a1960f3ec4bb0ed146c2fe29e8" category="paragraph">JobManager: Das Primärsystem Flik. Koordiniert eine Reihe von TaskManagers. In einer Konfiguration mit hoher Verfügbarkeit verfügt das System über mehr als einen JobManager.
+Taskmanager: Hier werden Flik-Operatoren ausgeführt.
+Das Flink Plugin basiert auf dem telegraf Jolokia Plugin. Als Voraussetzung für die Erfassung von Informationen aus allen Flik-Komponenten muss JMX auf allen Komponenten konfiguriert und über Jolokia freigelegt werden.</block>
+  <block id="56b6a44368589d2180398c17050693ba" category="paragraph">Die Konfiguration wurde gegen die Version 1.7 von Flink entwickelt.</block>
+  <block id="0fafe075396c21ab32ba5bed2f6b04cb" category="paragraph">Anweisungen unten gehen davon aus, dass die heruntergeladene JAR-Datei (jolokia-jvm-1.6.0-Agent.jar) unter dem Speicherort '/opt/flink/lib/' platziert wird.</block>
+  <block id="d6625a003ca97117da4294ef2332bec8" category="section-title">JobManager</block>
+  <block id="ac48db67fd50d761b0cc801e21516f81" category="paragraph">Um JobManager so zu konfigurieren, dass die Jolokia API freigegeben wird, können Sie die folgende Umgebungsvariable auf Ihren Knoten einrichten und dann den JobManager neu starten:</block>
+  <block id="be858081216aea340977594f6274fe6e" category="paragraph">Sie können einen anderen Port für Jolokia (8778) wählen. Wenn Sie eine interne IP haben, um Jolokia zu sperren, können Sie die „Catch all“ 0.0.0.0 durch Ihre eigene IP ersetzen. Beachten Sie, dass diese IP über das telegraf-Plugin zugänglich sein muss.</block>
+  <block id="dad4668bc0b8e79cd460bf9f0e0a9700" category="section-title">Taskmanager</block>
+  <block id="239187f7984607b4dbabb4a154679050" category="paragraph">So konfigurieren Sie TaskManager(s), um die Jolokia-API zu öffnen, können Sie die folgende Umgebungsvariable auf Ihren Knoten einrichten und dann den TaskManager neu starten:</block>
+  <block id="fed9c829468f01ad78cb54dd7cce7c1e" category="cell">Flik Task Manager</block>
+  <block id="4a6c9bd53c6d064a543027eaa563c583" category="cell">Node-Name
+Task-Manager-ID
+Knoten-IP</block>
+  <block id="4fd8a1981a5b46d96897012d9e9b9168" category="cell">Netzwerkspeichersegmente Verfügbar
+Netzwerkspeichersegmente Insgesamt
+Garbage Collection – Anzahl der PS MarkSweep-Daten
+Garbage Collection PS MarkSweep Time
+Anzahl der PS-Rache für die Speicherbereinigung
+Garbage Collection – PS-rächtselige Zeit
+Heap-Speicher Festgeschrieben
+Heap Memory Init
+Max. Heap-Speicher
+Verwendeter Heap-Speicher
+Thread Count Daemon
+Thread-Anzahl Spitze
+Thread-Anzahl
+Thread-Anzahl Insgesamt Gestartet</block>
+  <block id="e5bcf79e43b1cb79fa38d8773f5c9876" category="cell">Druckauftrag Einflken</block>
+  <block id="846a72770c317ead4062aedae5f893c8" category="cell">Cluster
+Namespace
+Server
+Job-ID</block>
+  <block id="6a2c2989b258eae68f76754fa5d41c6f" category="cell">Node-Name
+Job-Name
+Knoten-IP
+Letzter Externer Checkpoint-Pfad
+Neustartzeit</block>
+  <block id="5cada8907c93eaad28b0ddd4ec957602" category="cell">Ausfallzeit
+Vollständige Neustarts
+Letzte Checkpoint-Ausrichtung Gepuffert
+Dauer Des Letzten Kontrollpunkts
+Größe Des Letzten Kontrollpunkts
+Anzahl der abgeschlossenen Kontrollpunkte
+Anzahl der fehlgeschlagenen Kontrollpunkte
+Anzahl der laufenden Kontrollpunkte
+Anzahl der Kontrollpunkte
+Verfügbarkeit</block>
+  <block id="3d7a81a763fb0e456c06be07d13566ea" category="cell">Flik Job Manager</block>
+  <block id="97f03473b1053f9ddc2ebac96e570fbf" category="cell">Garbage Collection – Anzahl der PS MarkSweep-Daten
+Garbage Collection PS MarkSweep Time
+Anzahl der PS-Rache für die Speicherbereinigung
+Garbage Collection – PS-rächtselige Zeit
+Heap-Speicher Festgeschrieben
+Heap Memory Init
+Max. Heap-Speicher
+Verwendeter Heap-Speicher
+Anzahl Registrierter Task Manager
+Anzahl Der Ausgeführten Jobs
+Verfügbare Aufgabenplätze
+Aufgabenplätze Insgesamt
+Thread Count Daemon
+Thread-Anzahl Spitze
+Thread-Anzahl
+Thread-Anzahl Insgesamt Gestartet</block>
+  <block id="4c6db84f5a8ecb130c48fbe482bd0407" category="cell">Flik-Aufgabe</block>
+  <block id="d14c367e94317a3e6e27568781bb8c3c" category="cell">Cluster
+Namespace
+Job-ID
+Task-ID</block>
+  <block id="5843feb1d224110026d8762d7faffc66" category="cell">Server
+Node-Name
+Job-Name
+Index Unteraufgabe
+Versuch-ID der Aufgabe
+Nummer Des Versuchs Der Aufgabe
+Aufgabenname
+Task-Manager-ID
+Knoten-IP
+Wasserzeichen Für Den Aktuellen Eingang</block>
+  <block id="fd3f7cc527e3ec659d722c45c30e0117" category="cell">Puffer In Poolnutzung
+Puffer In Warteschlangenlänge
+Puffert Die Poolnutzung
+Puffers Out Queue Length
+Anzahl Puffer In Lokal
+Anzahl Puffer In Lokaler Anzahl Pro Sekunde
+Anzahl Puffer in lokaler Rate pro Sekunde
+Anzahl Puffer In Remote
+Anzahl Puffer In Remote Pro Sekunde Anzahl
+Anzahl Puffer In Remote-Rate Pro Sekunde
+Anzahl Puffer Aus
+Anzahl Der Puffer Pro Sekunde
+Anzahl Der Puffer Pro Sekunde
+Anzahl Der Bytes Im Lokalen Bereich
+Anzahl Der Bytes In Lokaler Anzahl Pro Sekunde
+Anzahl Bytes In Lokaler Rate Pro Sekunde
+Anzahl Bytes In Remote
+Anzahl Der Bytes In Remote Pro Sekunde
+Anzahl Der Bytes Im Remote-Wert Pro Sekunde
+Anzahl Bytes Heraus
+Anzahl Der Bytes Pro Sekunde
+Anzahl Bytes Pro Sekunde Rate
+Anzahl Datensätze In
+Anzahl Datensätze Pro Sekunde Anzahl
+Anzahl Datensätze Pro Sekunde Rate
+Anzahl Datensätze Ausgezogen
+Anzahl Datensätze Pro Sekunde Anzahl
+Anzahl Datensätze Pro Sekunde Rate</block>
+  <block id="612f6074a0c92f40ddbce389e1bcf2fc" category="cell">Flik Task Operator</block>
+  <block id="efa07c862dd433cfd3278ef665cd62bf" category="cell">Cluster
+Namespace
+Job-ID
+Benutzer-ID
+Task-ID</block>
+  <block id="2aa96940f26ed9cf171b1aba30346ffa" category="cell">Server
+Node-Name
+Job-Name
+Name Des Mitarbeiters
+Index Unteraufgabe
+Versuch-ID der Aufgabe
+Nummer Des Versuchs Der Aufgabe
+Aufgabenname
+Task-Manager-ID
+Knoten-IP</block>
+  <block id="36492bf47ea19332301e1b80a8878538" category="cell">Wasserzeichen Für Den Aktuellen Eingang
+Wasserzeichen Für Stromausgang
+Anzahl Datensätze In
+Anzahl Datensätze Pro Sekunde Anzahl
+Anzahl Datensätze Pro Sekunde Rate
+Anzahl Datensätze Ausgezogen
+Anzahl Datensätze Pro Sekunde Anzahl
+Anzahl Datensätze Pro Sekunde Rate
+Anzahl Der Abgeworbenen Späten Datensätze
+Zugewiesene Partitionen
+Verbrauchte Byte-Rate
+Durchschn. Commit Latency
+Max. Festschreiben Der Latenz
+Commit-Rate
+Commits Fehlgeschlagen
+Commits Erfolgreich
+Verbindungsabschlussrate
+Anzahl Der Verbindungen
+Verbindungserstellungs-Rate
+Zählen
+Durchschn. Abruflatenz
+Max. Abruflatenz
+Abrufrate
+Abrufgröße Durchschn
+Abrufgröße Max
+Durchlaufzeit Abrufen Durchschnitt
+Holen Throttle Time Max
+Herzfrequenz
+Eingehende Byte-Rate
+I/O-Verhältnis
+Durchschn. I/O-Zeit (ns)
+I/O-Wartezeit
+Durchschn. I/O-Wartezeit (ns)
+Join Rate
+Join Time Avg
+Letzter Heartbeat Vor
+Netzwerk-I/O-Rate
+Ausgehende Byte-Rate
+Verbrauchte Datensätze
+Max. Aufzeichnungsverzögerung
+Datensätze pro Anforderung durchschn
+Anforderungsrate
+Durchschn. Anforderungsgröße
+Anforderungsgröße Max
+Ansprechrate
+Wählen Sie Rate
+Synchronisierungsrate
+Durchschn. Synchronisierungszeit
+Heartbeat Response Time Max
+Join Time Max
+Synchronisierungszeit Max</block>
+  <block id="4c35289465431b7541002dd365bad198" category="summary">Konfiguration des MySQL-Datensammlers</block>
+  <block id="d1f43c925400e37adcd15285deaac430" category="doc">MySQL Data Collector</block>
+  <block id="5d1d986fa74eaeda0a328a24da34dc8f" category="paragraph">Cloud Insights verwendet diese Datensammlung, um Kennzahlen von MySQL zu sammeln.</block>
+  <block id="53a22ff7bf05343afd43baa85e5c7883" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie MySQL.</block>
+  <block id="cfe3b09f39613d05db4ca7532b374386" category="inline-image-macro">MySQL-Konfiguration</block>
+  <block id="acd86359b435b0d32d73a66fa03be887" category="paragraph"><block ref="acd86359b435b0d32d73a66fa03be887" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0281cf739776a9c6b7c6cb01c1accf40" category="inline-link-macro">MySQL-Dokumentation</block>
+  <block id="6292388c6e8693ea6c73e72a49ab4655" category="paragraph">Informationen finden Sie unter <block ref="4319c63c14adb8b966feb7239cf0a2bb" category="inline-link-macro-rx"></block>.</block>
+  <block id="7b13a5e1284d961b045ce256aaf8121b" category="cell">Namespace
+MySQL Server</block>
+  <block id="aa0de5a29cbb206ae9a2819913271064" category="cell">Abgebrochene Clients (pro Sekunde)
+Abgebrochene Verbindungen (pro Sekunde)
+RX Bytes (pro Sekunde)
+TX Byte (pro Sekunde)
+Befehlsadministrator (pro Sekunde)
+Befehle Alter Ereignis
+Befehle Alter Funktion
+Commands Alter Instanz
+Alter-Verfahren Für Befehle
+Commands Alter Server
+Befehle Alter Tabelle
+Befehle Alter Tablespace
+Befehle Alter Benutzer
+Befehle Analysieren
+Befehle Dem Keycache Zuweisen
+Befehle Beginnen
+Kommandos Binlog
+Vorgehensweise Beim Aufruf Von Befehlen
+Befehle Ändern der Datenbank
+Befehle Master Ändern
+Befehle Repl Filter Ändern
+Befehlsprüfung
+Befehlschecksumme
+Befehlscommit
+Befehle DB erstellen
+Befehle Ereignis Erstellen
+Befehle Create-Funktion
+Befehle Index Erstellen
+Befehle Erstellen Verfahren
+Befehle Create Server
+Befehle Tabelle Erstellen
+Befehle Trigger Erstellen
+Befehle UDF erstellen
+Befehle Benutzer Erstellen
+Befehle Ansicht Erstellen
+Befehle Dealloc SQL
+Verbindungsfehler Akzeptieren
+Tmp Disk-Tabellen Wurden Erstellt
+Verzögerte Fehler
+Befehle Löschen
+Handler-Commit
+Innodb Puffer-Pool Bytes Daten
+Schlüsselblöcke Nicht Durchgespült
+Wichtige Leseanforderungen
+Schlüsselschreibanforderungen
+Schlüsselschreibvorgänge
+Max. Ausführungszeit Überschritten
+Max. Verwendete Verbindungen
+Öffnen Sie Dateien
+Leistungsschema-Konten Verloren
+Anzahl Der Vorbereiteten Stmtr
+Qcache Free Blocks
+Abfragen
+Fragen
+Wählen Sie Vollständiger Beitritt
+Wählen Sie Full Range Join
+Wählen Sie Bereichsprüfung
+Wählen Sie Scannen
+Tisch Wird Sofort Gesperrt</block>
+  <block id="f675ac1ea34754aba3279d7f93746721" category="summary">Kibana Data Collector Konfiguration</block>
+  <block id="d6678652208f4e26109690d4ab6151e5" category="doc">Kibana Data Collector</block>
+  <block id="75ac4fff844290c8b306aced90a6ad0d" category="paragraph">Cloud Insights verwendet diesen Datensammler, um Kennzahlen von Kibana zu sammeln.</block>
+  <block id="710ec696cccefe4c3faa1d7ebf8fca87" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie Kibana.</block>
+  <block id="ed9f8d76b0ccacc02aa67a13d6c1e9a8" category="inline-image-macro">Kibana-Konfiguration</block>
+  <block id="18785da9c6be5397773e5c495dcc23f4" category="paragraph"><block ref="18785da9c6be5397773e5c495dcc23f4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3c84e442bbf213b7d0e5047d09d7aef4" category="inline-link-macro">Kibana Dokumentation</block>
+  <block id="a8bdbad6177ca64d397d863b68fe3fe9" category="paragraph">Informationen finden Sie unter <block ref="07c833901243190735d960ff17f32792" category="inline-link-macro-rx"></block>.</block>
+  <block id="5228fdd6f613af63fc73ee7c02ef8fb5" category="cell">Kibana</block>
+  <block id="22591bcc5e32570096ba46abc2143b90" category="cell">Namespace
+Adresse</block>
+  <block id="a78ce0ccaaa47b18906f1de5d019d817" category="cell">Knoten-IP
+Node-Name
+Version
+Status</block>
+  <block id="159dbe63e44af239ee60fabff2752f0e" category="cell">Gleichzeitige Verbindungen
+Heap Max
+Heap Verwendet
+Anfragen pro Sekunde
+Durchschnitt Der Reaktionszeit
+Ansprechzeit Max
+Verfügbarkeit</block>
+  <block id="3e647ef93d862cebdd7fa80573f126aa" category="summary">MongoDB Data Collector-Konfiguration</block>
+  <block id="53e70a8dd3a918a24f705909a168c35c" category="doc">MongoDB Data Collector</block>
+  <block id="5365ec2fc489501ed613b8ad5b954e9c" category="paragraph">Cloud Insights verwendet diesen Datensammler, um Metriken von MongoDB zu erfassen.</block>
+  <block id="c71f6654a45927e285ab22a697438b43" category="list-text">Klicken Sie unter *Observability &gt; Collectors* auf *+Data Collector*. Wählen Sie MongoDB.</block>
+  <block id="06dc92e8ae707ce9c6046e102df5a214" category="inline-image-macro">MongoDB Konfiguration</block>
+  <block id="0f54e55841a24b143c2104aab4935f7b" category="paragraph"><block ref="0f54e55841a24b143c2104aab4935f7b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="38d4b2dc2b4a57b1ac9fd3ffb91a1e4e" category="inline-link-macro">MongoDB Dokumentation</block>
+  <block id="6d44425175e1033dd7e44ad93e6c1716" category="paragraph">Informationen finden Sie unter <block ref="03dc511ffabb03f2ed77b5dbe821f120" category="inline-link-macro-rx"></block>.</block>
+  <block id="206e3718af092fd1d12f80cae771ccac" category="cell">MongoDB</block>
+  <block id="7c33c5b9bc17f5cdef2a6e9af34ec2ba" category="cell">Namespace
+Hostname</block>
+  <block id="03a2f43be2bb9fe29ee41afceec0ffcd" category="cell">MongoDB Datenbank</block>
+  <block id="53de6191c5a3773a175198e9140b6c2b" category="cell">Namespace
+Hostname
+Datenbankname</block>
+  <block id="d5712dd84650ff1cb4915da1c121ffbb" category="paragraph">Informationen können im gefunden werden <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> Seite.</block>
 </blocks>
