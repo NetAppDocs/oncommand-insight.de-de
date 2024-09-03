@@ -55,7 +55,7 @@ Ja, OCI umfasst eine Methode des Metadaten-Tagging namens Annotationen. Geschäf
 
 == Funktioniert OCI mit Work Flow Automator (WFA)?
 
-Die Integrationsfunktionen von OCI mit CMDB-, Abrechnungs- und Orchestrierungstechnologien von Drittanbietern sind ein wichtiger Wert für seinen Erfolg, und WFA ist keine Ausnahme. NetApp Professional Services haben verschiedene erfolgreiche Integrationen mit WFA Workflows und OCI durchgeführt. Im NetApp Automation Storefront steht ein WFA Connector für OCI zum Download zur Verfügung.
+Die Integrationsfunktionen von OCI mit CMDB-, Abrechnungs- und Orchestrierungstechnologien von Drittanbietern sind ein wichtiger Wert für seinen Erfolg, und WFA ist keine Ausnahme. NetApp Professional Services haben verschiedene erfolgreiche Integrationen mit WFA Workflows und OCI durchgeführt.
 
 
 
@@ -71,4 +71,4 @@ Data Warehouse speichert historische Daten auf der Grundlage der Daten und Granu
 
 == Gibt es Berichte zur Performance-Planung?
 
-Ja, es gibt mehrere Berichte für OCI und viele andere in unserem Katalog der Professional Services basierend auf einem Anwendungsfall. Das Data Warehouse-Modul enthält außerdem eine Reihe von Cognos-Tools zur Berichterstellung, mit denen Benutzer ihre eigenen Berichte erstellen können. Zudem gibt es eine Ergänzung von Community-generierten Berichtsvorlagen und anderen Downloads, die im NetApp Automation Storefront zur Verfügung stehen.
+Ja, es gibt mehrere Berichte für OCI und viele andere in unserem Katalog der Professional Services basierend auf einem Anwendungsfall. Das Data Warehouse-Modul enthält außerdem eine Reihe von Cognos-Tools zur Berichterstellung, mit denen Benutzer ihre eigenen Berichte erstellen können.

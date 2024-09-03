@@ -75,9 +75,9 @@ OnCommand Unified Manager arbeitet auf der Storage-Array-Ebene „`device Manage
 
 
 
-== Was ist die sekundäre OnCommand Insight-ETL, die im Automation Storefront erwähnt wird?
+== Was ist der sekundäre OnCommand Insight ETL?
 
-Die in einigen Downloads von OnCommand Insight Automation Storefront Reports erwähnte Anforderung der „sekundären ETL“ bezieht sich auf eine entwickelte Implementierung von Professional Services, die zum Aufrufen zusätzlicher ETL (Extract, Transform and Load) der erfassten Daten für die Einfüllung in das OnCommand Insight Data Warehouse verwendet wird.
+Der Begriff „sekundäre ETL“ bezieht sich auf eine entwickelte Implementierung von Professional Services, die zum Aufrufen zusätzlicher ETL (Extract, Transform and Load) der erfassten Daten zur Einfüllung in das OnCommand Insight Data Warehouse verwendet wird.
 
 Der sekundäre ETL-Prozess dient primär dem Prefetch von „Batch“-Daten, sodass komplexere Berichte schneller generiert oder für die tägliche Ausführung geplant werden können.
 
