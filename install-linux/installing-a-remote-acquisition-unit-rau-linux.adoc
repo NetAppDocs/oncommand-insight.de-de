@@ -55,3 +55,24 @@ In Umgebungen, in denen Network Address Translation oder Port Address Translatio
 Nachdem Sie alle Eingabeaufforderungen beantwortet haben, beginnt die Installation und sollte je nach installierter Anwendung ca. 10 Minuten dauern.
 
 
+
+Wenn Ihre Daten zu erfassen beginnen, sind Sie alle eingestellt; Sie müssen den Server und die rau wie unten angegeben synchronisieren.
+
+
+
+== Server und rau synchronisieren
+
+
+IMPORTANT: Wenn die Datenerfassung nach der Installation der Remote-Erfassungseinheit nicht beginnt, synchronisieren Sie die rau mit dem OnCommand Insight-Server. Führen Sie hierzu folgende Schritte aus:
+
+. Starten Sie auf dem OnCommand Insight-Serversystem das Tool *SecurityAdmin* im interaktiven Modus
++
+ securityadmin -i
+. Ändern Sie das Passwort für den Benutzer _Acquisition_ für den Insight Server in ein Passwort Ihrer Wahl. *Bitte beachten Sie dieses Passwort* wie Sie es unten benötigen.
+. Starten Sie den Server/LAU neu.
+. Starten Sie auf dem rau-System (Remote Acquisition Unit) das Tool *SecurityAdmin* im interaktiven Modus. Sie benötigen das Passwort, das Sie in Schritt 2 oben angegeben haben.
++
+ securityadmin -i
+. Ändern Sie das Passwort für den Benutzer _Acquisition_ auf das in Schritt 2 verwendete Passwort.
+. Starten Sie den RAU neu.
+

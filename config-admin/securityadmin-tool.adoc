@@ -1,17 +1,17 @@
 ---
-permalink: config-admin/security-management.html 
+permalink: config-admin/securityadmin-tool.html 
 sidebar: sidebar 
 keywords: SecurityAdmin, security, password, keystore, truststore, trustore, 
 summary: Das SecurityAdmin-Tool von OnCommand Insight enthält Funktionen, mit denen Insight-Umgebungen mit erhöhter Sicherheit arbeiten können, darunter Verschlüsselung, Passwort-Hashing und die Möglichkeit, interne Benutzerpasswörter und Schlüsselpaare zu ändern, die Kennwörter verschlüsseln und entschlüsseln. 
 ---
-= Insight Sicherheit
+= Sicherheitstool
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-OnCommand Insight bietet Funktionen, mit denen Insight Umgebungen sicherer betrieben werden können. Diese Funktionen umfassen Verschlüsselung, Passwort-Hashing und die Möglichkeit, interne Benutzerpasswörter und Schlüsselpaare zu ändern, die Kennwörter verschlüsseln und entschlüsseln. Sie können diese Funktionen auf allen Servern in der Insight-Umgebung mit dem SecurityAdmin-Tool verwalten.
+OnCommand Insight bietet Funktionen, mit denen Insight Umgebungen sicherer betrieben werden können. Diese Funktionen umfassen Verschlüsselung, Passwort-Hashing und die Möglichkeit, interne Benutzerpasswörter und Schlüsselpaare zu ändern, die Kennwörter verschlüsseln und entschlüsseln. Sie können diese Funktionen auf allen Servern in der Insight-Umgebung mit dem *SecurityAdmin Tool* verwalten.
 
 
 
@@ -105,6 +105,8 @@ Erstellen Sie eine ZIP-Datei mit dem Tresor. Der relative Pfad zu den Vault-Date
 * acq/conf/Vault/*
 
 
+Beachten Sie, dass es dringend empfohlen wird, den Tresor zu sichern, wenn Sie eine OnCommand Insight-Datenbank sichern.
+
 
 
  a| 
@@ -124,9 +126,8 @@ Dies kann verwendet werden, wenn der Tresor und die Installation nicht konsisten
 
 
  a| 
-Change-Trust-Store-password
  a| 
-Ändern Sie das für einen Vertrauensspeicher verwendete Passwort, und speichern Sie das neue Kennwort im Tresor. Das aktuelle Kennwort des Vertrauenshauses muss „bekannt“ sein.
+Change-Trust-Store-password Ändern Sie das für einen Trust-Store verwendete Passwort und speichern Sie das neue Passwort im Tresor. Das aktuelle Kennwort des Vertrauenshauses muss „bekannt“ sein.
 
 
 
@@ -203,29 +204,6 @@ Passwort ändern
 Schlüssel ersetzen
  a| 
 Erstellen Sie einen neuen leeren Tresor (der andere Schlüssel als der vorhandene Tresor hat). Kopieren Sie dann die Einträge aus dem aktuellen Tresor in den neuen Tresor. Liest dann jeden verschlüsselten Wert aus der Instanz, entschlüsselt ihn mit dem Verschlüsselungsdienst des aktuellen Tresors, verschlüsselt ihn mit dem Verschlüsselungsdienst des wiederhergestellten Tresors und speichert den neu verschlüsselten Wert.
-
-|===
-
-
-=== Ausgeblendete Befehle
-
-Das SA-Tool bietet die folgenden Befehle, die keine Authentifizierung erfordern, aber koordinierte Änderungen an der Installation vornehmen.
-
-[cols="25a,75a"]
-|===
-
-
- a| 
-Aktualisierung der Listenschlüssel (Server)
- a| 
-Wenn sich der Benutzer nicht authentifiziert hat, authentifizieren Sie sich mit dem _internen Konto und Passwort im aktuellen Tresor. Ersetzen Sie dann den aktuellen Tresor durch den Tresor in der Sicherungsdatei, und führen Sie die koordinierten Aktionen durch.
-
-
-
- a| 
-Upgrade (Anschaffung)
- a| 
-Ersetzen Sie den aktuellen Tresor durch den Tresor in der Sicherungsdatei, und führen Sie die koordinierten Aktionen durch.
 
 |===
 

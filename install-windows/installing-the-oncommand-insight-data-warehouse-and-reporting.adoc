@@ -47,7 +47,7 @@ Beachten Sie Folgendes, bevor Sie die Installation oder Aktualisierung durchfüh
 
 []
 ====
-Der DB2-Benutzername sowie der Windows-Anmeldename haben folgende Einschränkungen: * Gültige Zeichen sind: 'A' bis 'Z'; 'A' bis 'z'; '0' bis '9'; '#'; '@'; '_'; '!'; ' '('; ')'; '{'; '}'; '-'; und '.'. * Bei Verwendung der Sonderzeichen '!'; ' '('; ')'; '{'; '}'; '-'; und '.' Sie müssen für den Benutzernamen alle Großbuchstaben verwenden. * Das erste Zeichen in der Zeichenfolge muss ein alphabetisches Zeichen, @, # oder € sein; es kann keine Zahl sein oder die Buchstabensequenzen _SYS_, _DBM_ oder _IBM_ * Es darf 128 Byte lang sein. * Es kann nicht BENUTZER sein, ADMINISTRATOREN, GÄSTE, ÖFFENTLICH, LOKAL oder ein SQL-reserviertes Wort.
+Der DB2-Benutzername sowie der Windows-Anmeldename haben folgende Einschränkungen: * Gültige Zeichen sind: 'A' bis 'Z'; 'A' bis 'z'; '0' bis '9'; '@'; '_'; '!'; '('; ')'; '{'; '}'; '-'; und '.'. * Bei Verwendung der Sonderzeichen '!'; ' '('; ')'; '{'; '}'; '-'; und '.' Sie müssen für den Benutzernamen alle Großbuchstaben verwenden. * Das erste Zeichen in der Zeichenfolge muss ein alphabetisches Zeichen, @, # oder € sein; es kann keine Zahl sein oder die Buchstabensequenzen _SYS_, _DBM_ oder _IBM_ * Es darf 128 Byte lang sein. * Es kann nicht BENUTZER sein, ADMINISTRATOREN, GÄSTE, ÖFFENTLICH, LOKAL oder ein SQL-reserviertes Wort.
 
 ====
 * Der DB2-Benutzer kann nicht mit dem Benutzer identisch sein, der die Installation durchführt.
@@ -76,4 +76,24 @@ Bei OnCommand Insight 7.3.10 und höher müssen Sie das Skript für die ordnungs
 +
 Data Warehouse mit Reporting Installation kann bis zu einer Stunde dauern.
 
+
+
+
+
+== Server und DWH synchronisieren
+
+
+IMPORTANT: Nach der Installation des Data Warehouse müssen Sie das Data Warehouse mit dem OnCommand Insight Server synchronisieren. Führen Sie hierzu folgende Schritte aus:
+
+. Starten Sie auf dem OnCommand Insight-Serversystem das Tool *SecurityAdmin* im interaktiven Modus
++
+ securityadmin -i
+. Ändern Sie das Passwort für die Benutzer _inventar_ und _dwh_internal_ in Passwörter Ihrer Wahl. *Beachten Sie diese Passwörter*, da Sie sie unten benötigen.
+. Starten Sie den DWH-Dienst neu.
+. Starten Sie bei *each Connector* das Tool *SecurityAdmin* im interaktiven Modus. Sie benötigen die Passwörter, die Sie in Schritt 2 oben angegeben haben.
++
+ securityadmin -i
+. Ändern Sie die Passwörter für die Benutzer _inventar_ und _dwh_internal_ in die in Schritt 2 verwendeten Passwörter.
+. Starten Sie die Dienste auf den Connectors neu.
+. Fügen Sie die Connectors zu DWH hinzu, indem Sie die Passwörter für _Inventory_ und _dwh_Internal_ Benutzer aus Schritt 2 verwenden
 

@@ -21,29 +21,33 @@ Inline-Upgrade wird vom Data Warehouse (DWH) nicht unterstützt. Führen Sie die
 
 [NOTE]
 ====
-Beim Aktualisieren von DWH wird der Ordner, der das Tresorbackup des _securityadmin_-Tools enthält, gelöscht. Es wird dringend empfohlen, den Tresor vor der Aktualisierung der DWH zu sichern. Als Referenz gelten die Standardordner für Tresorordner wie folgt:
+*Sie müssen den Tresor* sichern, bevor Sie das DWH-Upgrade durchführen.
 
-* Vault-Ordner (verwendete Vaults):``%SANSCREEN_HOME%\wildfly\standalone\configuration\vault``
-* Vault-Backups: `%SANSCREEN_HOME%\backup\vault`
-
-
-Siehe http://ie-docs.rtp.openeng.netapp.com/oci-73_ram/topic/com.netapp.doc.oci-acg/GUID-E3351676-2088-4767-AAB5-CB1D8476291C.html?resultof=%22%76%61%75%6c%74%22%20["Verwaltung der Sicherheit im Data Warehouse"] Finden Sie weitere Informationen.
+Weitere Informationen finden Sie in den link:../config-admin\/security-management.html["Sicherheitstool"] Anweisungen.
 
 ====
 
 
 == Schritte
 
+Beim Aktualisieren des Data Warehouse müssen Sie die folgenden Aktionen ausführen:
+
+. Stellen Sie nach der Installation von DWH 7.3.16 den Tresor und die Datenbank in der folgenden Reihenfolge wieder her:
++
+.. Vault
+.. Datenbank
+
+
 . Melden Sie sich beim DWH-Server mit einem Konto an, das über lokale Windows-Administratorberechtigungen verfügt.
 . Sichern Sie die DWH-DB und Berichte über die DWH-Portalschnittstelle.
-. Sichern Sie die Sicherheitskonfiguration, wenn der Server eine nicht standardmäßige Sicherheitskonfiguration verwendet.
+. Sichern Sie den Vault. Siehe link:../config-admin/security-management.html["Sicherheitsadministration"]Dokumentation.
 . Deinstallieren Sie die DWH-Software vom Server.
 . Starten Sie den Server neu, um Komponenten aus dem Speicher zu entfernen.
 . Installieren Sie die neue Version von DWH auf dem Server.
 +
 Die Installation dauert etwa 2 Stunden. Es empfiehlt sich, alle Standardeinstellungen ausgewählt zu lassen.
 
-. Stellen Sie die nicht standardmäßige Sicherheitskonfiguration auf dem DWH-Server wieder her.
+. Stellen Sie den Tresor auf dem DWH-Server wieder her.
 . Stellen Sie die DWH-Datenbank auf dem Server wieder her.
 
 

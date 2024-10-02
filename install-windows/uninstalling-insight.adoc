@@ -13,6 +13,13 @@ summary: Sie können den OnCommand Insight-Server bei Bedarf deinstallieren.
 [role="lead"]
 Sie können den OnCommand Insight-Server bei Bedarf deinstallieren.
 
+[NOTE]
+====
+*Es wird dringend empfohlen, den Tresor* vor der Deinstallation von OnCommand Insight zu sichern.
+
+Weitere Informationen finden Sie in den link:../config-admin\/security-management.html["Sicherheitstool"] Anweisungen.
+
+====
 
 
 == Bevor Sie beginnen

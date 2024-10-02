@@ -12,3 +12,11 @@ summary: Sie müssen die alten Versionen von Data Warehouse und Remote Acquisiti
 
 [role="lead"]
 Sie müssen die alten Versionen von Data Warehouse und Remote Acquisition deinstallieren, um die neuen Versionen zu installieren. Sie sollten dies tun, bevor Sie versuchen, eine dieser Komponenten zu aktualisieren. Die Software auf dem Insight-Server wird während des in-Place-Upgrades deinstalliert.
+
+[NOTE]
+====
+*Es wird dringend empfohlen, den Tresor* vor der Deinstallation von OnCommand Insight zu sichern. *Sie müssen den Tresor* sichern, wenn Sie OnCommand Insight aktualisieren.
+
+Weitere Informationen finden Sie in den link:../config-admin\/security-management.html["Sicherheitstool"] Anweisungen.
+
+====

@@ -31,7 +31,7 @@ Die Zertifizierungswarnung hat keinen Einfluss auf die Benutzerfreundlichkeit de
 
 . Listen Sie den Inhalt des Keystore auf: `C:\Program Files\SANscreen\java64\bin>keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
 +
-Wenn Sie zur Eingabe eines Passworts aufgefordert werden, geben Sie ein `changeit`.
+Weitere Informationen zum Einstellen oder Ändern des Kennworts für den Keystore finden link:../config-admin/securityadmin-tool.html["Sicherheitsadministration"]Sie in der Dokumentation.
 
 +
 Es sollte mindestens ein Zertifikat im Schlüsselspeicher vorhanden sein, `ssl certificate`.

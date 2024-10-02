@@ -41,6 +41,7 @@ Der Erfassungsport ist standardmäßig auf 443 eingestellt, wurde jedoch möglic
 ** *OnCommand Insight* *Servername oder -Adresse* - Hostname oder IP-Adresse, um den OnCommand Insight-Server zu identifizieren. Die rau verwendet diesen Namen/diese IP, um eine Kommunikationsverbindung mit dem Server zu öffnen. Wenn Sie einen Hostnamen angeben, stellen Sie sicher, dass dieser über DNS aufgelöst werden kann.
 ** *Name der Akquisitionseinheit* - eindeutiger Name, der die rau identifiziert.
 ** *OnCommand Insight Secured Remote Acquisition Port (HTTPS)* - Port, der von Remote Acquisition Units verwendet wird, um Umgebungsänderungsinformationen an den OnCommand Insight-Server zu senden. Diese Einstellung sollte mit dem bei der Installation des OnCommand Insight-Servers eingegebenen Wert übereinstimmen und auf allen raus gleich sein.
+** Geben Sie das Benutzerpasswort _Acquisition_ ein.
 
 
 . Überprüfen Sie Ihre Auswahl. Klicken Sie auf *Zurück*, um zurückzugehen und Änderungen vorzunehmen. Klicken Sie Auf *Weiter*.
@@ -55,3 +56,24 @@ Warten Sie, bis die Installation abgeschlossen ist. Dies dauert etwa 5 bis 10 Mi
 == Nachdem Sie fertig sind
 
 Nach Abschluss der Installation wird ein letztes Fenster angezeigt. Klicken Sie auf das Feld *Remote Acquisition Service starten*, um die rau zu starten, und klicken Sie auf *Finish*, um diesen Vorgang zu beenden.
+
+Wenn Ihre Daten zu erfassen beginnen, sind Sie alle eingestellt; Sie müssen den Server und die rau wie unten angegeben synchronisieren.
+
+
+
+== Server und rau synchronisieren
+
+
+IMPORTANT: Wenn die Datenerfassung nach der Installation der Remote-Erfassungseinheit nicht beginnt, synchronisieren Sie die rau mit dem OnCommand Insight-Server. Führen Sie hierzu folgende Schritte aus:
+
+. Starten Sie auf dem OnCommand Insight-Serversystem das Tool *SecurityAdmin* im interaktiven Modus
++
+ securityadmin -i
+. Ändern Sie das Passwort für den Benutzer _Acquisition_ für den Insight Server in ein Passwort Ihrer Wahl. *Bitte beachten Sie dieses Passwort* wie Sie es unten benötigen.
+. Starten Sie den Server/LAU neu.
+. Starten Sie auf dem rau-System (Remote Acquisition Unit) das Tool *SecurityAdmin* im interaktiven Modus. Sie benötigen das Passwort, das Sie in Schritt 2 oben angegeben haben.
++
+ securityadmin -i
+. Ändern Sie das Passwort für den Benutzer _Acquisition_ auf das in Schritt 2 verwendete Passwort.
+. Starten Sie den RAU neu.
+

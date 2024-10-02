@@ -13,4 +13,11 @@ summary: Bevor Sie ein Upgrade durchführen, sollten Sie sowohl die Data Warehou
 [role="lead"]
 Bevor Sie ein Upgrade durchführen, sollten Sie sowohl die Data Warehouse- als auch die OnCommand Insight-Datenbanken sichern. Für die Aktualisierung ist ein Backup der Data Warehouse-Datenbank erforderlich, damit Sie die Datenbank später im Upgrade wiederherstellen können. Mit dem in-Place-Upgrade für Insight wird die Datenbank gesichert. Vor dem Upgrade sollten Sie jedoch als Best Practice eine Sicherung der Datenbank durchführen.
 
+[NOTE]
+====
+*Sie müssen den Tresor* sichern, bevor Sie OnCommand Insight aktualisieren.
+
+Weitere Informationen finden Sie in den link:../config-admin\/security-management.html["Sicherheitstool"] Anweisungen.
+
+====
 Um falsche Berichte zu vermeiden, sollten Sie die Data Warehouse-Datenbank vor dem Backup der Insight-Datenbank sichern. Wenn Sie über eine Testumgebung verfügen, sollten Sie außerdem sicherstellen, dass Sie das Backup wiederherstellen können, bevor Sie mit dem Upgrade fortfahren.

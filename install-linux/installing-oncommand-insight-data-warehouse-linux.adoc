@@ -45,6 +45,14 @@ Data Warehouse verfügt über Cognos-Berichtsfunktionen. Wenn Sie Insight auf ei
 +
 `sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh`
 
++
+Wenn Sie Insight Server oder Data Warehouse auf CentOS 9 Stream, Red hat Enterprise Linux 9.4 oder Oracle Linux 9.4 installieren, müssen Sie zuerst in das Verzeichnis wechseln, das die Installer-Datei enthält, und dann den Befehl install mit der Befehlszeilenoption "--install-mysql-dependencies" ausführen:
+
++
+....
+cd /tmp/oci-7.3.16.1.297-linux-x86_64
+sudo ./oci-install.sh --install-mysql-dependencies
+....
 . Lesen Sie die Lizenzvereinbarung, akzeptieren Sie sie und befolgen Sie die Anweisungen.
 
 
@@ -53,3 +61,23 @@ Data Warehouse verfügt über Cognos-Berichtsfunktionen. Wenn Sie Insight auf ei
 == Ergebnisse
 
 Nachdem Sie alle Eingabeaufforderungen beantwortet haben, beginnt die Installation und sollte je nach installierter Anwendung ca. 10 Minuten dauern.
+
+
+
+== Server und DWH synchronisieren
+
+
+IMPORTANT: Nach der Installation des Data Warehouse müssen Sie das Data Warehouse mit dem OnCommand Insight Server synchronisieren. Führen Sie hierzu folgende Schritte aus:
+
+. Starten Sie auf dem OnCommand Insight-Serversystem das Tool *SecurityAdmin* im interaktiven Modus
++
+ securityadmin -i
+. Ändern Sie das Passwort für die Benutzer _inventar_ und _dwh_internal_ in Passwörter Ihrer Wahl. *Beachten Sie diese Passwörter*, da Sie sie unten benötigen.
+. Starten Sie den DWH-Dienst neu
+. Starten Sie bei *each Connector* das Tool *SecurityAdmin* im interaktiven Modus. Sie benötigen die Passwörter, die Sie in Schritt 2 oben angegeben haben.
++
+ securityadmin -i
+. Ändern Sie die Passwörter für die Benutzer _inventar_ und _dwh_internal_ in die in Schritt 2 verwendeten Passwörter.
+. Starten Sie die Dienste auf den Connectors neu.
+. Fügen Sie die Connectors zu DWH hinzu, indem Sie die Passwörter für _Inventory_ und _dwh_Internal_ Benutzer aus Schritt 2 verwenden
+

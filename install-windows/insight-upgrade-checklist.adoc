@@ -17,6 +17,13 @@ Sie können die bereitgestellten Checklisten verwenden, um Ihren Fortschritt bei
 
 == Checkliste zur Vorbereitung des Upgrades (erforderlich)
 
+[NOTE]
+====
+*Sie müssen den Tresor* sichern, bevor Sie OnCommand Insight aktualisieren.
+
+Weitere Informationen finden Sie in den link:../config-admin\/security-management.html["Sicherheitstool"] Anweisungen.
+
+====
 |===
 
 

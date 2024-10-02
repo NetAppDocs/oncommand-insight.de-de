@@ -13,6 +13,13 @@ summary: Sie müssen die vorhandene Version der Remote-Erfassungseinheit-Softwar
 [role="lead"]
 Sie müssen die vorhandene Version der Remote-Erfassungseinheit-Software deinstallieren, bevor Sie auf eine neue Version aktualisieren können. Sie sollten diese Aufgabe auf allen Remote-Erfassungseinheiten-Servern in Ihrer Umgebung durchführen.
 
+[NOTE]
+====
+*Es wird dringend empfohlen, den Tresor* vor der Deinstallation von OnCommand Insight zu sichern. *Sie müssen den Tresor* sichern, wenn Sie OnCommand Insight aktualisieren.
+
+Weitere Informationen finden Sie in den link:../config-admin\/security-management.html["Sicherheitstool"] Anweisungen.
+
+====
 
 
 == Schritte

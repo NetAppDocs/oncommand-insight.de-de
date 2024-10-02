@@ -13,6 +13,13 @@ summary: Bevor Sie mit dem Upgrade von Insight beginnen, sollten Sie sich unbedi
 [role="lead"]
 Bevor Sie mit dem Upgrade von Insight beginnen, sollten Sie sich unbedingt über den Upgrade-Prozess informieren. Der Upgrade-Prozess ist für die meisten Versionen von Insight gleich.
 
+[NOTE]
+====
+*Sie müssen den Tresor* sichern, bevor Sie OnCommand Insight aktualisieren.
+
+Weitere Informationen finden Sie in den link:../config-admin\/security-management.html["Sicherheitstool"] Anweisungen.
+
+====
 Der Upgrade-Prozess für Insight umfasst die folgenden grundlegenden Aufgaben:
 
 * Herunterladen der Installationspakete

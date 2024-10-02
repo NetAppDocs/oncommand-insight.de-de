@@ -51,7 +51,7 @@ Die aktuellsten CAC- und Zertifikatanweisungen finden Sie in den folgenden Knowl
 . Zertifizierungsstellen (CAS) zum Data Warehouse trustore hinzufügen:
 +
 .. Wechseln Sie in einem Befehlsfenster zu `..\SANscreen\wildfly\standalone\configuration`.
-.. Verwenden Sie die `keytool` Dienstprogramm zum Auflisten der vertrauenswürdigen CAS: `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass changeit`
+.. Verwenden Sie das `keytool` Dienstprogramm, um die vertrauenswürdigen CAS aufzulisten: `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass <password>` + in der  Dokumentation finden Sie link:../config-admin/securityadmin-tool.html["Sicherheitsadministration"]weitere Informationen zum Festlegen oder Ändern des Passworts für Server_trustore.
 +
 Das erste Wort in jeder Zeile gibt den CA-Alias an.
 

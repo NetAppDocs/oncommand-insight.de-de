@@ -46,7 +46,8 @@ Sie müssen über Administratorrechte verfügen, um dieses Verfahren durchführe
 . Erstellen Sie eine Zertifikatsverschlüsselungsanforderung von Cognos. Führen Sie in einem Admin-CMD-Fenster Folgendes aus:
 +
 .. cd `“\Program Files\sanscreen\cognos\analytics\bin”`
-.. `ThirdPartyCertificateTool.bat -java:local -c -e -p NoPassWordSet -a RSA -r c:\temp\encryptRequest.csr -d “CN=server.domain.com,O=NETAPP,C=US” -H “server.domain.com” -I “ipaddress”`. Anmerkung: Hier sollen -H und -i subjectAltNames wie dns und ipaddress hinzufügen.
+.. `ThirdPartyCertificateTool.bat -java:local -c -e -p <password> -a RSA -r c:\temp\encryptRequest.csr -d “CN=server.domain.com,O=NETAPP,C=US” -H “server.domain.com” -I “ipaddress”`. Anmerkung: Hier sollen -H und -i subjectAltNames wie dns und ipaddress hinzufügen.
+.. Verwenden Sie für <password> das Kennwort aus der Datei _/SANscreen/bin/cognos_info.dat_.
 
 
 . Öffnen Sie das `c:\temp\encryptRequest.csr` Datei und kopieren Sie den generierten Inhalt.
@@ -93,14 +94,16 @@ Dadurch wird die Datei fqdn.p7b heruntergeladen
 . Exportieren Sie das neueste Cognos-Zertifikat in cognos.crt mithilfe der Admin CMD-Eingabeaufforderung:
 +
 .. cd „`C:\Program Files\SANscreen“
-.. java\bin\keytool.exe -exportcert -file c:\temp\cognos.crt -keystore cognos\Analytics\Configuration\certs\CAMKeystore -storetype PKCS12 -storepass NoPassWordSet -alias-Verschlüsselung
+.. java\bin\keytool.exe -exportcert -file c:\temp\cognos.crt -keystore cognos\Analytics\Configuration\certs\CAMKeystore -storetype PKCS12 -storepass <password> -alias-Verschlüsselung
+.. Verwenden Sie für <password> das Kennwort aus der Datei _/SANscreen/bin/cognos_info.dat_.
 
 
 . Sichern Sie den DWH-Server trustore unter``..\SANscreen\wildfly\standalone\configuration\server.trustore``
 . Importieren Sie „`c:\temp\cognos.crt`“ in DWH trustore, um mithilfe des Admin CMD-Eingabefensters die SSL-Kommunikation zwischen Cognos und DWH herzustellen.
 +
 .. cd „`C:\Program Files\SANscreen“
-.. java\bin\keytool.exe -importcert -file c:\temp\cognos.crt -keystore wildfly\Standalone\Configuration\Server.trustore -storepass changeit -alias cognos3rdca
+.. java\bin\keytool.exe -importcert -file c:\temp\cognos.crt -keystore wildfly\Standalone\Configuration\Server.trustore -storepass <password> -alias cognos3rdca
+.. Verwenden Sie für <password> das Kennwort aus der Datei _/SANscreen/bin/cognos_info.dat_.
 
 
 . Starten Sie den SANscreen-Dienst neu.
@@ -108,7 +111,7 @@ Dadurch wird die Datei fqdn.p7b heruntergeladen
 . Die folgenden Schritte sollten auch dann durchgeführt werden, wenn nur das "`ssl-Zertifikat`" geändert wird und die Standard-Cognos-Zertifikate unverändert bleiben. Andernfalls kann Cognos sich über das neue SANscreen-Zertifikat beschweren oder keine DWH-Sicherung erstellen.
 +
 .. `cd “%SANSCREEN_HOME%cognos\analytics\bin\”`
-.. `“%SANSCREEN_HOME%java64\bin\keytool.exe” -exportcert -file “c:\temp\sanscreen.cer” -keystore “%SANSCREEN_HOME%wildfly\standalone\configuration\server.keystore” -storepass changeit -alias “ssl certificate”`
+.. `“%SANSCREEN_HOME%java64\bin\keytool.exe” -exportcert -file “c:\temp\sanscreen.cer” -keystore “%SANSCREEN_HOME%wildfly\standalone\configuration\server.keystore” -storepass <password> -alias “ssl certificate”`
 .. `ThirdPartyCertificateTool.bat -java:local -i -T -r “c:\temp\sanscreen.cer”`
 
 

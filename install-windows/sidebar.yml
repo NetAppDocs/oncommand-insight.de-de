@@ -100,8 +100,6 @@ entries:
       - title: Beibehalten von benutzerdefinierten Cognos-Einstellungen während einer
           Data Warehouse-Aktualisierung
         url: "/install-windows/preserving-custom-settings-when-upgrading-data-warehouse.html"
-    - title: Sichern der Sicherheitskonfiguration
-      url: "/install-windows/back-up-the-security-configuration.html"
     - title: Aktualisierung der Server der Remote-Akquisitionseinheit
       url: "/install-windows/upgrading-remote-acquisition-servers.html"
   - title: Aufgaben nach dem Upgrade werden ausgeführt

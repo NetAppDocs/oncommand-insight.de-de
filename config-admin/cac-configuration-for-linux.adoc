@@ -13,12 +13,14 @@ summary: Einige Änderungen sind erforderlich, um CAC auf einem Linux OnCommand 
 [role="lead"]
 Einige Änderungen sind erforderlich, um CAC auf einem Linux OnCommand Insight-Server zu aktivieren.
 
+Die Stammzertifizierungsstelle muss in den Truststore importiert werden.
+
 
 
 == Schritte
 
 . Navigieren Sie zu `/opt/netapp/oci/conf/`
 . Bearbeiten `wildfly.properties` Und ändern Sie den Wert von `CLIENT_AUTH_ENABLED` Zu „wahr“
-. Importieren Sie das „`root Certificate`“, das unter vorhanden ist `/opt/netapp/oci/wildfly/standalone/configuration/server.keystore`
+. Importieren Sie das „`root Certificate`“, das unter vorhanden ist `/opt/netapp/oci/wildfly/standalone/configuration/server.truststore`
 . Starten Sie den Server neu
 

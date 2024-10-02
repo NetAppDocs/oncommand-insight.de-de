@@ -20,6 +20,9 @@ Sie können den OnCommand Insight-Server ganz einfach mithilfe des OnCommand Ins
 Sie müssen alle Installationsvoraussetzungen erfüllt haben.
 
 
+NOTE: Wenn Sie OnCommand Insight aktualisieren, müssen Sie den Tresor vor der Deinstallation oder Aktualisierung Ihrer aktuellen Version sichern.
+
+
 
 == Schritte
 
@@ -32,6 +35,7 @@ Sie müssen alle Installationsvoraussetzungen erfüllt haben.
 +
 *Best Practice:* Verwenden Sie den Kundennamen als Präfix für die Website: Zum Beispiel NetApp.
 
+. Geben Sie ein Administratorkennwort ein. Bestätigen Sie das Passwort.
 . Gehen Sie im Fenster *Customer Information: Konfigurieren Sie NetApp ASUP* folgendermaßen vor:
 +
 .. Wählen Sie eine der folgenden Optionen aus, um die Datenbank mit den Daten auszuwählen, die Sie auf ASUP hochladen möchten:
@@ -90,4 +94,23 @@ Port, der intern vom PC verwendet wird, auf dem der OnCommand Insight-Server aus
 Die Installation sollte je nach installierter Anwendung ca. 20 Minuten dauern.
 
 . Klicken Sie Auf *Fertig Stellen*.
+. Wenn Sie eine Remote Acquisition Unit (rau) installieren, müssen Sie das SecurityAdmin-Tool ausführen, um ein Passwort für den Benutzer _Acquisition_ zu erstellen. Sie benötigen dieses Passwort, wenn Sie die rau installieren.
++
+Hinweis: Wenn Sie dieses Passwort erstellt haben, müssen Sie den Server und die rau wie unten angegeben synchronisieren.
 
+
+
+
+
+== Server mit DWH und rau synchronisieren
+
+
+IMPORTANT: Nach der Installation der Remote-Erfassungseinheit und/oder des Data Warehouse müssen Sie die rau/DWH mit dem OnCommand Insight-Server synchronisieren. Führen Sie die folgenden Schritte aus:
+
+link:../install-windows/installing-a-remote-acquisition-unit-rau.html#synchronize-server-and-rau["Server und rau synchronisieren (Windows)"]
+
+link:../install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html#synchronize-server-and-dwh["Server und DWH synchronisieren (Windows)"]
+
+link:../install-linux/installing-a-remote-acquisition-unit-rau-linux.html#synchronize-server-and-rau["Server und rau synchronisieren (Linux)"]
+
+link:../install-linux/installing-oncommand-insight-data-warehouse-linux.html#synchronize-server-and-dwh["Server und DWH synchronisieren (Linux)"]

@@ -13,6 +13,13 @@ summary: Nach dem Upgrade der Insight Server-Software müssen Sie die Software f
 [role="lead"]
 Nach dem Upgrade der Insight Server-Software müssen Sie die Software für die Remote-Erfassung aktualisieren.
 
+[NOTE]
+====
+Es wird dringend empfohlen, den Tresor und die Datenbank vor der Aktualisierung der DWH zu sichern.
+
+Weitere Informationen zum Tresor finden link:../config-admin\/security-management.html["Sicherheitstool"]Sie in den Anweisungen.
+
+====
 
 
 == Schritte

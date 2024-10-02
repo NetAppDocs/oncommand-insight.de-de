@@ -20,5 +20,7 @@ sidebar:
   - section: reporting
   - section: faq
   - section: howto
+  - title: Data Collector Supportmatrix
+    url: "/config-admin/reference_data_collector_support_matrix.html"
   - title: Rechtliche Hinweise
     url: "/legal-notices.html"

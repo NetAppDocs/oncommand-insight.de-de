@@ -38,17 +38,20 @@ Die aktuellsten CAC- und Zertifikatanweisungen finden Sie in den folgenden Knowl
 . Fügen Sie dem Cognos trustore Zertifizierungsstellen (CAS) hinzu.
 +
 .. Wechseln Sie in einem Befehlsfenster zu `..\SANscreen\cognos\analytics\configuration\certs\`
-.. Verwenden Sie die `keytool` Dienstprogramm zum Auflisten der vertrauenswürdigen CAS: `..\..\ibm-jre\jre\bin\keytool.exe -list -keystore CAMKeystore.jks -storepass NoPassWordSet`
+.. Verwenden Sie das `keytool` Dienstprogramm, um die vertrauenswürdigen CAS aufzulisten: `..\..\ ibm-jre\jre\bin\keytool.exe -list -keystore CAMKeystore.jks -storepass <password>
+
+
 +
 Das erste Wort in jeder Zeile gibt den CA-Alias an.
 
++
 .. Wenn keine geeigneten Dateien vorhanden sind, geben Sie eine Zertifizierungsstellenzertifikatsdatei an, in der Regel eine `.pem` Datei:
 .. Wenn Sie Zertifizierungsstellen des Kunden mit vertrauenswürdigen Zertifizierungsstellen von OnCommand Insight einbeziehen möchten, besuchen Sie `..\SANscreen\cognos\analytics\configuration\certs\`.
 .. Verwenden Sie die `keytool` Dienstprogramm zum Importieren des `.pem` Datei: `..\..\ibm-jre\jre\bin\keytool.exe -importcert -keystore CAMKeystore.jks -alias my_alias -file 'path/to/my.pem' -v -trustcacerts`
 +
-`my_alias` Ist in der Regel ein Alias, der die CA in der leicht identifizieren würde``keytool -list`` Betrieb.
+`my_alias` Ist in der Regel ein Alias, der die CA in der  Operation leicht identifizieren würde``keytool -list``.
 
-.. Wenn Sie zur Eingabe eines Passworts aufgefordert werden, geben Sie ein `NoPassWordSet`.
+.. Wenn Sie zur Eingabe eines Kennworts aufgefordert werden, geben Sie das Kennwort aus der Datei _/SANscreen/bin/cognos_info.dat_ ein.
 .. Antwort `yes` Wenn Sie aufgefordert werden, dem Zertifikat zu vertrauen.
 
 

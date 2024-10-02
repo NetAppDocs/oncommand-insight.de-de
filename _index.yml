@@ -1,5 +1,9 @@
 ---
 indexpage:
+  title: OnCommand Insight Dokumentation
+  summary: OnCommand Insight vereinfacht das betriebliche Management hybrider IT-Infrastrukturen
+    in On-Premises-Umgebungen sowie in Public und Private Clouds.
+  keywords: oci, insight
   lead: OnCommand Insight vereinfacht das betriebliche Management hybrider IT-Infrastrukturen
     in On-Premises-Umgebungen sowie in Public und Private Clouds.
   tiles:

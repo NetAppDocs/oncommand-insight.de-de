@@ -37,9 +37,8 @@ LDAP-Benutzer werden zusammen mit den lokal definierten Benutzern in der Liste *
 . Klicken Sie in der Insight-Symbolleiste auf *Admin*.
 . Klicken Sie Auf *Setup*.
 . Klicken Sie auf die Registerkarte *Users*.
-. Scrollen Sie zum LDAP-Abschnitt, wie hier gezeigt.
-+
-image::../media/ldap-setup.gif[ldap-Einrichtung]
+. Blättern Sie zum Abschnitt LDAP.
+
 
 . Klicken Sie auf *LDAP aktivieren*, um die LDAP-Benutzerauthentifizierung und -Autorisierung zu ermöglichen.
 . Füllen Sie die Felder aus:

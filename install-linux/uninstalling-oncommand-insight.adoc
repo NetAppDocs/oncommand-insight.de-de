@@ -13,4 +13,11 @@ summary: Sie können die OnCommand Insight-Komponenten bei Bedarf deinstallieren
 [role="lead"]
 Sie können die OnCommand Insight-Komponenten bei Bedarf deinstallieren. Sie müssen die OnCommand Insight-Komponenten separat deinstallieren.
 
+[NOTE]
+====
+*Es wird dringend empfohlen, den Tresor* vor der Deinstallation von OnCommand Insight zu sichern.
+
+Weitere Informationen finden Sie in den link:../config-admin\/security-management.html["Sicherheitstool"] Anweisungen.
+
+====
 Jede Komponente wird separat deinstalliert.

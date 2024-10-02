@@ -67,7 +67,7 @@ Für die meisten Datenquellen sind diese Optionen „Bestandsaufnahme“ und „
 |===
 . Klicken Sie auf den Link *Konfiguration* und geben Sie die grundlegenden Setup-Informationen ein, die für die Datenquelle mit Ihrem ausgewählten Datenerfassungstyp erforderlich sind.
 . Wenn diese Art von Datenquelle normalerweise detailliertere Informationen benötigt, um sie in Ihrem Netzwerk einzurichten, klicken Sie auf den Link *Erweiterte Konfiguration*, um zusätzliche Informationen einzugeben.
-. Weitere Informationen zur Konfiguration oder zur erweiterten Konfiguration, die für Ihre spezifische Datenquelle erforderlich oder verfügbar sind, finden Sie im link:vendor-specific-data-source-reference.md#["Herstellerspezifische Datenquelle"].
+. Weitere Informationen zur Konfiguration oder zur erweiterten Konfiguration, die für Ihre spezifische Datenquelle erforderlich oder verfügbar sind, finden Sie unter link:vendor-specific-data-source-reference.html["Herstellerspezifische Datenquelle"].
 . Klicken Sie auf den Link *Test*, um sicherzustellen, dass die Datenquelle ordnungsgemäß konfiguriert ist.
 . Klicken Sie Auf *Speichern*.
 

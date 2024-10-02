@@ -13,6 +13,13 @@ summary: Sie müssen die Data Warehouse-Software deinstallieren, bevor Sie ein U
 [role="lead"]
 Sie müssen die Data Warehouse-Software deinstallieren, bevor Sie ein Upgrade durchführen können.
 
+[NOTE]
+====
+*Es wird dringend empfohlen, den Tresor* vor der Deinstallation von OnCommand Insight zu sichern. *Sie müssen den Tresor* sichern, wenn Sie OnCommand Insight aktualisieren.
+
+Weitere Informationen finden Sie in den link:../config-admin\/security-management.html["Sicherheitstool"] Anweisungen.
+
+====
 
 
 == Bevor Sie beginnen

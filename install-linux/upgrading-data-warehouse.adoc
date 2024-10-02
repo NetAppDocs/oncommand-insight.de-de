@@ -15,6 +15,17 @@ Nach dem Upgrade der Insight Server Software müssen Sie die Data Warehouse Soft
 
 
 
+== Über diese Aufgabe
+
+[NOTE]
+====
+Es wird dringend empfohlen, den Tresor und die Datenbank vor der Aktualisierung der DWH zu sichern.
+
+Weitere Informationen zum Tresor finden link:../config-admin\/security-management.html["Sicherheitstool"]Sie in den Anweisungen.
+
+====
+
+
 == Schritte
 
 . Melden Sie sich beim Data Warehouse (DWH)-Server mit einem Konto mit sudo-Berechtigungen an.

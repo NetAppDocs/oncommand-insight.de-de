@@ -12,4 +12,4 @@ summary:
 
 Versionshinweise zu OnCommand Insight sind außerhalb des Dokumentationszentrums erhältlich. Sie werden aufgefordert, sich mit Ihren Anmeldedaten für die NetApp Support Site anzumelden.
 
-link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2652943["Versionshinweise .PDF"^] (Wird in einem neuen Fenster geöffnet)
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3328664["Versionshinweise .PDF"^] (Wird in einem neuen Fenster geöffnet)
