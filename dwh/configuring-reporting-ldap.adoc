@@ -22,6 +22,9 @@ Sie müssen sich bei Insight als Administrator anmelden, um diese Aufgabe auszuf
 Für alle Secure Active Directory (d. h. LDAPS)-Benutzer müssen Sie den AD-Servernamen genau so verwenden, wie er im Zertifikat definiert ist. Sie können die IP-Adresse nicht für die sichere AD-Anmeldung verwenden.
 
 
+NOTE: Wenn Sie _Server.keystore_ und/oder _Server.trustore_ Passwörter mit geändert link:../config-admin/security-management.html["Sicherheitsadministration"]haben, starten Sie den _SANscreen_-Dienst neu, bevor Sie das LDAP-Zertifikat importieren.
+
+
 
 == Schritte
 

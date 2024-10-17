@@ -24,6 +24,9 @@ Der auf staatlich ausgestellten CACs gespeicherte allgemeine Name (CN) wird norm
 
 
 
+
+NOTE: Wenn Sie _Server.keystore_ und/oder _Server.trustore_ Passwörter mit geändert habenlink:../config-admin/security-management.html["Sicherheitsadministration"], starten Sie den _SANscreen_-Dienst neu, bevor Sie das LDAP-Zertifikat importieren.
+
 [NOTE]
 ====
 Die aktuellsten CAC- und Zertifikatanweisungen finden Sie in den folgenden Knowledgebase-Artikeln (Support-Anmeldung erforderlich):

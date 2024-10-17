@@ -21,6 +21,9 @@ Sie müssen Änderungen an der OnCommand Insight-Hostkonfiguration vornehmen, um
 * Das LDAP `User principal account name` Das Attribut muss mit dem LDAP-Feld übereinstimmen, das die ID eines Benutzers enthält.
 
 
+
+NOTE: Wenn Sie _Server.keystore_ und/oder _Server.trustore_ Passwörter mit geändert habenlink:../config-admin/security-management.html["Sicherheitsadministration"], starten Sie den _SANscreen_-Dienst neu, bevor Sie das LDAP-Zertifikat importieren.
+
 [NOTE]
 ====
 Die aktuellsten CAC- und Zertifikatanweisungen finden Sie in den folgenden Knowledgebase-Artikeln (Support-Anmeldung erforderlich):
