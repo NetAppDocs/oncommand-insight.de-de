@@ -5,12 +5,8 @@ summary: Die Data Collector Support Matrix enthält detaillierte Informationen z
 keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, Huawei, OpenStack 
 ---
 = OCI Data Collector: Support Matrix
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -19,13 +15,10 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 :author: [.lead]
 :authorinitials: [
 :authors: [.lead]
-:toc-position: content
 
 
 Die Data Collector Support Matrix bietet Referenz für Data Collectors, die von OCI unterstützt werden, einschließlich Hersteller- und Modellinformationen.
 
-
-toc::[]
 
 
 == HP Enterprise 3PAR / Alletra 9000 / Primera StoreServ Storage
@@ -492,8 +485,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | 3PAR-CLI | SSH | SSH | 22 |  | Richtig | Falsch | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == Amazon AWS EC2
@@ -686,8 +677,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | EC2 API | HTTPS | HTTPS | 443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == Brocade Fibre Channel Switches
@@ -1010,8 +999,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | Konfiguration des Datenquellenassistenten | Manuelle Eingabe |  |  |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == Brocade Network Advisor HTTP
@@ -1129,8 +1116,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | Brocade Network Advisor REST-API | HTTP/HTTPS | HTTP/HTTPS | 80/443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == Cisco MDS und Nexus Fabric Switches
@@ -1426,8 +1411,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | Cisco SNMP | SNMP | SNMPv1 (nur Inventar), SNMPv2, SNMPv3 | 161 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == EMC Celerra (SSH)
@@ -1684,8 +1667,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | Celerra-CLI | SSH | SSH |  |  | Richtig | Falsch | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == EMC CLARiiON (NaviCLI)
@@ -2158,8 +2139,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | Navi CLI | CLI |  | 6389,2162,2163,443 (HTTPS)/80 (HTTP) |  | Richtig | Richtig | Richtig | Falsch 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == EMC Data Domain (SSH)
@@ -2452,8 +2431,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | Data Domain CLI | SSH | SSH | 22 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == EMC ECS
@@ -2656,8 +2633,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | EMC ECS REST-API | HTTPS | HTTPS | 443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == Dell EMC Isilon/PowerScale (CLI)
@@ -3058,8 +3033,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | Isilon SSH | SSH | SSH | 22 |  | Richtig | Falsch | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == EMC PowerStore REST
@@ -3352,8 +3325,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | EMC POWERSTORE REST-API | HTTPS | HTTPS | 443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == EMC RecoverPoint (HTTP)
@@ -3481,8 +3452,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | RecoverPoint-REST-API | HTTPS | HTTPS | 443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == EMC Symmetrix CLI
@@ -4027,8 +3996,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | Symmetrix SMI-S | SMI-S | HTTP/HTTPS | 5988/5989 |  | Richtig | Falsch | Falsch | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == Dell Unisphere-REST
@@ -4357,8 +4324,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | Dell Unisphere-API | HTTPS | HTTPS | 443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == EMC VNX (SSH)
@@ -4747,8 +4712,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | VNX SSH UND CLI | SSH | SSH | 22 |  | Richtig | Falsch | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == EMC VNXe und Unity Unisphere (CLI)
@@ -5167,8 +5130,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | VNXe und Unisphere CLI | HTTPS | HTTPS | 443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == EMC VPLEX
@@ -5422,8 +5383,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | EMC VPLEX-API | HTTP/HTTPS | HTTP/HTTPS | 80/443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == EMC XtremIO (HTTP)
@@ -5797,8 +5756,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | EMC XTREMIO REST-API | HTTPS | HTTPS | 443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == NetApp E-Series
@@ -6196,8 +6153,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | SANtricity API | RMI | TCP |  |  | Richtig | Richtig | Falsch | Falsch 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == HDS HCP (HTTPS)
@@ -6382,8 +6337,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | HDS HCP REST API | HTTPS | HTTPS | 9090 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == HiCommand Device Manager
@@ -6787,8 +6740,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | HiCommand Device Manager-XML-API | HDS-XML-API | HTTP/HTTPS | 2001 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == HDS HNAS (CLI)
@@ -7048,8 +6999,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | HDS HNAS CLI | SSH | SSH | 22 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == HPE Nimble/Alletra 6000 Storage
@@ -7372,8 +7321,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | HP NIMBLE REST API | HTTPS | HTTPS | 5392 |  | Richtig | Falsch | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == Huawei OceanStor (REST/HTTPS)
@@ -7591,8 +7538,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | Huawei OceanStor Performance REST API | HTTPS | HTTPS | 8088 |  | Richtig | Falsch | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == IBM SVC (CLI)
@@ -8038,8 +7983,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | IBM SVC-CLI | SSH | SSH | 22 |  | Richtig | Falsch | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == Infiniat Infinibox (HTTP)
@@ -8335,8 +8278,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | Infinidat REST-API | HTTPS | HTTPS | 443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == Microsoft Hyper-V
@@ -8593,8 +8534,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | WMI | WMI | WMI | 135 |  | Richtig | Falsch | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == NetApp 7-Modus
@@ -9241,8 +9180,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | NetApp 7 Modus ZAPI | ZAPI | ZAPI |  |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == NetApp Clustered Data ONTAP 8.1 und höher
@@ -10234,8 +10171,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | NetApp ONTAP-API | HTTP/HTTPS | HTTP/HTTPS | 80/443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == NetApp SolidFire 8.1 oder höher
@@ -10720,8 +10655,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | SolidFire REST-API | HTTPS | HTTPS | 443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == NetApp StorageGRID (HTTPS)
@@ -11008,8 +10941,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | StorageGRID REST API | HTTPS | HTTPS | 443 |  | Richtig | Falsch | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == Nutanix Storage (REST)
@@ -11437,8 +11368,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | Nutanix REST API | HTTPS | HTTPS | 443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == Oracle ZFS (HTTPS)
@@ -11821,8 +11750,6 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | ORACLE ZFS REST API | HTTP/HTTPS | HTTP/HTTPS | 215 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == Pure Storage FlashArray (HTTP)
@@ -12190,20 +12117,66 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | Pure Storage REST-API | HTTP/HTTPS | HTTP/HTTPS | 80/443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
-
 
 
 == VMware vSphere (Web Services)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
 
-|===
-| API-Versionen: | API-Versionen: 
+API-Versionen:
+
+* VMware vCenter Server 5.5.0 Build-1750787
+* VMware vCenter Server 5.5.0 Build-3252642
+* VMware vCenter Server 5.5.0 Build-4180647
+* VMware vCenter Server 5.5.0 Build-9911218
+* VMware vCenter Server 6.0.0 Build-13638472
+* VMware vCenter Server 6.0.0 Build-14510545
+* VMware vCenter Server 6.0.0 Build-4541947
+* VMware vCenter Server 6.0.0 Build-5318200
+* VMware vCenter Server 6.0.0 Build-9313458
+* VMware vCenter Server 6.5.0 Build-10964411
+* VMware vCenter Server 6.5.0 Build-17994927
+* VMware vCenter Server 6.5.0 Build-18499837
+* VMware vCenter Server 6.5.0 Build-18711281
+* VMware vCenter Server 6.5.0 Build-19757181
+* VMware vCenter Server 6.5.0 Build-22499743
+* VMware vCenter Server 6.5.0 Build-7515524
+* VMware vCenter Server 6.5.0 Build-9451637
+* VMware vCenter Server 6.7.0 Build-16046713
+* VMware vCenter Server 6.7.0 Build-18485185
+* VMware vCenter Server 6.7.0 Build-19299595
+* VMware vCenter Server 6.7.0 Build-19832280
+* VMware vCenter Server 6.7.0 Build-20504362
+* VMware vCenter Server 6.7.0 Build-22509732
+* VMware vCenter Server 6.7.0 Build-22509751
+* VMware vCenter Server 7.0.1 Build-17491160
+* VMware vCenter Server 7.0.3 Build-19234570
+* VMware vCenter Server 7.0.3 Build-19717403
+* VMware vCenter Server 7.0.3 Build-20051473
+* VMware vCenter Server 7.0.3 Build-20150588
+* VMware vCenter Server 7.0.3 Build-20395099
+* VMware vCenter Server 7.0.3 Build-20845200
+* VMware vCenter Server 7.0.3 Build-20990077
+* VMware vCenter Server 7.0.3 Build-21290409
+* VMware vCenter Server 7.0.3 Build-21477706
+* VMware vCenter Server 7.0.3 Build-21784236
+* VMware vCenter Server 7.0.3 Build-22357613
+* VMware vCenter Server 7.0.3 Build-22837322
+* VMware vCenter Server 7.0.3 Build-23788036
+* VMware vCenter Server 7.0.3 Build-24026615
+* VMware vCenter Server 8.0.1 Build-22368047
+* VMware vCenter Server 8.0.1 Build-22742005
+* VMware vCenter Server 8.0.1 Build-23525738
+* VMware vCenter Server 8.0.1 Build-24005165
+* VMware vCenter Server 8.0.2 Build-22385739
+* VMware vCenter Server 8.0.2 Build-22617221
+* VMware vCenter Server 8.0.2 Build-23319993
+* VMware vCenter Server 8.0.2 Build-23504390
+* VMware vCenter Server 8.0.2 Build-23929136
+* VMware vCenter Server 8.0.3 Build-24022515
+* VMware vCenter Server 8.0.3 Build-24091160
 
 
-| VMware vCenter Server 5.5.0 19757181 6.5.0 9451637 6.7.0 19299595 6.7.0 22509732 7.0.1 Build-7515524 6.7.0 18485185 6.7.0 20504362 6.7.0 17491160 VMware vCenter Server 6.5.0 16046713 6.7.0 19832280 6.7.0 22509751 Build-17994927 VMware vCenter Server 6.5.0 Build-22499743 Build VMware vCenter Server 6.5.0 Build-6.5.0 Build-18711281 VMware vCenter Server 18499837 Build-5318200 Build VMware vCenter Server 6.5.0 Build-6.5.0 Build VMware vCenter Server 6.0.0 Build-10964411 Build VMware vCenter Server 9313458 Build-13638472 Build VMware vCenter Server 6.0.0 Build VMware vCenter Server 6.0.0 Build-5.5.0 Build VMware vCenter Server 4541947 Build VMware vCenter Server 14510545 Build 6.0.0 Build VMware vCenter Server 3252642 Build VMware vCenter Server 6.0.0 Build 9911218 vCenter Server 4180647 Build VMware vCenter Server 6.5.0 Build 5.5.0 Build VMware vCenter Server 5.5.0 Build 1750787 | VMware vCenter Server 7.0.3 24026615 8.0.1 23525738 8.0.2 22617221 8.0.2 23929136 8.0.3 Build-22742005 8.0.1 22385739 8.0.2 23504390 8.0.3 24091160 VMware vCenter Server 8.0.1 24005165 8.0.2 23319993 8.0.2 24022515 Build-22357613 VMware vCenter Server 8.0.1 Build-22368047 Build VMware vCenter Server 7.0.3 Build-7.0.3 Build-23788036 VMware vCenter Server 22837322 Build-21290409 Build VMware vCenter Server 7.0.3 Build-7.0.3 Build VMware vCenter Server 7.0.3 Build-21784236 Build VMware vCenter Server 21477706 Build-20395099 Build VMware vCenter Server 7.0.3 Build VMware vCenter Server 7.0.3 Build-7.0.3 Build VMware vCenter Server 20990077 Build VMware vCenter Server 20845200 Build 7.0.3 Build VMware vCenter Server 19717403 Build VMware vCenter Server 7.0.3 Build 20150588 vCenter Server 20051473 Build VMware vCenter Server 7.0.3 Build 7.0.3 Build VMware vCenter Server 7.0.3 Build 19234570 
-|===
 Von diesem Datensammler unterstützte Produkte:
 
 |===
@@ -12487,4 +12460,3 @@ Von diesem Datensammler verwendete Management-APIs:
 
 | VMware REST-API | Web-Services | HTTP/HTTPS | 80/443 |  | Richtig | Richtig | Richtig | Richtig 
 |===
-<<top,Zurück nach oben>>
